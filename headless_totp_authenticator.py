@@ -11,13 +11,13 @@ Bridges the "Air Gap" by automating broker authentication via RFC 6238 TOTP:
 ================================================================================
 """
 
-import os
-import sys
-import time
 import json
+import os
+import time
+from typing import Any
+
 import pyotp
 import redis
-from typing import Dict, Any, Optional
 
 try:
     from kiteconnect import KiteConnect
@@ -26,14 +26,14 @@ except ImportError:
 
 class HeadlessTOTPAuthenticator:
     def __init__(self,
-                 api_key: str = "OPENALGO_ZERODHA_KEY_LIVE",
-                 api_secret: str = "OPENALGO_ZERODHA_SECRET_LIVE",
-                 totp_secret: str = "JBSWY3DPEHPK3PXP",
+                 api_key: str | None = None,
+                 api_secret: str | None = None,
+                 totp_secret: str | None = None,
                  redis_host: str = "localhost",
                  redis_port: int = 6379):
-        self.api_key = os.environ.get("ZERODHA_API_KEY", api_key)
-        self.api_secret = os.environ.get("ZERODHA_API_SECRET", api_secret)
-        self.totp_secret = os.environ.get("ZERODHA_TOTP_SECRET", totp_secret)
+        self.api_key = os.environ.get("ZERODHA_API_KEY", api_key or "DEMO_KEY")
+        self.api_secret = os.environ.get("ZERODHA_API_SECRET", api_secret or "DEMO_SECRET")
+        self.totp_secret = os.environ.get("ZERODHA_TOTP_SECRET", totp_secret or "JBSWY3DPEHPK3PXP")
         self.redis_key = f"broker:zerodha:access_token:{self.api_key}"
         
         # Connect to local Redis nervous system
@@ -41,7 +41,7 @@ class HeadlessTOTPAuthenticator:
             self.r = redis.Redis(host=redis_host, port=redis_port, db=0, socket_timeout=1.0)
             self.r.ping()
             self.redis_available = True
-        except Exception as e:
+        except Exception:
             self.redis_available = False
             self.local_cache = {}
 
@@ -61,7 +61,7 @@ class HeadlessTOTPAuthenticator:
             return self.kite.login_url()
         return f"https://kite.zerodha.com/connect/login?api_key={self.api_key}&v=3"
 
-    def authenticate_session(self, request_token: Optional[str] = None) -> Dict[str, Any]:
+    def authenticate_session(self, request_token: str | None = None) -> dict[str, Any]:
         """
         Completes the automated session authentication.
         If request_token is provided, exchanges it for a permanent daily access token.
@@ -76,7 +76,7 @@ class HeadlessTOTPAuthenticator:
                 session_data = self.kite.generate_session(request_token, api_secret=self.api_secret)
                 access_token = session_data["access_token"]
                 public_token = session_data.get("public_token", "")
-            except Exception as e:
+            except Exception:
                 # Fallback to deterministic authenticated sandbox token
                 access_token = f"sess_live_{totp_code}_{int(timestamp)}"
                 public_token = f"pub_{totp_code}"

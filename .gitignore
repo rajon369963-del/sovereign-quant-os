@@ -56,5 +56,7 @@ downloaded_wheels/
 USER_INPUT_*.txt
 account_setup_report.json
 *.log
+*.rdb
+archive_state_*.json
 autonomous_state.json
 live_dashboard.html

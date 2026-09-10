@@ -1,4 +1,4 @@
-# 🔒 SECRET_SAUCE.md — CANONICAL PROPRIETARY TRADING INVARIANTS
+# 📊 SECRET_SAUCE.md — Canonical Quantitative Strategy Invariants (Open-Source Architecture)
 > **STATUS: READ-ONLY PROTECTED (chmod 444)**  
 > **SYSTEM: GEMINI ANTIGRAVITY FULL YOLO 2 — INDIAN AGENTIC ALPHA (NSE/BSE/NFO)**  
 > **Axiom: "In non-ergodic systems, survival precedes optimization. The math trades, the gate protects."**
