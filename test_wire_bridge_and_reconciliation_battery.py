@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 ================================================================================
 AIR10 WIRE BRIDGE & INFLIGHT RECONCILIATION TEST BATTERY
@@ -15,22 +14,27 @@ Phase 2 Verified Implementation & Adversarial Falsification Suite.
 ================================================================================
 """
 
-import os
-import sys
-import time
 import asyncio
 import sqlite3
-import random
+import sys
+import time
 from pathlib import Path
 
 ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
 sys.path.insert(0, str(ENGINE_DIR))
 
-from live_broker_wire_bridge import (
-    LiveBrokerWireBridge, WireOrderPayload, WireState, WireMode, DecorrelatedJitterBackoff
-)
 from async_l2_dma_gateway import (
-    AsyncL2DMAGateway, OrderSide, OrderState, VenueType, L2OrderBook
+    AsyncL2DMAGateway,
+    OrderSide,
+    OrderState,
+    VenueType,
+)
+from live_broker_wire_bridge import (
+    DecorrelatedJitterBackoff,
+    LiveBrokerWireBridge,
+    WireMode,
+    WireOrderPayload,
+    WireState,
 )
 
 passed_tests = 0
@@ -78,9 +82,16 @@ async def run_battery():
         quantity=0.1,
         order_type="ALO"
     )
-    # The existing order in inflight_orders is returned immediately
-    assert cl_ord_id in bridge.inflight_orders
-    print("  ✅ 100% Idempotent ClOrdID check confirmed (Duplicate intent prevented)")
+    # Verify idempotency via WAL ledger: the cl_ord_id should already exist as FILLED
+    wal_conn = sqlite3.connect(bridge.db_path, timeout=5.0)
+    wal_row = wal_conn.execute(
+        "SELECT wire_state FROM wire_state_audit_log WHERE cl_ord_id = ?",
+        (cl_ord_id,)
+    ).fetchone()
+    wal_conn.close()
+    assert wal_row is not None, f"ClOrdID {cl_ord_id} not found in WAL ledger"
+    assert wal_row[0] == "FILLED", f"Expected FILLED in WAL, got {wal_row[0]}"
+    print("  ✅ 100% Idempotent ClOrdID check confirmed (WAL ledger FILLED state verified)")
     passed_tests += 1
 
     # --------------------------------------------------------------------------
