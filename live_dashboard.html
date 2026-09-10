@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5">
+    <title>Sovereign 24/7 Autonomous Trading Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        body { background: #07090e; color: #e2e8f0; padding: 24px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px; margin-bottom: 24px; }
+        .title { font-size: 22px; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 10px; }
+        .pulse { width: 12px; height: 12px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 12px #22c55e; animation: blink 1.5s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .time { color: #94a3b8; font-size: 14px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; }
+        .card-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 8px; }
+        .card-val { font-size: 28px; font-weight: 700; color: #f8fafc; }
+        .card-val.green { color: #22c55e; }
+        .card-val.blue { color: #38bdf8; }
+        .card-val.gold { color: #fbbf24; }
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 6px; }
+        .badge-shift { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .badge-safe { background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .section-title { font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #cbd5e1; }
+        .log-box { background: #0b1120; border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 16px; font-family: 'SF Mono', Menlo, monospace; font-size: 12px; color: #94a3b8; line-height: 1.6; max-height: 220px; overflow-y: auto; }
+        .log-entry { margin-bottom: 6px; }
+        .highlight { color: #38bdf8; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <div class="pulse"></div>
+            ⚡ SOVEREIGN 24/7 AUTONOMOUS COMPOUNDING ENGINE
+        </div>
+        <div class="time">2026-09-10 22:27:14 IST (Auto-refreshes every 5s)</div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-label">Active Portfolio Value</div>
+            <div class="card-val green">₹1,229.44</div>
+            <div class="badge badge-safe">ROI: +22.94% | Compounding Active</div>
+        </div>
+        <div class="card">
+            <div class="card-label">Current Market Shift</div>
+            <div class="card-val blue" style="font-size: 20px;">SHIFT_2_COMMODITIES</div>
+            <div class="badge badge-shift">MCX Commodities (Crude, Gold, Silver)</div>
+        </div>
+        <div class="card">
+            <div class="card-label">House Money Protocol</div>
+            <div class="card-val gold">TARGET: ₹2,000</div>
+            <div class="badge badge-safe">Capital Protected (-2% Circuit Breaker)</div>
+        </div>
+        <div class="card">
+            <div class="card-label">Execution Performance</div>
+            <div class="card-val" style="font-size: 22px;">192 Trades | 62.0% Win</div>
+            <div class="badge badge-shift">Total PnL: ₹+229.44</div>
+        </div>
+    </div>
+
+    <div class="section-title">Latest Execution Telemetry</div>
+    <div class="log-box">
+        <div class="log-entry"><span class="highlight">[2026-09-10 22:27:14 IST]</span> Mode: Full YOLO 24/7 Autonomous Loop Active</div>
+        <div class="log-entry"><span class="highlight">[2026-09-10 22:27:14 IST]</span> Market Shift: MCX Commodities (Crude, Gold, Silver)</div>
+        <div class="log-entry"><span class="highlight">[2026-09-10 22:27:14 IST]</span> Last Trade: {"trade_id": "TRD_1789059434393", "symbol": "CRUDEOIL", "shift": "SHIFT_2_COMMODITIES", "side": "BUY", "price": 101.36000061035156, "price_source": "YFINANCE_LIVE", "pnl_inr": 2.75, "new_capital": 1229.44, "win": true, "hypergraph_competitor": "Citadel Securities", "hypergraph_dialectic_links": 14}</div>
+        <div class="log-entry"><span class="highlight">[2026-09-10 22:27:14 IST]</span> Circuit Breaker Status: NORMAL (ARMED)</div>
+    </div>
+</body>
+</html>
