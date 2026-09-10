@@ -17,10 +17,10 @@ In quantitative finance, retail traders typically rely on slow Python scripts th
 
 **Sovereign Quant OS** bridges this divide:
 1. **The Interconnection of Interconnections ($\text{IC}^2$)**: Integrates **50 battle-tested practitioner hacks** (scraped from Reddit, GitHub, Hacker News) with **100 production open-source quantitative wheels** (NautilusTrader, CCXT, VectorBT, uvloop, orjson, DuckDB).
-2. **Sub-Millisecond Python Hot Path**: Disables Garbage Collection during orderbursts (`gc.disable()`), utilizing `uvloop` and `orjson` SIMD C-bindings to achieve **57 microsecond (0.057ms)** average decision latency.
+2. **Sub-Millisecond Python Hot Path**: Disables Garbage Collection during orderbursts (`gc.disable()`), utilizing `uvloop` and `orjson` SIMD C-bindings to achieve **57 microsecond (0.057ms)** in-memory decision latency (tested on Apple Silicon M1 unified memory).
 3. **In-Flight Concurrent Idempotency**: Resolves the classic double-spend network race condition. Sequential and simultaneous duplicate order retries return cached fills with **zero incremental wire transmissions** via distributed SQLite WAL reservation claims and `asyncio.Event` barriers.
-4. **Zero-Delta Cash & Carry Basis Arbitrage**: Couples ₹0 brokerage spot execution (Shoonya) with Add-Liquidity-Only (ALO) perpetual shorts (Hyperliquid) to eliminate directional market risk ($\Delta = 0$) while harvesting 50%–80% annualized funding rates plus maker rebates.
-5. **Multi-Agent Tri-Court Verification**: Every production commit is subjected to adversarial falsification across three independent AI courts (**CODEX**, **HERMES**, and **CHATGPT**) before production signoff.
+4. **Market-Direction-Neutral Basis Carry Arbitrage**: Couples ₹0 brokerage spot execution (Shoonya) with Add-Liquidity-Only (ALO) perpetual shorts (Hyperliquid) for market-direction-neutral basis carry ($\Delta \approx 0$ under tested basis assumptions) while harvesting annualized funding rates plus maker rebates.
+5. **Multi-Agent Tri-Court Verification**: Every production milestone is subjected to adversarial falsification across three independent AI courts (**CODEX**, **HERMES**, and **CHATGPT**) before production signoff.
 
 ---
 
@@ -54,7 +54,7 @@ In quantitative finance, retail traders typically rely on slow Python scripts th
 +---------------------------------------------------------------------------------------+
 |                        DELTA-NEUTRAL CARRY HARVESTER                                  |
 |  - Spot Long (Shoonya ₹0 Brokerage) + Perp Short (Hyperliquid ALO Maker)              |
-|  - Net Delta Exposure: Δ = 0.0000 (Zero Directional Market Risk)                      |
+|  - Net Delta Exposure: Δ ≈ 0.0000 (Market-direction-neutral under tested assumptions)  |
 |  - Hourly Funding Rate Yield Accrual (50% - 80% APR) + Exchange Maker Rebates (+2bps) |
 |  - Strict 5-Day Payback Gate Filter                                                   |
 +---------------------------------------------------------------------------------------+
@@ -116,11 +116,11 @@ Every patch has been cryptographically snapshotted and mirrored to the cloud und
 
 ---
 
-## 🤝 Multi-Account Autonomous Swarm Integration
+## 🤝 Multi-Account Autonomous Swarm Coordination
 
-This repository is maintained and audited autonomously by:
-- **10 Gemini Spark Web Tasks** via [`rajon369963-del/gemini-spark-cortex`](https://github.com/rajon369963-del/gemini-spark-cortex)
-- **10 Scheduled ChatGPT Automation Crons**
+This repository coordinates with:
+- **Central Task Blackboard**: [`rajon369963-del/gemini-spark-cortex`](https://github.com/rajon369963-del/gemini-spark-cortex)
+- **Multi-Agent Swarm**: 10 Gemini Spark accounts and 10 scheduled ChatGPT automation crons
 - **Antigravity Local Execution Kernel** on Apple Silicon
 
 ---

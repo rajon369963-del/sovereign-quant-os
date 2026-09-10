@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 ================================================================================
 AIR10 MICRO-CAPITAL FRICTION CORTEX & TRANSACTION COST ANALYSIS (TCA) ENGINE
@@ -13,36 +12,31 @@ Implements the 5 Sovereign Pillars of Micro-Capital Algorithmic Survival:
 """
 
 import os
-import sys
-import math
-import time
-import json
 import sqlite3
+import sys
 import threading
-from typing import Dict, Any, Tuple, Optional
+import time
 from pathlib import Path
+from typing import Any
 
 # Add local wheels to sys.path
-ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
-WHEELS_DIR = ENGINE_DIR / "downloaded_wheels"
-sys.path.insert(0, str(WHEELS_DIR / "pandas-ta"))
+ENGINE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
+WHEELS_DIR = Path(os.environ.get("AIR10_WHEELS_DIR", ENGINE_DIR / "downloaded_wheels"))
+if (WHEELS_DIR / "pandas-ta").exists():
+    sys.path.insert(0, str(WHEELS_DIR / "pandas-ta"))
 
 # Attempt imports of native wheels
 try:
-    import pandas_ta as ta
     HAS_PANDAS_TA = True
 except Exception:
     HAS_PANDAS_TA = False
 
 try:
-    from NorenRestApiPy.NorenApi import NorenApi
     HAS_SHOONYA = True
 except Exception:
     HAS_SHOONYA = False
 
 try:
-    import hyperliquid
-    from hyperliquid.utils import constants
     HAS_HYPERLIQUID = True
 except Exception:
     HAS_HYPERLIQUID = False
@@ -53,7 +47,7 @@ class MicroCapitalFrictionCortex:
     Protects retail micro-capital (<$100 / <₹5,000) from fee-drag ruin.
     """
 
-    def __init__(self, db_path: Optional[Path] = None):
+    def __init__(self, db_path: Path | None = None):
         self.db_path = db_path or Path(os.environ.get("AIR10_TEST_DB", str(ENGINE_DIR / "live_production_ledger.sqlite")))
         self._local = threading.local()
         self._init_db()
@@ -99,10 +93,10 @@ class MicroCapitalFrictionCortex:
 
     def calculate_friction(self,
                            symbol: str,
-                           order_book: Dict[str, Any],
+                           order_book: dict[str, Any],
                            order_size_usd: float,
                            venue: str = "HYPERLIQUID_DEX_ALO",
-                           order_type: str = "ALO") -> Dict[str, float]:
+                           order_type: str = "ALO") -> dict[str, float]:
         """
         Calculates exact friction components (Spread, Slippage, Commission, Taxes).
         
@@ -178,12 +172,12 @@ class MicroCapitalFrictionCortex:
 
     def evaluate_tca_gate(self,
                           symbol: str,
-                          order_book: Dict[str, Any],
+                          order_book: dict[str, Any],
                           order_size_usd: float,
                           expected_alpha_pct: float,
                           side: str = "BUY",
                           venue: str = "HYPERLIQUID_DEX_ALO",
-                          order_type: str = "ALO") -> Tuple[bool, Dict[str, Any], str]:
+                          order_type: str = "ALO") -> tuple[bool, dict[str, Any], str]:
         """
         Evaluates the Golden 3.0x Rule:
         Trade is APPROVED only if Expected Alpha >= 3.0 * Total Friction Cost.
@@ -236,7 +230,7 @@ class MicroCapitalFrictionCortex:
                                    lows: list,
                                    closes: list,
                                    length: int = 14,
-                                   multiplier: float = 2.5) -> Dict[str, float]:
+                                   multiplier: float = 2.5) -> dict[str, float]:
         """
         Calculates Volatility-Based Swing Exits using 2.5x ATR.
         Expands target R-multiple to 1:3, diluting fixed fees by 98%.
@@ -270,7 +264,7 @@ class MicroCapitalFrictionCortex:
                                       symbol: str,
                                       side: str,
                                       price: float,
-                                      qty: float) -> Dict[str, Any]:
+                                      qty: float) -> dict[str, Any]:
         """
         Simulates an Add-Liquidity-Only (ALO / Post-Only) Limit Order on Hyperliquid L1.
         Captures the spread and credits a Maker Rebate (+0.002%)!
@@ -314,7 +308,7 @@ class MicroCapitalFrictionCortex:
                                    master_capital_inr: float,
                                    trade_risk_inr: float,
                                    account_tier_usd: float = 50000.0,
-                                   copier_multiplier: int = 20) -> Dict[str, Any]:
+                                   copier_multiplier: int = 20) -> dict[str, Any]:
         """
         Calculates Prop Firm Scaler metrics (Apex Trader Funding / Topstep).
         Risks pennies on ₹1,000 master account; copies to 20x $50,000 funded accounts!

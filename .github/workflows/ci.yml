@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install uvloop orjson aiohttp
+          pip install -r requirements.txt
 
       - name: Run IC² Compound Synthesis Engine (12 Clusters)
         run: python3 ic2_interconnection_engine.py
@@ -38,4 +38,4 @@ jobs:
         run: python3 test_phase3_cherry_on_top_battery.py
 
       - name: Run 10x Canary & 10,000-Order Stress Runner
-        run: python3 sovereign_100_hacks_100_wheels_full_synthesis.py
+        run: python3 sovereign_100_hacks_100_wheels_full_synthesis.py --verify-only

@@ -22,8 +22,8 @@ from pathlib import Path
 BASE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
 WHEELS_DIR = Path(os.environ.get("AIR10_WHEELS_DIR", BASE_DIR / "downloaded_wheels"))
 CORTEX_DB = Path(os.environ.get("AIR10_CORTEX_DB", BASE_DIR / "sovereign_trading_cortex.sqlite"))
-LEDGER_DB = Path(os.environ.get("AIR10_TEST_DB", BASE_DIR / "live_production_ledger.sqlite"))
-TRUTH_JSON = Path(os.environ.get("AIR10_TRUTH_JSON", Path("/Users/rajondas/.air1/state/CURRENT_TRUTH.json")))
+DEFAULT_TRUTH = Path("/Users/rajondas/.air1/state/CURRENT_TRUTH.json")
+TRUTH_JSON = Path(os.environ.get("AIR10_TRUTH_JSON", DEFAULT_TRUTH if DEFAULT_TRUTH.parent.exists() else BASE_DIR / "CURRENT_TRUTH.json"))
 
 # 50 Forum-Scraped Hacks
 FORUM_HACKS_50 = [
@@ -472,7 +472,10 @@ def ingest_forum_hacks_into_sqlite():
 
 def audit_downloaded_wheels():
     """Audits downloaded wheels on physical disk and records in SQLite."""
-    repos = [p.name for p in WHEELS_DIR.iterdir() if p.is_dir() and not p.name.startswith(".")]
+    if WHEELS_DIR.exists():
+        repos = [p.name for p in WHEELS_DIR.iterdir() if p.is_dir() and not p.name.startswith(".")]
+    else:
+        repos = []
     repos.sort()
     
     conn = sqlite3.connect(CORTEX_DB, timeout=10.0)
@@ -591,9 +594,9 @@ def run_10x_canary_stress_test():
     
     # 4. RELEASE CANDIDATE VERIFICATION (REL)
     print("\n[PHASE 4/5] RELEASE CANDIDATE (REL) VERIFICATION...")
-    assert avg_lat < 0.5, f"Average latency {avg_lat:.2f}ms exceeds 0.5ms limit!"
-    assert p95_lat < 2.0, f"p95 latency {p95_lat:.2f}ms exceeds 2.0ms limit!"
-    print("  ✅ Sub-millisecond execution confirmed: SLO fully respected with >20x headroom.")
+    assert avg_lat < 0.15, f"Average latency {avg_lat:.4f}ms exceeds 0.15ms limit!"
+    assert p95_lat < 1.0, f"p95 latency {p95_lat:.4f}ms exceeds 1.0ms limit!"
+    print(f"  ✅ Execution latency confirmed: avg={avg_lat:.4f}ms (<0.15ms), p95={p95_lat:.4f}ms (<1.0ms). Fully respected.")
     
     # 5. FINAL CERTIFICATION
     print("\n[PHASE 5/5] FINAL MASTER CERTIFICATION...")
@@ -606,21 +609,32 @@ def run_10x_canary_stress_test():
 
 def update_master_truth():
     """Synchronizes truth json and reports summary."""
-    with open(TRUTH_JSON, "r") as f:
-        truth = json.load(f)
-    
-    truth["master_synthesis_status"] = "100_PERCENT_PROTOCOL_0_VERIFIED"
-    truth["forum_scraped_hacks_count"] = len(FORUM_HACKS_50)
-    truth["master_ic2_clusters_count"] = 12
-    truth["stress_10x_verified"] = True
-    truth["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    
-    with open(TRUTH_JSON, "w") as f:
-        json.dump(truth, f, indent=2)
-    print(f"  ✅ Updated {TRUTH_JSON}")
+    if not TRUTH_JSON.parent.exists():
+        print(f"  ℹ️ Skipping update_master_truth: parent directory {TRUTH_JSON.parent} does not exist.")
+        return
+    if not TRUTH_JSON.exists():
+        print(f"  ℹ️ Skipping update_master_truth: {TRUTH_JSON} does not exist.")
+        return
+    try:
+        with open(TRUTH_JSON, "r") as f:
+            truth = json.load(f)
+        
+        truth["master_synthesis_status"] = "100_PERCENT_PROTOCOL_0_VERIFIED"
+        truth["forum_scraped_hacks_count"] = len(FORUM_HACKS_50)
+        truth["master_ic2_clusters_count"] = 12
+        truth["stress_10x_verified"] = True
+        truth["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        
+        with open(TRUTH_JSON, "w") as f:
+            json.dump(truth, f, indent=2)
+        print(f"  ✅ Updated {TRUTH_JSON}")
+    except Exception as e:
+        print(f"  ⚠️ update_master_truth encountered non-fatal error: {e}")
 
 
 def main():
+    import sys
+    verify_only = "--verify-only" in sys.argv
     print("=" * 80)
     print("🔱 AIR10 / MIGL PROTOCOL 0: 100+ HACKS & 100+ WHEELS MASTER EXECUTION")
     print("=" * 80)
@@ -634,8 +648,11 @@ def main():
     print("\n[STEP 3] Running 10x Canary & Stress Test...")
     run_10x_canary_stress_test()
     
-    print("\n[STEP 4] Updating Master Truth...")
-    update_master_truth()
+    if not verify_only:
+        print("\n[STEP 4] Updating Master Truth...")
+        update_master_truth()
+    else:
+        print("\n[STEP 4] Verify-only mode: skipping Master Truth disk update.")
     
     print("\n" + "=" * 80)
     print("🎉 PROTOCOL 0 MASTER SYNTHESIS COMPLETE: 100% SUCCESS")
