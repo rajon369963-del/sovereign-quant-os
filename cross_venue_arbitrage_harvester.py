@@ -23,11 +23,12 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
+ENGINE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
 DB_PATH = Path(os.environ.get("AIR10_TEST_DB", str(ENGINE_DIR / "live_production_ledger.sqlite")))
 
 sys.path.insert(0, str(ENGINE_DIR))
 from async_l2_dma_gateway import OrderSide, OrderState, VenueType, async_dma_gateway
+from ic2_interconnection_engine import FundingRateArbitrageScanner
 
 
 @dataclass
@@ -58,6 +59,7 @@ class CrossVenueArbitrageHarvester:
     def __init__(self, db_path: Path = DB_PATH):
         self.db_path = db_path
         self.active_basis_positions: dict[str, DeltaNeutralBasisPosition] = {}
+        self.scanner = FundingRateArbitrageScanner(min_annualized_yield_pct=10.0, max_payback_days=5)
         self._init_db()
         self.rehydrate_from_wal()
 
@@ -123,13 +125,29 @@ class CrossVenueArbitrageHarvester:
         """
         Evaluates the annualized basis spread and funding yield.
         Basis = (Perp Price - Spot Price) / Spot Price
+        Enforces 5-day payback gate via FundingRateArbitrageScanner.evaluate_viability().
         """
         basis_pct = (perp_price - spot_price) / spot_price if spot_price > 0 else 0.0
         hourly_funding = funding_rate_8h / 8.0
         annualized_yield = (hourly_funding * 24 * 365) * 100.0
 
-        # Opportunity threshold: Basis >= 0.02% AND Hourly Funding >= 0.001%
-        is_viable = (basis_pct >= 0.0002) and (hourly_funding > 0.0)
+        # Evaluate viability and payback using scanner
+        # Shoonya spot has ₹0 brokerage (0.0 fee), Hyperliquid ALO maker fee is ~0.015%
+        scan_res = self.scanner.evaluate_viability(
+            symbol=f"{symbol_base}-PERP",
+            funding_rate_8h=funding_rate_8h,
+            spot_taker_fee=0.0,
+            perp_maker_fee=0.00015,
+            use_maker=True,
+        )
+
+        payback_days = scan_res.get("payback_days", float('inf'))
+        is_viable = (
+            (basis_pct >= 0.0002) and 
+            (hourly_funding > 0.0) and 
+            scan_res.get("is_viable", False) and 
+            (payback_days <= 5.0)
+        )
         
         return {
             "symbol_base": symbol_base,
@@ -138,7 +156,12 @@ class CrossVenueArbitrageHarvester:
             "basis_pct": basis_pct,
             "hourly_funding_pct": hourly_funding,
             "annualized_yield_pct": annualized_yield,
-            "is_viable": is_viable
+            "payback_days": payback_days,
+            "is_viable": is_viable,
+            "rejection_reason": None if is_viable else (
+                f"Payback {payback_days:.1f}d > 5.0d" if payback_days > 5.0
+                else scan_res.get("rejection_reason") or "Negative or sub-threshold basis"
+            ),
         }
 
     def open_basis_position(self,

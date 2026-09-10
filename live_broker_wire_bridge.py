@@ -163,6 +163,9 @@ class LiveBrokerWireBridge:
         # Thread-local SQLite connection for zero-lock WAL concurrency
         self._local = threading.local()
         self._init_wire_tables()
+        # HERMES FIX (orphan reload): a restart must re-adopt non-terminal
+        # WAL rows so the reconciliation sweeper can see pre-crash orphans.
+        self._reload_unreconciled_orders()
 
     def _get_db(self) -> sqlite3.Connection:
         conn = getattr(self._local, "conn", None)
@@ -210,6 +213,79 @@ class LiveBrokerWireBridge:
         h = hashlib.sha256(cl_ord_id.encode()).hexdigest()[:8]
         return f"RK_{h}"
 
+    # --------------------------------------------------------------------------
+    # HERMES FIX: ORPHAN RELOAD + IDEMPOTENT REPLAY (AC-05 / restart safety)
+    # --------------------------------------------------------------------------
+    _TERMINAL_WIRE_STATES = frozenset({"FILLED", "CANCELED", "REJECTED", "ZOMBIE", "PARTIALLY_FILLED"})
+    _INFLIGHT_WIRE_STATES = frozenset({"PENDING_NEW", "SENT_TO_WIRE", "INFLIGHT_UNKNOWN", "OPEN", "ACK_RECEIVED"})
+
+    def _order_from_row(self, row: sqlite3.Row) -> WireOrderPayload:
+        """Rebuild a payload from a WAL audit row (no wire side effects)."""
+        return WireOrderPayload(
+            cl_ord_id=row["cl_ord_id"],
+            symbol=row["symbol"] or "",
+            venue=row["venue"] or "",
+            side=row["side"] or "",
+            price=row["price"] or 0.0,
+            quantity=row["quantity"] or 0.0,
+            order_type="ALO",
+            remarks=row["remarks_token"] or "",
+            exchange_oid=row["exchange_oid"] or "",
+            wire_state=WireState(row["wire_state"]),
+            created_at_ns=row["created_at_ns"] or 0,
+            sent_at_ns=row["sent_at_ns"] or 0,
+            ack_at_ns=row["ack_at_ns"] or 0,
+            filled_at_ns=row["filled_at_ns"] or 0,
+            filled_qty=row["filled_qty"] or 0.0,
+            avg_price=row["avg_price"] or 0.0,
+            fee_inr=row["fee_inr"] or 0.0,
+            rebate_inr=row["rebate_inr"] or 0.0,
+            rejection_reason=row["rejection_reason"] or "",
+        )
+
+    def _reload_unreconciled_orders(self) -> int:
+        """Re-adopt non-terminal WAL rows into memory after (re)start."""
+        conn = sqlite3.connect(self.db_path, timeout=5.0)
+        conn.row_factory = sqlite3.Row
+        try:
+            rows = conn.execute(
+                "SELECT * FROM wire_state_audit_log WHERE wire_state IN"
+                " ('PENDING_NEW','SENT_TO_WIRE','INFLIGHT_UNKNOWN','OPEN','ACK_RECEIVED')"
+            ).fetchall()
+        finally:
+            conn.close()
+        adopted = 0
+        for row in rows:
+            cl_ord_id = row["cl_ord_id"]
+            if cl_ord_id in self.inflight_orders:
+                continue
+            order = self._order_from_row(row)
+            if not order.remarks:
+                order.remarks = self.generate_remarks_token(cl_ord_id)
+            self.inflight_orders[cl_ord_id] = order
+            self.remarks_map[order.remarks] = cl_ord_id
+            if order.exchange_oid:
+                self.exchange_oid_map[order.exchange_oid] = cl_ord_id
+            adopted += 1
+        return adopted
+
+    def lookup_cached_fill(self, cl_ord_id: str) -> WireOrderPayload | None:
+        """Return the cached terminal record for a cl_ord_id, if any."""
+        conn = sqlite3.connect(self.db_path, timeout=5.0)
+        conn.row_factory = sqlite3.Row
+        try:
+            row = conn.execute(
+                "SELECT * FROM wire_state_audit_log WHERE cl_ord_id = ?",
+                (cl_ord_id,),
+            ).fetchone()
+        finally:
+            conn.close()
+        if row is None:
+            return None
+        if row["wire_state"] in self._TERMINAL_WIRE_STATES:
+            return self._order_from_row(row)
+        return None
+
     def register_subscription(self, symbol: str):
         """The Amnesiac Socket Fix: keeps registry to replay on reconnect."""
         self.subscription_registry.add(symbol)
@@ -225,8 +301,12 @@ class LiveBrokerWireBridge:
         """Step 1 of Sandwich Log: Commit PENDING_NEW to WAL before wire transmission."""
         conn = self._get_db()
         conn.execute("BEGIN IMMEDIATE;")
+        cur = conn.execute("SELECT cl_ord_id FROM wire_state_audit_log WHERE cl_ord_id = ?", (order.cl_ord_id,))
+        if cur.fetchone() is not None:
+            conn.commit()
+            return
         conn.execute("""
-            INSERT OR REPLACE INTO wire_state_audit_log (
+            INSERT INTO wire_state_audit_log (
                 cl_ord_id, exchange_oid, remarks_token, symbol, venue, side,
                 price, quantity, wire_state, created_at_ns, sent_at_ns,
                 ack_at_ns, filled_at_ns, filled_qty, avg_price, fee_inr,
@@ -279,7 +359,17 @@ class LiveBrokerWireBridge:
         - Async non-blocking wire send
         - Chaos injection in SANDBOX mode (jitter, 429, packet drops)
         - Inflight state tracking and post-commit
+        - Idempotent replay: duplicate cl_ord_id returns the cached fill
         """
+        # 0. Idempotency Guard (HERMES FIX, AC-05): a network-timeout retry
+        # must NEVER place a second live order. Memory first, WAL second
+        # (covers cross-restart retries where memory is empty).
+        if order.cl_ord_id in self.inflight_orders:
+            return self.inflight_orders[order.cl_ord_id]
+        cached = self.lookup_cached_fill(order.cl_ord_id)
+        if cached is not None:
+            return cached
+
         # 1. Bailout Check: Prevent runaway trading if too many orders in-flight
         unreconciled_count = len([o for o in self.inflight_orders.values() 
                                  if o.wire_state in (WireState.SENT_TO_WIRE, WireState.INFLIGHT_UNKNOWN)])
@@ -384,7 +474,6 @@ class LiveBrokerWireBridge:
         order.filled_qty = order.quantity
         order.avg_price = order.price
         order.filled_at_ns = time.time_ns()
-        self.total_wire_sent += 1
         self.total_wire_acked += 1
         self.total_wire_filled += 1
         self._sandwich_post_commit(order)

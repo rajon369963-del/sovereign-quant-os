@@ -15,12 +15,13 @@ Phase 2 Verified Implementation & Adversarial Falsification Suite.
 """
 
 import asyncio
+import os
 import sqlite3
 import sys
 import time
 from pathlib import Path
 
-ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
+ENGINE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
 sys.path.insert(0, str(ENGINE_DIR))
 
 from async_l2_dma_gateway import (
@@ -46,7 +47,7 @@ async def run_battery():
     print("🚀 STARTING AIR10 WIRE BRIDGE & RECONCILIATION TEST BATTERY (PHASE 2)")
     print("="*80)
 
-    test_db = ENGINE_DIR / "test_wire_bridge_ledger.sqlite"
+    test_db = Path(os.environ.get("AIR10_TEST_DB", ENGINE_DIR / "test_wire_bridge_ledger.sqlite"))
     if test_db.exists():
         test_db.unlink()
 
@@ -82,16 +83,26 @@ async def run_battery():
         quantity=0.1,
         order_type="ALO"
     )
-    # Verify idempotency via WAL ledger: the cl_ord_id should already exist as FILLED
+    sends_before = bridge.total_wire_sent
+    res_dup = await bridge.transmit_order(order_dup)
+    assert res_dup.exchange_oid == res.exchange_oid, f"Expected same OID {res.exchange_oid}, got {res_dup.exchange_oid}"
+    assert bridge.total_wire_sent == sends_before, f"Expected 0 extra wire sends, got {bridge.total_wire_sent - sends_before}"
+
+    # Verify idempotency via WAL ledger: the cl_ord_id should still have a single row as FILLED
     wal_conn = sqlite3.connect(bridge.db_path, timeout=5.0)
+    count = wal_conn.execute(
+        "SELECT COUNT(*) FROM wire_state_audit_log WHERE cl_ord_id = ?",
+        (cl_ord_id,)
+    ).fetchone()[0]
     wal_row = wal_conn.execute(
         "SELECT wire_state FROM wire_state_audit_log WHERE cl_ord_id = ?",
         (cl_ord_id,)
     ).fetchone()
     wal_conn.close()
+    assert count == 1, f"Expected exactly 1 audit row, got {count}"
     assert wal_row is not None, f"ClOrdID {cl_ord_id} not found in WAL ledger"
     assert wal_row[0] == "FILLED", f"Expected FILLED in WAL, got {wal_row[0]}"
-    print("  ✅ 100% Idempotent ClOrdID check confirmed (WAL ledger FILLED state verified)")
+    print(f"  ✅ 100% Idempotent ClOrdID check confirmed (Re-transmission returned OID={res_dup.exchange_oid} with 0 new wire sends)")
     passed_tests += 1
 
     # --------------------------------------------------------------------------
@@ -173,7 +184,10 @@ async def run_battery():
     # TEST 5: Bailout Limit Guard & Dead-Man's Switch Emergency Flush
     # --------------------------------------------------------------------------
     print("\n[TEST 5/6] Testing Bailout Limit Guard & Dead-Man's Switch Emergency Flush...")
-    bailout_bridge = LiveBrokerWireBridge(test_db, mode=WireMode.TESTNET_MOCK, max_unreconciled_bailout=2)
+    bailout_db = ENGINE_DIR / "test_bailout_ledger.sqlite"
+    if bailout_db.exists():
+        bailout_db.unlink()
+    bailout_bridge = LiveBrokerWireBridge(bailout_db, mode=WireMode.TESTNET_MOCK, max_unreconciled_bailout=2)
     
     # Manually populate 2 unreconciled orders
     for i in range(2):

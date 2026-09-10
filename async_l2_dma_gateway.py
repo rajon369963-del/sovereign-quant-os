@@ -52,9 +52,9 @@ except ImportError:
     HAS_ORJSON = False
 
 # Workspace Paths
-ENGINE_DIR = Path('/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine')
+ENGINE_DIR = Path(os.environ.get('AIR10_ENGINE_DIR', str(Path(__file__).resolve().parent)))
 DB_PATH = Path(os.environ.get('AIR10_TEST_DB', str(ENGINE_DIR / 'live_production_ledger.sqlite')))
-STATE_FILE = ENGINE_DIR / 'autonomous_state.json'
+STATE_FILE = Path(os.environ.get('AIR10_STATE_FILE', str(ENGINE_DIR / 'autonomous_state.json')))
 
 # Import Existing Wheels ('Chakka Jodo')
 sys.path.insert(0, str(ENGINE_DIR))

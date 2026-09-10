@@ -1,12 +1,12 @@
 {
-  "capital": 1363.54,
+  "capital": 1501.66,
   "initial_capital": 1000.0,
   "house_money_secured": false,
   "daily_start_capital": 1000.0,
   "last_day_reset": "2026-09-10",
-  "total_trades": 274,
-  "winning_trades": 177,
-  "total_pnl": 363.54,
+  "total_trades": 365,
+  "winning_trades": 241,
+  "total_pnl": 501.66,
   "running": true,
   "circuit_breaker_active": false
 }

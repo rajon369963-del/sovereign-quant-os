@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 ================================================================================
 AIR10 ASYNC L2 DMA GATEWAY COMPREHENSIVE TEST & STRESS BATTERY
@@ -12,18 +11,17 @@ Executes 5 rigorous adversarial, chaos, and stress tests:
 ================================================================================
 """
 
+import asyncio
+import os
+import sqlite3
 import sys
 import time
-import asyncio
-import sqlite3
 from pathlib import Path
 
-ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
+ENGINE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
 sys.path.insert(0, str(ENGINE_DIR))
 
-from async_l2_dma_gateway import (
-    AsyncL2DMAGateway, OrderSide, OrderState, VenueType, L2OrderBook
-)
+from async_l2_dma_gateway import AsyncL2DMAGateway, OrderSide, OrderState, VenueType
 
 passed_tests = 0
 total_tests = 5

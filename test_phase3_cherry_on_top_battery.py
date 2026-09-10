@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 ================================================================================
 AIR10 PHASE 3: CHERRY-ON-TOP ZERO-TRUST TEST BATTERY & COLD-RESTART CANARY
@@ -12,17 +11,14 @@ Falsification & Verification Suite:
 ================================================================================
 """
 
+import os
 import sys
-import time
-import sqlite3
 from pathlib import Path
 
-ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
+ENGINE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", str(Path(__file__).resolve().parent)))
 sys.path.insert(0, str(ENGINE_DIR))
 
-from cross_venue_arbitrage_harvester import (
-    CrossVenueArbitrageHarvester, DeltaNeutralBasisPosition
-)
+from cross_venue_arbitrage_harvester import CrossVenueArbitrageHarvester
 
 passed_tests = 0
 total_tests = 5

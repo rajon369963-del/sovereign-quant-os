@@ -31,6 +31,7 @@ individually would just be "tips" into compound operational capabilities.
 
 import asyncio
 import gc
+import os
 import signal
 import sqlite3
 import sys
@@ -63,8 +64,8 @@ except ImportError:
         return json.loads(data)
     HAS_ORJSON = False
 
-ENGINE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
-DB_PATH = ENGINE_DIR / "live_production_ledger.sqlite"
+ENGINE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
+DB_PATH = Path(os.environ.get("AIR10_TEST_DB", ENGINE_DIR / "live_production_ledger.sqlite"))
 
 
 # ==============================================================================
@@ -145,7 +146,8 @@ class StaleDataWatchdogCascade:
         self.last_market_data_time = time.time()
         if self.is_stale:
             self.is_stale = False
-            self.panic_stage = 0
+            if not self.is_dead_man_tripped:
+                self.panic_stage = 0
             self.cascade_log.append({
                 "event": "STALE_RECOVERED",
                 "timestamp": time.time(),
@@ -156,6 +158,10 @@ class StaleDataWatchdogCascade:
         self.last_heartbeat_time = time.time()
         if self.is_dead_man_tripped:
             self.is_dead_man_tripped = False
+            if not self.is_stale:
+                self.panic_stage = 0
+            elif self.panic_stage > 1:
+                self.panic_stage = 1
             self.cascade_log.append({
                 "event": "DEAD_MAN_RECOVERED",
                 "timestamp": time.time(),
@@ -166,21 +172,11 @@ class StaleDataWatchdogCascade:
         now = time.time()
         data_age = now - self.last_market_data_time
         heartbeat_age = now - self.last_heartbeat_time
-        
-        result = {
-            "is_safe": True,
-            "action": "NORMAL",
-            "data_age_sec": data_age,
-            "heartbeat_age_sec": heartbeat_age,
-            "panic_stage": self.panic_stage,
-        }
 
         # Layer 1: Stale Data → Pull Quotes
         if data_age > self.stale_threshold_sec and self.panic_stage < 1:
             self.is_stale = True
             self.panic_stage = 1
-            result["action"] = "PULL_ALL_QUOTES"
-            result["is_safe"] = False
             self.cascade_log.append({
                 "event": "STALE_DATA_TRIGGERED",
                 "data_age_sec": data_age,
@@ -191,8 +187,6 @@ class StaleDataWatchdogCascade:
         if heartbeat_age > self.dead_man_threshold_sec and self.panic_stage < 2:
             self.is_dead_man_tripped = True
             self.panic_stage = 2
-            result["action"] = "CANCEL_ALL_ORDERS"
-            result["is_safe"] = False
             self.cascade_log.append({
                 "event": "DEAD_MAN_TRIPPED",
                 "heartbeat_age_sec": heartbeat_age,
@@ -202,15 +196,41 @@ class StaleDataWatchdogCascade:
         # Layer 3: Extended Dead-Man → Two-Stage Panic (Flatten)
         if heartbeat_age > self.dead_man_threshold_sec * 2 and self.panic_stage < 3:
             self.panic_stage = 3
-            result["action"] = "FLATTEN_TO_NEUTRAL"
-            result["is_safe"] = False
             self.cascade_log.append({
                 "event": "PANIC_FLATTEN_TRIGGERED",
                 "heartbeat_age_sec": heartbeat_age,
                 "timestamp": now,
             })
 
-        return result
+        # Hold escalated state (PULL_ALL_QUOTES / CANCEL_ALL_ORDERS / FLATTEN_TO_NEUTRAL) while silence persists
+        if self.panic_stage >= 3 and heartbeat_age > self.dead_man_threshold_sec * 2:
+            action = "FLATTEN_TO_NEUTRAL"
+            is_safe = False
+        elif self.panic_stage >= 2 and heartbeat_age > self.dead_man_threshold_sec:
+            action = "CANCEL_ALL_ORDERS"
+            is_safe = False
+        elif self.panic_stage >= 1 and data_age > self.stale_threshold_sec:
+            action = "PULL_ALL_QUOTES"
+            is_safe = False
+        elif self.panic_stage > 0:
+            stage_to_action = {
+                1: "PULL_ALL_QUOTES",
+                2: "CANCEL_ALL_ORDERS",
+                3: "FLATTEN_TO_NEUTRAL"
+            }
+            action = stage_to_action.get(self.panic_stage, "FLATTEN_TO_NEUTRAL")
+            is_safe = False
+        else:
+            action = "NORMAL"
+            is_safe = True
+
+        return {
+            "is_safe": is_safe,
+            "action": action,
+            "data_age_sec": data_age,
+            "heartbeat_age_sec": heartbeat_age,
+            "panic_stage": self.panic_stage,
+        }
 
 
 # ==============================================================================
@@ -453,7 +473,11 @@ class FundingRateArbitrageScanner:
                  max_payback_days: int = 5):
         self.min_annualized_yield_pct = min_annualized_yield_pct
         self.max_payback_days = max_payback_days
-        self.scan_history: list[dict] = []
+        self.scan_history: deque = deque(maxlen=1000)
+
+    def evaluate_viability(self, *args, **kwargs) -> dict:
+        """Alias for evaluate_trade to ensure polymorphic compatibility."""
+        return self.evaluate_trade(*args, **kwargs)
 
     def evaluate_trade(self, symbol: str, funding_rate_8h: float,
                        spot_taker_fee: float = 0.001,
@@ -547,6 +571,51 @@ class CleanShutdownManager:
         """Register a callback to run during shutdown."""
         self.shutdown_callbacks.append(callback)
 
+    def execute_shutdown(self, raise_on_error: bool = False) -> bool:
+        """
+        Execute all shutdown callbacks and checkpoint WAL.
+        Verifies wal_checkpoint busy status.
+        Raises exception if raise_on_error=True and failure occurs.
+        Returns True if successful, False otherwise.
+        """
+        had_error = False
+        last_error = None
+
+        # Run persistence callbacks
+        for cb in self.shutdown_callbacks:
+            try:
+                cb()
+            except Exception as e:
+                print(f"  ❌ Shutdown callback error: {e}")
+                had_error = True
+                last_error = e
+                if raise_on_error:
+                    raise
+
+        # Flush WAL and verify checkpoint status
+        try:
+            conn = sqlite3.connect(self.db_path, timeout=10.0)
+            res = conn.execute("PRAGMA wal_checkpoint(FULL);").fetchone()
+            conn.close()
+            if res and res[0] != 0:
+                err_msg = f"WAL checkpoint busy/incomplete: {res}"
+                print(f"  ❌ {err_msg}")
+                had_error = True
+                if raise_on_error:
+                    raise RuntimeError(err_msg)
+            else:
+                print("  ✅ WAL checkpoint(FULL) completed.")
+        except Exception as e:
+            print(f"  ❌ WAL flush error: {e}")
+            had_error = True
+            last_error = e
+            if raise_on_error:
+                raise
+
+        if had_error and raise_on_error and last_error:
+            raise last_error
+        return not had_error
+
     def _handle_signal(self, signum, frame):
         """Handle shutdown signal."""
         if self.shutdown_requested:
@@ -556,22 +625,10 @@ class CleanShutdownManager:
         sig_name = signal.Signals(signum).name
         print(f"\n⚠️  [{sig_name}] Clean shutdown initiated...")
         
-        # Run callbacks
-        for cb in self.shutdown_callbacks:
-            try:
-                cb()
-            except Exception as e:
-                print(f"  ⚠️  Shutdown callback error: {e}")
-        
-        # Flush WAL
-        try:
-            conn = sqlite3.connect(self.db_path, timeout=10.0)
-            conn.execute("PRAGMA wal_checkpoint(FULL);")
-            conn.close()
-            print("  ✅ WAL checkpoint(FULL) completed.")
-        except Exception as e:
-            print(f"  ⚠️  WAL flush error: {e}")
-        
+        success = self.execute_shutdown(raise_on_error=False)
+        if not success:
+            print("  ❌ Clean shutdown finished with errors.")
+            sys.exit(1)
         print("  ✅ Clean shutdown complete.")
         sys.exit(0)
 
@@ -666,12 +723,14 @@ class FeeAwarePreTradeFilter:
                  maker_fee_pct: float = 0.015,
                  taker_fee_pct: float = 0.045,
                  estimated_slippage_pct: float = 0.01,
-                 min_alpha_multiplier: float = 4.0):
+                 min_alpha_multiplier: float = 4.0,
+                 micro_capital_mode: bool | None = None):
         self.account_size_usd = account_size_usd
         self.maker_fee_pct = maker_fee_pct
         self.taker_fee_pct = taker_fee_pct
         self.estimated_slippage_pct = estimated_slippage_pct
         self.min_alpha_multiplier = min_alpha_multiplier
+        self.micro_capital_mode = (account_size_usd < 100.0) if micro_capital_mode is None else micro_capital_mode
         self.total_passed = 0
         self.total_rejected = 0
 
@@ -682,9 +741,28 @@ class FeeAwarePreTradeFilter:
         Returns go/no-go for a proposed trade.
         """
         # Determine fee tier based on account size
-        is_micro = self.account_size_usd < 100.0
+        is_micro = self.micro_capital_mode or (self.account_size_usd < 100.0)
         
-        if is_micro and not force_taker:
+        if is_micro and force_taker:
+            # Micro-capital accounts (<$100) strictly reject taker orders (ALO maker-only)
+            self.total_rejected += 1
+            roundtrip_friction_pct = (self.taker_fee_pct * 2) + self.estimated_slippage_pct
+            min_required_alpha = roundtrip_friction_pct * self.min_alpha_multiplier
+            fee_dollar_impact = position_size_usd * (self.taker_fee_pct / 100) * 2
+            fee_as_pct_of_account = (fee_dollar_impact / self.account_size_usd) * 100 if self.account_size_usd > 0 else 0.0
+            return {
+                "is_viable": False,
+                "expected_alpha_pct": expected_alpha_pct,
+                "roundtrip_friction_pct": round(roundtrip_friction_pct, 4),
+                "min_required_alpha_pct": round(min_required_alpha, 4),
+                "fee_dollar_impact": round(fee_dollar_impact, 4),
+                "fee_as_pct_of_account": round(fee_as_pct_of_account, 2),
+                "recommended_order_type": "REJECTED",
+                "is_micro_capital": True,
+                "rejection_reason": "Micro-capital accounts (<$100) strictly enforce ALO maker-only; force_taker is rejected",
+            }
+
+        if is_micro:
             # Force maker-only for micro accounts
             fee = self.maker_fee_pct
             order_type = "ALO"
@@ -828,17 +906,21 @@ def run_ic2_stress_test():
     result = wd.check()
     assert result["action"] == "FLATTEN_TO_NEUTRAL"
     assert wd.panic_stage == 3
+
+    # Repeated check during ongoing silence must HOLD FLATTEN_TO_NEUTRAL and is_safe=False
+    result_repeated = wd.check()
+    assert result_repeated["action"] == "FLATTEN_TO_NEUTRAL", f"Expected FLATTEN_TO_NEUTRAL, got {result_repeated['action']}"
+    assert not result_repeated["is_safe"], "Expected is_safe=False on repeated check during silence"
+    assert result_repeated["panic_stage"] == 3
     
-    # Recovery
+    # Recovery via market data and heartbeat arrival
     wd.on_market_data()
     wd.on_heartbeat()
-    # Reset panic manually (in production, recovery resets this)
-    wd.panic_stage = 0
-    wd.is_stale = False
-    wd.is_dead_man_tripped = False
-    result = wd.check()
-    assert result["is_safe"]
-    print("  ✅ 3-Layer Cascade: NORMAL → PULL_QUOTES → CANCEL_ALL → FLATTEN → RECOVERED")
+    result_recovered = wd.check()
+    assert result_recovered["is_safe"], "Expected is_safe=True after recovery"
+    assert result_recovered["action"] == "NORMAL"
+    assert result_recovered["panic_stage"] == 0
+    print("  ✅ 3-Layer Cascade: NORMAL → PULL_QUOTES → CANCEL_ALL → FLATTEN (latched) → RECOVERED")
     passed += 1
     
     # ── IC²_3: Priority Token Bucket ──
@@ -941,6 +1023,11 @@ def run_ic2_stress_test():
     assert good["is_viable"]
     assert not bad["is_viable"]
     assert good["recommended_order_type"] == "ALO"  # Micro-capital → ALO forced
+    # Force-taker on micro-capital — must be rejected
+    forced_taker = engine.fee_filter.evaluate(expected_alpha_pct=1.0, position_size_usd=10.0, force_taker=True)
+    assert not forced_taker["is_viable"], "force_taker must be rejected on micro-capital accounts!"
+    assert "force_taker is rejected" in forced_taker["rejection_reason"]
+    print("  ✅ Force-Taker Bypass Blocked: Micro-capital strictly enforces ALO maker-only")
     passed += 1
     
     # ── Multi-Cluster Interconnection Test ──
@@ -983,7 +1070,7 @@ def run_ic2_stress_test():
 
     # ── Persist to SQLite ──
     print("\n[PERSIST] Writing IC² Cluster Registry to Cortex SQLite...")
-    cortex_db = ENGINE_DIR / "sovereign_trading_cortex.sqlite"
+    cortex_db = Path(os.environ.get("AIR10_CORTEX_DB", ENGINE_DIR / "sovereign_trading_cortex.sqlite"))
     conn = sqlite3.connect(cortex_db, timeout=5.0)
     conn.execute("""
         CREATE TABLE IF NOT EXISTS ic2_interconnection_registry (

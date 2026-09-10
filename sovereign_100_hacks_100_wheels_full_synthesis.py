@@ -19,11 +19,11 @@ import sqlite3
 import time
 from pathlib import Path
 
-BASE_DIR = Path("/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine")
-WHEELS_DIR = BASE_DIR / "downloaded_wheels"
-CORTEX_DB = BASE_DIR / "sovereign_trading_cortex.sqlite"
-LEDGER_DB = BASE_DIR / "live_production_ledger.sqlite"
-TRUTH_JSON = Path("/Users/rajondas/.air1/state/CURRENT_TRUTH.json")
+BASE_DIR = Path(os.environ.get("AIR10_ENGINE_DIR", Path(__file__).resolve().parent))
+WHEELS_DIR = Path(os.environ.get("AIR10_WHEELS_DIR", BASE_DIR / "downloaded_wheels"))
+CORTEX_DB = Path(os.environ.get("AIR10_CORTEX_DB", BASE_DIR / "sovereign_trading_cortex.sqlite"))
+LEDGER_DB = Path(os.environ.get("AIR10_TEST_DB", BASE_DIR / "live_production_ledger.sqlite"))
+TRUTH_JSON = Path(os.environ.get("AIR10_TRUTH_JSON", Path("/Users/rajondas/.air1/state/CURRENT_TRUTH.json")))
 
 # 50 Forum-Scraped Hacks
 FORUM_HACKS_50 = [
