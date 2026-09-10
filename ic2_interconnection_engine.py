@@ -740,8 +740,8 @@ class FeeAwarePreTradeFilter:
         """
         Returns go/no-go for a proposed trade.
         """
-        # Determine fee tier based on account size
-        is_micro = self.micro_capital_mode or (self.account_size_usd < 100.0)
+        # Determine fee tier based on account size or explicit micro_capital_mode
+        is_micro = self.micro_capital_mode
         
         if is_micro and force_taker:
             # Micro-capital accounts (<$100) strictly reject taker orders (ALO maker-only)
@@ -812,6 +812,7 @@ class MasterIC2SynthesisEngine:
     Orchestrates all 12 IC² clusters into a unified trading pipeline.
     """
     def __init__(self, db_path: Path = DB_PATH, account_size_usd: float = 12.0):
+        self.db_path = db_path
         self.gc_manager = GCPauseFreeHotPath()
         self.watchdog = StaleDataWatchdogCascade()
         self.rate_limiter = PriorityTokenBucket()
@@ -985,13 +986,32 @@ def run_ic2_stress_test():
     assert high_result["is_viable"]
     assert not low_result["is_viable"]
     assert neg_result["direction"] == "SHORT_SPOT_LONG_PERP"
+    assert engine.funding_scanner.scan_history.maxlen == 1000, "scan_history must be bounded to 1000"
     passed += 1
     
     # ── IC²_10: Signal Handlers ──
     print("\n[IC²_10] Signal Handlers + Clean Shutdown...")
     assert not engine.shutdown_manager.shutdown_requested
     assert len(engine.shutdown_manager.shutdown_callbacks) > 0
-    print(f"  ✅ SIGINT/SIGTERM handlers registered | Callbacks: {len(engine.shutdown_manager.shutdown_callbacks)}")
+    # Test programmatic execute_shutdown with raise_on_error
+    callback_executed = False
+    def test_cb():
+        nonlocal callback_executed
+        callback_executed = True
+    test_shutdown = CleanShutdownManager(db_path=engine.db_path)
+    test_shutdown.add_shutdown_callback(test_cb)
+    shutdown_ok = test_shutdown.execute_shutdown(raise_on_error=True)
+    assert shutdown_ok and callback_executed, "execute_shutdown should succeed and run callback"
+    # Test error propagation when raise_on_error=True
+    def failing_cb():
+        raise ValueError("Simulated persistence failure")
+    test_shutdown.add_shutdown_callback(failing_cb)
+    try:
+        test_shutdown.execute_shutdown(raise_on_error=True)
+        assert False, "execute_shutdown should raise on callback failure when raise_on_error=True"
+    except ValueError:
+        pass
+    print(f"  ✅ SIGINT/SIGTERM handlers registered | Callbacks: {len(engine.shutdown_manager.shutdown_callbacks)} | Shutdown verified")
     passed += 1
     
     # ── IC²_11: Regime Detection ──
@@ -1027,6 +1047,11 @@ def run_ic2_stress_test():
     forced_taker = engine.fee_filter.evaluate(expected_alpha_pct=1.0, position_size_usd=10.0, force_taker=True)
     assert not forced_taker["is_viable"], "force_taker must be rejected on micro-capital accounts!"
     assert "force_taker is rejected" in forced_taker["rejection_reason"]
+    # Explicit non-micro mode allows force_taker with high alpha
+    macro_filter = FeeAwarePreTradeFilter(account_size_usd=50.0, micro_capital_mode=False)
+    macro_taker = macro_filter.evaluate(expected_alpha_pct=1.0, position_size_usd=10.0, force_taker=True)
+    assert macro_taker["is_viable"], "Explicit micro_capital_mode=False should allow taker when alpha is sufficient"
+    assert macro_taker["recommended_order_type"] == "IOC"
     print("  ✅ Force-Taker Bypass Blocked: Micro-capital strictly enforces ALO maker-only")
     passed += 1
     

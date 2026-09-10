@@ -103,6 +103,27 @@ async def run_battery():
     assert wal_row is not None, f"ClOrdID {cl_ord_id} not found in WAL ledger"
     assert wal_row[0] == "FILLED", f"Expected FILLED in WAL, got {wal_row[0]}"
     print(f"  ✅ 100% Idempotent ClOrdID check confirmed (Re-transmission returned OID={res_dup.exchange_oid} with 0 new wire sends)")
+
+    # Test concurrent in-flight retries (same cl_ord_id sent concurrently while in wire flight)
+    concurrent_cl_ord = f"AGY_CONC_{time.time_ns()}"
+    mk_concurrent = lambda: WireOrderPayload(
+        cl_ord_id=concurrent_cl_ord,
+        symbol="ETH-PERP",
+        venue="HYPERLIQUID_DEX_ALO",
+        side="BUY",
+        price=3000.0,
+        quantity=0.5,
+        order_type="ALO"
+    )
+    sends_before_conc = bridge.total_wire_sent
+    t_c1 = asyncio.create_task(bridge.transmit_order(mk_concurrent()))
+    await asyncio.sleep(0.0002) # let first order enter wire flight
+    res_c2 = await bridge.transmit_order(mk_concurrent())
+    res_c1 = await t_c1
+    assert res_c1.exchange_oid == res_c2.exchange_oid, f"Concurrent OIDs must match: {res_c1.exchange_oid} vs {res_c2.exchange_oid}"
+    assert res_c2.wire_state == WireState.FILLED, f"Expected FILLED state, got {res_c2.wire_state}"
+    assert bridge.total_wire_sent == sends_before_conc + 1, f"Expected 1 wire send for concurrent retry, got {bridge.total_wire_sent - sends_before_conc}"
+    print(f"  ✅ Concurrent in-flight retry confirmed (0 extra wire sends, matching OID={res_c1.exchange_oid})")
     passed_tests += 1
 
     # --------------------------------------------------------------------------

@@ -617,7 +617,7 @@ def update_master_truth():
     
     with open(TRUTH_JSON, "w") as f:
         json.dump(truth, f, indent=2)
-    print("  ✅ Updated /Users/rajondas/.air1/state/CURRENT_TRUTH.json")
+    print(f"  ✅ Updated {TRUTH_JSON}")
 
 
 def main():

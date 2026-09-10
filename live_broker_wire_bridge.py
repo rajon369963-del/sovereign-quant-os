@@ -144,6 +144,7 @@ class LiveBrokerWireBridge:
         self.inflight_orders: dict[str, WireOrderPayload] = {}
         self.exchange_oid_map: dict[str, str] = {} # exchange_oid -> cl_ord_id
         self.remarks_map: dict[str, str] = {}      # remarks_token -> cl_ord_id
+        self.inflight_events: dict[str, asyncio.Event] = {} # In-flight concurrency notification events
         
         # Subscription Registry for the "Amnesiac Socket Fix"
         self.subscription_registry = set()
@@ -269,8 +270,8 @@ class LiveBrokerWireBridge:
             adopted += 1
         return adopted
 
-    def lookup_cached_fill(self, cl_ord_id: str) -> WireOrderPayload | None:
-        """Return the cached terminal record for a cl_ord_id, if any."""
+    def lookup_order(self, cl_ord_id: str) -> WireOrderPayload | None:
+        """Return the record for a cl_ord_id from WAL, regardless of state."""
         conn = sqlite3.connect(self.db_path, timeout=5.0)
         conn.row_factory = sqlite3.Row
         try:
@@ -282,8 +283,13 @@ class LiveBrokerWireBridge:
             conn.close()
         if row is None:
             return None
-        if row["wire_state"] in self._TERMINAL_WIRE_STATES:
-            return self._order_from_row(row)
+        return self._order_from_row(row)
+
+    def lookup_cached_fill(self, cl_ord_id: str) -> WireOrderPayload | None:
+        """Return the cached terminal record for a cl_ord_id, if any."""
+        order = self.lookup_order(cl_ord_id)
+        if order is not None and order.wire_state.value in self._TERMINAL_WIRE_STATES:
+            return order
         return None
 
     def register_subscription(self, symbol: str):
@@ -297,14 +303,18 @@ class LiveBrokerWireBridge:
     # --------------------------------------------------------------------------
     # PRE-COMMIT SANDWICH LOG (SQLITE WAL)
     # --------------------------------------------------------------------------
-    def _sandwich_pre_commit(self, order: WireOrderPayload):
-        """Step 1 of Sandwich Log: Commit PENDING_NEW to WAL before wire transmission."""
+    def _sandwich_pre_commit(self, order: WireOrderPayload) -> bool:
+        """
+        Step 1 of Sandwich Log: Atomically check existence and commit PENDING_NEW
+        under BEGIN IMMEDIATE serialization.
+        Returns True if a new audit record was inserted; False if cl_ord_id already exists.
+        """
         conn = self._get_db()
         conn.execute("BEGIN IMMEDIATE;")
         cur = conn.execute("SELECT cl_ord_id FROM wire_state_audit_log WHERE cl_ord_id = ?", (order.cl_ord_id,))
         if cur.fetchone() is not None:
             conn.commit()
-            return
+            return False
         conn.execute("""
             INSERT INTO wire_state_audit_log (
                 cl_ord_id, exchange_oid, remarks_token, symbol, venue, side,
@@ -321,6 +331,7 @@ class LiveBrokerWireBridge:
             order.rejection_reason
         ))
         conn.commit()
+        return True
 
     def _sandwich_post_commit(self, order: WireOrderPayload):
         """Step 2 of Sandwich Log: Commit Wire ACK / Fill to WAL."""
@@ -351,53 +362,75 @@ class LiveBrokerWireBridge:
     # --------------------------------------------------------------------------
     async def transmit_order(self, order: WireOrderPayload) -> WireOrderPayload:
         """
-        Transmits order across two-way wire protocol.
+        Transmits order across two-way wire protocol with serialized idempotency guard.
         Handles:
-        - Bailout limit check (Unreconciled orders > max -> halt)
-        - Remarks token generation
-        - Pre-commit sandwich log
-        - Async non-blocking wire send
-        - Chaos injection in SANDBOX mode (jitter, 429, packet drops)
-        - Inflight state tracking and post-commit
-        - Idempotent replay: duplicate cl_ord_id returns the cached fill
+        - In-flight event synchronization: concurrent submissions on identical cl_ord_id
+          await the original transmission rather than double-sending to the wire.
+        - Read-through cached fill replay for completed orders.
+        - Atomic WAL pre-commit claim under BEGIN IMMEDIATE.
+        - Bailout limit check (Unreconciled orders > max -> halt).
+        - Async non-blocking wire send and chaos injection.
+        - Final post-commit and waiter notification.
         """
-        # 0. Idempotency Guard (HERMES FIX, AC-05): a network-timeout retry
-        # must NEVER place a second live order. Memory first, WAL second
-        # (covers cross-restart retries where memory is empty).
-        if order.cl_ord_id in self.inflight_orders:
-            return self.inflight_orders[order.cl_ord_id]
+        # 0. Idempotency Guard: Terminal state already reached?
         cached = self.lookup_cached_fill(order.cl_ord_id)
         if cached is not None:
             return cached
 
-        # 1. Bailout Check: Prevent runaway trading if too many orders in-flight
-        unreconciled_count = len([o for o in self.inflight_orders.values() 
-                                 if o.wire_state in (WireState.SENT_TO_WIRE, WireState.INFLIGHT_UNKNOWN)])
-        if unreconciled_count >= self.max_unreconciled_bailout:
-            self.is_halted = True
-            order.wire_state = WireState.REJECTED
-            order.rejection_reason = f"BAILOUT_HALT: {unreconciled_count} unreconciled orders in flight"
-            self._sandwich_pre_commit(order)
-            return order
+        # If this order is currently in-flight in this process, await its completion
+        if order.cl_ord_id in self.inflight_events:
+            await self.inflight_events[order.cl_ord_id].wait()
+            cached = self.lookup_cached_fill(order.cl_ord_id)
+            if cached is not None:
+                return cached
+            return self.lookup_order(order.cl_ord_id) or self.inflight_orders.get(order.cl_ord_id, order)
 
-        # 2. Attach Remarks Hack for Shoonya reconciliation
-        order.remarks = self.generate_remarks_token(order.cl_ord_id)
-        self.remarks_map[order.remarks] = order.cl_ord_id
+        # Register concurrency event for this cl_ord_id
+        event = asyncio.Event()
+        self.inflight_events[order.cl_ord_id] = event
 
-        # 3. Pre-Commit Sandwich Log: Record PENDING_NEW before socket send
-        order.wire_state = WireState.PENDING_NEW
-        self._sandwich_pre_commit(order)
-        self.inflight_orders[order.cl_ord_id] = order
+        try:
+            # 1. Bailout Check: Prevent runaway trading if too many orders in-flight
+            unreconciled_count = len([o for o in self.inflight_orders.values() 
+                                     if o.wire_state in (WireState.SENT_TO_WIRE, WireState.INFLIGHT_UNKNOWN)])
+            if unreconciled_count >= self.max_unreconciled_bailout:
+                self.is_halted = True
+                order.wire_state = WireState.REJECTED
+                order.rejection_reason = f"BAILOUT_HALT: {unreconciled_count} unreconciled orders in flight"
+                self._sandwich_pre_commit(order)
+                return order
 
-        # 4. Wire Send
-        order.wire_state = WireState.SENT_TO_WIRE
-        order.sent_at_ns = time.time_ns()
-        self.total_wire_sent += 1
+            # 2. Attach Remarks Hack for Shoonya reconciliation
+            order.remarks = self.generate_remarks_token(order.cl_ord_id)
+            self.remarks_map[order.remarks] = order.cl_ord_id
 
-        if self.mode == WireMode.SANDBOX_CHAOS:
-            return await self._sandbox_chaos_wire_send(order)
-        else:
-            return await self._testnet_wire_send(order)
+            # 3. Pre-Commit Sandwich Log: Record PENDING_NEW before socket send
+            order.wire_state = WireState.PENDING_NEW
+            inserted = self._sandwich_pre_commit(order)
+            if not inserted:
+                # Order already claimed in WAL (e.g. concurrent thread or cross-instance)
+                # Do NOT send a second wire order! Await completion from WAL.
+                for _ in range(50):
+                    await asyncio.sleep(0.002)
+                    cached = self.lookup_cached_fill(order.cl_ord_id)
+                    if cached is not None:
+                        return cached
+                return self.lookup_order(order.cl_ord_id) or order
+
+            self.inflight_orders[order.cl_ord_id] = order
+
+            # 4. Wire Send
+            order.wire_state = WireState.SENT_TO_WIRE
+            order.sent_at_ns = time.time_ns()
+            self.total_wire_sent += 1
+
+            if self.mode == WireMode.SANDBOX_CHAOS:
+                return await self._sandbox_chaos_wire_send(order)
+            else:
+                return await self._testnet_wire_send(order)
+        finally:
+            event.set()
+            self.inflight_events.pop(order.cl_ord_id, None)
 
     async def _sandbox_chaos_wire_send(self, order: WireOrderPayload) -> WireOrderPayload:
         """
