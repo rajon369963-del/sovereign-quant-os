@@ -1,6 +1,6 @@
 # ⚡ Sovereign Quant OS (`sovereign-quant-os`)
 
-> **The 100-Hacks & 100-Wheels Interconnected Algorithmic Trading Engine in Python**  
+> **Failure-Oriented Execution Infrastructure & Algorithmic Trading Kernel in Python**  
 > Sub-millisecond Decision Latency (57 μs) • Zero-Delta Basis Carry Arbitrage • Multi-Agent Tri-Court Falsification  
 > **Open Source for the Global Quant Community • "हम सब मिलकर ग्रो करते हैं"**
 
@@ -55,7 +55,7 @@ In quantitative finance, retail traders typically rely on slow Python scripts th
 |                        DELTA-NEUTRAL CARRY HARVESTER                                  |
 |  - Spot Long (Shoonya ₹0 Brokerage) + Perp Short (Hyperliquid ALO Maker)              |
 |  - Net Delta Exposure: Δ ≈ 0.0000 (Market-direction-neutral under tested assumptions)  |
-|  - Hourly Funding Rate Yield Accrual (50% - 80% APR) + Exchange Maker Rebates (+2bps) |
+|  - Simulated Basis Carry Yield Model (Scenario-gated APR) + Exchange Maker Rebates    |
 |  - Strict 5-Day Payback Gate Filter                                                   |
 +---------------------------------------------------------------------------------------+
 ```
