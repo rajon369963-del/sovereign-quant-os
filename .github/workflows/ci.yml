@@ -40,6 +40,9 @@ jobs:
       - name: Run Order Intent Identity & Same-Millisecond Collision Court
         run: python3 test_order_intent_identity.py
 
+      - name: Run Daily-Risk Session & Policy Restart Court
+        run: python3 test_daily_risk_session_policy.py
+
       - name: Run Delta-Neutral Carry Harvester Battery
         run: python3 test_phase3_cherry_on_top_battery.py
 

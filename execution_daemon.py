@@ -13,10 +13,11 @@ import time
 import math
 from dataclasses import dataclass
 from enum import Enum
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Callable
 from alpha_engine import TradeSignal, SignalType, StrategyArchetype
 from risk_gatekeeper import RiskGatekeeper, RiskGateResult
 from order_intent_identity import OrderIntentIdentityLedger, canonical_intent_sha256
+from daily_risk_session import DailyRiskPolicy, DailyRiskSessionLedger
 
 class OrderState(Enum):
     PENDING = "PENDING"
@@ -51,22 +52,43 @@ class ExecutionDaemon:
         db_path: str = "/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine/trading_ledger.sqlite",
         max_account_drawdown: float = 10000.0,
         daily_loss_limit_pct: float = 0.02,
-        initial_capital: float = 10000.0
+        initial_capital: float = 10000.0,
+        session_id_provider: Optional[Callable[[], str]] = None,
+        session_policy_id: str = "UTC_CALENDAR_DAY_V1",
     ):
         self.db_path = db_path
         self.max_account_drawdown = max_account_drawdown
+        self.daily_loss_limit_pct = daily_loss_limit_pct
         self.daily_loss_limit = initial_capital * daily_loss_limit_pct
         self.initial_capital = initial_capital
         self.current_equity = initial_capital
         self.peak_equity = initial_capital
+        self.session_policy_id = session_policy_id
+        # The default session contract is explicit and named. Tests/venues can inject
+        # their own authoritative calendar instead of inheriting host-local midnight.
+        self.session_id_provider = session_id_provider or (
+            lambda: time.strftime("%Y-%m-%d", time.gmtime())
+        )
         
         self.daily_realized_loss = 0.0
+        self._daily_circuit_broken = False
+        self._hard_circuit_broken = False
         self.is_circuit_broken = False
         self.active_orders: Dict[str, TradeOrder] = {}
         self.completed_trades: List[TradeOrder] = []
         
         self._init_db()
         self.intent_identity = OrderIntentIdentityLedger(self.db_path)
+        self.daily_risk_policy = DailyRiskPolicy(
+            session_policy_id=self.session_policy_id,
+            starting_baseline=self.initial_capital,
+            daily_loss_limit_pct=self.daily_loss_limit_pct,
+            daily_loss_limit_amount=self.daily_loss_limit,
+            max_account_drawdown=self.max_account_drawdown,
+        )
+        self.daily_risk_ledger = DailyRiskSessionLedger(self.db_path)
+        self.current_session_id = ""
+        self._sync_daily_risk_session()
 
     def _init_db(self):
         with sqlite3.connect(self.db_path) as conn:
@@ -122,8 +144,20 @@ class ExecutionDaemon:
                 );
             """)
 
+    def _sync_daily_risk_session(self):
+        session_id = str(self.session_id_provider())
+        state = self.daily_risk_ledger.load_or_initialize(session_id, self.daily_risk_policy)
+        self.current_session_id = state.session_id
+        self.daily_realized_loss = state.realized_loss
+        self.daily_loss_limit = state.daily_loss_limit_amount
+        self._daily_circuit_broken = state.breaker_state
+        self.is_circuit_broken = self._hard_circuit_broken or self._daily_circuit_broken
+        return state
+
     def check_circuit_breaker(self) -> bool:
         """Hardware-enforced Circuit Breaker check."""
+        # Session rollover/restart state is authoritative, not process lifetime.
+        self._sync_daily_risk_session()
         current_drawdown = self.peak_equity - self.current_equity
 
         if current_drawdown >= self.max_account_drawdown:
@@ -131,13 +165,20 @@ class ExecutionDaemon:
             return False
 
         if self.daily_realized_loss >= self.daily_loss_limit:
-            self._trigger_kill_switch(f"DAILY 2% LOSS CEILING BREACHED: Daily Loss ₹{self.daily_realized_loss:.2f} >= ₹{self.daily_loss_limit:.2f}")
+            self._trigger_kill_switch(
+                f"DAILY 2% LOSS CEILING BREACHED: Daily Loss ₹{self.daily_realized_loss:.2f} >= ₹{self.daily_loss_limit:.2f}",
+                daily=True,
+            )
             return False
 
         return True
 
-    def _trigger_kill_switch(self, reason: str):
-        self.is_circuit_broken = True
+    def _trigger_kill_switch(self, reason: str, *, daily: bool = False):
+        if daily:
+            self._daily_circuit_broken = True
+        else:
+            self._hard_circuit_broken = True
+        self.is_circuit_broken = self._hard_circuit_broken or self._daily_circuit_broken
         print(f"\n🚨🚨🚨 [HARD CIRCUIT BREAKER TRIGGERED]: {reason} 🚨🚨🚨")
         print("Emergency Protocol: Cancelling all open orders and locking execution loop.")
         
@@ -294,6 +335,7 @@ class ExecutionDaemon:
         same identity with a mutated canonical intent raises before any fill mutation.
         Legacy callers remain supported and receive a UUID-backed unique identity.
         """
+        self._sync_daily_risk_session()
         if self.is_circuit_broken or not self.check_circuit_breaker():
             return None
 
@@ -355,6 +397,8 @@ class ExecutionDaemon:
 
     def simulate_price_tick(self, current_price: float, risk_gate: RiskGatekeeper):
         """Simulates market price updates against resting bracket stops (SL & TP)."""
+        # An explicit provider drives rollover; host process lifetime does not.
+        self._sync_daily_risk_session()
         if not self.active_orders:
             return
 
@@ -379,7 +423,14 @@ class ExecutionDaemon:
             if self.current_equity > self.peak_equity:
                 self.peak_equity = self.current_equity
             if order.realized_pnl < 0:
-                self.daily_realized_loss += abs(order.realized_pnl)
+                state = self.daily_risk_ledger.record_realized_loss(
+                    self.current_session_id,
+                    abs(order.realized_pnl),
+                    self.daily_risk_policy,
+                )
+                self.daily_realized_loss = state.realized_loss
+                self._daily_circuit_broken = state.breaker_state
+                self.is_circuit_broken = self._hard_circuit_broken or self._daily_circuit_broken
 
             risk_gate.record_trade_outcome(order.realized_pnl)
 
