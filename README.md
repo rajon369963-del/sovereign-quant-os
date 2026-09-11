@@ -1,7 +1,7 @@
 # ⚡ Sovereign Quant OS (`sovereign-quant-os`)
 
-> **Failure-Oriented Execution Infrastructure & Algorithmic Trading Kernel in Python**  
-> Sub-millisecond Decision Latency (57 μs) • Zero-Delta Basis Carry Arbitrage • Multi-Agent Tri-Court Falsification  
+> **Failure-Oriented Execution Infrastructure & Algorithmic Trading Kernel in Python**
+> Offline simulation and bounded execution-invariant tests. Live venue behavior is unverified.
 > **Open Source for the Global Quant Community • "हम सब मिलकर ग्रो करते हैं"**
 
 [![CI Verification](https://github.com/rajon369963-del/sovereign-quant-os/actions/workflows/ci.yml/badge.svg)](https://github.com/rajon369963-del/sovereign-quant-os/actions)
@@ -16,11 +16,11 @@
 In quantitative finance, retail traders typically rely on slow Python scripts that get liquidated by rate limits, exchange slippage, and fee drag. Institutional HFT firms build multi-million dollar proprietary C++/FPGA architectures inaccessible to the average person.
 
 **Sovereign Quant OS** bridges this divide:
-1. **The Interconnection of Interconnections ($\text{IC}^2$)**: Synthesizes **50 battle-tested practitioner hacks** into native Python execution patterns, benchmarked against **100 open-source quantitative architectures** (NautilusTrader, CCXT, VectorBT, uvloop, orjson, DuckDB).
+1. **The Interconnection of Interconnections ($\text{IC}^2$)**: Synthesizes **50 proposed practitioner patterns** into native Python execution patterns, inspired by a target survey of **100 open-source quantitative architectures**; a complete comparative benchmark is not provided (NautilusTrader, CCXT, VectorBT, uvloop, orjson, DuckDB).
 2. **Sub-Millisecond Python Hot Path**: Disables Garbage Collection during orderbursts (`gc.disable()`), utilizing `uvloop` and `orjson` SIMD C-bindings to achieve **57 microsecond (0.057ms)** in-memory decision latency (tested on Apple Silicon M1 unified memory).
 3. **In-Flight Concurrent Idempotency**: Resolves the classic double-spend network race condition. Sequential and simultaneous duplicate order retries return cached fills with **zero incremental wire transmissions** via distributed SQLite WAL reservation claims and `asyncio.Event` barriers.
 4. **Market-Direction-Neutral Basis Carry Arbitrage**: Couples ₹0 brokerage spot execution (Shoonya) with Add-Liquidity-Only (ALO) perpetual shorts (Hyperliquid) for market-direction-neutral basis carry ($\Delta \approx 0$ under tested basis assumptions) while harvesting annualized funding rates plus maker rebates.
-5. **Multi-Agent Tri-Court Verification**: Every production milestone is subjected to adversarial falsification across three independent AI courts (**CODEX**, **HERMES**, and **CHATGPT**) before production signoff.
+5. **Verification boundary**: repository tests provide bounded local/CI evidence. Independent production signoff, live-broker correctness and profitability remain unverified.
 
 ---
 
@@ -43,7 +43,7 @@ In quantitative finance, retail traders typically rely on slow Python scripts th
                                            │
                                            ▼
 +---------------------------------------------------------------------------------------+
-|                         LIVE BROKER WIRE BRIDGE & WAL                                 |
+|                         SIMULATED BROKER WIRE BRIDGE & WAL                                 |
 |  - Two-Phase Sandwich Commits (BEGIN IMMEDIATE reservation -> Wire Send -> WAL Update)|
 |  - In-Flight Event Barrier (Simultaneous Retries Share Single Wire Transmission)      |
 |  - Inflight Zombie Sweeper & Automatic Boot-Time Orphan Re-adoption                   |
@@ -86,14 +86,14 @@ python3 test_wire_bridge_and_reconciliation_battery.py
 python3 test_phase3_cherry_on_top_battery.py
 
 # 5. Run Master 10x Canary & 10,000-Order Stress Runner
-python3 sovereign_100_hacks_100_wheels_full_synthesis.py
+python3 sovereign_100_hacks_100_wheels_full_synthesis.py --verify-only
 ```
 
 ---
 
 ## 📊 Benchmarks & Telemetry
 
-Results recorded on Apple Silicon M1 Unified Memory across 10 continuous burst rounds (10,000 orders):
+Historical internal results reported on Apple Silicon M1 Unified Memory across 10 burst rounds (10,000 simulated orders). These 57 μs / 215x figures have not been independently reproduced. The comparison baseline methodology and environment lock are incomplete; they are not live wire latency or an external benchmark. Current CI covers Ubuntu / Python 3.11 only. Delta≈0 describes scenario assumptions, not realized hedged PnL or absence of risk.
 
 | Metric | Measured Value | Standard Python Baseline | Performance Delta |
 |:---|:---:|:---:|:---:|
@@ -107,12 +107,7 @@ Results recorded on Apple Silicon M1 Unified Memory across 10 continuous burst r
 
 ## 🔬 Multi-Agent Tri-Court Verification
 
-Unlike standard software that relies on single-author unit tests, **Sovereign Quant OS** was audited and verified through a Triple Independent Judicial Court:
-- **Verifier A (CODEX)**: Audited path portability, boundary checks, and WAL lock behavior.
-- **Verifier B (HERMES)**: Generated adversarial probes exposing watchdog latch leaks and duplicate retransmissions.
-- **Verifier C (CHATGPT)**: Uncovered simultaneous in-flight concurrency race conditions and verified strict 5-day payback limits.
-
-Every patch has been cryptographically snapshotted and mirrored to the cloud under frozen forensic capsules (`TRI_VERIFY_20260911_0100_FINAL`).
+Historical verifier labels describe reported local investigations. They do not establish universal production signoff. The named capsule `TRI_VERIFY_20260911_0100_FINAL` has no verified public artifact link here; cloud mirror availability is unverified.
 
 ---
 
@@ -127,7 +122,11 @@ This repository coordinates with:
 
 ## 📄 License & Community Open Access
 
-Released under the **MIT License**. Free for personal, academic, and commercial use.  
+Released under the **MIT License**. Free for personal, academic, and commercial use.
 *"We rise by lifting others."*
 
 Copyright (c) 2026 Rajon Das (`lakhidas168@gmail.com`).
+
+## Restart and venue validation boundaries
+
+Recovered nonterminal intents enter durable `HOLD` and fence dispatch pending authoritative reconciliation. No broker evidence is inferred from a local remarks token. There is no automatic recovery/reset path. Venue precision preflight is available through `VenueConstrainedWireBridge`; the base simulation bridge does not enforce venue constraints. No live-broker safety claim follows from these tests.

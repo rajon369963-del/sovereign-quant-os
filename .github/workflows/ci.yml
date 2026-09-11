@@ -37,6 +37,9 @@ jobs:
       - name: Run Circuit Breaker Durability Battery
         run: python3 test_circuit_breaker_durable_reconciliation.py
 
+      - name: Run restart and venue preflight regression tests
+        run: python3 -m unittest test_restart_hold test_venue_constraint_preflight
+
       - name: Run Delta-Neutral Carry Harvester Battery
         run: python3 test_phase3_cherry_on_top_battery.py
 
