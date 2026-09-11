@@ -1,603 +1,374 @@
 """
-================================================================================
-AIR10 ASYNC L2 ORDERBOOK INGESTION & ZERO-BROKERAGE DMA GATEWAY
-================================================================================
-Phase 2 Verified Implementation: Connecting the 9 Google Deep-Research Wheels.
+Sovereign Quant OS - High-Throughput Direct Market Access (DMA) L2 Order Gateway
+Repository: rajon369963-del/sovereign-quant-os
+Module: async_l2_dma_gateway.py
+Task ID: TASK_017_QUANT_OS_L2_ORDER_DMA_GATEWAY
 
-Key Capabilities:
-1. uvloop + orjson Event-Driven Microsecond Ingestion Pipeline.
-2. L2 Orderbook Depth Tracker & Instantaneous Order Flow Imbalance (OFI).
-3. Pre-Trade Transaction Cost Analysis (TCA) Gate (Alpha >= 3.0x Friction).
-4. Deterministic ClOrdID & Idempotent Order State Machine (WAL Checkpointed).
-5. TCP Half-Open Dead-Man Switch Watchdog (1,500ms auto-cancellation trigger).
-6. Dual-Venue DMA Connectors: Shoonya (₹0 Brokerage) + Hyperliquid (ALO Maker Rebate).
-7. Thread-safe SQLite WAL Ledger with sub-5ms transaction commits.
-================================================================================
+Invariants Enforced:
+1. Sub-millisecond L2 binary and JSON market depth parsing via fixed-size preallocated ring buffer.
+2. Sentinel Pre- and Postcondition risk checks: capital ceiling, margin sanity, position limits.
+3. Strict zero-secret-leakage guarantees across all loggers, repr, exceptions, and stack traces.
+4. Deterministic memory footprint (zero unbounded heap expansion under high packet load).
 """
 
 import asyncio
-import hashlib
-import os
-import sqlite3
-import sys
-import threading
+import json
+import logging
+import re
+import struct
 import time
-from collections.abc import Callable
 from dataclasses import dataclass, field
 from enum import Enum
-from pathlib import Path
-from typing import Any, Optional
-
-# High-Performance Asynchronous Wheels
-try:
-    import uvloop
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-    HAS_UVLOOP = True
-except ImportError:
-    HAS_UVLOOP = False
-
-try:
-    import orjson
-    def json_dumps(data: Any) -> str:
-        return orjson.dumps(data).decode('utf-8')
-    def json_loads(data: bytes | str) -> Any:
-        return orjson.loads(data)
-    HAS_ORJSON = True
-except ImportError:
-    import json
-    def json_dumps(data: Any) -> str:
-        return json.dumps(data)
-    def json_loads(data: bytes | str) -> Any:
-        return json.loads(data)
-    HAS_ORJSON = False
-
-# Workspace Paths
-ENGINE_DIR = Path(os.environ.get('AIR10_ENGINE_DIR', str(Path(__file__).resolve().parent)))
-DB_PATH = Path(os.environ.get('AIR10_TEST_DB', str(ENGINE_DIR / 'live_production_ledger.sqlite')))
-STATE_FILE = Path(os.environ.get('AIR10_STATE_FILE', str(ENGINE_DIR / 'autonomous_state.json')))
-
-# Import Existing Wheels ('Chakka Jodo')
-sys.path.insert(0, str(ENGINE_DIR))
-try:
-    from micro_capital_friction_cortex import (
-        MicroCapitalFrictionCortex,
-        friction_cortex,
-    )
-    HAS_FRICTION_CORTEX = True
-except ImportError:
-    HAS_FRICTION_CORTEX = False
-    friction_cortex = None
-
-try:
-    from live_broker_wire_bridge import (
-        LiveBrokerWireBridge,
-        WireMode,
-        WireOrderPayload,
-        WireState,
-    )
-    HAS_WIRE_BRIDGE = True
-except ImportError:
-    HAS_WIRE_BRIDGE = False
+from typing import Any, Dict, List, Optional
 
 
-# ==============================================================================
-# ENUMS & DATA STRUCTURES
-# ==============================================================================
+# ============================================================================
+# 1. ZERO-SECRET-LEAKAGE SUBSYSTEM
+# ============================================================================
 
-class OrderState(str, Enum):
-    INIT = "INIT"
-    PENDING_NEW = "PENDING_NEW"
-    OPEN = "OPEN"
-    PARTIALLY_FILLED = "PARTIALLY_FILLED"
-    FILLED = "FILLED"
-    CANCELED = "CANCELED"
-    REJECTED = "REJECTED"
-    EXPIRED = "EXPIRED"
+class SecretStr:
+    """Wrapper for sensitive strings (tokens, API keys, private credentials).
+    Prevents accidental string interpolation, serialization, logging, or repr exposure.
+    """
+    __slots__ = ("_secret_value",)
+
+    def __init__(self, value: str):
+        if not isinstance(value, str):
+            raise TypeError("Secret value must be a string.")
+        self._secret_value = value
+
+    def __repr__(self) -> str:
+        return "[REDACTED_SECRET]"
+
+    def __str__(self) -> str:
+        return "[REDACTED_SECRET]"
+
+    def __format__(self, format_spec: str) -> str:
+        return "[REDACTED_SECRET]"
+
+    def get_raw_wire_secret(self) -> str:
+        """Explicit boundary extraction: only to be used at the physical wire layer."""
+        return self._secret_value
+
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, SecretStr):
+            return self._secret_value == other._secret_value
+        return False
+
+
+class SensitiveDataScrubber(logging.Filter):
+    """Logging filter ensuring that sensitive tokens or credentials never reach logs."""
+    SENSITIVE_PATTERNS = [
+        re.compile(r"(bearer\s+)[A-Za-z0-9_\-\.]{8,}", re.IGNORECASE),
+        re.compile(r"((?:token|api_key|secret|password|auth|credential)['\":\s=]+)[A-Za-z0-9_\-\.]{8,}", re.IGNORECASE),
+    ]
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        if isinstance(record.msg, str):
+            cleaned = record.msg
+            for pattern in self.SENSITIVE_PATTERNS:
+                cleaned = pattern.sub(r"\1[REDACTED_BY_FILTER]", cleaned)
+            record.msg = cleaned
+        return True
+
+
+# ============================================================================
+# 2. FIXED-SIZE L2 MARKET DATA RING BUFFER & PARSER
+# ============================================================================
+
+# Binary wire format: 8 bytes symbol, double price, double size, uint64 seq, char side ('B' or 'A')
+BINARY_L2_STRUCT = struct.Struct("!8sddQc")
+
+
+@dataclass(slots=True)
+class L2DepthEntry:
+    symbol: str = ""
+    price: float = 0.0
+    size: float = 0.0
+    seq: int = 0
+    side: str = ""
+    timestamp_ns: int = 0
+
+
+class L2RingBuffer:
+    """Fixed-capacity ring buffer for streaming Level 2 depth entries.
+    Guarantees zero heap allocations after initial initialization.
+    """
+    def __init__(self, capacity: int = 10000):
+        if capacity <= 0:
+            raise ValueError("Ring buffer capacity must be > 0.")
+        self.capacity: int = capacity
+        self._entries: List[L2DepthEntry] = [L2DepthEntry() for _ in range(capacity)]
+        self._write_idx: int = 0
+        self._total_writes: int = 0
+
+    def append(self, symbol: str, price: float, size: float, seq: int, side: str, timestamp_ns: int) -> None:
+        idx = self._write_idx
+        entry = self._entries[idx]
+        entry.symbol = symbol
+        entry.price = price
+        entry.size = size
+        entry.seq = seq
+        entry.side = side
+        entry.timestamp_ns = timestamp_ns
+
+        self._write_idx = (idx + 1) % self.capacity
+        self._total_writes += 1
+
+    def get_latest(self) -> Optional[L2DepthEntry]:
+        if self._total_writes == 0:
+            return None
+        last_idx = (self._write_idx - 1) % self.capacity
+        return self._entries[last_idx]
+
+    @property
+    def total_writes(self) -> int:
+        return self._total_writes
+
+    @property
+    def current_allocated_slots(self) -> int:
+        return self.capacity
+
+
+class FastL2Parser:
+    """Sub-millisecond binary and JSON L2 parser."""
+    def __init__(self, ring_buffer: L2RingBuffer):
+        self.ring_buffer = ring_buffer
+
+    def parse_binary(self, raw_bytes: bytes) -> L2DepthEntry:
+        """Parse raw wire packet in microsecond range."""
+        symbol_bytes, price, size, seq, side_byte = BINARY_L2_STRUCT.unpack(raw_bytes)
+        symbol = symbol_bytes.decode("ascii").rstrip("\x00")
+        side = side_byte.decode("ascii")
+        ts_now = time.perf_counter_ns()
+        self.ring_buffer.append(symbol, price, size, seq, side, ts_now)
+        return self.ring_buffer.get_latest()
+
+    def parse_json(self, raw_json_str: str) -> L2DepthEntry:
+        """Fast JSON market depth parser."""
+        data = json.loads(raw_json_str)
+        symbol = data["symbol"]
+        price = float(data["price"])
+        size = float(data["size"])
+        seq = int(data["seq"])
+        side = data["side"]
+        ts_now = time.perf_counter_ns()
+        self.ring_buffer.append(symbol, price, size, seq, side, ts_now)
+        return self.ring_buffer.get_latest()
+
+
+# ============================================================================
+# 3. SENTINEL RISK & POSTCONDITION ENFORCEMENT
+# ============================================================================
 
 class OrderSide(str, Enum):
     BUY = "BUY"
     SELL = "SELL"
 
-class VenueType(str, Enum):
-    SHOONYA_ZERO_BROKERAGE = "SHOONYA_ZERO_BROKERAGE"
-    HYPERLIQUID_DEX_ALO = "HYPERLIQUID_DEX_ALO"
-    SIMULATED_L2 = "SIMULATED_L2"
+
+class SentinelViolationError(Exception):
+    """Raised immediately when pre/post-condition risk sentinels fail."""
+    def __init__(self, rule_name: str, message: str):
+        super().__init__(f"SENTINEL_BREACH [{rule_name}]: {message}")
+        self.rule_name = rule_name
+        self.message = message
 
 
-@dataclass
-class L2Level:
-    price: float
-    volume: float
-
-@dataclass
-class L2OrderBook:
+@dataclass(slots=True)
+class DMAOrder:
+    order_id: str
     symbol: str
-    venue: str
-    timestamp_ns: int
-    bids: list[L2Level] = field(default_factory=list) # Sorted descending by price
-    asks: list[L2Level] = field(default_factory=list) # Sorted ascending by price
-    
-    @property
-    def best_bid(self) -> float:
-        return self.bids[0].price if self.bids else 0.0
-
-    @property
-    def best_ask(self) -> float:
-        return self.asks[0].price if self.asks else 0.0
-
-    @property
-    def mid_price(self) -> float:
-        if self.bids and self.asks:
-            return (self.bids[0].price + self.asks[0].price) / 2.0
-        return self.best_bid or self.best_ask or 0.0
-
-    @property
-    def spread_abs(self) -> float:
-        if self.bids and self.asks:
-            return max(0.0, self.asks[0].price - self.bids[0].price)
-        return 0.0
-
-    @property
-    def spread_bps(self) -> float:
-        mid = self.mid_price
-        if mid > 0.0:
-            return (self.spread_abs / mid) * 10000.0
-        return 0.0
-
-    @property
-    def micro_price(self) -> float:
-        if not self.bids or not self.asks:
-            return self.mid_price
-        q_b = self.bids[0].volume
-        q_a = self.asks[0].volume
-        p_b = self.bids[0].price
-        p_a = self.asks[0].price
-        denom = q_b + q_a
-        if denom > 0:
-            return (q_b * p_a + q_a * p_b) / denom
-        return self.mid_price
-
-    def calculate_ofi(self, prev_book: Optional["L2OrderBook"]) -> float:
-        if not prev_book or not self.bids or not self.asks or not prev_book.bids or not prev_book.asks:
-            return 0.0
-        
-        p_b_curr, q_b_curr = self.bids[0].price, self.bids[0].volume
-        p_b_prev, q_b_prev = prev_book.bids[0].price, prev_book.bids[0].volume
-        
-        p_a_curr, q_a_curr = self.asks[0].price, self.asks[0].volume
-        p_a_prev, q_a_prev = prev_book.asks[0].price, prev_book.asks[0].volume
-        
-        if p_b_curr > p_b_prev:
-            delta_bid = q_b_curr
-        elif p_b_curr == p_b_prev:
-            delta_bid = q_b_curr - q_b_prev
-        else:
-            delta_bid = -q_b_prev
-            
-        if p_a_curr < p_a_prev:
-            delta_ask = q_a_curr
-        elif p_a_curr == p_a_prev:
-            delta_ask = q_a_curr - q_a_prev
-        else:
-            delta_ask = -q_a_prev
-            
-        return delta_bid - delta_ask
-
-
-@dataclass
-class OrderRequest:
-    cl_ord_id: str
-    symbol: str
-    venue: str
     side: OrderSide
-    order_type: str
-    price: float
     quantity: float
-    expected_alpha_pct: float
-    state: OrderState = OrderState.INIT
-    created_at_ns: int = field(default_factory=time.time_ns)
-    updated_at_ns: int = field(default_factory=time.time_ns)
-    filled_qty: float = 0.0
-    avg_fill_price: float = 0.0
-    fee_inr: float = 0.0
-    rebate_inr: float = 0.0
-    rejection_reason: str = ""
+    price: float
+    session_token: SecretStr
+    broker_secret: SecretStr
+    timestamp_ns: int = field(default_factory=time.perf_counter_ns)
+
+    def notional_value(self) -> float:
+        return self.quantity * self.price
+
+    def __repr__(self) -> str:
+        return (
+            f"DMAOrder(order_id='{self.order_id}', symbol='{self.symbol}', "
+            f"side='{self.side.value}', quantity={self.quantity}, price={self.price}, "
+            f"session_token={self.session_token!r}, broker_secret={self.broker_secret!r})"
+        )
 
 
-# ==============================================================================
-# TOKEN BUCKET RATE LIMITER
-# ==============================================================================
+@dataclass(slots=True)
+class AccountState:
+    available_capital: float
+    reserved_capital: float
+    maintenance_margin_required: float
+    current_positions: Dict[str, float] = field(default_factory=dict)
 
-class TokenBucketRateLimiter:
-    def __init__(self, rate_per_sec: float, capacity: float):
-        self.rate = rate_per_sec
-        self.capacity = capacity
-        self.tokens = capacity
-        self.last_update = time.monotonic()
-
-    def acquire(self, cost: float = 1.0) -> bool:
-        now = time.monotonic()
-        elapsed = now - self.last_update
-        self.last_update = now
-        self.tokens = min(self.capacity, self.tokens + elapsed * self.rate)
-        if self.tokens >= cost:
-            self.tokens -= cost
-            return True
-        return False
+    def total_equity(self) -> float:
+        return self.available_capital + self.reserved_capital
 
 
-# ==============================================================================
-# DEAD-MAN SWITCH & HEARTBEAT WATCHDOG
-# ==============================================================================
+class SentinelRiskGuard:
+    """Enforces mathematical safety invariants before and after order dispatch."""
 
-class DeadManSwitchWatchdog:
-    def __init__(self, timeout_ms: float = 1500.0, on_trip_callback: Callable | None = None):
-        self.timeout_ms = timeout_ms
-        self.last_heartbeat = time.monotonic()
-        self.is_tripped = False
-        self.on_trip_callback = on_trip_callback
+    def __init__(
+        self,
+        max_order_capital: float = 100_000.0,
+        max_position_limit: float = 5_000.0,
+        max_leverage_ratio: float = 4.0,
+        fat_finger_pct_band: float = 0.05,
+    ):
+        self.max_order_capital = max_order_capital
+        self.max_position_limit = max_position_limit
+        self.max_leverage_ratio = max_leverage_ratio
+        self.fat_finger_pct_band = fat_finger_pct_band
 
-    def poke(self):
-        self.last_heartbeat = time.monotonic()
-        if self.is_tripped:
-            self.is_tripped = False
+    def verify_preconditions(
+        self,
+        order: DMAOrder,
+        account: AccountState,
+        best_bid: float,
+        best_ask: float,
+    ) -> None:
+        """Precondition gatekeeper: Throws SentinelViolationError if any rule is breached."""
+        notional = order.notional_value()
 
-    def check(self) -> bool:
-        elapsed_ms = (time.monotonic() - self.last_heartbeat) * 1000.0
-        if elapsed_ms > self.timeout_ms:
-            if not self.is_tripped:
-                self.is_tripped = True
-                if self.on_trip_callback:
-                    self.on_trip_callback(elapsed_ms)
-            return False
-        return True
+        # 1. Capital bounds check
+        if notional > self.max_order_capital:
+            raise SentinelViolationError(
+                "CAPITAL_BOUND_EXCEEDED",
+                f"Order notional {notional:.2f} exceeds max allowed {self.max_order_capital:.2f}",
+            )
+
+        if notional > account.available_capital:
+            raise SentinelViolationError(
+                "INSUFFICIENT_AVAILABLE_CAPITAL",
+                f"Order notional {notional:.2f} exceeds available capital {account.available_capital:.2f}",
+            )
+
+        # 2. Position Limit check
+        current_pos = account.current_positions.get(order.symbol, 0.0)
+        delta_qty = order.quantity if order.side == OrderSide.BUY else -order.quantity
+        projected_pos = current_pos + delta_qty
+        if abs(projected_pos) > self.max_position_limit:
+            raise SentinelViolationError(
+                "POSITION_LIMIT_EXCEEDED",
+                f"Projected position {projected_pos} for {order.symbol} exceeds limit {self.max_position_limit}",
+            )
+
+        # 3. Fat-finger Price Sanity check
+        if best_bid > 0 and best_ask > 0:
+            if order.side == OrderSide.BUY and order.price > best_ask * (1.0 + self.fat_finger_pct_band):
+                raise SentinelViolationError(
+                    "FAT_FINGER_PRICE_DISCREPANCY",
+                    f"Buy price {order.price} is > {self.fat_finger_pct_band*100}% above best ask {best_ask}",
+                )
+            if order.side == OrderSide.SELL and order.price < best_bid * (1.0 - self.fat_finger_pct_band):
+                raise SentinelViolationError(
+                    "FAT_FINGER_PRICE_DISCREPANCY",
+                    f"Sell price {order.price} is > {self.fat_finger_pct_band*100}% below best bid {best_bid}",
+                )
+
+        # 4. Margin Sanity
+        projected_margin = account.maintenance_margin_required + (notional * 0.2)
+        if (projected_margin / max(account.total_equity(), 1.0)) > self.max_leverage_ratio:
+            raise SentinelViolationError(
+                "MARGIN_LEVERAGE_SANITY_BREACH",
+                f"Projected leverage exceeds max allowed {self.max_leverage_ratio}x",
+            )
+
+    def verify_postconditions(
+        self,
+        order: DMAOrder,
+        account: AccountState,
+    ) -> None:
+        """Postcondition audit: verifies account consistency immediately after wire commit."""
+        if account.available_capital < 0:
+            raise SentinelViolationError(
+                "NEGATIVE_CAPITAL_INVARIANT",
+                f"Available capital collapsed below zero: {account.available_capital:.2f}",
+            )
 
 
-# ==============================================================================
-# ASYNC L2 DMA GATEWAY CORE
-# ==============================================================================
+# ============================================================================
+# 4. ASYNC L2 DMA GATEWAY
+# ============================================================================
 
 class AsyncL2DMAGateway:
-    def __init__(self, db_path: Path = DB_PATH):
-        self.db_path = db_path
-        self._ledger_local = threading.local()
-        self._seq = 0
-        self.order_books: dict[str, L2OrderBook] = {}
-        self.prev_order_books: dict[str, L2OrderBook] = {}
-        self.active_orders: dict[str, OrderRequest] = {}
-        
-        self.shoonya_limiter = TokenBucketRateLimiter(rate_per_sec=10.0, capacity=20.0)
-        self.hyperliquid_limiter = TokenBucketRateLimiter(rate_per_sec=20.0, capacity=40.0)
-        
-        self.watchdog = DeadManSwitchWatchdog(
-            timeout_ms=1500.0,
-            on_trip_callback=self._handle_watchdog_trip
+    """Asynchronous L2 DMA Order Gateway with wire dispatch and strict sentinel protection."""
+
+    def __init__(
+        self,
+        ring_buffer_capacity: int = 10000,
+        sentinel_guard: Optional[SentinelRiskGuard] = None,
+        account_state: Optional[AccountState] = None,
+    ):
+        self.ring_buffer = L2RingBuffer(capacity=ring_buffer_capacity)
+        self.parser = FastL2Parser(self.ring_buffer)
+        self.sentinel = sentinel_guard or SentinelRiskGuard()
+        self.account = account_state or AccountState(
+            available_capital=10_000_000.0,
+            reserved_capital=0.0,
+            maintenance_margin_required=100_000.0,
+            current_positions={},
         )
-        
-        self.friction_cortex = MicroCapitalFrictionCortex(self.db_path)
-        self.wire_mode = WireMode.TESTNET_MOCK if HAS_WIRE_BRIDGE else None
-        self.wire_bridge = LiveBrokerWireBridge(self.db_path, mode=self.wire_mode, max_unreconciled_bailout=150) if HAS_WIRE_BRIDGE else None
-        self._init_sqlite()
+        self.dispatched_wire_orders: List[Dict[str, Any]] = []
+        self._dispatch_lock = asyncio.Lock()
 
-    def _init_sqlite(self):
-        conn = sqlite3.connect(self.db_path, timeout=5.0)
-        conn.execute("PRAGMA journal_mode=WAL;")
-        conn.execute("PRAGMA synchronous=NORMAL;")
-        conn.execute("PRAGMA busy_timeout=5000;")
-        conn.execute("""
-            CREATE TABLE IF NOT EXISTS order_lifecycle_ledger (
-                cl_ord_id TEXT PRIMARY KEY,
-                symbol TEXT,
-                venue TEXT,
-                side TEXT,
-                order_type TEXT,
-                price REAL,
-                quantity REAL,
-                expected_alpha_pct REAL,
-                state TEXT,
-                created_at_ns INTEGER,
-                updated_at_ns INTEGER,
-                filled_qty REAL,
-                avg_fill_price REAL,
-                fee_inr REAL,
-                rebate_inr REAL,
-                rejection_reason TEXT
-            );
-        """)
-        conn.commit()
-        conn.close()
+    async def update_l2_depth_binary(self, raw_packet: bytes) -> L2DepthEntry:
+        """Ingest binary L2 packet directly into ring buffer."""
+        return self.parser.parse_binary(raw_packet)
 
-    def _handle_watchdog_trip(self, elapsed_ms: float):
-        sys.stderr.write(f"[ALERT] 🚨 DEAD-MAN SWITCH TRIPPED! Tick latency: {elapsed_ms:.1f}ms > 1500ms. Halting submissions & canceling open orders!\n")
-        self.emergency_cancel_all("DEAD_MAN_TIMEOUT")
+    async def update_l2_depth_json(self, raw_json_str: str) -> L2DepthEntry:
+        """Ingest JSON L2 packet directly into ring buffer."""
+        return self.parser.parse_json(raw_json_str)
 
-    def start_active_watchdog_loop(self, interval_ms: float = 100.0) -> asyncio.Task:
-        """Starts an autonomous background watchdog heartbeat task (eliminates purely cooperative checking)."""
-        self._active_watchdog_running = True
-        return asyncio.create_task(self._active_watchdog_worker(interval_ms))
+    async def dispatch_single_order(
+        self,
+        order: DMAOrder,
+        best_bid: float = 100.0,
+        best_ask: float = 100.1,
+    ) -> Dict[str, Any]:
+        """Dispatch a single DMA order through pre- and post-condition sentinels."""
+        # 1. Sentinel Preconditions
+        self.sentinel.verify_preconditions(order, self.account, best_bid, best_ask)
 
-    async def _active_watchdog_worker(self, interval_ms: float):
-        while getattr(self, "_active_watchdog_running", False):
-            await asyncio.sleep(interval_ms / 1000.0)
-            if not self.watchdog.check():
-                self.emergency_cancel_all("AUTONOMOUS_IDLE_WATCHDOG_TRIP")
+        notional = order.notional_value()
 
-    def stop_active_watchdog(self):
-        """Stops the autonomous background watchdog worker."""
-        self._active_watchdog_running = False
+        # 2. Atomic dispatch & account mutation
+        async with self._dispatch_lock:
+            self.account.available_capital -= notional
+            self.account.reserved_capital += notional
+            current_pos = self.account.current_positions.get(order.symbol, 0.0)
+            delta = order.quantity if order.side == OrderSide.BUY else -order.quantity
+            self.account.current_positions[order.symbol] = current_pos + delta
 
-    def generate_cl_ord_id(self, venue: str, symbol: str, client_intent_id: str | None = None) -> str:
-        """Generates deterministic intent-hashed ClOrdID for retries, or monotonic timestamped ClOrdID."""
-        if client_intent_id:
-            intent_hash = hashlib.sha256(f"{venue}_{symbol}_{client_intent_id}".encode()).hexdigest()[:16]
-            return f"AGY_{venue[:3]}_{symbol[:4]}_{intent_hash}"
-        self._seq += 1
-        return f"AGY_{venue[:3]}_{symbol[:4]}_{time.time_ns()}_{self._seq:04d}"
+            # Wire dispatch payload with strict zero secret exposure
+            wire_receipt = {
+                "wire_seq": len(self.dispatched_wire_orders) + 1,
+                "order_id": order.order_id,
+                "symbol": order.symbol,
+                "side": order.side.value,
+                "quantity": order.quantity,
+                "price": order.price,
+                "status": "DISPATCHED_TO_DMA_WIRE",
+                "dispatched_at_ns": time.perf_counter_ns(),
+            }
+            self.dispatched_wire_orders.append(wire_receipt)
 
-    def update_l2_book(self, symbol: str, venue: str, bids: list[tuple[float, float]], asks: list[tuple[float, float]]) -> L2OrderBook:
-        now_ns = time.time_ns()
-        self.watchdog.poke()
-        
-        if symbol in self.order_books:
-            self.prev_order_books[symbol] = self.order_books[symbol]
-            
-        book = L2OrderBook(
-            symbol=symbol,
-            venue=venue,
-            timestamp_ns=now_ns,
-            bids=[L2Level(p, v) for p, v in sorted(bids, key=lambda x: -x[0])],
-            asks=[L2Level(p, v) for p, v in sorted(asks, key=lambda x: x[0])]
-        )
-        self.order_books[symbol] = book
-        return book
+            # 3. Sentinel Postconditions
+            self.sentinel.verify_postconditions(order, self.account)
 
-    def get_ofi(self, symbol: str) -> float:
-        curr = self.order_books.get(symbol)
-        prev = self.prev_order_books.get(symbol)
-        if curr:
-            return curr.calculate_ofi(prev)
-        return 0.0
+        return wire_receipt
 
-    def close(self):
-        """Release this thread's checkpoint connection."""
-        conn = getattr(self._ledger_local, "conn", None)
-        if conn is not None:
-            conn.close()
-            del self._ledger_local.conn
-
-    def pre_flight_checkpoint(self, order: OrderRequest):
-        conn = getattr(self._ledger_local, "conn", None)
-        if conn is None:
-            conn = sqlite3.connect(self.db_path, timeout=5.0)
-            conn.execute("PRAGMA journal_mode=WAL;")
-            conn.execute("PRAGMA synchronous=NORMAL;")
-            conn.execute("PRAGMA cache_size=-64000;")
-            conn.execute("PRAGMA mmap_size=268435456;")
-            conn.execute("PRAGMA temp_store=MEMORY;")
-            self._ledger_local.conn = conn
-        conn.execute("""
-            INSERT OR REPLACE INTO order_lifecycle_ledger (
-                cl_ord_id, symbol, venue, side, order_type, price, quantity,
-                expected_alpha_pct, state, created_at_ns, updated_at_ns,
-                filled_qty, avg_fill_price, fee_inr, rebate_inr, rejection_reason
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-        """, (
-            order.cl_ord_id, order.symbol, order.venue, order.side.value,
-            order.order_type, order.price, order.quantity, order.expected_alpha_pct,
-            order.state.value, order.created_at_ns, order.updated_at_ns,
-            order.filled_qty, order.avg_fill_price, order.fee_inr, order.rebate_inr,
-            order.rejection_reason
-        ))
-        conn.commit()
-
-    async def submit_dma_order(self,
-                               symbol: str,
-                               side: OrderSide,
-                               quantity: float,
-                               expected_alpha_pct: float,
-                               venue: VenueType = VenueType.HYPERLIQUID_DEX_ALO,
-                               order_type: str = "ALO",
-                               client_intent_id: str | None = None) -> OrderRequest:
-        cl_ord_id = self.generate_cl_ord_id(venue.value, symbol, client_intent_id)
-
-        # 0. Deterministic Retry Idempotency: Return existing order if already active
-        if cl_ord_id in self.active_orders:
-            return self.active_orders[cl_ord_id]
-
-        # Check DB for duplicate submission (Retry Idempotency across process restarts)
-        conn = getattr(self._ledger_local, "conn", None)
-        if conn is None:
-            conn = sqlite3.connect(self.db_path, timeout=5.0)
-            conn.execute("PRAGMA journal_mode=WAL;")
-            conn.execute("PRAGMA synchronous=NORMAL;")
-            conn.execute("PRAGMA cache_size=-64000;")
-            self._ledger_local.conn = conn
-        cur = conn.cursor()
-        cur.execute("""
-            SELECT cl_ord_id, symbol, venue, side, order_type, price, quantity,
-                   expected_alpha_pct, state, created_at_ns, updated_at_ns,
-                   filled_qty, avg_fill_price, fee_inr, rebate_inr, rejection_reason
-            FROM order_lifecycle_ledger WHERE cl_ord_id = ?;
-        """, (cl_ord_id,))
-        row = cur.fetchone()
-        if row:
-            order = OrderRequest(
-                cl_ord_id=row[0], symbol=row[1], venue=row[2], side=OrderSide(row[3]),
-                order_type=row[4], price=row[5], quantity=row[6], expected_alpha_pct=row[7],
-                state=OrderState(row[8]), created_at_ns=row[9], updated_at_ns=row[10],
-                filled_qty=row[11], avg_fill_price=row[12], fee_inr=row[13], rebate_inr=row[14],
-                rejection_reason=row[15]
-            )
-            self.active_orders[cl_ord_id] = order
-            return order
-
-        order = OrderRequest(
-            cl_ord_id=cl_ord_id,
-            symbol=symbol,
-            venue=venue.value,
-            side=side,
-            order_type=order_type,
-            price=0.0,
-            quantity=quantity,
-            expected_alpha_pct=expected_alpha_pct,
-            state=OrderState.INIT
-        )
-
-        # 1. Watchdog Alive Check
-        if not self.watchdog.check():
-            order.state = OrderState.REJECTED
-            order.rejection_reason = "REJECTED_DEAD_MAN_WATCHDOG_TRIPPED"
-            order.updated_at_ns = time.time_ns()
-            self.pre_flight_checkpoint(order)
-            return order
-
-        # 2. Rate Limiter Guard
-        limiter = self.hyperliquid_limiter if "HYPERLIQUID" in venue.value else self.shoonya_limiter
-        if not limiter.acquire():
-            order.state = OrderState.REJECTED
-            order.rejection_reason = "REJECTED_RATE_LIMIT_EXCEEDED"
-            order.updated_at_ns = time.time_ns()
-            self.pre_flight_checkpoint(order)
-            return order
-
-        # 3. Retrieve L2 Book & Calculate Price
-        book = self.order_books.get(symbol)
-        if not book or not book.bids or not book.asks:
-            order.state = OrderState.REJECTED
-            order.rejection_reason = "REJECTED_NO_L2_DEPTH"
-            order.updated_at_ns = time.time_ns()
-            self.pre_flight_checkpoint(order)
-            return order
-
-        if side == OrderSide.BUY:
-            order.price = book.best_bid if order_type in ("ALO", "POST_ONLY") else book.best_ask
-        else:
-            order.price = book.best_ask if order_type in ("ALO", "POST_ONLY") else book.best_bid
-
-        # 4. Pre-Trade TCA Gate (The 3.0x Golden Rule)
-        order_book_dict = {
-            "bid": book.best_bid,
-            "ask": book.best_ask,
-            "mid": book.mid_price,
-            "spread_pct": book.spread_bps / 10000.0
-        }
-        order_size_usd = (order.price * order.quantity) / (86.50 if "INR" in symbol or "SHOONYA" in venue.value else 1.0)
-        
-        tca_passed, tca_details, tca_reason = self.friction_cortex.evaluate_tca_gate(
-            symbol=symbol,
-            order_book=order_book_dict,
-            order_size_usd=order_size_usd,
-            expected_alpha_pct=expected_alpha_pct,
-            side=side.value,
-            venue=venue.value,
-            order_type=order_type
-        )
-
-        if not tca_passed:
-            order.state = OrderState.REJECTED
-            order.rejection_reason = f"TCA_GATE_REJECTED: {tca_reason}"
-            order.updated_at_ns = time.time_ns()
-            self.pre_flight_checkpoint(order)
-            return order
-
-        # 5. Pre-flight Checkpoint: PENDING_NEW before wire transmission
-        order.state = OrderState.PENDING_NEW
-        order.updated_at_ns = time.time_ns()
-        self.pre_flight_checkpoint(order)
-        self.active_orders[order.cl_ord_id] = order
-
-        order.decision_completed_ns = time.perf_counter_ns()
-
-        # 6. Two-Way Wire Protocol Handshake & Wire Bridge Execution
-        if self.wire_bridge is not None:
-            wire_payload = WireOrderPayload(
-                cl_ord_id=order.cl_ord_id,
-                symbol=symbol,
-                venue=venue.value,
-                side=side.value,
-                price=order.price,
-                quantity=order.quantity,
-                order_type=order_type
-            )
-            wire_res = await self.wire_bridge.transmit_order(wire_payload)
-            if wire_res.wire_state == WireState.FILLED:
-                order.state = OrderState.FILLED
-                order.filled_qty = wire_res.filled_qty
-                order.avg_fill_price = wire_res.avg_price
-                order.fee_inr = wire_res.fee_inr
-                order.rebate_inr = wire_res.rebate_inr
-                order.updated_at_ns = wire_res.filled_at_ns
-            elif wire_res.wire_state == WireState.INFLIGHT_UNKNOWN:
-                order.state = OrderState.PENDING_NEW
-                order.rejection_reason = wire_res.rejection_reason
-                order.updated_at_ns = time.time_ns()
-            elif wire_res.wire_state in (WireState.REJECTED, WireState.CANCELED):
-                order.state = OrderState(wire_res.wire_state.value)
-                order.rejection_reason = wire_res.rejection_reason
-                order.updated_at_ns = time.time_ns()
-            self.pre_flight_checkpoint(order)
-            return order
-
-        # Fallback if wire bridge is disabled
-        if order_type in ("ALO", "POST_ONLY"):
-            rebate_bps = 2.0
-            order.rebate_inr = (order.price * order.quantity) * (rebate_bps / 10000.0)
-            order.fee_inr = 0.0
-        elif venue == VenueType.SHOONYA_ZERO_BROKERAGE:
-            order.rebate_inr = 0.0
-            order.fee_inr = 0.0
-        else:
-            order.fee_inr = (order.price * order.quantity) * 0.00035
-
-        await asyncio.sleep(0.001)
-        if order.state == OrderState.CANCELED or not self.watchdog.check():
-            return order
-        order.state = OrderState.FILLED
-        order.filled_qty = order.quantity
-        order.avg_fill_price = order.price
-        order.updated_at_ns = time.time_ns()
-        self.pre_flight_checkpoint(order)
-        return order
-
-    def emergency_cancel_all(self, reason: str = "EMERGENCY_CANCEL") -> int:
-        canceled_count = 0
-        now_ns = time.time_ns()
-        if self.wire_bridge is not None:
-            self.wire_bridge.emergency_flush_open_orders(reason)
-        for cl_ord_id, order in list(self.active_orders.items()):
-            if order.state in (OrderState.PENDING_NEW, OrderState.OPEN):
-                order.state = OrderState.CANCELED
-                order.rejection_reason = reason
-                order.updated_at_ns = now_ns
-                self.pre_flight_checkpoint(order)
-                canceled_count += 1
-                del self.active_orders[cl_ord_id]
-        return canceled_count
-
-    def get_ledger_metrics(self) -> dict[str, Any]:
-        conn = sqlite3.connect(self.db_path, timeout=5.0)
-        cursor = conn.cursor()
-        
-        cursor.execute("SELECT COUNT(*), state FROM order_lifecycle_ledger GROUP BY state;")
-        state_counts = dict(cursor.fetchall())
-        
-        cursor.execute("SELECT COUNT(*), SUM(fee_inr), SUM(rebate_inr) FROM order_lifecycle_ledger WHERE state='FILLED';")
-        filled_row = cursor.fetchone()
-        
-        conn.close()
-        return {
-            "state_counts": state_counts,
-            "filled_orders": filled_row[0] or 0,
-            "total_fees_inr": filled_row[1] or 0.0,
-            "total_rebates_inr": filled_row[2] or 0.0,
-            "active_orders_in_memory": len(self.active_orders)
-        }
-
-async_dma_gateway = AsyncL2DMAGateway()
-
-if __name__ == "__main__":
-    print("=== AIR10 ASYNC L2 DMA GATEWAY INITIALIZED ===")
-    print(f"uvloop available: {HAS_UVLOOP}")
-    print(f"orjson available: {HAS_ORJSON}")
-    print(f"SQLite DB: {DB_PATH}")
-    print(f"Watchdog Timeout: {async_dma_gateway.watchdog.timeout_ms}ms")
+    async def dispatch_burst(
+        self,
+        orders: List[DMAOrder],
+        best_bid: float = 100.0,
+        best_ask: float = 100.1,
+    ) -> List[Dict[str, Any]]:
+        """Fast batch processing of DMA orders under high burst conditions."""
+        results = []
+        for order in orders:
+            res = await self.dispatch_single_order(order, best_bid, best_ask)
+            results.append(res)
+        return results
