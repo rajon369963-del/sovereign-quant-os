@@ -34,6 +34,9 @@ jobs:
       - name: Run Wire Bridge & In-Flight Concurrency Battery
         run: python3 test_wire_bridge_and_reconciliation_battery.py
 
+      - name: Run Side-Aware BUY/SELL Exit & PnL Battery
+        run: python3 test_side_aware_sell_exit_pnl.py
+
       - name: Run Delta-Neutral Carry Harvester Battery
         run: python3 test_phase3_cherry_on_top_battery.py
 
