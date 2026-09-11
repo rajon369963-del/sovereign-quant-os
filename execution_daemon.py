@@ -7,6 +7,7 @@ Features:
 4. SQLite WAL Persistent Trade & Telemetry Ledger
 """
 
+import hashlib
 import sqlite3
 import time
 import math
@@ -19,6 +20,7 @@ from risk_gatekeeper import RiskGatekeeper, RiskGateResult
 class OrderState(Enum):
     PENDING = "PENDING"
     SUBMITTED = "SUBMITTED"
+    PARTIALLY_FILLED = "PARTIALLY_FILLED"
     FILLED = "FILLED"
     CLOSED = "CLOSED"
     REJECTED = "REJECTED"
@@ -38,6 +40,9 @@ class TradeOrder:
     fill_price: float = 0.0
     exit_price: float = 0.0
     realized_pnl: float = 0.0
+    filled_quantity: float = 0.0
+    remaining_quantity: float = 0.0
+    last_fill_sequence: int = 0
 
 class ExecutionDaemon:
     def __init__(
@@ -90,17 +95,39 @@ class ExecutionDaemon:
                     drawdown REAL
                 );
             """)
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS fill_events (
+                    fill_event_id TEXT PRIMARY KEY,
+                    order_id TEXT NOT NULL,
+                    event_sequence INTEGER NOT NULL,
+                    fragment_quantity REAL NOT NULL,
+                    fragment_price REAL NOT NULL,
+                    payload_sha256 TEXT NOT NULL,
+                    created_at REAL NOT NULL,
+                    UNIQUE(order_id, event_sequence)
+                );
+            """)
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS order_fill_state (
+                    order_id TEXT PRIMARY KEY,
+                    requested_quantity REAL NOT NULL,
+                    filled_quantity REAL NOT NULL,
+                    remaining_quantity REAL NOT NULL,
+                    avg_fill_price REAL NOT NULL,
+                    last_fill_sequence INTEGER NOT NULL,
+                    state TEXT NOT NULL,
+                    updated_at REAL NOT NULL
+                );
+            """)
 
     def check_circuit_breaker(self) -> bool:
         """Hardware-enforced Circuit Breaker check."""
         current_drawdown = self.peak_equity - self.current_equity
 
-        # Rule 1: Cumulative Drawdown exceeds ₹10,000
         if current_drawdown >= self.max_account_drawdown:
             self._trigger_kill_switch(f"MAX DRAWDOWN BREACHED: Drawdown ₹{current_drawdown:.2f} >= ₹{self.max_account_drawdown:.2f}")
             return False
 
-        # Rule 2: Daily loss exceeds 2% limit
         if self.daily_realized_loss >= self.daily_loss_limit:
             self._trigger_kill_switch(f"DAILY 2% LOSS CEILING BREACHED: Daily Loss ₹{self.daily_realized_loss:.2f} >= ₹{self.daily_loss_limit:.2f}")
             return False
@@ -112,12 +139,144 @@ class ExecutionDaemon:
         print(f"\n🚨🚨🚨 [HARD CIRCUIT BREAKER TRIGGERED]: {reason} 🚨🚨🚨")
         print("Emergency Protocol: Cancelling all open orders and locking execution loop.")
         
-        # Log to database
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
                 "INSERT INTO circuit_breaker_events (timestamp, trigger_reason, equity, drawdown) VALUES (?, ?, ?, ?)",
                 (time.time(), reason, self.current_equity, self.peak_equity - self.current_equity)
             )
+
+    @staticmethod
+    def _fill_payload_sha256(order_id: str, fill_event_id: str, event_sequence: int,
+                             fragment_quantity: float, fragment_price: float) -> str:
+        payload = "|".join([
+            order_id,
+            fill_event_id,
+            str(event_sequence),
+            format(float(fragment_quantity), ".12g"),
+            format(float(fragment_price), ".12g"),
+        ])
+        return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+    def apply_fill_fragment(
+        self,
+        order: TradeOrder,
+        fill_event_id: str,
+        fragment_quantity: float,
+        fragment_price: float,
+        event_sequence: int,
+    ) -> TradeOrder:
+        """Atomically apply one canonical fill fragment with replay protection.
+
+        The immutable fill_event_id identifies one broker/adapter observation. Exact
+        replay is a zero-delta idempotent success; reuse of the same ID with mutated
+        payload or another order fails closed.
+        """
+        if not fill_event_id:
+            raise ValueError("fill_event_id is required")
+        if fragment_quantity <= 0 or fragment_price <= 0:
+            raise ValueError("fill quantity and price must be positive")
+        if event_sequence <= 0:
+            raise ValueError("event_sequence must start at 1")
+
+        requested = float(order.quantity)
+        payload_sha = self._fill_payload_sha256(
+            order.order_id, fill_event_id, event_sequence, fragment_quantity, fragment_price
+        )
+
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute("BEGIN IMMEDIATE")
+            existing = conn.execute(
+                "SELECT order_id, payload_sha256 FROM fill_events WHERE fill_event_id = ?",
+                (fill_event_id,),
+            ).fetchone()
+            if existing:
+                if existing[0] == order.order_id and existing[1] == payload_sha:
+                    state_row = conn.execute(
+                        "SELECT filled_quantity, remaining_quantity, avg_fill_price, last_fill_sequence, state "
+                        "FROM order_fill_state WHERE order_id = ?",
+                        (order.order_id,),
+                    ).fetchone()
+                    if state_row:
+                        order.filled_quantity = float(state_row[0])
+                        order.remaining_quantity = float(state_row[1])
+                        order.fill_price = float(state_row[2])
+                        order.last_fill_sequence = int(state_row[3])
+                        order.state = OrderState(state_row[4])
+                        self.active_orders[order.order_id] = order
+                    return order
+                raise ValueError("fill_event_id replay payload/order mismatch")
+
+            state_row = conn.execute(
+                "SELECT requested_quantity, filled_quantity, remaining_quantity, avg_fill_price, "
+                "last_fill_sequence FROM order_fill_state WHERE order_id = ?",
+                (order.order_id,),
+            ).fetchone()
+
+            if state_row:
+                persisted_requested, old_filled, old_remaining, old_avg, last_sequence = state_row
+                if abs(float(persisted_requested) - requested) > 1e-9:
+                    raise ValueError("requested quantity changed after fill history began")
+            else:
+                old_filled = 0.0
+                old_remaining = requested
+                old_avg = 0.0
+                last_sequence = 0
+
+            if event_sequence != int(last_sequence) + 1:
+                raise ValueError("fill event sequence must be contiguous")
+            if fragment_quantity > float(old_remaining) + 1e-9:
+                raise ValueError("fill fragment exceeds remaining requested quantity")
+
+            new_filled = float(old_filled) + float(fragment_quantity)
+            new_remaining = max(0.0, requested - new_filled)
+            new_avg = (
+                (float(old_filled) * float(old_avg) + float(fragment_quantity) * float(fragment_price))
+                / new_filled
+            )
+            new_state = OrderState.FILLED if new_remaining <= 1e-9 else OrderState.PARTIALLY_FILLED
+            now = time.time()
+
+            conn.execute(
+                "INSERT INTO fill_events "
+                "(fill_event_id, order_id, event_sequence, fragment_quantity, fragment_price, payload_sha256, created_at) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?)",
+                (
+                    fill_event_id,
+                    order.order_id,
+                    event_sequence,
+                    float(fragment_quantity),
+                    float(fragment_price),
+                    payload_sha,
+                    now,
+                ),
+            )
+            conn.execute(
+                "INSERT INTO order_fill_state "
+                "(order_id, requested_quantity, filled_quantity, remaining_quantity, avg_fill_price, "
+                "last_fill_sequence, state, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?) "
+                "ON CONFLICT(order_id) DO UPDATE SET "
+                "filled_quantity=excluded.filled_quantity, remaining_quantity=excluded.remaining_quantity, "
+                "avg_fill_price=excluded.avg_fill_price, last_fill_sequence=excluded.last_fill_sequence, "
+                "state=excluded.state, updated_at=excluded.updated_at",
+                (
+                    order.order_id,
+                    requested,
+                    new_filled,
+                    new_remaining,
+                    new_avg,
+                    event_sequence,
+                    new_state.value,
+                    now,
+                ),
+            )
+
+        order.filled_quantity = new_filled
+        order.remaining_quantity = new_remaining
+        order.fill_price = new_avg
+        order.last_fill_sequence = event_sequence
+        order.state = new_state
+        self.active_orders[order.order_id] = order
+        return order
 
     def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> Optional[TradeOrder]:
         """Self-healing order dispatch loop with exponential backoff."""
@@ -135,19 +294,22 @@ class ExecutionDaemon:
             hard_stop_loss=gate_res.hard_stop_loss,
             hard_take_profit=gate_res.hard_take_profit,
             state=OrderState.PENDING,
-            created_at=time.time()
+            created_at=time.time(),
+            remaining_quantity=gate_res.approved_quantity,
         )
 
-        # Self-healing retry loop (Max 3 attempts with exponential backoff)
         for attempt in range(1, 4):
             try:
-                # Simulate broker API dispatch and fill with realistic slippage (0.01%)
                 slippage = signal.price * 0.0001
-                order.fill_price = signal.price + (slippage if signal.signal_type == SignalType.BUY else -slippage)
-                order.state = OrderState.FILLED
-                self.active_orders[order.order_id] = order
-                return order
-            except Exception as e:
+                fill_price = signal.price + (slippage if signal.signal_type == SignalType.BUY else -slippage)
+                return self.apply_fill_fragment(
+                    order,
+                    fill_event_id=f"SIM_FULL_{order.order_id}",
+                    fragment_quantity=order.quantity,
+                    fragment_price=fill_price,
+                    event_sequence=1,
+                )
+            except Exception:
                 backoff_ms = (2 ** attempt) * 10
                 time.sleep(backoff_ms / 1000.0)
                 if attempt == 3:
@@ -163,13 +325,11 @@ class ExecutionDaemon:
         orders_to_close = []
         for order_id, order in self.active_orders.items():
             if order.state == OrderState.FILLED:
-                # Check Take Profit
                 if current_price >= order.hard_take_profit:
                     order.exit_price = order.hard_take_profit
                     order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
                     order.state = OrderState.CLOSED
                     orders_to_close.append(order)
-                # Check Stop Loss
                 elif current_price <= order.hard_stop_loss:
                     order.exit_price = order.hard_stop_loss
                     order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
@@ -179,18 +339,14 @@ class ExecutionDaemon:
         for order in orders_to_close:
             del self.active_orders[order.order_id]
             self.completed_trades.append(order)
-            
-            # Update account financials
             self.current_equity += order.realized_pnl
             if self.current_equity > self.peak_equity:
                 self.peak_equity = self.current_equity
             if order.realized_pnl < 0:
                 self.daily_realized_loss += abs(order.realized_pnl)
 
-            # Update Risk Gatekeeper state (Anti-Martingale sizing)
             risk_gate.record_trade_outcome(order.realized_pnl)
 
-            # Persist to SQLite
             with sqlite3.connect(self.db_path) as conn:
                 conn.execute("""
                     INSERT OR REPLACE INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -201,7 +357,6 @@ class ExecutionDaemon:
                     order.state.value, order.created_at
                 ))
 
-            # Verify Circuit Breaker after each fill
             self.check_circuit_breaker()
 
 if __name__ == "__main__":
