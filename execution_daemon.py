@@ -16,6 +16,7 @@ from enum import Enum
 from typing import List, Dict, Optional, Any
 from alpha_engine import TradeSignal, SignalType, StrategyArchetype
 from risk_gatekeeper import RiskGatekeeper, RiskGateResult
+from order_intent_identity import OrderIntentIdentityLedger, canonical_intent_sha256
 
 class OrderState(Enum):
     PENDING = "PENDING"
@@ -65,6 +66,7 @@ class ExecutionDaemon:
         self.completed_trades: List[TradeOrder] = []
         
         self._init_db()
+        self.intent_identity = OrderIntentIdentityLedger(self.db_path)
 
     def _init_db(self):
         with sqlite3.connect(self.db_path) as conn:
@@ -278,15 +280,49 @@ class ExecutionDaemon:
         self.active_orders[order.order_id] = order
         return order
 
-    def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> Optional[TradeOrder]:
-        """Self-healing order dispatch loop with exponential backoff."""
+    def dispatch_order_with_self_healing(
+        self,
+        signal: TradeSignal,
+        gate_res: RiskGateResult,
+        *,
+        intent_id: Optional[str] = None,
+        effect_id: Optional[str] = None,
+    ) -> Optional[TradeOrder]:
+        """Dispatch one order with durable collision-safe idempotency identity.
+
+        Explicit intent_id/effect_id makes retries stable across restarts. Reusing the
+        same identity with a mutated canonical intent raises before any fill mutation.
+        Legacy callers remain supported and receive a UUID-backed unique identity.
+        """
         if self.is_circuit_broken or not self.check_circuit_breaker():
             return None
 
-        order_id = f"ORD_{signal.strategy.value[:3]}_{int(time.time()*1000)}"
+        created_at = time.time()
+        symbol = "NIFTY_FUT"
+        payload_sha = canonical_intent_sha256(
+            strategy=signal.strategy.value,
+            side=signal.signal_type.value,
+            symbol=symbol,
+            quantity=gate_res.approved_quantity,
+            entry_price=signal.price,
+            stop_loss=gate_res.hard_stop_loss,
+            take_profit=gate_res.hard_take_profit,
+        )
+        binding = self.intent_identity.bind(
+            strategy=signal.strategy.value,
+            payload_sha256=payload_sha,
+            created_at=created_at,
+            intent_id=intent_id,
+            effect_id=effect_id,
+        )
+
+        existing_active = self.active_orders.get(binding.order_id)
+        if existing_active is not None:
+            return existing_active
+
         order = TradeOrder(
-            order_id=order_id,
-            symbol="NIFTY_FUT",
+            order_id=binding.order_id,
+            symbol=symbol,
             strategy=signal.strategy.value,
             side=signal.signal_type.value,
             quantity=gate_res.approved_quantity,
@@ -294,7 +330,7 @@ class ExecutionDaemon:
             hard_stop_loss=gate_res.hard_stop_loss,
             hard_take_profit=gate_res.hard_take_profit,
             state=OrderState.PENDING,
-            created_at=time.time(),
+            created_at=created_at,
             remaining_quantity=gate_res.approved_quantity,
         )
 
