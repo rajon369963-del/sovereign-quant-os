@@ -7,9 +7,30 @@ No broker/network/live-money path is used.
 """
 
 import sqlite3
+import sys
 import tempfile
 import time
+import types
 from pathlib import Path
+
+# The breaker state machine itself does not use Polars or broker/risk implementations.
+# Keep this regression hermetic by substituting only the unrelated import-time type
+# dependencies; the real ExecutionDaemon.check_circuit_breaker production code below
+# is imported and executed unchanged.
+alpha_stub = types.ModuleType("alpha_engine")
+alpha_stub.TradeSignal = object
+alpha_stub.StrategyArchetype = object
+
+class _SignalType:
+    BUY = "BUY"
+
+alpha_stub.SignalType = _SignalType
+sys.modules["alpha_engine"] = alpha_stub
+
+risk_stub = types.ModuleType("risk_gatekeeper")
+risk_stub.RiskGatekeeper = object
+risk_stub.RiskGateResult = object
+sys.modules["risk_gatekeeper"] = risk_stub
 
 from execution_daemon import ExecutionDaemon, OrderState, TradeOrder
 
