@@ -37,6 +37,9 @@ jobs:
       - name: Run Partial-Fill Event Identity & Idempotency Battery
         run: python3 test_partial_fill_lifecycle.py
 
+      - name: Run Order Intent Identity & Same-Millisecond Collision Court
+        run: python3 test_order_intent_identity.py
+
       - name: Run Delta-Neutral Carry Harvester Battery
         run: python3 test_phase3_cherry_on_top_battery.py
 
