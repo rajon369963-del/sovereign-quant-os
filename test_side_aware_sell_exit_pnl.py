@@ -3,11 +3,52 @@
 
 Runs the production ExecutionDaemon.simulate_price_tick path against a temporary
 SQLite ledger. No broker/network credentials or real-money execution are used.
+The test stubs only unrelated import-time alpha/risk types so this lifecycle
+battery does not silently add a new dependency to the production environment.
 """
 
 import sqlite3
+import sys
 import tempfile
+import types
+from enum import Enum
 from pathlib import Path
+
+
+class _SignalType(Enum):
+    BUY = "BUY"
+    SELL = "SELL"
+    HOLD = "HOLD"
+
+
+class _StrategyArchetype(Enum):
+    TEST = "TEST"
+
+
+class _TradeSignal:
+    pass
+
+
+class _RiskGatekeeper:
+    pass
+
+
+class _RiskGateResult:
+    pass
+
+
+# Hermetic import boundary: execution_daemon only needs these names at import time.
+# The production method under test remains the real ExecutionDaemon implementation.
+alpha_stub = types.ModuleType("alpha_engine")
+alpha_stub.SignalType = _SignalType
+alpha_stub.StrategyArchetype = _StrategyArchetype
+alpha_stub.TradeSignal = _TradeSignal
+sys.modules["alpha_engine"] = alpha_stub
+
+risk_stub = types.ModuleType("risk_gatekeeper")
+risk_stub.RiskGatekeeper = _RiskGatekeeper
+risk_stub.RiskGateResult = _RiskGateResult
+sys.modules["risk_gatekeeper"] = risk_stub
 
 from execution_daemon import ExecutionDaemon, OrderState, TradeOrder
 
@@ -108,7 +149,7 @@ def run_neutral_case(side, *, fill, tp, sl, tick):
 def assert_known_bad_long_only_mutant_is_discriminated():
     """Prove these SELL fixtures would reject the previous long-only semantics."""
 
-    def legacy_exit(fill, tp, sl, tick):
+    def legacy_exit(tp, sl, tick):
         if tick >= tp:
             return tp
         if tick <= sl:
@@ -117,8 +158,8 @@ def assert_known_bad_long_only_mutant_is_discriminated():
 
     # Correct short bracket: TP below fill, SL above fill.
     fill, tp, sl = 100.0, 90.0, 110.0
-    assert legacy_exit(fill, tp, sl, 89.0) != tp, "Known-bad SELL-TP mutant unexpectedly passed"
-    assert legacy_exit(fill, tp, sl, 111.0) != sl, "Known-bad SELL-SL mutant unexpectedly passed"
+    assert legacy_exit(tp, sl, 89.0) != tp, "Known-bad SELL-TP mutant unexpectedly passed"
+    assert legacy_exit(tp, sl, 111.0) != sl, "Known-bad SELL-SL mutant unexpectedly passed"
 
     # Previous PnL formula would report a profitable short exit as a loss.
     legacy_short_pnl = (tp - fill) * 2.0
