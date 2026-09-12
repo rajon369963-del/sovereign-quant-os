@@ -4,13 +4,14 @@
 The repaired disconnected Dhan envelope is only causally protected if the existing
 authority tests go RED when one live-authority field is regressed at a time.
 All mutants run from temporary source copies and use no broker credentials, network,
-or real-money effects.
+or real-money effects. Uses only Python stdlib/unittest so the court adds no test
+framework dependency to Sovereign Quant OS CI.
 """
 
 import importlib.util
+import tempfile
+import unittest
 from pathlib import Path
-
-import pytest
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -34,46 +35,53 @@ def _load_mutant(tmp_path: Path, needle: str, replacement: str, name: str):
     return _load_module(mutant_path, f"air10_dhan_{name}_mutant")
 
 
-def _assert_existing_test_goes_red(mutant_bridge_class, target_test_name: str):
+def _run_existing_test(mutant_bridge_class, target_test_name: str):
     court = _load_module(COURT_PATH, f"air10_dhan_court_{target_test_name}")
     production_bridge = court.DhanLiveBridge
     court.DhanLiveBridge = mutant_bridge_class
     try:
         case = court.DhanModeAuthorityCourt(methodName=target_test_name)
-        with pytest.raises(AssertionError):
-            getattr(case, target_test_name)()
+        getattr(case, target_test_name)()
     finally:
         court.DhanLiveBridge = production_bridge
 
 
-@pytest.mark.parametrize(
-    ("needle", "replacement", "name"),
-    [
-        ('            "status": "SIMULATED",\n', '            "status": "ORDER_PLACED",  # KILL MUTANT\n', "status_live"),
-        ('            "execution_mode": "SIMULATED",\n', '            "execution_mode": "LIVE",  # KILL MUTANT\n', "execution_mode_live"),
-        ('            "connection_authority": "ABSENT",\n', '            "connection_authority": "PRESENT",  # KILL MUTANT\n', "authority_present"),
-        ('            "is_simulated": True,\n', '            "is_simulated": False,  # KILL MUTANT\n', "simulation_flag_false"),
-        ('            "broker_order_id": None,\n', '            "broker_order_id": "MUTANT-LIVE-ID",  # KILL MUTANT\n', "broker_id_present"),
-    ],
-)
-def test_order_authority_regressions_are_killed(tmp_path, needle, replacement, name):
-    mutant = _load_mutant(tmp_path, needle, replacement, name)
-    _assert_existing_test_goes_red(
-        mutant.DhanLiveBridge,
-        "test_disconnected_order_is_unrepresentable_as_live_success",
-    )
+class DhanModeAuthorityKillMutants(unittest.TestCase):
+    def test_order_authority_regressions_are_killed(self):
+        mutations = [
+            ('            "status": "SIMULATED",\n', '            "status": "ORDER_PLACED",  # KILL MUTANT\n', "status_live"),
+            ('            "execution_mode": "SIMULATED",\n', '            "execution_mode": "LIVE",  # KILL MUTANT\n', "execution_mode_live"),
+            ('            "connection_authority": "ABSENT",\n', '            "connection_authority": "PRESENT",  # KILL MUTANT\n', "authority_present"),
+            ('            "is_simulated": True,\n', '            "is_simulated": False,  # KILL MUTANT\n', "simulation_flag_false"),
+            ('            "broker_order_id": None,\n', '            "broker_order_id": "MUTANT-LIVE-ID",  # KILL MUTANT\n', "broker_id_present"),
+        ]
+        with tempfile.TemporaryDirectory(prefix="air10-dhan-mutants-") as tmp:
+            tmp_path = Path(tmp)
+            for needle, replacement, name in mutations:
+                with self.subTest(mutant=name):
+                    mutant = _load_mutant(tmp_path, needle, replacement, name)
+                    with self.assertRaises(AssertionError):
+                        _run_existing_test(
+                            mutant.DhanLiveBridge,
+                            "test_disconnected_order_is_unrepresentable_as_live_success",
+                        )
+
+    def test_live_like_numeric_fields_are_killed(self):
+        mutations = [
+            ("                simulated_balance_hint=1.00,\n", "                deposited_balance=1.00,  # KILL MUTANT: live-like field\n", "live_balance_field"),
+            ("                simulated_ltp_hint=684.85,\n", "                ltp=684.85,  # KILL MUTANT: live-like field\n", "live_ltp_field"),
+        ]
+        with tempfile.TemporaryDirectory(prefix="air10-dhan-field-mutants-") as tmp:
+            tmp_path = Path(tmp)
+            for needle, replacement, name in mutations:
+                with self.subTest(mutant=name):
+                    mutant = _load_mutant(tmp_path, needle, replacement, name)
+                    with self.assertRaises(AssertionError):
+                        _run_existing_test(
+                            mutant.DhanLiveBridge,
+                            "test_disconnected_balance_and_quote_do_not_use_live_value_fields",
+                        )
 
 
-@pytest.mark.parametrize(
-    ("needle", "replacement", "name"),
-    [
-        ("                simulated_balance_hint=1.00,\n", "                deposited_balance=1.00,  # KILL MUTANT: live-like field\n", "live_balance_field"),
-        ("                simulated_ltp_hint=684.85,\n", "                ltp=684.85,  # KILL MUTANT: live-like field\n", "live_ltp_field"),
-    ],
-)
-def test_live_like_numeric_fields_are_killed(tmp_path, needle, replacement, name):
-    mutant = _load_mutant(tmp_path, needle, replacement, name)
-    _assert_existing_test_goes_red(
-        mutant.DhanLiveBridge,
-        "test_disconnected_balance_and_quote_do_not_use_live_value_fields",
-    )
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
