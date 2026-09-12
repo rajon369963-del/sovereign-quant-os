@@ -11,11 +11,19 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Check out exact triggering revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Record tested revision
+        run: |
+          echo "TESTED_SHA=$(git rev-parse HEAD)"
+          git status --short
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -24,6 +32,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Run Dhan Simulation/Live Authority Court
+        run: |
+          python3 tests/test_dhan_mode_authority.py
+          python3 tests/test_dhan_mode_authority_kill_mutants.py
 
       - name: Run IC² Compound Synthesis Engine (12 Clusters)
         run: python3 ic2_interconnection_engine.py
