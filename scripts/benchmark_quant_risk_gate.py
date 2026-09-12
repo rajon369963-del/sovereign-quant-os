@@ -1,3 +1,4 @@
+import hashlib
 #!/usr/bin/env python3
 """
 Sovereign Quant OS - Standalone Deterministic Pre-Trade Risk Gate Benchmark Reproducer
@@ -129,6 +130,7 @@ def run_benchmark(rounds: int = 2000):
         "avg_latency_us": round(avg_lat, 4),
         "p95_latency_us": round(p95_lat, 4),
         "throughput_checks_sec": round(ops_sec, 1),
+        "benchmark_script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "status": "PASS"
     }
     out_file = Path(__file__).parent / "quant_benchmark_results.json"
