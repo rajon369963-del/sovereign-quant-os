@@ -57,6 +57,7 @@ except ImportError:
 # ==============================================================================
 
 class WireState(str, Enum):
+    HOLD = "HOLD"
     INIT = "INIT"
     PENDING_NEW = "PENDING_NEW"
     SENT_TO_WIRE = "SENT_TO_WIRE"
@@ -218,7 +219,7 @@ class LiveBrokerWireBridge:
     # HERMES FIX: ORPHAN RELOAD + IDEMPOTENT REPLAY (AC-05 / restart safety)
     # --------------------------------------------------------------------------
     _TERMINAL_WIRE_STATES = frozenset({"FILLED", "CANCELED", "REJECTED", "ZOMBIE", "PARTIALLY_FILLED"})
-    _INFLIGHT_WIRE_STATES = frozenset({"PENDING_NEW", "SENT_TO_WIRE", "INFLIGHT_UNKNOWN", "OPEN", "ACK_RECEIVED"})
+    _INFLIGHT_WIRE_STATES = frozenset({"PENDING_NEW", "SENT_TO_WIRE", "INFLIGHT_UNKNOWN", "OPEN", "ACK_RECEIVED", "HOLD"})
 
     def _order_from_row(self, row: sqlite3.Row) -> WireOrderPayload:
         """Rebuild a payload from a WAL audit row (no wire side effects)."""
@@ -251,7 +252,7 @@ class LiveBrokerWireBridge:
         try:
             rows = conn.execute(
                 "SELECT * FROM wire_state_audit_log WHERE wire_state IN"
-                " ('PENDING_NEW','SENT_TO_WIRE','INFLIGHT_UNKNOWN','OPEN','ACK_RECEIVED')"
+                " ('PENDING_NEW','SENT_TO_WIRE','INFLIGHT_UNKNOWN','OPEN','ACK_RECEIVED','HOLD')"
             ).fetchall()
         finally:
             conn.close()
@@ -261,6 +262,12 @@ class LiveBrokerWireBridge:
             if cl_ord_id in self.inflight_orders:
                 continue
             order = self._order_from_row(row)
+            # A local remarks token is identity, not broker acknowledgement.
+            # Persist unresolved restart obligations before allowing dispatch.
+            order.wire_state = WireState.HOLD
+            order.rejection_reason = "RESTART_RECONCILE_REQUIRED"
+            self._sandwich_post_commit(order)
+            self.is_halted = True
             if not order.remarks:
                 order.remarks = self.generate_remarks_token(cl_ord_id)
             self.inflight_orders[cl_ord_id] = order
@@ -376,6 +383,15 @@ class LiveBrokerWireBridge:
         cached = self.lookup_cached_fill(order.cl_ord_id)
         if cached is not None:
             return cached
+
+        if self.is_halted:
+            persisted = self.lookup_order(order.cl_ord_id)
+            if persisted is not None:
+                return persisted
+            order.wire_state = WireState.REJECTED
+            order.rejection_reason = "RECONCILE_REQUIRED_DISPATCH_HALTED"
+            self._sandwich_pre_commit(order)
+            return order
 
         # If this order is currently in-flight in this process, await its completion
         if order.cl_ord_id in self.inflight_events:
