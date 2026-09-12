@@ -116,6 +116,25 @@ def run_benchmark(rounds: int = 2000):
     assert passed_count > 0, "Benchmark failure: No orders passed risk gate"
     assert ops_sec > 100_000, f"Benchmark failure: Throughput too low ({ops_sec} < 100,000 ops/s)"
     
+    
+    import json
+    from pathlib import Path
+    results = {
+        "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "platform": f"{sys_name}-{machine}",
+        "machine": machine,
+        "processor": proc,
+        "python_version": py_ver,
+        "total_checks": rounds,
+        "avg_latency_us": round(avg_lat, 4),
+        "p95_latency_us": round(p95_lat, 4),
+        "throughput_checks_sec": round(ops_sec, 1),
+        "status": "PASS"
+    }
+    out_file = Path(__file__).parent / "quant_benchmark_results.json"
+    out_file.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    print(f"• Saved live benchmark results to {out_file.name}")
+
     print("----------------------------------------------------------------------")
     print("✅ VERDICT: DETERMINISTIC RISK GATE MEETS ZERO-LATENCY SPECIFICATION.")
     print("======================================================================\n")
