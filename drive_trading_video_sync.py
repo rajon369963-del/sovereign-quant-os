@@ -3,20 +3,21 @@
 ===============================================================================
 AIR10/MIGL GOOGLE DRIVE TRADING VIDEO RECOVERY & MANIFEST SYNC
 ===============================================================================
-Extracts all trading video metadata and pure-text transcripts from 
-transcript_fts.sqlite and synchronizes canonical manifests directly to 
-Google Drive: lakhidas168@gmail.com in folder 1i2ci3yvGJcYM6V6kBRZqYxvIDvgCKBCZ.
+Extracts trading-video metadata from transcript_fts.sqlite and synchronizes
+canonical manifests to the configured Google Drive folder.
 
-Complies strictly with Rule 3 (Source Law), Rule 10 (Zero Audio/Video Disk Bloat 
-& Pure Text Persistence), and Rule 2 (Hot Path Law).
+Important evidence boundary: successful external commands are not promoted to
+remote byte-parity verification unless an independent remote digest readback is
+performed. This module records executable/argv/local-artifact evidence and fails
+closed on command failure.
 ===============================================================================
 """
 
-import os
-import sys
-import json
-import sqlite3
 import hashlib
+import json
+import os
+import shutil
+import sqlite3
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
@@ -26,6 +27,56 @@ OUT_DIR = "/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_
 DRIVE_PARENT_ID = "1i2ci3yvGJcYM6V6kBRZqYxvIDvgCKBCZ"
 ACCOUNT = "lakhidas168@gmail.com"
 
+
+class SyncAuthorityError(RuntimeError):
+    """Raised when the external sync command cannot be trusted to continue."""
+
+
+def _sha256_file(path):
+    digest = hashlib.sha256()
+    with open(path, "rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _argv_digest(argv):
+    canonical = json.dumps(argv, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def _resolve_gog_identity(executable_resolver=shutil.which):
+    resolved = executable_resolver("gog")
+    if not resolved:
+        raise SyncAuthorityError("gog executable not found on PATH")
+    real_path = str(Path(resolved).resolve())
+    if not os.path.isfile(real_path):
+        raise SyncAuthorityError(f"resolved gog is not a regular file: {real_path}")
+    return {
+        "command_path": real_path,
+        "command_sha256": _sha256_file(real_path),
+    }
+
+
+def _run_gog(args, label, runner=subprocess.run, executable_resolver=shutil.which):
+    identity = _resolve_gog_identity(executable_resolver)
+    command = [identity["command_path"], *args]
+    result = runner(command, capture_output=True, text=True)
+    evidence = {
+        **identity,
+        "label": label,
+        "argv_sha256": _argv_digest(command),
+        "return_code": result.returncode,
+        "stderr_present": bool((result.stderr or "").strip()),
+    }
+    if result.returncode != 0:
+        raise SyncAuthorityError(
+            f"{label} failed with return code {result.returncode}; "
+            f"stderr={((result.stderr or '').strip())[:500]}"
+        )
+    return result, evidence
+
+
 def extract_manifest():
     print(f"[1/4] Connecting to {FTS_DB}...")
     conn = sqlite3.connect(FTS_DB)
@@ -33,7 +84,7 @@ def extract_manifest():
     cur = conn.cursor()
 
     query = """
-    SELECT 
+    SELECT
         sha256,
         canonical_video_id,
         notebook_title,
@@ -47,7 +98,7 @@ def extract_manifest():
        OR notebook_title LIKE '%ml prediction%'
     ORDER BY notebook_title, source_title;
     """
-    
+
     cur.execute(query)
     rows = cur.fetchall()
     print(f"[2/4] Retrieved {len(rows)} trading video transcript records.")
@@ -58,7 +109,7 @@ def extract_manifest():
         "target_drive_folder": DRIVE_PARENT_ID,
         "target_account": ACCOUNT,
         "notebook_breakdown": {},
-        "videos": []
+        "videos": [],
     }
 
     markdown_lines = [
@@ -66,91 +117,155 @@ def extract_manifest():
         f"**Generated**: {manifest_data['generated_at']} | **Total Videos**: {len(rows)} | **Drive Target**: `{DRIVE_PARENT_ID}`",
         "",
         "## Notebook Breakdown",
-        ""
+        "",
     ]
 
     for row in rows:
         sha, vid, notebook, title, url, chars = row
         manifest_data["notebook_breakdown"][notebook] = manifest_data["notebook_breakdown"].get(notebook, 0) + 1
-        manifest_data["videos"].append({
-            "sha256": sha,
-            "video_id": vid,
-            "notebook": notebook,
-            "title": title,
-            "url": url,
-            "char_count": chars
-        })
+        manifest_data["videos"].append(
+            {
+                "sha256": sha,
+                "video_id": vid,
+                "notebook": notebook,
+                "title": title,
+                "url": url,
+                "char_count": chars,
+            }
+        )
 
     for nb, count in sorted(manifest_data["notebook_breakdown"].items()):
         markdown_lines.append(f"- **{nb}**: {count} videos")
 
-    markdown_lines.extend([
-        "",
-        "## Video Catalog (First 100 Sample)",
-        "| Video ID | Notebook | Title | Characters | SHA256 |",
-        "|---|---|---|---|---|"
-    ])
+    markdown_lines.extend(
+        [
+            "",
+            "## Video Catalog (First 100 Sample)",
+            "| Video ID | Notebook | Title | Characters | SHA256 |",
+            "|---|---|---|---|---|",
+        ]
+    )
 
-    for v in manifest_data["videos"][:100]:
-        title_clean = v['title'].replace('|', '-')
-        markdown_lines.append(f"| `{v['video_id']}` | {v['notebook']} | [{title_clean}]({v['url']}) | {v['char_count']:,} | `{v['sha256'][:10]}...` |")
+    for video in manifest_data["videos"][:100]:
+        title_clean = video["title"].replace("|", "-")
+        markdown_lines.append(
+            f"| `{video['video_id']}` | {video['notebook']} | [{title_clean}]({video['url']}) | "
+            f"{video['char_count']:,} | `{video['sha256'][:10]}...` |"
+        )
 
     json_path = os.path.join(OUT_DIR, "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.json")
     md_path = os.path.join(OUT_DIR, "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.md")
 
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(manifest_data, f, indent=2)
+    with open(json_path, "w", encoding="utf-8") as handle:
+        json.dump(manifest_data, handle, indent=2)
 
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(markdown_lines))
+    with open(md_path, "w", encoding="utf-8") as handle:
+        handle.write("\n".join(markdown_lines))
 
-    print(f"[3/4] Manifests written locally:")
+    print("[3/4] Manifests written locally:")
     print(f"  JSON: {json_path} ({os.path.getsize(json_path):,} bytes)")
     print(f"  MD:   {md_path} ({os.path.getsize(md_path):,} bytes)")
 
     return json_path, md_path
 
-def sync_to_google_drive(md_path, json_path):
+
+def sync_to_google_drive(
+    md_path,
+    json_path,
+    runner=subprocess.run,
+    executable_resolver=shutil.which,
+):
+    """Run the exact upload/list path and return bounded, non-promoted evidence.
+
+    A zero return code proves only that the resolved executable reported success.
+    It does not prove provider identity or remote byte parity. Callers must not
+    promote this result to SYNC_VERIFIED without an independent remote digest
+    readback bound to the returned local digests and remote object identities.
+    """
     print(f"[4/4] Synchronizing manifest to Google Drive ({ACCOUNT} -> {DRIVE_PARENT_ID})...")
-    
-    # Upload MD manifest
-    cmd_md = [
-        "gog", "drive", "upload", md_path,
-        "--parent", DRIVE_PARENT_ID,
-        "--account", ACCOUNT,
-        "--name", "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.md",
-        "--force"
-    ]
-    res_md = subprocess.run(cmd_md, capture_output=True, text=True)
-    print("Drive Upload MD Output:", res_md.stdout.strip())
-    if res_md.stderr:
-        print("Drive Upload MD Error:", res_md.stderr.strip())
 
-    # Upload JSON manifest
-    cmd_json = [
-        "gog", "drive", "upload", json_path,
-        "--parent", DRIVE_PARENT_ID,
-        "--account", ACCOUNT,
-        "--name", "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.json",
-        "--force"
-    ]
-    res_json = subprocess.run(cmd_json, capture_output=True, text=True)
-    print("Drive Upload JSON Output:", res_json.stdout.strip())
-    if res_json.stderr:
-        print("Drive Upload JSON Error:", res_json.stderr.strip())
+    local_artifacts = {
+        "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.md": _sha256_file(md_path),
+        "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.json": _sha256_file(json_path),
+    }
+    command_evidence = []
 
-    # Verify upload
-    cmd_verify = [
-        "gog", "drive", "ls",
-        "--parent", DRIVE_PARENT_ID,
-        "--account", ACCOUNT,
-        "--query", "name contains 'TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST'",
-        "--plain"
-    ]
-    res_ver = subprocess.run(cmd_verify, capture_output=True, text=True)
-    print("\nVerified Drive Contents:")
-    print(res_ver.stdout.strip())
+    md_result, md_evidence = _run_gog(
+        [
+            "drive",
+            "upload",
+            md_path,
+            "--parent",
+            DRIVE_PARENT_ID,
+            "--account",
+            ACCOUNT,
+            "--name",
+            "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.md",
+            "--force",
+        ],
+        "upload_md",
+        runner,
+        executable_resolver,
+    )
+    command_evidence.append(md_evidence)
+    print("Drive Upload MD Output:", (md_result.stdout or "").strip())
+
+    json_result, json_evidence = _run_gog(
+        [
+            "drive",
+            "upload",
+            json_path,
+            "--parent",
+            DRIVE_PARENT_ID,
+            "--account",
+            ACCOUNT,
+            "--name",
+            "TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST.json",
+            "--force",
+        ],
+        "upload_json",
+        runner,
+        executable_resolver,
+    )
+    command_evidence.append(json_evidence)
+    print("Drive Upload JSON Output:", (json_result.stdout or "").strip())
+
+    list_result, list_evidence = _run_gog(
+        [
+            "drive",
+            "ls",
+            "--parent",
+            DRIVE_PARENT_ID,
+            "--account",
+            ACCOUNT,
+            "--query",
+            "name contains 'TRADING_VIDEOS_CANONICAL_VAULT_MANIFEST'",
+            "--plain",
+        ],
+        "list_discovery",
+        runner,
+        executable_resolver,
+    )
+    command_evidence.append(list_evidence)
+    print("\nDrive discovery output (UNVERIFIED remote byte parity):")
+    print((list_result.stdout or "").strip())
+
+    return {
+        "decision": "HOLD_REMOTE_PARITY_UNVERIFIED",
+        "sync_verified": False,
+        "local_artifact_sha256": local_artifacts,
+        "command_evidence": command_evidence,
+        "remote_listing_observed": bool((list_result.stdout or "").strip()),
+        "remote_object_ids": [],
+        "remote_readback_sha256": {},
+        "claim_ceiling": (
+            "LOCAL_ARTIFACT_DIGESTS_AND_EXTERNAL_COMMAND_SUCCESS_ONLY; "
+            "NOT_PROVIDER_IDENTITY_OR_REMOTE_BYTE_PARITY"
+        ),
+    }
+
 
 if __name__ == "__main__":
     json_path, md_path = extract_manifest()
-    sync_to_google_drive(md_path, json_path)
+    evidence = sync_to_google_drive(md_path, json_path)
+    print("Sync evidence:", json.dumps(evidence, indent=2))
