@@ -38,4 +38,4 @@ jobs:
           python3 scripts/benchmark_quant_risk_gate.py
       - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
         run: |
-          python3 scripts/verify_receipt.py
+          python3 scripts/verify_receipt.py --assert-live-benchmark scripts/quant_benchmark_results.json
