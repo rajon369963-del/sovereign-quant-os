@@ -10,7 +10,7 @@ Features:
 import sqlite3
 import time
 import math
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from enum import Enum
 from typing import List, Dict, Optional, Any
 from alpha_engine import TradeSignal, SignalType, StrategyArchetype
@@ -58,8 +58,10 @@ class ExecutionDaemon:
         self.is_circuit_broken = False
         self.active_orders: Dict[str, TradeOrder] = {}
         self.completed_trades: List[TradeOrder] = []
+        self.lifecycle_hold_reason: Optional[str] = None
         
         self._init_db()
+        self._refresh_reconciliation_hold()
 
     def _init_db(self):
         with sqlite3.connect(self.db_path) as conn:
@@ -91,6 +93,59 @@ class ExecutionDaemon:
                 );
             """)
 
+    def _refresh_reconciliation_hold(self) -> Optional[str]:
+        """Fail closed when restart finds durable nonterminal orders not managed in memory."""
+        with sqlite3.connect(self.db_path) as conn:
+            unresolved = conn.execute(
+                "SELECT 1 FROM trades WHERE state = ? LIMIT 1",
+                (OrderState.FILLED.value,)
+            ).fetchone()
+        self.lifecycle_hold_reason = "HOLD_RECONCILIATION_REQUIRED" if unresolved else None
+        return self.lifecycle_hold_reason
+
+    def _persist_order_with_readback(self, order: TradeOrder) -> bool:
+        """Persist exact order state and prove the same order_id/state is durable before success."""
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute("""
+                INSERT OR REPLACE INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                order.order_id, order.symbol, order.strategy, order.side,
+                order.quantity, order.entry_price, order.fill_price, order.exit_price,
+                order.hard_stop_loss, order.hard_take_profit, order.realized_pnl,
+                order.state.value, order.created_at
+            ))
+            row = conn.execute(
+                "SELECT order_id, state, symbol, side, quantity, fill_price FROM trades WHERE order_id = ?",
+                (order.order_id,)
+            ).fetchone()
+
+        if row is None:
+            return False
+        durable_order_id, durable_state, durable_symbol, durable_side, durable_quantity, durable_fill = row
+        return (
+            durable_order_id == order.order_id
+            and durable_state == order.state.value
+            and durable_symbol == order.symbol
+            and durable_side == order.side
+            and math.isclose(float(durable_quantity), float(order.quantity), rel_tol=0.0, abs_tol=1e-12)
+            and math.isclose(float(durable_fill), float(order.fill_price), rel_tol=0.0, abs_tol=1e-12)
+        )
+
+    def read_durable_order(self, order_id: str) -> Optional[Dict[str, Any]]:
+        """Read back one persisted order by stable order_id for durability courts/restart checks."""
+        with sqlite3.connect(self.db_path) as conn:
+            row = conn.execute(
+                "SELECT order_id, symbol, strategy, side, quantity, entry_price, fill_price, exit_price, stop_loss, take_profit, realized_pnl, state, timestamp FROM trades WHERE order_id = ?",
+                (order_id,)
+            ).fetchone()
+        if row is None:
+            return None
+        keys = [
+            "order_id", "symbol", "strategy", "side", "quantity", "entry_price", "fill_price",
+            "exit_price", "stop_loss", "take_profit", "realized_pnl", "state", "timestamp"
+        ]
+        return dict(zip(keys, row))
+
     def check_circuit_breaker(self) -> bool:
         """Hardware-enforced Circuit Breaker check."""
         current_drawdown = self.peak_equity - self.current_equity
@@ -120,8 +175,8 @@ class ExecutionDaemon:
             )
 
     def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> Optional[TradeOrder]:
-        """Self-healing order dispatch loop with exponential backoff."""
-        if self.is_circuit_broken or not self.check_circuit_breaker():
+        """Self-healing order dispatch loop with exponential backoff and durable state readback."""
+        if self.lifecycle_hold_reason or self.is_circuit_broken or not self.check_circuit_breaker():
             return None
 
         order_id = f"ORD_{signal.strategy.value[:3]}_{int(time.time()*1000)}"
@@ -145,9 +200,14 @@ class ExecutionDaemon:
                 slippage = signal.price * 0.0001
                 order.fill_price = signal.price + (slippage if signal.signal_type == SignalType.BUY else -slippage)
                 order.state = OrderState.FILLED
+
+                # Dispatch success is not promoted until the exact order identity/state is durable.
+                if not self._persist_order_with_readback(order):
+                    raise RuntimeError(f"DISPATCH_LEDGER_READBACK_FAILED:{order.order_id}")
+
                 self.active_orders[order.order_id] = order
                 return order
-            except Exception as e:
+            except Exception:
                 backoff_ms = (2 ** attempt) * 10
                 time.sleep(backoff_ms / 1000.0)
                 if attempt == 3:
@@ -160,48 +220,43 @@ class ExecutionDaemon:
         if not self.active_orders:
             return
 
-        orders_to_close = []
-        for order_id, order in self.active_orders.items():
-            if order.state == OrderState.FILLED:
-                # Check Take Profit
-                if current_price >= order.hard_take_profit:
-                    order.exit_price = order.hard_take_profit
-                    order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
-                    order.state = OrderState.CLOSED
-                    orders_to_close.append(order)
-                # Check Stop Loss
-                elif current_price <= order.hard_stop_loss:
-                    order.exit_price = order.hard_stop_loss
-                    order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
-                    order.state = OrderState.CLOSED
-                    orders_to_close.append(order)
+        close_candidates: List[TradeOrder] = []
+        for order in self.active_orders.values():
+            if order.state != OrderState.FILLED:
+                continue
 
-        for order in orders_to_close:
-            del self.active_orders[order.order_id]
-            self.completed_trades.append(order)
-            
-            # Update account financials
-            self.current_equity += order.realized_pnl
-            if self.current_equity > self.peak_equity:
-                self.peak_equity = self.current_equity
-            if order.realized_pnl < 0:
-                self.daily_realized_loss += abs(order.realized_pnl)
+            exit_price: Optional[float] = None
+            if current_price >= order.hard_take_profit:
+                exit_price = order.hard_take_profit
+            elif current_price <= order.hard_stop_loss:
+                exit_price = order.hard_stop_loss
 
-            # Update Risk Gatekeeper state (Anti-Martingale sizing)
-            risk_gate.record_trade_outcome(order.realized_pnl)
-
-            # Persist to SQLite
-            with sqlite3.connect(self.db_path) as conn:
-                conn.execute("""
-                    INSERT OR REPLACE INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (
-                    order.order_id, order.symbol, order.strategy, order.side,
-                    order.quantity, order.entry_price, order.fill_price, order.exit_price,
-                    order.hard_stop_loss, order.hard_take_profit, order.realized_pnl,
-                    order.state.value, order.created_at
+            if exit_price is not None:
+                realized_pnl = (exit_price - order.fill_price) * order.quantity
+                close_candidates.append(replace(
+                    order,
+                    exit_price=exit_price,
+                    realized_pnl=realized_pnl,
+                    state=OrderState.CLOSED,
                 ))
 
-            # Verify Circuit Breaker after each fill
+        for closed_order in close_candidates:
+            # Durable CLOSED authority must exist before any process-local/accounting/risk promotion.
+            if not self._persist_order_with_readback(closed_order):
+                raise RuntimeError(f"CLOSE_LEDGER_READBACK_FAILED:{closed_order.order_id}")
+
+            del self.active_orders[closed_order.order_id]
+            self.completed_trades.append(closed_order)
+
+            self.current_equity += closed_order.realized_pnl
+            if self.current_equity > self.peak_equity:
+                self.peak_equity = self.current_equity
+            if closed_order.realized_pnl < 0:
+                self.daily_realized_loss += abs(closed_order.realized_pnl)
+
+            risk_gate.record_trade_outcome(closed_order.realized_pnl)
+
+            # Verify Circuit Breaker after each durably closed fill.
             self.check_circuit_breaker()
 
 if __name__ == "__main__":
@@ -219,11 +274,19 @@ if __name__ == "__main__":
     signals = alpha.scan_all_bars(enriched)
 
     dispatched = 0
+    durable_dispatches = 0
     for sig in signals[:5]:
         gate_res = gate.evaluate_pre_trade_gate(sig)
         if gate_res.passed:
             order = daemon.dispatch_order_with_self_healing(sig, gate_res)
             if order:
                 dispatched += 1
+                durable = daemon.read_durable_order(order.order_id)
+                if durable and durable["state"] == OrderState.FILLED.value:
+                    durable_dispatches += 1
 
-    print(f"Execution Daemon Smoke Test: Successfully dispatched {dispatched} bracketed orders to SQLite ledger.")
+    print(
+        "Execution Daemon Smoke Test: "
+        f"process-local dispatched={dispatched}; durable SQLite FILLED readbacks={durable_dispatches}; "
+        f"lifecycle_hold={daemon.lifecycle_hold_reason or 'READY'}."
+    )
