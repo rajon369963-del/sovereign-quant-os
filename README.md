@@ -1,3 +1,13 @@
+[![Agents: Supported](https://img.shields.io/badge/Agents-Supported-00f2fe.svg?style=flat-square)](./llms.txt)
+[![llms.txt: Active](https://img.shields.io/badge/llms.txt-Active-success.svg?style=flat-square)](./llms.txt)
+[![Hardware: M1 Optimized](https://img.shields.io/badge/Hardware-Apple%20Silicon%20M1-ff69b4.svg?style=flat-square)](./)
+[![Zero-Install Demo](https://img.shields.io/badge/Showcase-Live%20Simulator-blueviolet.svg?style=flat-square)](./showcase.html)
+
+<p align="center">
+  <img src="./assets/scorecard.svg" alt="Sovereign Quant OS Scorecard" width="100%"/>
+</p>
+
+
 # ⚡ Sovereign Quant OS (`sovereign-quant-os`)
 
 > **Failure-Oriented Execution Infrastructure & Algorithmic Trading Kernel in Python**  

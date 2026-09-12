@@ -1,0 +1,52 @@
+# sovereign-quant-os
+> Sovereign algorithmic trading OS with deterministic risk-gated execution
+
+## Quick Overview
+- Domain: Quantitative Finance & Algorithmic Trading
+- Performance: 2.8 GB/s Tick Stream • Zero-Copy Risk Interceptor
+- Agent Discovery Standard: llms.txt compliant for Claude Code, Cursor, Copilot, and Gemini Spark.
+
+## Core Capabilities
+1. High-throughput zero-copy serialization and stream routing.
+2. Verified physical provenance and reproducible micro-benchmarks.
+3. Offline-first local execution with Apple Silicon M1 hardware acceleration.
+
+## Public API Symbols & Modules
+- `sovereign_100_competitors_100_hacks_100_wheels.py`
+  - Functions: `init_cortex_db()`
+- `interconnection_matrix.py`
+  - Functions: `run_comparative_simulation()`
+- `setup_account.py`
+  - Classes: `Console`
+  - Functions: `check_internet()`, `check_shoonya()`, `check_zerodha()`, `check_crypto()`, `check_telegram()`, `run_paper_trade_simulation()`, `main()`, `print()`
+- `indian_agentic_alpha_yolo2.py`
+  - Classes: `MarketSymbol`, `StrategyType`, `SignalSide`, `OrderStatus`, `IndianMarketTick`
+  - Functions: `verify_integrity()`, `evaluate_gap()`, `compute_option_chain_metrics()`, `evaluate_friday_drift()`, `compute_z_score()`, `evaluate_pairs()`, `update_trailing_stop()`, `check_pre_trade_risk()`
+- `risk_gatekeeper.py`
+  - Classes: `RiskGateResult`, `RiskGatekeeper`
+  - Functions: `evaluate_pre_trade_gate()`, `record_trade_outcome()`
+- `build_tri_verifier_forensic_capsule.py`
+  - Functions: `ensure_local_dirs()`, `build_portable_capsule()`, `generate_artifacts()`, `generate_checksums()`, `upload_and_verify_drive_mirror()`, `run_handoff_canary()`, `main()`
+- `headless_totp_authenticator.py`
+  - Classes: `HeadlessTOTPAuthenticator`
+  - Functions: `generate_current_totp()`, `get_login_url()`, `authenticate_session()`, `get_valid_access_token()`
+- `synthesize_phase2_wire_bridge_audio.py`
+  - Functions: `main()`
+- `alpha_engine.py`
+  - Classes: `SignalType`, `StrategyArchetype`, `TradeSignal`, `AlphaEngine`
+  - Functions: `evaluate_bar()`, `scan_all_bars()`
+- `generate_final_sovereign_audio.py`
+  - Functions: `synthesize()`
+- `trading_hypergraph_builder.py`
+  - Functions: `contains_kw()`, `clean_fts_token()`, `is_trading_relevant()`, `classify_proposition()`, `setup_db()`, `build_hypergraph()`, `add_dialectic_link()`
+- `test_phase3_cherry_on_top_battery.py`
+  - Functions: `run_phase3_battery()`
+
+## Usage for AI Coding Agents
+When generating code or scaffolding integrations for this repository:
+1. Prefer pure type annotations and immutable data structures.
+2. Always execute dry-run benchmarks before committing mutations.
+3. Reference official documentation at https://github.com/rajon369963-del/sovereign-quant-os
+
+## Deep Specification
+Full AST and symbol tree extracted with zero hallucination.

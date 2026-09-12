@@ -1,0 +1,1516 @@
+{
+  "id": "c1b2105c-93ac-4b53-969c-de1fe70ef9a9",
+  "title": "ALGO TRADING LLM",
+  "created_at": "2026-09-11T05:51:38+00:00",
+  "last_viewed_at": "2026-09-11T05:59:07+00:00",
+  "modified_at": "2026-09-11T05:59:07+00:00",
+  "is_owner": true,
+  "role": "owner",
+  "sources": [
+    {
+      "type": "youtube",
+      "title": "047 - Tom Starke - A Systematic Process for Development of Systematic Trading Strategies",
+      "url": "https://www.youtube.com/watch?v=dlkCp36lf8A"
+    },
+    {
+      "type": "youtube",
+      "title": "10 AI Trading Tools on GitHub That Feel Illegal to Know (All Free)",
+      "url": "https://www.youtube.com/watch?v=HTECq3p9l94"
+    },
+    {
+      "type": "youtube",
+      "title": "100 Hours Testing Claude Code vs ChatGPT Codex (honest results)",
+      "url": "https://www.youtube.com/watch?v=RLjaUES9P8A"
+    },
+    {
+      "type": "youtube",
+      "title": "20+ Agents Now 100% Free For Everyone on Github",
+      "url": "https://www.youtube.com/watch?v=qZv6IFIkk6I"
+    },
+    {
+      "type": "youtube",
+      "title": "5 Best Algo Trading App In India 2026 🔥 Best Algo Trading Software India | Demat Account",
+      "url": "https://www.youtube.com/watch?v=6W_z9Agrfyk"
+    },
+    {
+      "type": "youtube",
+      "title": "A Conversation about getting Started in Algo Trading for Traders and Techie’s",
+      "url": "https://www.youtube.com/watch?v=1LGtNbPYNl0"
+    },
+    {
+      "type": "youtube",
+      "title": "AI + Algorithmic Trading | Mentorship Program | Learn to Build & Deploy Your Own Algo |",
+      "url": "https://www.youtube.com/watch?v=WM7tNExaE6w"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Agents For Trading (Free and Opensource)",
+      "url": "https://www.youtube.com/watch?v=tjY24JR8Cso"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Crypto Trading Bots: Which One Is Best?",
+      "url": "https://www.youtube.com/watch?v=wYbf5XwdcPI"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Models DOMINATE Crypto Trading on Hyperliquid",
+      "url": "https://www.youtube.com/watch?v=lGZvw8M6bu0"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Strategy Builder | Create Your Own Algo Trading Strategies | @TradeHull @tradesmartonline",
+      "url": "https://www.youtube.com/watch?v=NYKdJg-yKDg"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Trading Agent SONA Goes Live — Ship Day",
+      "url": "https://www.youtube.com/watch?v=KqH9yZ-HoYY"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Trading Bot Showdown: Gemini vs ChatGPT vs Claude - I Was Not Ready for This",
+      "url": "https://www.youtube.com/watch?v=k-RQbgC6ciw"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Trading Bot in VS Code – Custom Zerodha Kite MCP Server for Live Trading",
+      "url": "https://www.youtube.com/watch?v=Ir7pzk2dwtI"
+    },
+    {
+      "type": "youtube",
+      "title": "AI Trading Masterclass | How 14,000 Traders Use ChatGPT, Claude & Gemini to Win Consistently",
+      "url": "https://www.youtube.com/watch?v=avjF1I6-m2k"
+    },
+    {
+      "type": "youtube",
+      "title": "AI in Trading: Simple Explanation for Beginners (AI, ML, GenAI, LLM)",
+      "url": "https://www.youtube.com/watch?v=aCPJFFMubWU"
+    },
+    {
+      "type": "youtube",
+      "title": "Agentic AI for Trading: From Idea to Backtest Without the Chatbot Chaos",
+      "url": "https://www.youtube.com/watch?v=o13oRs8wjCE"
+    },
+    {
+      "type": "youtube",
+      "title": "Algo Trading Strategies: Mean Reversion (Complete Guide)",
+      "url": "https://www.youtube.com/watch?v=9yTrfhvJhUw"
+    },
+    {
+      "type": "youtube",
+      "title": "Algo Trading in 5 Mins: Your 1st Trade with Nubra Python SDK",
+      "url": "https://www.youtube.com/watch?v=6B4MtOdyGuw"
+    },
+    {
+      "type": "youtube",
+      "title": "Algo trading research with Google’s Antigravity and Gemini 3",
+      "url": "https://www.youtube.com/watch?v=ypFG006G4WQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Algorithmic Trading Complete Course – Full 22+ Hours Masterclass (Beginner to Expert) | FREE Course",
+      "url": "https://www.youtube.com/watch?v=b9EXshJM94g"
+    },
+    {
+      "type": "youtube",
+      "title": "Algorithmic Trading Complete Course – Full 22+ Hours Masterclass (Beginner to Expert) | FREE Course",
+      "url": "https://www.youtube.com/watch?v=b9EXshJM94g"
+    },
+    {
+      "type": "youtube",
+      "title": "Algorithmic Trading – Machine Learning & Quant Strategies Course with Python",
+      "url": "https://www.youtube.com/watch?v=9Y3yaoi9rUQ"
+    },
+    {
+      "type": "youtube",
+      "title": "All Steps to Creating a GREAT Trading Strategy with AI (TradingView + PineScript + ChatGPT o3)",
+      "url": "https://www.youtube.com/watch?v=PIc8yzBm4yo"
+    },
+    {
+      "type": "youtube",
+      "title": "Alpaca Python Algorithmic Trading Tutorial (Build a Trading Bot Step-by-Step)",
+      "url": "https://www.youtube.com/watch?v=6MShnMgA9JY"
+    },
+    {
+      "type": "youtube",
+      "title": "Ask Mia - Quant AI LLM",
+      "url": "https://www.youtube.com/watch?v=THWyjINqcCg"
+    },
+    {
+      "type": "youtube",
+      "title": "Automated AI Crypto Trading Bot – Using LLM, Coinbase API & Keywords AI (Episode 1)",
+      "url": "https://www.youtube.com/watch?v=iHRBI8xkyfk"
+    },
+    {
+      "type": "youtube",
+      "title": "Automated NinjaTrader Bot That Passes Prop Firms",
+      "url": "https://www.youtube.com/watch?v=pd9mPrtpfZ0"
+    },
+    {
+      "type": "youtube",
+      "title": "Beginner friendly guide on \"How Can Python be used in Algo-Trading\"",
+      "url": "https://www.youtube.com/watch?v=8Vo34TmnH8Q"
+    },
+    {
+      "type": "youtube",
+      "title": "Best AI for Trading (I Tested Them All)",
+      "url": "https://www.youtube.com/watch?v=10oYYJG-yOU"
+    },
+    {
+      "type": "youtube",
+      "title": "Best AI for Trading? ChatGPT vs Claude vs Gemini vs Grok (Backtested Results)",
+      "url": "https://www.youtube.com/watch?v=-PgqEclSioA"
+    },
+    {
+      "type": "youtube",
+      "title": "Best AI for Trading? ChatGPT vs Claude vs Gemini vs Grok 2026 | Which AI Wins? Complete Comparison",
+      "url": "https://www.youtube.com/watch?v=Zp2lttgzpNk"
+    },
+    {
+      "type": "youtube",
+      "title": "Beyond Strategies : Deep Dive into the Tech of Algorithmic Trading (Python, Databases, Cloud)",
+      "url": "https://www.youtube.com/watch?v=yjgHayQZqBk"
+    },
+    {
+      "type": "youtube",
+      "title": "Biggest Mistakes with AI Algo Trading @AlgoTradingWithKevinDavey",
+      "url": "https://www.youtube.com/watch?v=ScU2nU58Hh0"
+    },
+    {
+      "type": "youtube",
+      "title": "Bikin Robot trading Sendiri Tanpa Coding!?",
+      "url": "https://www.youtube.com/watch?v=4-3bu_IN-rQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Build & Backtest AI Trading Bot in Minutes - Python LLM Generated",
+      "url": "https://www.youtube.com/watch?v=o4czERIo1vs"
+    },
+    {
+      "type": "youtube",
+      "title": "Build Trade Scanners Using Claude AI",
+      "url": "https://www.youtube.com/watch?v=6loGecuU-9s"
+    },
+    {
+      "type": "youtube",
+      "title": "Build Trading Visualization using  Python and Claude Projects",
+      "url": "https://www.youtube.com/watch?v=cq4k_UDn0OM"
+    },
+    {
+      "type": "youtube",
+      "title": "Build a Self Learning AI Trading Agent with Hermes (Full Setup Guide)",
+      "url": "https://www.youtube.com/watch?v=VfiwA1YThSc"
+    },
+    {
+      "type": "youtube",
+      "title": "Build a Swing Trading Bot With No Coding – Full Beginner Guide",
+      "url": "https://www.youtube.com/watch?v=JgtnbNEkukw"
+    },
+    {
+      "type": "youtube",
+      "title": "Build a Trading Algo with AI | No Coding Required",
+      "url": "https://www.youtube.com/watch?v=V9Ra8klDzrM"
+    },
+    {
+      "type": "youtube",
+      "title": "Build a Trading Dashboard with ChatGPT | Nubra API Live Tutorial",
+      "url": "https://www.youtube.com/watch?v=g7cO9pbwmY4"
+    },
+    {
+      "type": "youtube",
+      "title": "Build an AI Trading MCP Server Using Dhan APIs (Step-by-Step)",
+      "url": "https://www.youtube.com/watch?v=WWasB5sN63k"
+    },
+    {
+      "type": "youtube",
+      "title": "Build an AI Trading Team with Open Source TradingAgents!",
+      "url": "https://www.youtube.com/watch?v=yPjjlPH46a8"
+    },
+    {
+      "type": "youtube",
+      "title": "Build your AI  Based Algo Trading Application using OpenAlgo MCP Server - Python Tutorial",
+      "url": "https://www.youtube.com/watch?v=3Z-vKIV0VJc"
+    },
+    {
+      "type": "youtube",
+      "title": "Build your AI  Based Algo Trading Application using OpenAlgo MCP Server - Python Tutorial",
+      "url": "https://www.youtube.com/watch?v=nFb7NuxLqdA"
+    },
+    {
+      "type": "youtube",
+      "title": "Build your own AI for algo-trading with Python",
+      "url": "https://www.youtube.com/watch?v=3GVt-RNltHU"
+    },
+    {
+      "type": "youtube",
+      "title": "Building an Agentic AI Trader: A Journey into Autonomous Trading",
+      "url": "https://www.youtube.com/watch?v=5S0GtOa8LjE"
+    },
+    {
+      "type": "youtube",
+      "title": "Building an Intelligent LLM Agent for QQQ Trading Automation",
+      "url": "https://www.youtube.com/watch?v=5KzkIiDC070"
+    },
+    {
+      "type": "youtube",
+      "title": "CLAUDE CONTROLS MY METATRADER 5 - Autonomous Bcktesting in Metatrader with Claude - ZenomTrader",
+      "url": "https://www.youtube.com/watch?v=wzmvpkbQozo"
+    },
+    {
+      "type": "youtube",
+      "title": "Can Claude AI Trade Crypto Alone? (Live $300 Experiment)",
+      "url": "https://www.youtube.com/watch?v=XrNPQhd9ggI"
+    },
+    {
+      "type": "youtube",
+      "title": "Chao Antigravity! Claude Code ahora es GRATIS y SIN Límites (Ollama) 💣",
+      "url": "https://www.youtube.com/watch?v=kPjOxHdp3OI"
+    },
+    {
+      "type": "youtube",
+      "title": "Charlie Munger: The BIG Problem with Quant Trading",
+      "url": "https://www.youtube.com/watch?v=BwT4dJ6y-2k"
+    },
+    {
+      "type": "youtube",
+      "title": "Chat GPT se kese Trading Robot banai MT5 per / How to Make trading robot with CHAT GPT easiest way",
+      "url": "https://www.youtube.com/watch?v=ipXqnNmDoRU"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT + Claude + Gemini + AI Trading Bot = Passive Income (Crypto Agent Secret Setup)",
+      "url": "https://www.youtube.com/watch?v=T-E01TzPU-s"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT Built a Trading Strategy in Minutes! 😱 | Zero Coding Algo Trading with AI",
+      "url": "https://www.youtube.com/watch?v=es9GEUmfjek"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT Plus vs Claude Pro vs Gemini Pro: The Best $20 AI Plan",
+      "url": "https://www.youtube.com/watch?v=w21XAsgoQ5o"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT and Algo Trading: Exploring Opportunities & Challenges | AI-Powered Trading Workshop 2024",
+      "url": "https://www.youtube.com/watch?v=RswCmPFn6TY"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT in Quant Finance Research and Trading",
+      "url": "https://www.youtube.com/watch?v=Rl8JDto2JYo"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT vs Claude vs Gemini: Which $20 AI Plan Is Worth It?",
+      "url": "https://www.youtube.com/watch?v=ftNYhk3RQ-M"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT vs Claude vs Gemini: Which AI Is Best for Your Business?",
+      "url": "https://www.youtube.com/watch?v=fAeJ4nENOzo"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT vs Gemini vs Claude ¿Cuál es mejor en 2026? 🤖",
+      "url": "https://www.youtube.com/watch?v=ek1D7ReIbB4"
+    },
+    {
+      "type": "youtube",
+      "title": "ChatGPT vs Gemini vs Claude: cuál pagaría en 2026",
+      "url": "https://www.youtube.com/watch?v=Zim8hNQadqc"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude + IBKR API: Complete AI Trading Bot Guide",
+      "url": "https://www.youtube.com/watch?v=UgWQtQ3MEVE"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude + IBKR API: Complete AI Trading Bot Guide",
+      "url": "https://www.youtube.com/watch?v=UgWQtQ3MEVE"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI + Zerodha = The Portfolio Tool I Always Wanted",
+      "url": "https://www.youtube.com/watch?v=E8ysICkVRYA"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI + Zerodha Kite MCP: Build Portfolios & Fetch Live Options Data #aitrading #zerodhakite",
+      "url": "https://www.youtube.com/watch?v=MiBzyZwAnyk"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI Trading Setup in Tamil | Share Market AI Bot",
+      "url": "https://www.youtube.com/watch?v=KUB4MwlNqWE"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI can NOW Automatically Build and Improve Your TradingView Strategies (while you sleep)",
+      "url": "https://www.youtube.com/watch?v=77ikjQjdGFg"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI can NOW Automatically Build and Improve Your TradingView Strategies (while you sleep)",
+      "url": "https://www.youtube.com/watch?v=77ikjQjdGFg"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI or ChatGPT? I Let Both AIs Trade Live and Here's What Happened",
+      "url": "https://www.youtube.com/watch?v=pTCF8J-23Fg"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI or ChatGPT? I Let Both AIs Trade Live and Here's What Happened",
+      "url": "https://www.youtube.com/watch?v=pTCF8J-23Fg"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude AI trading bot + 22 Hours = 0.858 Ethereum (Actual results)",
+      "url": "https://www.youtube.com/watch?v=DMqPLd8NtRg"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Code Just Changed the Way I Trade FOREVER! (TRADINGVIEW)",
+      "url": "https://www.youtube.com/watch?v=vKMp1HhBk-Y"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Code Just Changed the Way I Trade FOREVER! (TRADINGVIEW)",
+      "url": "https://www.youtube.com/watch?v=vKMp1HhBk-Y"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Code just got 10X Better (Codex + Gemini)",
+      "url": "https://www.youtube.com/watch?v=ETvz1qhQDXE"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Code vs Codex vs Gemini: Which AI Builds Trading Strategies Best in RealTest",
+      "url": "https://www.youtube.com/watch?v=iMHpqpdEN8M"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Just Changed the Stock Market Forever! (Tutorial)",
+      "url": "https://www.youtube.com/watch?v=lH5wrfNwL3k"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Just Changed the Stock Market Forever! (Tutorial)",
+      "url": "https://www.youtube.com/watch?v=lH5wrfNwL3k"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude Opus 5 + MCP = New King of Algo Trading!",
+      "url": "https://www.youtube.com/watch?v=Dbof8VUxP9E"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude for Algo Trading: Free Live Webinar",
+      "url": "https://www.youtube.com/watch?v=DIQdd21CoIQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude vs ChatGPT — Which One’s Actually Better?",
+      "url": "https://www.youtube.com/watch?v=8sFpjgUgk6Y"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude vs ChatGPT: I Asked Both To Build A Trading Bot - Who Won? (INSANE RESULTS)",
+      "url": "https://www.youtube.com/watch?v=dnL0dS0BcVc"
+    },
+    {
+      "type": "youtube",
+      "title": "Claude’s New Trading Agent Is Insane! (Tutorial)",
+      "url": "https://www.youtube.com/watch?v=x2pY9kI0zBY"
+    },
+    {
+      "type": "youtube",
+      "title": "Coding शिवाय Algo Trading कशी करायची? | Strategy ते Deployment",
+      "url": "https://www.youtube.com/watch?v=0GJTBmUpwjs"
+    },
+    {
+      "type": "youtube",
+      "title": "Comment connecter Claude à Trading View (c'est incroyable)",
+      "url": "https://www.youtube.com/watch?v=cPceiD1PWrI"
+    },
+    {
+      "type": "youtube",
+      "title": "Common AI Trading Myths - Watch Out!",
+      "url": "https://www.youtube.com/watch?v=BjQlx6g5_rA"
+    },
+    {
+      "type": "youtube",
+      "title": "Connect ChatGPT, Claude, Gemini & Grok to MetaTrader 5 (Full AI Workflow)",
+      "url": "https://www.youtube.com/watch?v=ewAO8qfHz-4"
+    },
+    {
+      "type": "youtube",
+      "title": "Copy My EXACT Claude AI Prompt for MT5 Trading Bots",
+      "url": "https://www.youtube.com/watch?v=miIyWxN0b6g"
+    },
+    {
+      "type": "youtube",
+      "title": "Copy My Prompts: Claude AI Codes a 5-Year Profitable MetaTrader 5 EA (Step-by-Step)",
+      "url": "https://www.youtube.com/watch?v=mGG0nu8A9FU"
+    },
+    {
+      "type": "youtube",
+      "title": "Creé un Bot con Claude… y esto pasó",
+      "url": "https://www.youtube.com/watch?v=28XJPdNmO10"
+    },
+    {
+      "type": "youtube",
+      "title": "Créer un Robot de Trading Automatique avec l'IA (ChatGPT vs Claude vs Gemini)",
+      "url": "https://www.youtube.com/watch?v=E3vwSj29Nso"
+    },
+    {
+      "type": "youtube",
+      "title": "Cómo Usar CLAUDE Para Hacer Trading (estrategia +530.93%)",
+      "url": "https://www.youtube.com/watch?v=CwpmPj8ZRiw"
+    },
+    {
+      "type": "youtube",
+      "title": "DAY 1 | Python & AI for Algorithmic Trading Bootcamp",
+      "url": "https://www.youtube.com/watch?v=ZGFUQ22WyRc"
+    },
+    {
+      "type": "youtube",
+      "title": "DAY 2 | Python & AI for Algorithmic Trading Bootcamp",
+      "url": "https://www.youtube.com/watch?v=-OdK2i4KZLQ"
+    },
+    {
+      "type": "youtube",
+      "title": "DeepSeek AI Trading Strategy: Insane 1,452% Profit (No-Code)",
+      "url": "https://www.youtube.com/watch?v=soMfoYUrHqU"
+    },
+    {
+      "type": "youtube",
+      "title": "Do Large Language Models Amplify or Reduce Market Tail Risk",
+      "url": "https://www.youtube.com/watch?v=L6NMEtgNmLk"
+    },
+    {
+      "type": "youtube",
+      "title": "Do Trading Bots Really Work? I Gave a Trading Bot $55000 to Trade",
+      "url": "https://www.youtube.com/watch?v=V7hKgdBu_Wk"
+    },
+    {
+      "type": "youtube",
+      "title": "Everything I've Learned Trading With Claude In 18 Minutes",
+      "url": "https://www.youtube.com/watch?v=CPkrCoIbBIA"
+    },
+    {
+      "type": "youtube",
+      "title": "FinRL: A Deep Reinforcement Learning Framework for Algo Trading in India (Beginner's Guide)",
+      "url": "https://www.youtube.com/watch?v=wNietuyStoI"
+    },
+    {
+      "type": "youtube",
+      "title": "Finally FULL Portfolio Trade Automation with AI - Claude MCP Routines (IT WORKS)",
+      "url": "https://www.youtube.com/watch?v=fdGCGXcDByk"
+    },
+    {
+      "type": "youtube",
+      "title": "Financial Engineering for Algo Trading: Syntax | Variable | Loops | Functions & Classes",
+      "url": "https://www.youtube.com/watch?v=iVhuo9BNmcM"
+    },
+    {
+      "type": "youtube",
+      "title": "Find Chart Patterns With AI (ChatGPT o3, Claude Opus, Gemini...)",
+      "url": "https://www.youtube.com/watch?v=Jve0vgzqjCI"
+    },
+    {
+      "type": "youtube",
+      "title": "From Manual Trading to Algo Trading | 8-Year Trading Journey of Chintan Jaggi w/ @deltaexchange",
+      "url": "https://www.youtube.com/watch?v=Yi1JEFbyEv8"
+    },
+    {
+      "type": "youtube",
+      "title": "Full Polymarket Bot Build | Claude Code Tutorial",
+      "url": "https://www.youtube.com/watch?v=-F0dZ2GxSuA"
+    },
+    {
+      "type": "youtube",
+      "title": "GPT OSS tested: Is it good for algo trading strategies? (+ fully local installation)",
+      "url": "https://www.youtube.com/watch?v=sRLQ22FL5fg"
+    },
+    {
+      "type": "youtube",
+      "title": "GPT-5 tested: Is it good for algo trading strategies? (surprising results!)",
+      "url": "https://www.youtube.com/watch?v=b2MQ-4To6H0"
+    },
+    {
+      "type": "youtube",
+      "title": "Gemini AI Built Me a €50,000 Trading Bot in 60 Seconds (Copy my Prompt)",
+      "url": "https://www.youtube.com/watch?v=vHZru3bekW4"
+    },
+    {
+      "type": "youtube",
+      "title": "Gemini Launches Agentic Trading, Lets ChatGPT and Claude Place Orders",
+      "url": "https://www.youtube.com/watch?v=wuUeZUb1_ag"
+    },
+    {
+      "type": "youtube",
+      "title": "Gemini vs. ChatGPT vs. Claude: Best AI for Stock Market Analysis",
+      "url": "https://www.youtube.com/watch?v=KmUnYuVT5CY"
+    },
+    {
+      "type": "youtube",
+      "title": "GenAI & Automated Trading Summit | Algorithmic Trading on MT5 & TradingView",
+      "url": "https://www.youtube.com/watch?v=H_C9P-nAuKc"
+    },
+    {
+      "type": "youtube",
+      "title": "GenAI for Alpha Discovery: LLMs Leveling the Quant Trading Field for Small Desks",
+      "url": "https://www.youtube.com/watch?v=kH5W7NOGhsI"
+    },
+    {
+      "type": "youtube",
+      "title": "Grok 4 tested: Is it good for algo-trading strategies?",
+      "url": "https://www.youtube.com/watch?v=-ghI3qNowK0"
+    },
+    {
+      "type": "youtube",
+      "title": "HOW TO CODE YOUR ALGO WITH AI - PART 6 OF ALGO TRADING SERIES @zerodhaonline @DhanHQ @OpenAI",
+      "url": "https://www.youtube.com/watch?v=ARdfTAS2di4"
+    },
+    {
+      "type": "youtube",
+      "title": "HOW TO MAKE TRADING BOT with AI Chat Gpt, Claude, Gemini ( NO SKILLS NEEDED)",
+      "url": "https://www.youtube.com/watch?v=LLSNFUnJ3dQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Harnessing Sentiment and WallStBets for Algorithmic Trading - Plug and Play Alternative Data",
+      "url": "https://www.youtube.com/watch?v=h1COgqajbt8"
+    },
+    {
+      "type": "youtube",
+      "title": "How Can Large Language Models Improve Trading? | Intro by Ernest Chan & Hamlet Medina",
+      "url": "https://www.youtube.com/watch?v=QR7l_GcZs98"
+    },
+    {
+      "type": "youtube",
+      "title": "How I Adapted ChatGPT's Transformers Networks for Trading Prediction (Free Python Code)",
+      "url": "https://www.youtube.com/watch?v=TT_D-4z-4zY"
+    },
+    {
+      "type": "youtube",
+      "title": "How I Built a Profitable Trading Strategy Using OpenClaw AI",
+      "url": "https://www.youtube.com/watch?v=yg6MmR_9ed8"
+    },
+    {
+      "type": "youtube",
+      "title": "How I Built a Self-Healing Trading Bot That Fixes Its Own Losses (OpenClaw Tutorial)",
+      "url": "https://www.youtube.com/watch?v=btG5YpvPkwE"
+    },
+    {
+      "type": "youtube",
+      "title": "How I Built an LLM Trading Agent",
+      "url": "https://www.youtube.com/watch?v=PDMgb95JucQ"
+    },
+    {
+      "type": "youtube",
+      "title": "How I Develop Trading Strategies | Permutation Tests and Trading Strategy Development with Python",
+      "url": "https://www.youtube.com/watch?v=NLBXgSmRBgU"
+    },
+    {
+      "type": "youtube",
+      "title": "How I do AI Automated Trading System Research",
+      "url": "https://www.youtube.com/watch?v=r1obOyirccM"
+    },
+    {
+      "type": "youtube",
+      "title": "How Retail Traders Really Use Claude, ChatGPT, and AI Agents To Trade In 2026",
+      "url": "https://www.youtube.com/watch?v=IKrZZOMxA6M"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Actually Build a Trading Bot With Claude Code (Fully Automated)",
+      "url": "https://www.youtube.com/watch?v=y_bsjZThP0o"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Actually Build a Trading Bot With Claude Code (Fully Automated)",
+      "url": "https://www.youtube.com/watch?v=y_bsjZThP0o"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Actually Use Claude Code for Trading Strategies (Like a Quant)",
+      "url": "https://www.youtube.com/watch?v=EUSXhJNwRqI"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Build A Polymarket Trading Bot (With OpenClaw)",
+      "url": "https://www.youtube.com/watch?v=i3ZlLmYn584"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Build A Self-Improving AI Trading Agent (Insanely Cool)",
+      "url": "https://www.youtube.com/watch?v=6njREUQAFdg"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Build AI Trading Agent on Hyperliquid",
+      "url": "https://www.youtube.com/watch?v=rKcM2XlXB18"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Build Your Own Claude AI Trading Assistant (Easy For Beginners)",
+      "url": "https://www.youtube.com/watch?v=mssPkDuQnmY"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Build a Futures Trading Bot with AI in TradingView!",
+      "url": "https://www.youtube.com/watch?v=2PV1Yw1Y5S8"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Connect Claude + TradingView (Actually Insane)",
+      "url": "https://www.youtube.com/watch?v=MIvtj0VCHTY"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Connect Claude to Trading View (Insanely Cool)",
+      "url": "https://www.youtube.com/watch?v=vIX6ztULs4U"
+    },
+    {
+      "type": "youtube",
+      "title": "How To Connect Claude to Trading View (Insanely Cool)",
+      "url": "https://www.youtube.com/watch?v=vIX6ztULs4U"
+    },
+    {
+      "type": "youtube",
+      "title": "How quant trading firms are using AI",
+      "url": "https://www.youtube.com/watch?v=8QnsPpK-FTM"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Actually BUILD a CLAUDE TRADING BOT (10 Minutes)",
+      "url": "https://www.youtube.com/watch?v=aI34O-ZA0VY"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Build a WhatsApp AI Agent Using Claude, ChatGPT or Gemini - No Code, No Meta Setup",
+      "url": "https://www.youtube.com/watch?v=QAm9CE2WaFI"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Build an AI Stock Trading Bot with Interactive Brokers",
+      "url": "https://www.youtube.com/watch?v=ogZmSXD_56U"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Build an AI Trading Agent on Robinhood (With Claude)",
+      "url": "https://www.youtube.com/watch?v=w4QrQdulH0g"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Build an AI Trading Bot in Python",
+      "url": "https://www.youtube.com/watch?v=_87QHZXOOKA"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Connect ChatGPT & Claude to Webull (Agentic Trading)",
+      "url": "https://www.youtube.com/watch?v=6YsqakFEvh0"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Create a Powerful MT5 Trading Bot | MT5 EA Tutorial",
+      "url": "https://www.youtube.com/watch?v=S53df2cWsQs"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Lose Money Trading Options | Dr. Euan Sinclair @ Algo Trading Conference by Quantinsti",
+      "url": "https://www.youtube.com/watch?v=LYOofrrRSiE"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Trade Using AI TRADING BOT Without Coding Using Codex & MetaTrader 5 | Algo Trading",
+      "url": "https://www.youtube.com/watch?v=XdQToWl-UHA"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Trade Using AI TRADING BOT Without Coding Using Codex & MetaTrader 5 | Algo Trading",
+      "url": "https://www.youtube.com/watch?v=XdQToWl-UHA"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Turn Any TradingView Indicator into a Profitable Strategy with ChatGPT! (Step-by-Step Guide)",
+      "url": "https://www.youtube.com/watch?v=GR-D8nqzJvI"
+    },
+    {
+      "type": "youtube",
+      "title": "How to Use FinGPT for Algo Trading in India (Beginner's Guide)",
+      "url": "https://www.youtube.com/watch?v=VxkutuJhxVI"
+    },
+    {
+      "type": "youtube",
+      "title": "How to build an Agentic bot on Robinhood (Real time)",
+      "url": "https://www.youtube.com/watch?v=sTL04B2HZlI"
+    },
+    {
+      "type": "youtube",
+      "title": "How to build an Algo Trading PC? - High Frequency Trading Explained | TheMVP",
+      "url": "https://www.youtube.com/watch?v=g1ftH6p5OeA"
+    },
+    {
+      "type": "youtube",
+      "title": "How to place orders through APIs in Algo Trading? – Episode 6",
+      "url": "https://www.youtube.com/watch?v=J8pqOmjuZOs"
+    },
+    {
+      "type": "youtube",
+      "title": "I Backtested 21 Years of Market Data in 6 Seconds with ChatGPT: This Changes Everything",
+      "url": "https://www.youtube.com/watch?v=sYRCzSbvOpQ"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built An Entire AI Trading Team With Claude Code in 14 min",
+      "url": "https://www.youtube.com/watch?v=HfEu7XPUnAU"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built a Bot to Trade Based on Reddit Posts",
+      "url": "https://www.youtube.com/watch?v=DVVVvlK2O_k"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built a Profitable AI Agent Day Trader - Here’s How (n8n)",
+      "url": "https://www.youtube.com/watch?v=rDf3TfHlGmk"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built a ₹1 Lakh AI Trading System Using Codex CLI + TradingView MCP (Part 2)",
+      "url": "https://www.youtube.com/watch?v=ohaQugBiTNk"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an AI Agent That Day Trades Crypto Using Claude Code (Tutorial)",
+      "url": "https://www.youtube.com/watch?v=DkT6UzYX_UA"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an AI Agent Trading Bot for Day Trading Crypto — Full Tutorial & Results",
+      "url": "https://www.youtube.com/watch?v=ZLnCXGZyuvE"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an AI Bot That Reads Market News and Predicts Sentiment Instantly [Free Python Script]",
+      "url": "https://www.youtube.com/watch?v=iW8NtsjTfN0"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an AI Crypto Trading Bot With Claude Fable 5 (Full Guide)",
+      "url": "https://www.youtube.com/watch?v=dWImoIfHujM"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an INSANELY Profitable AI Trading Bot (Full Guide)",
+      "url": "https://www.youtube.com/watch?v=86AlV6174KI"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an INSANELY Profitable AI Trading Bot (Full Guide)",
+      "url": "https://www.youtube.com/watch?v=86AlV6174KI"
+    },
+    {
+      "type": "youtube",
+      "title": "I Built an Open-Source Multi-Agent AI for the Indian Stock Market (NSE)",
+      "url": "https://www.youtube.com/watch?v=engyTBg7iK8"
+    },
+    {
+      "type": "youtube",
+      "title": "I Coded fxalexg’s Trading Strategy. Does It Work?",
+      "url": "https://www.youtube.com/watch?v=nFIJ0z8_01w"
+    },
+    {
+      "type": "youtube",
+      "title": "I Connected AI to My Charts — It Reads Candles and Trades for Me",
+      "url": "https://www.youtube.com/watch?v=4z1I0u1UnXQ"
+    },
+    {
+      "type": "youtube",
+      "title": "I Connected AI to My Charts — It Reads Candles and Trades for Me",
+      "url": "https://www.youtube.com/watch?v=4z1I0u1UnXQ"
+    },
+    {
+      "type": "youtube",
+      "title": "I Connected Claude AI to MetaTrader 5 Using an MCP Server",
+      "url": "https://www.youtube.com/watch?v=f8k7rOGywyE"
+    },
+    {
+      "type": "youtube",
+      "title": "I Connected Claude to Zerodha and Let AI Trade For Me — Full Swing Trading Automation",
+      "url": "https://www.youtube.com/watch?v=P6PyQmMzCts"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave An AI Bot $100k To Trade Futures",
+      "url": "https://www.youtube.com/watch?v=PBLp1bvRYMs"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave Claude AI Full Access to TradingView… The Scalping Strategy It Built Was Insane",
+      "url": "https://www.youtube.com/watch?v=zJf5B5haBjc"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave Claude AI Full Access to TradingView… The Scalping Strategy It Built Was Insane",
+      "url": "https://www.youtube.com/watch?v=zJf5B5haBjc"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave Claude AI Trading Bot 22 Hours to Trade — What Can It Do?",
+      "url": "https://www.youtube.com/watch?v=y_m7FzmldvU"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave Kimi and Claude AI Trading Bots Real Money… INSANE Results",
+      "url": "https://www.youtube.com/watch?v=7rVZZyDq2XQ"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave My AI Trading Bot $3000 | Building an AI trading bot from scratch",
+      "url": "https://www.youtube.com/watch?v=857ejsBc3IA"
+    },
+    {
+      "type": "youtube",
+      "title": "I Gave My Terrible Trading Bot $10,000 to Trade Stocks",
+      "url": "https://www.youtube.com/watch?v=zh008MNMOlo"
+    },
+    {
+      "type": "youtube",
+      "title": "I Got Claude, ChatGPT and Gemini to Reveal the One Strategy They All Trust",
+      "url": "https://www.youtube.com/watch?v=FY6BL0Nd-nY"
+    },
+    {
+      "type": "youtube",
+      "title": "I Let Claude AI Trade For Me | Here's What Happened",
+      "url": "https://www.youtube.com/watch?v=ysN45Dn2LS0"
+    },
+    {
+      "type": "youtube",
+      "title": "I Let Claude AI Trade For Me | Here's What Happened",
+      "url": "https://www.youtube.com/watch?v=ysN45Dn2LS0"
+    },
+    {
+      "type": "youtube",
+      "title": "I Let Claude AI Trade Real Money | Here's What Happened",
+      "url": "https://www.youtube.com/watch?v=tkAq6g2Gjz4"
+    },
+    {
+      "type": "youtube",
+      "title": "I Let Claude Fable 5 Test 143,000 Trading Strategies (HERE ARE THE BEST)",
+      "url": "https://www.youtube.com/watch?v=VX9RSOjHVlA"
+    },
+    {
+      "type": "youtube",
+      "title": "I Let Claude Fable 5 Test 143,000 Trading Strategies (HERE ARE THE BEST)",
+      "url": "https://www.youtube.com/watch?v=VX9RSOjHVlA"
+    },
+    {
+      "type": "youtube",
+      "title": "I Let Claude Use a Prop Firm Loophole (Feels Illegal)",
+      "url": "https://www.youtube.com/watch?v=KbzMNFtGeAQ"
+    },
+    {
+      "type": "youtube",
+      "title": "I Made Claude Write Its Own Agent Prompts — 5 Trading Strategies Built Automatically",
+      "url": "https://www.youtube.com/watch?v=UYXfoEt8MLk"
+    },
+    {
+      "type": "youtube",
+      "title": "I Made My Own AI Trading Bots & Indicators - Copy This (Free & Easy)",
+      "url": "https://www.youtube.com/watch?v=4jlAz--4YFU"
+    },
+    {
+      "type": "youtube",
+      "title": "I Placed a Live Trades  🤯 (AI + Claude Code Setup)",
+      "url": "https://www.youtube.com/watch?v=ong0ykYxWV0"
+    },
+    {
+      "type": "youtube",
+      "title": "I Re-Created A Quant Trading Strategy With Claude Code (Insanely Cool)",
+      "url": "https://www.youtube.com/watch?v=ZVMTeDBmSrI"
+    },
+    {
+      "type": "youtube",
+      "title": "I Run A Tournament To See Which Ai Make More Profit In Forex Trading",
+      "url": "https://www.youtube.com/watch?v=s5k9T2USkeg"
+    },
+    {
+      "type": "youtube",
+      "title": "I Tested Claude AI Trading Signals – Shocking Results!",
+      "url": "https://www.youtube.com/watch?v=xtoXjYwy5ZM"
+    },
+    {
+      "type": "youtube",
+      "title": "I Tested Gemini vs Claude vs ChatGPT So You Don't Have To",
+      "url": "https://www.youtube.com/watch?v=18mkropUvl0"
+    },
+    {
+      "type": "youtube",
+      "title": "I Tested Letting Claude Trade For A Month and Made $102k",
+      "url": "https://www.youtube.com/watch?v=RetsRS5u-8Q"
+    },
+    {
+      "type": "youtube",
+      "title": "I Tested Letting Claude Trade For A Month and Made $102k",
+      "url": "https://www.youtube.com/watch?v=RetsRS5u-8Q"
+    },
+    {
+      "type": "youtube",
+      "title": "I Tested a Claude AI Trading Bot with Real Money: Live Performance Breakdown",
+      "url": "https://www.youtube.com/watch?v=JV7VsomoOmk"
+    },
+    {
+      "type": "youtube",
+      "title": "I Told Claude to Make Me As Much Money as Possible Trading (Insane Results)",
+      "url": "https://www.youtube.com/watch?v=wYuP1QFZ0Bg"
+    },
+    {
+      "type": "youtube",
+      "title": "I Tried ChatGPT vs Gemini's Trading Signals",
+      "url": "https://www.youtube.com/watch?v=51VpqyydVDk"
+    },
+    {
+      "type": "youtube",
+      "title": "I Turned Claude AI Into a 24/7 Trader | TradingView + AI Strategy That Actually Works",
+      "url": "https://www.youtube.com/watch?v=B2AcrtulKu4"
+    },
+    {
+      "type": "youtube",
+      "title": "I Turned Claude AI Into a 24/7 Trader | TradingView + AI Strategy That Actually Works",
+      "url": "https://www.youtube.com/watch?v=B2AcrtulKu4"
+    },
+    {
+      "type": "youtube",
+      "title": "I Turned Claude Into a 24/7 Trader",
+      "url": "https://www.youtube.com/watch?v=6MC1XqZSltw"
+    },
+    {
+      "type": "youtube",
+      "title": "I Turned Claude Into a 24/7 Trader",
+      "url": "https://www.youtube.com/watch?v=6MC1XqZSltw"
+    },
+    {
+      "type": "youtube",
+      "title": "I Used Claude AI to Build a Binary Options Indicator — Then Automated It With Autobot",
+      "url": "https://www.youtube.com/watch?v=FC8RbgathOg"
+    },
+    {
+      "type": "youtube",
+      "title": "I made an AI learn Stock Market Patterns",
+      "url": "https://www.youtube.com/watch?v=0yNfaixWyf4"
+    },
+    {
+      "type": "youtube",
+      "title": "I tried coding a LLM Crypto Trading Bot (to retire early $$$)",
+      "url": "https://www.youtube.com/watch?v=cYqNBY7i0hI"
+    },
+    {
+      "type": "youtube",
+      "title": "I tried coding an AI Crypto Trading Bot (here's how much it made)",
+      "url": "https://www.youtube.com/watch?v=34ZO6Y6P7CU"
+    },
+    {
+      "type": "youtube",
+      "title": "If I Started Algo Trading in 2025, This Is What I'd do",
+      "url": "https://www.youtube.com/watch?v=1GSKa5_xKVQ"
+    },
+    {
+      "type": "youtube",
+      "title": "If I Started Algo Trading in 2026, This Is What I'd do",
+      "url": "https://www.youtube.com/watch?v=1l7xWU-BU3w"
+    },
+    {
+      "type": "youtube",
+      "title": "Inside SONA’s Brain: Multi-Agent LLM Design for Real-Time Market Analysis",
+      "url": "https://www.youtube.com/watch?v=ggrmaO7nys8"
+    },
+    {
+      "type": "youtube",
+      "title": "Inside a Real High-Frequency Trading System | HFT Architecture",
+      "url": "https://www.youtube.com/watch?v=iwRaNYa8yTw"
+    },
+    {
+      "type": "youtube",
+      "title": "Install Ollama, Deepseek, Qwen & Msty in 10 Minutes : AI Enhanced Trading Strategy Building - Part 1",
+      "url": "https://www.youtube.com/watch?v=efd-wfm7A_o"
+    },
+    {
+      "type": "youtube",
+      "title": "Integrating AI (LLM) with OpenAlgo and Better Chatbot UI",
+      "url": "https://www.youtube.com/watch?v=ZXbwDik5NOI"
+    },
+    {
+      "type": "youtube",
+      "title": "Introducing: Dhan MCP For AI Agents & Agent-Native Trading Workflows",
+      "url": "https://www.youtube.com/watch?v=eEm6T3ydygM"
+    },
+    {
+      "type": "youtube",
+      "title": "Introducing: Dhan MCP For AI Agents & Agent-Native Trading Workflows",
+      "url": "https://www.youtube.com/watch?v=eEm6T3ydygM"
+    },
+    {
+      "type": "youtube",
+      "title": "Introducing: Dhan MCP For AI Agents & Agent-Native Trading Workflows",
+      "url": "https://www.youtube.com/watch?v=eEm6T3ydygM"
+    },
+    {
+      "type": "youtube",
+      "title": "Introducing: Dhan Skills for Agentic Coding",
+      "url": "https://www.youtube.com/watch?v=RcWymUQZWWM"
+    },
+    {
+      "type": "youtube",
+      "title": "Introduction to Quantitative Trading",
+      "url": "https://www.youtube.com/watch?v=mkzcntzznMc"
+    },
+    {
+      "type": "youtube",
+      "title": "Is it really TRUE that ORDERFLOW trading cannot be AUTOMATED?",
+      "url": "https://www.youtube.com/watch?v=-2-vE-EbqBI"
+    },
+    {
+      "type": "youtube",
+      "title": "J'ai codé des bot de trading , et ca c'est pas passé comme prévu.",
+      "url": "https://www.youtube.com/watch?v=3tlhWmNTXKs"
+    },
+    {
+      "type": "youtube",
+      "title": "Kimi K2.6 + Hermes: Build Your Own Automated AI Trading Bot a Step-by-Step Guide",
+      "url": "https://www.youtube.com/watch?v=CXMalvS5CG8"
+    },
+    {
+      "type": "youtube",
+      "title": "Kronos GitHub Walkthrough for Quantitative Trading AI",
+      "url": "https://www.youtube.com/watch?v=ym2494IJ3V0"
+    },
+    {
+      "type": "youtube",
+      "title": "LLM et trading algo : ce qu'ils font bien (et ce qu'ils ratent)",
+      "url": "https://www.youtube.com/watch?v=p3fgcNeWojA"
+    },
+    {
+      "type": "youtube",
+      "title": "LSTM + LLM AI Trading System | No Entry Until Confirmed Breakout",
+      "url": "https://www.youtube.com/watch?v=Efu31ZqYlnY"
+    },
+    {
+      "type": "youtube",
+      "title": "LSTM Top Mistake In Price Movement Predictions For Trading",
+      "url": "https://www.youtube.com/watch?v=lhrCz6t7rmQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Learn Algorithmic Trading [Full Course] | Algorithmic Trading Workshop 2023",
+      "url": "https://www.youtube.com/watch?v=u3aJCJSunWA"
+    },
+    {
+      "type": "youtube",
+      "title": "Learn Big Data and Natural Language Processing (NLP) | Transforming trading",
+      "url": "https://www.youtube.com/watch?v=IUkF9JUrS1Y"
+    },
+    {
+      "type": "youtube",
+      "title": "Let's Build a Quant Trading Strategy: Part 1 - ML Model in PyTorch",
+      "url": "https://www.youtube.com/watch?v=iWSDY8_5N3U"
+    },
+    {
+      "type": "youtube",
+      "title": "Live Trading With AI! 🤖 How to Use ChatGPT, Claude & Gemini Like a Pro #Aitrading #Livetrading",
+      "url": "https://www.youtube.com/watch?v=AvNeYJfTV6w"
+    },
+    {
+      "type": "youtube",
+      "title": "MASTER AI Trading in 70 Minutes (Full Claude + TradingView Course)",
+      "url": "https://www.youtube.com/watch?v=54i7wfbuCQA"
+    },
+    {
+      "type": "youtube",
+      "title": "MASTER AI Trading in 70 Minutes (Full Claude + TradingView Course)",
+      "url": "https://www.youtube.com/watch?v=54i7wfbuCQA"
+    },
+    {
+      "type": "youtube",
+      "title": "MT4 Cent Account Trading Bot Review by Google Gemini, Claude Sonnet, DeepSeek and ChatGPT | EA Trade",
+      "url": "https://www.youtube.com/watch?v=914ez1Kqdtg"
+    },
+    {
+      "type": "youtube",
+      "title": "Market Orders Banned in Algo Trading? 🤯 | SEBI Update + Execution Setup Guide",
+      "url": "https://www.youtube.com/watch?v=_jeL7sf14Jc"
+    },
+    {
+      "type": "youtube",
+      "title": "Master 85% Claude AI in just 23 mints | Claude AI Masterclass 2026 اردو/हिंदी",
+      "url": "https://www.youtube.com/watch?v=EIlKrufU5ac"
+    },
+    {
+      "type": "youtube",
+      "title": "Millionaire Trader developed his QUANT TRADING ALGORITHM",
+      "url": "https://www.youtube.com/watch?v=T3sCLOvsdus"
+    },
+    {
+      "type": "youtube",
+      "title": "Moving average Algo in 20 mins (no coding required)",
+      "url": "https://www.youtube.com/watch?v=G6Eju264KgA"
+    },
+    {
+      "type": "youtube",
+      "title": "NEW Claude Opus 4.6 AI Good For TradingView Strategies? (Backtesting Engine) (watch ASAP)",
+      "url": "https://www.youtube.com/watch?v=Zepx8mARre0"
+    },
+    {
+      "type": "youtube",
+      "title": "OpenAlgo MCP   Your First Trading Agent - Talk to your Trading Account",
+      "url": "https://www.youtube.com/watch?v=4RR0pnP7SLA"
+    },
+    {
+      "type": "youtube",
+      "title": "OpenAlgo MCP  - Your First Trading Agent - Talk to your Trading Account",
+      "url": "https://www.youtube.com/watch?v=6J8wYZYVUs4"
+    },
+    {
+      "type": "youtube",
+      "title": "OpenAlgo MCP Revisited with Better ChatBot UI",
+      "url": "https://www.youtube.com/watch?v=sPvXnfXbvaw"
+    },
+    {
+      "type": "youtube",
+      "title": "Options Trading with Ai Using Low Capital | My Live Results ✅",
+      "url": "https://www.youtube.com/watch?v=c-_qY55_J4k"
+    },
+    {
+      "type": "youtube",
+      "title": "Para qué sirve cada IA (sin humo): ChatGPT, Claude, Gemini, Perplexity y Grok",
+      "url": "https://www.youtube.com/watch?v=OCdIvYcH3Gc"
+    },
+    {
+      "type": "youtube",
+      "title": "Por Qué esta IA para Trading destruye a Claude y ChatGPT | Prueba Real 2026",
+      "url": "https://www.youtube.com/watch?v=o0ZfjOgLE9U"
+    },
+    {
+      "type": "youtube",
+      "title": "Python AI Algo Trading Bot Generator LLMs Compared: Claude Sonnet 4.6 Crushes the Competition",
+      "url": "https://www.youtube.com/watch?v=8Ix48PB5hmg"
+    },
+    {
+      "type": "youtube",
+      "title": "Python Algo Trading with AI Integration – Build Your Own Platform (Part 2)",
+      "url": "https://www.youtube.com/watch?v=lPvbAm617VE"
+    },
+    {
+      "type": "youtube",
+      "title": "Python vs MQL5: Which is Best for Trading Bots? | Algo Lab Ep 4",
+      "url": "https://www.youtube.com/watch?v=J3Jqhgb16_E"
+    },
+    {
+      "type": "youtube",
+      "title": "Reinforcement Learning Trading Bot in Python | Train an AI Agent on Forex (EURUSD)",
+      "url": "https://www.youtube.com/watch?v=oW4hgB1vIoY"
+    },
+    {
+      "type": "youtube",
+      "title": "Revolutionizing Trading with LLMs: Three live Python examples.",
+      "url": "https://www.youtube.com/watch?v=bxYUrp4bP80"
+    },
+    {
+      "type": "youtube",
+      "title": "Robinhood Just Let AI Trade For You: Here's How To Set It Up",
+      "url": "https://www.youtube.com/watch?v=4Z5KNcpXVnc"
+    },
+    {
+      "type": "youtube",
+      "title": "SQX v143: The AI Strategy Builder Is Finally Here 🤖📈",
+      "url": "https://www.youtube.com/watch?v=NixXFibZPqY"
+    },
+    {
+      "type": "youtube",
+      "title": "Self-Improving AI Backtesting with Claude Code, OpenAlgo & VectorBT",
+      "url": "https://www.youtube.com/watch?v=scj3NbqzYds"
+    },
+    {
+      "type": "youtube",
+      "title": "Someone open-sourced a hedge fund (53k stars on GitHub)",
+      "url": "https://www.youtube.com/watch?v=9FoEsXNGLwI"
+    },
+    {
+      "type": "youtube",
+      "title": "Stock Trading with Tradingview and Python| Integrate Tradingview and Python| Algo Trading with GenAI",
+      "url": "https://www.youtube.com/watch?v=oZ-NFTjmMTU"
+    },
+    {
+      "type": "youtube",
+      "title": "The Beginner-Friendly Claude AI Side Hustle Nobody Talks About",
+      "url": "https://www.youtube.com/watch?v=quYKZushRPo"
+    },
+    {
+      "type": "youtube",
+      "title": "The DeepSeek Trading Bot Doubled Its Money. Now You Can Use Its Strategies",
+      "url": "https://www.youtube.com/watch?v=-j9kVKPULko"
+    },
+    {
+      "type": "youtube",
+      "title": "The Disruption of Trading Markets Through AI and ML - IIQF Webinar",
+      "url": "https://www.youtube.com/watch?v=IlUjsJ83WbU"
+    },
+    {
+      "type": "youtube",
+      "title": "The End of Manual Trading? How to Build AI-Powered Algos Today! #Face2Face with Mr. Ripu Singla",
+      "url": "https://www.youtube.com/watch?v=TyYH595IMxE"
+    },
+    {
+      "type": "youtube",
+      "title": "They Gave AI Models $10,000 Each. Then Something Crazy Happened.",
+      "url": "https://www.youtube.com/watch?v=fijrhqJ88Sc"
+    },
+    {
+      "type": "youtube",
+      "title": "This LLM achieved 22% return in Crypto Market! - Alpha Arena Benchmark",
+      "url": "https://www.youtube.com/watch?v=VL04_Y16uMc"
+    },
+    {
+      "type": "youtube",
+      "title": "This Open-Sourced AI Agent Builds and Backtests Trading Strategies For You! #VibeTading",
+      "url": "https://www.youtube.com/watch?v=X-4fX6SmTOo"
+    },
+    {
+      "type": "youtube",
+      "title": "Top 10 Trading AI  Trading Bots and tools  on GitHub (2026 Open Source Guide)",
+      "url": "https://www.youtube.com/watch?v=7tlAPtXKtNg"
+    },
+    {
+      "type": "youtube",
+      "title": "Top 4 AI Indicators on TradingView (Tested and Ranked!)",
+      "url": "https://www.youtube.com/watch?v=FRrgk0XToME"
+    },
+    {
+      "type": "youtube",
+      "title": "Trade with AI Workshop #2: End-to-End Trading Automation with AI",
+      "url": "https://www.youtube.com/watch?v=RXdsua9dWTo"
+    },
+    {
+      "type": "youtube",
+      "title": "Trading Using LLM | Generative AI & Sentiment Analysis for Finance | Webinar",
+      "url": "https://www.youtube.com/watch?v=7EXNr5GlxTs"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents   Multi Agents LLM Financial Trading Framework Reading and Understanding  Part 2",
+      "url": "https://www.youtube.com/watch?v=IpB0YHyjJGg"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents   Multi Agents LLM Financial Trading Framework Reading and Understanding  Part 4",
+      "url": "https://www.youtube.com/watch?v=rsLN0ZNA4tM"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents - Multi Agents LLM Financial Trading Framework (Reading and Understanding ) Part-1",
+      "url": "https://www.youtube.com/watch?v=hyK_W9qA9eo"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents - Multi Agents LLM Financial Trading Framework (Reading and Understanding) Part-3",
+      "url": "https://www.youtube.com/watch?v=revmmegieU8"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents - Multi Agents LLM Financial Trading Framework Reading and Understanding  Part 5",
+      "url": "https://www.youtube.com/watch?v=itZLnje83lI"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents - Multi Agents LLM Financial Trading Framework Reading and Understanding Part 7",
+      "url": "https://www.youtube.com/watch?v=3bZB7zZ8drM"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "url": "https://www.youtube.com/watch?v=8oyfgwQvK-0"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework - Research Paper in 6 mins",
+      "url": "https://www.youtube.com/watch?v=T0cSZbbJero"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingView + Claude +Chartink Is a Game Changer - AI Build Me Swing Trading Strategies",
+      "url": "https://www.youtube.com/watch?v=yxYzpkWh_mk"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingView + Claude +Chartink Is a Game Changer - AI Build Me Swing Trading Strategies",
+      "url": "https://www.youtube.com/watch?v=yxYzpkWh_mk"
+    },
+    {
+      "type": "youtube",
+      "title": "TradingView + Claude is a Game Changer - AI Made Me Profitable Strategies | Siddharth Agarwal",
+      "url": "https://www.youtube.com/watch?v=IbZGL1fnVGQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Understanding the limitation of LLM-based AI investing",
+      "url": "https://www.youtube.com/watch?v=tL030Eduizs"
+    },
+    {
+      "type": "youtube",
+      "title": "Use LLM agent for Crypto Trading Strategy",
+      "url": "https://www.youtube.com/watch?v=osMaO_Vi30c"
+    },
+    {
+      "type": "youtube",
+      "title": "Using AI for Market Analysis 11th May. Claude vs ChatGPT vs Gemini, high probability trades ?",
+      "url": "https://www.youtube.com/watch?v=rCIlxkova8c"
+    },
+    {
+      "type": "youtube",
+      "title": "Using an LLM to Trade Based on Reddit Posts",
+      "url": "https://www.youtube.com/watch?v=RNScyMTq-wE"
+    },
+    {
+      "type": "youtube",
+      "title": "What Are MCP Servers? (And How I Built an AI Trading Bot on It)",
+      "url": "https://www.youtube.com/watch?v=1iJ34tTjwwo"
+    },
+    {
+      "type": "youtube",
+      "title": "What REAL Traders Are Saying About AI & Algo Trading - DOs and DON'Ts about using AI in your algos!",
+      "url": "https://www.youtube.com/watch?v=arOH8QbtwBA"
+    },
+    {
+      "type": "youtube",
+      "title": "What is Generative AI for Trading? Dr. Ernest Chan Explains",
+      "url": "https://www.youtube.com/watch?v=jr8-b-nbKlY"
+    },
+    {
+      "type": "youtube",
+      "title": "Where AI Provides the BIGGEST Leverage for Starting a Trading Desk",
+      "url": "https://www.youtube.com/watch?v=RCm2C8J9R8s"
+    },
+    {
+      "type": "youtube",
+      "title": "Where Should a New Algo Trader Actually Focus? (It's Not Indicators or Tools)",
+      "url": "https://www.youtube.com/watch?v=CFyKWRmgxs0"
+    },
+    {
+      "type": "youtube",
+      "title": "Which AI Builds the Best Trading Strategy? ChatGPT vs Claude vs Gemini vs Grok",
+      "url": "https://www.youtube.com/watch?v=BJ_qlG5g040"
+    },
+    {
+      "type": "youtube",
+      "title": "Which AI Is The Best At Trading? Claude vs ChatGPT vs Gemini",
+      "url": "https://www.youtube.com/watch?v=pbRqlGBpteQ"
+    },
+    {
+      "type": "youtube",
+      "title": "Why LLMs Fail at Trading - Use THIS Instead",
+      "url": "https://www.youtube.com/watch?v=N1Z3hTbHUKM"
+    },
+    {
+      "type": "youtube",
+      "title": "You'll Get Crypto Trading Agents Setup LLM Support on Hummingbot Condor",
+      "url": "https://www.youtube.com/watch?v=uVZf2BnS1GA"
+    },
+    {
+      "type": "youtube",
+      "title": "Zero Code Algo Trading with Zerodha Streak - A Complete Tutorial",
+      "url": "https://www.youtube.com/watch?v=tFcIam0P86Y"
+    },
+    {
+      "type": "youtube",
+      "title": "Zerodha + Claude AI is INSANE – Let Claude Print Money | Zerodha AI Integration (FULL Guide 2025)",
+      "url": "https://www.youtube.com/watch?v=jYqDEE5QL-w"
+    },
+    {
+      "type": "youtube",
+      "title": "cTrader remote MCP server: How to trade with Claude, Codex, Cursor, Gemini and Windsurf",
+      "url": "https://www.youtube.com/watch?v=SOa31nZIQLE"
+    },
+    {
+      "type": "youtube",
+      "title": "how to actually build an ai trading bot (full guide)",
+      "url": "https://www.youtube.com/watch?v=PBBSMSyU674"
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=CEJ_R5226xE",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=EUSXhJNwRqI",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=Fmo1524I_IU",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=Fw7Sn2JvTdE",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=GlkJMO_ufYA",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=V2l7cZxUpQs",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=c9_U7YTy5-Q",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=elLUy6n1nYk",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=ewOpudu8Cjc",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=nqXIgv_AYuQ",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=w3BGQNsNFdk",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "https://www.youtube.com/watch?v=ypFG006G4WQ",
+      "url": null
+    },
+    {
+      "type": "youtube",
+      "title": "why ai neural networks will change trading forever and how to build yours in minutes!",
+      "url": "https://www.youtube.com/watch?v=Kqs8TR2HJEk"
+    },
+    {
+      "type": "youtube",
+      "title": "Я проверил ИИ в трейдинге. Claude, ChatGPT, GEmini. Кто реально работает?",
+      "url": "https://www.youtube.com/watch?v=hztKsMG7HIE"
+    }
+  ]
+}

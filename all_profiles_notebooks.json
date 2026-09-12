@@ -1,0 +1,2847 @@
+{
+  "lakhidas168": {
+    "notebooks": [
+      {
+        "index": 1,
+        "id": "c1b2105c-93ac-4b53-969c-de1fe70ef9a9",
+        "title": "ALGO TRADING LLM",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-11T05:51:38+00:00",
+        "last_viewed_at": "2026-09-11T05:59:07+00:00",
+        "modified_at": "2026-09-11T05:59:07+00:00"
+      },
+      {
+        "index": 2,
+        "id": "20a0a88b-6ae1-4586-a2e6-04178737b4a9",
+        "title": "DHAN",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-11T05:28:19+00:00",
+        "last_viewed_at": "2026-09-11T05:42:19+00:00",
+        "modified_at": "2026-09-11T05:42:19+00:00"
+      },
+      {
+        "index": 3,
+        "id": "d6312865-46d6-4963-9630-b7c221c07628",
+        "title": "Topic 01: Central Flagship Schemes & PM Surya Ghar - Master Dossier",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T04:53:58+00:00",
+        "last_viewed_at": "2026-09-10T09:11:23+00:00",
+        "modified_at": "2026-09-10T09:11:23+00:00"
+      },
+      {
+        "index": 4,
+        "id": "f3baa10a-bc82-487a-9e9e-e7efe08c6073",
+        "title": "",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T04:50:47+00:00",
+        "last_viewed_at": "2026-09-10T04:50:48+00:00",
+        "modified_at": "2026-09-10T04:50:48+00:00"
+      },
+      {
+        "index": 5,
+        "id": "accff8fe-1930-4de5-a883-5b94c631f312",
+        "title": "TRADING TUTORIAL",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T04:27:54+00:00",
+        "last_viewed_at": "2026-09-10T04:27:59+00:00",
+        "modified_at": "2026-09-10T04:27:59+00:00"
+      },
+      {
+        "index": 6,
+        "id": "f0cc7a74-a627-4721-b8c3-d1430322f564",
+        "title": "SCALPING TRADING",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T03:56:56+00:00",
+        "last_viewed_at": "2026-09-10T03:57:04+00:00",
+        "modified_at": "2026-09-10T03:57:04+00:00"
+      },
+      {
+        "index": 7,
+        "id": "7fc8f55e-da45-4d29-b4de-95503c0f22f6",
+        "title": "QUANT TRADING",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T03:39:51+00:00",
+        "last_viewed_at": "2026-09-10T03:39:57+00:00",
+        "modified_at": "2026-09-10T03:39:57+00:00"
+      },
+      {
+        "index": 8,
+        "id": "46648c82-f417-4da1-a9d7-a6a2a72d59ea",
+        "title": "ML TRADING",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T03:35:32+00:00",
+        "last_viewed_at": "2026-09-10T03:35:40+00:00",
+        "modified_at": "2026-09-10T03:35:40+00:00"
+      },
+      {
+        "index": 9,
+        "id": "da7a9991-8ab6-4ec6-b179-3e551b16300f",
+        "title": "ALGO TRADING",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-10T03:32:06+00:00",
+        "last_viewed_at": "2026-09-10T03:32:14+00:00",
+        "modified_at": "2026-09-10T03:32:14+00:00"
+      },
+      {
+        "index": 10,
+        "id": "9ab8802d-4ea7-4d1a-a80d-f94f807acf8b",
+        "title": "GATE ECE | Communication Systems (Neso Academy) [Part 1] - 313 Videos",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T10:07:58+00:00",
+        "last_viewed_at": "2026-09-08T11:39:19+00:00",
+        "modified_at": "2026-09-08T11:39:19+00:00"
+      },
+      {
+        "index": 11,
+        "id": "72e4438d-1e40-42a5-8b2e-df612ebee7f5",
+        "title": "GATE 2023 | Electrical (EE), Electronics and Communications (ECE) & Instrumentation (IN) Engineering | Free YouTube Course | BYJU'S GATE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:47:27+00:00",
+        "last_viewed_at": "2026-09-08T11:39:19+00:00",
+        "modified_at": "2026-09-08T11:39:19+00:00"
+      },
+      {
+        "index": 12,
+        "id": "06b9222b-c1ba-45a5-a599-f8e60eaf3207",
+        "title": "Basic Electrical Engineering | Module 1 | DC Networks | Part 1 | OHM's Law & KVL (Lecture 01) \u00b7 41:32",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:50:10+00:00",
+        "last_viewed_at": "2026-09-08T10:17:45+00:00",
+        "modified_at": "2026-09-08T10:17:45+00:00"
+      },
+      {
+        "index": 13,
+        "id": "29bf8ef9-d992-4f45-a74e-5ba3af186516",
+        "title": "Basic Electrical Engineering | Module 1 | DC Networks | Part 1 | OHM's Law & KVL (Lecture 01) \u00b7 41:32",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:50:25+00:00",
+        "last_viewed_at": "2026-09-08T07:27:52+00:00",
+        "modified_at": "2026-09-08T07:27:52+00:00"
+      },
+      {
+        "index": 14,
+        "id": "c0b4e74a-d174-486c-9230-410d3ed96af6",
+        "title": "Measuring Instruments Crash Course for GATE/ESE/PSUs/SSC/RRB/JE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:48:54+00:00",
+        "last_viewed_at": "2026-09-08T07:25:47+00:00",
+        "modified_at": "2026-09-08T07:25:47+00:00"
+      },
+      {
+        "index": 15,
+        "id": "35628229-cd2f-4fbd-9962-8fcf595299e8",
+        "title": "Deep-Learn (GATE/ESE- ECE | EEE | IN) Digital Logic Design / Digital Logic Circuit",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:48:47+00:00",
+        "last_viewed_at": "2026-09-08T07:23:40+00:00",
+        "modified_at": "2026-09-08T07:23:40+00:00"
+      },
+      {
+        "index": 16,
+        "id": "f288121f-4374-4b10-a869-19e78121a71f",
+        "title": "Introduction to Measurements - Error Analysis - Electrical & Electronic Measurement GATE \u00b7 2:26",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:48:17+00:00",
+        "last_viewed_at": "2026-09-08T07:21:28+00:00",
+        "modified_at": "2026-09-08T07:21:28+00:00"
+      },
+      {
+        "index": 17,
+        "id": "a6fdd4b8-abcc-48c9-8b9e-cbce5343ae93",
+        "title": "GATE 2024 | Electrical (EE), Electronics and Communications (ECE) & Instrumentation (IN) Engineering | Free YouTube Course | BYJU'S GATE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:47:59+00:00",
+        "last_viewed_at": "2026-09-08T07:19:26+00:00",
+        "modified_at": "2026-09-08T07:19:26+00:00"
+      },
+      {
+        "index": 18,
+        "id": "cb663ff2-f3ae-43ff-871f-65a38e87e30f",
+        "title": "GATE & ESE 2024 Concept Series | Network Theory | EE +EC | By Kiran Kumar Sir | MADE EASY \u00b7 7:22",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:47:48+00:00",
+        "last_viewed_at": "2026-09-08T07:17:18+00:00",
+        "modified_at": "2026-09-08T07:17:18+00:00"
+      },
+      {
+        "index": 19,
+        "id": "7921d6a1-b308-4f7d-bbf8-206388e35b4c",
+        "title": "GATE (EE/ECE/IN) Formula Revision (GATE Formula Series \ud83c\udfaf) | Electrical/Electronics/Instrumentation Engineering",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:47:00+00:00",
+        "last_viewed_at": "2026-09-08T07:13:05+00:00",
+        "modified_at": "2026-09-08T07:13:05+00:00"
+      },
+      {
+        "index": 20,
+        "id": "94a5ec18-b907-41af-be5a-bb09896a5321",
+        "title": "Magnetic circuit  - Basic Electrical Engineering - First Year Engineering for GATE | IES | ESE | SSC JE | PSU",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:47:05+00:00",
+        "last_viewed_at": "2026-09-08T07:10:55+00:00",
+        "modified_at": "2026-09-08T07:10:55+00:00"
+      },
+      {
+        "index": 21,
+        "id": "d5b7641e-12a0-4fbb-a2d3-2e1913532118",
+        "title": "Mesh Analysis \u00b7 15:07",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:46:39+00:00",
+        "last_viewed_at": "2026-09-08T07:08:43+00:00",
+        "modified_at": "2026-09-08T07:08:43+00:00"
+      },
+      {
+        "index": 22,
+        "id": "3be06732-3db0-4576-a301-8ae6864a59e0",
+        "title": "NETWORK THEORY | GATE | ESE By Umesh Dhande Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:46:14+00:00",
+        "last_viewed_at": "2026-09-08T07:08:24+00:00",
+        "modified_at": "2026-09-08T07:08:24+00:00"
+      },
+      {
+        "index": 23,
+        "id": "3ea793ab-5c7a-431e-bc42-6e5dcbf54e01",
+        "title": "Topic Wise Detail Analysis of Revised Aptitude Syllabus | General Aptitude | Lec 1 | GATE/ESE 2021 \u00b7 56:54",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:45:32+00:00",
+        "last_viewed_at": "2026-09-08T07:08:05+00:00",
+        "modified_at": "2026-09-08T07:08:05+00:00"
+      },
+      {
+        "index": 24,
+        "id": "da174fde-f204-43df-8085-c8a58f818838",
+        "title": "Network Theorems | Chapter 4 | Network Theory",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:45:19+00:00",
+        "last_viewed_at": "2026-09-08T07:07:48+00:00",
+        "modified_at": "2026-09-08T07:07:48+00:00"
+      },
+      {
+        "index": 25,
+        "id": "52779c29-1a93-4f73-a916-dd96d6715e62",
+        "title": "Network Theory (in Hindi) | GATE 2023 & UPSC ESE Prelims 2023 Electrical (EE) & Electronics and Communications Engineering (ECE) Exam Preparation",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:44:57+00:00",
+        "last_viewed_at": "2026-09-08T07:07:28+00:00",
+        "modified_at": "2026-09-08T07:07:28+00:00"
+      },
+      {
+        "index": 26,
+        "id": "353a4c85-d496-4c9f-902d-5036625ee92a",
+        "title": "Network Theory 02 | Basic of Network Theory (Part -02) | EE & ECE | GATE 2024 FastTrack Batch \u00b7 1:44:02",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:44:34+00:00",
+        "last_viewed_at": "2026-09-08T07:07:09+00:00",
+        "modified_at": "2026-09-08T07:07:09+00:00"
+      },
+      {
+        "index": 27,
+        "id": "ff655005-e00c-4b0a-b1ec-7ad0628de92c",
+        "title": "Non Stop Marathon Class | Electrical engineering One liner Concepts Engineers Adda \u00b7 1:42:51",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:43:52+00:00",
+        "last_viewed_at": "2026-09-08T07:05:04+00:00",
+        "modified_at": "2026-09-08T07:05:04+00:00"
+      },
+      {
+        "index": 28,
+        "id": "fa911010-acdd-479e-8eeb-b20f9977dc21",
+        "title": "Network Theory for GATE & ESE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:43:48+00:00",
+        "last_viewed_at": "2026-09-08T07:02:57+00:00",
+        "modified_at": "2026-09-08T07:02:57+00:00"
+      },
+      {
+        "index": 29,
+        "id": "65c60014-3973-40f8-8040-4c51b5b4ec4d",
+        "title": "Network Theory | GATE/ESE 2022 | EE/EC/IN | Ashu Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:42:54+00:00",
+        "last_viewed_at": "2026-09-08T07:00:44+00:00",
+        "modified_at": "2026-09-08T07:00:44+00:00"
+      },
+      {
+        "index": 30,
+        "id": "10957bc9-4283-4133-b9f2-b267c6b8dbdc",
+        "title": "Power Electronics | Lec 2 | Diode LC Circuit | Electrical Engineering | By Ravi Sinha Sir \u00b7 42:49",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:41:36+00:00",
+        "last_viewed_at": "2026-09-08T06:58:37+00:00",
+        "modified_at": "2026-09-08T06:58:37+00:00"
+      },
+      {
+        "index": 31,
+        "id": "340f8fb8-ec07-4175-abc0-723c3af8b8bf",
+        "title": "Introduction to Electrical Engineering",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:41:33+00:00",
+        "last_viewed_at": "2026-09-08T06:56:30+00:00",
+        "modified_at": "2026-09-08T06:56:30+00:00"
+      },
+      {
+        "index": 32,
+        "id": "1fbf6b02-ebe0-4caf-9a7a-d45eb6478116",
+        "title": "HPCL 2022 | Electrical Engineering (EE) & Electronics Engineering (ECE) in Hindi for HPCL Exam | Free YouTube Course | BYJU'S GATE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:40:35+00:00",
+        "last_viewed_at": "2026-09-08T06:54:22+00:00",
+        "modified_at": "2026-09-08T06:54:22+00:00"
+      },
+      {
+        "index": 33,
+        "id": "8ab17ef6-2c05-44f8-98ec-a767563201f7",
+        "title": "Three Phase Circuits - Basic Electrical Engineering - First Year Engineering for GATE | IES | ESE | SSC JE | PSU",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:40:44+00:00",
+        "last_viewed_at": "2026-09-08T06:52:08+00:00",
+        "modified_at": "2026-09-08T06:52:08+00:00"
+      },
+      {
+        "index": 34,
+        "id": "6c4e037d-824f-4209-9cd7-d0e05c3e5f2b",
+        "title": "General Aptitude | All Branches ESE Prelims & GATE 2026 Crash Course",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:40:16+00:00",
+        "last_viewed_at": "2026-09-08T06:51:48+00:00",
+        "modified_at": "2026-09-08T06:51:48+00:00"
+      },
+      {
+        "index": 35,
+        "id": "92189be1-f22b-4098-8929-20bab0270f5e",
+        "title": "GATE 2025 Paper Analysis | Electrical Engineering | Expected Cut Off |\u00a0Team Examdost \u00b7 49:51",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:39:26+00:00",
+        "last_viewed_at": "2026-09-08T06:49:42+00:00",
+        "modified_at": "2026-09-08T06:49:42+00:00"
+      },
+      {
+        "index": 36,
+        "id": "9b718b4b-63d5-4796-aa2d-e1b36512f404",
+        "title": "GATE 2023 & UPSC ESE 2023 Exam | Electrical (EE) / Electronics (ECE) Engineering | Level UP Series | Free YouTube Course in Hindi | BYJU'S GATE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:39:11+00:00",
+        "last_viewed_at": "2026-09-08T06:47:27+00:00",
+        "modified_at": "2026-09-08T06:47:27+00:00"
+      },
+      {
+        "index": 37,
+        "id": "1a84e881-7426-446c-be8b-e91656dce55d",
+        "title": "Lecture 2 || Unit 1 || Introduction to Power Electronics || Mayank Kumar \u00b7 28:01",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:39:07+00:00",
+        "last_viewed_at": "2026-09-08T06:47:07+00:00",
+        "modified_at": "2026-09-08T06:47:07+00:00"
+      },
+      {
+        "index": 38,
+        "id": "f8ff6444-ef3c-4c2d-9bb4-9651bbd19e8a",
+        "title": "Fundamentals of Electrical Engineering by Prof. Debapriya Das",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:41+00:00",
+        "last_viewed_at": "2026-09-08T06:46:45+00:00",
+        "modified_at": "2026-09-08T06:46:45+00:00"
+      },
+      {
+        "index": 39,
+        "id": "54ecb589-5b1c-49e0-8b49-5acbdac95b52",
+        "title": "GATE & ESE 2022 (Power System | Electrical engineering | Full Lecture Video with Notes of Every Subjects)",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:34+00:00",
+        "last_viewed_at": "2026-09-08T06:46:18+00:00",
+        "modified_at": "2026-09-08T06:46:18+00:00"
+      },
+      {
+        "index": 40,
+        "id": "a040e193-030f-4fce-a9ea-0f1aecf78909",
+        "title": "Free Crash Course | Electrical (EE) / Electronics (ECE) Engineering | GATE 2023 & UPSC ESE 2023 Exam Preparation",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:27+00:00",
+        "last_viewed_at": "2026-09-08T06:45:54+00:00",
+        "modified_at": "2026-09-08T06:45:54+00:00"
+      },
+      {
+        "index": 41,
+        "id": "9a3a627f-ab87-4e33-94aa-cc4111a60319",
+        "title": "GATE 2020 | Power Systems | Design Consideration of Lines \u00b7 1:46:16",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:18+00:00",
+        "last_viewed_at": "2026-09-08T06:43:41+00:00",
+        "modified_at": "2026-09-08T06:43:41+00:00"
+      },
+      {
+        "index": 42,
+        "id": "3a030b0d-87e2-4c39-a216-d6b82750218e",
+        "title": "Fluid Mechanics (in Hindi) | GATE 2023 & UPSC ESE Prelims 2023 Electrical (EE) & Electronics and Communications Engineering (ECE) Exam Preparation",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:14+00:00",
+        "last_viewed_at": "2026-09-08T06:43:12+00:00",
+        "modified_at": "2026-09-08T06:43:12+00:00"
+      },
+      {
+        "index": 43,
+        "id": "93eebb92-ceab-43a6-b2f6-1638aa300387",
+        "title": "GATE 2023 Electrical Engineering | Power System Marathon Class |Part-3| BYJU'S Exam Prep GATE EE \u00b7 1:47:21",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:02+00:00",
+        "last_viewed_at": "2026-09-08T06:40:02+00:00",
+        "modified_at": "2026-09-08T06:40:02+00:00"
+      },
+      {
+        "index": 44,
+        "id": "955dacf4-fa3c-494f-9eed-7decebe01b27",
+        "title": "Lect-2 ELECTRICAL POWER SYSTEM FOR POWER GRID/RSEB/SSC JE/LMRC/UPSSSC/UPRVNL BY RAMAN SIR \u00b7 44:21",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:46+00:00",
+        "last_viewed_at": "2026-09-08T06:37:41+00:00",
+        "modified_at": "2026-09-08T06:37:41+00:00"
+      },
+      {
+        "index": 45,
+        "id": "b1e28843-a069-4566-b134-d60630307e8b",
+        "title": "Engineering Mechanics 02 | Basic Concepts (Part 02) | GATE 2025 Series | ME | CE | XE | PI \u00b7 1:34:14",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:27+00:00",
+        "last_viewed_at": "2026-09-08T06:37:18+00:00",
+        "modified_at": "2026-09-08T06:37:18+00:00"
+      },
+      {
+        "index": 46,
+        "id": "69b9256f-3b88-4862-96f7-df59ca845454",
+        "title": "Electronics - Basic Electrical Engineering - First Year Engineering for GATE | IES | ESE | SSC JE | PSU",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:08+00:00",
+        "last_viewed_at": "2026-09-08T06:35:09+00:00",
+        "modified_at": "2026-09-08T06:35:09+00:00"
+      },
+      {
+        "index": 47,
+        "id": "3b5bb8e8-6b75-46df-9a80-e46875fe2e6d",
+        "title": "Power System 1 Electrical Engineering | Semester | GATE | ESE | PSU | SSC JE #video",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:00+00:00",
+        "last_viewed_at": "2026-09-08T06:33:01+00:00",
+        "modified_at": "2026-09-08T06:33:01+00:00"
+      },
+      {
+        "index": 48,
+        "id": "eff3fbb2-06c5-405a-8ad1-a5a8a8447230",
+        "title": "Power System 10 : Economy load Disptach | EE | ESE Pre & GATE Crash Course 2026 \u00b7 1:21:37",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:36:43+00:00",
+        "last_viewed_at": "2026-09-08T06:30:50+00:00",
+        "modified_at": "2026-09-08T06:30:50+00:00"
+      },
+      {
+        "index": 49,
+        "id": "32113f38-45a7-4f2e-8b2b-672521070017",
+        "title": "Power System for BARC 2023 | Electrical Engineering (EE) | BARC 2023 | BYJU'S Exam Prep GATE \u00b7 45:47",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:36:24+00:00",
+        "last_viewed_at": "2026-09-08T06:28:39+00:00",
+        "modified_at": "2026-09-08T06:28:39+00:00"
+      },
+      {
+        "index": 50,
+        "id": "a3343e0c-f9d9-4eb9-ace0-3b8b7ae006f3",
+        "title": "ESE 2020 Prelims detailed solutions Electrical engineering #ese #upsc #prelims #prelims2020 #eee  #exam#ese2020 #esepreparation #eseprelims #upscexam",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:35:40+00:00",
+        "last_viewed_at": "2026-09-08T06:26:27+00:00",
+        "modified_at": "2026-09-08T06:26:27+00:00"
+      },
+      {
+        "index": 51,
+        "id": "1f7a4985-885b-4ead-99ec-5a8879c4dae3",
+        "title": "RSSB/RSEB JE 2023 | Power System Classes l Electrical Engineering | Ajay Naruka Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:35:23+00:00",
+        "last_viewed_at": "2026-09-08T06:24:12+00:00",
+        "modified_at": "2026-09-08T06:24:12+00:00"
+      },
+      {
+        "index": 52,
+        "id": "47688ed0-6805-4ecf-a24a-8dc497da27ca",
+        "title": "Fourier Transform | Chapter 7 | Signals and Systems",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:35:05+00:00",
+        "last_viewed_at": "2026-09-08T06:22:03+00:00",
+        "modified_at": "2026-09-08T06:22:03+00:00"
+      },
+      {
+        "index": 53,
+        "id": "08328268-5f1e-446b-be8b-2a4365ecfc96",
+        "title": "Basic Electrical Engineering | Praveen Pandey | ESE | GATE | SSC JE | BARC | Electrical | Electronics",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:34:30+00:00",
+        "last_viewed_at": "2026-09-08T06:19:56+00:00",
+        "modified_at": "2026-09-08T06:19:56+00:00"
+      },
+      {
+        "index": 54,
+        "id": "e8b2d6af-48f1-415e-b121-dec990338a4f",
+        "title": "Introduction to Signals and Systems | GATE 2024 | Ankit Goyal | One Man Army \u00b7 1:15:43",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:34:42+00:00",
+        "last_viewed_at": "2026-09-08T06:17:47+00:00",
+        "modified_at": "2026-09-08T06:17:47+00:00"
+      },
+      {
+        "index": 55,
+        "id": "05a2b78c-d5d3-47d2-aa0e-f892f85ec82e",
+        "title": "Lecture 12 Basic Signals Part 2 | Signal & Systems | EE/ECE GATE/ESE \u00b7 6:42",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:34:26+00:00",
+        "last_viewed_at": "2026-09-08T06:15:35+00:00",
+        "modified_at": "2026-09-08T06:15:35+00:00"
+      },
+      {
+        "index": 56,
+        "id": "c9951dad-f4cb-4a39-982c-61bc570bfb54",
+        "title": "Most Imp.Previous Year Questions|GATE & ESE|Signals &Systems|Part-3|By Rohit Tripathi Sir| MADE EASY \u00b7 15:58",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:34:11+00:00",
+        "last_viewed_at": "2026-09-08T06:13:28+00:00",
+        "modified_at": "2026-09-08T06:13:28+00:00"
+      },
+      {
+        "index": 57,
+        "id": "8bc0612a-a432-4b29-9562-a9da3ac3218b",
+        "title": "Signals & Systems | Complete Lecture Series for GATE & ECE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:33:42+00:00",
+        "last_viewed_at": "2026-09-08T06:11:20+00:00",
+        "modified_at": "2026-09-08T06:11:20+00:00"
+      },
+      {
+        "index": 58,
+        "id": "2a193d47-96f4-4e01-b87e-abdc37bbbb69",
+        "title": "BARC 2023 | Electrical Engineering (EE) & Electronics & Communications Engineering (ECE) | Parmanu Series & Super 15 Series\ud83d\udca5\ud83d\udca5 | Free Crash Course",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:33:33+00:00",
+        "last_viewed_at": "2026-09-08T06:09:09+00:00",
+        "modified_at": "2026-09-08T06:09:09+00:00"
+      },
+      {
+        "index": 59,
+        "id": "1e70fbb3-a8f7-4fd2-8385-79c3d5a7238e",
+        "title": "2/3. Important Points on ESE General Studies and Engineering Aptitude \u00b7 41:46",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:32:47+00:00",
+        "last_viewed_at": "2026-09-08T06:09:02+00:00",
+        "modified_at": "2026-09-08T06:09:02+00:00"
+      },
+      {
+        "index": 60,
+        "id": "5c5f0cb9-4bc6-435e-a06f-63f2edd3da95",
+        "title": "Order & Degree I Differential Equation I Engineering Mathematics by Priyanka Sharma Mam \u00b7 14:11",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:32:12+00:00",
+        "last_viewed_at": "2026-09-08T06:06:58+00:00",
+        "modified_at": "2026-09-08T06:06:58+00:00"
+      },
+      {
+        "index": 61,
+        "id": "e5d79417-899c-4561-bf0f-1eafea3601da",
+        "title": "Logic Gates and Boolean Algebra | Digital Electronics Crash Course | GATE EE/ECE/IN/CS 2023 \u00b7 1:58:13",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:31:51+00:00",
+        "last_viewed_at": "2026-09-08T06:04:50+00:00",
+        "modified_at": "2026-09-08T06:04:50+00:00"
+      },
+      {
+        "index": 62,
+        "id": "4fa8e99f-70e6-4efe-8e43-2a21b007ea42",
+        "title": "L02 Linear & Non-Linear | Homogeneous & Non Homogeneous | Differential Equation | Mathematics \u00b7 1:48:51",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:31:34+00:00",
+        "last_viewed_at": "2026-09-08T06:02:44+00:00",
+        "modified_at": "2026-09-08T06:02:44+00:00"
+      },
+      {
+        "index": 63,
+        "id": "e0279302-c422-4f59-a913-c51aae10f5d9",
+        "title": "BASIC ELECTRICAL ENGINEERING+NETWORK ANALYSIS FOR ALL JE/AE ELECTRICAL EXAM/GATE/ESE BY RAMAN SIR",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:50:06+00:00",
+        "last_viewed_at": "2026-09-08T06:00:32+00:00",
+        "modified_at": "2026-09-08T06:00:32+00:00"
+      },
+      {
+        "index": 64,
+        "id": "3436d1cf-3f88-4bc0-a266-52bee745ae47",
+        "title": "CTQ || Network Theory || GATE-ESE || By UD Sir #networktheory #gateexam",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:49:51+00:00",
+        "last_viewed_at": "2026-09-08T06:00:15+00:00",
+        "modified_at": "2026-09-08T06:00:15+00:00"
+      },
+      {
+        "index": 65,
+        "id": "fda5d23f-3909-480d-af69-526f27783bcc",
+        "title": "AC Circuits - Basic Electrical Engineering - First Year Engineering For GATE | IES | ESE | PSU | SSC JE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:49:50+00:00",
+        "last_viewed_at": "2026-09-08T05:59:58+00:00",
+        "modified_at": "2026-09-08T05:59:58+00:00"
+      },
+      {
+        "index": 66,
+        "id": "7377c950-c6e6-4e1e-a2ca-3044f53ef851",
+        "title": "DC Circuits - Basic Electrical Engineering - First Year Engineering For GATE | SSC JE | IES | ESE | PSU",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:49:23+00:00",
+        "last_viewed_at": "2026-09-08T05:59:42+00:00",
+        "modified_at": "2026-09-08T05:59:42+00:00"
+      },
+      {
+        "index": 67,
+        "id": "6c20a046-bf6e-4710-9ecc-aad044579bfc",
+        "title": "Measurement | Multiple Choice Question (MCQs) Series | Basics of Measurement | Electrical Engg | L-2 \u00b7 1:10:36",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:48:39+00:00",
+        "last_viewed_at": "2026-09-08T05:58:49+00:00",
+        "modified_at": "2026-09-08T05:58:49+00:00"
+      },
+      {
+        "index": 68,
+        "id": "b64b953c-9c62-48b4-836e-f25a2fff4900",
+        "title": "Electrical Circuits | BASE BATCH | Classification of Source | Lecture-01 | E.E | Ravi Sinha Sir \u00b7 45:26",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:48:16+00:00",
+        "last_viewed_at": "2026-09-08T05:58:27+00:00",
+        "modified_at": "2026-09-08T05:58:27+00:00"
+      },
+      {
+        "index": 69,
+        "id": "6603591b-f7ce-4361-97a3-ede51c91c416",
+        "title": "GATE 2023 | Analog Circuits PYQ & Numerical Questions | GATE Instrumentation (IN) Engg | BYJU'S GATE \u00b7 1:07:36",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:47:25+00:00",
+        "last_viewed_at": "2026-09-08T05:54:37+00:00",
+        "modified_at": "2026-09-08T05:54:37+00:00"
+      },
+      {
+        "index": 70,
+        "id": "a98550dd-4e77-49b6-b8cc-e65babdfb422",
+        "title": "Electrical Measurement By D. Sathish Sir | Dalton Batch | GATE 22 | EE IN \u00b7 1:20:43",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:46:25+00:00",
+        "last_viewed_at": "2026-09-08T05:53:23+00:00",
+        "modified_at": "2026-09-08T05:53:23+00:00"
+      },
+      {
+        "index": 71,
+        "id": "65c200e6-e332-4259-b5a6-a8d9e95e9ab2",
+        "title": "What if Your GATE Score is low !!! | This video will help you what to do next \u00b7 6:02",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:46:10+00:00",
+        "last_viewed_at": "2026-09-08T05:52:50+00:00",
+        "modified_at": "2026-09-08T05:52:50+00:00"
+      },
+      {
+        "index": 72,
+        "id": "91a0108b-b1eb-4879-8f78-3a66f4bade93",
+        "title": "Network Analysis (Full Course) | Basics Part-2 | Lec 2 | GATE/ESE (EE,ECE) Exam | Sankar Sir \u00b7 1:06:51",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:46:00+00:00",
+        "last_viewed_at": "2026-09-08T05:52:33+00:00",
+        "modified_at": "2026-09-08T05:52:33+00:00"
+      },
+      {
+        "index": 73,
+        "id": "4f004feb-4e3b-4960-aeba-8975ac4bcb7b",
+        "title": "What Can You Really Do As An Electrical Engineer? \u00b7 13:27",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:45:54+00:00",
+        "last_viewed_at": "2026-09-08T05:52:15+00:00",
+        "modified_at": "2026-09-08T05:52:15+00:00"
+      },
+      {
+        "index": 74,
+        "id": "e6ea13d0-1050-4867-acd3-2cadf2d05b77",
+        "title": "Network Analysis | GATE/ESE 2022 (EE,ECE) Exam | Lakshya Batch | Sankar Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:45:36+00:00",
+        "last_viewed_at": "2026-09-08T05:51:59+00:00",
+        "modified_at": "2026-09-08T05:51:59+00:00"
+      },
+      {
+        "index": 75,
+        "id": "8555f657-8dc1-4345-9105-8cdf3e752cb5",
+        "title": "TRANSDUCERS for ESE-2021 | Strain Gauge | Surendra sir | Gradeup \u00b7 1:11:41",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:45:09+00:00",
+        "last_viewed_at": "2026-09-08T05:51:02+00:00",
+        "modified_at": "2026-09-08T05:51:02+00:00"
+      },
+      {
+        "index": 76,
+        "id": "1597b058-8b84-4cbd-bf20-ff3297499341",
+        "title": "Sunday ka Funda (LIVE Experiment) | GATE & UPSC ESE (IES) Prelims Electrical (EE) / Electronics (ECE) Engineering 2023 Exam | BYJU'S GATE Hindi",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:44:47+00:00",
+        "last_viewed_at": "2026-09-08T05:50:25+00:00",
+        "modified_at": "2026-09-08T05:50:25+00:00"
+      },
+      {
+        "index": 77,
+        "id": "21d7c75e-a913-4b27-9463-14fa46850263",
+        "title": "Series, parallel Combination of Resistor, Inductor & Capacitor | Voltage division | current division \u00b7 12:16",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:44:19+00:00",
+        "last_viewed_at": "2026-09-08T05:49:49+00:00",
+        "modified_at": "2026-09-08T05:49:49+00:00"
+      },
+      {
+        "index": 78,
+        "id": "d59d2aa7-01e6-40ef-8f20-0843f8651202",
+        "title": "Network Theory Basics | Chapter 1 | Network Theory",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:44:09+00:00",
+        "last_viewed_at": "2026-09-08T05:49:34+00:00",
+        "modified_at": "2026-09-08T05:49:34+00:00"
+      },
+      {
+        "index": 79,
+        "id": "5aec09a3-aeb5-466d-983c-8345b2c98a96",
+        "title": "Most Expected Questions General Aptitude GATE-2021 | Marathon Session | GATE Preparation Strategy \u00b7 4:02:24",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:43:31+00:00",
+        "last_viewed_at": "2026-09-08T05:48:42+00:00",
+        "modified_at": "2026-09-08T05:48:42+00:00"
+      },
+      {
+        "index": 80,
+        "id": "a182d60d-cd15-4a91-a14e-accb50ac1870",
+        "title": "Network Theory | Electrical Engineering | GATE | ESE | IRMS | Praveen Pandey",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:43:30+00:00",
+        "last_viewed_at": "2026-09-08T05:48:24+00:00",
+        "modified_at": "2026-09-08T05:48:24+00:00"
+      },
+      {
+        "index": 81,
+        "id": "fe5882d2-a0b8-4253-be06-784f6d868932",
+        "title": "Lec thevenin\u2019s theory live \u00b7 55:21",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:43:17+00:00",
+        "last_viewed_at": "2026-09-08T05:48:06+00:00",
+        "modified_at": "2026-09-08T05:48:06+00:00"
+      },
+      {
+        "index": 82,
+        "id": "864985f7-4030-4df0-9426-12c3f0a70917",
+        "title": "Network Theory | GATE & UPSC ESE Prelims | Electrical (EE), Electronics and Communications (ECE) & Instrumentation Engineering (IN) Exam",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:43:15+00:00",
+        "last_viewed_at": "2026-09-08T05:47:47+00:00",
+        "modified_at": "2026-09-08T05:47:47+00:00"
+      },
+      {
+        "index": 83,
+        "id": "69313cb5-1aed-4f76-b087-77e35558f530",
+        "title": "Full Wave Rectifiers and Semiconductor Physics Fundamentals",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:42:46+00:00",
+        "last_viewed_at": "2026-09-08T05:47:31+00:00",
+        "modified_at": "2026-09-08T05:47:31+00:00"
+      },
+      {
+        "index": 84,
+        "id": "d874c1cc-31f3-4059-a90d-16951ae58278",
+        "title": "Nodal Analysis (Solved Problem 1) \u00b7 9:27",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:42:14+00:00",
+        "last_viewed_at": "2026-09-08T05:46:50+00:00",
+        "modified_at": "2026-09-08T05:46:50+00:00"
+      },
+      {
+        "index": 85,
+        "id": "64405055-652b-44cf-99df-f78e4089847e",
+        "title": "RLC series Circuit (Impedance, Reactance, and Resonance Explained) phasor diagram, voltage triangle \u00b7 13:19",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:41:21+00:00",
+        "last_viewed_at": "2026-09-08T05:45:58+00:00",
+        "modified_at": "2026-09-08T05:45:58+00:00"
+      },
+      {
+        "index": 86,
+        "id": "89127fbe-bd1c-4718-9753-0628372bf1b3",
+        "title": "Introduction to Basic Electrical Engineering | Neev Batch | Ankit Goyal #ankitese #onemanarmy \u00b7 1:08:04",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:41:19+00:00",
+        "last_viewed_at": "2026-09-08T05:45:39+00:00",
+        "modified_at": "2026-09-08T05:45:39+00:00"
+      },
+      {
+        "index": 87,
+        "id": "6fdae9bf-4fbc-4120-96de-5fbb41b4d9be",
+        "title": "Representation of Source & Loads - Basic Concepts of Electrical Circuit - Electrical Circuits Theory \u00b7 9:26",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:41:06+00:00",
+        "last_viewed_at": "2026-09-08T05:45:22+00:00",
+        "modified_at": "2026-09-08T05:45:22+00:00"
+      },
+      {
+        "index": 88,
+        "id": "5d6d4975-a025-4679-8ebf-1b78d34919c3",
+        "title": "Understanding the Energy Sources in Basics of Electrical Network | GATE Electrical Circuit Theory \u00b7 12:03",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:40:28+00:00",
+        "last_viewed_at": "2026-09-08T05:44:30+00:00",
+        "modified_at": "2026-09-08T05:44:30+00:00"
+      },
+      {
+        "index": 89,
+        "id": "0c86f206-8d7c-47fc-9551-f845153e0e10",
+        "title": "Introduction | Lec 1 | Electrical Drives | GATE/ESE 2022 | Ashu Sir \u00b7 57:29",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:40:04+00:00",
+        "last_viewed_at": "2026-09-08T05:42:04+00:00",
+        "modified_at": "2026-09-08T05:42:04+00:00"
+      },
+      {
+        "index": 90,
+        "id": "5686702c-1326-4ee0-927e-780168b09965",
+        "title": "GATE PYQ Series 2023 for Electrical, Electronics and Communication (EE/ECE/IN)",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:39:46+00:00",
+        "last_viewed_at": "2026-09-08T05:41:47+00:00",
+        "modified_at": "2026-09-08T05:41:47+00:00"
+      },
+      {
+        "index": 91,
+        "id": "0838ab56-c437-404e-88e7-1045d6982de8",
+        "title": "LECT-2 POWER ELECTRONICS FOR UPPCL AE/JE/GATE/ESE/ELECTRICAL BY RAMAN SIR \u00b7 50:29",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:39:45+00:00",
+        "last_viewed_at": "2026-09-08T05:41:31+00:00",
+        "modified_at": "2026-09-08T05:41:31+00:00"
+      },
+      {
+        "index": 92,
+        "id": "eebb3b53-0b82-4411-bcac-ff5637ddc557",
+        "title": "Lec - 02 | Power Electronics | Power Semiconductor Devices (Part-01) | #dhandesir \u00b7 3:13:12",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:39:23+00:00",
+        "last_viewed_at": "2026-09-08T05:41:11+00:00",
+        "modified_at": "2026-09-08T05:41:11+00:00"
+      },
+      {
+        "index": 93,
+        "id": "733a6c21-f9fd-4ddc-8b76-4ef2491af17f",
+        "title": "Power Electronics - EE | GATE & ESE |",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:38:49+00:00",
+        "last_viewed_at": "2026-09-08T05:39:32+00:00",
+        "modified_at": "2026-09-08T05:39:32+00:00"
+      },
+      {
+        "index": 94,
+        "id": "491bc85d-9a1c-4504-bd74-a1c4c5c56508",
+        "title": "Engineering Mechanics 02 | Force | ME | Gate 2024 Series \u00b7 1:05:01",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:55+00:00",
+        "last_viewed_at": "2026-09-08T05:37:36+00:00",
+        "modified_at": "2026-09-08T05:37:36+00:00"
+      },
+      {
+        "index": 95,
+        "id": "a48b0b76-832a-4a6b-a6ef-370e14d3e37d",
+        "title": "One Chapter in 1 Hr | Power System Protection | Fast Revision for GATE-2021 | Electrical Engineering \u00b7 1:16:18",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:31+00:00",
+        "last_viewed_at": "2026-09-08T05:36:46+00:00",
+        "modified_at": "2026-09-08T05:36:46+00:00"
+      },
+      {
+        "index": 96,
+        "id": "44da3c4c-853d-4338-91ea-3840271e6b81",
+        "title": "Per Unit System - 1/ Concept | Lec - 2 | Power Systems | GATE/ESE Exam | Surendra Sir \u00b7 1:00:14",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:37:17+00:00",
+        "last_viewed_at": "2026-09-08T05:36:29+00:00",
+        "modified_at": "2026-09-08T05:36:29+00:00"
+      },
+      {
+        "index": 97,
+        "id": "174fbb11-6089-49bd-a9b7-0fe2ce37d34f",
+        "title": "Electrical Engineering Previous year papers",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:36:50+00:00",
+        "last_viewed_at": "2026-09-08T05:35:33+00:00",
+        "modified_at": "2026-09-08T05:35:33+00:00"
+      },
+      {
+        "index": 98,
+        "id": "d67a82b1-78da-4ed1-b13a-0cbbd58ab9c5",
+        "title": "Electrical & Electronics Engineering (EE & ECE) Free Online Coaching - GATE 2023, UPSC ESE Prelims 2023 & PSU (2022 & 2023) Exam Preparation",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:36:29+00:00",
+        "last_viewed_at": "2026-09-08T05:34:59+00:00",
+        "modified_at": "2026-09-08T05:34:59+00:00"
+      },
+      {
+        "index": 99,
+        "id": "02071eaa-b4bf-4d95-abcc-33ff7daa3c46",
+        "title": "Electrical",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:36:10+00:00",
+        "last_viewed_at": "2026-09-08T05:34:22+00:00",
+        "modified_at": "2026-09-08T05:34:22+00:00"
+      },
+      {
+        "index": 100,
+        "id": "8b8a1a4d-c91c-4e92-b86d-4bde1697394e",
+        "title": "Power System | Vishnu Sir | For GATE/ESE/ALL STATE AE/JE EXAM \u00b7 1:21:57",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:36:09+00:00",
+        "last_viewed_at": "2026-09-08T05:34:06+00:00",
+        "modified_at": "2026-09-08T05:34:06+00:00"
+      },
+      {
+        "index": 101,
+        "id": "55dfae88-e0ad-456f-bac2-1685b045068c",
+        "title": "Power Systems | GATE/ESE 2022 | EE/ECE/IN | Ashu Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:35:54+00:00",
+        "last_viewed_at": "2026-09-08T05:33:31+00:00",
+        "modified_at": "2026-09-08T05:33:31+00:00"
+      },
+      {
+        "index": 102,
+        "id": "7b9ef00f-b3fe-448d-af86-b5dc831efd4d",
+        "title": "Power Systems | Preparation Strategy | GATE EE 2018 | Nikhil Nakka \u00b7 17:26",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:35:38+00:00",
+        "last_viewed_at": "2026-09-08T05:33:16+00:00",
+        "modified_at": "2026-09-08T05:33:16+00:00"
+      },
+      {
+        "index": 103,
+        "id": "107d9444-99eb-44e7-b312-a3c325da0958",
+        "title": "EDC FOR ALL JE/AE ELECTRICAL/ELECTRONICS EXAM/GATE/ESE BY SHAILENDRA SIR",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:35:18+00:00",
+        "last_viewed_at": "2026-09-08T05:33:01+00:00",
+        "modified_at": "2026-09-08T05:33:01+00:00"
+      },
+      {
+        "index": 104,
+        "id": "a46042a9-a774-4b21-9c1e-447631d57b1e",
+        "title": "Basic Electrical Engineering By Ranjan Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:34:10+00:00",
+        "last_viewed_at": "2026-09-08T05:31:14+00:00",
+        "modified_at": "2026-09-08T05:31:14+00:00"
+      },
+      {
+        "index": 105,
+        "id": "32d54a04-8636-4cd1-ab7d-75858a79b35c",
+        "title": "Signal & System | EE, ECE, IN | GATE & ESE Crash Course 2026",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:33:58+00:00",
+        "last_viewed_at": "2026-09-08T05:30:40+00:00",
+        "modified_at": "2026-09-08T05:30:40+00:00"
+      },
+      {
+        "index": 106,
+        "id": "62e719dc-069b-48a2-99c1-8e46d16e790e",
+        "title": "BARC Exam | Score Booster for Electrical Engineering (EE)",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:33:51+00:00",
+        "last_viewed_at": "2026-09-08T05:30:23+00:00",
+        "modified_at": "2026-09-08T05:30:23+00:00"
+      },
+      {
+        "index": 107,
+        "id": "4ba8fa96-ecfe-4e83-8658-93d96b4a03c9",
+        "title": "50 Marks Series | Electrical (EE) & Electronics Engineering (ECE) Videos | GATE 2023 & UPSC ESE (IES) 2023 Exam | BYJU'S GATE Hindi",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:33:16+00:00",
+        "last_viewed_at": "2026-09-08T05:29:34+00:00",
+        "modified_at": "2026-09-08T05:29:34+00:00"
+      },
+      {
+        "index": 108,
+        "id": "f0e1ced3-7511-4113-8893-8cd22f1cc4e1",
+        "title": "Overview of Syllabus | Engineering Mathematics | Lec 1 | GATE/ESE 2021 Exam \u00b7 1:04:16",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:32:31+00:00",
+        "last_viewed_at": "2026-09-08T05:29:01+00:00",
+        "modified_at": "2026-09-08T05:29:01+00:00"
+      },
+      {
+        "index": 109,
+        "id": "5a387c55-1dfe-4383-a8b0-5bd34f1ad0d7",
+        "title": "L01 Engineering Mathematics | Basic concept of matrix & elements | UD Sir #gateacademy \u00b7 2:19:21",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:31:19+00:00",
+        "last_viewed_at": "2026-09-08T05:27:50+00:00",
+        "modified_at": "2026-09-08T05:27:50+00:00"
+      },
+      {
+        "index": 110,
+        "id": "d493de18-63a6-4829-8db7-4dda71d13861",
+        "title": "GATE 2026 Engineering Maths | Important Topics & Weightage | Detailed Analysis & Strategy \u00b7 18:28",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:31:00+00:00",
+        "last_viewed_at": "2026-09-08T05:27:32+00:00",
+        "modified_at": "2026-09-08T05:27:32+00:00"
+      },
+      {
+        "index": 111,
+        "id": "b279637e-3d65-4b8a-997b-a19fb82386f2",
+        "title": "GATE 2025 Engineering Mathematics | Big Surprise by GP Sir \u00b7 4:48",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:30:41+00:00",
+        "last_viewed_at": "2026-09-08T05:27:17+00:00",
+        "modified_at": "2026-09-08T05:27:17+00:00"
+      },
+      {
+        "index": 112,
+        "id": "8faf09c7-05da-4d18-b8d4-1cb88f6f455f",
+        "title": "Engineering Mathematics 15 | Probability & Statistics Part 03 | All Branch | GATE 2025 Crash Course \u00b7 3:07:59",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:30:28+00:00",
+        "last_viewed_at": "2026-09-08T05:26:58+00:00",
+        "modified_at": "2026-09-08T05:26:58+00:00"
+      },
+      {
+        "index": 113,
+        "id": "38c4df9e-9753-49a4-a896-1b0ffe47b9ca",
+        "title": "Engineering Mathematics 10 | Convergence & Divergence of Infinite Series | All Branch | GATE 2027 \u00b7 1:41:26",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:30:12+00:00",
+        "last_viewed_at": "2026-09-08T05:26:42+00:00",
+        "modified_at": "2026-09-08T05:26:42+00:00"
+      },
+      {
+        "index": 114,
+        "id": "470ccd47-c87a-46a0-95ea-0443fb69efae",
+        "title": "Electromagnetic Field Theory (EMFT) (in Hindi) | GATE 2023 & UPSC ESE (IES) - Engineering Services Prelims 2023 Electronics Engineering (ECE) Exam",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:29:57+00:00",
+        "last_viewed_at": "2026-09-08T05:26:27+00:00",
+        "modified_at": "2026-09-08T05:26:27+00:00"
+      },
+      {
+        "index": 115,
+        "id": "a6894926-db2a-485e-9ae8-34d6028ce867",
+        "title": "#02 | COORDINATE SYSTEM | Electromagnetic Theory By C.Karthik Sir | GATE/ESE/ 2022-23 BARC/ISRO \u00b7 1:34:33",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:29:44+00:00",
+        "last_viewed_at": "2026-09-08T05:26:11+00:00",
+        "modified_at": "2026-09-08T05:26:11+00:00"
+      },
+      {
+        "index": 116,
+        "id": "0cb50dd2-adcd-467a-a2c4-c059bdbea245",
+        "title": "\ud83d\udd251.1 Fundamental Concept of Rotating Machine Part-1 | Electrical Machine | by Mritunjay Sir \u00b7 38:17",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:29:27+00:00",
+        "last_viewed_at": "2026-09-08T05:25:55+00:00",
+        "modified_at": "2026-09-08T05:25:55+00:00"
+      },
+      {
+        "index": 117,
+        "id": "93bdcd18-8c4e-4b75-99d8-fd61e7733ace",
+        "title": "Types of Magnetic Materials | EP 1 | Electrical Machines Express | GATE/ESE 2022 \u00b7 9:30",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:29:14+00:00",
+        "last_viewed_at": "2026-09-08T05:25:39+00:00",
+        "modified_at": "2026-09-08T05:25:39+00:00"
+      },
+      {
+        "index": 118,
+        "id": "be184dc1-d4cf-4d22-baca-4579f791541a",
+        "title": "Transformers | RRB/SSC JE Exams 2019 | Prev. Years' Questions Discussion \u00b7 53:07",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:29:00+00:00",
+        "last_viewed_at": "2026-09-08T05:25:22+00:00",
+        "modified_at": "2026-09-08T05:25:22+00:00"
+      },
+      {
+        "index": 119,
+        "id": "4bbee478-2142-4a93-a827-d111766c2234",
+        "title": "Transformer Losses & Testing of Transformer | L:2 | Electrical Machines | GATE 2021 Crash Course \u00b7 2:09:25",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:28:43+00:00",
+        "last_viewed_at": "2026-09-08T05:25:06+00:00",
+        "modified_at": "2026-09-08T05:25:06+00:00"
+      },
+      {
+        "index": 120,
+        "id": "799838ad-818e-48e1-b767-7d49cebad4b8",
+        "title": "Transformer Equivalent Circuit & Vector Diagram Malayalam | Electrical Machines Animation \u00b7 4:22",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:28:26+00:00",
+        "last_viewed_at": "2026-09-08T05:24:50+00:00",
+        "modified_at": "2026-09-08T05:24:50+00:00"
+      },
+      {
+        "index": 121,
+        "id": "65fe9b85-3760-46d8-896b-f5b710027a3a",
+        "title": "Transformer - 2 | L:2 | Basic Electrical Engineering | ESE 2021 | Officers Batch | Varun Sir \u00b7 1:41:35",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:28:12+00:00",
+        "last_viewed_at": "2026-09-08T05:24:32+00:00",
+        "modified_at": "2026-09-08T05:24:32+00:00"
+      },
+      {
+        "index": 122,
+        "id": "e2980219-4534-4c40-bf7c-b4404fa01d83",
+        "title": "TRANSFORMER LECTURE-7 |GATE 2027 & ESE 2027, AE/JE | BTECH|ELECTRICAL ENGG #gate2027 #ese2027 #aeje \u00b7 0:00",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:27:58+00:00",
+        "last_viewed_at": "2026-09-08T05:24:16+00:00",
+        "modified_at": "2026-09-08T05:24:16+00:00"
+      },
+      {
+        "index": 123,
+        "id": "8ba70e0a-d897-4b09-81c0-6c225e220af4",
+        "title": "TRANSFORMER - BY TIKLE'S ACADEMY",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:27:39+00:00",
+        "last_viewed_at": "2026-09-08T05:24:00+00:00",
+        "modified_at": "2026-09-08T05:24:00+00:00"
+      },
+      {
+        "index": 124,
+        "id": "7560d9fe-9e78-4fff-b909-35cf13d8502f",
+        "title": "TRANSFORMER (ELECTRICAL MACHINE FOR GATE/IES/PSUs)",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:27:23+00:00",
+        "last_viewed_at": "2026-09-08T05:23:44+00:00",
+        "modified_at": "2026-09-08T05:23:44+00:00"
+      },
+      {
+        "index": 125,
+        "id": "31d5bd66-faec-4f27-aeec-31f72b6d1a8a",
+        "title": "Questions on Operating Principle of Transformer | Lec 2 | Electrical Machines | Bhanu Prakash Sir \u00b7 1:59:01",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:27:07+00:00",
+        "last_viewed_at": "2026-09-08T05:23:28+00:00",
+        "modified_at": "2026-09-08T05:23:28+00:00"
+      },
+      {
+        "index": 126,
+        "id": "7dd1bee5-67d7-43a3-8bce-414c28e54a20",
+        "title": "Preparation strategy| Electrical Machine by Bhanu sir | Dalton Batch | GATE 22 | EE IN \u00b7 1:38:51",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:26:48+00:00",
+        "last_viewed_at": "2026-09-08T05:23:13+00:00",
+        "modified_at": "2026-09-08T05:23:13+00:00"
+      },
+      {
+        "index": 127,
+        "id": "83ff213a-4141-41db-9c88-5019eaa4b3a7",
+        "title": "L2: Phase Sequence Concept | Electrical Machines | GATE/ESE 2022 | Ashu Sir \u00b7 1:32:04",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:26:32+00:00",
+        "last_viewed_at": "2026-09-08T05:22:56+00:00",
+        "modified_at": "2026-09-08T05:22:56+00:00"
+      },
+      {
+        "index": 128,
+        "id": "816660e2-93f5-4747-ae38-60109ab8954c",
+        "title": "Induction\u00a0Motor 01 \u2013 Formula Drill : GATE, ESE , PSU , State AE , JE\u00a0\u00a0EXAM | Master Formulas \u00b7 1:30:38",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:26:18+00:00",
+        "last_viewed_at": "2026-09-08T05:22:38+00:00",
+        "modified_at": "2026-09-08T05:22:38+00:00"
+      },
+      {
+        "index": 129,
+        "id": "129c936e-b059-4c4b-97b1-b04685e7db40",
+        "title": "Induction Machines Introduction | Electrical Machines | Lec 94 | GATE & ESE | Ankit Goyal \u00b7 49:08",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:25:59+00:00",
+        "last_viewed_at": "2026-09-08T05:22:23+00:00",
+        "modified_at": "2026-09-08T05:22:23+00:00"
+      },
+      {
+        "index": 130,
+        "id": "74380260-0537-4930-8113-86906ba78157",
+        "title": "Induction Machine: Special Cases of Rotating Magnetic Field | Electrical Machines l Mayank Sahu \u00b7 1:51:56",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:25:40+00:00",
+        "last_viewed_at": "2026-09-08T05:22:07+00:00",
+        "modified_at": "2026-09-08T05:22:07+00:00"
+      },
+      {
+        "index": 131,
+        "id": "3d10c685-7ebc-49a2-bf8f-dae88f445501",
+        "title": "Ideal Transformer | L 2 | Electrical Machines | Lakshya Batch | GATE/ESE 2022 | Varun Sir \u00b7 1:53:06",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:25:24+00:00",
+        "last_viewed_at": "2026-09-08T05:21:50+00:00",
+        "modified_at": "2026-09-08T05:21:50+00:00"
+      },
+      {
+        "index": 132,
+        "id": "015fbb6e-1fcf-4066-926f-0d70ec0aeb3c",
+        "title": "GATE 2026 Crash Course | Electrical Machines | Part 1| Magnetic Circuit | Mayank Sir \u00b7 1:51:10",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:25:08+00:00",
+        "last_viewed_at": "2026-09-08T05:21:35+00:00",
+        "modified_at": "2026-09-08T05:21:35+00:00"
+      },
+      {
+        "index": 133,
+        "id": "d25ec00a-b761-4aea-912e-970e2e2d8924",
+        "title": "GATE & ESE 2022 | Synchronous Machines Practice Session | Pitch Factor & Distribution Factor \u00b7 1:12:50",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:24:52+00:00",
+        "last_viewed_at": "2026-09-08T05:21:19+00:00",
+        "modified_at": "2026-09-08T05:21:19+00:00"
+      },
+      {
+        "index": 134,
+        "id": "9abf5c30-46d2-408c-81fa-ee0ef809631d",
+        "title": "Formula Drill of DC Machine for GATE, ESE , PSU , State AE , JE  EXAM Mayank Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:24:36+00:00",
+        "last_viewed_at": "2026-09-08T05:21:03+00:00",
+        "modified_at": "2026-09-08T05:21:03+00:00"
+      },
+      {
+        "index": 135,
+        "id": "c9b3b85c-1c97-46d0-9996-66783eb6bcfa",
+        "title": "Formula Drill Series For Synchronous Machine : GATE, ESE ,PSU , State AE , JE EXAM",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:24:18+00:00",
+        "last_viewed_at": "2026-09-08T05:20:45+00:00",
+        "modified_at": "2026-09-08T05:20:45+00:00"
+      },
+      {
+        "index": 136,
+        "id": "9122bace-7b02-4fd4-9033-13d8e655a3af",
+        "title": "Essential Concepts: Introduction To Induction Machines | GATE Electrical Machines \u00b7 7:04",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:24:03+00:00",
+        "last_viewed_at": "2026-09-08T05:20:30+00:00",
+        "modified_at": "2026-09-08T05:20:30+00:00"
+      },
+      {
+        "index": 137,
+        "id": "ed571858-2ba4-468b-900b-0af2015ec7e0",
+        "title": "Electrical Machines | Transformer | GATE/ESE/SSC Exam | LEC-2 \u00b7 58:56",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:23:46+00:00",
+        "last_viewed_at": "2026-09-08T05:20:14+00:00",
+        "modified_at": "2026-09-08T05:20:14+00:00"
+      },
+      {
+        "index": 138,
+        "id": "830b1cd7-b760-4b72-813f-2a14461c414b",
+        "title": "Electrical Machines | GATE/ESE 2022, 2023 | EE/ECE/IN | Free Electrical Machines Lecture | Ashu Sir",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:23:30+00:00",
+        "last_viewed_at": "2026-09-08T05:19:58+00:00",
+        "modified_at": "2026-09-08T05:19:58+00:00"
+      },
+      {
+        "index": 139,
+        "id": "ea5a9a1f-cf85-4469-a675-fe21510298b3",
+        "title": "Electrical Machines | GATE/ESE 2022 Exam | lecture (English) Electrical Engineering Transformer |",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:23:17+00:00",
+        "last_viewed_at": "2026-09-08T05:19:43+00:00",
+        "modified_at": "2026-09-08T05:19:43+00:00"
+      },
+      {
+        "index": 140,
+        "id": "f4e825a2-6a06-41b5-95e1-45d25f3b7f9f",
+        "title": "Electrical Machines by Anish Saha || GATE 2027 || English || PrepFusion || EE/IN",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:23:03+00:00",
+        "last_viewed_at": "2026-09-08T05:19:27+00:00",
+        "modified_at": "2026-09-08T05:19:27+00:00"
+      },
+      {
+        "index": 141,
+        "id": "60d2e891-5ad4-488e-ad80-c4a20b26f05f",
+        "title": "Electrical Machines (Hindi) | Numerical on Construction of Trans | Lecture-01 | E.E | Ravi Sinha Sir \u00b7 43:49",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:22:50+00:00",
+        "last_viewed_at": "2026-09-08T05:19:11+00:00",
+        "modified_at": "2026-09-08T05:19:11+00:00"
+      },
+      {
+        "index": 142,
+        "id": "dc63919f-ba62-4401-8129-8707a99362a3",
+        "title": "Electrical Machine | GATE 2023-24 Online Coaching | EE | Free Online Coaching | ESE 2023 |L-2 \u00b7 1:27:34",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:22:37+00:00",
+        "last_viewed_at": "2026-09-08T05:18:54+00:00",
+        "modified_at": "2026-09-08T05:18:54+00:00"
+      },
+      {
+        "index": 143,
+        "id": "5c161b2d-dca8-463a-81cb-337a83b11579",
+        "title": "DC Machines - Basic Electrical Engineering - First Year Engineering For GATE | ESE | IES | SSC JE | PSU",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:22:24+00:00",
+        "last_viewed_at": "2026-09-08T05:18:36+00:00",
+        "modified_at": "2026-09-08T05:18:36+00:00"
+      },
+      {
+        "index": 144,
+        "id": "1f77c4af-8db9-4d08-8097-d2708811d347",
+        "title": "Control Systems | GATE Electrical, Electronics and Instrumentation Engineering | Full Course - English",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:21:41+00:00",
+        "last_viewed_at": "2026-09-08T05:18:20+00:00",
+        "modified_at": "2026-09-08T05:18:20+00:00"
+      },
+      {
+        "index": 145,
+        "id": "68957c9d-8cf2-441d-b5c5-e20e73bd59a8",
+        "title": "Control Systems Engineering GATE ESE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:20:10+00:00",
+        "last_viewed_at": "2026-09-08T05:18:04+00:00",
+        "modified_at": "2026-09-08T05:18:04+00:00"
+      },
+      {
+        "index": 146,
+        "id": "3ab4ca10-3fef-482f-ad7e-c1360cb7f852",
+        "title": "Control Systems (Neso Academy)",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:18:38+00:00",
+        "last_viewed_at": "2026-09-08T05:17:47+00:00",
+        "modified_at": "2026-09-08T05:17:47+00:00"
+      },
+      {
+        "index": 147,
+        "id": "3850a4fe-97bd-4bcf-a9e9-a6fb4fd428e3",
+        "title": "Control System: EE & ECE | GATE Free Crash Course",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:12:44+00:00",
+        "last_viewed_at": "2026-09-08T05:15:33+00:00",
+        "modified_at": "2026-09-08T05:15:33+00:00"
+      },
+      {
+        "index": 148,
+        "id": "b31597fc-58e3-4923-a178-6217d838fdb3",
+        "title": "DC MACHINE FOR ALL  JE / AE ELECTRICAL EXAM/GATE / ESE BY GAURAV CHAUDHARY SIR  // Lucent Study YouTube channel electrical engineering",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:22:12+00:00",
+        "last_viewed_at": "2026-09-08T05:12:19+00:00",
+        "modified_at": "2026-09-08T05:12:19+00:00"
+      },
+      {
+        "index": 149,
+        "id": "12bf21d1-6caa-4ebc-a48f-122d7703a569",
+        "title": "#02 Basics of Rotating Machines Part 1 | Electrical Machine By Mayank Sir | GATE/ESE \u00b7 1:27:16",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-08T04:21:57+00:00",
+        "last_viewed_at": "2026-09-08T05:10:31+00:00",
+        "modified_at": "2026-09-08T05:10:31+00:00"
+      },
+      {
+        "index": 150,
+        "id": "26d8cac8-1054-48d1-9847-04f426da7184",
+        "title": "notebooklm",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-07T04:06:54+00:00",
+        "last_viewed_at": "2026-09-08T02:40:02+00:00",
+        "modified_at": "2026-09-08T02:40:02+00:00"
+      },
+      {
+        "index": 151,
+        "id": "7ae5e743-e5b2-43dc-a566-f1b43f7c4d38",
+        "title": "REDDIT SCRAPPER",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-06T23:43:33+00:00",
+        "last_viewed_at": "2026-09-06T23:43:41+00:00",
+        "modified_at": "2026-09-06T23:43:41+00:00"
+      },
+      {
+        "index": 152,
+        "id": "cc843eb9-2b71-4673-91d5-0520ce926f1c",
+        "title": "\u26a1 VOLTAGE REGULATION (ALL 100 TEACHERS MASTERCLASS: EE_GM_002)",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-06T05:14:10+00:00",
+        "last_viewed_at": "2026-09-06T10:37:32+00:00",
+        "modified_at": "2026-09-06T10:37:32+00:00"
+      },
+      {
+        "index": 153,
+        "id": "059e52c5-60fb-455d-8b1c-e8e9fced47fd",
+        "title": "ssc je electrical strategy 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-04T03:21:17+00:00",
+        "last_viewed_at": "2026-09-04T03:39:41+00:00",
+        "modified_at": "2026-09-04T03:39:41+00:00"
+      },
+      {
+        "index": 154,
+        "id": "f14b5369-6431-4b96-9685-5656141fb683",
+        "title": "ssc je electrical strategy 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-09-04T03:19:25+00:00",
+        "last_viewed_at": "2026-09-04T03:39:03+00:00",
+        "modified_at": "2026-09-04T03:39:03+00:00"
+      },
+      {
+        "index": 155,
+        "id": "f997893a-d808-4694-8f98-e46c33c9033c",
+        "title": "PERSONAL",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-07T11:45:56+00:00",
+        "last_viewed_at": "2026-09-02T08:39:30+00:00",
+        "modified_at": "2026-09-02T08:39:30+00:00"
+      },
+      {
+        "index": 156,
+        "id": "f74a3979-3efa-4af8-aac3-f820535235ca",
+        "title": "emft pyq",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-10T07:38:12+00:00",
+        "last_viewed_at": "2026-09-02T08:39:29+00:00",
+        "modified_at": "2026-09-02T08:39:29+00:00"
+      },
+      {
+        "index": 157,
+        "id": "f6414de6-4ab8-4fed-bcab-c267656432c7",
+        "title": "digital electronics",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-06-14T12:05:40+00:00",
+        "last_viewed_at": "2026-09-02T08:39:28+00:00",
+        "modified_at": "2026-09-02T08:39:28+00:00"
+      },
+      {
+        "index": 158,
+        "id": "f1c0c46c-0e3e-4342-9a38-91e2b46e084c",
+        "title": "ai automation",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-27T01:55:39+00:00",
+        "last_viewed_at": "2026-09-02T08:39:27+00:00",
+        "modified_at": "2026-09-02T08:39:27+00:00"
+      },
+      {
+        "index": 159,
+        "id": "f0eb1262-292c-415b-a830-a97de4e3170b",
+        "title": "n8n_ak",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T11:05:15+00:00",
+        "last_viewed_at": "2026-09-02T08:39:26+00:00",
+        "modified_at": "2026-09-02T08:39:26+00:00"
+      },
+      {
+        "index": 160,
+        "id": "ec320017-abd0-40b1-8a0d-7a1f3a80bc3b",
+        "title": "current affairs",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-07-05T04:30:19+00:00",
+        "last_viewed_at": "2026-09-02T08:39:25+00:00",
+        "modified_at": "2026-09-02T08:39:25+00:00"
+      },
+      {
+        "index": 161,
+        "id": "ea1afc07-0531-4e9c-bfd8-f86576d1f5e7",
+        "title": "POWER SYSTEM PYQ",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-12T12:51:04+00:00",
+        "last_viewed_at": "2026-09-02T08:39:24+00:00",
+        "modified_at": "2026-09-02T08:39:24+00:00"
+      },
+      {
+        "index": 162,
+        "id": "24e2694a-c3af-480c-b4ae-b38233090e54",
+        "title": "ENGINEERING MATHEMATICS",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-06-23T08:39:44+00:00",
+        "last_viewed_at": "2026-09-02T08:39:23+00:00",
+        "modified_at": "2026-09-02T08:39:23+00:00"
+      },
+      {
+        "index": 163,
+        "id": "e9cb9286-4ae9-4924-be37-1ff3034979c9",
+        "title": "electrical pyq 7",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T08:13:06+00:00",
+        "last_viewed_at": "2026-09-02T08:39:23+00:00",
+        "modified_at": "2026-09-02T08:39:23+00:00"
+      },
+      {
+        "index": 164,
+        "id": "44afc72c-5794-4d18-82ab-a9b6dc7f3e34",
+        "title": "engineering maths",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-04T11:15:26+00:00",
+        "last_viewed_at": "2026-09-02T08:39:22+00:00",
+        "modified_at": "2026-09-02T08:39:22+00:00"
+      },
+      {
+        "index": 165,
+        "id": "e519a9bc-9c52-44cb-bf7b-bb99899412fa",
+        "title": "edtech",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:32:11+00:00",
+        "last_viewed_at": "2026-09-02T08:39:22+00:00",
+        "modified_at": "2026-09-02T08:39:22+00:00"
+      },
+      {
+        "index": 166,
+        "id": "e44b0549-5697-4033-9959-2a0791e37230",
+        "title": "obsidian",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T22:23:07+00:00",
+        "last_viewed_at": "2026-09-02T08:39:21+00:00",
+        "modified_at": "2026-09-02T08:39:21+00:00"
+      },
+      {
+        "index": 167,
+        "id": "c74c896d-e94f-4b41-b150-b2a4e22c7764",
+        "title": "electrical pyq 6",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T08:08:13+00:00",
+        "last_viewed_at": "2026-09-02T08:39:21+00:00",
+        "modified_at": "2026-09-02T08:39:21+00:00"
+      },
+      {
+        "index": 168,
+        "id": "e410e785-e72b-4552-9211-3ff794e104d8",
+        "title": "computer network",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T04:02:00+00:00",
+        "last_viewed_at": "2026-09-02T08:39:20+00:00",
+        "modified_at": "2026-09-02T08:39:20+00:00"
+      },
+      {
+        "index": 169,
+        "id": "80691fb2-fd1b-41e2-b459-f196f3681d15",
+        "title": "electrical machine",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-13T16:43:33+00:00",
+        "last_viewed_at": "2026-09-02T08:39:20+00:00",
+        "modified_at": "2026-09-02T08:39:20+00:00"
+      },
+      {
+        "index": 170,
+        "id": "e3db04c8-1aa1-4dd9-a4e5-98cf78fe2caf",
+        "title": "BITNET",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T03:08:32+00:00",
+        "last_viewed_at": "2026-09-02T08:39:19+00:00",
+        "modified_at": "2026-09-02T08:39:19+00:00"
+      },
+      {
+        "index": 171,
+        "id": "26986749-294f-4b3c-aa6d-e328bf14333b",
+        "title": "electrical pyq 5",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T08:03:25+00:00",
+        "last_viewed_at": "2026-09-02T08:39:19+00:00",
+        "modified_at": "2026-09-02T08:39:19+00:00"
+      },
+      {
+        "index": 172,
+        "id": "e2ce034f-1e86-489b-a93e-d7513a02e80e",
+        "title": "digital electronics pyq",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-09T20:53:34+00:00",
+        "last_viewed_at": "2026-09-02T08:39:18+00:00",
+        "modified_at": "2026-09-02T08:39:18+00:00"
+      },
+      {
+        "index": 173,
+        "id": "82dec5fc-0355-4ef7-913b-7528378ca0e6",
+        "title": "MEASUREMENT PYQ",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-11T19:02:12+00:00",
+        "last_viewed_at": "2026-09-02T08:39:18+00:00",
+        "modified_at": "2026-09-02T08:39:18+00:00"
+      },
+      {
+        "index": 174,
+        "id": "e0a6ac5c-d7e9-40e6-bbf4-c0b2352927e6",
+        "title": "gamification edtech",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T22:31:42+00:00",
+        "last_viewed_at": "2026-09-02T08:39:17+00:00",
+        "modified_at": "2026-09-02T08:39:17+00:00"
+      },
+      {
+        "index": 175,
+        "id": "369d1f45-1910-4427-940f-516514b86944",
+        "title": "DESIGN DRAWING AND SAFETY",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-09T11:46:31+00:00",
+        "last_viewed_at": "2026-09-02T08:39:17+00:00",
+        "modified_at": "2026-09-02T08:39:17+00:00"
+      },
+      {
+        "index": 176,
+        "id": "dc49d45a-e453-4588-a886-785ff72b566d",
+        "title": "PYTORCH 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T03:31:29+00:00",
+        "last_viewed_at": "2026-09-02T08:39:16+00:00",
+        "modified_at": "2026-09-02T08:39:16+00:00"
+      },
+      {
+        "index": 177,
+        "id": "adcc117a-530c-4dd0-a629-d56460a121df",
+        "title": "mp mc",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-07T18:59:42+00:00",
+        "last_viewed_at": "2026-09-02T08:39:16+00:00",
+        "modified_at": "2026-09-02T08:39:16+00:00"
+      },
+      {
+        "index": 178,
+        "id": "dc0d6f80-1da4-418c-8b3a-e9f95e6c0219",
+        "title": "NETWORK THEORY PYQ",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-12T12:53:49+00:00",
+        "last_viewed_at": "2026-09-02T08:39:15+00:00",
+        "modified_at": "2026-09-02T08:39:15+00:00"
+      },
+      {
+        "index": 179,
+        "id": "2d43a110-b1b0-446c-ad6c-991f20d774a0",
+        "title": "Single Phase Half Wave Rectifier Power Electronics Lecture",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-07-10T05:24:02+00:00",
+        "last_viewed_at": "2026-09-02T08:39:15+00:00",
+        "modified_at": "2026-09-02T08:39:15+00:00"
+      },
+      {
+        "index": 180,
+        "id": "d7d32e64-c43f-481e-a8cc-9c57229fd5fc",
+        "title": "00_MIGL_OS_SOVEREIGN_AI_BRAIN_TRIAD",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-27T10:25:03+00:00",
+        "last_viewed_at": "2026-09-02T08:39:14+00:00",
+        "modified_at": "2026-09-02T08:39:14+00:00"
+      },
+      {
+        "index": 181,
+        "id": "a884b59b-9256-419e-a6d5-261fde9f6797",
+        "title": "network",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-14T16:12:06+00:00",
+        "last_viewed_at": "2026-09-02T08:39:14+00:00",
+        "modified_at": "2026-09-02T08:39:14+00:00"
+      },
+      {
+        "index": 182,
+        "id": "07a363f4-e107-40d0-a3f3-280cec1fd50d",
+        "title": "MATERIAL SCIENCE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-08T17:04:43+00:00",
+        "last_viewed_at": "2026-09-02T08:39:13+00:00",
+        "modified_at": "2026-09-02T08:39:13+00:00"
+      },
+      {
+        "index": 183,
+        "id": "d76dac86-686f-4138-b030-be51196e697b",
+        "title": "meta cognition",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T22:39:20+00:00",
+        "last_viewed_at": "2026-09-02T08:39:13+00:00",
+        "modified_at": "2026-09-02T08:39:13+00:00"
+      },
+      {
+        "index": 184,
+        "id": "d527bfd7-a07f-42f0-a181-ad3749064b50",
+        "title": "LITE LLM",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-26T00:28:26+00:00",
+        "last_viewed_at": "2026-09-02T08:39:11+00:00",
+        "modified_at": "2026-09-02T08:39:11+00:00"
+      },
+      {
+        "index": 185,
+        "id": "27094640-56f2-4736-9ce3-6c4fd56e501d",
+        "title": "ENERGY ENVIRONMENT",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-09T09:14:43+00:00",
+        "last_viewed_at": "2026-09-02T08:39:10+00:00",
+        "modified_at": "2026-09-02T08:39:10+00:00"
+      },
+      {
+        "index": 186,
+        "id": "c6e68254-c35b-4fff-9d20-513306a651f3",
+        "title": "analog electronics",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-07T16:31:19+00:00",
+        "last_viewed_at": "2026-09-02T08:39:09+00:00",
+        "modified_at": "2026-09-02T08:39:09+00:00"
+      },
+      {
+        "index": 187,
+        "id": "ac7020b0-74bb-4ce3-82a9-2f3bc0878918",
+        "title": "signal and system",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-06-12T16:29:52+00:00",
+        "last_viewed_at": "2026-09-02T08:39:09+00:00",
+        "modified_at": "2026-09-02T08:39:09+00:00"
+      },
+      {
+        "index": 188,
+        "id": "838a117f-1df5-418c-85f3-40a07f9d86c2",
+        "title": "electrical pyq 8",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T08:15:59+00:00",
+        "last_viewed_at": "2026-09-02T08:39:08+00:00",
+        "modified_at": "2026-09-02T08:39:08+00:00"
+      },
+      {
+        "index": 189,
+        "id": "c68df247-9fb7-4687-b3b6-de3653b35d6d",
+        "title": "openclaw_2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-21T00:33:35+00:00",
+        "last_viewed_at": "2026-09-02T08:39:08+00:00",
+        "modified_at": "2026-09-02T08:39:08+00:00"
+      },
+      {
+        "index": 190,
+        "id": "3e705f59-f156-40dc-a28a-e56823921ba0",
+        "title": "ELECTRICAL MACHINE PYQ",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-12T12:46:53+00:00",
+        "last_viewed_at": "2026-09-02T08:39:07+00:00",
+        "modified_at": "2026-09-02T08:39:07+00:00"
+      },
+      {
+        "index": 191,
+        "id": "c6491ae4-5269-4337-af8d-2988ee3890c7",
+        "title": "gemini spark",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T05:40:10+00:00",
+        "last_viewed_at": "2026-09-02T08:39:06+00:00",
+        "modified_at": "2026-09-02T08:39:06+00:00"
+      },
+      {
+        "index": 192,
+        "id": "0dad881b-9c0e-487c-85fe-cd2c297530e2",
+        "title": "gk, gs, ga",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-07-05T04:27:06+00:00",
+        "last_viewed_at": "2026-09-02T08:39:06+00:00",
+        "modified_at": "2026-09-02T08:39:06+00:00"
+      },
+      {
+        "index": 193,
+        "id": "c4adcdbe-9c0b-496a-844a-1d131619d0c3",
+        "title": "rust",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T01:54:37+00:00",
+        "last_viewed_at": "2026-09-02T08:39:05+00:00",
+        "modified_at": "2026-09-02T08:39:05+00:00"
+      },
+      {
+        "index": 194,
+        "id": "bece7bfd-3417-45f3-b701-397a245d1f97",
+        "title": "silchar",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:42:39+00:00",
+        "last_viewed_at": "2026-09-02T08:39:04+00:00",
+        "modified_at": "2026-09-02T08:39:04+00:00"
+      },
+      {
+        "index": 195,
+        "id": "00476d09-d6ac-42d8-8163-fd055ad09095",
+        "title": "control system",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-06-12T09:58:26+00:00",
+        "last_viewed_at": "2026-09-02T08:39:04+00:00",
+        "modified_at": "2026-09-02T08:39:04+00:00"
+      },
+      {
+        "index": 196,
+        "id": "be58ef65-c3d3-4ddc-ab5d-f8c4557c6862",
+        "title": "DATABASE ENGINEERING",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:49:15+00:00",
+        "last_viewed_at": "2026-09-02T08:39:03+00:00",
+        "modified_at": "2026-09-02T08:39:03+00:00"
+      },
+      {
+        "index": 197,
+        "id": "718bbe92-464c-497a-8976-a3a00bcdfb56",
+        "title": "power system ankit goyal",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-05T15:49:46+00:00",
+        "last_viewed_at": "2026-09-02T08:39:03+00:00",
+        "modified_at": "2026-09-02T08:39:03+00:00"
+      },
+      {
+        "index": 198,
+        "id": "bb525b44-b2e8-4490-b232-a0240a2f46a8",
+        "title": "hailakandi",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:46:57+00:00",
+        "last_viewed_at": "2026-09-02T08:39:02+00:00",
+        "modified_at": "2026-09-02T08:39:02+00:00"
+      },
+      {
+        "index": 199,
+        "id": "55bacdd0-fc9e-4f0a-b9a1-7359b0495373",
+        "title": "measurement",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-14T06:58:03+00:00",
+        "last_viewed_at": "2026-09-02T08:39:02+00:00",
+        "modified_at": "2026-09-02T08:39:02+00:00"
+      },
+      {
+        "index": 200,
+        "id": "b8a8f066-81e3-4415-980b-263f4488c8c4",
+        "title": "english",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-06T17:17:40+00:00",
+        "last_viewed_at": "2026-09-02T08:39:01+00:00",
+        "modified_at": "2026-09-02T08:39:01+00:00"
+      },
+      {
+        "index": 201,
+        "id": "8c450df5-2d2a-4cba-bce5-6603888a4e69",
+        "title": "cil",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-07-05T05:10:47+00:00",
+        "last_viewed_at": "2026-09-02T08:39:01+00:00",
+        "modified_at": "2026-09-02T08:39:01+00:00"
+      },
+      {
+        "index": 202,
+        "id": "b73b6bb0-d8a0-4ae0-bc1d-8f199bb18ae1",
+        "title": "PYTORCH 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T03:34:01+00:00",
+        "last_viewed_at": "2026-09-02T08:39:00+00:00",
+        "modified_at": "2026-09-02T08:39:00+00:00"
+      },
+      {
+        "index": 203,
+        "id": "6033a73c-e908-4847-a0b3-61b9ac1bbdbf",
+        "title": "utilization of electrical energy",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-06-15T18:23:15+00:00",
+        "last_viewed_at": "2026-09-02T08:39:00+00:00",
+        "modified_at": "2026-09-02T08:39:00+00:00"
+      },
+      {
+        "index": 204,
+        "id": "b5fcadb4-e09d-4e00-ab81-6192fd369322",
+        "title": "SIMD 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:56:40+00:00",
+        "last_viewed_at": "2026-09-02T08:38:59+00:00",
+        "modified_at": "2026-09-02T08:38:59+00:00"
+      },
+      {
+        "index": 205,
+        "id": "b5d3ec1c-a105-42c1-b9ae-247cf56770f8",
+        "title": "rag vector",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T02:58:47+00:00",
+        "last_viewed_at": "2026-09-02T08:38:58+00:00",
+        "modified_at": "2026-09-02T08:38:58+00:00"
+      },
+      {
+        "index": 206,
+        "id": "b4a8deb3-7fa8-4af2-8935-ef02cb596d6f",
+        "title": "aider",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T01:23:16+00:00",
+        "last_viewed_at": "2026-09-02T08:38:57+00:00",
+        "modified_at": "2026-09-02T08:38:57+00:00"
+      },
+      {
+        "index": 207,
+        "id": "b336530f-7dd3-41e7-8f0c-83a93a87e9af",
+        "title": "zig 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:47:21+00:00",
+        "last_viewed_at": "2026-09-02T08:38:56+00:00",
+        "modified_at": "2026-09-02T08:38:56+00:00"
+      },
+      {
+        "index": 208,
+        "id": "afc55423-53df-4338-969a-c5c22e478957",
+        "title": "terminal",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T04:45:25+00:00",
+        "last_viewed_at": "2026-09-02T08:38:55+00:00",
+        "modified_at": "2026-09-02T08:38:55+00:00"
+      },
+      {
+        "index": 209,
+        "id": "710ab6e2-2488-4c18-aee8-f05f5d92bad1",
+        "title": "CONTROL SYSTEM PYQ",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-11T08:45:41+00:00",
+        "last_viewed_at": "2026-09-02T08:38:55+00:00",
+        "modified_at": "2026-09-02T08:38:55+00:00"
+      },
+      {
+        "index": 210,
+        "id": "af299030-c02f-42c2-a878-061228841c4a",
+        "title": "HERMES LAST WEEK",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-25T08:22:09+00:00",
+        "last_viewed_at": "2026-09-02T08:38:54+00:00",
+        "modified_at": "2026-09-02T08:38:54+00:00"
+      },
+      {
+        "index": 211,
+        "id": "5fd715fb-2059-4289-a5ea-12ff8a18cbf8",
+        "title": "8085 Microprocessor Essentials: Comprehensive Architecture and Programming Guide",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-07T15:30:48+00:00",
+        "last_viewed_at": "2026-09-02T08:38:54+00:00",
+        "modified_at": "2026-09-02T08:38:54+00:00"
+      },
+      {
+        "index": 212,
+        "id": "02d31caa-d221-4246-9ee8-2759cdb3c441",
+        "title": "electrical pyq 3",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T07:53:19+00:00",
+        "last_viewed_at": "2026-09-02T08:38:52+00:00",
+        "modified_at": "2026-09-02T08:38:52+00:00"
+      },
+      {
+        "index": 213,
+        "id": "ad2d285a-5670-4b84-99cd-8540b30f456f",
+        "title": "llm   research",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T05:49:30+00:00",
+        "last_viewed_at": "2026-09-02T08:38:51+00:00",
+        "modified_at": "2026-09-02T08:38:51+00:00"
+      },
+      {
+        "index": 214,
+        "id": "20cfadf2-1200-4cec-9955-b1c8b53eee27",
+        "title": "emft",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-14T08:56:44+00:00",
+        "last_viewed_at": "2026-09-02T08:38:51+00:00",
+        "modified_at": "2026-09-02T08:38:51+00:00"
+      },
+      {
+        "index": 215,
+        "id": "6f1ec111-a5d5-4578-86e4-755d2ece7dcf",
+        "title": "power electronics",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-04-02T12:43:22+00:00",
+        "last_viewed_at": "2026-09-02T08:38:50+00:00",
+        "modified_at": "2026-09-02T08:38:50+00:00"
+      },
+      {
+        "index": 216,
+        "id": "a9a6dc6c-0885-4218-b682-cf4e25de6cc6",
+        "title": "llama.cpp",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:59:37+00:00",
+        "last_viewed_at": "2026-09-02T08:38:49+00:00",
+        "modified_at": "2026-09-02T08:38:49+00:00"
+      },
+      {
+        "index": 217,
+        "id": "885d3866-d85f-4844-a228-1dc9d6e62592",
+        "title": "POWER ELECTRONICS PYQ",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-11T13:51:29+00:00",
+        "last_viewed_at": "2026-09-02T08:38:49+00:00",
+        "modified_at": "2026-09-02T08:38:49+00:00"
+      },
+      {
+        "index": 218,
+        "id": "a996b096-30f6-4561-be4b-2cc5d1d3a543",
+        "title": "SIMD 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:55:07+00:00",
+        "last_viewed_at": "2026-09-02T08:38:48+00:00",
+        "modified_at": "2026-09-02T08:38:48+00:00"
+      },
+      {
+        "index": 219,
+        "id": "59b8b74d-80a0-49e0-8706-0cc444ee73ec",
+        "title": "utilization of electrical energy 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-06-28T08:35:14+00:00",
+        "last_viewed_at": "2026-09-02T08:38:48+00:00",
+        "modified_at": "2026-09-02T08:38:48+00:00"
+      },
+      {
+        "index": 220,
+        "id": "a81f25b9-84d3-489f-8382-82bf95b47c2b",
+        "title": "hermes_1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-21T00:24:06+00:00",
+        "last_viewed_at": "2026-09-02T08:38:46+00:00",
+        "modified_at": "2026-09-02T08:38:46+00:00"
+      },
+      {
+        "index": 221,
+        "id": "33c1c2ab-93f6-4a2d-8062-c3665ee3aca0",
+        "title": "signal and system pyq",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-09T19:04:32+00:00",
+        "last_viewed_at": "2026-09-02T08:38:46+00:00",
+        "modified_at": "2026-09-02T08:38:46+00:00"
+      },
+      {
+        "index": 222,
+        "id": "a7f10d3f-dc2d-4ef8-8f2a-16d9c11c2b51",
+        "title": "patharkandi",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:49:03+00:00",
+        "last_viewed_at": "2026-09-02T08:38:45+00:00",
+        "modified_at": "2026-09-02T08:38:45+00:00"
+      },
+      {
+        "index": 223,
+        "id": "a7767e3d-3bc4-4c9b-a949-f25f006b8516",
+        "title": "seo",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T02:05:15+00:00",
+        "last_viewed_at": "2026-09-02T08:38:44+00:00",
+        "modified_at": "2026-09-02T08:38:44+00:00"
+      },
+      {
+        "index": 224,
+        "id": "a40664f1-d46d-4740-8c2d-e87db2587343",
+        "title": "ip  address",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T03:54:10+00:00",
+        "last_viewed_at": "2026-09-02T08:38:43+00:00",
+        "modified_at": "2026-09-02T08:38:43+00:00"
+      },
+      {
+        "index": 225,
+        "id": "9a3eb87e-c6e8-408e-8230-273e0d4838d1",
+        "title": "agentic ai",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T02:03:05+00:00",
+        "last_viewed_at": "2026-09-02T08:38:42+00:00",
+        "modified_at": "2026-09-02T08:38:42+00:00"
+      },
+      {
+        "index": 226,
+        "id": "98d0b585-62ea-4a52-9654-2592e317b9a2",
+        "title": "n8n dui",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T11:08:11+00:00",
+        "last_viewed_at": "2026-09-02T08:38:41+00:00",
+        "modified_at": "2026-09-02T08:38:41+00:00"
+      },
+      {
+        "index": 227,
+        "id": "974a24ac-19db-414f-bfe0-8359f38abd50",
+        "title": "hermes_2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-21T00:27:04+00:00",
+        "last_viewed_at": "2026-09-02T08:38:40+00:00",
+        "modified_at": "2026-09-02T08:38:40+00:00"
+      },
+      {
+        "index": 228,
+        "id": "944a3630-ad36-4d48-9fc1-01952d4f8749",
+        "title": "barak valley",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:50:59+00:00",
+        "last_viewed_at": "2026-09-02T08:38:39+00:00",
+        "modified_at": "2026-09-02T08:38:39+00:00"
+      },
+      {
+        "index": 229,
+        "id": "9388aed8-e698-401a-b04d-ca3857da99ce",
+        "title": "fund raising",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T02:07:56+00:00",
+        "last_viewed_at": "2026-09-02T08:38:38+00:00",
+        "modified_at": "2026-09-02T08:38:38+00:00"
+      },
+      {
+        "index": 230,
+        "id": "92c07564-3ac2-4592-be42-7c6ec10c46d6",
+        "title": "voice ai",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:54:03+00:00",
+        "last_viewed_at": "2026-09-02T08:38:37+00:00",
+        "modified_at": "2026-09-02T08:38:37+00:00"
+      },
+      {
+        "index": 231,
+        "id": "59b51d9b-5a0e-4d70-81b3-bea05940a78c",
+        "title": "electrical pyq 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T07:51:41+00:00",
+        "last_viewed_at": "2026-09-02T08:38:37+00:00",
+        "modified_at": "2026-09-02T08:38:37+00:00"
+      },
+      {
+        "index": 232,
+        "id": "5e2ba349-3832-4738-8e67-1c17e640aac0",
+        "title": "QUANT",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-12T18:38:41+00:00",
+        "last_viewed_at": "2026-09-02T08:38:36+00:00",
+        "modified_at": "2026-09-02T08:38:36+00:00"
+      },
+      {
+        "index": 233,
+        "id": "91696b29-7341-4ca8-b762-a3d3ae73608f",
+        "title": "POLYMATH",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-28T00:15:01+00:00",
+        "last_viewed_at": "2026-09-02T08:38:36+00:00",
+        "modified_at": "2026-09-02T08:38:36+00:00"
+      },
+      {
+        "index": 234,
+        "id": "914af82f-2fc7-47ce-ba17-9298bc370d3f",
+        "title": "web scrapping",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:21:56+00:00",
+        "last_viewed_at": "2026-09-02T08:38:35+00:00",
+        "modified_at": "2026-09-02T08:38:35+00:00"
+      },
+      {
+        "index": 235,
+        "id": "8fefbe30-b106-4065-bc06-652bcaf41a6b",
+        "title": "machine learning research",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T05:45:05+00:00",
+        "last_viewed_at": "2026-09-02T08:38:34+00:00",
+        "modified_at": "2026-09-02T08:38:34+00:00"
+      },
+      {
+        "index": 236,
+        "id": "8e652548-96fa-40dd-a05a-7c146f170a70",
+        "title": "google workspace",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T04:59:41+00:00",
+        "last_viewed_at": "2026-09-02T08:38:33+00:00",
+        "modified_at": "2026-09-02T08:38:33+00:00"
+      },
+      {
+        "index": 237,
+        "id": "30fdb51b-3a35-4812-8964-890d78e01c8f",
+        "title": "electrical pyq 4",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T07:58:53+00:00",
+        "last_viewed_at": "2026-09-02T08:38:33+00:00",
+        "modified_at": "2026-09-02T08:38:33+00:00"
+      },
+      {
+        "index": 238,
+        "id": "4b166ff5-0572-4bfe-8b47-afd96125a592",
+        "title": "electrical pyq",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-08T07:49:59+00:00",
+        "last_viewed_at": "2026-09-02T08:38:32+00:00",
+        "modified_at": "2026-09-02T08:38:32+00:00"
+      },
+      {
+        "index": 239,
+        "id": "88dec3a9-e4f0-4e62-bdc4-e6be4811690c",
+        "title": "deepseek harness",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-21T00:35:07+00:00",
+        "last_viewed_at": "2026-09-02T08:38:31+00:00",
+        "modified_at": "2026-09-02T08:38:31+00:00"
+      },
+      {
+        "index": 240,
+        "id": "0ff37779-09ae-43fa-aaf0-4d23c7211797",
+        "title": "analog pyq",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-05-09T06:39:43+00:00",
+        "last_viewed_at": "2026-09-02T08:38:29+00:00",
+        "modified_at": "2026-09-02T08:38:29+00:00"
+      },
+      {
+        "index": 241,
+        "id": "17d7a0c0-bb53-497f-87e0-9306f7711c12",
+        "title": "raw only",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T09:18:04+00:00",
+        "last_viewed_at": "2026-09-02T08:38:27+00:00",
+        "modified_at": "2026-09-02T08:38:27+00:00"
+      },
+      {
+        "index": 242,
+        "id": "824eaa1b-fb5b-4954-9437-73603d097df9",
+        "title": "OPENCODE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-25T18:49:12+00:00",
+        "last_viewed_at": "2026-09-02T08:38:26+00:00",
+        "modified_at": "2026-09-02T08:38:26+00:00"
+      },
+      {
+        "index": 243,
+        "id": "811e9068-b4d0-47e6-bf89-09eda0cbd771",
+        "title": "LOGIN",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T12:05:13+00:00",
+        "last_viewed_at": "2026-09-02T08:38:25+00:00",
+        "modified_at": "2026-09-02T08:38:25+00:00"
+      },
+      {
+        "index": 244,
+        "id": "6fb34ac3-dde8-4216-848e-f6c3f966fa7a",
+        "title": "ml prediction",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T23:01:38+00:00",
+        "last_viewed_at": "2026-09-02T08:38:24+00:00",
+        "modified_at": "2026-09-02T08:38:24+00:00"
+      },
+      {
+        "index": 245,
+        "id": "7b3e5c2b-34c9-4eb2-b309-7006f41226b1",
+        "title": "PYTHON  1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T03:17:03+00:00",
+        "last_viewed_at": "2026-09-02T08:38:23+00:00",
+        "modified_at": "2026-09-02T08:38:23+00:00"
+      },
+      {
+        "index": 246,
+        "id": "4331e0eb-7c5e-4905-862f-4b5d62ad796e",
+        "title": "ai startup",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-05T13:50:54+00:00",
+        "last_viewed_at": "2026-09-02T08:38:22+00:00",
+        "modified_at": "2026-09-02T08:38:22+00:00"
+      },
+      {
+        "index": 247,
+        "id": "77a621b0-ae53-47cc-9431-643d2d85e78c",
+        "title": "BIOHACKING",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T07:26:47+00:00",
+        "last_viewed_at": "2026-09-02T08:38:22+00:00",
+        "modified_at": "2026-09-02T08:38:22+00:00"
+      },
+      {
+        "index": 248,
+        "id": "777b1fe2-08c5-4458-b033-952fb67a77f3",
+        "title": "claud code",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-05T12:35:14+00:00",
+        "last_viewed_at": "2026-09-02T08:38:21+00:00",
+        "modified_at": "2026-09-02T08:38:21+00:00"
+      },
+      {
+        "index": 249,
+        "id": "733435ae-c685-45dd-99f2-5f8cf025c532",
+        "title": "distributed system",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T22:26:48+00:00",
+        "last_viewed_at": "2026-09-02T08:38:21+00:00",
+        "modified_at": "2026-09-02T08:38:21+00:00"
+      },
+      {
+        "index": 250,
+        "id": "74338f50-7e5d-4206-945b-b86d10702b08",
+        "title": "qwen cli",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-21T00:37:07+00:00",
+        "last_viewed_at": "2026-09-02T08:38:20+00:00",
+        "modified_at": "2026-09-02T08:38:20+00:00"
+      },
+      {
+        "index": 251,
+        "id": "2fe8cbe5-960e-475e-ab08-64e7eda16f90",
+        "title": "anti gravity",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-05T12:46:20+00:00",
+        "last_viewed_at": "2026-09-02T08:38:18+00:00",
+        "modified_at": "2026-09-02T08:38:18+00:00"
+      },
+      {
+        "index": 252,
+        "id": "708d4be8-3c3b-4402-b6ed-3c5c82d4c0eb",
+        "title": "NOBEL PRIZE 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T18:36:56+00:00",
+        "last_viewed_at": "2026-09-02T08:38:15+00:00",
+        "modified_at": "2026-09-02T08:38:15+00:00"
+      },
+      {
+        "index": 253,
+        "id": "0b2cc713-13b4-4fe7-bbc8-3852bd1660cd",
+        "title": "karimaganj",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:44:43+00:00",
+        "last_viewed_at": "2026-09-02T08:38:14+00:00",
+        "modified_at": "2026-09-02T08:38:14+00:00"
+      },
+      {
+        "index": 254,
+        "id": "21745b29-4e37-4245-a47e-dc7d8847648a",
+        "title": "codex",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-05T12:16:38+00:00",
+        "last_viewed_at": "2026-09-02T08:38:12+00:00",
+        "modified_at": "2026-09-02T08:38:12+00:00"
+      },
+      {
+        "index": 255,
+        "id": "6d9b7ecb-174c-41f0-8ac5-48433ac00759",
+        "title": "SOCIAL MEDIA ALGORITHM",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T00:11:07+00:00",
+        "last_viewed_at": "2026-09-02T08:38:12+00:00",
+        "modified_at": "2026-09-02T08:38:12+00:00"
+      },
+      {
+        "index": 256,
+        "id": "6c0f19e5-80e6-44a5-81a1-073ab0911083",
+        "title": "gen z gen alpha",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T01:34:43+00:00",
+        "last_viewed_at": "2026-09-02T08:38:11+00:00",
+        "modified_at": "2026-09-02T08:38:11+00:00"
+      },
+      {
+        "index": 257,
+        "id": "124c5914-b409-4e3b-9449-c89c5d8d2833",
+        "title": "ORIGINAL RESEARCH",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-05T23:11:52+00:00",
+        "last_viewed_at": "2026-09-02T08:38:10+00:00",
+        "modified_at": "2026-09-02T08:38:10+00:00"
+      },
+      {
+        "index": 258,
+        "id": "64d9f8de-5697-41eb-bbba-ce500b60b5eb",
+        "title": "TURING AWARD 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T18:34:52+00:00",
+        "last_viewed_at": "2026-09-02T08:38:09+00:00",
+        "modified_at": "2026-09-02T08:38:09+00:00"
+      },
+      {
+        "index": 259,
+        "id": "3985ec7e-127b-4c6c-82fd-8e5456b818e1",
+        "title": "fine tuning",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-13T02:00:36+00:00",
+        "last_viewed_at": "2026-09-02T08:38:09+00:00",
+        "modified_at": "2026-09-02T08:38:09+00:00"
+      },
+      {
+        "index": 260,
+        "id": "636c3e47-778c-431f-a441-2bb4d9bccfaa",
+        "title": "c",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:00:47+00:00",
+        "last_viewed_at": "2026-09-02T08:38:08+00:00",
+        "modified_at": "2026-09-02T08:38:08+00:00"
+      },
+      {
+        "index": 261,
+        "id": "07990e9c-a1aa-4282-a3d9-f6cd90f2128e",
+        "title": "cyber security",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T03:51:39+00:00",
+        "last_viewed_at": "2026-09-02T08:38:05+00:00",
+        "modified_at": "2026-09-02T08:38:05+00:00"
+      },
+      {
+        "index": 262,
+        "id": "5b19fd57-3cc5-42ca-81eb-fe6d2e62058c",
+        "title": "zig1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:45:04+00:00",
+        "last_viewed_at": "2026-09-02T08:38:04+00:00",
+        "modified_at": "2026-09-02T08:38:04+00:00"
+      },
+      {
+        "index": 263,
+        "id": "40b029dc-408e-473e-9418-47c72c113901",
+        "title": "llm",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-12T20:51:46+00:00",
+        "last_viewed_at": "2026-09-02T08:38:03+00:00",
+        "modified_at": "2026-09-02T08:38:03+00:00"
+      },
+      {
+        "index": 264,
+        "id": "57ada72d-babc-42df-8106-8ce9d4965468",
+        "title": "HFT 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-27T08:22:13+00:00",
+        "last_viewed_at": "2026-09-02T08:38:01+00:00",
+        "modified_at": "2026-09-02T08:38:01+00:00"
+      },
+      {
+        "index": 265,
+        "id": "4c15b00a-d601-4439-9f28-80a078ba6013",
+        "title": "SYSTEM DESIGN",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:45:37+00:00",
+        "last_viewed_at": "2026-09-02T08:37:58+00:00",
+        "modified_at": "2026-09-02T08:37:58+00:00"
+      },
+      {
+        "index": 266,
+        "id": "023373c1-47c9-411e-ac46-31f63d4e990e",
+        "title": "ai scientist",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T05:48:24+00:00",
+        "last_viewed_at": "2026-09-02T08:37:58+00:00",
+        "modified_at": "2026-09-02T08:37:58+00:00"
+      },
+      {
+        "index": 267,
+        "id": "48740186-8975-46d4-a7c1-59a3ceb04934",
+        "title": "mojo",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T02:50:45+00:00",
+        "last_viewed_at": "2026-09-02T08:37:56+00:00",
+        "modified_at": "2026-09-02T08:37:56+00:00"
+      },
+      {
+        "index": 268,
+        "id": "44f0a315-65bf-443d-8750-e6cc903244de",
+        "title": "CLOUDFLARE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:28:29+00:00",
+        "last_viewed_at": "2026-09-02T08:37:55+00:00",
+        "modified_at": "2026-09-02T08:37:55+00:00"
+      },
+      {
+        "index": 269,
+        "id": "429d1c12-1fd9-4b3f-a3d9-c6d0b7cacc3d",
+        "title": "PYTHON 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T03:18:52+00:00",
+        "last_viewed_at": "2026-09-02T08:37:52+00:00",
+        "modified_at": "2026-09-02T08:37:52+00:00"
+      },
+      {
+        "index": 270,
+        "id": "37c69eba-29ad-46f1-be39-6921b240a9d3",
+        "title": "HUGGING FACE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-14T17:30:39+00:00",
+        "last_viewed_at": "2026-09-02T08:37:52+00:00",
+        "modified_at": "2026-09-02T08:37:52+00:00"
+      },
+      {
+        "index": 271,
+        "id": "40309bcd-d00e-42a9-90d4-8a06c31efe23",
+        "title": "cold email",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-15T03:10:07+00:00",
+        "last_viewed_at": "2026-09-02T08:37:50+00:00",
+        "modified_at": "2026-09-02T08:37:50+00:00"
+      },
+      {
+        "index": 272,
+        "id": "17d62df0-13dd-4125-9266-34ea0be79e88",
+        "title": "GITHUB",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:25:38+00:00",
+        "last_viewed_at": "2026-09-02T08:37:48+00:00",
+        "modified_at": "2026-09-02T08:37:48+00:00"
+      },
+      {
+        "index": 273,
+        "id": "391a9adb-0ec9-46f7-a54b-7bdf51e291f7",
+        "title": "HFT 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-27T08:23:34+00:00",
+        "last_viewed_at": "2026-09-02T08:37:47+00:00",
+        "modified_at": "2026-09-02T08:37:47+00:00"
+      },
+      {
+        "index": 274,
+        "id": "390827c7-79c2-465a-8b08-8b238c10a130",
+        "title": "FREE LLM API",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-25T12:54:23+00:00",
+        "last_viewed_at": "2026-09-02T08:37:46+00:00",
+        "modified_at": "2026-09-02T08:37:46+00:00"
+      },
+      {
+        "index": 275,
+        "id": "1557c8d2-1590-4e76-ae46-4bf46c3e8fc4",
+        "title": "KAGGLE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:30:31+00:00",
+        "last_viewed_at": "2026-09-02T08:37:46+00:00",
+        "modified_at": "2026-09-02T08:37:46+00:00"
+      },
+      {
+        "index": 276,
+        "id": "35f9b8c3-d24c-42e4-913a-cd6e12f71fe1",
+        "title": "MAMBA",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-18T03:14:30+00:00",
+        "last_viewed_at": "2026-09-02T08:37:44+00:00",
+        "modified_at": "2026-09-02T08:37:44+00:00"
+      },
+      {
+        "index": 277,
+        "id": "33104b26-af0d-4a48-8361-10d1817b0ecf",
+        "title": "Distributed Systems",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:36:43+00:00",
+        "last_viewed_at": "2026-09-02T08:37:44+00:00",
+        "modified_at": "2026-09-02T08:37:44+00:00"
+      },
+      {
+        "index": 278,
+        "id": "1c0b30fd-4ba6-420f-9831-5088dffd8582",
+        "title": "DATABASE",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:52:25+00:00",
+        "last_viewed_at": "2026-09-02T08:37:41+00:00",
+        "modified_at": "2026-09-02T08:37:41+00:00"
+      },
+      {
+        "index": 279,
+        "id": "21c7fdfb-2eff-4875-b634-164f9e5587eb",
+        "title": "CLOUD AND NETWORK MESH",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T17:57:33+00:00",
+        "last_viewed_at": "2026-09-02T08:37:40+00:00",
+        "modified_at": "2026-09-02T08:37:40+00:00"
+      },
+      {
+        "index": 280,
+        "id": "0b6b63fd-978c-4c26-85a1-e1c68c85ca85",
+        "title": "LLM  MEMORY 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T18:28:51+00:00",
+        "last_viewed_at": "2026-09-02T08:37:39+00:00",
+        "modified_at": "2026-09-02T08:37:39+00:00"
+      },
+      {
+        "index": 281,
+        "id": "1e6fe547-4654-4b06-9a4b-ff1851499be0",
+        "title": "LLM MEMORY 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T18:30:42+00:00",
+        "last_viewed_at": "2026-09-02T08:37:39+00:00",
+        "modified_at": "2026-09-02T08:37:39+00:00"
+      },
+      {
+        "index": 282,
+        "id": "1d717124-7604-4dac-85ba-0e156dbd4c0b",
+        "title": "TURING AWARD 1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T18:33:26+00:00",
+        "last_viewed_at": "2026-09-02T08:37:38+00:00",
+        "modified_at": "2026-09-02T08:37:38+00:00"
+      },
+      {
+        "index": 283,
+        "id": "2c75b65a-7f24-440c-a774-0c2e37e53a6f",
+        "title": "NOVEL PRIZE 2",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-16T18:39:56+00:00",
+        "last_viewed_at": "2026-09-02T08:37:37+00:00",
+        "modified_at": "2026-09-02T08:37:37+00:00"
+      },
+      {
+        "index": 284,
+        "id": "02a378e9-49b9-4dce-a848-dcbb005ad6d6",
+        "title": "openclaw_1",
+        "is_owner": true,
+        "role": "owner",
+        "created_at": "2026-08-21T00:30:16+00:00",
+        "last_viewed_at": "2026-09-02T08:37:13+00:00",
+        "modified_at": "2026-09-02T08:37:13+00:00"
+      }
+    ],
+    "count": 284
+  }
+}

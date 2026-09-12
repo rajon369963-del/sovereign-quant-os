@@ -60,3 +60,20 @@ account_setup_report.json
 archive_state_*.json
 autonomous_state.json
 live_dashboard.html
+
+# Secrets & Local credentials
+.env*
+
+# Massive archives & ephemeral dumps
+*.tar.gz
+*.tgz
+*.zip
+*.b64.txt
+audio_*.txt
+*.csv
+
+# Ephemeral scraped folders & corpora
+cloned_trading_wheels/
+massive_trading_sources/
+notebooklm_sources/
+notebooklm_sources_upload/

@@ -1,0 +1,482 @@
+[
+  {
+    "name": "civex-progressive-bridge",
+    "path": "/Users/rajondas/teamwork_projects/civex-progressive-bridge",
+    "remote": "https://github.com/rajon369963-del/civex-progressive-bridge.git"
+  },
+  {
+    "name": "Obsidian_to_Anki",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/Obsidian_to_Anki",
+    "remote": "https://github.com/Pseudonium/Obsidian_to_Anki.git"
+  },
+  {
+    "name": "vibepod-cli",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/vibepod-cli",
+    "remote": "https://github.com/VibePod/vibepod-cli.git"
+  },
+  {
+    "name": "chromium-ipc-sniffer",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/chromium-ipc-sniffer",
+    "remote": "https://github.com/tomer8007/chromium-ipc-sniffer.git"
+  },
+  {
+    "name": "anki-connect",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/anki-connect",
+    "remote": "https://github.com/FooSoft/anki-connect.git"
+  },
+  {
+    "name": "antigravity-awesome-skills-benjaminasterA",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-awesome-skills-benjaminasterA",
+    "remote": "https://github.com/benjaminasterA/antigravity-awesome-skills.git"
+  },
+  {
+    "name": "get-shit-done-for-antigravity-toonight",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/get-shit-done-for-antigravity-toonight",
+    "remote": "https://github.com/toonight/get-shit-done-for-antigravity.git"
+  },
+  {
+    "name": "fsrs-optimizer",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-optimizer",
+    "remote": "https://github.com/open-spaced-repetition/fsrs-optimizer.git"
+  },
+  {
+    "name": "openlive",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/openlive",
+    "remote": "https://github.com/katipally/openlive.git"
+  },
+  {
+    "name": "review-heatmap",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/review-heatmap",
+    "remote": "https://github.com/glutanimate/review-heatmap.git"
+  },
+  {
+    "name": "awesome-fsrs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/awesome-fsrs",
+    "remote": "https://github.com/open-spaced-repetition/awesome-fsrs.git"
+  },
+  {
+    "name": "cc-safety-net",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/cc-safety-net",
+    "remote": "https://github.com/kenryu42/cc-safety-net.git"
+  },
+  {
+    "name": "everything-antigravity-krishnakanthb13",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/everything-antigravity-krishnakanthb13",
+    "remote": "https://github.com/krishnakanthb13/everything-antigravity.git"
+  },
+  {
+    "name": "go-fsrs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/go-fsrs",
+    "remote": "https://github.com/open-spaced-repetition/go-fsrs.git"
+  },
+  {
+    "name": "whisper.cpp",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/whisper.cpp",
+    "remote": "https://github.com/ggml-org/whisper.cpp.git"
+  },
+  {
+    "name": "antigravity-skills-rominirani",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-skills-rominirani",
+    "remote": "https://github.com/rominirani/antigravity-skills.git"
+  },
+  {
+    "name": "Lyre",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/Lyre",
+    "remote": "https://github.com/alexwiese/Lyre.git"
+  },
+  {
+    "name": "Antigravity-Tools-LS-lbjlaq",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/Antigravity-Tools-LS-lbjlaq",
+    "remote": "https://github.com/lbjlaq/Antigravity-Tools-LS.git"
+  },
+  {
+    "name": "super-voice-assistant",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/super-voice-assistant",
+    "remote": "https://github.com/ykdojo/super-voice-assistant.git"
+  },
+  {
+    "name": "antigravity-mastery-handbook-hamodywe",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-mastery-handbook-hamodywe",
+    "remote": "https://github.com/hamodywe/antigravity-mastery-handbook.git"
+  },
+  {
+    "name": "fsrs-vs-sm17",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-vs-sm17",
+    "remote": "https://github.com/open-spaced-repetition/fsrs-vs-sm17.git"
+  },
+  {
+    "name": "iceoryx2",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/iceoryx2",
+    "remote": "https://github.com/eclipse-iceoryx/iceoryx2.git"
+  },
+  {
+    "name": "femto-fsrs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/femto-fsrs",
+    "remote": "https://github.com/RickCarlino/femto-fsrs.git"
+  },
+  {
+    "name": "antigravity-ai-kit-besync",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-ai-kit-besync",
+    "remote": "https://github.com/besync-labs/antigravity-ai-kit.git"
+  },
+  {
+    "name": "fsrs-rs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-rs",
+    "remote": "https://github.com/open-spaced-repetition/fsrs-rs.git"
+  },
+  {
+    "name": "jarvis",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/jarvis",
+    "remote": "https://github.com/ethanplusai/jarvis.git"
+  },
+  {
+    "name": "antigravity-skills-rmyndharis",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-skills-rmyndharis",
+    "remote": "https://github.com/rmyndharis/antigravity-skills.git"
+  },
+  {
+    "name": "fsrs4anki-helper",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs4anki-helper",
+    "remote": "https://github.com/open-spaced-repetition/fsrs4anki-helper.git"
+  },
+  {
+    "name": "gemini-live-api-examples",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/gemini-live-api-examples",
+    "remote": "https://github.com/google-gemini/gemini-live-api-examples.git"
+  },
+  {
+    "name": "srs-benchmark",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/srs-benchmark",
+    "remote": "https://github.com/open-spaced-repetition/srs-benchmark.git"
+  },
+  {
+    "name": "OmniAntigravityRemoteChat",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/OmniAntigravityRemoteChat",
+    "remote": "https://github.com/diegosouzapw/OmniAntigravityRemoteChat.git"
+  },
+  {
+    "name": "antigravity-awesome-skills-ar27111994",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-awesome-skills-ar27111994",
+    "remote": "https://github.com/ar27111994/antigravity-awesome-skills.git"
+  },
+  {
+    "name": "yomitan",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/yomitan",
+    "remote": "https://github.com/themoeway/yomitan.git"
+  },
+  {
+    "name": "youtube-transcriber",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/youtube-transcriber",
+    "remote": "https://github.com/lifesized/youtube-transcriber"
+  },
+  {
+    "name": "notebooklm-rest-api",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/notebooklm-rest-api",
+    "remote": "https://github.com/gnh1201/notebooklm-rest-api"
+  },
+  {
+    "name": "NotebookMLX",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/NotebookMLX",
+    "remote": "https://github.com/johnmai-dev/NotebookMLX"
+  },
+  {
+    "name": "youtube-workflows",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/youtube-workflows",
+    "remote": "https://github.com/ZeroPointRepo/youtube-workflows"
+  },
+  {
+    "name": "notebookllama",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/notebookllama",
+    "remote": "https://github.com/run-llama/notebookllama"
+  },
+  {
+    "name": "insights-lm-public",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/insights-lm-public",
+    "remote": "https://github.com/theaiautomators/insights-lm-public"
+  },
+  {
+    "name": "notebooklm-py",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/notebooklm-py",
+    "remote": "https://github.com/teng-lin/notebooklm-py"
+  },
+  {
+    "name": "open-notebook",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/open-notebook",
+    "remote": "https://github.com/lfnovo/open-notebook"
+  },
+  {
+    "name": "jizb880_hermes_telemetry",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/jizb880_hermes_telemetry",
+    "remote": "https://github.com/jizb880/hermes_telemetry.git"
+  },
+  {
+    "name": "gbrain",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/gbrain",
+    "remote": "https://github.com/garrytan/gbrain.git"
+  },
+  {
+    "name": "garrytan_gbrain",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/garrytan_gbrain",
+    "remote": "https://github.com/garrytan/gbrain.git"
+  },
+  {
+    "name": "briancaffey_hermes-otel",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/briancaffey_hermes-otel",
+    "remote": "https://github.com/briancaffey/hermes-otel.git"
+  },
+  {
+    "name": "MAYA-Platform_MAYA-Memory-Lane",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/MAYA-Platform_MAYA-Memory-Lane",
+    "remote": "https://github.com/MAYA-Platform/MAYA-Memory-Lane.git"
+  },
+  {
+    "name": "hermes-otel",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/hermes-otel",
+    "remote": "https://github.com/briancaffey/hermes-otel.git"
+  },
+  {
+    "name": "hermes_telemetry",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/hermes_telemetry",
+    "remote": "https://github.com/jizb880/hermes_telemetry.git"
+  },
+  {
+    "name": "tokentelemetry-hermes-plugin",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/tokentelemetry-hermes-plugin",
+    "remote": "https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git"
+  },
+  {
+    "name": "VasiHemanth_tokentelemetry-hermes-plugin",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/VasiHemanth_tokentelemetry-hermes-plugin",
+    "remote": "https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git"
+  },
+  {
+    "name": "VasiHemanth_tokentelemetry",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/VasiHemanth_tokentelemetry",
+    "remote": "https://github.com/VasiHemanth/tokentelemetry.git"
+  },
+  {
+    "name": "tokentelemetry",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/tokentelemetry",
+    "remote": "https://github.com/VasiHemanth/tokentelemetry.git"
+  },
+  {
+    "name": "MAYA-Memory-Lane",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/MAYA-Memory-Lane",
+    "remote": "https://github.com/MAYA-Platform/MAYA-Memory-Lane.git"
+  },
+  {
+    "name": "hermes-lcm",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/hermes-lcm",
+    "remote": "https://github.com/stephenschoettler/hermes-lcm.git"
+  },
+  {
+    "name": "obsidian-admonition",
+    "path": "/Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/obsidian_plugins/obsidian-admonition",
+    "remote": "https://github.com/valentine195/obsidian-admonition.git"
+  },
+  {
+    "name": "gemini-spark-cortex",
+    "path": "/Users/rajondas/teamwork_projects/gemini-spark-cortex",
+    "remote": "https://github.com/rajon369963-del/gemini-spark-cortex.git"
+  },
+  {
+    "name": "upsc_polity_24h_mvp",
+    "path": "/Users/rajondas/teamwork_projects/_QUARANTINE_POLITY_VAULT/upsc_polity_24h_mvp",
+    "remote": ""
+  },
+  {
+    "name": "sovereign-quant-os",
+    "path": "/Users/rajondas/teamwork_projects/sovereign-quant-os",
+    "remote": "https://github.com/rajon369963-del/sovereign-quant-os.git"
+  },
+  {
+    "name": "sovereign-study-commons-india",
+    "path": "/Users/rajondas/teamwork_projects/sovereign-study-commons-india",
+    "remote": "https://github.com/rajon369963-del/sovereign-study-commons-india.git"
+  },
+  {
+    "name": "air10_student_engine",
+    "path": "/Users/rajondas/teamwork_projects/air10_student_engine",
+    "remote": ""
+  },
+  {
+    "name": "Obsidian_to_Anki",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/Obsidian_to_Anki",
+    "remote": "https://github.com/Pseudonium/Obsidian_to_Anki.git"
+  },
+  {
+    "name": "vibepod-cli",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/vibepod-cli",
+    "remote": "https://github.com/VibePod/vibepod-cli.git"
+  },
+  {
+    "name": "chromium-ipc-sniffer",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/chromium-ipc-sniffer",
+    "remote": "https://github.com/tomer8007/chromium-ipc-sniffer.git"
+  },
+  {
+    "name": "anki-connect",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/anki-connect",
+    "remote": "https://github.com/FooSoft/anki-connect.git"
+  },
+  {
+    "name": "antigravity-awesome-skills-benjaminasterA",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-awesome-skills-benjaminasterA",
+    "remote": "https://github.com/benjaminasterA/antigravity-awesome-skills.git"
+  },
+  {
+    "name": "get-shit-done-for-antigravity-toonight",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/get-shit-done-for-antigravity-toonight",
+    "remote": "https://github.com/toonight/get-shit-done-for-antigravity.git"
+  },
+  {
+    "name": "fsrs-optimizer",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-optimizer",
+    "remote": "https://github.com/open-spaced-repetition/fsrs-optimizer.git"
+  },
+  {
+    "name": "openlive",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/openlive",
+    "remote": "https://github.com/katipally/openlive.git"
+  },
+  {
+    "name": "review-heatmap",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/review-heatmap",
+    "remote": "https://github.com/glutanimate/review-heatmap.git"
+  },
+  {
+    "name": "awesome-fsrs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/awesome-fsrs",
+    "remote": "https://github.com/open-spaced-repetition/awesome-fsrs.git"
+  },
+  {
+    "name": "cc-safety-net",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/cc-safety-net",
+    "remote": "https://github.com/kenryu42/cc-safety-net.git"
+  },
+  {
+    "name": "everything-antigravity-krishnakanthb13",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/everything-antigravity-krishnakanthb13",
+    "remote": "https://github.com/krishnakanthb13/everything-antigravity.git"
+  },
+  {
+    "name": "go-fsrs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/go-fsrs",
+    "remote": "https://github.com/open-spaced-repetition/go-fsrs.git"
+  },
+  {
+    "name": "whisper.cpp",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/whisper.cpp",
+    "remote": "https://github.com/ggml-org/whisper.cpp.git"
+  },
+  {
+    "name": "antigravity-skills-rominirani",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-skills-rominirani",
+    "remote": "https://github.com/rominirani/antigravity-skills.git"
+  },
+  {
+    "name": "Lyre",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/Lyre",
+    "remote": "https://github.com/alexwiese/Lyre.git"
+  },
+  {
+    "name": "Antigravity-Tools-LS-lbjlaq",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/Antigravity-Tools-LS-lbjlaq",
+    "remote": "https://github.com/lbjlaq/Antigravity-Tools-LS.git"
+  },
+  {
+    "name": "super-voice-assistant",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/super-voice-assistant",
+    "remote": "https://github.com/ykdojo/super-voice-assistant.git"
+  },
+  {
+    "name": "antigravity-mastery-handbook-hamodywe",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-mastery-handbook-hamodywe",
+    "remote": "https://github.com/hamodywe/antigravity-mastery-handbook.git"
+  },
+  {
+    "name": "fsrs-vs-sm17",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-vs-sm17",
+    "remote": "https://github.com/open-spaced-repetition/fsrs-vs-sm17.git"
+  },
+  {
+    "name": "iceoryx2",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/iceoryx2",
+    "remote": "https://github.com/eclipse-iceoryx/iceoryx2.git"
+  },
+  {
+    "name": "femto-fsrs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/femto-fsrs",
+    "remote": "https://github.com/RickCarlino/femto-fsrs.git"
+  },
+  {
+    "name": "antigravity-ai-kit-besync",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-ai-kit-besync",
+    "remote": "https://github.com/besync-labs/antigravity-ai-kit.git"
+  },
+  {
+    "name": "fsrs-rs",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-rs",
+    "remote": "https://github.com/open-spaced-repetition/fsrs-rs.git"
+  },
+  {
+    "name": "jarvis",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/jarvis",
+    "remote": "https://github.com/ethanplusai/jarvis.git"
+  },
+  {
+    "name": "antigravity-skills-rmyndharis",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-skills-rmyndharis",
+    "remote": "https://github.com/rmyndharis/antigravity-skills.git"
+  },
+  {
+    "name": "fsrs4anki-helper",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/fsrs4anki-helper",
+    "remote": "https://github.com/open-spaced-repetition/fsrs4anki-helper.git"
+  },
+  {
+    "name": "gemini-live-api-examples",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/gemini-live-api-examples",
+    "remote": "https://github.com/google-gemini/gemini-live-api-examples.git"
+  },
+  {
+    "name": "srs-benchmark",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/srs-benchmark",
+    "remote": "https://github.com/open-spaced-repetition/srs-benchmark.git"
+  },
+  {
+    "name": "OmniAntigravityRemoteChat",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/OmniAntigravityRemoteChat",
+    "remote": "https://github.com/diegosouzapw/OmniAntigravityRemoteChat.git"
+  },
+  {
+    "name": "antigravity-awesome-skills-ar27111994",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-awesome-skills-ar27111994",
+    "remote": "https://github.com/ar27111994/antigravity-awesome-skills.git"
+  },
+  {
+    "name": "yomitan",
+    "path": "/Users/rajondas/teamwork_projects/downloaded_wheels/yomitan",
+    "remote": "https://github.com/themoeway/yomitan.git"
+  },
+  {
+    "name": "smart-coding-mcp",
+    "path": "/Users/rajondas/.air1/smart-coding-mcp",
+    "remote": "https://github.com/omar-haris/smart-coding-mcp.git"
+  },
+  {
+    "name": "simdjson",
+    "path": "/Users/rajondas/.air1/downloaded_wheels_vault/simdjson",
+    "remote": "https://github.com/simdjson/simdjson.git"
+  },
+  {
+    "name": "fastmcp",
+    "path": "/Users/rajondas/.air1/downloaded_wheels_vault/fastmcp",
+    "remote": "https://github.com/jlowin/fastmcp.git"
+  },
+  {
+    "name": "second_brain",
+    "path": "/Users/rajondas/.air1/second_brain",
+    "remote": ""
+  }
+]
