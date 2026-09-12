@@ -38,12 +38,25 @@ jobs:
       - name: Execute Domain Risk Gate Benchmark Reproducer
         run: |
           python3 scripts/benchmark_quant_risk_gate.py
-      - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
-        run: |
-          python3 scripts/verify_receipt.py --assert-live-benchmark scripts/quant_benchmark_results.json
 
-      - name: Upload Live Benchmark Artifact
+      - name: Upload Live Benchmark Artifact (Preserve Evidence Even on Failure)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: live-quant-benchmark-results
           path: scripts/quant_benchmark_results.json
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
+        run: |
+          python3 scripts/verify_receipt.py --assert-live-benchmark scripts/quant_benchmark_results.json 2>&1 | tee /tmp/quant_forensic_verification_report.txt
+
+      - name: Upload Forensic Verification Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quant-forensic-verification-report
+          path: /tmp/quant_forensic_verification_report.txt
+          if-no-files-found: warn
+          retention-days: 90
