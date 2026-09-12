@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-09-12T06:26:28Z",
+  "architecture": "Apple Silicon M1 (ARM64 Unified RAM)",
+  "competitors_verified": 100,
+  "hacks_verified": 100,
+  "wheels_verified": 100,
+  "ic2_clusters_verified": 5,
+  "canary_telemetry": {
+    "passed": true,
+    "duration_ms": 0.1253749942407012,
+    "checksum": 749250.0
+  },
+  "dry_test_results": [
+    {
+      "cluster_id": "IC2-ALPHA-01",
+      "name": "Medallion HMM Regime \u00d7 Qullamaggie High Tight Flag \u00d7 CodeTrades Sub-50ms Transport",
+      "latency_ms": 0.6294999911915511,
+      "status": "VERIFIED_ACTIVE"
+    },
+    {
+      "cluster_id": "IC2-RISK-02",
+      "name": "Citadel Inventory Balancing \u00d7 FinBERT Asymmetric Gate \u00d7 Anti-Martingale Half-Kelly",
+      "latency_ms": 0.6280410016188398,
+      "status": "VERIFIED_ACTIVE"
+    },
+    {
+      "cluster_id": "IC2-EXEC-03",
+      "name": "Jane Street ETF Arbitrage \u00d7 TWAP Dirichlet Slicing \u00d7 Persistent WebSocket Stream",
+      "latency_ms": 0.629250003839843,
+      "status": "VERIFIED_ACTIVE"
+    },
+    {
+      "cluster_id": "IC2-CRITIC-04",
+      "name": "Millennium Pod Stop Governance \u00d7 Claude 3.5 Reflection Critic \u00d7 SQLite WAL Telemetry",
+      "latency_ms": 0.5537499964702874,
+      "status": "VERIFIED_ACTIVE"
+    },
+    {
+      "cluster_id": "IC2-RAG-05",
+      "name": "1000x Cross-Video Sentence Hypergraph \u00d7 1,445-Source NBLM Empire \u00d7 Lookio Local Cortex",
+      "latency_ms": 0.6411659996956587,
+      "status": "VERIFIED_ACTIVE"
+    }
+  ],
+  "stress_10x_telemetry": {
+    "total_orders": 10000,
+    "total_duration_sec": 0.0023667079949518666,
+    "avg_latency_ms": 0.00016519819619134068,
+    "p50_latency_ms": 0.00016599369700998068,
+    "p95_latency_ms": 0.0002079905243590474,
+    "p99_latency_ms": 0.0004169996827840805,
+    "max_latency_ms": 0.05633301043417305,
+    "filled_count": 516,
+    "throttled_count": 6981,
+    "gated_count": 2503,
+    "gated_percent": 25.03
+  },
+  "certification_status": "SOVEREIGN_MASTER_VERIFIED_100_PERCENT"
+}
