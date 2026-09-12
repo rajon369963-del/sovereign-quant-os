@@ -2,6 +2,7 @@
 import hashlib
 import os
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -81,15 +82,17 @@ class GogAuthorityCourt(unittest.TestCase):
             self.assertEqual(observed["fd_sha"], original_sha)
             self.assertNotEqual(observed["path_sha"], original_sha)
 
-    def test_default_executor_runs_opened_object_when_fd_exec_supported(self):
+    def test_default_executor_runs_opened_native_object_when_fd_exec_supported(self):
         if os.execve not in getattr(os, "supports_fd", set()):
             self.skipTest("fd exec unsupported on this platform")
-        with tempfile.TemporaryDirectory() as tmp:
-            _, _, gog_path = self._fixture_files(tmp)
-            result, evidence = sync._run_gog([], "physical_fd_exec", executable_resolver=lambda _: gog_path)
-            self.assertEqual(result.returncode, 0)
-            self.assertIn("ORIGINAL", result.stdout)
-            self.assertEqual(evidence["execution_binding"], "OPEN_HASH_EXEC_SAME_FD")
+        result, evidence = sync._run_gog(
+            ["-c", "print('ORIGINAL')"],
+            "physical_fd_exec",
+            executable_resolver=lambda _: sys.executable,
+        )
+        self.assertEqual(result.returncode, 0)
+        self.assertIn("ORIGINAL", result.stdout)
+        self.assertEqual(evidence["execution_binding"], "OPEN_HASH_EXEC_SAME_FD")
 
 
 if __name__ == "__main__":
