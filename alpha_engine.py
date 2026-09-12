@@ -9,6 +9,7 @@ Implements:
 from dataclasses import dataclass
 from enum import Enum
 from typing import List, Optional
+import math
 import polars as pl
 
 class SignalType(Enum):
@@ -35,9 +36,15 @@ class TradeSignal:
 
 class AlphaEngine:
     def __init__(self, rsi_oversold: float = 35.0, rsi_overbought: float = 65.0, min_rr_ratio: float = 2.0):
+        if not math.isfinite(min_rr_ratio) or min_rr_ratio < 0:
+            raise ValueError("min_rr_ratio must be finite and non-negative")
         self.rsi_oversold = rsi_oversold
         self.rsi_overbought = rsi_overbought
         self.min_rr_ratio = min_rr_ratio
+
+    def _rr_gate_allows(self, rr: float) -> bool:
+        """Return True only when a finite calculated RR satisfies the configured floor."""
+        return math.isfinite(rr) and rr >= self.min_rr_ratio
 
     def evaluate_bar(self, row: dict, prev_row: Optional[dict] = None) -> Optional[TradeSignal]:
         """Evaluates latest market bar across the 3 strategy archetypes."""
@@ -57,6 +64,8 @@ class AlphaEngine:
             stop_loss = price - (1.5 * atr)
             take_profit = price + (3.0 * atr)
             rr = (take_profit - price) / (price - stop_loss)
+            if not self._rr_gate_allows(rr):
+                return None
             return TradeSignal(
                 bar_id=row["bar_id"],
                 timestamp=row["timestamp"],
@@ -79,6 +88,8 @@ class AlphaEngine:
             stop_loss = price - (1.0 * atr)
             take_profit = price + (2.5 * atr)
             rr = (take_profit - price) / (price - stop_loss)
+            if not self._rr_gate_allows(rr):
+                return None
             return TradeSignal(
                 bar_id=row["bar_id"],
                 timestamp=row["timestamp"],
@@ -97,6 +108,8 @@ class AlphaEngine:
             stop_loss = price - (1.2 * atr)
             take_profit = price + (2.8 * atr)
             rr = (take_profit - price) / (price - stop_loss)
+            if not self._rr_gate_allows(rr):
+                return None
             return TradeSignal(
                 bar_id=row["bar_id"],
                 timestamp=row["timestamp"],
