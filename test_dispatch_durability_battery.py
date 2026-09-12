@@ -1,6 +1,17 @@
 import os
 import sqlite3
+import sys
 import tempfile
+import types
+
+# execution_daemon imports alpha_engine, whose scan_all_bars type annotation references
+# polars.DataFrame. Dispatch durability itself does not execute any Polars behavior, and
+# the repo's CI requirements do not install Polars. Provide only the import/type surface
+# needed to reach the exact production dispatch path without adding a new runtime wheel.
+if "polars" not in sys.modules:
+    polars_stub = types.ModuleType("polars")
+    polars_stub.DataFrame = object
+    sys.modules["polars"] = polars_stub
 
 from alpha_engine import SignalType, StrategyArchetype, TradeSignal
 from execution_daemon import ExecutionDaemon, OrderState
@@ -81,7 +92,7 @@ def test_known_bad_old_shape_is_detected() -> None:
         signal = make_signal()
         gate = make_gate()
 
-        # Reproduce the old semantic shape without calling the repaired persistence mechanism.
+        # Reproduce the old semantic shape while bypassing the repaired durable truth.
         order = daemon.dispatch_order_with_self_healing(signal, gate)
         assert order is not None
         with sqlite3.connect(db_path) as conn:
