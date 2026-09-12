@@ -117,11 +117,10 @@ class DhanLiveBridge:
             )
             broker_order_id = None
             if isinstance(order_resp, dict):
-                broker_order_id = (
-                    order_resp.get("orderId")
-                    or order_resp.get("order_id")
-                    or order_resp.get("data", {}).get("orderId") if isinstance(order_resp.get("data"), dict) else None
-                )
+                broker_order_id = order_resp.get("orderId") or order_resp.get("order_id")
+                nested = order_resp.get("data")
+                if broker_order_id is None and isinstance(nested, dict):
+                    broker_order_id = nested.get("orderId") or nested.get("order_id")
             return {
                 "status": "ORDER_PLACED",
                 "result_class": "LIVE_ORDER_SUBMISSION",
