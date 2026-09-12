@@ -18,7 +18,7 @@
   <text x="60" y="270" fill="#94a3b8" font-family="monospace" font-size="12">SIGNER IDENTITY     : AIR10 Sovereign Open-Source Federation &lt;rajon369963-del&gt;</text>
   <text x="60" y="295" fill="#94a3b8" font-family="monospace" font-size="12">ATTESTED COMMIT SHA : f7862ce5f34615597d687a0b985c84133f2f65c2</text>
   <text x="60" y="320" fill="#94a3b8" font-family="monospace" font-size="12">ATTESTED TREE SHA   : 8cffc00440f50d53cd4a3375fd54fa308abafb1b</text>
-  <text x="60" y="345" fill="#94a3b8" font-family="monospace" font-size="12">CANONICAL HASH      : 6c32ff899b9da50c77141ef024fe093aa7f2dd45cea8d025e101e1ff8c45456a</text>
-  <text x="60" y="370" fill="#94a3b8" font-family="monospace" font-size="12">ED25519 SIGNATURE   : e684ff835a680636e79ec0cb7a378f7b...</text>
+  <text x="60" y="345" fill="#94a3b8" font-family="monospace" font-size="12">CANONICAL HASH      : 3840630f8af55573c192a959c7b6675ff2e1b0b5fb74641b574e2fd5468442de</text>
+  <text x="60" y="370" fill="#94a3b8" font-family="monospace" font-size="12">ED25519 SIGNATURE   : 74cef89dde35f2f06cb340d62f3030be...</text>
   <text x="60" y="395" fill="#10b981" font-family="-apple-system, system-ui, sans-serif" font-size="13" font-weight="700">VERIFIED STATUS     : ZERO-DRIFT FORENSIC PASS</text>
 </svg>
