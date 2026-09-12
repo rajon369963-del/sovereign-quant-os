@@ -1,12 +1,13 @@
 {
-  "timestamp_utc": "2026-09-12T18:25:27Z",
+  "timestamp_utc": "2026-09-12T18:57:29Z",
   "platform": "Darwin-arm64",
   "machine": "arm64",
   "processor": "arm",
   "python_version": "3.11.16",
   "total_checks": 2000,
-  "avg_latency_us": 0.3684,
-  "p95_latency_us": 0.625,
-  "throughput_checks_sec": 2714168.2,
+  "avg_latency_us": 0.2622,
+  "p95_latency_us": 0.333,
+  "throughput_checks_sec": 3813409.9,
+  "benchmark_script_sha256": "291866913c25de7c9dc9b1506a35a0174fc9fbeba3b90047726179272519ea81",
   "status": "PASS"
 }
