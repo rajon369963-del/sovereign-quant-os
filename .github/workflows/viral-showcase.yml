@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -39,3 +41,9 @@ jobs:
       - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
         run: |
           python3 scripts/verify_receipt.py --assert-live-benchmark scripts/quant_benchmark_results.json
+
+      - name: Upload Live Benchmark Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-quant-benchmark-results
+          path: scripts/quant_benchmark_results.json
