@@ -1,5 +1,11 @@
 import os
+import sys
 import unittest
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 os.environ.pop("DHAN_CLIENT_ID", None)
 os.environ.pop("DHAN_ACCESS_TOKEN", None)
@@ -83,9 +89,7 @@ class DhanModeAuthorityCourt(unittest.TestCase):
         bridge = DhanLiveBridge(client_id="", access_token="")
         result = bridge.place_canary_order("TEST", "123")
 
-        # Deliberately model the dangerous downstream mutant: any non-empty status is "success".
         self.assertTrue(bool(result.get("status")))
-
         real_live_success = (
             result.get("execution_mode") == "LIVE"
             and result.get("connection_authority") == "PRESENT"
