@@ -1,4 +1,5 @@
 import hashlib
+
 #!/usr/bin/env python3
 """
 Sovereign Quant OS - Standalone Deterministic Pre-Trade Risk Gate Benchmark Reproducer
@@ -24,26 +25,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-try:
-    from modules.quant.quant_risk_gate_v2 import QuantRiskGatekeeper
-except ImportError:
-    # Fallback inline implementation if module path is not structured
-    class QuantRiskGatekeeper:
-        def __init__(self, max_drawdown_pct: float = 0.05, max_position_size: float = 1_000_000.0):
-            self.max_drawdown_pct = max_drawdown_pct
-            self.max_position_size = max_position_size
-            self.circuit_broken = False
-
-        def evaluate_order(self, symbol: str, side: str, qty: float, price: float, current_dd_pct: float):
-            if self.circuit_broken:
-                return False, "CIRCUIT_BREAKER_ACTIVE"
-            if current_dd_pct > self.max_drawdown_pct:
-                self.circuit_broken = True
-                return False, "MAX_DRAWDOWN_EXCEEDED"
-            order_val = qty * price
-            if order_val > self.max_position_size:
-                return False, "POSITION_LIMIT_EXCEEDED"
-            return True, "ORDER_APPROVED"
+# Real-Wheel Fail-Closed Invariant: Must import authentic production wheel; zero inline fallback permitted
+from modules.quant.quant_risk_gate_v2 import QuantRiskGatekeeper
 
 ORDERS = [
     {"symbol": "AAPL", "qty": 100, "price": 182.50, "side": "BUY", "dd": 0.01, "max_notional": 50000.0, "fat_finger": 1000},
