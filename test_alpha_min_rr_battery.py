@@ -1,4 +1,12 @@
 import math
+import sys
+import types
+
+# `alpha_engine.py` imports Polars only for the `scan_all_bars` type surface.
+# This court exercises the exact production `evaluate_bar()` path and should not
+# add a heavy unrelated runtime wheel merely to satisfy an import-only annotation.
+if "polars" not in sys.modules:
+    sys.modules["polars"] = types.SimpleNamespace(DataFrame=object)
 
 from alpha_engine import AlphaEngine, StrategyArchetype
 
@@ -87,10 +95,9 @@ def test_invalid_min_rr_configuration_fails_closed():
 
 
 def test_known_bad_gate_bypass_would_be_detected():
-    # This is the explicit kill condition for the repair: the exact qualifying
-    # strategy fixtures all calculate RR values below a hostile floor of 10.0.
-    # Removing/bypassing the production RR gate would make the high-floor test
-    # above return TradeSignal objects and therefore fail.
+    # Explicit kill condition: every exact qualifying strategy fixture computes
+    # RR below 10.0. Removing/bypassing `_rr_gate_allows()` would make the
+    # high-floor production-path test return TradeSignal objects and fail.
     for _, _, _, rr in cases():
         assert rr < 10.0
 
