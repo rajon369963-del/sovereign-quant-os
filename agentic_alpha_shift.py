@@ -261,22 +261,47 @@ class TWAPExecutionEngine:
     Splits orders into 4-7 randomized chunks over micro-intervals to avoid
     exchange iceberg / odd-lot detection and eliminate market impact slippage.
     """
+    QUANTITY_DECIMALS = 4
+    QUANTITY_SCALE = 10 ** QUANTITY_DECIMALS
+
     def __init__(self, min_chunks: int = 4, max_chunks: int = 7):
+        if min_chunks <= 0 or max_chunks < min_chunks:
+            raise ValueError("HOLD_INVALID_CHUNK_CONFIGURATION")
         self.min_chunks = min_chunks
         self.max_chunks = max_chunks
 
     def plan_twap_slices(self, total_size: float, total_duration_sec: float = 1.0) -> List[Dict[str, float]]:
+        if not math.isfinite(total_size) or total_size <= 0:
+            raise ValueError("HOLD_INVALID_TOTAL_SIZE")
+        if not math.isfinite(total_duration_sec) or total_duration_sec <= 0:
+            raise ValueError("HOLD_INVALID_TWAP_DURATION")
+
         num_chunks = random.randint(self.min_chunks, self.max_chunks)
+        total_ticks = int(round(total_size * self.QUANTITY_SCALE))
+        if total_ticks < num_chunks:
+            raise ValueError("HOLD_BELOW_MIN_EXECUTABLE_SIZE")
+
         weights = np.random.dirichlet(np.ones(num_chunks))
-        chunk_sizes = [float(round(total_size * w, 4)) for w in weights]
-        
-        diff = total_size - sum(chunk_sizes)
-        chunk_sizes[-1] = float(round(chunk_sizes[-1] + diff, 4))
+        remaining_ticks = total_ticks - num_chunks
+        raw_extra = weights * remaining_ticks
+        extra_ticks = np.floor(raw_extra).astype(int)
+        leftover = int(remaining_ticks - int(extra_ticks.sum()))
+        if leftover:
+            remainder_order = np.argsort(-(raw_extra - extra_ticks), kind="stable")
+            for idx in remainder_order[:leftover]:
+                extra_ticks[int(idx)] += 1
+
+        tick_sizes = extra_ticks + 1
+        if int(tick_sizes.sum()) != total_ticks or np.any(tick_sizes <= 0):
+            raise RuntimeError("HOLD_TWAP_QUANTIZATION_INVARIANT")
+        chunk_sizes = [float(ticks / self.QUANTITY_SCALE) for ticks in tick_sizes]
 
         intervals = np.random.uniform(0.01, total_duration_sec / num_chunks, num_chunks)
 
         slices = []
         for i, (size, interval) in enumerate(zip(chunk_sizes, intervals)):
+            if not math.isfinite(size) or size <= 0:
+                raise RuntimeError("HOLD_TWAP_SLICE_DOMAIN_INVARIANT")
             slices.append({
                 "chunk_id": i + 1,
                 "size": size,
