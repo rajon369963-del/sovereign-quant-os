@@ -91,6 +91,49 @@ class ExecutionDaemon:
                 );
             """)
 
+    def _persist_order_with_readback(self, order: TradeOrder) -> bool:
+        """Persist exact order state and prove the same order_id/state is durable before success."""
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute("""
+                INSERT OR REPLACE INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                order.order_id, order.symbol, order.strategy, order.side,
+                order.quantity, order.entry_price, order.fill_price, order.exit_price,
+                order.hard_stop_loss, order.hard_take_profit, order.realized_pnl,
+                order.state.value, order.created_at
+            ))
+            row = conn.execute(
+                "SELECT order_id, state, symbol, side, quantity, fill_price FROM trades WHERE order_id = ?",
+                (order.order_id,)
+            ).fetchone()
+
+        if row is None:
+            return False
+        durable_order_id, durable_state, durable_symbol, durable_side, durable_quantity, durable_fill = row
+        return (
+            durable_order_id == order.order_id
+            and durable_state == order.state.value
+            and durable_symbol == order.symbol
+            and durable_side == order.side
+            and math.isclose(float(durable_quantity), float(order.quantity), rel_tol=0.0, abs_tol=1e-12)
+            and math.isclose(float(durable_fill), float(order.fill_price), rel_tol=0.0, abs_tol=1e-12)
+        )
+
+    def read_durable_order(self, order_id: str) -> Optional[Dict[str, Any]]:
+        """Read back one persisted order by stable order_id for durability courts/restart checks."""
+        with sqlite3.connect(self.db_path) as conn:
+            row = conn.execute(
+                "SELECT order_id, symbol, strategy, side, quantity, entry_price, fill_price, exit_price, stop_loss, take_profit, realized_pnl, state, timestamp FROM trades WHERE order_id = ?",
+                (order_id,)
+            ).fetchone()
+        if row is None:
+            return None
+        keys = [
+            "order_id", "symbol", "strategy", "side", "quantity", "entry_price", "fill_price",
+            "exit_price", "stop_loss", "take_profit", "realized_pnl", "state", "timestamp"
+        ]
+        return dict(zip(keys, row))
+
     def check_circuit_breaker(self) -> bool:
         """Hardware-enforced Circuit Breaker check."""
         current_drawdown = self.peak_equity - self.current_equity
@@ -120,7 +163,7 @@ class ExecutionDaemon:
             )
 
     def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> Optional[TradeOrder]:
-        """Self-healing order dispatch loop with exponential backoff."""
+        """Self-healing order dispatch loop with exponential backoff and durable state readback."""
         if self.is_circuit_broken or not self.check_circuit_breaker():
             return None
 
@@ -145,9 +188,14 @@ class ExecutionDaemon:
                 slippage = signal.price * 0.0001
                 order.fill_price = signal.price + (slippage if signal.signal_type == SignalType.BUY else -slippage)
                 order.state = OrderState.FILLED
+
+                # Dispatch success is not promoted until the exact order identity/state is durable.
+                if not self._persist_order_with_readback(order):
+                    raise RuntimeError(f"DISPATCH_LEDGER_READBACK_FAILED:{order.order_id}")
+
                 self.active_orders[order.order_id] = order
                 return order
-            except Exception as e:
+            except Exception:
                 backoff_ms = (2 ** attempt) * 10
                 time.sleep(backoff_ms / 1000.0)
                 if attempt == 3:
@@ -190,16 +238,9 @@ class ExecutionDaemon:
             # Update Risk Gatekeeper state (Anti-Martingale sizing)
             risk_gate.record_trade_outcome(order.realized_pnl)
 
-            # Persist to SQLite
-            with sqlite3.connect(self.db_path) as conn:
-                conn.execute("""
-                    INSERT OR REPLACE INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (
-                    order.order_id, order.symbol, order.strategy, order.side,
-                    order.quantity, order.entry_price, order.fill_price, order.exit_price,
-                    order.hard_stop_loss, order.hard_take_profit, order.realized_pnl,
-                    order.state.value, order.created_at
-                ))
+            # Persist closed-state transition to the same durable order identity.
+            if not self._persist_order_with_readback(order):
+                raise RuntimeError(f"CLOSE_LEDGER_READBACK_FAILED:{order.order_id}")
 
             # Verify Circuit Breaker after each fill
             self.check_circuit_breaker()
@@ -219,11 +260,18 @@ if __name__ == "__main__":
     signals = alpha.scan_all_bars(enriched)
 
     dispatched = 0
+    durable_dispatches = 0
     for sig in signals[:5]:
         gate_res = gate.evaluate_pre_trade_gate(sig)
         if gate_res.passed:
             order = daemon.dispatch_order_with_self_healing(sig, gate_res)
             if order:
                 dispatched += 1
+                durable = daemon.read_durable_order(order.order_id)
+                if durable and durable["state"] == OrderState.FILLED.value:
+                    durable_dispatches += 1
 
-    print(f"Execution Daemon Smoke Test: Successfully dispatched {dispatched} bracketed orders to SQLite ledger.")
+    print(
+        "Execution Daemon Smoke Test: "
+        f"process-local dispatched={dispatched}; durable SQLite FILLED readbacks={durable_dispatches}."
+    )
