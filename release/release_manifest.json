@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "sovereign-quant-os",
+  "generated_at": "2026-09-12T17:42:57Z",
+  "total_files": 5,
+  "total_bytes": 1948,
+  "composite_fingerprint": "d733015400a07f660f4316cf911694d2623ebb0aa88c9731bf66c3f1f4f92653",
+  "files": [
+    {
+      "path": "modules/__init__.py",
+      "size_bytes": 30,
+      "sha256": "e2f89e2416ad0e8d0f500bf6c179ef67beae463d137f5f83c8c73ba175cafb79",
+      "blake3": "7c4d15124923906c4ec6e9fffeb26ed348d38324d846075d01c999e365deb9d0"
+    },
+    {
+      "path": "modules/engine/__init__.py",
+      "size_bytes": 30,
+      "sha256": "e2f89e2416ad0e8d0f500bf6c179ef67beae463d137f5f83c8c73ba175cafb79",
+      "blake3": "7c4d15124923906c4ec6e9fffeb26ed348d38324d846075d01c999e365deb9d0"
+    },
+    {
+      "path": "modules/engine/super_engine_bridge.py",
+      "size_bytes": 830,
+      "sha256": "5a48d68f7fb590d9950b68a36b207d0695738f59c4a6e10ef9a722e528e40102",
+      "blake3": "0afce61341af99e0531400a8449ee472ccf7eb63789d6a92e2d3b12f57527c50"
+    },
+    {
+      "path": "modules/quant/__init__.py",
+      "size_bytes": 30,
+      "sha256": "e2f89e2416ad0e8d0f500bf6c179ef67beae463d137f5f83c8c73ba175cafb79",
+      "blake3": "7c4d15124923906c4ec6e9fffeb26ed348d38324d846075d01c999e365deb9d0"
+    },
+    {
+      "path": "modules/quant/quant_risk_gate_v2.py",
+      "size_bytes": 1028,
+      "sha256": "83413e18ea823f8ed7c3dacbc24fc9c84d2b5577253ebf800441ee03190036a6",
+      "blake3": "bf0c437dc013f82ea3a0dd187211024701b8f1d4b0f34513793340d66c0b14c9"
+    }
+  ]
+}
