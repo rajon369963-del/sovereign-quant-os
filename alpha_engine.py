@@ -40,7 +40,10 @@ class AlphaEngine:
         self.min_rr_ratio = min_rr_ratio
 
     def evaluate_bar(self, row: dict, prev_row: Optional[dict] = None) -> Optional[TradeSignal]:
-        """Evaluates latest market bar across the 3 strategy archetypes."""
+        """Evaluates latest market bar across the 3 strategy archetypes.
+        Returns a TradeSignal only if the computed risk‑reward ratio meets the
+        configured `min_rr_ratio` threshold.
+        """
         price = row["close"]
         atr = max(0.5, row.get("atr_14", 1.0))
         rsi = row.get("rsi_14", 50.0)
@@ -57,6 +60,8 @@ class AlphaEngine:
             stop_loss = price - (1.5 * atr)
             take_profit = price + (3.0 * atr)
             rr = (take_profit - price) / (price - stop_loss)
+            if rr < self.min_rr_ratio:
+                return None
             return TradeSignal(
                 bar_id=row["bar_id"],
                 timestamp=row["timestamp"],
@@ -79,6 +84,8 @@ class AlphaEngine:
             stop_loss = price - (1.0 * atr)
             take_profit = price + (2.5 * atr)
             rr = (take_profit - price) / (price - stop_loss)
+            if rr < self.min_rr_ratio:
+                return None
             return TradeSignal(
                 bar_id=row["bar_id"],
                 timestamp=row["timestamp"],
@@ -97,6 +104,8 @@ class AlphaEngine:
             stop_loss = price - (1.2 * atr)
             take_profit = price + (2.8 * atr)
             rr = (take_profit - price) / (price - stop_loss)
+            if rr < self.min_rr_ratio:
+                return None
             return TradeSignal(
                 bar_id=row["bar_id"],
                 timestamp=row["timestamp"],
