@@ -32,3 +32,7 @@ jobs:
       - name: Execute Kernel Stress & Idempotency Battery
         run: |
           pytest -o asyncio_mode=auto test_execution_kernel_stress.py
+      - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
+        run: |
+          pip install cryptography
+          python3 scripts/verify_receipt.py
