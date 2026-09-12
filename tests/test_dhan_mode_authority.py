@@ -1,4 +1,5 @@
 import os
+import unittest
 
 os.environ.pop("DHAN_CLIENT_ID", None)
 os.environ.pop("DHAN_ACCESS_TOKEN", None)
@@ -8,41 +9,6 @@ from dhan_live_bridge import DhanLiveBridge
 
 LIVE_SUCCESS_STATUSES = {"ORDER_PLACED", "LIVE_EXECUTED", "SUCCESS"}
 LIVE_RESULT_CLASSES = {"LIVE_ORDER_SUBMISSION", "LIVE_ACCOUNT_SNAPSHOT", "LIVE_MARKET_QUOTE"}
-
-
-def assert_not_live_authority(result):
-    assert result["execution_mode"] == "SIMULATED"
-    assert result["connection_authority"] == "ABSENT"
-    assert result["is_simulated"] is True
-    assert result["status"] not in LIVE_SUCCESS_STATUSES
-    assert result["result_class"] not in LIVE_RESULT_CLASSES
-    assert result.get("broker_order_id") is None
-
-
-def test_disconnected_order_is_unrepresentable_as_live_success():
-    bridge = DhanLiveBridge(client_id="", access_token="")
-    result = bridge.place_canary_order("TEST", "123", quantity=1)
-
-    assert_not_live_authority(result)
-    assert result["status"] == "SIMULATED"
-    assert result["result_class"] == "SIMULATED_ORDER"
-    assert "PROBE_SUCCESS" not in result.values()
-
-
-def test_disconnected_balance_and_quote_do_not_use_live_value_fields():
-    bridge = DhanLiveBridge(client_id="", access_token="")
-
-    balance = bridge.check_balance()
-    quote = bridge.get_market_quote("123")
-
-    assert_not_live_authority(balance)
-    assert_not_live_authority(quote)
-    assert balance["result_class"] == "SIMULATED_ACCOUNT_SNAPSHOT"
-    assert quote["result_class"] == "SIMULATED_MARKET_QUOTE"
-    assert "deposited_balance" not in balance
-    assert "ltp" not in quote
-    assert balance["simulated_balance_hint"] == 1.00
-    assert quote["simulated_ltp_hint"] == 684.85
 
 
 class FakeConnectedDhan:
@@ -61,41 +27,74 @@ class FakeConnectedDhan:
         return {"ltp": 123.45}
 
 
-def test_stubbed_connected_authority_is_explicitly_live_without_network():
-    bridge = DhanLiveBridge(client_id="offline", access_token="offline")
-    bridge.dhan = FakeConnectedDhan()
-    bridge.is_connected = True
+class DhanModeAuthorityCourt(unittest.TestCase):
+    def assert_not_live_authority(self, result):
+        self.assertEqual(result["execution_mode"], "SIMULATED")
+        self.assertEqual(result["connection_authority"], "ABSENT")
+        self.assertIs(result["is_simulated"], True)
+        self.assertNotIn(result["status"], LIVE_SUCCESS_STATUSES)
+        self.assertNotIn(result["result_class"], LIVE_RESULT_CLASSES)
+        self.assertIsNone(result.get("broker_order_id"))
 
-    order = bridge.place_canary_order("TEST", "123", quantity=1)
-    balance = bridge.check_balance()
-    quote = bridge.get_market_quote("123")
+    def test_disconnected_order_is_unrepresentable_as_live_success(self):
+        bridge = DhanLiveBridge(client_id="", access_token="")
+        result = bridge.place_canary_order("TEST", "123", quantity=1)
 
-    assert order["status"] == "ORDER_PLACED"
-    assert order["result_class"] == "LIVE_ORDER_SUBMISSION"
-    assert order["execution_mode"] == "LIVE"
-    assert order["connection_authority"] == "PRESENT"
-    assert order["is_simulated"] is False
-    assert order["broker_order_id"] == "OFFLINE-STUB-123"
+        self.assert_not_live_authority(result)
+        self.assertEqual(result["status"], "SIMULATED")
+        self.assertEqual(result["result_class"], "SIMULATED_ORDER")
+        self.assertNotIn("PROBE_SUCCESS", result.values())
 
-    assert balance["result_class"] == "LIVE_ACCOUNT_SNAPSHOT"
-    assert quote["result_class"] == "LIVE_MARKET_QUOTE"
-    assert balance["execution_mode"] == quote["execution_mode"] == "LIVE"
+    def test_disconnected_balance_and_quote_do_not_use_live_value_fields(self):
+        bridge = DhanLiveBridge(client_id="", access_token="")
+        balance = bridge.check_balance()
+        quote = bridge.get_market_quote("123")
+
+        self.assert_not_live_authority(balance)
+        self.assert_not_live_authority(quote)
+        self.assertEqual(balance["result_class"], "SIMULATED_ACCOUNT_SNAPSHOT")
+        self.assertEqual(quote["result_class"], "SIMULATED_MARKET_QUOTE")
+        self.assertNotIn("deposited_balance", balance)
+        self.assertNotIn("ltp", quote)
+        self.assertEqual(balance["simulated_balance_hint"], 1.00)
+        self.assertEqual(quote["simulated_ltp_hint"], 684.85)
+
+    def test_stubbed_connected_authority_is_explicitly_live_without_network(self):
+        bridge = DhanLiveBridge(client_id="", access_token="")
+        bridge.dhan = FakeConnectedDhan()
+        bridge.is_connected = True
+
+        order = bridge.place_canary_order("TEST", "123", quantity=1)
+        balance = bridge.check_balance()
+        quote = bridge.get_market_quote("123")
+
+        self.assertEqual(order["status"], "ORDER_PLACED")
+        self.assertEqual(order["result_class"], "LIVE_ORDER_SUBMISSION")
+        self.assertEqual(order["execution_mode"], "LIVE")
+        self.assertEqual(order["connection_authority"], "PRESENT")
+        self.assertIs(order["is_simulated"], False)
+        self.assertEqual(order["broker_order_id"], "OFFLINE-STUB-123")
+        self.assertEqual(balance["result_class"], "LIVE_ACCOUNT_SNAPSHOT")
+        self.assertEqual(quote["result_class"], "LIVE_MARKET_QUOTE")
+        self.assertEqual(balance["execution_mode"], "LIVE")
+        self.assertEqual(quote["execution_mode"], "LIVE")
+
+    def test_generic_status_truthiness_does_not_grant_live_authority(self):
+        bridge = DhanLiveBridge(client_id="", access_token="")
+        result = bridge.place_canary_order("TEST", "123")
+
+        # Deliberately model the dangerous downstream mutant: any non-empty status is "success".
+        self.assertTrue(bool(result.get("status")))
+
+        real_live_success = (
+            result.get("execution_mode") == "LIVE"
+            and result.get("connection_authority") == "PRESENT"
+            and result.get("is_simulated") is False
+            and result.get("status") == "ORDER_PLACED"
+            and bool(result.get("broker_order_id"))
+        )
+        self.assertFalse(real_live_success)
 
 
-def test_mutant_generic_success_classifier_would_be_rejected_by_authority_contract():
-    bridge = DhanLiveBridge(client_id="", access_token="")
-    result = bridge.place_canary_order("TEST", "123")
-
-    # This represents the dangerous downstream mutant: treating any truthy status as success.
-    mutant_generic_success = bool(result.get("status"))
-    assert mutant_generic_success is True
-
-    # The real authority contract must still make live success impossible.
-    real_live_success = (
-        result.get("execution_mode") == "LIVE"
-        and result.get("connection_authority") == "PRESENT"
-        and result.get("is_simulated") is False
-        and result.get("status") == "ORDER_PLACED"
-        and bool(result.get("broker_order_id"))
-    )
-    assert real_live_success is False
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
