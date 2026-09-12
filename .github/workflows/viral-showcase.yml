@@ -48,6 +48,9 @@ jobs:
           if-no-files-found: warn
           retention-days: 90
 
+      - name: Run Permanent Adversarial Canary Regression Suite
+        run: |
+          python3 tests/test_adversarial_receipt_canaries.py
       - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
         run: |
           python3 scripts/verify_receipt.py --assert-live-benchmark scripts/quant_benchmark_results.json 2>&1 | tee /tmp/quant_forensic_verification_report.txt
