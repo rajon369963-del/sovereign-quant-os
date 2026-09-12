@@ -155,6 +155,34 @@ class ExecutionDaemon:
                     return None
         return None
 
+    @staticmethod
+    def _exit_trigger(order: TradeOrder, current_price: float) -> Optional[float]:
+        """Return the bracket exit price when the side-aware TP/SL condition is crossed."""
+        side = str(order.side).upper()
+        if side == SignalType.BUY.value:
+            if current_price >= order.hard_take_profit:
+                return order.hard_take_profit
+            if current_price <= order.hard_stop_loss:
+                return order.hard_stop_loss
+            return None
+        if side == SignalType.SELL.value:
+            if current_price <= order.hard_take_profit:
+                return order.hard_take_profit
+            if current_price >= order.hard_stop_loss:
+                return order.hard_stop_loss
+            return None
+        raise ValueError(f"UNSUPPORTED_ORDER_SIDE_HOLD: {order.side}")
+
+    @staticmethod
+    def _realized_pnl(order: TradeOrder, exit_price: float) -> float:
+        """Compute realized PnL with BUY/SELL direction explicitly represented."""
+        side = str(order.side).upper()
+        if side == SignalType.BUY.value:
+            return (exit_price - order.fill_price) * order.quantity
+        if side == SignalType.SELL.value:
+            return (order.fill_price - exit_price) * order.quantity
+        raise ValueError(f"UNSUPPORTED_ORDER_SIDE_HOLD: {order.side}")
+
     def simulate_price_tick(self, current_price: float, risk_gate: RiskGatekeeper):
         """Simulates market price updates against resting bracket stops (SL & TP)."""
         if not self.active_orders:
@@ -163,16 +191,10 @@ class ExecutionDaemon:
         orders_to_close = []
         for order_id, order in self.active_orders.items():
             if order.state == OrderState.FILLED:
-                # Check Take Profit
-                if current_price >= order.hard_take_profit:
-                    order.exit_price = order.hard_take_profit
-                    order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
-                    order.state = OrderState.CLOSED
-                    orders_to_close.append(order)
-                # Check Stop Loss
-                elif current_price <= order.hard_stop_loss:
-                    order.exit_price = order.hard_stop_loss
-                    order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
+                exit_price = self._exit_trigger(order, current_price)
+                if exit_price is not None:
+                    order.exit_price = exit_price
+                    order.realized_pnl = self._realized_pnl(order, exit_price)
                     order.state = OrderState.CLOSED
                     orders_to_close.append(order)
 
