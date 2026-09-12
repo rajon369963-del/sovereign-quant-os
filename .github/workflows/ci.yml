@@ -11,8 +11,13 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out exact triggering revision
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Record tested revision
+        run: git rev-parse HEAD
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,6 +41,9 @@ jobs:
 
       - name: Run Delta-Neutral Carry Harvester Battery
         run: python3 test_phase3_cherry_on_top_battery.py
+
+      - name: Run Alpha Min-RR Contract Court
+        run: python3 test_alpha_min_rr_battery.py
 
       - name: Run 10x Canary & 10,000-Order Stress Runner
         run: python3 sovereign_100_hacks_100_wheels_full_synthesis.py --verify-only
