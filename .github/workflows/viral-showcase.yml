@@ -21,18 +21,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio
+          pip install pytest pytest-asyncio cryptography
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Validate Viral Showcase Primitives
         run: |
           test -f llms.txt || exit 1
           test -f assets/scorecard.svg || exit 1
           test -f showcase.html || exit 1
+          test -f db/STRESS_BENCHMARK_REAL_WHEELS.json || exit 1
           echo "Showcase assets verified."
       - name: Execute Kernel Stress & Idempotency Battery
         run: |
           pytest -o asyncio_mode=auto test_execution_kernel_stress.py
+      - name: Execute Domain Risk Gate Benchmark Reproducer
+        run: |
+          python3 scripts/benchmark_quant_risk_gate.py
       - name: Verify Cryptographic Receipt & Scorecard Zero-Drift
         run: |
-          pip install cryptography
           python3 scripts/verify_receipt.py
