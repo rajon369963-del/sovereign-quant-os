@@ -1,0 +1,3 @@
+AIR10 Quant Issue #49 TDD RED trigger
+Branch: feat/quant49-receipt-discriminator
+Expected outcome before discriminator adapter: target-stage marker assertions fail because tampered signed receipt is rejected earlier by canonical payload/signature gates.
