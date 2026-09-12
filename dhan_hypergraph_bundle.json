@@ -1,0 +1,4662 @@
+{
+  "clusters": {
+    "ALGORITHMIC_API": {
+      "name": "Algorithmic & API Architecture",
+      "description": "Automated Execution, DhanHQ API v2, Webhooks, Python SDK, Token Lifecycles",
+      "color": "#06b6d4",
+      "keywords": [
+        "api",
+        "webhook",
+        "algo",
+        "python",
+        "automation",
+        "connect",
+        "bot",
+        "tradingview",
+        "login",
+        "token",
+        "tv"
+      ]
+    },
+    "ORDER_EXECUTION": {
+      "name": "Order Mechanics & Execution",
+      "description": "Bracket Orders, Trailing Stop Loss, Cover Orders, Iceberg & Limit Execution",
+      "color": "#3b82f6",
+      "keywords": [
+        "bracket",
+        "trailing",
+        "stop loss",
+        "target",
+        "limit",
+        "order",
+        "iceberg",
+        "amo",
+        "mtf",
+        "cover"
+      ]
+    },
+    "QUANT_SCALPING": {
+      "name": "Quantitative Scalping & Setups",
+      "description": "1-Minute Box Scalping, Volume Spread Analysis, VWAP, Super Scalper, Price Action",
+      "color": "#10b981",
+      "keywords": [
+        "scalp",
+        "box",
+        "1-minute",
+        "1 minute",
+        "volume",
+        "indicator",
+        "strategy",
+        "breakout",
+        "chart",
+        "setup",
+        "super"
+      ]
+    },
+    "RISK_VARIANCE_SHIELD": {
+      "name": "Risk Control & Capital Shield",
+      "description": "Ergodicity Circuit Breakers, Kill Switch, Drawdown Prevention, Position Sizing",
+      "color": "#ef4444",
+      "keywords": [
+        "risk",
+        "kill switch",
+        "loss",
+        "capital",
+        "protect",
+        "circuit",
+        "discipline",
+        "margin used",
+        "margin"
+      ]
+    },
+    "OPTIONS_DERIVATIVES": {
+      "name": "Options & Derivatives Engine",
+      "description": "Option Greeks, Option Chain, Payoff Graphs, Straddle/Strangle, Expiry Volatility",
+      "color": "#8b5cf6",
+      "keywords": [
+        "option",
+        "options",
+        "call",
+        "put",
+        "strike",
+        "expiry",
+        "chain",
+        "greek",
+        "straddle",
+        "strangle",
+        "dext"
+      ]
+    },
+    "CHARGES_REGULATORY": {
+      "name": "Brokerage & Clearing Infrastructure",
+      "description": "Brokerage Calculation, Zero AMC, STT/SEBI Charges, Demat Clearing, Comparisons",
+      "color": "#f59e0b",
+      "keywords": [
+        "charges",
+        "brokerage",
+        "hidden",
+        "zerodha",
+        "angel",
+        "groww",
+        "comparison",
+        "free",
+        "amc",
+        "account",
+        "demat"
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "c_api_v2",
+      "label": "DhanHQ API v2 Gateway",
+      "cluster": "ALGORITHMIC_API",
+      "desc": "REST & WebSocket low-latency order router",
+      "weight": 95
+    },
+    {
+      "id": "c_webhook",
+      "label": "TradingView Webhook Bridge",
+      "cluster": "ALGORITHMIC_API",
+      "desc": "Zero-bot automated alerts-to-execution pipeline",
+      "weight": 90
+    },
+    {
+      "id": "c_sdk_python",
+      "label": "Python Quant SDK",
+      "cluster": "ALGORITHMIC_API",
+      "desc": "Official dhanhq Python client for automated strategies",
+      "weight": 85
+    },
+    {
+      "id": "c_token_auth",
+      "label": "24h/30d Access Token Security",
+      "cluster": "ALGORITHMIC_API",
+      "desc": "Encrypted session token lifecycle and daily handshake",
+      "weight": 88
+    },
+    {
+      "id": "c_bracket_order",
+      "label": "Bracket Order (BO)",
+      "cluster": "ORDER_EXECUTION",
+      "desc": "Simultaneous target and hard stop loss parent-child order",
+      "weight": 98
+    },
+    {
+      "id": "c_trailing_sl",
+      "label": "Trailing Stop Loss (TSL)",
+      "cluster": "ORDER_EXECUTION",
+      "desc": "Dynamic stop loss ratcheting with favorable price movement",
+      "weight": 96
+    },
+    {
+      "id": "c_iceberg_order",
+      "label": "Iceberg Slicing Engine",
+      "cluster": "ORDER_EXECUTION",
+      "desc": "Automated order fragmentation for minimal market impact",
+      "weight": 80
+    },
+    {
+      "id": "c_instant_sl",
+      "label": "Instant 1-Click Order SL",
+      "cluster": "ORDER_EXECUTION",
+      "desc": "Rapid stop-loss placement directly on TradingView charts",
+      "weight": 92
+    },
+    {
+      "id": "c_box_scalping",
+      "label": "1-Minute Box Scalping",
+      "cluster": "QUANT_SCALPING",
+      "desc": "High-frequency range breakout and liquidity grab capture",
+      "weight": 95
+    },
+    {
+      "id": "c_vsa_volume",
+      "label": "Volume Spread Analysis (VSA)",
+      "cluster": "QUANT_SCALPING",
+      "desc": "Smart money institutional absorption vs retail exhaustion",
+      "weight": 89
+    },
+    {
+      "id": "c_vwap_reversion",
+      "label": "VWAP Mean Reversion",
+      "cluster": "QUANT_SCALPING",
+      "desc": "Statistical standard deviation envelope bounce trading",
+      "weight": 87
+    },
+    {
+      "id": "c_order_flow",
+      "label": "Order Flow & Market Depth (20-Depth)",
+      "cluster": "QUANT_SCALPING",
+      "desc": "Bid/Ask imbalance analysis from live tick feeds",
+      "weight": 91
+    },
+    {
+      "id": "c_kill_switch",
+      "label": "Trader Kill Switch Protocol",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "desc": "Mandatory trading block on reaching daily drawdown stop",
+      "weight": 99
+    },
+    {
+      "id": "c_fractional_kelly",
+      "label": "1% Fractional Kelly Sizing",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "desc": "Mathematical position sizing eliminating ruin probability",
+      "weight": 100
+    },
+    {
+      "id": "c_margin_safety",
+      "label": "Pledge & Margin Real-Time Monitor",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "desc": "Instant collateral monitoring preventing auto-squareoff",
+      "weight": 86
+    },
+    {
+      "id": "c_option_chain",
+      "label": "Dhan Custom Option Chain",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "desc": "Real-time IV, Greek calculation, and open interest spikes",
+      "weight": 94
+    },
+    {
+      "id": "c_payoff_analyzer",
+      "label": "Live Strategy Payoff Analyzer",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "desc": "Visual profit/loss probability surface modeling",
+      "weight": 88
+    },
+    {
+      "id": "c_dext_terminal",
+      "label": "Dhan DEXT / Options Trader Web",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "desc": "Institutional specialized multi-leg options terminal",
+      "weight": 85
+    },
+    {
+      "id": "c_flat_brokerage",
+      "label": "Flat \u20b920 / 0.03% Fee Model",
+      "cluster": "CHARGES_REGULATORY",
+      "desc": "SEBI compliant flat execution cost architecture",
+      "weight": 92
+    },
+    {
+      "id": "c_zero_amc",
+      "label": "Zero AMC & Free Demat",
+      "cluster": "CHARGES_REGULATORY",
+      "desc": "Lifetime maintenance-free depository account structure",
+      "weight": 84
+    },
+    {
+      "id": "c_peer_comparison",
+      "label": "Broker Infrastructure Benchmark",
+      "cluster": "CHARGES_REGULATORY",
+      "desc": "Comparative latency & execution audit vs Zerodha/Angel",
+      "weight": 82
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_auto_scalp",
+      "name": "Automated Sub-Second Scalping Pipeline",
+      "type": "EXECUTION_PIPELINE",
+      "desc": "Connects Python Quant SDK, 1-Min Box Scalping, Bracket Orders, and Kill Switch",
+      "members": [
+        "c_sdk_python",
+        "c_box_scalping",
+        "c_bracket_order",
+        "c_kill_switch",
+        "c_api_v2"
+      ]
+    },
+    {
+      "id": "he_chart_trading",
+      "name": "Direct Chart Execution & Ratchet System",
+      "type": "WORKFLOW",
+      "desc": "Connects TradingView Webhook, Trailing Stop Loss, Instant 1-Click SL, and VSA Volume",
+      "members": [
+        "c_webhook",
+        "c_trailing_sl",
+        "c_instant_sl",
+        "c_vsa_volume"
+      ]
+    },
+    {
+      "id": "he_quant_risk_fortress",
+      "name": "Zero-Ruin Mathematical Risk Shield",
+      "type": "RISK_GOVERNANCE",
+      "desc": "Connects Fractional Kelly Sizing, Kill Switch Protocol, Margin Monitor, and Flat Fee Audit",
+      "members": [
+        "c_fractional_kelly",
+        "c_kill_switch",
+        "c_margin_safety",
+        "c_flat_brokerage"
+      ]
+    },
+    {
+      "id": "he_derivatives_mastery",
+      "name": "Institutional Options Greek Engine",
+      "type": "DERIVATIVES_FLOW",
+      "desc": "Connects Option Chain, Payoff Analyzer, DEXT Terminal, and VWAP Mean Reversion",
+      "members": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_vwap_reversion"
+      ]
+    },
+    {
+      "id": "he_capital_efficiency",
+      "name": "Low Friction High-Velocity Capital Loop",
+      "type": "FINANCIAL_EFFICIENCY",
+      "desc": "Connects Flat \u20b920 Fee Model, Zero AMC, Brokerage Benchmark, and Token Security",
+      "members": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison",
+        "c_token_auth"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src_001",
+      "title": "(Groww) (Zerodha) (Upstox) (Angel One) (Dhan) Brokers \u0916\u0924\u0930\u0947 \u092e\u0947\u0902?\u26ab UPI NO MORE FREE? MDR FEES\u26abDemat AC",
+      "url": "https://www.youtube.com/watch?v=0jLF81UOOYY",
+      "video_id": "0jLF81UOOYY",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_002",
+      "title": "1-Minute Box Scalping Strategy Every Scalper Should Know!",
+      "url": "https://www.youtube.com/watch?v=fn7wWaVZ3so",
+      "video_id": "fn7wWaVZ3so",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_payoff_analyzer"
+      ]
+    },
+    {
+      "id": "src_003",
+      "title": "3 Hidden Dhan App Features Most Traders Miss (Must Try!)",
+      "url": "https://www.youtube.com/watch?v=dZkhU7xfIWA",
+      "video_id": "dZkhU7xfIWA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_004",
+      "title": "3 Secret Indicators on Dhan Charts Every Trader Must Know",
+      "url": "https://www.youtube.com/watch?v=ctjo0mXYoAQ",
+      "video_id": "ctjo0mXYoAQ",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_005",
+      "title": "3 Smart ways of using VOLUME in Trading | Dhan",
+      "url": "https://www.youtube.com/watch?v=SoRohwLFCcQ",
+      "video_id": "SoRohwLFCcQ",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_006",
+      "title": "5 Hidden Dhan App Features Every Trader & Investor Must Use",
+      "url": "https://www.youtube.com/watch?v=W7qEuKM46LQ",
+      "video_id": "W7qEuKM46LQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_007",
+      "title": "5 Order Flow Concepts That Can Change Your Trading",
+      "url": "https://www.youtube.com/watch?v=YdnRYdXVuX4",
+      "video_id": "YdnRYdXVuX4",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow"
+      ]
+    },
+    {
+      "id": "src_008",
+      "title": "5 Powerful Dhan App Settings Every Trader Should Use Right Now!",
+      "url": "https://www.youtube.com/watch?v=h9XVkigX4Mg",
+      "video_id": "h9XVkigX4Mg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_009",
+      "title": "5 Settings on the Dhan App Every Trader Must Turn On",
+      "url": "https://www.youtube.com/watch?v=49YXgEwOJhA",
+      "video_id": "49YXgEwOJhA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_010",
+      "title": "5-Minute Commodity Scalping Using Dhan Super Scalper | Gold, Silver & Crude Oil",
+      "url": "https://www.youtube.com/watch?v=lK67vkVLsX4",
+      "video_id": "lK67vkVLsX4",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_011",
+      "title": "AI Can Now BUY Stocks for You \ud83e\udd2f Dhan + Claude = FREE Auto Trading",
+      "url": "https://www.youtube.com/watch?v=IFgqyGUPi_w",
+      "video_id": "IFgqyGUPi_w",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_012",
+      "title": "AI Portfolio Analysis | Dhan MCP + Claude Portfolio Review Explained",
+      "url": "https://www.youtube.com/watch?v=H_b9sdX_KYI",
+      "video_id": "H_b9sdX_KYI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_vsa_volume",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_013",
+      "title": "Advance Scalping Strategy | Find Quick Reversal Trades Using This Dhan Indicator",
+      "url": "https://www.youtube.com/watch?v=aSOgPzb8RE4",
+      "video_id": "aSOgPzb8RE4",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_014",
+      "title": "Advanced Intraday Option Buying Strategy | Multi-Timeframe Setup",
+      "url": "https://www.youtube.com/watch?v=J63EL3Xb02g",
+      "video_id": "J63EL3Xb02g",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_payoff_analyzer"
+      ]
+    },
+    {
+      "id": "src_015",
+      "title": "All Demat Account Brokerage Charges in India; Dhan | Kotak | Groww | AngelOne | Zerodha",
+      "url": "https://www.youtube.com/watch?v=ka9ScEuXqG8",
+      "video_id": "ka9ScEuXqG8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_016",
+      "title": "Angel One vs Dhan | Which Stock Broker Is Better?",
+      "url": "https://www.youtube.com/watch?v=zO2dq41N4WQ",
+      "video_id": "zO2dq41N4WQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_017",
+      "title": "Angel One vs Groww vs Dhan vs Sahi trading app || Sahi trading app, Angel One, Groww, Dhan Compare",
+      "url": "https://www.youtube.com/watch?v=aCtc36k4tCQ",
+      "video_id": "aCtc36k4tCQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_018",
+      "title": "Angel One vs Groww vs Zerodha vs Dhan: Best Trading App 2026?",
+      "url": "https://www.youtube.com/watch?v=7jW-6aTk_ME",
+      "video_id": "7jW-6aTk_ME",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_019",
+      "title": "Angel One vs Upstox vs Zerodha vs Groww vs Dhan vs INDmoney vs  Paytm Money - Ultimate Comparison!",
+      "url": "https://www.youtube.com/watch?v=_c3tDlUYkGg",
+      "video_id": "_c3tDlUYkGg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_020",
+      "title": "Angel one vs Dhan brokerage charges | Angel one vs Dhan App Which is better?",
+      "url": "https://www.youtube.com/watch?v=FD1TzznvX3o",
+      "video_id": "FD1TzznvX3o",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_021",
+      "title": "Best 2 Algo Strategies on Dhan HQ II Algo Trading in Dhan #algotrading",
+      "url": "https://www.youtube.com/watch?v=RzFeJPXVeFI",
+      "video_id": "RzFeJPXVeFI",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_022",
+      "title": "Best App for Option Buying\ud83d\udd25 | \ud83d\uded1LIVE DEMO\ud83d\uded1 | DHAN BROKER IN 1 CLIQ | 1 CLIQ Dhan me kaise use kare ?",
+      "url": "https://www.youtube.com/watch?v=rNgoKu1RkXw",
+      "video_id": "rNgoKu1RkXw",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_023",
+      "title": "Best Indian Market Broker: Dhan App",
+      "url": "https://www.youtube.com/watch?v=wEdGrAyJvnQ",
+      "video_id": "wEdGrAyJvnQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_024",
+      "title": "Best Option Trading Platform for Beginners | Best Scalping Broker | Live Trade Demo",
+      "url": "https://www.youtube.com/watch?v=9MRZ_J49IJg",
+      "video_id": "9MRZ_J49IJg",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_025",
+      "title": "Best Trading App 2025 || Dhan vs Lemonn Demat Account Comparison || Best Stock Broker 2025",
+      "url": "https://www.youtube.com/watch?v=RAxKFNZ3O3o",
+      "video_id": "RAxKFNZ3O3o",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_026",
+      "title": "Best Trading App in 2026: Zerodha vs Groww vs Dhan vs Angel One (Hidden Charges & Reality Check)",
+      "url": "https://www.youtube.com/watch?v=xW4cbpzQobM",
+      "video_id": "xW4cbpzQobM",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_027",
+      "title": "Best Trading App in India 2026: Shoonya vs Dhan? (The Truth No One Tells You)",
+      "url": "https://www.youtube.com/watch?v=FfNWiw1aVtI",
+      "video_id": "FfNWiw1aVtI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_028",
+      "title": "Bracket Order \u26a1\ufe0fin BANKNIFTY Options\ud83d\ude05 Intraday - DHAN Broker - Bracket order live demo",
+      "url": "https://www.youtube.com/watch?v=6wcpKzCzhb0",
+      "video_id": "6wcpKzCzhb0",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_029",
+      "title": "Buy US Stocks From India in 10 Minutes | Dhan Global Investing Tutorial 2026 Step by Step",
+      "url": "https://www.youtube.com/watch?v=IcBNxw9F-cE",
+      "video_id": "IcBNxw9F-cE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_030",
+      "title": "Comparing Dhan Brokerage Charges using Dhan Brokerage Calculator | dhan all charges",
+      "url": "https://www.youtube.com/watch?v=U_WpQdhKvE8",
+      "video_id": "U_WpQdhKvE8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_031",
+      "title": "Comparing Dhan Brokerage Charges using Dhan Brokerage Calculator | dhan all charges",
+      "url": "https://www.youtube.com/watch?v=U_WpQdhKvE8",
+      "video_id": "U_WpQdhKvE8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_032",
+      "title": "Complete 1 Hour MTF Masterclass For Traders | Dhan",
+      "url": "https://www.youtube.com/watch?v=2TkVt7cJQvc",
+      "video_id": "2TkVt7cJQvc",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_033",
+      "title": "DEXT T3 Multi-Monitor Setup Is Here | Complete Walkthrough",
+      "url": "https://www.youtube.com/watch?v=jhk_fNX7HzM",
+      "video_id": "jhk_fNX7HzM",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_margin_safety",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_034",
+      "title": "DHAN me Stoploss kaise lagaye | Option Trading me Stoploss kaise lagay | How to use Stoploss in DHAN",
+      "url": "https://www.youtube.com/watch?v=TJxh7g3WVNA",
+      "video_id": "TJxh7g3WVNA",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "linked_nodes": [
+        "c_trailing_sl",
+        "c_kill_switch",
+        "c_fractional_kelly",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_035",
+      "title": "Delivery Charges in Dhan App - Brokerage Charge Kitna Lagta Hai?",
+      "url": "https://www.youtube.com/watch?v=_yBmy_9xvZI",
+      "video_id": "_yBmy_9xvZI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_036",
+      "title": "Dhan + Algotest Integration with Static IP \ud83d\udd25 Complete Setup Tutorial",
+      "url": "https://www.youtube.com/watch?v=LLnkWjk6C9s",
+      "video_id": "LLnkWjk6C9s",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_037",
+      "title": "Dhan API WebSocket Tutorial \u2013 Part 1",
+      "url": "https://www.youtube.com/watch?v=w897JFypG-Y",
+      "video_id": "w897JFypG-Y",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_038",
+      "title": "Dhan Account Opening | How to Open Demat Account in DHAN App | Dhan App Demat Account Kaise Khole",
+      "url": "https://www.youtube.com/watch?v=kzyb_aT_zgc",
+      "video_id": "kzyb_aT_zgc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_039",
+      "title": "Dhan Account Opening | How to Open Demat Account in DHAN App | Dhan App demat account kaise khole",
+      "url": "https://www.youtube.com/watch?v=c8AyJ7sgqHE",
+      "video_id": "c8AyJ7sgqHE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_040",
+      "title": "Dhan Account Opening | How to Open Demat Account in DHAN App | Dhan App demat account kaise khole",
+      "url": "https://www.youtube.com/watch?v=i-7nKfQ80vM",
+      "video_id": "i-7nKfQ80vM",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_041",
+      "title": "Dhan Account Opening | How to Open Demat Account in Dhan | Dhan App Demat Account Opening",
+      "url": "https://www.youtube.com/watch?v=XELJd9nmqKo",
+      "video_id": "XELJd9nmqKo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_042",
+      "title": "Dhan Account Opening | How to Open Demat account in Dhan | Dhan Demat Account kaise Banaye 2025",
+      "url": "https://www.youtube.com/watch?v=rNA1okpd9_A",
+      "video_id": "rNA1okpd9_A",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_043",
+      "title": "Dhan App Account Opening | Dhan App me Demat Account Kaise Khole?",
+      "url": "https://www.youtube.com/watch?v=7DDchKbLmbI",
+      "video_id": "7DDchKbLmbI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_044",
+      "title": "Dhan App Account Opening | How to open account in dhan app | Dhan Account Opening Process",
+      "url": "https://www.youtube.com/watch?v=fbIjdxJ0bc0",
+      "video_id": "fbIjdxJ0bc0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_045",
+      "title": "Dhan App All Brokerage Charges 2026? Dhan Demat Charges | Dhan AMC & Hidden Charges",
+      "url": "https://www.youtube.com/watch?v=3kRscdCD1y0",
+      "video_id": "3kRscdCD1y0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_046",
+      "title": "Dhan App Brokerage Charges | Dhan Brokerage Charges | Dhan App Trading Review | Dhan App Review",
+      "url": "https://www.youtube.com/watch?v=YJnJzdmuTyU",
+      "video_id": "YJnJzdmuTyU",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_047",
+      "title": "Dhan App Brokerage Charges | Dhan Brokerage Charges | Dhan App Trading Review | Dhan App Review",
+      "url": "https://www.youtube.com/watch?v=hkc2w3I-ZUc",
+      "video_id": "hkc2w3I-ZUc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_048",
+      "title": "Dhan App Chart Settings full details | New Chart settings 2026 | Trading Settings in Dhan",
+      "url": "https://www.youtube.com/watch?v=kemQGTJf-K8",
+      "video_id": "kemQGTJf-K8",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_049",
+      "title": "Dhan App Demat Account Opening | How to Open Demat account in Dhan Application",
+      "url": "https://www.youtube.com/watch?v=Sr6-Fb6nSDQ",
+      "video_id": "Sr6-Fb6nSDQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_050",
+      "title": "Dhan App Disadvantages | Dhan App review | Hindi | MyCompany |",
+      "url": "https://www.youtube.com/watch?v=72nHu_t762M",
+      "video_id": "72nHu_t762M",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_051",
+      "title": "Dhan App Feature - Option trading \u0915\u0947 \u0932\u093f\u090f \u092c\u0921\u093c\u093e update | Dhan app option trading demo tutorial 2026",
+      "url": "https://www.youtube.com/watch?v=fkLVWJ4YCic",
+      "video_id": "fkLVWJ4YCic",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_052",
+      "title": "Dhan App Full Tutorial 2026 - How to Use Dhan App?",
+      "url": "https://www.youtube.com/watch?v=fPXMLkzhFM8",
+      "video_id": "fPXMLkzhFM8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_053",
+      "title": "Dhan App Kill Switch Fetures Live demo 2023 | How to stop Over Trading \ud83d\ude25 | Dhan app Traders Control",
+      "url": "https://www.youtube.com/watch?v=qB7kH2mqTuA",
+      "video_id": "qB7kH2mqTuA",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "linked_nodes": [
+        "c_trailing_sl",
+        "c_kill_switch",
+        "c_fractional_kelly",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_054",
+      "title": "Dhan App Me F&O Segment Kaise Activate Kare? Dhan Future and Options Activation Guide in Hindi",
+      "url": "https://www.youtube.com/watch?v=h7CSdr6wAVA",
+      "video_id": "h7CSdr6wAVA",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_055",
+      "title": "Dhan App Me Gold Trading Kaise Kare 2026 - How to Trade Gold In Dhan",
+      "url": "https://www.youtube.com/watch?v=_nytOPibkrs",
+      "video_id": "_nytOPibkrs",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_056",
+      "title": "Dhan App Me Intraday Trading Kaise Kare? Charges & Important Tips",
+      "url": "https://www.youtube.com/watch?v=6cHhIR9s1Lo",
+      "video_id": "6cHhIR9s1Lo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_057",
+      "title": "Dhan App Me Option Trading Kaise Kare | Dhan App Option Trading | How To Use Dhan App | Dhan App",
+      "url": "https://www.youtube.com/watch?v=czOWCz1nnpk",
+      "video_id": "czOWCz1nnpk",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_058",
+      "title": "Dhan App Me Option Trading Kaise Kare | Dhan App Option Trading | How To Use Dhan App | Dhan App",
+      "url": "https://www.youtube.com/watch?v=6zvK_MfjbCo",
+      "video_id": "6zvK_MfjbCo",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_059",
+      "title": "Dhan App Me Option Trading Kaise Kare | Dhan App Option Trading | How To Use Dhan App | Dhan App",
+      "url": "https://www.youtube.com/watch?v=VP7Tp9KOpig",
+      "video_id": "VP7Tp9KOpig",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_060",
+      "title": "Dhan App Me Option Trading Kaise Kare | Dhan App Option Trading | How To Use Dhan App | Dhan App",
+      "url": "https://www.youtube.com/watch?v=AFe4oY3fLW4",
+      "video_id": "AFe4oY3fLW4",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_061",
+      "title": "Dhan App Me SIP Kaise Kare? Dhan Mutual Fund SIP Investment Process Explained for Beginners",
+      "url": "https://www.youtube.com/watch?v=5dqclUYyRAY",
+      "video_id": "5dqclUYyRAY",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_062",
+      "title": "Dhan App Me Share Kaise Beche? How to Sell Stocks/Shares in Dhan App Online?",
+      "url": "https://www.youtube.com/watch?v=CeInFfHXTkg",
+      "video_id": "CeInFfHXTkg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_063",
+      "title": "Dhan App Me Trading Kaise Kare | Dhan App Me Option Trading Kaise Kare | Dhan app option trading",
+      "url": "https://www.youtube.com/watch?v=Kipxds3pxX4",
+      "video_id": "Kipxds3pxX4",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_064",
+      "title": "Dhan App New Feature - Option trading \u0915\u0947 \u0932\u093f\u090f \u092c\u0921\u093c\u093e update | Dhan app option trading demo tutorial",
+      "url": "https://www.youtube.com/watch?v=xNDjijHPLME",
+      "video_id": "xNDjijHPLME",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_065",
+      "title": "Dhan App Option Trading Charges - After New Rules 2026 | Dhan Brokerage Charges for Trading | Proof",
+      "url": "https://www.youtube.com/watch?v=7rziUa902W0",
+      "video_id": "7rziUa902W0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_066",
+      "title": "Dhan App Option Trading Me Stop Loss Kaise Lagaye? Dhan App Option Trading Stop Loss",
+      "url": "https://www.youtube.com/watch?v=OW3Nh9QrGxI",
+      "video_id": "OW3Nh9QrGxI",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_067",
+      "title": "Dhan App Review 2025 | dhan stock brokers review | dhan option trading app review",
+      "url": "https://www.youtube.com/watch?v=-YWqh2QoA2I",
+      "video_id": "-YWqh2QoA2I",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_068",
+      "title": "Dhan App Review 2026 | Is Dhan Best Trading App in India? Charges & Features",
+      "url": "https://www.youtube.com/watch?v=gRvMEx5WD1I",
+      "video_id": "gRvMEx5WD1I",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_069",
+      "title": "Dhan App Review 2026 | Zero Brokerage Plan & All Charges Explained\ud83d\udcb8 Dhan Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=VbA1nL7tRek",
+      "video_id": "VbA1nL7tRek",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_070",
+      "title": "Dhan App Review 2026: Trading \u0915\u0947 \u0932\u093f\u090f Best \u092f\u093e Worst? \ud83d\udcc9 | Hidden Charges?",
+      "url": "https://www.youtube.com/watch?v=zkls5ekLQyo",
+      "video_id": "zkls5ekLQyo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_071",
+      "title": "Dhan App Review After Using 2 Years: Dhan(Pros, Cons & Charges)",
+      "url": "https://www.youtube.com/watch?v=nYXj-FWh7Is",
+      "video_id": "nYXj-FWh7Is",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_072",
+      "title": "Dhan App Review | Demat Brokerage Charges | Dhan vs Zerodha Groww Dhan Demat Account Review",
+      "url": "https://www.youtube.com/watch?v=b8rA6p3mU_U",
+      "video_id": "b8rA6p3mU_U",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_073",
+      "title": "Dhan App Review | Demat Brokerage Charges | Dhan vs Zerodha Groww Dhan Demat Account Review",
+      "url": "https://www.youtube.com/watch?v=_PpbDIEfwR0",
+      "video_id": "_PpbDIEfwR0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_074",
+      "title": "Dhan App Review | Dhan App Brokerage Charges & Demat Account Review | Dhan vs Zerodha vs Groww",
+      "url": "https://www.youtube.com/watch?v=Wo2Q8vN1li8",
+      "video_id": "Wo2Q8vN1li8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_075",
+      "title": "Dhan App Review | Dhan App Brokerage Charges | Dhan Trading App Review 2026",
+      "url": "https://www.youtube.com/watch?v=va7gDzj3thA",
+      "video_id": "va7gDzj3thA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_076",
+      "title": "Dhan App Review | Dhan Brokerage Charges | Dhan Trading App Review | Dhan Demat Review",
+      "url": "https://www.youtube.com/watch?v=4nTZk5XLQOQ",
+      "video_id": "4nTZk5XLQOQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_077",
+      "title": "Dhan App Review | Dhan Brokerage Charges | Dhan Trading App | Dhan App Demat Account",
+      "url": "https://www.youtube.com/watch?v=7B4PsKd7Pmw",
+      "video_id": "7B4PsKd7Pmw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_078",
+      "title": "Dhan App Review | Dhan Demat Account Review | Demat Brokerage Charges Dhan vs Zerodha vs Groww",
+      "url": "https://www.youtube.com/watch?v=WjKGLkaydaA",
+      "video_id": "WjKGLkaydaA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_079",
+      "title": "Dhan App Review | Dhan Trading App | Dhan Brokerage Charges | Dhan Broker Demat Account Review",
+      "url": "https://www.youtube.com/watch?v=-AtiHqsCuOE",
+      "video_id": "-AtiHqsCuOE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_080",
+      "title": "Dhan App Review | Dhan Trading Platform Review | Dhan Demat Account Review | Dhan Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=6GFw2osZv5k",
+      "video_id": "6GFw2osZv5k",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_081",
+      "title": "Dhan App Review | Dhan Trading Platform Review, Dhan Demat Account Review, Dhan Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=eRUGPjf2HCo",
+      "video_id": "eRUGPjf2HCo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_082",
+      "title": "Dhan App Review | Dhan Trading Platform Review, Dhan Demat Account Review, Dhan Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=fmeh9OnUZnI",
+      "video_id": "fmeh9OnUZnI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_083",
+      "title": "Dhan App Review | Dhan vs Zerodha vs Groww | Dhan App Demat Account | Dhan App Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=_OwScHe2FQs",
+      "video_id": "_OwScHe2FQs",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_084",
+      "title": "Dhan App Review, Demat Account, Brokerage Charges, Options Trading, Pay Later MTF",
+      "url": "https://www.youtube.com/watch?v=GrP29gIhfzo",
+      "video_id": "GrP29gIhfzo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_085",
+      "title": "Dhan App Review, Demat Account, Dhan Brokerage Charges in bengali | Dhan review",
+      "url": "https://www.youtube.com/watch?v=f554Too6wg8",
+      "video_id": "f554Too6wg8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_086",
+      "title": "Dhan App Reviews Exposed: Fake or Real? | Dhan App Review 2026",
+      "url": "https://www.youtube.com/watch?v=fxwsmOmBpkc",
+      "video_id": "fxwsmOmBpkc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_087",
+      "title": "Dhan App Se Intraday Trading Kaise Kare | How To Start Intraday Trading in DHAN",
+      "url": "https://www.youtube.com/watch?v=Ev5hwB_hsJc",
+      "video_id": "Ev5hwB_hsJc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_088",
+      "title": "Dhan App Se XAU USD Trading Kaise Kare, Dhan App XAU USD Trading For Beginners",
+      "url": "https://www.youtube.com/watch?v=An-vEWzbqTM",
+      "video_id": "An-vEWzbqTM",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_089",
+      "title": "Dhan App Trading Full Tutorial 2026 | Buy & Sell Shares Step-by-Step",
+      "url": "https://www.youtube.com/watch?v=xTm7agCA0MU",
+      "video_id": "xTm7agCA0MU",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_090",
+      "title": "Dhan App Tutorial & Review in Hindi - Dhan App Kaise Chalate Hain, Use Kaise Kare?",
+      "url": "https://www.youtube.com/watch?v=OBUWU1222oE",
+      "video_id": "OBUWU1222oE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_091",
+      "title": "Dhan App Tutorial | Track All Stock Broker Holdings together in Dhan App",
+      "url": "https://www.youtube.com/watch?v=hENqisn245I",
+      "video_id": "hENqisn245I",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_092",
+      "title": "Dhan App me Multiple Charts Kaise Dekhe? How to View or See Multiple Charts in Dhan Application?",
+      "url": "https://www.youtube.com/watch?v=CXxhQ_OmN9U",
+      "video_id": "CXxhQ_OmN9U",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_093",
+      "title": "Dhan App me Paper Trading Kaise Kare | How to Use Paper Trading App | Dhan Paper Trading App",
+      "url": "https://www.youtube.com/watch?v=PnEGDtAY11U",
+      "video_id": "PnEGDtAY11U",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_094",
+      "title": "Dhan App me Scalping Trading Kaise Kare? How to do Scalping Trading in Dhan App?",
+      "url": "https://www.youtube.com/watch?v=c386B7MSM74",
+      "video_id": "c386B7MSM74",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_095",
+      "title": "Dhan App me Scalping me Stop Loss Kaise Lagaye? Dhan Scalping Mode Stop Loss Step by Step Guide",
+      "url": "https://www.youtube.com/watch?v=Izs7J7wUgrk",
+      "video_id": "Izs7J7wUgrk",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_box_scalping",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_096",
+      "title": "Dhan App \u2013 Option Trading 2026 || Dhan App Me Option Trading Kaise Kare ? [Dhan App New Update]",
+      "url": "https://www.youtube.com/watch?v=rQRy8eO5REc",
+      "video_id": "rQRy8eO5REc",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_097",
+      "title": "Dhan App: Better Alternative to Zerodha? Dhan App Review 2024 | Dhan App Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=gJkzIY3VZbA",
+      "video_id": "gJkzIY3VZbA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_098",
+      "title": "Dhan Broker + Static IP Setup for Algo Trading | Beginner to Pro (April 2026)",
+      "url": "https://www.youtube.com/watch?v=pgDTNtD1maA",
+      "video_id": "pgDTNtD1maA",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_099",
+      "title": "Dhan Broker Hidden Charges \ud83d\ude31 | \u0915\u094d\u092f\u093e Traders \u0915\u0947 \u0932\u093f\u090f Best \u0939\u0948? (Full Truth 2026)",
+      "url": "https://www.youtube.com/watch?v=yoKWLwqkCs4",
+      "video_id": "yoKWLwqkCs4",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_100",
+      "title": "Dhan Broker System Glitch | Retail Traders Ka Sach | Full Proof #DhanBroker #TradingReality",
+      "url": "https://www.youtube.com/watch?v=KkR7fM4Cp78",
+      "video_id": "KkR7fM4Cp78",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_101",
+      "title": "Dhan Brokerage Charges 2026 - Dhan main Brokerage Kitna Lagta Hai ?",
+      "url": "https://www.youtube.com/watch?v=fdEtRrc60to",
+      "video_id": "fdEtRrc60to",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_102",
+      "title": "Dhan Brokerage Charges Explained 2026 | Dhan Brokerage Calculator LIVE Demo",
+      "url": "https://www.youtube.com/watch?v=APttgWgiId0",
+      "video_id": "APttgWgiId0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_103",
+      "title": "Dhan Chart : Options Scalping Charges 2025 | Dhan Intraday Brokerages Charges | Dhan Charges",
+      "url": "https://www.youtube.com/watch?v=_mBSC0ZpKKI",
+      "video_id": "_mBSC0ZpKKI",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_104",
+      "title": "Dhan Chart Feature - Option trading \u0915\u0947 \u0932\u093f\u090f \u092c\u0921\u093c\u093e update | Dhan app option trading demo tutorial 2026",
+      "url": "https://www.youtube.com/watch?v=yaJlhGNLQlI",
+      "video_id": "yaJlhGNLQlI",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_105",
+      "title": "Dhan Chart Option Scalping Live Demo | Dhan imp Settings for Stop Loss | Dhan SL rejected Problem",
+      "url": "https://www.youtube.com/watch?v=bqQgGWzPQts",
+      "video_id": "bqQgGWzPQts",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_trailing_sl",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_106",
+      "title": "Dhan Chart Option Scalping kaise karen - 04 New Method | Laptop me kaise karen",
+      "url": "https://www.youtube.com/watch?v=YhGNhvlYex4",
+      "video_id": "YhGNhvlYex4",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_107",
+      "title": "Dhan Chart: 12 Killer Settings for Scalping Live | Dhan Scalping Settings 2025",
+      "url": "https://www.youtube.com/watch?v=CKtKzJ3Xs-M",
+      "video_id": "CKtKzJ3Xs-M",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_108",
+      "title": "Dhan Chart: Bar Replay in Mobile Live\ud83d\udd25| Dhan New Update 2025\ud83d\ude0d| Dhan Tradingview Replay Features",
+      "url": "https://www.youtube.com/watch?v=IKDtomFSpjk",
+      "video_id": "IKDtomFSpjk",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_109",
+      "title": "Dhan Chart: Trading Settings for Option Scalping | Dhan Scalping Settings 2026",
+      "url": "https://www.youtube.com/watch?v=lQpLIKvLa90",
+      "video_id": "lQpLIKvLa90",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_110",
+      "title": "Dhan Commodity Option Trading Charges 2023 | dhan commodity brokerage | dhan option trading charges",
+      "url": "https://www.youtube.com/watch?v=xggmkqH6V8A",
+      "video_id": "xggmkqH6V8A",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_111",
+      "title": "Dhan DDPI activation | How to activate DDPI in Dhan app | Dhan app me DDPI Activate kaise kare",
+      "url": "https://www.youtube.com/watch?v=Xbr6M0OJvl8",
+      "video_id": "Xbr6M0OJvl8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_112",
+      "title": "Dhan Demat Account Review - 6 \u092b\u093e\u092f\u0926\u0947 \u0914\u0930 4 \u0928\u0941\u0915\u0938\u093e\u0928 \u091c\u093e\u0928 \u0932\u094b",
+      "url": "https://www.youtube.com/watch?v=Biqq_Mn9C0w",
+      "video_id": "Biqq_Mn9C0w",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_113",
+      "title": "Dhan HQ API Full Overview | SEBI Algo Trading Guidelines | Free API for Stock Market Automation",
+      "url": "https://www.youtube.com/watch?v=Px-tYVv_auw",
+      "video_id": "Px-tYVv_auw",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_114",
+      "title": "Dhan Ki Bhasha: India Speaks The Language of Money | A Film",
+      "url": "https://www.youtube.com/watch?v=2aSkJT-IbqI",
+      "video_id": "2aSkJT-IbqI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_115",
+      "title": "Dhan Launched DEXT T3 Trading Terminal - Full Walkthrough & Demo",
+      "url": "https://www.youtube.com/watch?v=T_x2z9Dnhp0",
+      "video_id": "T_x2z9Dnhp0",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_116",
+      "title": "Dhan Me ETF Sell Kaise Kare? How to Sell ETF in Dhan App?",
+      "url": "https://www.youtube.com/watch?v=u0jNnd0gwac",
+      "video_id": "u0jNnd0gwac",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_117",
+      "title": "Dhan Me F&O kaise activate kare | Dhan F&O trading activation | F&O charges | without Bank Statement",
+      "url": "https://www.youtube.com/watch?v=GdHxcSyxKwI",
+      "video_id": "GdHxcSyxKwI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_118",
+      "title": "Dhan Me Intraday Trading Kaise Kare? Live Buy Sell Demo in Dhan App for Beginners 2026",
+      "url": "https://www.youtube.com/watch?v=7dWR_7DxuHw",
+      "video_id": "7dWR_7DxuHw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_119",
+      "title": "Dhan Me Option Trade Kaise Kare? Option Trading in Dhan App - Option Trading Kaise Karte Hain",
+      "url": "https://www.youtube.com/watch?v=SvUKrOh3p_8",
+      "video_id": "SvUKrOh3p_8",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_120",
+      "title": "Dhan Me Stop Loss & Target Kaise Lagaye (Drag & Drop) \ud83d\udd25 90% Don\u2019t Know",
+      "url": "https://www.youtube.com/watch?v=MKQ1hcVUbwQ",
+      "video_id": "MKQ1hcVUbwQ",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_121",
+      "title": "Dhan Me Trade Kaise Kare ? Dhan App Me First Trade Kaise Kare 2026?",
+      "url": "https://www.youtube.com/watch?v=Qdxzd1eG8io",
+      "video_id": "Qdxzd1eG8io",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_122",
+      "title": "Dhan Me Trailing Stop Loss Kaise Lagaye? Trailing Stop Loss in Dhan App - SL Trail Live Example",
+      "url": "https://www.youtube.com/watch?v=zeJtfYiUYdw",
+      "video_id": "zeJtfYiUYdw",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_123",
+      "title": "Dhan New Beta Mode Chart Scalping Demo | New Powerful Trading Tools Updated\ud83d\udd25",
+      "url": "https://www.youtube.com/watch?v=ZqjDB-oGycY",
+      "video_id": "ZqjDB-oGycY",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_124",
+      "title": "Dhan New Order for Option Trading ? How to Use Trail order in Dhan app | Option trading demo",
+      "url": "https://www.youtube.com/watch?v=a5G97hp5aZw",
+      "video_id": "a5G97hp5aZw",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_125",
+      "title": "Dhan Power Scalper New Feature Launched - Scalping in Dhan Web 2026",
+      "url": "https://www.youtube.com/watch?v=TpkwiCUvOl4",
+      "video_id": "TpkwiCUvOl4",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_126",
+      "title": "Dhan Readymade Algo Trading Details 2026 | Algo Trading kya hai | Dhan Algo Review",
+      "url": "https://www.youtube.com/watch?v=2FarF-3Ck-Q",
+      "video_id": "2FarF-3Ck-Q",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_127",
+      "title": "Dhan Readymade Algo Trading Details | Algo Trading kya hai | Dhan Algo Review | Updated 2026",
+      "url": "https://www.youtube.com/watch?v=AKnvDMZezLQ",
+      "video_id": "AKnvDMZezLQ",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_128",
+      "title": "Dhan Skills to Automate Your Trading (Zero Coding Required)",
+      "url": "https://www.youtube.com/watch?v=zGKF_dDiwpk",
+      "video_id": "zGKF_dDiwpk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_129",
+      "title": "Dhan Sub Broker Kaise Bane | Become a Dhan SUB BROKER | Dhan Sub Broker Full Review",
+      "url": "https://www.youtube.com/watch?v=XAS4U68wCmc",
+      "video_id": "XAS4U68wCmc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_130",
+      "title": "Dhan Terminal - Option Trading Setup - DEXT T3",
+      "url": "https://www.youtube.com/watch?v=HMMSb6xLpQs",
+      "video_id": "HMMSb6xLpQs",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_131",
+      "title": "Dhan Trading App Detailed Review | Is Dhan the Best Trading App for You?",
+      "url": "https://www.youtube.com/watch?v=KfJ1VcprTW4",
+      "video_id": "KfJ1VcprTW4",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_132",
+      "title": "Dhan Trading App Review 2026: \u0915\u094d\u092f\u093e Dhan App Safe \u0939\u0948?",
+      "url": "https://www.youtube.com/watch?v=5K_ZJg_2F2Q",
+      "video_id": "5K_ZJg_2F2Q",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_133",
+      "title": "Dhan Trading App Review | Best Broker in india | Brokerage Charges Explain in Hindi #trading",
+      "url": "https://www.youtube.com/watch?v=4gef5br2Flo",
+      "video_id": "4gef5br2Flo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_134",
+      "title": "Dhan Trading Platform Review & Demo - DEXT T3 Full Review",
+      "url": "https://www.youtube.com/watch?v=RIHzLX8FEmA",
+      "video_id": "RIHzLX8FEmA",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_135",
+      "title": "Dhan Tradingview Chart - Delivery shares sell kiya or short Position aa gayi | Dhan app",
+      "url": "https://www.youtube.com/watch?v=vT7aSnb7y4Q",
+      "video_id": "vT7aSnb7y4Q",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_136",
+      "title": "Dhan Tradingview Chart - Instant Stop Loss Lagaye | Dhan Live Option trading on Chart | Trailing SL",
+      "url": "https://www.youtube.com/watch?v=5j4rJpx5EsM",
+      "video_id": "5j4rJpx5EsM",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_webhook",
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_137",
+      "title": "Dhan Tradingview Chart Instant Stop Loss - Rejected Issue | Dhan Chart Option Trading **Settings**",
+      "url": "https://www.youtube.com/watch?v=jHfKHjeop0M",
+      "video_id": "jHfKHjeop0M",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_trailing_sl",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_138",
+      "title": "Dhan Tradingview chart Instant Super Order Scalping - Mistake na karen\u26a0\ufe0f\u26a0\ufe0f",
+      "url": "https://www.youtube.com/watch?v=LRtWNBd7hB0",
+      "video_id": "LRtWNBd7hB0",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_webhook",
+        "c_bracket_order",
+        "c_instant_sl",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_139",
+      "title": "Dhan Trailing Target Kaise Lagaye? Dhan App New Trailing Target Feature Explained With Live Example",
+      "url": "https://www.youtube.com/watch?v=M7RJwtLSWBs",
+      "video_id": "M7RJwtLSWBs",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_140",
+      "title": "Dhan Vs Kotak Neo - Which Broker Is The Best? Detailed Comparison In Hindi",
+      "url": "https://www.youtube.com/watch?v=NANzdp_Goek",
+      "video_id": "NANzdp_Goek",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_141",
+      "title": "Dhan Vs Sahi Brokerage Charges 2026 | Sahi vs Dhan | Dhan Vs Sahi | Sahi app Brokerage Charges",
+      "url": "https://www.youtube.com/watch?v=K7b-b4niCu4",
+      "video_id": "K7b-b4niCu4",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_142",
+      "title": "Dhan Vs Shoonya Kaunsa Behtar Hai? | Which Broker is Best For Share Market? | Dhan App | Shoonya App",
+      "url": "https://www.youtube.com/watch?v=Ve6eZdFL8Qs",
+      "video_id": "Ve6eZdFL8Qs",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_143",
+      "title": "Dhan Vs Upstox Chart Instant Option Scalping Live | Which one is Best\ud83e\udd29 | Chart Scalping Live Demo",
+      "url": "https://www.youtube.com/watch?v=j4njJWlz8Pc",
+      "video_id": "j4njJWlz8Pc",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_instant_sl",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_144",
+      "title": "Dhan Vs Upstox Which Is Best? Upstox VS  Dhan App Brokerage Charges? #dhanapp #upstox",
+      "url": "https://www.youtube.com/watch?v=jpqt8c4_4tw",
+      "video_id": "jpqt8c4_4tw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_145",
+      "title": "Dhan Vs Zerodha Chart Instant Option Scalping Live | Which one is Best\ud83e\udd29 | Chart Scalping Live Demo",
+      "url": "https://www.youtube.com/watch?v=QpZuGfglSvk",
+      "video_id": "QpZuGfglSvk",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_instant_sl",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_146",
+      "title": "Dhan Web Chart Par Target And Stoploss Ek Sath Kaise Lagaye? How to Put Stoploss and Target in Dhan",
+      "url": "https://www.youtube.com/watch?v=62IDRk9H12M",
+      "video_id": "62IDRk9H12M",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_147",
+      "title": "Dhan Web Login | Dhan web trading platform | Dhan Demat account Login To Pc or Laptop",
+      "url": "https://www.youtube.com/watch?v=FCrCayO3A1M",
+      "video_id": "FCrCayO3A1M",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_148",
+      "title": "Dhan app Option Trading Charges New 2026 | Dhan Brokerage Fees | Dhan Charges",
+      "url": "https://www.youtube.com/watch?v=QUCriUs6ngw",
+      "video_id": "QUCriUs6ngw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_149",
+      "title": "Dhan app Option Trading me Auto Trailing kaise lagaye | Dhan Chart Option Scalping with Trailing SL",
+      "url": "https://www.youtube.com/watch?v=hzlyq7xlLFM",
+      "video_id": "hzlyq7xlLFM",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_trailing_sl",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_150",
+      "title": "Dhan app Option Trading on Chart | Stop Loss and Target kaise lagaye ? | Dhan app for Beginners",
+      "url": "https://www.youtube.com/watch?v=-g6A6ig6s1A",
+      "video_id": "-g6A6ig6s1A",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_151",
+      "title": "Dhan app Share Buy and Sell | How to buy and sell shares in dhan | long-term share kaise kharide",
+      "url": "https://www.youtube.com/watch?v=DWPDy42B0Ts",
+      "video_id": "DWPDy42B0Ts",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_152",
+      "title": "Dhan app Swing Trading Charges 2024 | Dhan App Charges | Dhan brokerage Chares for Swing Trading",
+      "url": "https://www.youtube.com/watch?v=klsdaROE914",
+      "video_id": "klsdaROE914",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_153",
+      "title": "Dhan app me Basket Order kaise Create & Execute karen - Options & Stock Trading Live | Dhan App",
+      "url": "https://www.youtube.com/watch?v=tjUnsqFwLy4",
+      "video_id": "tjUnsqFwLy4",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_154",
+      "title": "Dhan app me Chart par SL Trail kaise karen - New Option Trading | Dhan Chart Stop Loss Trailing",
+      "url": "https://www.youtube.com/watch?v=7PwXgeS-BXs",
+      "video_id": "7PwXgeS-BXs",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_155",
+      "title": "Dhan app me ETFs Trading or Investing kaise karen - live demo 2026 | How to trade in ETFs in Dhan",
+      "url": "https://www.youtube.com/watch?v=N5gE00Dh2OM",
+      "video_id": "N5gE00Dh2OM",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_156",
+      "title": "Dhan app me Future Trading kaise karen - Live Trading | Dhan app Option Strategy live | Dhan app",
+      "url": "https://www.youtube.com/watch?v=0t3RmR3Qn3U",
+      "video_id": "0t3RmR3Qn3U",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_157",
+      "title": "Dhan app me Options Position Exit kaise karen ? 04 Method Live Demo | How to exit Position in Dhan",
+      "url": "https://www.youtube.com/watch?v=TT9yQCc-A-4",
+      "video_id": "TT9yQCc-A-4",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_158",
+      "title": "Dhan app review 2026 || Dhan broker all Brokerage Charges & hidden charges || Dhan delivery Trading",
+      "url": "https://www.youtube.com/watch?v=h3cxJvX4UVM",
+      "video_id": "h3cxJvX4UVM",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_159",
+      "title": "Dhan charges vs Fyers charges | Best Demat Broker - Dhan vs Fyers | fyers app vs dhan app",
+      "url": "https://www.youtube.com/watch?v=J_KV6reu0nQ",
+      "video_id": "J_KV6reu0nQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_160",
+      "title": "Dhan f&o trading activation | Dhan App Me F&O activate kaise kare | How to activate f&o in dhan",
+      "url": "https://www.youtube.com/watch?v=aw7IU3xiIf8",
+      "video_id": "aw7IU3xiIf8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_161",
+      "title": "Dhan me Scalping Trading Kaise Kare? How to Use Dhan For Scalping?",
+      "url": "https://www.youtube.com/watch?v=KbjyJoCUIqg",
+      "video_id": "KbjyJoCUIqg",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_162",
+      "title": "Dhan me Scalping Trading Kaise Kare? How to Use Dhan For Scalping?Dhan me SCALPER mode on kaise kare",
+      "url": "https://www.youtube.com/watch?v=l_MwvGTCnSQ",
+      "video_id": "l_MwvGTCnSQ",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_163",
+      "title": "Dhan me Scalping Trading Kaise Kare? Scalping in Dhan App 2026",
+      "url": "https://www.youtube.com/watch?v=7K52UBRDb1Q",
+      "video_id": "7K52UBRDb1Q",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_164",
+      "title": "Dhan me Stock Buy kaise kare | DHAN me Shares kaise buy kare | How to buy shares in Dhan app",
+      "url": "https://www.youtube.com/watch?v=cgCq2mmhhFg",
+      "video_id": "cgCq2mmhhFg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_165",
+      "title": "Dhan me Tax P&L Kaise Nikale? Download Tax Profit & Loss",
+      "url": "https://www.youtube.com/watch?v=vMt-kMVfKO0",
+      "video_id": "vMt-kMVfKO0",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "linked_nodes": [
+        "c_trailing_sl",
+        "c_kill_switch",
+        "c_fractional_kelly",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_166",
+      "title": "Dhan me Trailing Stoploss Kaise Lagaye? How to Set Trailing Stop Loss in Dhan?",
+      "url": "https://www.youtube.com/watch?v=lYWjl3nxoEw",
+      "video_id": "lYWjl3nxoEw",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_167",
+      "title": "Dhan se Paise Withdrawal Kaise Kare? Withdraw Fund from Dhan",
+      "url": "https://www.youtube.com/watch?v=VKSCinx1CSs",
+      "video_id": "VKSCinx1CSs",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_168",
+      "title": "Dhan vs Fyers | Which Broker is best? | Detailed Comparison | Hindi | Must Watch |",
+      "url": "https://www.youtube.com/watch?v=Xyf2Yn0Z9mw",
+      "video_id": "Xyf2Yn0Z9mw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_169",
+      "title": "Dhan vs Groww Scalper on Chart Live Demo | Dhan Scalping on Chart | Konsa Fast hai ?",
+      "url": "https://www.youtube.com/watch?v=Y-8eyi5xSIw",
+      "video_id": "Y-8eyi5xSIw",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_170",
+      "title": "Dhan vs Groww which is better? groww vs dhan charges || dhan app vs groww",
+      "url": "https://www.youtube.com/watch?v=Z_adBKMB6Xw",
+      "video_id": "Z_adBKMB6Xw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_171",
+      "title": "Dhan vs Kotak Neo \u2013 Option Selling Comparison | Which is Better for Option Selling? Option Selling |",
+      "url": "https://www.youtube.com/watch?v=dEBIDILwSjg",
+      "video_id": "dEBIDILwSjg",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_172",
+      "title": "Dhan vs Lemonn \u2013 Scalper Mode Comparison | Which is Better for Options Scalping? Lemonn App Review",
+      "url": "https://www.youtube.com/watch?v=oBZrDajOsto",
+      "video_id": "oBZrDajOsto",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_173",
+      "title": "Dhan vs Mstock Brokerage Charge 2025-26  Full Compression Video \u2705",
+      "url": "https://www.youtube.com/watch?v=kF2IXs0yM50",
+      "video_id": "kF2IXs0yM50",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_174",
+      "title": "Dhan vs Sahi App \u2013 Scalper Mode Comparison | Which is Better for Options Scalping? Sahi App Review |",
+      "url": "https://www.youtube.com/watch?v=uYAABYcd3iw",
+      "video_id": "uYAABYcd3iw",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_175",
+      "title": "Dhan vs Upstox \ud83d\udd25 Full Review 2025 | Dhan Better for Options Traders? My Honest Verdict!",
+      "url": "https://www.youtube.com/watch?v=PygA2SnbgQw",
+      "video_id": "PygA2SnbgQw",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_176",
+      "title": "Dhan vs Zerodha | Best Trading Platform in India 2026 | Share Market App for Beginners",
+      "url": "https://www.youtube.com/watch?v=-FYlVKfidbw",
+      "video_id": "-FYlVKfidbw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_177",
+      "title": "Dhan vs Zerodha | Dhan or Zerodha which is better | Zerodha vs Dhan app | Dhan brokerage charges",
+      "url": "https://www.youtube.com/watch?v=p5GVz6Jzbj8",
+      "video_id": "p5GVz6Jzbj8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_178",
+      "title": "Dhan vs Zerodha | Dhan or Zerodha which is better | Zerodha vs Dhan app | Dhan brokerage charges",
+      "url": "https://www.youtube.com/watch?v=otBDl5x4VyE",
+      "video_id": "otBDl5x4VyE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_179",
+      "title": "Dhan \u0910\u092a \u0926\u094d\u0935\u093e\u0930\u093e \u0938\u092d\u0940 \u091f\u094d\u0930\u0947\u0921\u0930\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u092d\u0947\u091c\u0947 \u091c\u093e \u0930\u0939\u0947 \u0917\u093f\u092b\u094d\u091f \u092c\u0949\u0915\u094d\u0938\ud83c\udf81Unboxing Dhan Super Trader Kit @DhanHQ",
+      "url": "https://www.youtube.com/watch?v=NT4OnMfWJx4",
+      "video_id": "NT4OnMfWJx4",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_180",
+      "title": "Find Momentum Breakouts in 5 Minutes Using This FREE Screener | Dhan",
+      "url": "https://www.youtube.com/watch?v=3xQb4wuvI4U",
+      "video_id": "3xQb4wuvI4U",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_181",
+      "title": "For the First Time Ever: Trailing Target is NOW LIVE on Dhan!",
+      "url": "https://www.youtube.com/watch?v=8Qff7VvKwwY",
+      "video_id": "8Qff7VvKwwY",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_182",
+      "title": "Full Market Depth Explained in Dhan app || This Hidden Trading Tool Can Make You a Pro Trader",
+      "url": "https://www.youtube.com/watch?v=TKIHfPCTlsc",
+      "video_id": "TKIHfPCTlsc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_183",
+      "title": "Fyers vs Dhan vs Zerodha vs Upstox: Best Broker for Trading in India (2025)",
+      "url": "https://www.youtube.com/watch?v=DkEAny1r5mE",
+      "video_id": "DkEAny1r5mE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_184",
+      "title": "Gold Vault on Dhan | Buy Gold & Silver Directly at Live Exchange Traded Price | New Way to Buy Gold",
+      "url": "https://www.youtube.com/watch?v=KrdYiKf5sxA",
+      "video_id": "KrdYiKf5sxA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_185",
+      "title": "Groww App Vs Angel One App Vs Dhan App Intraday Brokerage Charges in Telugu 2026",
+      "url": "https://www.youtube.com/watch?v=o9uAQrzT7R4",
+      "video_id": "o9uAQrzT7R4",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_186",
+      "title": "Groww VS Dhan Scalper Mode On Chart | Groww Option Scalping Trading | F&O Trading in Groww App ||",
+      "url": "https://www.youtube.com/watch?v=M1YjN3M4Ku0",
+      "video_id": "M1YjN3M4Ku0",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_187",
+      "title": "Groww vs Dhan 2026: Which Trading App is Better? Full Comparison",
+      "url": "https://www.youtube.com/watch?v=UCySPQE1i5Q",
+      "video_id": "UCySPQE1i5Q",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_188",
+      "title": "Groww vs Dhan Charges 2025 | Intraday & Delivery Brokerage | Option Trading Charges",
+      "url": "https://www.youtube.com/watch?v=mpYSmMFV0xg",
+      "video_id": "mpYSmMFV0xg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_189",
+      "title": "Groww vs Dhan vs Sahi App || dhan app review || sahi trading app review || groww app review",
+      "url": "https://www.youtube.com/watch?v=GUPhifADIVg",
+      "video_id": "GUPhifADIVg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_190",
+      "title": "Groww vs Dhan | Groww vs Dhan Brokerage Charge | Groww vs Dhan app | Groww vs Dhan Charges",
+      "url": "https://www.youtube.com/watch?v=IEWFoZhrTRo",
+      "video_id": "IEWFoZhrTRo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_191",
+      "title": "Groww vs Dhan \u2013 Scalper Mode | Which is Better for Option Scalping? Option Trading in Groww App ||",
+      "url": "https://www.youtube.com/watch?v=QXD59sHWHHI",
+      "video_id": "QXD59sHWHHI",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_192",
+      "title": "Groww vs Zerodha vs Dhan vs Sahi; 5 Serious App Glitch Causing LOSS",
+      "url": "https://www.youtube.com/watch?v=59ZEw8gRbkg",
+      "video_id": "59ZEw8gRbkg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_trailing_sl",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_193",
+      "title": "Groww vs Zerodha vs Upstox vs Dhan vs Angel One| Best Trading App in 2025 | Malayalam |",
+      "url": "https://www.youtube.com/watch?v=UEu3XcqRh78",
+      "video_id": "UEu3XcqRh78",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_194",
+      "title": "Hidden Dhan App Features You're Not Using (Fully Revealed)",
+      "url": "https://www.youtube.com/watch?v=zX4eMwiVMEk",
+      "video_id": "zX4eMwiVMEk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_195",
+      "title": "How I Find High-Probability Trades Using Order Flow",
+      "url": "https://www.youtube.com/watch?v=AXGHyRy2FuU",
+      "video_id": "AXGHyRy2FuU",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow"
+      ]
+    },
+    {
+      "id": "src_196",
+      "title": "How I Find Winning Stocks with Relative Cycle Graphs",
+      "url": "https://www.youtube.com/watch?v=eEXCu9zrj_A",
+      "video_id": "eEXCu9zrj_A",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_197",
+      "title": "How I Started Algo Trading \ud83d\udd25 | Dhan HQ No Code Options Trading | Bina Emotion Ke Trade",
+      "url": "https://www.youtube.com/watch?v=qECwtfFRYXA",
+      "video_id": "qECwtfFRYXA",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_198",
+      "title": "How To Connect Dhan To Tradingview ! How To Trade Directly from TradingView with Dhan\u26a1\ufe0f !",
+      "url": "https://www.youtube.com/watch?v=ZUUUQ_8x4YA",
+      "video_id": "ZUUUQ_8x4YA",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_199",
+      "title": "How To Do Dhan Api Setup With Nextlelvebot | Dhan Broker Ka Api Setup Kaise Kare | Dhan Api Setup",
+      "url": "https://www.youtube.com/watch?v=cWShZEr-sos",
+      "video_id": "cWShZEr-sos",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_200",
+      "title": "How To Do Option Scalping in Dhan Web ? How to Use Dhan App on Laptop/PC ? Option Scalping in Dhan |",
+      "url": "https://www.youtube.com/watch?v=M40pLqL26Vk",
+      "video_id": "M40pLqL26Vk",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_201",
+      "title": "How To Trade In Dhan App First Time For Beginners 2026 Telugu \u2705 \ud83d\udd25 | Dhan App How To Use Telugu",
+      "url": "https://www.youtube.com/watch?v=8J5gRpbzH4w",
+      "video_id": "8J5gRpbzH4w",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_202",
+      "title": "How to Backtest Your Trading Strategy and Avoid Costly Mistakes | Dhan",
+      "url": "https://www.youtube.com/watch?v=t_Xr_Eh5nXE",
+      "video_id": "t_Xr_Eh5nXE",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_203",
+      "title": "How to Become Dhan Sub Broker? | Earn Income Dhan Authorised Partner / Sub Broker | Full Details",
+      "url": "https://www.youtube.com/watch?v=-FskpVP1GSg",
+      "video_id": "-FskpVP1GSg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_204",
+      "title": "How to Connect Dhan to Tradetron for 30 Days",
+      "url": "https://www.youtube.com/watch?v=iOS3o9t1sm0",
+      "video_id": "iOS3o9t1sm0",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_205",
+      "title": "How to Connect Dhan to Tradingview.com ? Tradingview chart par Trading kaise karen 2024 | \ud83d\udd34Live demo",
+      "url": "https://www.youtube.com/watch?v=Gr1uykcHO28",
+      "video_id": "Gr1uykcHO28",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_206",
+      "title": "How to Create a \u20b91 Lakh Monthly Income Portfolio | Complete Investment Strategy",
+      "url": "https://www.youtube.com/watch?v=eQALSvYwcbA",
+      "video_id": "eQALSvYwcbA",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_payoff_analyzer"
+      ]
+    },
+    {
+      "id": "src_207",
+      "title": "How to Do Algo Trading on Dhan Broker Platform using TradingView Indicator | IT WALA | HINDI-\u0939\u093f\u0902\u0926\u0940",
+      "url": "https://www.youtube.com/watch?v=dg7A1rDQ5lw",
+      "video_id": "dg7A1rDQ5lw",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_208",
+      "title": "How to Find Quality Compounder Stocks | FIND LONG-TERM WINNERS",
+      "url": "https://www.youtube.com/watch?v=MHjrjqIipo4",
+      "video_id": "MHjrjqIipo4",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_209",
+      "title": "How to Get Dhan Super Trader Kit | Gift by Dhan | How to get dhan free Gift | Aditya Kumar Yadav",
+      "url": "https://www.youtube.com/watch?v=wxm4jqqJAU8",
+      "video_id": "wxm4jqqJAU8",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_210",
+      "title": "How to Open a Demat Account on Dhan \u2013 In Malayalam | Dhan Demat Account 5 \u0d2e\u0d3f\u0d28\u0d3f\u0d31\u0d4d\u0d31\u0d3f\u0d7d \u0d13\u0d2a\u0d4d\u0d2a\u0d7a \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d02",
+      "url": "https://www.youtube.com/watch?v=fv4yRnRs598",
+      "video_id": "fv4yRnRs598",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_211",
+      "title": "How to Open a Demat account in Dhan? (\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c32\u0c4b ) || Dhan \u0c32\u0c4b Demat account Open \u0c1a\u0c46\u0c2f\u0c4d\u0c2f\u0c21\u0c02 \u0c0e\u0c32\u0c3e?",
+      "url": "https://www.youtube.com/watch?v=ukbAA01PB4o",
+      "video_id": "ukbAA01PB4o",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_212",
+      "title": "How to Save Dhan Tradingview Chart ? | Dhan Tradingview Chart Autosave Features",
+      "url": "https://www.youtube.com/watch?v=AsgMwjn7Q4w",
+      "video_id": "AsgMwjn7Q4w",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_213",
+      "title": "How to Sell Banknifty Options with 30000 Rs in Dhan Broker ?? [Updated] SEBI Margin Rule Solution",
+      "url": "https://www.youtube.com/watch?v=S36F513RUn0",
+      "video_id": "S36F513RUn0",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_margin_safety",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_214",
+      "title": "How to Set Stop Loss in Dhan App - Dhan App me Stop Loss Kaise Lagaye?",
+      "url": "https://www.youtube.com/watch?v=mM1fhGKrEYY",
+      "video_id": "mM1fhGKrEYY",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_215",
+      "title": "How to Set Up Free Algo Trading on Dhan Cloud (No Static IP Required!)",
+      "url": "https://www.youtube.com/watch?v=6scckJed3jE",
+      "video_id": "6scckJed3jE",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_216",
+      "title": "How to Start Algo Trading in Dhan | Dhan HQ Automated Trading",
+      "url": "https://www.youtube.com/watch?v=vvkdU-JMjSw",
+      "video_id": "vvkdU-JMjSw",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_217",
+      "title": "How to Trade Commodities on Dhan App | Full Tutorial",
+      "url": "https://www.youtube.com/watch?v=nycubJBMDy0",
+      "video_id": "nycubJBMDy0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_218",
+      "title": "How to Transfer your Share to Dhan | Full Guide 2026 | Dhan",
+      "url": "https://www.youtube.com/watch?v=AmmGsHiA_k8",
+      "video_id": "AmmGsHiA_k8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_219",
+      "title": "How to Use Dhan App For Trading & Investing in Hindi",
+      "url": "https://www.youtube.com/watch?v=29mPhwOuHBw",
+      "video_id": "29mPhwOuHBw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_220",
+      "title": "How to Use Dhan Charts: Complete Walkthrough | Dhan",
+      "url": "https://www.youtube.com/watch?v=6B7MWzjzIko",
+      "video_id": "6B7MWzjzIko",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_221",
+      "title": "How to Use Dhan Web: Complete Walkthrough | Dhan",
+      "url": "https://www.youtube.com/watch?v=ezQZQif03hw",
+      "video_id": "ezQZQif03hw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_222",
+      "title": "How to Use Dhan Web: Complete Walkthrough | Dhan",
+      "url": "https://www.youtube.com/watch?v=ezQZQif03hw",
+      "video_id": "ezQZQif03hw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_223",
+      "title": "How to add DHAN Broker in 1CLIQ ? | Oi Pulse",
+      "url": "https://www.youtube.com/watch?v=zV62ZYxBiXg",
+      "video_id": "zV62ZYxBiXg",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_224",
+      "title": "How to automate TradingView Strategy with Dhan webhook for Nifty/Banknifty Options",
+      "url": "https://www.youtube.com/watch?v=fzb3FwrPEcE",
+      "video_id": "fzb3FwrPEcE",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_225",
+      "title": "How to deposit in DHAN broker with UPI & Net Banking @dhan",
+      "url": "https://www.youtube.com/watch?v=_c8V1AsYCng",
+      "video_id": "_c8V1AsYCng",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_226",
+      "title": "How to do trading in Dhan app || Dhan me scalping kaise kre ||",
+      "url": "https://www.youtube.com/watch?v=aW5WB6m7k8c",
+      "video_id": "aW5WB6m7k8c",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_227",
+      "title": "How to enable Dark Mode on Dhan Tradingview ? | Tradingview Theme Change | Background color change",
+      "url": "https://www.youtube.com/watch?v=AYP1FU8ZQfc",
+      "video_id": "AYP1FU8ZQfc",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_228",
+      "title": "How to enable Dark Mode on Dhan ||Dhan app chart setting||Omniscient Gyan",
+      "url": "https://www.youtube.com/watch?v=3e2rYThWap0",
+      "video_id": "3e2rYThWap0",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_229",
+      "title": "How to open account in dhan app | Dhan account opening process | Dhan app account opening",
+      "url": "https://www.youtube.com/watch?v=DJkfrwJwGwc",
+      "video_id": "DJkfrwJwGwc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_230",
+      "title": "How to open account in dhan app | Dhan account opening process | How to open demat account in dhan",
+      "url": "https://www.youtube.com/watch?v=Mnr1EiR1-HU",
+      "video_id": "Mnr1EiR1-HU",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_231",
+      "title": "How to place instant order on dhan trading platform | Option trading complete live demo dhan",
+      "url": "https://www.youtube.com/watch?v=vJoNO-OT4iU",
+      "video_id": "vJoNO-OT4iU",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_232",
+      "title": "How to use Dhan Mobile App - \u0d32\u0d33\u0d3f\u0d24\u0d2e\u0d3e\u0d2f \u0d35\u0d3f\u0d36\u0d26\u0d40\u0d15\u0d30\u0d23\u0d02 | Trading App in Malayalam | Dhan Malayalam",
+      "url": "https://www.youtube.com/watch?v=tRhFUoeyBcs",
+      "video_id": "tRhFUoeyBcs",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_233",
+      "title": "How to use Dhan Web ? (\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c32\u0c4b ) || Dhan Web \u0c0e\u0c32\u0c3e \u0c09\u0c2a\u0c2f\u0c4b\u0c17\u0c3f\u0c02\u0c1a\u0c3e\u0c32\u0c4b \u0c24\u0c46\u0c32\u0c41\u0c38\u0c41\u0c15\u0c41\u0c02\u0c26\u0c3e\u0c02 | Dhan Telugu",
+      "url": "https://www.youtube.com/watch?v=Bi1oeFBDkaE",
+      "video_id": "Bi1oeFBDkaE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_234",
+      "title": "How to use Options Trader Platform | Option Strategy Builder Tool | Dhan",
+      "url": "https://www.youtube.com/watch?v=8Dve-tRarlc",
+      "video_id": "8Dve-tRarlc",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_235",
+      "title": "I Built an AI That Places Live Trades on Dhan! (MCP + Python)",
+      "url": "https://www.youtube.com/watch?v=Z5SvkZUX7Bk",
+      "video_id": "Z5SvkZUX7Bk",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_236",
+      "title": "India's First Order Flow Experience Is Here | Order flow on Dhan's DEXT T3",
+      "url": "https://www.youtube.com/watch?v=49EXneeziE4",
+      "video_id": "49EXneeziE4",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_237",
+      "title": "India's First Order Flow Experience Is Here | Order flow on Dhan's DEXT T3",
+      "url": "https://www.youtube.com/watch?v=L7u3A4xNhJY",
+      "video_id": "L7u3A4xNhJY",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_238",
+      "title": "India\u2019s Most Popular Brokers Compared | Dhan vs Zerodha vs Groww vs Upstox vs Angel One",
+      "url": "https://www.youtube.com/watch?v=HuR9bovBoU8",
+      "video_id": "HuR9bovBoU8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_239",
+      "title": "Institutional Footprint Strategy Using Dhan Power Scalper",
+      "url": "https://www.youtube.com/watch?v=WOi7DllhnM0",
+      "video_id": "WOi7DllhnM0",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_240",
+      "title": "Intraday Traders on Dhan Love These 3 Volume Indicators \u2013 Here\u2019s Why",
+      "url": "https://www.youtube.com/watch?v=0RPfYxNsUBU",
+      "video_id": "0RPfYxNsUBU",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_241",
+      "title": "Introducing Dhan Cloud for Algo Traders: Deploy & Run Strategies Directly on DhanHQ",
+      "url": "https://www.youtube.com/watch?v=tGx51-PzMEY",
+      "video_id": "tGx51-PzMEY",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_242",
+      "title": "Introducing: Invest in US Stocks & ETFs on Dhan",
+      "url": "https://www.youtube.com/watch?v=fFhiw6DQTQk",
+      "video_id": "fFhiw6DQTQk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_243",
+      "title": "Minor Demat Account with Dhan: A Complete Guide for Parents",
+      "url": "https://www.youtube.com/watch?v=F0uPkvcVkIc",
+      "video_id": "F0uPkvcVkIc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_244",
+      "title": "Multiple charts on one screen dhan app | dhan app me double chart kaise dekhe",
+      "url": "https://www.youtube.com/watch?v=Fv0aBMhdieM",
+      "video_id": "Fv0aBMhdieM",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_245",
+      "title": "New Feature Alert: P&L Exit to Manage Risks & Protect Profits | Dhan",
+      "url": "https://www.youtube.com/watch?v=H-RJhrzQwB4",
+      "video_id": "H-RJhrzQwB4",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_fractional_kelly",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_246",
+      "title": "Now LIVE : GOLD VAULT By Dhan | Complete Walkthrough",
+      "url": "https://www.youtube.com/watch?v=TyMPnYb3nPo",
+      "video_id": "TyMPnYb3nPo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_247",
+      "title": "Now Live: DEXT T3 The Trading Terminal by Dhan | Walkthrough (PART - 1)",
+      "url": "https://www.youtube.com/watch?v=0VQylWfaklE",
+      "video_id": "0VQylWfaklE",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_248",
+      "title": "Now Live: Invest in US Stocks & ETFs via Dhan App [Full Walkthrough]",
+      "url": "https://www.youtube.com/watch?v=Cl7C8bTcl6U",
+      "video_id": "Cl7C8bTcl6U",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_249",
+      "title": "Now Live: Transfer Demat Mutual Funds on Dhan | CDSL to Demat Transfer Explained in 2 Mins | Dhan",
+      "url": "https://www.youtube.com/watch?v=KNO-mwGM9yw",
+      "video_id": "KNO-mwGM9yw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_250",
+      "title": "One Click Trading using DHAN ( In English )",
+      "url": "https://www.youtube.com/watch?v=ta8nkAlUJn8",
+      "video_id": "ta8nkAlUJn8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_251",
+      "title": "Option Scalping in Dhan App | Dhan Me Scalping Trading Kaise Kare? How To Use Scalper Mode in Dhan |",
+      "url": "https://www.youtube.com/watch?v=bcmPoKBX51c",
+      "video_id": "bcmPoKBX51c",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_252",
+      "title": "Options Algo Trading | Auto Strike Price on DHAN | TradingView Indicator | IT WALA | HINDI-\u0939\u093f\u0902\u0926\u0940",
+      "url": "https://www.youtube.com/watch?v=0Sdh7po4rw4",
+      "video_id": "0Sdh7po4rw4",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_webhook",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_253",
+      "title": "Pre NSE Crude Oil Options Expiry Strategies",
+      "url": "https://www.youtube.com/watch?v=cx2Axgyh_Xs",
+      "video_id": "cx2Axgyh_Xs",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_254",
+      "title": "SUB-BROKER kaise bane in 2026? | Motilal Oswal, Share Khan, Dhan | Full Information #financebusiness",
+      "url": "https://www.youtube.com/watch?v=PcRZPuuvqEU",
+      "video_id": "PcRZPuuvqEU",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_255",
+      "title": "Sahi Trading App vs. Dhan vs. Zerodha : Which is actually \"Sahi\" For Options ?",
+      "url": "https://www.youtube.com/watch?v=qPH6jMbw4yc",
+      "video_id": "qPH6jMbw4yc",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_256",
+      "title": "Sahi app vs Dhan || dhan app vs sahi app || dhan vs sahi app",
+      "url": "https://www.youtube.com/watch?v=BcBXHuQ7Iuk",
+      "video_id": "BcBXHuQ7Iuk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_257",
+      "title": "Sahi trading app vs Dhan Trading app | Dhan Vs Sahi Demat Account Comparison",
+      "url": "https://www.youtube.com/watch?v=Pp2c8OsrwtM",
+      "video_id": "Pp2c8OsrwtM",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_258",
+      "title": "Sahi vs Dhan vs Fyers : Which is Better For Traders",
+      "url": "https://www.youtube.com/watch?v=c_Nj5X8t3uk",
+      "video_id": "c_Nj5X8t3uk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_259",
+      "title": "Sahi vs Dhan vs Fyers \u26a1 Which Trading App is Best in 2026?",
+      "url": "https://www.youtube.com/watch?v=jCME_8rZMQc",
+      "video_id": "jCME_8rZMQc",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_260",
+      "title": "Sensex Option Buying-\u0b95\u0bcd\u0b95\u0bc1 \u0b87\u0ba8\u0bcd\u0ba4 Time Zone \u0b8f\u0ba9\u0bcd Best? \u23f0 Simple Strategy!",
+      "url": "https://www.youtube.com/watch?v=iDsI_NMm1p0",
+      "video_id": "iDsI_NMm1p0",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_payoff_analyzer"
+      ]
+    },
+    {
+      "id": "src_261",
+      "title": "Shoonya trading app vs Dhan trading app | dhan review vs shoonya review | dhan vs shoonya comparison",
+      "url": "https://www.youtube.com/watch?v=sCoXe2_0zEE",
+      "video_id": "sCoXe2_0zEE",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_262",
+      "title": "Shoonya vs Dhan Which is better? Dhan vs Shoonya Shoonya Brokerage Charges 2026",
+      "url": "https://www.youtube.com/watch?v=MXFTu7B8hCU",
+      "video_id": "MXFTu7B8hCU",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_263",
+      "title": "Shoonya vs Dhan vs Groww : which Trading App is Better ?",
+      "url": "https://www.youtube.com/watch?v=XiedMqUyRuo",
+      "video_id": "XiedMqUyRuo",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_264",
+      "title": "Shoonya vs Dhan | Dhan vs Shoonya | Shoonya brokerage charges | Dhan brokerage charges",
+      "url": "https://www.youtube.com/watch?v=NtnoklHEDaI",
+      "video_id": "NtnoklHEDaI",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_265",
+      "title": "Super Order on Dhan Charts",
+      "url": "https://www.youtube.com/watch?v=ysf42A6-qjs",
+      "video_id": "ysf42A6-qjs",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_instant_sl",
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_266",
+      "title": "The 1:3 Swing Trading Strategy (And Why 90% Traders Fail at Exits)",
+      "url": "https://www.youtube.com/watch?v=mRu8oSaq3HU",
+      "video_id": "mRu8oSaq3HU",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_267",
+      "title": "The 2-Minute Scalping Strategy That Actually Works | Scalping Trading Strategy | Dhan",
+      "url": "https://www.youtube.com/watch?v=pvmvkiS1cx4",
+      "video_id": "pvmvkiS1cx4",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_268",
+      "title": "The New Dhan Charts Every Trader Should Try | Complete Walkthrough",
+      "url": "https://www.youtube.com/watch?v=8h9SYvQWKMA",
+      "video_id": "8h9SYvQWKMA",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_269",
+      "title": "The Power of Trading the Same Stocks Every Day on Intraday",
+      "url": "https://www.youtube.com/watch?v=OZRfSMg4qUY",
+      "video_id": "OZRfSMg4qUY",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_270",
+      "title": "The Ultimate Momentum Crude Oil Trading Strategy for Working Professionals (1-Hour Chart)",
+      "url": "https://www.youtube.com/watch?v=DLVsJ6t1mhI",
+      "video_id": "DLVsJ6t1mhI",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_payoff_analyzer"
+      ]
+    },
+    {
+      "id": "src_271",
+      "title": "The Ultimate Swing Trading STRATEGY to Compound Your Capital (FREE Masterclass)",
+      "url": "https://www.youtube.com/watch?v=2YBmiyVmNNw",
+      "video_id": "2YBmiyVmNNw",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_payoff_analyzer",
+        "c_zero_amc"
+      ]
+    },
+    {
+      "id": "src_272",
+      "title": "This New DHAN Indicator Is Causing Havoc in Option Trading | Let\u2019s Learn How It Works",
+      "url": "https://www.youtube.com/watch?v=holyg1W7QEQ",
+      "video_id": "holyg1W7QEQ",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_273",
+      "title": "This Secret Trick Finds Intraday Stocks on Dhan App Instantly",
+      "url": "https://www.youtube.com/watch?v=Abcy0bWRlLQ",
+      "video_id": "Abcy0bWRlLQ",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_274",
+      "title": "Top Dhan App Shortcuts to Speed Up Your Trading | Trading Strategy | Dhan",
+      "url": "https://www.youtube.com/watch?v=Vd60aItjVrw",
+      "video_id": "Vd60aItjVrw",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_275",
+      "title": "Trade Smarter with Claude AI Using Dhan MCP | AI-Powered Trading Workflow",
+      "url": "https://www.youtube.com/watch?v=1NN9HIK95gw",
+      "video_id": "1NN9HIK95gw",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_276",
+      "title": "Trader's Anthem - Hum Traders Kehlate Hai | #MadeForTrade",
+      "url": "https://www.youtube.com/watch?v=xT-0lvqIrr8",
+      "video_id": "xT-0lvqIrr8",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_277",
+      "title": "Trader's Diary on Dhan | Dhan app me Trader's Diary kaise dekhe | How to use Trader's Diary Dhan",
+      "url": "https://www.youtube.com/watch?v=71fqnK0is2k",
+      "video_id": "71fqnK0is2k",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_278",
+      "title": "Trading Without Charts: Only Option Chain Strategy You Should Know | Dhan",
+      "url": "https://www.youtube.com/watch?v=fyvGP_vuw2E",
+      "video_id": "fyvGP_vuw2E",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_279",
+      "title": "Tradingview Dhan Login - Mobile & PC - How to Login Tradingview With Dhan?",
+      "url": "https://www.youtube.com/watch?v=H_wkauC0fdg",
+      "video_id": "H_wkauC0fdg",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_280",
+      "title": "Use Dhan Charts on Mobile Like a Pro (Fast Setup)",
+      "url": "https://www.youtube.com/watch?v=PTWLnxCafcw",
+      "video_id": "PTWLnxCafcw",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_281",
+      "title": "We Built 43 Advanced Trading Indicators for You on Dhan! (How to Use Them)",
+      "url": "https://www.youtube.com/watch?v=eApl0SfVBBY",
+      "video_id": "eApl0SfVBBY",
+      "cluster": "QUANT_SCALPING",
+      "linked_nodes": [
+        "c_box_scalping",
+        "c_vsa_volume",
+        "c_vwap_reversion",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_282",
+      "title": "What is Bracket Orders? | How to Place a Bracket Order | Dhan",
+      "url": "https://www.youtube.com/watch?v=YBAF2_q34bc",
+      "video_id": "YBAF2_q34bc",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_order_flow",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_283",
+      "title": "What is Trailing Stop Loss? | How to use Trailing Stop Loss | Dhan",
+      "url": "https://www.youtube.com/watch?v=szbyS3n4StY",
+      "video_id": "szbyS3n4StY",
+      "cluster": "ORDER_EXECUTION",
+      "linked_nodes": [
+        "c_bracket_order",
+        "c_trailing_sl",
+        "c_iceberg_order",
+        "c_instant_sl",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_284",
+      "title": "Where to Park Extra CASH? Liquid & Arbitrage Funds Guide | Dhan",
+      "url": "https://www.youtube.com/watch?v=aG21huLW_AA",
+      "video_id": "aG21huLW_AA",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_285",
+      "title": "Zerodha vs Dhan \u2013 Best Broker for Option Trading in 2025?\ud83d\udca5 Full Comparison + Hidden Charges",
+      "url": "https://www.youtube.com/watch?v=uvYHO7Jpfqk",
+      "video_id": "uvYHO7Jpfqk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_286",
+      "title": "Zerodha vs Dhan: \ud83e\udd14 Kaunsa Broker hai Sabse Best?",
+      "url": "https://www.youtube.com/watch?v=mOIRaq8RbKY",
+      "video_id": "mOIRaq8RbKY",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_287",
+      "title": "dhan app Option Trading | Margin Used kya hai 2023 | Dhan app new Update | Dhan app margin used",
+      "url": "https://www.youtube.com/watch?v=hOjbfnn_o84",
+      "video_id": "hOjbfnn_o84",
+      "cluster": "RISK_VARIANCE_SHIELD",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_fractional_kelly",
+        "c_margin_safety",
+        "c_option_chain",
+        "c_dext_terminal"
+      ]
+    },
+    {
+      "id": "src_288",
+      "title": "dhan app me intraday trading kaise karen | intraday trading for beginners |",
+      "url": "https://www.youtube.com/watch?v=3S__htUWULk",
+      "video_id": "3S__htUWULk",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_289",
+      "title": "dhan app me intraday trading kaise karen | intraday trading for beginners |",
+      "url": "https://www.youtube.com/watch?v=hyLy773595o",
+      "video_id": "hyLy773595o",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_290",
+      "title": "dhan vs motilal oswal broker comparison | motilal oswal vs dhan brokerage, charges",
+      "url": "https://www.youtube.com/watch?v=JXW1yMAbl_I",
+      "video_id": "JXW1yMAbl_I",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_291",
+      "title": "https://www.youtube.com/watch?v=1PT5l_LMD4s",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_292",
+      "title": "https://www.youtube.com/watch?v=8FLZOSJsT3A",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_293",
+      "title": "https://www.youtube.com/watch?v=8Piu6MbkXfI",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_294",
+      "title": "https://www.youtube.com/watch?v=XFC6zcam4D4",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_295",
+      "title": "https://www.youtube.com/watch?v=q-C8HVWcsQE",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_296",
+      "title": "https://www.youtube.com/watch?v=q6oM7BB8SVo",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_297",
+      "title": "https://www.youtube.com/watch?v=qkMKf74maX4",
+      "url": "",
+      "video_id": null,
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_298",
+      "title": "\ud83c\udfc6 Dhan vs Angel One 2026: Which is Faster & Cheaper Trading App?",
+      "url": "https://www.youtube.com/watch?v=sM72osMUOY0",
+      "video_id": "sM72osMUOY0",
+      "cluster": "CHARGES_REGULATORY",
+      "linked_nodes": [
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_flat_brokerage",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_299",
+      "title": "\ud83d\udca5 Trade from TradingView to Dhan Broker  Without Any Bot \u2013 100% Free Guide!\u2705",
+      "url": "https://www.youtube.com/watch?v=JxaksMVk3d0",
+      "video_id": "JxaksMVk3d0",
+      "cluster": "ALGORITHMIC_API",
+      "linked_nodes": [
+        "c_api_v2",
+        "c_webhook",
+        "c_sdk_python",
+        "c_token_auth",
+        "c_option_chain",
+        "c_dext_terminal",
+        "c_zero_amc",
+        "c_peer_comparison"
+      ]
+    },
+    {
+      "id": "src_300",
+      "title": "\ud83d\udd25 Options Traders Ke Liye Best Platform? | Complete Review | Dhan App + Options Trader + Dext T3 \ud83d\udd25",
+      "url": "https://www.youtube.com/watch?v=MJ17Ukm_TZQ",
+      "video_id": "MJ17Ukm_TZQ",
+      "cluster": "OPTIONS_DERIVATIVES",
+      "linked_nodes": [
+        "c_kill_switch",
+        "c_option_chain",
+        "c_payoff_analyzer",
+        "c_dext_terminal"
+      ]
+    }
+  ]
+}
