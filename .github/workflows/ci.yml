@@ -34,7 +34,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Dhan Simulation/Live Authority Court
-        run: python3 tests/test_dhan_mode_authority.py
+        run: |
+          python3 tests/test_dhan_mode_authority.py
+          python3 tests/test_dhan_mode_authority_kill_mutants.py
 
       - name: Run IC² Compound Synthesis Engine (12 Clusters)
         run: python3 ic2_interconnection_engine.py
