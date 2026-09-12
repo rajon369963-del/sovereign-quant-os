@@ -54,11 +54,13 @@ PAGES_URLS = {
     "sovereign-study-commons-india": "https://rajon369963-del.github.io/sovereign-study-commons-india/"
 }
 
+
 def get_git_output(cwd, cmd):
     try:
         return subprocess.check_output(cmd, cwd=cwd, stderr=subprocess.DEVNULL).decode().strip()
     except Exception:
         return "UNKNOWN"
+
 
 def compute_canonical_payload(receipt_data: dict) -> tuple[bytes, str]:
     clean_copy = json.loads(json.dumps(receipt_data))
@@ -68,6 +70,38 @@ def compute_canonical_payload(receipt_data: dict) -> tuple[bytes, str]:
     canonical_bytes = json.dumps(clean_copy, indent=2).encode("utf-8")
     payload_sha = hashlib.sha256(canonical_bytes).hexdigest()
     return canonical_bytes, payload_sha
+
+
+def classify_branch_lineage(cwd: Path, expected_head: str, actual_head: str) -> str:
+    """Classify branch/PR lineage direction relative to canonical expected HEAD.
+
+    PASS is directional: the actual branch may equal or descend from the canonical
+    expected HEAD. A reverse relationship means the branch is stale and must not
+    be promoted as lineage-verified.
+    """
+    if actual_head == expected_head:
+        return "PASS_EXACT"
+
+    expected_is_ancestor = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", expected_head, actual_head],
+        cwd=cwd,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    ).returncode == 0
+    if expected_is_ancestor:
+        return "PASS_DESCENDANT"
+
+    actual_is_ancestor = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", actual_head, expected_head],
+        cwd=cwd,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    ).returncode == 0
+    if actual_is_ancestor:
+        return "STALE_ANCESTOR"
+
+    return "FAIL_UNRELATED"
+
 
 def generate_manifest(manifest_path: Path):
     manifest = {
@@ -86,7 +120,6 @@ def generate_manifest(manifest_path: Path):
         commit_sha = get_git_output(cwd, ["git", "rev-parse", "HEAD"])
         tree_sha = get_git_output(cwd, ["git", "rev-parse", "HEAD^{tree}"])
 
-        # Fail closed on branch protection: default to False on failure
         enforce_admins = False
         required_checks = []
         try:
@@ -107,10 +140,9 @@ def generate_manifest(manifest_path: Path):
         provenance = receipt_data.get("provenance", {})
         receipt_sig = provenance.get("signature_ed25519_hex", "")
         attested_payload_sha = provenance.get("canonical_payload_sha256", "")
-        
+
         _, recomputed_payload_sha = compute_canonical_payload(receipt_data)
 
-        # Fail closed on Pages: default to 0 on failure
         pages_url = PAGES_URLS[repo]
         pages_code = 0
         try:
@@ -146,6 +178,7 @@ def generate_manifest(manifest_path: Path):
         json.dump(manifest, f, indent=2)
     print(f"Generated federation manifest at {manifest_path}")
 
+
 def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
     print(f"Verifying Federation Evidence Manifest: {manifest_path}")
     if not manifest_path.exists():
@@ -177,8 +210,7 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
             continue
 
         print(f"--- Checking Repo: {repo} ---")
-        
-        # Determine repo directory
+
         cwd = None
         if (Path.cwd() / "db" / "STRESS_BENCHMARK_REAL_WHEELS.json").exists() and Path.cwd().name == repo:
             cwd = Path.cwd()
@@ -186,7 +218,6 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
             cwd = REPO_ROOTS[repo]
 
         if cwd and cwd.exists():
-            # 1. HARD ASSERTION: Local HEAD must match manifest canonical_main_sha or descend from it
             actual_head = get_git_output(cwd, ["git", "rev-parse", "HEAD"])
             expected_head = rdata["canonical_main_sha"]
             current_branch = get_git_output(cwd, ["git", "rev-parse", "--abbrev-ref", "HEAD"])
@@ -207,22 +238,18 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
                 else:
                     print(f"  • Canonical Main Tree Match: [PASS] ({actual_tree[:10]})")
             else:
-                # PR or branch context: verify lineage
-                if actual_head == expected_head:
+                lineage = classify_branch_lineage(cwd, expected_head, actual_head)
+                if lineage == "PASS_EXACT":
                     print(f"  • Branch HEAD Match        : [PASS] (Exact match {actual_head[:10]})")
+                elif lineage == "PASS_DESCENDANT":
+                    print(f"  • Lineage Provenance Check : [PASS] (Descends from {expected_head[:10]})")
+                elif lineage == "STALE_ANCESTOR":
+                    print(f"FAIL: Stale branch HEAD {actual_head[:10]} is an ancestor of canonical {expected_head[:10]}")
+                    all_passed = False
                 else:
-                    is_ancestor = subprocess.run(["git", "merge-base", "--is-ancestor", expected_head, actual_head], cwd=cwd).returncode == 0
-                    if not is_ancestor:
-                        is_descendant = subprocess.run(["git", "merge-base", "--is-ancestor", actual_head, expected_head], cwd=cwd).returncode == 0
-                        if not is_descendant:
-                            print(f"FAIL: Lineage broken between {actual_head[:10]} and canonical {expected_head[:10]}")
-                            all_passed = False
-                        else:
-                            print(f"  • Lineage Ancestry Verified: [PASS] (Head {actual_head[:10]} is ancestor of {expected_head[:10]})")
-                    else:
-                        print(f"  • Lineage Provenance Check : [PASS] (Descends from {expected_head[:10]})")
+                    print(f"FAIL: Lineage broken between {actual_head[:10]} and canonical {expected_head[:10]}")
+                    all_passed = False
 
-            # 2. Check Ed25519 signature of canonical payload
             receipt_path = cwd / rdata["receipt"]["path"]
             if receipt_path.exists():
                 receipt_obj = json.loads(receipt_path.read_text(encoding="utf-8"))
@@ -245,7 +272,6 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
                 print(f"FAIL: Receipt not found at {receipt_path}")
                 all_passed = False
 
-            # 3. Check commit reachability
             attested_commit = rdata["receipt"]["attested_source_commit"]
             res = subprocess.run(["git", "cat-file", "-e", f"{attested_commit}^{{commit}}"], cwd=cwd, capture_output=True)
             if res.returncode != 0:
@@ -254,7 +280,6 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
             else:
                 print(f"  • Attested Commit Reachable: [PASS] ({attested_commit[:10]})")
 
-            # 4. Check tree match
             expected_receipt_tree = rdata["receipt"]["attested_source_tree"]
             actual_receipt_tree = get_git_output(cwd, ["git", "rev-parse", f"{attested_commit}^{{tree}}"])
             if actual_receipt_tree != expected_receipt_tree:
@@ -263,7 +288,6 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
             else:
                 print("  • Attested Tree SHA Exact  : [PASS]")
 
-            # 5. Physical execution of 5 adversarial canaries (Fail closed)
             canary_script = cwd / "tests" / "test_adversarial_receipt_canaries.py"
             if canary_script.exists():
                 canary_proc = subprocess.run([sys.executable, str(canary_script)], cwd=cwd, capture_output=True)
@@ -280,14 +304,12 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
             print(f"FAIL: Local repo not found at {cwd}")
             all_passed = False
 
-        # 6. Check Branch Protection enforce_admins
         if not rdata.get("branch_protection_enforce_admins"):
             print(f"FAIL: Branch protection enforce_admins is not True for {repo}")
             all_passed = False
         else:
             print("  • Branch Protection Admins : [PASS] (enforce_admins=True)")
 
-        # 7. Check Required Checks non-empty
         req_checks = rdata.get("required_branch_contexts", [])
         if not req_checks:
             print(f"FAIL: No required status checks configured for {repo}")
@@ -295,7 +317,6 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
         else:
             print(f"  • Required Status Checks   : [PASS] ({', '.join(req_checks)})")
 
-        # 8. Check Pages
         if rdata["pages"]["status_code"] != 200:
             print(f"FAIL: Pages endpoint returned {rdata['pages']['status_code']}")
             all_passed = False
@@ -310,6 +331,7 @@ def verify_manifest(manifest_path: Path, target_repo: str = None) -> bool:
         print("\nFEDERATION EVIDENCE MANIFEST: INDEPENDENT VERIFICATION FAILED")
     return all_passed
 
+
 def main():
     parser = argparse.ArgumentParser(description="Federation Evidence Manifest Tool")
     parser.add_argument("--generate", type=Path, help="Generate manifest to file")
@@ -322,6 +344,7 @@ def main():
     if args.verify:
         ok = verify_manifest(args.verify, target_repo=args.repo)
         sys.exit(0 if ok else 1)
+
 
 if __name__ == "__main__":
     main()
