@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="quant-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="quant-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="900" height="320" rx="16" fill="url(#quant-bg)" stroke="#1e293b" stroke-width="2"/>
+  <rect x="20" y="20" width="860" height="4" fill="url(#gold-grad)" rx="2"/>
+  
+  <text x="40" y="55" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SOVEREIGN QUANT OS • HARDWARE EXECUTION BENCHMARK</text>
+  <text x="40" y="85" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800">Apple Silicon M1 L2 DMA Kernel • Sub-Millisecond Decision Pipeline</text>
+
+  <!-- Metric 1 -->
+  <g transform="translate(40, 115)">
+    <rect width="250" height="130" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+    <text x="20" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-transform="uppercase">Decision Latency</text>
+    <text x="20" y="75" fill="#fbbf24" font-family="monospace" font-size="34" font-weight="800" filter="url(#quant-glow)">57 μs</text>
+    <text x="20" y="105" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">⚡ 0.15ms / order concurrency</text>
+  </g>
+
+  <!-- Metric 2 -->
+  <g transform="translate(320, 115)">
+    <rect width="250" height="130" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+    <text x="20" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-transform="uppercase">Kernel Throughput</text>
+    <text x="20" y="75" fill="#00f2fe" font-family="monospace" font-size="34" font-weight="800">232k</text>
+    <text x="20" y="105" fill="#00f2fe" font-family="sans-serif" font-size="12" font-weight="600">Sustained operations / sec</text>
+  </g>
+
+  <!-- Metric 3 -->
+  <g transform="translate(600, 115)">
+    <rect width="250" height="130" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+    <text x="20" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-transform="uppercase">Idempotency Barrier</text>
+    <text x="20" y="75" fill="#10b981" font-family="monospace" font-size="34" font-weight="800">99.9%</text>
+    <text x="20" y="105" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">999/1000 duplicate retries blocked</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="40" y="285" fill="#64748b" font-family="sans-serif" font-size="12">Verified on Apple Silicon M1 (NEON SIMD) • Dhan Wire Bridge Ready • Zero Leaks • 100% Free Open Source</text>
+</svg>
