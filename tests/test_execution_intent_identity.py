@@ -8,6 +8,7 @@ identity into the generated/default path, or if generated fallback identity lose
 same-millisecond collision discriminator.
 """
 
+# AIR10-04 V2.2: no-op trigger marker so the retargeted draft mutant exercises required PR CI.
 import sys
 import tempfile
 import unittest
