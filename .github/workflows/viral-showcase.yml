@@ -62,6 +62,10 @@ jobs:
           if-no-files-found: error
           retention-days: 90
 
+      - name: Run Receipt Validator Discriminator and Kill-Mutant Courts
+        shell: bash
+        run: python -m pytest -q tests/test_receipt_validator_discriminator.py tests/test_receipt_validator_kill_mutants.py
+
       - name: Run Permanent Adversarial Canary Regression Suite
         shell: bash
         run: |
