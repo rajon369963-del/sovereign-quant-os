@@ -9,19 +9,22 @@ Features:
 
 import sqlite3
 import time
-import math
 from dataclasses import dataclass
 from enum import Enum
-from typing import List, Dict, Optional, Any
-from alpha_engine import TradeSignal, SignalType, StrategyArchetype
+from typing import Any
+
+from alpha_engine import SignalType, TradeSignal
 from risk_gatekeeper import RiskGatekeeper, RiskGateResult
+
 
 class OrderState(Enum):
     PENDING = "PENDING"
     SUBMITTED = "SUBMITTED"
+    PARTIALLY_FILLED = "PARTIALLY_FILLED"
     FILLED = "FILLED"
     CLOSED = "CLOSED"
     REJECTED = "REJECTED"
+    HOLD_RECONCILE = "HOLD_RECONCILE"
 
 @dataclass
 class TradeOrder:
@@ -38,6 +41,40 @@ class TradeOrder:
     fill_price: float = 0.0
     exit_price: float = 0.0
     realized_pnl: float = 0.0
+    filled_quantity: float = 0.0
+    remaining_quantity: float = 0.0
+    fill_events: list[dict[str, Any]] | None = None
+
+    def __post_init__(self):
+        if self.remaining_quantity == 0.0 and self.filled_quantity == 0.0:
+            self.remaining_quantity = self.quantity
+        if self.fill_events is None:
+            self.fill_events = []
+
+    def apply_fill_fragment(self, fragment_id: str, fragment_qty: float, fragment_price: float) -> bool:
+        """Idempotently applies a fill fragment. Returns True if applied, False if already seen."""
+        for ev in self.fill_events:
+            if ev.get("fragment_id") == fragment_id:
+                return False  # Idempotent suppression
+
+        new_cum_qty = self.filled_quantity + fragment_qty
+        if new_cum_qty > 0:
+            self.fill_price = (self.fill_price * self.filled_quantity + fragment_price * fragment_qty) / new_cum_qty
+        self.filled_quantity = new_cum_qty
+        self.remaining_quantity = max(0.0, self.quantity - self.filled_quantity)
+        
+        self.fill_events.append({
+            "fragment_id": fragment_id,
+            "quantity": fragment_qty,
+            "price": fragment_price,
+            "timestamp": time.time()
+        })
+
+        if self.remaining_quantity == 0.0:
+            self.state = OrderState.FILLED
+        else:
+            self.state = OrderState.PARTIALLY_FILLED
+        return True
 
 class ExecutionDaemon:
     def __init__(
@@ -56,8 +93,8 @@ class ExecutionDaemon:
         
         self.daily_realized_loss = 0.0
         self.is_circuit_broken = False
-        self.active_orders: Dict[str, TradeOrder] = {}
-        self.completed_trades: List[TradeOrder] = []
+        self.active_orders: dict[str, TradeOrder] = {}
+        self.completed_trades: list[TradeOrder] = []
         
         self._init_db()
 
@@ -119,12 +156,15 @@ class ExecutionDaemon:
                 (time.time(), reason, self.current_equity, self.peak_equity - self.current_equity)
             )
 
-    def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> Optional[TradeOrder]:
-        """Self-healing order dispatch loop with exponential backoff."""
+    def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> TradeOrder | None:
+        """Self-healing order dispatch loop with exponential backoff and collision-safe order IDs."""
         if self.is_circuit_broken or not self.check_circuit_breaker():
             return None
 
-        order_id = f"ORD_{signal.strategy.value[:3]}_{int(time.time()*1000)}"
+        intent_id = getattr(signal, "intent_id", None) or getattr(signal, "order_intent_id", None)
+        if not intent_id:
+            intent_id = f"{int(time.time()*1000)}_{uuid.uuid4().hex[:6]}"
+        order_id = f"ORD_{signal.strategy.value[:3]}_{intent_id}"
         order = TradeOrder(
             order_id=order_id,
             symbol="NIFTY_FUT",
@@ -135,7 +175,9 @@ class ExecutionDaemon:
             hard_stop_loss=gate_res.hard_stop_loss,
             hard_take_profit=gate_res.hard_take_profit,
             state=OrderState.PENDING,
-            created_at=time.time()
+            created_at=time.time(),
+            filled_quantity=0.0,
+            remaining_quantity=gate_res.approved_quantity
         )
 
         # Self-healing retry loop (Max 3 attempts with exponential backoff)
@@ -145,15 +187,65 @@ class ExecutionDaemon:
                 slippage = signal.price * 0.0001
                 order.fill_price = signal.price + (slippage if signal.signal_type == SignalType.BUY else -slippage)
                 order.state = OrderState.FILLED
+                order.filled_quantity = order.quantity
+                order.remaining_quantity = 0.0
                 self.active_orders[order.order_id] = order
                 return order
-            except Exception as e:
+            except Exception:
                 backoff_ms = (2 ** attempt) * 10
                 time.sleep(backoff_ms / 1000.0)
                 if attempt == 3:
                     order.state = OrderState.REJECTED
                     return None
         return None
+
+    def dispatch_with_reconciliation(
+        self,
+        client_order_id: str,
+        fake_venue: Any,
+        signal: TradeSignal,
+        quantity: float
+    ) -> dict[str, Any]:
+        """
+        Reconciliation-aware dispatch boundary (Quant #18).
+        Invariants:
+        - REMOTE_ACCEPTED + RESPONSE_LOST => RECONCILE_BEFORE_RESUBMIT
+        - SAME_INTENT_RETRY => SAME_STABLE_CLIENT_ID
+        - UNKNOWN_REMOTE_STATE => HOLD/RECONCILE_REQUIRED
+        - FAILED_BEFORE_EXEC != EXECUTED_BUT_UNCONFIRMED
+        """
+        symbol = getattr(signal, "symbol", "NIFTY_FUT")
+        attempt_1_res = fake_venue.send_order(client_order_id, symbol, signal.signal_type.value, quantity)
+        if attempt_1_res.get("status") in ("ACCEPTED", "FILLED"):
+            return {"status": attempt_1_res["status"], "client_order_id": client_order_id, "reconciled": False}
+
+        if attempt_1_res.get("error") == "TIMEOUT_OR_LOST_RESPONSE":
+            # Reconcile client_order_id on venue before any resubmission
+            reconcile_state = fake_venue.query_order(client_order_id)
+            if reconcile_state.get("status") in ("ACCEPTED", "FILLED"):
+                return {
+                    "status": reconcile_state["status"],
+                    "client_order_id": client_order_id,
+                    "reconciled": True,
+                    "resubmission_suppressed": True
+                }
+            elif reconcile_state.get("status") == "UNKNOWN":
+                return {
+                    "status": "HOLD/RECONCILE_REQUIRED",
+                    "client_order_id": client_order_id,
+                    "reconciled": True,
+                    "resubmission_suppressed": True
+                }
+            elif reconcile_state.get("status") == "NOT_FOUND":
+                attempt_2_res = fake_venue.send_order(client_order_id, signal.symbol, signal.signal_type.value, quantity)
+                return {
+                    "status": attempt_2_res.get("status", "REJECTED"),
+                    "client_order_id": client_order_id,
+                    "reconciled": True,
+                    "attempt": 2
+                }
+
+        return {"status": "REJECTED", "client_order_id": client_order_id}
 
     def simulate_price_tick(self, current_price: float, risk_gate: RiskGatekeeper):
         """Simulates market price updates against resting bracket stops (SL & TP)."""
@@ -162,17 +254,18 @@ class ExecutionDaemon:
 
         orders_to_close = []
         for order_id, order in self.active_orders.items():
-            if order.state == OrderState.FILLED:
+            if order.state in (OrderState.FILLED, OrderState.PARTIALLY_FILLED):
+                exec_qty = order.filled_quantity if order.filled_quantity > 0 else order.quantity
                 # Check Take Profit
                 if current_price >= order.hard_take_profit:
                     order.exit_price = order.hard_take_profit
-                    order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
+                    order.realized_pnl = (order.exit_price - order.fill_price) * exec_qty
                     order.state = OrderState.CLOSED
                     orders_to_close.append(order)
                 # Check Stop Loss
                 elif current_price <= order.hard_stop_loss:
                     order.exit_price = order.hard_stop_loss
-                    order.realized_pnl = (order.exit_price - order.fill_price) * order.quantity
+                    order.realized_pnl = (order.exit_price - order.fill_price) * exec_qty
                     order.state = OrderState.CLOSED
                     orders_to_close.append(order)
 
@@ -182,8 +275,7 @@ class ExecutionDaemon:
             
             # Update account financials
             self.current_equity += order.realized_pnl
-            if self.current_equity > self.peak_equity:
-                self.peak_equity = self.current_equity
+            self.peak_equity = max(self.peak_equity, self.current_equity)
             if order.realized_pnl < 0:
                 self.daily_realized_loss += abs(order.realized_pnl)
 
@@ -205,8 +297,8 @@ class ExecutionDaemon:
             self.check_circuit_breaker()
 
 if __name__ == "__main__":
-    from data_engine import DataEngine
     from alpha_engine import AlphaEngine
+    from data_engine import DataEngine
     
     engine = DataEngine()
     alpha = AlphaEngine()
