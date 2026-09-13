@@ -20,15 +20,13 @@ Complies strictly with:
 ===============================================================================
 """
 
-import os
-import sys
-import time
-import math
-import random
 import asyncio
-from datetime import datetime, timezone, timedelta
-from typing import Dict, Any, List, Optional, Tuple
+import os
+import random
+import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from typing import Any
 
 try:
     import orjson
@@ -87,11 +85,11 @@ class RAMCacheState:
     Bypasses SQL disk queries on the tick decision path (< 1 microsecond lookups).
     """
     def __init__(self):
-        self._symbols: Dict[str, Dict[str, Any]] = {}
-        self._order_book_depth: Dict[str, Dict[str, float]] = {}
-        self._macro_events: List[Dict[str, Any]] = []
-        self._sentiment_cache: Dict[str, float] = {}
-        self._open_positions: Dict[str, Dict[str, Any]] = {}
+        self._symbols: dict[str, dict[str, Any]] = {}
+        self._order_book_depth: dict[str, dict[str, float]] = {}
+        self._macro_events: list[dict[str, Any]] = []
+        self._sentiment_cache: dict[str, float] = {}
+        self._open_positions: dict[str, dict[str, Any]] = {}
         self._daily_pnl: float = 0.0
         self._initial_capital: float = 10000.0
         self._current_capital: float = 10000.0
@@ -105,7 +103,7 @@ class RAMCacheState:
             "last_updated": time.time()
         }
 
-    def get_symbol_metrics(self, symbol: str) -> Optional[Dict[str, Any]]:
+    def get_symbol_metrics(self, symbol: str) -> dict[str, Any] | None:
         return self._symbols.get(symbol)
 
     def set_sentiment(self, symbol: str, score: float):
@@ -121,7 +119,7 @@ class RAMCacheState:
             "time": event_time_utc
         })
 
-    def is_in_macro_no_trade_zone(self, now: Optional[datetime] = None) -> Tuple[bool, str]:
+    def is_in_macro_no_trade_zone(self, now: datetime | None = None) -> tuple[bool, str]:
         """Hack #24: Hard-coded No Trade Zone 10 minutes before and after CPI/FOMC."""
         if now is None:
             now = datetime.now(timezone.utc)
@@ -182,7 +180,7 @@ class SentimentRiskGate:
         self.hard_veto_threshold = hard_veto_threshold
         self.throttle_threshold = throttle_threshold
 
-    def evaluate_gate(self, action: str, sentiment_score: float, macro_active: bool, macro_reason: str) -> Tuple[bool, float, str]:
+    def evaluate_gate(self, action: str, sentiment_score: float, macro_active: bool, macro_reason: str) -> tuple[bool, float, str]:
         # Macro No-Trade Zone check
         if macro_active:
             return False, 0.0, f"VETO: {macro_reason}"
@@ -223,7 +221,7 @@ class VolatilityTargetingSizer:
         self.max_risk_pct = max_risk_pct
         self.consecutive_wins = 0
 
-    def calculate_position_size(self, current_capital: float, current_atr: float, sentiment_multiplier: float = 1.0) -> Tuple[float, int, str]:
+    def calculate_position_size(self, current_capital: float, current_atr: float, sentiment_multiplier: float = 1.0) -> tuple[float, int, str]:
         # Volatility multiplier: S ∝ target_atr / current_atr
         vol_scalar = self.target_atr / max(1e-4, current_atr)
         vol_scalar = max(0.2, min(2.5, vol_scalar))  # Bound scalar to [0.2x, 2.5x]
@@ -265,7 +263,7 @@ class TWAPExecutionEngine:
         self.min_chunks = min_chunks
         self.max_chunks = max_chunks
 
-    def plan_twap_slices(self, total_size: float, total_duration_sec: float = 1.0) -> List[Dict[str, float]]:
+    def plan_twap_slices(self, total_size: float, total_duration_sec: float = 1.0) -> list[dict[str, float]]:
         num_chunks = random.randint(self.min_chunks, self.max_chunks)
         weights = np.random.dirichlet(np.ones(num_chunks))
         chunk_sizes = [float(round(total_size * w, 4)) for w in weights]
@@ -284,20 +282,97 @@ class TWAPExecutionEngine:
             })
         return slices
 
-    async def execute_twap(self, symbol: str, action: str, total_size: float, mock_mode: bool = True) -> Dict[str, Any]:
+    async def execute_twap(
+        self,
+        symbol: str,
+        action: str,
+        total_size: float,
+        mock_mode: bool = True,
+        execution_adapter: Any = None
+    ) -> dict[str, Any]:
         slices = self.plan_twap_slices(total_size)
         executed_chunks = []
         total_executed = 0.0
 
+        if mock_mode:
+            for s in slices:
+                total_executed += s["size"]
+                executed_chunks.append({
+                    "chunk_id": s["chunk_id"],
+                    "size": s["size"],
+                    "status": "SIMULATED",
+                    "broker_order_id": None,
+                    "is_simulated": True
+                })
+            return {
+                "symbol": symbol,
+                "action": action,
+                "total_requested": total_size,
+                "total_executed": round(total_executed, 4),
+                "chunks_count": len(slices),
+                "chunks": executed_chunks,
+                "twap_status": "SIMULATED",
+                "is_simulated": True
+            }
+
+        # Non-mock path requires explicit execution adapter with live authority
+        if execution_adapter is None:
+            return {
+                "symbol": symbol,
+                "action": action,
+                "total_requested": total_size,
+                "total_executed": 0.0,
+                "chunks_count": len(slices),
+                "chunks": [],
+                "twap_status": "HOLD/CONFIG_ERROR",
+                "reason": "Missing execution adapter for non-mock TWAP",
+                "is_simulated": False
+            }
+
+        all_filled = True
         for s in slices:
-            if not mock_mode:
-                await asyncio.sleep(s["delay_sec"])
-            total_executed += s["size"]
-            executed_chunks.append({
-                "chunk_id": s["chunk_id"],
-                "size": s["size"],
-                "status": "FILLED"
-            })
+            if s.get("delay_sec", 0) > 0:
+                await asyncio.sleep(min(s["delay_sec"], 0.05))
+
+            try:
+                # Dispatch slice through execution adapter
+                if hasattr(execution_adapter, "execute_slice"):
+                    res = await execution_adapter.execute_slice(symbol, action, s["size"])
+                elif hasattr(execution_adapter, "place_order"):
+                    res = execution_adapter.place_order(symbol=symbol, side=action, quantity=s["size"])
+                elif callable(execution_adapter):
+                    res = execution_adapter(symbol, action, s["size"])
+                else:
+                    res = {"status": "REJECTED", "reason": "Unsupported execution adapter interface"}
+
+                chunk_status = res.get("status", "REJECTED")
+                confirmed_qty = float(res.get("confirmed_filled_qty", s["size"] if chunk_status == "FILLED" else 0.0))
+                broker_order_id = res.get("broker_order_id") or res.get("orderId")
+
+                if chunk_status != "FILLED" or not broker_order_id:
+                    all_filled = False
+
+                total_executed += confirmed_qty
+                executed_chunks.append({
+                    "chunk_id": s["chunk_id"],
+                    "size": s["size"],
+                    "confirmed_filled_qty": confirmed_qty,
+                    "status": chunk_status if broker_order_id else "REJECTED_NO_BROKER_ID",
+                    "broker_order_id": broker_order_id,
+                    "is_simulated": False
+                })
+            except Exception as e:
+                all_filled = False
+                executed_chunks.append({
+                    "chunk_id": s["chunk_id"],
+                    "size": s["size"],
+                    "status": "FAILED",
+                    "error": str(e),
+                    "broker_order_id": None,
+                    "is_simulated": False
+                })
+
+        overall_status = "SUCCESS" if (all_filled and total_executed >= total_size * 0.99) else ("PARTIAL" if total_executed > 0 else "FAILED")
 
         return {
             "symbol": symbol,
@@ -306,7 +381,8 @@ class TWAPExecutionEngine:
             "total_executed": round(total_executed, 4),
             "chunks_count": len(slices),
             "chunks": executed_chunks,
-            "twap_status": "SUCCESS"
+            "twap_status": overall_status,
+            "is_simulated": False
         }
 
 
@@ -325,7 +401,7 @@ class CriticReflectionModule:
         os.makedirs(self.context_path, exist_ok=True)
         self.rules_file = os.path.join(self.context_path, "agentic_reflection_rules.json")
 
-    def analyze_trade_session(self, trade_history: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def analyze_trade_session(self, trade_history: list[dict[str, Any]]) -> dict[str, Any]:
         if not trade_history:
             return {"status": "NO_TRADES", "recommended_rules": []}
 
@@ -381,9 +457,8 @@ class CircuitBreaker:
         self.peak_capital = initial_capital
         self.is_tripped = False
 
-    def check_capital(self, current_capital: float) -> Tuple[bool, str]:
-        if current_capital > self.peak_capital:
-            self.peak_capital = current_capital
+    def check_capital(self, current_capital: float) -> tuple[bool, str]:
+        self.peak_capital = max(self.peak_capital, current_capital)
 
         drawdown = (self.peak_capital - current_capital) / self.peak_capital
         if drawdown >= self.max_drawdown_pct:
@@ -408,9 +483,9 @@ class AgenticAlphaShiftEngine:
         self.twap_engine = TWAPExecutionEngine()
         self.critic = CriticReflectionModule()
         self.circuit_breaker = CircuitBreaker(initial_capital=initial_capital)
-        self.trade_log: List[Dict[str, Any]] = []
+        self.trade_log: list[dict[str, Any]] = []
 
-    def ingest_sub50ms_signal(self, payload_bytes: bytes) -> Dict[str, Any]:
+    def ingest_sub50ms_signal(self, payload_bytes: bytes) -> dict[str, Any]:
         """
         Sub-50ms ingestion path.
         Fast deserialization, cache lookup, regime check, risk gate evaluation.

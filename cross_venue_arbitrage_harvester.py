@@ -309,12 +309,24 @@ class CrossVenueArbitrageHarvester:
                 venue=VenueType.SHOONYA_ZERO_BROKERAGE,
                 order_type="MARKET"
             )
+            if unwind.state != OrderState.FILLED:
+                return {
+                    "status": "HOLD/UNHEDGED_RECONCILE_REQUIRED",
+                    "leg1_state": leg1.state.value,
+                    "leg2_state": leg2.state.value,
+                    "unwind_state": unwind.state.value,
+                    "unhedged_delta_prevented": 0.0,
+                    "residual_delta": qty,
+                    "reconciliation_required": True
+                }
             return {
                 "status": "ATOMIC_UNWOUND_LEG2_FAILED",
                 "leg1_state": leg1.state.value,
                 "leg2_state": leg2.state.value,
                 "unwind_state": unwind.state.value,
-                "unhedged_delta_prevented": qty
+                "unhedged_delta_prevented": qty,
+                "residual_delta": 0.0,
+                "reconciliation_required": False
             }
 
         # Both legs filled: record atomic basis position

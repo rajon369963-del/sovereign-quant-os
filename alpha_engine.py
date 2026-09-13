@@ -8,8 +8,11 @@ Implements:
 
 from dataclasses import dataclass
 from enum import Enum
-from typing import List, Optional
-import polars as pl
+
+try:
+    import polars as pl
+except ImportError:
+    pl = None
 
 class SignalType(Enum):
     BUY = "BUY"
@@ -39,7 +42,7 @@ class AlphaEngine:
         self.rsi_overbought = rsi_overbought
         self.min_rr_ratio = min_rr_ratio
 
-    def evaluate_bar(self, row: dict, prev_row: Optional[dict] = None) -> Optional[TradeSignal]:
+    def evaluate_bar(self, row: dict, prev_row: dict | None = None) -> TradeSignal | None:
         """Evaluates latest market bar across the 3 strategy archetypes."""
         price = row["close"]
         atr = max(0.5, row.get("atr_14", 1.0))
@@ -111,7 +114,7 @@ class AlphaEngine:
 
         return None
 
-    def scan_all_bars(self, df_bars: pl.DataFrame) -> List[TradeSignal]:
+    def scan_all_bars(self, df_bars: pl.DataFrame) -> list[TradeSignal]:
         """Scans a Polars DataFrame of bars and returns all generated signals."""
         signals = []
         rows = df_bars.to_dicts()

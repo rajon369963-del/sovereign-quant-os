@@ -96,6 +96,7 @@ jobs:
         shell: bash
         run: |
           python3 tests/test_federation_manifest_hostile_court.py
+          python3 tests/test_execution_family_hostile_court.py
 
       - name: Verify Federation Evidence Manifest
         shell: bash
