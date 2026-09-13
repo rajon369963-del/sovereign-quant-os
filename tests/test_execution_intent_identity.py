@@ -7,9 +7,14 @@ It must fail if the production dispatch path collapses an explicitly present bla
 identity into the generated/default path.
 """
 
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from alpha_engine import SignalType, StrategyArchetype, TradeSignal
 from execution_daemon import ExecutionDaemon
