@@ -4,13 +4,16 @@
 This court deliberately uses the canonical TradeSignal shape with no injected intent
 attribute, then exercises explicit-empty, explicit-valid and conflicting dual IDs.
 It must fail if the production dispatch path collapses an explicitly present blank
-identity into the generated/default path.
+identity into the generated/default path, or if generated fallback identity loses its
+same-millisecond collision discriminator.
 """
 
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
@@ -59,6 +62,27 @@ class ExecutionIntentIdentityCourt(unittest.TestCase):
             self.assertIsNotNone(order)
             self.assertTrue(order.order_id.startswith("ORD_MEA_"))
             self.assertGreater(len(order.order_id.removeprefix("ORD_MEA_")), 6)
+
+    def test_two_absent_intents_same_millisecond_stay_distinct(self):
+        """Kill court: timestamp-only fallback must collide and fail this test."""
+        with tempfile.TemporaryDirectory() as td:
+            daemon = self.make_daemon(td)
+            uuids = [
+                SimpleNamespace(hex="aaa111ffffffffffffffffffffffffff"),
+                SimpleNamespace(hex="bbb222ffffffffffffffffffffffffff"),
+            ]
+            with patch("execution_daemon.time.time", return_value=1234.567), patch(
+                "execution_daemon.uuid.uuid4", side_effect=uuids
+            ):
+                first = daemon.dispatch_order_with_self_healing(canonical_signal(), approved_gate())
+                second = daemon.dispatch_order_with_self_healing(canonical_signal(), approved_gate())
+
+            self.assertIsNotNone(first)
+            self.assertIsNotNone(second)
+            self.assertNotEqual(first.order_id, second.order_id)
+            self.assertEqual(first.order_id, "ORD_MEA_1234567_aaa111")
+            self.assertEqual(second.order_id, "ORD_MEA_1234567_bbb222")
+            self.assertEqual(len(daemon.active_orders), 2)
 
     def test_explicit_empty_intent_is_invalid_not_absent(self):
         with tempfile.TemporaryDirectory() as td:
