@@ -38,6 +38,9 @@ jobs:
           python3 tests/test_dhan_mode_authority.py
           python3 tests/test_dhan_mode_authority_kill_mutants.py
 
+      - name: Run Execution Family Hostile Court (Quant #14, #16, #18, #27, #36)
+        run: python3 tests/test_execution_family_hostile_court.py
+
       - name: Run IC² Compound Synthesis Engine (12 Clusters)
         run: python3 ic2_interconnection_engine.py
 
