@@ -53,5 +53,8 @@ jobs:
       - name: Run Delta-Neutral Carry Harvester Battery
         run: python3 test_phase3_cherry_on_top_battery.py
 
+      - name: Run Google Drive gog execution-authority court
+        run: python3 test_drive_trading_video_sync_authority.py
+
       - name: Run 10x Canary & 10,000-Order Stress Runner
         run: python3 sovereign_100_hacks_100_wheels_full_synthesis.py --verify-only
