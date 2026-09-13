@@ -50,7 +50,7 @@ def test_default_tradesignal_without_intent_id_executes_real_dispatch_path(tmp_p
     order = _daemon(tmp_path).dispatch_order_with_self_healing(signal, _gate())
 
     assert order is not None
-    assert order.order_id.startswith("ORD_Mea_")
+    assert order.order_id.startswith(f"ORD_{signal.strategy.value[:3]}_")
     assert order.order_id.count("_") >= 3
 
 
