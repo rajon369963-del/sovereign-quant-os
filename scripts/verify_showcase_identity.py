@@ -39,7 +39,22 @@ def _execution_head(repo_root: Path) -> str:
         return "UNAVAILABLE"
 
 
-def verify_manifest(manifest_path: Path, repo_root: Path) -> dict:
+def _git_blob(repo_root: Path, commit: str, rel: str) -> bytes:
+    try:
+        return subprocess.check_output(
+            ["git", "show", f"{commit}:{rel}"], cwd=repo_root
+        )
+    except subprocess.CalledProcessError as exc:
+        raise VerificationError(
+            f"authority artifact unavailable: {commit}:{rel}"
+        ) from exc
+
+
+def verify_manifest(
+    manifest_path: Path,
+    repo_root: Path,
+    authority_commit: str | None = None,
+) -> dict:
     repo_root = repo_root.resolve()
     manifest_path = manifest_path.resolve()
     if not manifest_path.is_file():
@@ -52,8 +67,17 @@ def verify_manifest(manifest_path: Path, repo_root: Path) -> dict:
         raise VerificationError("unsupported manifest version")
     if data["claim_class"] != "SHOWCASE_REPO_ARTIFACT_IDENTITY":
         raise VerificationError("unexpected claim class")
-    if not HEX40.fullmatch(data["artifact_set_baseline_commit"]):
+    baseline_commit = data["artifact_set_baseline_commit"]
+    if not HEX40.fullmatch(baseline_commit):
         raise VerificationError("invalid baseline commit")
+    if authority_commit is not None:
+        if not HEX40.fullmatch(authority_commit):
+            raise VerificationError("invalid authority commit")
+        if not hmac.compare_digest(baseline_commit, authority_commit):
+            raise VerificationError(
+                f"baseline authority mismatch: manifest={baseline_commit} authority={authority_commit}"
+            )
+
     artifacts = data["artifacts"]
     if not isinstance(artifacts, list) or not artifacts:
         raise VerificationError("artifacts must be a non-empty list")
@@ -72,6 +96,16 @@ def verify_manifest(manifest_path: Path, repo_root: Path) -> dict:
         seen.add(rel)
         if not isinstance(expected, str) or not HEX64.fullmatch(expected):
             raise VerificationError(f"invalid sha256 for {rel}")
+
+        if authority_commit is not None:
+            authority_digest = hashlib.sha256(
+                _git_blob(repo_root, authority_commit, rel)
+            ).hexdigest()
+            if not hmac.compare_digest(expected, authority_digest):
+                raise VerificationError(
+                    f"manifest digest diverges from frozen authority: {rel} "
+                    f"manifest={expected} authority={authority_digest}"
+                )
 
         candidate = repo_root / rel
         if candidate.is_symlink():
@@ -94,7 +128,8 @@ def verify_manifest(manifest_path: Path, repo_root: Path) -> dict:
     return {
         "status": "PASS",
         "claim_class": data["claim_class"],
-        "artifact_set_baseline_commit": data["artifact_set_baseline_commit"],
+        "artifact_set_baseline_commit": baseline_commit,
+        "authority_commit": authority_commit,
         "execution_head": _execution_head(repo_root),
         "verified_artifacts": verified,
     }
@@ -104,9 +139,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", default="showcase-identity-manifest.json")
     parser.add_argument("--repo-root", default=".")
+    parser.add_argument("--authority-commit")
     args = parser.parse_args()
     try:
-        result = verify_manifest(Path(args.manifest), Path(args.repo_root))
+        result = verify_manifest(
+            Path(args.manifest),
+            Path(args.repo_root),
+            authority_commit=args.authority_commit,
+        )
     except (VerificationError, json.JSONDecodeError) as exc:
         print(json.dumps({"status": "FAIL", "error": str(exc)}, sort_keys=True))
         return 1
