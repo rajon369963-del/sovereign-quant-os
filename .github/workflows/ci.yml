@@ -41,6 +41,9 @@ jobs:
       - name: Run Execution Family Hostile Court (Quant #14, #16, #18, #27, #36)
         run: python3 tests/test_execution_family_hostile_court.py
 
+      - name: Run Execution Intent Identity Court (Issue #62)
+        run: python3 tests/test_execution_intent_identity.py
+
       - name: Run IC² Compound Synthesis Engine (12 Clusters)
         run: python3 ic2_interconnection_engine.py
 
