@@ -1,0 +1,16 @@
+{
+  "project": "sovereign-quant-os",
+  "task": "T041",
+  "showcase_manifest": {
+    "manifest_version": "1.0.0",
+    "trading_system_id": "ROGUE_UNAUTHENTICATED_TRADER",
+    "artifacts": [
+      {
+        "name": "empty_showcase_artifact.json",
+        "declared_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "semantic_type": "portfolio_metrics",
+        "required_schema_keys": ["sharpe", "max_drawdown"]
+      }
+    ]
+  }
+}
