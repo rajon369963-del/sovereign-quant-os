@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "claim_class": "SHOWCASE_REPO_ARTIFACT_IDENTITY",
+  "artifact_set_baseline_commit": "fdcaf16f13bfed24d246c7168399cea4e602cc94",
+  "artifacts": [
+    {
+      "path": "llms.txt",
+      "sha256": "5889566120f4a8ce738314ad71b96c1a3a562758997a30ce7327faa0dfe83274"
+    },
+    {
+      "path": "assets/scorecard.svg",
+      "sha256": "1d2d10618d0e268d6a200ec11b80d72abbc6c966c0136c679bfa4124daf5ab3e"
+    },
+    {
+      "path": "showcase.html",
+      "sha256": "f771b129baf34fff46b8d9d8e9861a1b4b8be06a01b74b1ff4a7923a0aa8d48f"
+    },
+    {
+      "path": "db/STRESS_BENCHMARK_REAL_WHEELS.json",
+      "sha256": "5d1e0949800e52b7bc7de579d9edf24c1defaa66131766b0b7b6a138024a49de"
+    }
+  ]
+}
