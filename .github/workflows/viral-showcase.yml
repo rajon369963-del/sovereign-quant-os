@@ -37,14 +37,21 @@ jobs:
             --ref "$GITHUB_REF" \
             --head-sha "$GITHUB_SHA" \
             --main-sha "$main_sha"
-      - name: Validate Viral Showcase Primitives
+      - name: Validate Viral Showcase Semantic Identity
         shell: bash
         run: |
-          test -f llms.txt || exit 1
-          test -f assets/scorecard.svg || exit 1
-          test -f showcase.html || exit 1
-          test -f db/STRESS_BENCHMARK_REAL_WHEELS.json || exit 1
-          echo "Showcase assets verified."
+          git fetch --no-tags origin main
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            authority_commit="$(git merge-base HEAD origin/main)"
+          else
+            authority_commit="$(git rev-parse HEAD^1)"
+          fi
+          test -n "$authority_commit"
+          python3 scripts/verify_showcase_identity.py \
+            --manifest showcase-identity-manifest.json \
+            --authority-commit "$authority_commit"
+          python3 -m pytest -q tests/test_showcase_identity.py tests/test_showcase_identity_workflow_wiring.py
+          echo "Showcase artifact identity verified against frozen authority $authority_commit."
       - name: Execute Kernel Stress & Idempotency Battery
         shell: bash
         run: |
