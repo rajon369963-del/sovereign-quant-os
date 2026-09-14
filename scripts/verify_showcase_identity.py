@@ -24,8 +24,7 @@ EXPECTED_ARTIFACT_KEYS = {"path", "sha256"}
 EXPECTED_ROTATION_TOP_LEVEL = {
     "version",
     "claim_class",
-    "old_authority_commit",
-    "manifest_sha256",
+    "artifact_set_sha256",
     "artifacts",
 }
 ROTATION_CLAIM_CLASS = "SHOWCASE_REPO_ARTIFACT_AUTHORITY_ROTATION"
@@ -65,13 +64,27 @@ def _validate_rel_path(rel: str, label: str) -> None:
         raise VerificationError(f"invalid {label} path: {rel!r}")
 
 
+def _artifact_set_sha256(artifacts: list[dict]) -> str:
+    canonical = json.dumps(
+        artifacts, sort_keys=True, separators=(",", ":"), ensure_ascii=True
+    ).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
+
+
 def _load_authorized_rotation(
     repo_root: Path,
     authority_commit: str,
     rotation_record_path: str,
-    manifest_bytes: bytes,
     artifacts: list[dict],
 ) -> dict:
+    """Read rotation authority from the already-frozen Git authority object.
+
+    The record deliberately does not contain the SHA of the commit that contains
+    it, nor a digest of a manifest that itself embeds that SHA. Either form is a
+    cryptographic self-reference and cannot be constructed in real Git history.
+    Authority identity is instead supplied by the immutable Git object selected
+    by ``authority_commit``; the record binds the exact future artifact set.
+    """
     _validate_rel_path(rotation_record_path, "rotation record")
     raw = _git_blob(repo_root, authority_commit, rotation_record_path)
     try:
@@ -84,13 +97,11 @@ def _load_authorized_rotation(
         raise VerificationError("unsupported rotation record version")
     if record["claim_class"] != ROTATION_CLAIM_CLASS:
         raise VerificationError("unexpected rotation claim class")
-    if not hmac.compare_digest(record["old_authority_commit"], authority_commit):
-        raise VerificationError("rotation old authority mismatch")
-    manifest_sha256 = hashlib.sha256(manifest_bytes).hexdigest()
-    if not hmac.compare_digest(record["manifest_sha256"], manifest_sha256):
-        raise VerificationError("rotation manifest digest mismatch")
     if record["artifacts"] != artifacts:
         raise VerificationError("rotation artifact set mismatch")
+    expected_set_sha256 = _artifact_set_sha256(artifacts)
+    if not hmac.compare_digest(record["artifact_set_sha256"], expected_set_sha256):
+        raise VerificationError("rotation artifact-set digest mismatch")
     return record
 
 
@@ -158,7 +169,6 @@ def verify_manifest(
             repo_root,
             authority_commit,
             rotation_record_path,
-            manifest_bytes,
             artifacts,
         )
 
