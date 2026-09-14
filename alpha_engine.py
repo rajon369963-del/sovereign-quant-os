@@ -6,6 +6,8 @@ Implements:
 3. Lead-Lag CVD Surge (Order Flow Imbalance sweep from HFT 1 & 2)
 """
 
+from __future__ import annotations
+
 from dataclasses import dataclass
 from enum import Enum
 
