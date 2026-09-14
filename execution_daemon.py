@@ -157,14 +157,40 @@ class ExecutionDaemon:
                 (time.time(), reason, self.current_equity, self.peak_equity - self.current_equity)
             )
 
+    @staticmethod
+    def _resolve_intent_id(signal: TradeSignal) -> str:
+        """Resolve intent identity without collapsing explicit-invalid into absent/default.
+
+        Canonical TradeSignal currently has no intent fields, so true absence retains the
+        existing bounded generated fallback. If a caller explicitly supplies an intent
+        field, however, that value becomes an identity authority surface: blank/non-string
+        values fail closed, and conflicting dual fields cannot silently choose one.
+        """
+        missing = object()
+        intent_id = getattr(signal, "intent_id", missing)
+        order_intent_id = getattr(signal, "order_intent_id", missing)
+
+        supplied: list[tuple[str, str]] = []
+        for field_name, value in (("intent_id", intent_id), ("order_intent_id", order_intent_id)):
+            if value is missing:
+                continue
+            if not isinstance(value, str) or not value.strip():
+                raise ValueError(f"{field_name} must be a non-empty string when explicitly supplied")
+            supplied.append((field_name, value))
+
+        if len(supplied) == 2 and supplied[0][1] != supplied[1][1]:
+            raise ValueError("conflicting intent_id and order_intent_id values")
+        if supplied:
+            return supplied[0][1]
+
+        return f"{int(time.time()*1000)}_{uuid.uuid4().hex[:6]}"
+
     def dispatch_order_with_self_healing(self, signal: TradeSignal, gate_res: RiskGateResult) -> TradeOrder | None:
         """Self-healing order dispatch loop with exponential backoff and collision-safe order IDs."""
         if self.is_circuit_broken or not self.check_circuit_breaker():
             return None
 
-        intent_id = getattr(signal, "intent_id", None) or getattr(signal, "order_intent_id", None)
-        if not intent_id:
-            intent_id = f"{int(time.time()*1000)}_{uuid.uuid4().hex[:6]}"
+        intent_id = self._resolve_intent_id(signal)
         order_id = f"ORD_{signal.strategy.value[:3]}_{intent_id}"
         order = TradeOrder(
             order_id=order_id,
