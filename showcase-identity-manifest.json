@@ -9,7 +9,7 @@
     },
     {
       "path": "assets/scorecard.svg",
-      "sha256": "205fa65af5ecf1b7eabc657e01161f5f5c89b6434e9e263bf2ba6fa3baebbf"
+      "sha256": "205fa65af5ecf1b7eabc657e01161f5f5c5c89b6434e9e263bf2ba6fa3baebbf"
     },
     {
       "path": "showcase.html",
@@ -21,3 +21,4 @@
     }
   ]
 }
+
