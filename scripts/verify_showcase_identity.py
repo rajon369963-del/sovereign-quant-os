@@ -21,6 +21,14 @@ EXPECTED_TOP_LEVEL = {
     "artifacts",
 }
 EXPECTED_ARTIFACT_KEYS = {"path", "sha256"}
+EXPECTED_ROTATION_TOP_LEVEL = {
+    "version",
+    "claim_class",
+    "artifact_set_sha256",
+    "artifacts",
+}
+ROTATION_CLAIM_CLASS = "SHOWCASE_REPO_ARTIFACT_AUTHORITY_ROTATION"
+DEFAULT_ROTATION_RECORD = "showcase-authority-rotation.json"
 
 
 class VerificationError(RuntimeError):
@@ -50,17 +58,66 @@ def _git_blob(repo_root: Path, commit: str, rel: str) -> bytes:
         ) from exc
 
 
+def _validate_rel_path(rel: str, label: str) -> None:
+    path = Path(rel)
+    if not rel or path.is_absolute() or ".." in path.parts:
+        raise VerificationError(f"invalid {label} path: {rel!r}")
+
+
+def _artifact_set_sha256(artifacts: list[dict]) -> str:
+    canonical = json.dumps(
+        artifacts, sort_keys=True, separators=(",", ":"), ensure_ascii=True
+    ).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
+
+
+def _load_authorized_rotation(
+    repo_root: Path,
+    authority_commit: str,
+    rotation_record_path: str,
+    artifacts: list[dict],
+) -> dict:
+    """Read rotation authority from the already-frozen Git authority object.
+
+    The record deliberately does not contain the SHA of the commit that contains
+    it, nor a digest of a manifest that itself embeds that SHA. Either form is a
+    cryptographic self-reference and cannot be constructed in real Git history.
+    Authority identity is instead supplied by the immutable Git object selected
+    by ``authority_commit``; the record binds the exact future artifact set.
+    """
+    _validate_rel_path(rotation_record_path, "rotation record")
+    raw = _git_blob(repo_root, authority_commit, rotation_record_path)
+    try:
+        record = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise VerificationError("invalid authority rotation record") from exc
+    if set(record) != EXPECTED_ROTATION_TOP_LEVEL:
+        raise VerificationError("rotation record top-level schema mismatch")
+    if record["version"] != 1:
+        raise VerificationError("unsupported rotation record version")
+    if record["claim_class"] != ROTATION_CLAIM_CLASS:
+        raise VerificationError("unexpected rotation claim class")
+    if record["artifacts"] != artifacts:
+        raise VerificationError("rotation artifact set mismatch")
+    expected_set_sha256 = _artifact_set_sha256(artifacts)
+    if not hmac.compare_digest(record["artifact_set_sha256"], expected_set_sha256):
+        raise VerificationError("rotation artifact-set digest mismatch")
+    return record
+
+
 def verify_manifest(
     manifest_path: Path,
     repo_root: Path,
     authority_commit: str | None = None,
+    rotation_record_path: str = DEFAULT_ROTATION_RECORD,
 ) -> dict:
     repo_root = repo_root.resolve()
     manifest_path = manifest_path.resolve()
     if not manifest_path.is_file():
         raise VerificationError(f"manifest missing: {manifest_path}")
 
-    data = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest_bytes = manifest_path.read_bytes()
+    data = json.loads(manifest_bytes.decode("utf-8"))
     if set(data) != EXPECTED_TOP_LEVEL:
         raise VerificationError("manifest top-level schema mismatch")
     if data["version"] != 1:
@@ -83,24 +140,44 @@ def verify_manifest(
         raise VerificationError("artifacts must be a non-empty list")
 
     seen: set[str] = set()
-    verified = []
+    authority_digests: dict[str, str] = {}
+    divergence = False
     for entry in artifacts:
         if not isinstance(entry, dict) or set(entry) != EXPECTED_ARTIFACT_KEYS:
             raise VerificationError("artifact schema mismatch")
         rel = entry["path"]
         expected = entry["sha256"]
-        if not isinstance(rel, str) or not rel or Path(rel).is_absolute():
+        if not isinstance(rel, str):
             raise VerificationError(f"invalid artifact path: {rel!r}")
+        _validate_rel_path(rel, "artifact")
         if rel in seen:
             raise VerificationError(f"duplicate artifact path: {rel}")
         seen.add(rel)
         if not isinstance(expected, str) or not HEX64.fullmatch(expected):
             raise VerificationError(f"invalid sha256 for {rel}")
-
         if authority_commit is not None:
             authority_digest = hashlib.sha256(
                 _git_blob(repo_root, authority_commit, rel)
             ).hexdigest()
+            authority_digests[rel] = authority_digest
+            if not hmac.compare_digest(expected, authority_digest):
+                divergence = True
+
+    rotation = None
+    if authority_commit is not None and divergence:
+        rotation = _load_authorized_rotation(
+            repo_root,
+            authority_commit,
+            rotation_record_path,
+            artifacts,
+        )
+
+    verified = []
+    for entry in artifacts:
+        rel = entry["path"]
+        expected = entry["sha256"]
+        if authority_commit is not None and not divergence:
+            authority_digest = authority_digests[rel]
             if not hmac.compare_digest(expected, authority_digest):
                 raise VerificationError(
                     f"manifest digest diverges from frozen authority: {rel} "
@@ -130,6 +207,8 @@ def verify_manifest(
         "claim_class": data["claim_class"],
         "artifact_set_baseline_commit": baseline_commit,
         "authority_commit": authority_commit,
+        "authority_rotation": rotation is not None,
+        "rotation_record_path": rotation_record_path if rotation is not None else None,
         "execution_head": _execution_head(repo_root),
         "verified_artifacts": verified,
     }
@@ -140,14 +219,16 @@ def main() -> int:
     parser.add_argument("--manifest", default="showcase-identity-manifest.json")
     parser.add_argument("--repo-root", default=".")
     parser.add_argument("--authority-commit")
+    parser.add_argument("--rotation-record", default=DEFAULT_ROTATION_RECORD)
     args = parser.parse_args()
     try:
         result = verify_manifest(
             Path(args.manifest),
             Path(args.repo_root),
             authority_commit=args.authority_commit,
+            rotation_record_path=args.rotation_record,
         )
-    except (VerificationError, json.JSONDecodeError) as exc:
+    except (VerificationError, json.JSONDecodeError, UnicodeDecodeError) as exc:
         print(json.dumps({"status": "FAIL", "error": str(exc)}, sort_keys=True))
         return 1
     print(json.dumps(result, sort_keys=True))
