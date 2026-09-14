@@ -53,6 +53,17 @@ class TestT041Positive(unittest.TestCase):
         self.assertTrue(valid, f"Showcase manifest should pass verification, errors: {errors}")
         self.assertEqual(len(errors), 0)
 
+    def test_canonical_repo_showcase_manifest_validation(self):
+        repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        manifest_path = os.path.join(repo_root, "showcase-identity-manifest.json")
+        self.assertTrue(os.path.exists(manifest_path), "showcase-identity-manifest.json must exist")
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+        valid, errors = verify_showcase_semantic_identity(manifest, base_dir=repo_root)
+        self.assertTrue(valid, f"Physical showcase-identity-manifest.json must pass, errors: {errors}")
+        self.assertEqual(len(errors), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
+

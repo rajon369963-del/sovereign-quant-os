@@ -36,14 +36,23 @@ def verify_showcase_semantic_identity(
     if not isinstance(manifest_data, dict):
         return False, ["Manifest data must be a dictionary"]
 
-    showcase = manifest_data.get("showcase_manifest")
-    if not showcase or not isinstance(showcase, dict):
+    # Support both nested showcase_manifest section and canonical root manifest schema
+    if "showcase_manifest" in manifest_data:
+        showcase = manifest_data["showcase_manifest"]
+    elif "artifacts" in manifest_data or manifest_data.get("claim_class") == "SHOWCASE_REPO_ARTIFACT_IDENTITY":
+        showcase = manifest_data
+    else:
         return False, ["Missing or invalid 'showcase_manifest' section"]
 
-    # 1. Trading System Identity
+    # 1. Trading System Identity / Claim Class Binding
     system_id = showcase.get("trading_system_id")
-    if system_id != CANONICAL_TRADING_SYSTEM_ID:
+    claim_class = showcase.get("claim_class")
+    if system_id and system_id != CANONICAL_TRADING_SYSTEM_ID:
         errors.append(f"Trading system ID mismatch: expected '{CANONICAL_TRADING_SYSTEM_ID}', got '{system_id}'")
+    elif claim_class and claim_class not in ("SHOWCASE_REPO_ARTIFACT_IDENTITY", "SHOWCASE_SEMANTIC_IDENTITY"):
+        errors.append(f"Unrecognized claim_class: '{claim_class}'")
+    elif not system_id and not claim_class:
+        errors.append("Manifest missing both 'trading_system_id' and 'claim_class'")
 
     # 2. Artifacts Evaluation
     artifacts = showcase.get("artifacts")
@@ -52,17 +61,18 @@ def verify_showcase_semantic_identity(
         return False, errors
 
     for i, art in enumerate(artifacts):
-        name = art.get("name")
-        declared_sha = art.get("declared_sha256")
+        name = art.get("name") or art.get("path")
+        declared_sha = art.get("declared_sha256") or art.get("sha256")
         semantic_type = art.get("semantic_type")
         required_keys = art.get("required_schema_keys", [])
 
         if not name:
-            errors.append(f"Artifact [{i}] missing name")
+            errors.append(f"Artifact [{i}] missing name or path")
             continue
 
         if not declared_sha or not re.match(r"^[0-9a-fA-F]{64}$", declared_sha):
-            errors.append(f"Artifact [{i}] ({name}) invalid declared_sha256: '{declared_sha}'")
+            errors.append(f"Artifact [{i}] ({name}) invalid declared SHA-256: '{declared_sha}'")
+
 
         if base_dir:
             file_path = os.path.join(base_dir, name)
