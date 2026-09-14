@@ -40,9 +40,18 @@ jobs:
       - name: Validate Viral Showcase Semantic Identity
         shell: bash
         run: |
-          python3 scripts/verify_showcase_identity.py --manifest showcase-identity-manifest.json
+          git fetch --no-tags origin main
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            authority_commit="$(git merge-base HEAD origin/main)"
+          else
+            authority_commit="$(git rev-parse HEAD^1)"
+          fi
+          test -n "$authority_commit"
+          python3 scripts/verify_showcase_identity.py \
+            --manifest showcase-identity-manifest.json \
+            --authority-commit "$authority_commit"
           python3 -m pytest -q tests/test_showcase_identity.py tests/test_showcase_identity_workflow_wiring.py
-          echo "Showcase artifact identity verified."
+          echo "Showcase artifact identity verified against frozen authority $authority_commit."
       - name: Execute Kernel Stress & Idempotency Battery
         shell: bash
         run: |
