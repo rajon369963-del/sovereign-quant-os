@@ -5,7 +5,7 @@
   "artifacts": [
     {
       "path": "llms.txt",
-      "sha256": "5889566120f4a8ce738314ad71b96c1a3a562758997a30ce7327faa0dfe83274"
+      "sha256": "06ab55f90732e3bb5505112bfc119843d98855c413c147891f0b8879679140ac"
     },
     {
       "path": "assets/scorecard.svg",
