@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-15 08:23:11 IST",
+  "stage_label": "PRE_MARKET_STANDBY",
+  "message": "Pre-market standby (08:23:11 IST). Pre-open starts at 09:00 AM IST.",
+  "initial_capital": 1008.0,
+  "current_equity": 1008.0,
+  "total_return_pct": 0.0,
+  "daily_loss": 0.0,
+  "active_stage": 1,
+  "circuit_breaker_active": false,
+  "has_active_position": false,
+  "active_position": null,
+  "tracked_symbols": [
+    "TATASTEEL",
+    "SAIL",
+    "PNB",
+    "ASHOKLEY",
+    "ZOMATO"
+  ],
+  "execution_mode": "LIVE",
+  "premarket_calibrated": false,
+  "qualified_targets": [],
+  "macro_score": null,
+  "macro_regime": null,
+  "locked_orb_ranges": {}
+}

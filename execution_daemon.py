@@ -7,6 +7,7 @@ Features:
 4. SQLite WAL Persistent Trade & Telemetry Ledger
 """
 
+import os
 import sqlite3
 import time
 import uuid
@@ -100,6 +101,7 @@ class ExecutionDaemon:
         self._init_db()
 
     def _init_db(self):
+        os.makedirs(os.path.dirname(os.path.abspath(self.db_path)), exist_ok=True)
         with sqlite3.connect(self.db_path) as conn:
             conn.execute("PRAGMA journal_mode=WAL;")
             conn.execute("""

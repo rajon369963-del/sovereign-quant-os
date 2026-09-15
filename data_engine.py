@@ -3,10 +3,12 @@ HIGH-PERFORMANCE QUANTITATIVE DATA ENGINE
 Uses DuckDB, Polars (Rust SIMD), and Renko Brick Filtering.
 """
 
+import time
+from dataclasses import dataclass
+
 import numpy as np
 import polars as pl
-from dataclasses import dataclass
-from typing import List, Tuple, Dict, Any
+
 
 @dataclass
 class RenkoBrick:
@@ -17,10 +19,34 @@ class RenkoBrick:
     timestamp: float
 
 class DataEngine:
-    def __init__(self, brick_size: float = 2.0):
+    def __init__(self, brick_size: float = 2.0, db_path: str | None = None):
         self.brick_size = brick_size
-        self.renko_bricks: List[RenkoBrick] = []
+        self.db_path = db_path
+        self.renko_bricks: list[RenkoBrick] = []
         self.last_brick_close: float = 0.0
+        self._ticks: dict[str, list[dict[str, float]]] = {}
+
+    def append_tick(self, symbol: str, price: float, bid: float = 0.0, ask: float = 0.0, volume: float = 0.0):
+        """Appends tick to memory for streaming evaluations."""
+        if symbol not in self._ticks:
+            self._ticks[symbol] = []
+        self._ticks[symbol].append({
+            "timestamp": time.time(),
+            "price": price,
+            "bid": bid,
+            "ask": ask,
+            "volume": volume,
+        })
+        if len(self._ticks[symbol]) > 5000:
+            self._ticks[symbol] = self._ticks[symbol][-2500:]
+
+    def get_recent_ticks_df(self, symbol: str, limit: int = 20) -> pl.DataFrame:
+        """Returns recent streaming ticks as a Polars DataFrame for rolling variance calculation."""
+        ticks = self._ticks.get(symbol, [])
+        if not ticks:
+            return pl.DataFrame({"price": [100.0], "timestamp": [time.time()]})
+        recent = ticks[-limit:]
+        return pl.DataFrame(recent)
 
     def generate_synthetic_ticks(self, n_ticks: int = 1000, initial_price: float = 100.0, volatility: float = 0.5) -> pl.DataFrame:
         """Generates realistic tick series with geometric Brownian motion & order flow delta."""
@@ -97,7 +123,7 @@ class DataEngine:
             pl.Series("bb_lower", bb_lower)
         ])
 
-    def filter_renko_bricks(self, df_bars: pl.DataFrame) -> List[RenkoBrick]:
+    def filter_renko_bricks(self, df_bars: pl.DataFrame) -> list[RenkoBrick]:
         """Renko Brick Filter: filters out noise, emitting bricks only on fixed price moves."""
         self.renko_bricks.clear()
         closes = df_bars["close"].to_list()
