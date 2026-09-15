@@ -201,10 +201,11 @@ class RiskGatekeeper:
         except Exception:
             pass
 
-        # Robust High-Performance Python Fallback
+        # Robust High-Performance Python Fallback (Accounts for 5x Intraday MIS Margin)
         gate1_spread_ok = spread_pct <= max_spread
         gate2_var_ok = variance <= max_var
-        gate3_risk_ok = per_unit_risk <= max_trade_risk and asset_price <= self.account_equity
+        margin_required = asset_price / 5.0
+        gate3_risk_ok = per_unit_risk <= max_trade_risk and margin_required <= self.account_equity
 
         return gate1_spread_ok and gate2_var_ok and gate3_risk_ok
 

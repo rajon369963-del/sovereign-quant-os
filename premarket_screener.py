@@ -398,8 +398,9 @@ class PremarketScreener:
                 )
                 ofi, skew = snap.compute_ofi_and_skew()
 
-            # Filter 1: Price < ₹200
-            if prev_close >= 200.0 or open_price >= 200.0:
+            # Filter 1: Purchasing Power Check with 5x Intraday Leverage
+            min_margin_needed = open_price / 5.0
+            if min_margin_needed > self.cash_equity:
                 results.append(
                     CandidateStock(
                         symbol=sym,
@@ -415,7 +416,7 @@ class PremarketScreener:
                         risk_rupees=0.0,
                         stop_loss_distance=0.0,
                         status="REJECTED",
-                        rejection_reason=f"PRICE_EXCEEDS_200 (₹{max(prev_close, open_price):.2f} >= ₹200.00)",
+                        rejection_reason=f"MARGIN_EXCEEDS_EQUITY (₹{min_margin_needed:.2f} > ₹{self.cash_equity:.2f})",
                         ofi=ofi,
                         book_skew=skew,
                     )
@@ -425,24 +426,33 @@ class PremarketScreener:
             gap_pct, gap_factor, safe_lev = self.calibrate_gap_leverage(open_price, prev_close, macro_report.macro_score)
             abs_gap = abs(gap_pct)
 
-            # Rejection 1: Trap Zone (> 3.0%)
+            # Rejection 1: Large Gap Handling (Negative gap in bearish macro is SHORT candidate, not rejected)
             if abs_gap > 3.0:
-                results.append(
-                    CandidateStock(
-                        symbol=sym,
-                        security_id=udata["security_id"],
-                        previous_close=prev_close,
-                        open_price=open_price,
-                        current_price=curr_price,
-                        gap_pct=gap_pct,
-                        gap_factor=gap_factor,
-                        safe_leverage=safe_lev,
-                        max_buying_power=self.cash_equity * safe_lev,
-                        approved_quantity=0,
-                        risk_rupees=0.0,
-                        stop_loss_distance=0.0,
-                        status="REJECTED",
-                        rejection_reason=f"TRAP_ZONE_LIQUIDITY_SWEEP (|Gap| {abs_gap:.2f}% > 3.0%)",
+                if gap_pct < -3.0 and macro_report.macro_score < -0.2:
+                    # Symmetrical Downside Opportunity (Subasish Pani & Ghanshyam Tech Breakout Rule)
+                    safe_lev = min(safe_lev, 3.0)  # Cautious leverage on deep gaps
+                else:
+                    results.append(
+                        CandidateStock(
+                            symbol=sym,
+                            security_id=udata["security_id"],
+                            previous_close=prev_close,
+                            open_price=open_price,
+                            current_price=curr_price,
+                            gap_pct=gap_pct,
+                            gap_factor=gap_factor,
+                            safe_leverage=safe_lev,
+                            max_buying_power=self.cash_equity * safe_lev,
+                            approved_quantity=0,
+                            risk_rupees=0.0,
+                            stop_loss_distance=0.0,
+                            status="REJECTED",
+                            rejection_reason=f"TRAP_ZONE_LIQUIDITY_SWEEP (|Gap| {abs_gap:.2f}% > 3.0%)",
+                            ofi=ofi,
+                            book_skew=skew,
+                        )
+                    )
+                    continue
                         ofi=ofi,
                         book_skew=skew,
                     )

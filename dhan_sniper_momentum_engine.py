@@ -79,7 +79,7 @@ class DhanSniperMomentumEngine:
             max_capital=self.current_equity,
             single_trade_risk_limit=200.0,
             daily_loss_limit=self.max_daily_loss,
-            max_spread_pct=0.05,
+            max_spread_pct=0.15,
             max_variance=2.5,
         )
         self.gatekeeper = RiskGatekeeper(
