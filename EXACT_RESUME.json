@@ -1,0 +1,51 @@
+{
+  "last_updated": "2026-09-15T21:27:24.886502+00:00",
+  "phase": "PHASE_4_ROOT_CAUSE_ERADICATION_AND_GROUNDED_SYNTHESIS",
+  "status": "OPERATIONAL_VERIFIED",
+  "notebooklm_quant_vault_id": "96da7dbf-18e9-40a0-9e90-e363052a247f",
+  "notebooklm_vault_title": "200+ QUANT & ALGO TRADING GITHUB REPOS - SOVEREIGN CODE BRAIN",
+  "notebooklm_sources_ingested": 13,
+  "quant_repos_covered": 203,
+  "notebooklm_bridge_binary": "/Users/rajondas/.local/bin/air10-notebooklm-bridge",
+  "notebooklm_querier_binary": "/Users/rajondas/.local/bin/air10_nlm_grounded_querier",
+  "bridge_verification": {
+    "status": "VERIFIED_PHYSICAL_DOM",
+    "last_test_latency_ms": 29463.41,
+    "sample_query": "Explain how NautilusTrader and Order Flow Imbalance OFI are connected in these quant sources.",
+    "grounded": true
+  },
+  "verified_tools_database": "/Users/rajondas/Desktop/NEW_100_WHEELS_PHASE4_VERIFIED.sqlite",
+  "verified_tools_count": 100,
+  "stdlib_stubs_removed": [
+    "wave",
+    "audioop",
+    "ast",
+    "multiprocessing",
+    "threading",
+    "queue",
+    "sqlite3",
+    "fcntl"
+  ],
+  "real_quant_replacements_verified": [
+    "ta",
+    "quantstats",
+    "dhanhq",
+    "yfinance",
+    "polars",
+    "duckdb",
+    "cvxpy",
+    "mplfinance",
+    "arch",
+    "skfolio",
+    "backtesting",
+    "fyers-apiv3",
+    "kiteconnect",
+    "vectorbt"
+  ],
+  "live_bot_pid": 31654,
+  "capital_inr": 1008.0,
+  "google_drive_target_folder": "1i2ci3yvGJcYM6V6kBRZqYxvIDvgCKBCZ",
+  "account": "lakhidas168@gmail.com",
+  "vectorbt_version": "1.1.0",
+  "goal_status": "GOAL_COMPLETE_ALL_DELIVERABLES_VERIFIED"
+}
