@@ -453,11 +453,6 @@ class PremarketScreener:
                         )
                     )
                     continue
-                        ofi=ofi,
-                        book_skew=skew,
-                    )
-                )
-                continue
 
             # Rejection 2: Low Momentum (< 1.0%)
             if abs_gap < 1.0:
