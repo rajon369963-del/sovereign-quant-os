@@ -1,0 +1,15 @@
+{
+  "ticks_ingested": 10000,
+  "tick_ingest_rate_ops": 1017095.6488715702,
+  "arrow_rows": 10000,
+  "duckdb_analytics_ms": 61.863124996307306,
+  "orders_approved": 40,
+  "duplicates_intercepted": 10,
+  "outbox_drained_and_verified": 40,
+  "baseline_rate_limit": 30,
+  "adapted_rate_limit": 6,
+  "adapted_jitter": 3.0,
+  "hash_chain_valid": true,
+  "hash_chain_events": 90,
+  "status": "ALL_LEVELS_VERIFIED"
+}
