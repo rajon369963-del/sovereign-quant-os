@@ -1,5 +1,5 @@
 # ⚡ 200+ Quantitative & Algorithmic Trading GitHub Repositories Vault
-## *The Complete Grounded Codebase Architecture for NotebookLM*
+## *The Complete Grounded Codebase Architecture for NotebookLM with Deterministic SHA-256 Provenance*
 
 *Compiled on September 16, 2026 for the Sovereign Quant OS (Dhan / Fyers / Nifty / BankNifty)*
 
@@ -7,256 +7,226 @@
 
 ### 🏛️ Executive Summary
 This archive unifies **203 quantitative trading, options pricing, market microstructure, and execution engine repositories** into a structured, hallucination-free knowledge vault ready for immediate ingestion into a dedicated NotebookLM notebook.
+Every repository is indexed with a deterministic **Unique ID (`REPO_001` - `REPO_203`)** and **Cryptographic SHA-256 Fingerprint**.
 
 ### 📦 10 High-Density Domain Source Volumes:
-
-#### [01_HFT_EVENT_DRIVEN](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/01_HFT_EVENT_DRIVEN.md) (5 Repositories)
-- **Scope**: Covers C++20 Sub-Millisecond Gateway, Arbitrage & Prediction Markets, HFT & Multi-Broker Platform, High-Performance Event-Driven Algorithmic Trading, Lead-Lag Arbitrage
-- **Sample Repositories**: CloddsBot, StockSharp, NautilusTrader, Roq, HFT-Lead-Lag...
-
-#### [02_OPTIONS_GREEKS_VOL](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/02_OPTIONS_GREEKS_VOL.md) (6 Repositories)
-- **Scope**: Covers Delta/Gamma/Vega Hedging, Max Pain & PCR Analytics, IVR & IVP Screener, IV Surface & Smile Modeling, Options & Greeks Modeling, Options Strategy Analytics
-- **Sample Repositories**: Vollib, PyVol, OptionLab, Greeks-Optimizer, MaxPain-Calculator...
-
-#### [03_INDIAN_DERIVATIVES_BROKERS](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/03_INDIAN_DERIVATIVES_BROKERS.md) (3 Repositories)
-- **Scope**: Covers Systematic Quant & Live Broker, Unified Broker Gateway, Indian F&O Automation
-- **Sample Repositories**: sovereign-quant-os, uniBroker, Straddle-Strangle-Bot...
-
-#### [04_VECTOR_BACKTEST_PORTFOLIO](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/04_VECTOR_BACKTEST_PORTFOLIO.md) (3 Repositories)
-- **Scope**: Covers Ultra-Low Latency Backtest, AI-Oriented Quant Platform, Portfolio Analytics
-- **Sample Repositories**: Qlib, QuantStats, Fast-Backtest...
-
-#### [05_STAT_ARB_FIN_ML](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/05_STAT_ARB_FIN_ML.md) (2 Repositories)
-- **Scope**: Covers Smart Order Routing, Macroeconomic Regime
-- **Sample Repositories**: FRED-Py, Async-Order-Router...
-
-#### [06_MICROSTRUCTURE_ORDERFLOW](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/06_MICROSTRUCTURE_ORDERFLOW.md) (7 Repositories)
-- **Scope**: Covers Tick Storage & Parquet, High Frequency & Telemetry
-- **Sample Repositories**: jizb880_hermes_telemetry, hermes_telemetry, tokentelemetry-hermes-plugin, VasiHemanth_tokentelemetry-hermes-plugin, VasiHemanth_tokentelemetry...
-
-#### [07_FINANCIAL_NLP_SENTIMENT](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/07_FINANCIAL_NLP_SENTIMENT.md) (3 Repositories)
-- **Scope**: Covers News Sentiment Engine, Alternative Retail Data, Financial Sentiment NLP
-- **Sample Repositories**: FinGPT, NewsAPI-Quant, Reddit-Quant-Scraper...
-
-#### [08_MULTI_AGENT_QUANT_LLM](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/08_MULTI_AGENT_QUANT_LLM.md) (11 Repositories)
-- **Scope**: Covers Multi-Agent Orchestration, Agentic LLM & Knowledge Graph, AI Agents & Swarms, Financial LLM Agents
-- **Sample Repositories**: notebooklm-rest-api, NotebookMLX, notebookllama, notebooklm-py, open-notebook...
-
-#### [09_INFRA_ENGINEERING](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/09_INFRA_ENGINEERING.md) (60 Repositories)
-- **Scope**: Covers Market Data Extraction, Knowledge Lake, Multi-Exchange API, FIX Protocol Engine, Engineering & Infrastructure, Institutional Terminal
-- **Sample Repositories**: youtube-transcriber, youtube-workflows, insights-lm-public, gbrain, garrytan_gbrain...
-
-#### [10_CLONED_PHYSICAL_WHEELS](file:///Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_200_quant_repos_sources/10_CLONED_PHYSICAL_WHEELS.md) (103 Repositories)
-- **Scope**: Covers Cloned Physical Wheel
-- **Sample Repositories**: wallstreet, orjson, yfinance, backtesting.py, ta-lib...
-
+- Volume 1: `01_HFT_EVENT_DRIVEN.md` (High-Frequency Trading, C++20 Gateways, Event Engines)
+- Volume 2: `02_OPTIONS_GREEKS_VOL.md` (Options Pricing, IV Surface, Max Pain, PCR)
+- Volume 3: `03_INDIAN_DERIVATIVES_BROKERS.md` (Dhan/Fyers APIs, Indian F&O Automation)
+- Volume 4: `04_VECTOR_BACKTEST_PORTFOLIO.md` (Vectorized Backtesting, Portfolio Optimization)
+- Volume 5: `05_STAT_ARB_FIN_ML.md` (Statistical Arbitrage, Financial Machine Learning)
+- Volume 6: `06_MICROSTRUCTURE_ORDERFLOW.md` (Order Flow Imbalance, Level-2/3 Tick Data)
+- Volume 7: `07_FINANCIAL_NLP_SENTIMENT.md` (Financial NLP, News & Sentiment Scrapers)
+- Volume 8: `08_MULTI_AGENT_QUANT_LLM.md` (Multi-Agent Swarms, Quantitative LLM Reasoning)
+- Volume 9: `09_INFRA_ENGINEERING.md` (Infrastructure, Data Pipelines, Parquet Storage)
+- Volume 10: `10_CLONED_PHYSICAL_WHEELS.md` (Complete Physical Clones Master Catalog)
 
 ---
 
-### 🚀 Full 203 Repositories Master Index Table:
+### 📋 Master Repositories Catalog (203 Repositories)
 
-| # | Repository Name | Primary Domain | Volume | Remote URL |
-|---|---|---|---|---|
-| 1 | **CloddsBot** | `Arbitrage & Prediction Markets` | `01_HFT_EVENT_DRIVEN` | [https://github.com/trending/CloddsBot](https://github.com/trending/CloddsBot) |
-| 2 | **StockSharp** | `HFT & Multi-Broker Platform` | `01_HFT_EVENT_DRIVEN` | [https://github.com/StockSharp/StockSharp](https://github.com/StockSharp/StockSharp) |
-| 3 | **NautilusTrader** | `High-Performance Event-Driven Algorithmic Trading` | `01_HFT_EVENT_DRIVEN` | [https://github.com/nautechsystems/nautilus_trader](https://github.com/nautechsystems/nautilus_trader) |
-| 4 | **Roq** | `C++20 Sub-Millisecond Gateway` | `01_HFT_EVENT_DRIVEN` | [https://github.com/roq-trading/roq-api](https://github.com/roq-trading/roq-api) |
-| 5 | **HFT-Lead-Lag** | `Lead-Lag Arbitrage` | `01_HFT_EVENT_DRIVEN` | [https://github.com/lead-lag-hft/lead-lag](https://github.com/lead-lag-hft/lead-lag) |
-| 6 | **Vollib** | `Options & Greeks Modeling` | `02_OPTIONS_GREEKS_VOL` | [https://github.com/vollib/vollib](https://github.com/vollib/vollib) |
-| 7 | **PyVol** | `IV Surface & Smile Modeling` | `02_OPTIONS_GREEKS_VOL` | [https://github.com/vol-research/pyvol](https://github.com/vol-research/pyvol) |
-| 8 | **OptionLab** | `Options Strategy Analytics` | `02_OPTIONS_GREEKS_VOL` | [https://github.com/optionlab/optionlab](https://github.com/optionlab/optionlab) |
-| 9 | **Greeks-Optimizer** | `Delta/Gamma/Vega Hedging` | `02_OPTIONS_GREEKS_VOL` | [https://github.com/greek-hedge/greeks-optimizer](https://github.com/greek-hedge/greeks-optimizer) |
-| 10 | **MaxPain-Calculator** | `Max Pain & PCR Analytics` | `02_OPTIONS_GREEKS_VOL` | [https://github.com/nse-tools/maxpain-calculator](https://github.com/nse-tools/maxpain-calculator) |
-| 11 | **IV-Rank-Scanner** | `IVR & IVP Screener` | `02_OPTIONS_GREEKS_VOL` | [https://github.com/nse-tools/iv-rank-scanner](https://github.com/nse-tools/iv-rank-scanner) |
-| 12 | **sovereign-quant-os** | `Systematic Quant & Live Broker` | `03_INDIAN_DERIVATIVES_BROKERS` | [https://github.com/rajon369963-del/sovereign-quant-os](https://github.com/rajon369963-del/sovereign-quant-os) |
-| 13 | **uniBroker** | `Unified Broker Gateway` | `03_INDIAN_DERIVATIVES_BROKERS` | [https://github.com/universal-broker/uniBroker](https://github.com/universal-broker/uniBroker) |
-| 14 | **Straddle-Strangle-Bot** | `Indian F&O Automation` | `03_INDIAN_DERIVATIVES_BROKERS` | [https://github.com/indian-quant/straddle-strangle-bot](https://github.com/indian-quant/straddle-strangle-bot) |
-| 15 | **Qlib** | `AI-Oriented Quant Platform` | `04_VECTOR_BACKTEST_PORTFOLIO` | [https://github.com/microsoft/qlib](https://github.com/microsoft/qlib) |
-| 16 | **QuantStats** | `Portfolio Analytics` | `04_VECTOR_BACKTEST_PORTFOLIO` | [https://github.com/ranaroussi/quantstats](https://github.com/ranaroussi/quantstats) |
-| 17 | **Fast-Backtest** | `Ultra-Low Latency Backtest` | `04_VECTOR_BACKTEST_PORTFOLIO` | [https://github.com/quant-dev/fast-backtest](https://github.com/quant-dev/fast-backtest) |
-| 18 | **FRED-Py** | `Macroeconomic Regime` | `05_STAT_ARB_FIN_ML` | [https://github.com/macro-quant/fred-py](https://github.com/macro-quant/fred-py) |
-| 19 | **Async-Order-Router** | `Smart Order Routing` | `05_STAT_ARB_FIN_ML` | [https://github.com/quant-router/async-order-router](https://github.com/quant-router/async-order-router) |
-| 20 | **jizb880_hermes_telemetry** | `High Frequency & Telemetry` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/jizb880/hermes_telemetry.git](https://github.com/jizb880/hermes_telemetry.git) |
-| 21 | **hermes_telemetry** | `High Frequency & Telemetry` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/jizb880/hermes_telemetry.git](https://github.com/jizb880/hermes_telemetry.git) |
-| 22 | **tokentelemetry-hermes-plugin** | `High Frequency & Telemetry` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git](https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git) |
-| 23 | **VasiHemanth_tokentelemetry-hermes-plugin** | `High Frequency & Telemetry` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git](https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git) |
-| 24 | **VasiHemanth_tokentelemetry** | `High Frequency & Telemetry` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/VasiHemanth/tokentelemetry.git](https://github.com/VasiHemanth/tokentelemetry.git) |
-| 25 | **tokentelemetry** | `High Frequency & Telemetry` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/VasiHemanth/tokentelemetry.git](https://github.com/VasiHemanth/tokentelemetry.git) |
-| 26 | **Tick-Database** | `Tick Storage & Parquet` | `06_MICROSTRUCTURE_ORDERFLOW` | [https://github.com/tick-store/tick-database](https://github.com/tick-store/tick-database) |
-| 27 | **FinGPT** | `Financial Sentiment NLP` | `07_FINANCIAL_NLP_SENTIMENT` | [https://github.com/AI4Finance-Foundation/FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) |
-| 28 | **NewsAPI-Quant** | `News Sentiment Engine` | `07_FINANCIAL_NLP_SENTIMENT` | [https://github.com/quant-news/newsapi-quant](https://github.com/quant-news/newsapi-quant) |
-| 29 | **Reddit-Quant-Scraper** | `Alternative Retail Data` | `07_FINANCIAL_NLP_SENTIMENT` | [https://github.com/retail-sentiment/reddit-quant-scraper](https://github.com/retail-sentiment/reddit-quant-scraper) |
-| 30 | **notebooklm-rest-api** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/gnh1201/notebooklm-rest-api](https://github.com/gnh1201/notebooklm-rest-api) |
-| 31 | **NotebookMLX** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/johnmai-dev/NotebookMLX](https://github.com/johnmai-dev/NotebookMLX) |
-| 32 | **notebookllama** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/run-llama/notebookllama](https://github.com/run-llama/notebookllama) |
-| 33 | **notebooklm-py** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py) |
-| 34 | **open-notebook** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) |
-| 35 | **gemini-spark-cortex** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/rajon369963-del/gemini-spark-cortex](https://github.com/rajon369963-del/gemini-spark-cortex) |
-| 36 | **air1-fable5-colab** | `Agentic LLM & Knowledge Graph` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/rajon369963-del/air1-fable5-colab](https://github.com/rajon369963-del/air1-fable5-colab) |
-| 37 | **AutoHedge** | `AI Agents & Swarms` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/The-Swarm-Corporation/AutoHedge](https://github.com/The-Swarm-Corporation/AutoHedge) |
-| 38 | **TradingAgents** | `AI Agents & Swarms` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/tauricresearch/tradingagents](https://github.com/tauricresearch/tradingagents) |
-| 39 | **FinRobot** | `Financial LLM Agents` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/AI4Finance-Foundation/FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) |
-| 40 | **Fenix** | `Multi-Agent Orchestration` | `08_MULTI_AGENT_QUANT_LLM` | [https://github.com/fenix-trading/fenix](https://github.com/fenix-trading/fenix) |
-| 41 | **youtube-transcriber** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/lifesized/youtube-transcriber](https://github.com/lifesized/youtube-transcriber) |
-| 42 | **youtube-workflows** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/ZeroPointRepo/youtube-workflows](https://github.com/ZeroPointRepo/youtube-workflows) |
-| 43 | **insights-lm-public** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/theaiautomators/insights-lm-public](https://github.com/theaiautomators/insights-lm-public) |
-| 44 | **gbrain** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/garrytan/gbrain.git](https://github.com/garrytan/gbrain.git) |
-| 45 | **garrytan_gbrain** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/garrytan/gbrain.git](https://github.com/garrytan/gbrain.git) |
-| 46 | **briancaffey_hermes-otel** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/briancaffey/hermes-otel.git](https://github.com/briancaffey/hermes-otel.git) |
-| 47 | **MAYA-Platform_MAYA-Memory-Lane** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/MAYA-Platform/MAYA-Memory-Lane.git](https://github.com/MAYA-Platform/MAYA-Memory-Lane.git) |
-| 48 | **hermes-otel** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/briancaffey/hermes-otel.git](https://github.com/briancaffey/hermes-otel.git) |
-| 49 | **MAYA-Memory-Lane** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/MAYA-Platform/MAYA-Memory-Lane.git](https://github.com/MAYA-Platform/MAYA-Memory-Lane.git) |
-| 50 | **hermes-lcm** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/stephenschoettler/hermes-lcm.git](https://github.com/stephenschoettler/hermes-lcm.git) |
-| 51 | **obsidian-admonition** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/valentine195/obsidian-admonition.git](https://github.com/valentine195/obsidian-admonition.git) |
-| 52 | **upsc_polity_24h_mvp** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/quant/upsc_polity_24h_mvp](https://github.com/quant/upsc_polity_24h_mvp) |
-| 53 | **air10_student_engine** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/quant/air10_student_engine](https://github.com/quant/air10_student_engine) |
-| 54 | **Obsidian_to_Anki** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/Pseudonium/Obsidian_to_Anki.git](https://github.com/Pseudonium/Obsidian_to_Anki.git) |
-| 55 | **vibepod-cli** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/VibePod/vibepod-cli.git](https://github.com/VibePod/vibepod-cli.git) |
-| 56 | **chromium-ipc-sniffer** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/tomer8007/chromium-ipc-sniffer.git](https://github.com/tomer8007/chromium-ipc-sniffer.git) |
-| 57 | **anki-connect** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/FooSoft/anki-connect.git](https://github.com/FooSoft/anki-connect.git) |
-| 58 | **antigravity-awesome-skills-benjaminasterA** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/benjaminasterA/antigravity-awesome-skills.git](https://github.com/benjaminasterA/antigravity-awesome-skills.git) |
-| 59 | **get-shit-done-for-antigravity-toonight** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/toonight/get-shit-done-for-antigravity.git](https://github.com/toonight/get-shit-done-for-antigravity.git) |
-| 60 | **fsrs-optimizer** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/fsrs-optimizer.git](https://github.com/open-spaced-repetition/fsrs-optimizer.git) |
-| 61 | **openlive** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/katipally/openlive.git](https://github.com/katipally/openlive.git) |
-| 62 | **review-heatmap** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/glutanimate/review-heatmap.git](https://github.com/glutanimate/review-heatmap.git) |
-| 63 | **awesome-fsrs** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/awesome-fsrs.git](https://github.com/open-spaced-repetition/awesome-fsrs.git) |
-| 64 | **cc-safety-net** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/kenryu42/cc-safety-net.git](https://github.com/kenryu42/cc-safety-net.git) |
-| 65 | **everything-antigravity-krishnakanthb13** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/krishnakanthb13/everything-antigravity.git](https://github.com/krishnakanthb13/everything-antigravity.git) |
-| 66 | **go-fsrs** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/go-fsrs.git](https://github.com/open-spaced-repetition/go-fsrs.git) |
-| 67 | **whisper.cpp** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/ggml-org/whisper.cpp.git](https://github.com/ggml-org/whisper.cpp.git) |
-| 68 | **antigravity-skills-rominirani** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rominirani/antigravity-skills.git](https://github.com/rominirani/antigravity-skills.git) |
-| 69 | **Lyre** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/alexwiese/Lyre.git](https://github.com/alexwiese/Lyre.git) |
-| 70 | **Antigravity-Tools-LS-lbjlaq** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/lbjlaq/Antigravity-Tools-LS.git](https://github.com/lbjlaq/Antigravity-Tools-LS.git) |
-| 71 | **super-voice-assistant** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/ykdojo/super-voice-assistant.git](https://github.com/ykdojo/super-voice-assistant.git) |
-| 72 | **antigravity-mastery-handbook-hamodywe** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/hamodywe/antigravity-mastery-handbook.git](https://github.com/hamodywe/antigravity-mastery-handbook.git) |
-| 73 | **fsrs-vs-sm17** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/fsrs-vs-sm17.git](https://github.com/open-spaced-repetition/fsrs-vs-sm17.git) |
-| 74 | **iceoryx2** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/eclipse-iceoryx/iceoryx2.git](https://github.com/eclipse-iceoryx/iceoryx2.git) |
-| 75 | **femto-fsrs** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/RickCarlino/femto-fsrs.git](https://github.com/RickCarlino/femto-fsrs.git) |
-| 76 | **antigravity-ai-kit-besync** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/besync-labs/antigravity-ai-kit.git](https://github.com/besync-labs/antigravity-ai-kit.git) |
-| 77 | **fsrs-rs** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/fsrs-rs.git](https://github.com/open-spaced-repetition/fsrs-rs.git) |
-| 78 | **jarvis** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/ethanplusai/jarvis.git](https://github.com/ethanplusai/jarvis.git) |
-| 79 | **antigravity-skills-rmyndharis** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rmyndharis/antigravity-skills.git](https://github.com/rmyndharis/antigravity-skills.git) |
-| 80 | **fsrs4anki-helper** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/fsrs4anki-helper.git](https://github.com/open-spaced-repetition/fsrs4anki-helper.git) |
-| 81 | **gemini-live-api-examples** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/google-gemini/gemini-live-api-examples.git](https://github.com/google-gemini/gemini-live-api-examples.git) |
-| 82 | **srs-benchmark** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/open-spaced-repetition/srs-benchmark.git](https://github.com/open-spaced-repetition/srs-benchmark.git) |
-| 83 | **OmniAntigravityRemoteChat** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/diegosouzapw/OmniAntigravityRemoteChat.git](https://github.com/diegosouzapw/OmniAntigravityRemoteChat.git) |
-| 84 | **antigravity-awesome-skills-ar27111994** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/ar27111994/antigravity-awesome-skills.git](https://github.com/ar27111994/antigravity-awesome-skills.git) |
-| 85 | **yomitan** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/themoeway/yomitan.git](https://github.com/themoeway/yomitan.git) |
-| 86 | **smart-coding-mcp** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/omar-haris/smart-coding-mcp.git](https://github.com/omar-haris/smart-coding-mcp.git) |
-| 87 | **fastmcp** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/jlowin/fastmcp.git](https://github.com/jlowin/fastmcp.git) |
-| 88 | **second_brain** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/quant/second_brain](https://github.com/quant/second_brain) |
-| 89 | **sovereign-study-commons-india** | `Knowledge Lake` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/sovereign-study-commons-india](https://github.com/rajon369963-del/sovereign-study-commons-india) |
-| 90 | **civex-progressive-bridge** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/civex-progressive-bridge](https://github.com/rajon369963-del/civex-progressive-bridge) |
-| 91 | **migl-sovereign-agent-suite** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/migl-sovereign-agent-suite](https://github.com/rajon369963-del/migl-sovereign-agent-suite) |
-| 92 | **air1-migl-web** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/air1-migl-web](https://github.com/rajon369963-del/air1-migl-web) |
-| 93 | **air1-reels** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/air1-reels](https://github.com/rajon369963-del/air1-reels) |
-| 94 | **air1-village-player** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/air1-village-player](https://github.com/rajon369963-del/air1-village-player) |
-| 95 | **AIR1-CLOUD-FABRIC** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/AIR1-CLOUD-FABRIC](https://github.com/rajon369963-del/AIR1-CLOUD-FABRIC) |
-| 96 | **migl-cloud-swarm** | `Engineering & Infrastructure` | `09_INFRA_ENGINEERING` | [https://github.com/rajon369963-del/migl-cloud-swarm](https://github.com/rajon369963-del/migl-cloud-swarm) |
-| 97 | **CCXT** | `Multi-Exchange API` | `09_INFRA_ENGINEERING` | [https://github.com/ccxt/ccxt](https://github.com/ccxt/ccxt) |
-| 98 | **OpenBB-Terminal** | `Institutional Terminal` | `09_INFRA_ENGINEERING` | [https://github.com/OpenBB-finance/OpenBBTerminal](https://github.com/OpenBB-finance/OpenBBTerminal) |
-| 99 | **yfinance** | `Market Data Extraction` | `09_INFRA_ENGINEERING` | [https://github.com/ranaroussi/yfinance](https://github.com/ranaroussi/yfinance) |
-| 100 | **QuickFIX** | `FIX Protocol Engine` | `09_INFRA_ENGINEERING` | [https://github.com/quickfix/quickfix](https://github.com/quickfix/quickfix) |
-| 101 | **wallstreet** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/mcdallas/wallstreet.git](https://github.com/mcdallas/wallstreet.git) |
-| 102 | **orjson** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/ijl/orjson.git](https://github.com/ijl/orjson.git) |
-| 103 | **yfinance** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/ranaroussi/yfinance.git](https://github.com/ranaroussi/yfinance.git) |
-| 104 | **backtesting.py** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/kernc/backtesting.py.git](https://github.com/kernc/backtesting.py.git) |
-| 105 | **ta-lib** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/mrjbq7/ta-lib.git](https://github.com/mrjbq7/ta-lib.git) |
-| 106 | **FinRL** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AI4Finance-Foundation/FinRL.git](https://github.com/AI4Finance-Foundation/FinRL.git) |
-| 107 | **qlib** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/microsoft/qlib.git](https://github.com/microsoft/qlib.git) |
-| 108 | **finmarketpy** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/cuemacro/finmarketpy.git](https://github.com/cuemacro/finmarketpy.git) |
-| 109 | **backtrader** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/mementum/backtrader.git](https://github.com/mementum/backtrader.git) |
-| 110 | **finta** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/peerchemist/finta.git](https://github.com/peerchemist/finta.git) |
-| 111 | **nautilus_trader** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/nautechsystems/nautilus_trader.git](https://github.com/nautechsystems/nautilus_trader.git) |
-| 112 | **FinRobot** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AI4Finance-Foundation/FinRobot.git](https://github.com/AI4Finance-Foundation/FinRobot.git) |
-| 113 | **Lean** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/QuantConnect/Lean.git](https://github.com/QuantConnect/Lean.git) |
-| 114 | **investpy** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/alvarobartt/investpy.git](https://github.com/alvarobartt/investpy.git) |
-| 115 | **cvxpy** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/cvxpy/cvxpy.git](https://github.com/cvxpy/cvxpy.git) |
-| 116 | **pandas-market-calendars** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/rsheftel/pandas_market_calendars.git](https://github.com/rsheftel/pandas_market_calendars.git) |
-| 117 | **FinNLP** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AI4Finance-Foundation/FinNLP.git](https://github.com/AI4Finance-Foundation/FinNLP.git) |
-| 118 | **simdjson** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/simdjson/simdjson.git](https://github.com/simdjson/simdjson.git) |
-| 119 | **pykiteconnect** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/zerodha/pykiteconnect.git](https://github.com/zerodha/pykiteconnect.git) |
-| 120 | **quant-trading** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/je-suis-tm/quant-trading.git](https://github.com/je-suis-tm/quant-trading.git) |
-| 121 | **hummingbot** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/hummingbot/hummingbot.git](https://github.com/hummingbot/hummingbot.git) |
-| 122 | **ccxt** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/ccxt/ccxt.git](https://github.com/ccxt/ccxt.git) |
-| 123 | **Skill_Seekers** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/yusufkaraaslan/Skill_Seekers.git](https://github.com/yusufkaraaslan/Skill_Seekers.git) |
-| 124 | **financial-engineering-vault** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/yusufkaraaslan/Skill_Seekers.git](https://github.com/yusufkaraaslan/Skill_Seekers.git) |
-| 125 | **quantaxis** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/QUANTAXIS/QUANTAXIS.git](https://github.com/QUANTAXIS/QUANTAXIS.git) |
-| 126 | **arrow** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/apache/arrow.git](https://github.com/apache/arrow.git) |
-| 127 | **mplfinance** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/matplotlib/mplfinance.git](https://github.com/matplotlib/mplfinance.git) |
-| 128 | **deep-reinforcement-learning-for-finance** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AI4Finance-Foundation/FinRL-Tutorials.git](https://github.com/AI4Finance-Foundation/FinRL-Tutorials.git) |
-| 129 | **tulipindicators** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/TulipCharts/tulipindicators.git](https://github.com/TulipCharts/tulipindicators.git) |
-| 130 | **vectorbt** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/polakowo/vectorbt.git](https://github.com/polakowo/vectorbt.git) |
-| 131 | **zerodha-algo-trading** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/ranaroussi/quantstats.git](https://github.com/ranaroussi/quantstats.git) |
-| 132 | **fd** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/sharkdp/fd.git](https://github.com/sharkdp/fd.git) |
-| 133 | **dhanhq-py** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/dhan-oss/DhanHQ-py.git](https://github.com/dhan-oss/DhanHQ-py.git) |
-| 134 | **ml-for-trading** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/stefan-jansen/machine-learning-for-trading.git](https://github.com/stefan-jansen/machine-learning-for-trading.git) |
-| 135 | **pyfolio** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/quantopian/pyfolio.git](https://github.com/quantopian/pyfolio.git) |
-| 136 | **hyperfine** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/sharkdp/hyperfine.git](https://github.com/sharkdp/hyperfine.git) |
-| 137 | **gym-anytrading** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AminHP/gym-anytrading.git](https://github.com/AminHP/gym-anytrading.git) |
-| 138 | **quantstats** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/ranaroussi/quantstats.git](https://github.com/ranaroussi/quantstats.git) |
-| 139 | **fastquant** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/enzoampil/fastquant.git](https://github.com/enzoampil/fastquant.git) |
-| 140 | **AutoHedge** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/The-Swarm-Corporation/AutoHedge.git](https://github.com/The-Swarm-Corporation/AutoHedge.git) |
-| 141 | **smartapi-python** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/angel-one/smartapi-python](https://github.com/angel-one/smartapi-python) |
-| 142 | **hikyuu** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/fasiondog/hikyuu.git](https://github.com/fasiondog/hikyuu.git) |
-| 143 | **pyts** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/johannfaouzi/pyts.git](https://github.com/johannfaouzi/pyts.git) |
-| 144 | **vollib** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/vollib/vollib.git](https://github.com/vollib/vollib.git) |
-| 145 | **superalgos** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/superalgos/superalgos.git](https://github.com/superalgos/superalgos.git) |
-| 146 | **jesse** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/jesse-ai/jesse.git](https://github.com/jesse-ai/jesse.git) |
-| 147 | **nsepython** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/aeron7/nsepython.git](https://github.com/aeron7/nsepython.git) |
-| 148 | **roq-api** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/roq-trading/roq-api.git](https://github.com/roq-trading/roq-api.git) |
-| 149 | **usearch** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/unum-cloud/usearch.git](https://github.com/unum-cloud/usearch.git) |
-| 150 | **alphalens-reloaded** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/stefan-jansen/alphalens-reloaded.git](https://github.com/stefan-jansen/alphalens-reloaded.git) |
-| 151 | **awesome-quant** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/wilsonfreitas/awesome-quant.git](https://github.com/wilsonfreitas/awesome-quant.git) |
-| 152 | **uv** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/astral-sh/uv.git](https://github.com/astral-sh/uv.git) |
-| 153 | **quickfix** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/quickfix/quickfix.git](https://github.com/quickfix/quickfix.git) |
-| 154 | **alpha-vantage-sdk** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/RomelTorres/alpha_vantage.git](https://github.com/RomelTorres/alpha_vantage.git) |
-| 155 | **StockPredictionAI** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/borisbanushev/stockpredictionai.git](https://github.com/borisbanushev/stockpredictionai.git) |
-| 156 | **OpenBBTerminal** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/OpenBB-finance/OpenBBTerminal.git](https://github.com/OpenBB-finance/OpenBBTerminal.git) |
-| 157 | **alpha_vantage** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/RomelTorres/alpha_vantage.git](https://github.com/RomelTorres/alpha_vantage.git) |
-| 158 | **alphalens** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/quantopian/alphalens.git](https://github.com/quantopian/alphalens.git) |
-| 159 | **tsfresh** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/blue-yonder/tsfresh.git](https://github.com/blue-yonder/tsfresh.git) |
-| 160 | **ffn** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/pmorissette/ffn.git](https://github.com/pmorissette/ffn.git) |
-| 161 | **optuna** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/optuna/optuna.git](https://github.com/optuna/optuna.git) |
-| 162 | **algorithmic-trading-samples** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/PacktPublishing/Hands-On-Financial-Trading-with-Python.git](https://github.com/PacktPublishing/Hands-On-Financial-Trading-with-Python.git) |
-| 163 | **FinGPT** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AI4Finance-Foundation/FinGPT.git](https://github.com/AI4Finance-Foundation/FinGPT.git) |
-| 164 | **tradingagents** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/tauricresearch/tradingagents.git](https://github.com/tauricresearch/tradingagents.git) |
-| 165 | **darts** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/unit8co/darts.git](https://github.com/unit8co/darts.git) |
-| 166 | **arch** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/bashtage/arch.git](https://github.com/bashtage/arch.git) |
-| 167 | **bt** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/pmorissette/bt.git](https://github.com/pmorissette/bt.git) |
-| 168 | **gluonts** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/awslabs/gluonts.git](https://github.com/awslabs/gluonts.git) |
-| 169 | **Hands-On-Algorithmic-Trading-with-Python** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/PacktPublishing/Hands-On-Algorithmic-Trading-with-Python.git](https://github.com/PacktPublishing/Hands-On-Algorithmic-Trading-with-Python.git) |
-| 170 | **ShoonyaApi-py** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/Shoonya-Dev/ShoonyaApi-py.git](https://github.com/Shoonya-Dev/ShoonyaApi-py.git) |
-| 171 | **alpaca-py** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/alpacahq/alpaca-py.git](https://github.com/alpacahq/alpaca-py.git) |
-| 172 | **vnpy** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/vnpy/vnpy.git](https://github.com/vnpy/vnpy.git) |
-| 173 | **duckdb** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/duckdb/duckdb.git](https://github.com/duckdb/duckdb.git) |
-| 174 | **quant-trading-bot** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/je-suis-tm/quant-trading.git](https://github.com/je-suis-tm/quant-trading.git) |
-| 175 | **bat** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/sharkdp/bat.git](https://github.com/sharkdp/bat.git) |
-| 176 | **numba** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/numba/numba.git](https://github.com/numba/numba.git) |
-| 177 | **Clairvoyant** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/anfederico/Clairvoyant.git](https://github.com/anfederico/Clairvoyant.git) |
-| 178 | **rqalpha** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/ricequant/rqalpha.git](https://github.com/ricequant/rqalpha.git) |
-| 179 | **empyrical-reloaded** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/stefan-jansen/empyrical-reloaded.git](https://github.com/stefan-jansen/empyrical-reloaded.git) |
-| 180 | **pyalgotrade** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/gbeced/pyalgotrade.git](https://github.com/gbeced/pyalgotrade.git) |
-| 181 | **algo-trading-in-india** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/aeron7/nsepython.git](https://github.com/aeron7/nsepython.git) |
-| 182 | **qstrader** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/mhallsmoore/qstrader.git](https://github.com/mhallsmoore/qstrader.git) |
-| 183 | **PyPortfolioOpt** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/robertmartin8/PyPortfolioOpt.git](https://github.com/robertmartin8/PyPortfolioOpt.git) |
-| 184 | **Stock-Prediction-Models** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/huseinzol05/Stock-Prediction-Models.git](https://github.com/huseinzol05/Stock-Prediction-Models.git) |
-| 185 | **polars** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/pola-rs/polars.git](https://github.com/pola-rs/polars.git) |
-| 186 | **statsmodels** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/statsmodels/statsmodels.git](https://github.com/statsmodels/statsmodels.git) |
-| 187 | **empyrical** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/quantopian/empyrical.git](https://github.com/quantopian/empyrical.git) |
-| 188 | **ripgrep** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/BurntSushi/ripgrep.git](https://github.com/BurntSushi/ripgrep.git) |
-| 189 | **litellm** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/BerriAI/litellm.git](https://github.com/BerriAI/litellm.git) |
-| 190 | **cryptofeed** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/bmoscon/cryptofeed.git](https://github.com/bmoscon/cryptofeed.git) |
-| 191 | **instructor** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/jxnl/instructor.git](https://github.com/jxnl/instructor.git) |
-| 192 | **zipline-trader** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/shlomikushchi/zipline-trader.git](https://github.com/shlomikushchi/zipline-trader.git) |
-| 193 | **fastfetch** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/fastfetch-cli/fastfetch.git](https://github.com/fastfetch-cli/fastfetch.git) |
-| 194 | **freqtrade** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/freqtrade/freqtrade.git](https://github.com/freqtrade/freqtrade.git) |
-| 195 | **wallstreet-core** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/mcdallas/wallstreet.git](https://github.com/mcdallas/wallstreet.git) |
-| 196 | **ta** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/bukosabino/ta.git](https://github.com/bukosabino/ta.git) |
-| 197 | **upstox-python** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/upstox/upstox-python.git](https://github.com/upstox/upstox-python.git) |
-| 198 | **trade-executor** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/tradingstrategy-ai/trade-executor.git](https://github.com/tradingstrategy-ai/trade-executor.git) |
-| 199 | **technical** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/freqtrade/technical.git](https://github.com/freqtrade/technical.git) |
-| 200 | **pyfolio-reloaded** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/stefan-jansen/pyfolio-reloaded.git](https://github.com/stefan-jansen/pyfolio-reloaded.git) |
-| 201 | **openalgo** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/marketcalls/openalgo.git](https://github.com/marketcalls/openalgo.git) |
-| 202 | **FinRL-Meta** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/AI4Finance-Foundation/FinRL-Meta.git](https://github.com/AI4Finance-Foundation/FinRL-Meta.git) |
-| 203 | **zipline** | `Cloned Physical Wheel` | `10_CLONED_PHYSICAL_WHEELS` | [https://github.com/quantopian/zipline.git](https://github.com/quantopian/zipline.git) |
+| Unique ID | Repository Name | Primary Domain | Cryptographic SHA-256 Fingerprint | Remote URL | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `REPO_001` | **air10_student_engine** | `Engineering & Infrastructure` | `fa920f362295226c...` | [air10_student_engine]() | Repository air10_student_engine located at /Users/rajondas/teamwork_projects/air10_student_engine |
+| `REPO_002` | **AIR1-CLOUD-FABRIC** | `Engineering & Infrastructure` | `8f398476f7a9b076...` | [AIR1-CLOUD-FABRIC](https://github.com/rajon369963-del/AIR1-CLOUD-FABRIC) | AIR1-CLOUD-FABRIC |
+| `REPO_003` | **air1-fable5-colab** | `Agentic LLM & Knowledge Graph` | `56730e633ac1d846...` | [air1-fable5-colab](https://github.com/rajon369963-del/air1-fable5-colab) | AIR1 Fable-5 LLM Server - One click Colab deploy |
+| `REPO_004` | **air1-migl-web** | `Engineering & Infrastructure` | `f95e8b435f5b6ba8...` | [air1-migl-web](https://github.com/rajon369963-del/air1-migl-web) |  |
+| `REPO_005` | **air1-reels** | `Engineering & Infrastructure` | `2f7ec8aeb1b00edb...` | [air1-reels](https://github.com/rajon369963-del/air1-reels) |  |
+| `REPO_006` | **air1-village-player** | `Engineering & Infrastructure` | `fa0e2e5efc03dae6...` | [air1-village-player](https://github.com/rajon369963-del/air1-village-player) |  |
+| `REPO_007` | **algorithmic-trading-samples** | `Cloned Physical Wheel` | `4dd643454290d196...` | [algorithmic-trading-samples](https://github.com/PacktPublishing/Hands-On-Financial-Trading-with-Python.git) | Institutional physical trading wheel: algorithmic-trading-samples |
+| `REPO_008` | **algo-trading-in-india** | `Cloned Physical Wheel` | `43cb1225cb0c6311...` | [algo-trading-in-india](https://github.com/aeron7/nsepython.git) | Institutional physical trading wheel: algo-trading-in-india |
+| `REPO_009` | **alpaca-py** | `Cloned Physical Wheel` | `29bbbf7b971ecaea...` | [alpaca-py](https://github.com/alpacahq/alpaca-py.git) | Institutional physical trading wheel: alpaca-py |
+| `REPO_010` | **alphalens** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [alphalens](https://github.com/quantopian/alphalens.git) | Institutional physical trading wheel: alphalens |
+| `REPO_011` | **alphalens-reloaded** | `Cloned Physical Wheel` | `3ea0cbd12501c631...` | [alphalens-reloaded](https://github.com/stefan-jansen/alphalens-reloaded.git) | Institutional physical trading wheel: alphalens-reloaded |
+| `REPO_012` | **alpha_vantage** | `Cloned Physical Wheel` | `763f996d08728529...` | [alpha_vantage](https://github.com/RomelTorres/alpha_vantage.git) | Institutional physical trading wheel: alpha_vantage |
+| `REPO_013` | **alpha-vantage-sdk** | `Cloned Physical Wheel` | `f23184299ebd419f...` | [alpha-vantage-sdk](https://github.com/RomelTorres/alpha_vantage.git) | Institutional physical trading wheel: alpha-vantage-sdk |
+| `REPO_014` | **anki-connect** | `Engineering & Infrastructure` | `30db9d9b0bfcc504...` | [anki-connect](https://github.com/FooSoft/anki-connect.git) | Repository anki-connect located at /Users/rajondas/teamwork_projects/downloaded_wheels/anki-connect |
+| `REPO_015` | **antigravity-ai-kit-besync** | `Engineering & Infrastructure` | `48d00b34fd3c9ae3...` | [antigravity-ai-kit-besync](https://github.com/besync-labs/antigravity-ai-kit.git) | Repository antigravity-ai-kit-besync located at /Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-ai-kit-besync |
+| `REPO_016` | **antigravity-awesome-skills-ar27111994** | `Engineering & Infrastructure` | `fe1bcb22b6e73a13...` | [antigravity-awesome-skills-ar27111994](https://github.com/ar27111994/antigravity-awesome-skills.git) | Repository antigravity-awesome-skills-ar27111994 located at /Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-awesome-skills-ar27111994 |
+| `REPO_017` | **antigravity-awesome-skills-benjaminasterA** | `Engineering & Infrastructure` | `6ec6de3dc861eede...` | [antigravity-awesome-skills-benjaminasterA](https://github.com/benjaminasterA/antigravity-awesome-skills.git) | Repository antigravity-awesome-skills-benjaminasterA located at /Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-awesome-skills-benjaminasterA |
+| `REPO_018` | **antigravity-mastery-handbook-hamodywe** | `Engineering & Infrastructure` | `9e4659bcae6a119c...` | [antigravity-mastery-handbook-hamodywe](https://github.com/hamodywe/antigravity-mastery-handbook.git) | Repository antigravity-mastery-handbook-hamodywe located at /Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-mastery-handbook-hamodywe |
+| `REPO_019` | **antigravity-skills-rmyndharis** | `Engineering & Infrastructure` | `0985f027e7ef4f01...` | [antigravity-skills-rmyndharis](https://github.com/rmyndharis/antigravity-skills.git) | Repository antigravity-skills-rmyndharis located at /Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-skills-rmyndharis |
+| `REPO_020` | **antigravity-skills-rominirani** | `Engineering & Infrastructure` | `978ca31e3638b105...` | [antigravity-skills-rominirani](https://github.com/rominirani/antigravity-skills.git) | Repository antigravity-skills-rominirani located at /Users/rajondas/teamwork_projects/downloaded_wheels/antigravity-skills-rominirani |
+| `REPO_021` | **Antigravity-Tools-LS-lbjlaq** | `Engineering & Infrastructure` | `5f696c39eaf96acc...` | [Antigravity-Tools-LS-lbjlaq](https://github.com/lbjlaq/Antigravity-Tools-LS.git) | Repository Antigravity-Tools-LS-lbjlaq located at /Users/rajondas/teamwork_projects/downloaded_wheels/Antigravity-Tools-LS-lbjlaq |
+| `REPO_022` | **arch** | `Cloned Physical Wheel` | `23efb0113393cc09...` | [arch](https://github.com/bashtage/arch.git) | Institutional physical trading wheel: arch |
+| `REPO_023` | **arrow** | `Cloned Physical Wheel` | `eea9606db716afca...` | [arrow](https://github.com/apache/arrow.git) | Institutional physical trading wheel: arrow |
+| `REPO_024` | **AutoHedge** | `Cloned Physical Wheel` | `ee09d3c15c396544...` | [AutoHedge](https://github.com/The-Swarm-Corporation/AutoHedge.git) | Institutional physical trading wheel: AutoHedge |
+| `REPO_025` | **awesome-fsrs** | `Engineering & Infrastructure` | `ddcb30953ef553f8...` | [awesome-fsrs](https://github.com/open-spaced-repetition/awesome-fsrs.git) | Repository awesome-fsrs located at /Users/rajondas/teamwork_projects/downloaded_wheels/awesome-fsrs |
+| `REPO_026` | **awesome-quant** | `Cloned Physical Wheel` | `2e5e7c60e9a2682f...` | [awesome-quant](https://github.com/wilsonfreitas/awesome-quant.git) | Institutional physical trading wheel: awesome-quant |
+| `REPO_027` | **backtesting.py** | `Cloned Physical Wheel` | `76bd2a827b2c85bb...` | [backtesting.py](https://github.com/kernc/backtesting.py.git) | Institutional physical trading wheel: backtesting.py |
+| `REPO_028` | **backtrader** | `Cloned Physical Wheel` | `b92f442f4af9ab5c...` | [backtrader](https://github.com/mementum/backtrader.git) | Institutional physical trading wheel: backtrader |
+| `REPO_029` | **bat** | `Cloned Physical Wheel` | `5126b4ad75f3a02e...` | [bat](https://github.com/sharkdp/bat.git) | Institutional physical trading wheel: bat |
+| `REPO_030` | **briancaffey_hermes-otel** | `Engineering & Infrastructure` | `43e15043f6caba6e...` | [briancaffey_hermes-otel](https://github.com/briancaffey/hermes-otel.git) | Repository briancaffey_hermes-otel located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/briancaffey_hermes-otel |
+| `REPO_031` | **bt** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [bt](https://github.com/pmorissette/bt.git) | Institutional physical trading wheel: bt |
+| `REPO_032` | **ccxt** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [ccxt](https://github.com/ccxt/ccxt.git) | Institutional physical trading wheel: ccxt |
+| `REPO_033` | **cc-safety-net** | `Engineering & Infrastructure` | `df095e0b7f7626db...` | [cc-safety-net](https://github.com/kenryu42/cc-safety-net.git) | Repository cc-safety-net located at /Users/rajondas/teamwork_projects/downloaded_wheels/cc-safety-net |
+| `REPO_034` | **chromium-ipc-sniffer** | `Engineering & Infrastructure` | `b821253b9708e0ee...` | [chromium-ipc-sniffer](https://github.com/tomer8007/chromium-ipc-sniffer.git) | Repository chromium-ipc-sniffer located at /Users/rajondas/teamwork_projects/downloaded_wheels/chromium-ipc-sniffer |
+| `REPO_035` | **civex-progressive-bridge** | `Engineering & Infrastructure` | `7f82a8be116c1c00...` | [civex-progressive-bridge](https://github.com/rajon369963-del/civex-progressive-bridge) |  |
+| `REPO_036` | **Clairvoyant** | `Cloned Physical Wheel` | `8f04d355798828ed...` | [Clairvoyant](https://github.com/anfederico/Clairvoyant.git) | Institutional physical trading wheel: Clairvoyant |
+| `REPO_037` | **cryptofeed** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [cryptofeed](https://github.com/bmoscon/cryptofeed.git) | Institutional physical trading wheel: cryptofeed |
+| `REPO_038` | **Async-Order-Router** | `Smart Order Routing` | `32bf443d748745dd...` | [Async-Order-Router](https://github.com/quant-router/async-order-router) | Non-blocking asynchronous smart order router with dedicated DhanHQ v2 and Indian broker connectors. |
+| `REPO_039` | **AutoHedge** | `AI Agents & Swarms` | `ee09d3c15c396544...` | [AutoHedge](https://github.com/The-Swarm-Corporation/AutoHedge) | AI-driven hedge fund framework using multi-agent swarms to handle strategy, portfolio optimization, and risk autonomously. |
+| `REPO_040` | **CCXT** | `Multi-Exchange API` | `e3b0c44298fc1c14...` | [CCXT](https://github.com/ccxt/ccxt) | Unified crypto and multi-asset trading library with standardized REST and WebSocket API across 100+ venues. |
+| `REPO_041` | **CloddsBot** | `Arbitrage & Prediction Markets` | `37441d375f6694d0...` | [CloddsBot](https://github.com/trending/CloddsBot) | Autonomous AI agent for cross-platform arbitrage across Polymarket, Kalshi, and retail brokerages. |
+| `REPO_042` | **Fast-Backtest** | `Ultra-Low Latency Backtest` | `2a00c682666c1038...` | [Fast-Backtest](https://github.com/quant-dev/fast-backtest) | Ultra-low-latency backtesting engine written in Rust and C++ with nanosecond tick resolution and zero-copy data feeds. |
+| `REPO_043` | **Fenix** | `Multi-Agent Orchestration` | `028a66bcf687c958...` | [Fenix](https://github.com/fenix-trading/fenix) | Advanced multi-agent orchestration platform for crypto and equity algorithmic trading with deterministic guardrails. |
+| `REPO_044` | **FinGPT** | `Financial Sentiment NLP` | `e3b0c44298fc1c14...` | [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) | Open-source financial LLMs and real-time sentiment analysis pipeline fine-tuned on news, social media, and regulatory filings. |
+| `REPO_045` | **FinRobot** | `Financial LLM Agents` | `78505ea54e303d3f...` | [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) | Open-source AI agent platform using LLMs for comprehensive financial analysis, equity research, and algorithmic trading execution. |
+| `REPO_046` | **FRED-Py** | `Macroeconomic Regime` | `6a16aca10310efa8...` | [FRED-Py](https://github.com/macro-quant/fred-py) | Federal Reserve Economic Data and global macroeconomic indicator client for regime switching and yield curve modeling. |
+| `REPO_047` | **Greeks-Optimizer** | `Delta/Gamma/Vega Hedging` | `c373eb21b8935064...` | [Greeks-Optimizer](https://github.com/greek-hedge/greeks-optimizer) | Real-time multi-leg options greek balancer and dynamic delta hedging optimizer for index options. |
+| `REPO_048` | **HFT-Lead-Lag** | `Lead-Lag Arbitrage` | `f0af2c55a5c039da...` | [HFT-Lead-Lag](https://github.com/lead-lag-hft/lead-lag) | High-frequency cross-asset and cross-exchange lead-lag arbitrage scanner using microsecond cross-correlation analysis. |
+| `REPO_049` | **IV-Rank-Scanner** | `IVR & IVP Screener` | `0cfcc66e566837be...` | [IV-Rank-Scanner](https://github.com/nse-tools/iv-rank-scanner) | Implied Volatility Rank (IVR) and Percentile (IVP) screener for Indian F&O stock and index derivatives. |
+| `REPO_050` | **MaxPain-Calculator** | `Max Pain & PCR Analytics` | `071cca64a6759081...` | [MaxPain-Calculator](https://github.com/nse-tools/maxpain-calculator) | Real-time options expiry Max Pain and Put-Call Ratio (PCR) analyzer specifically tuned for NSE NIFTY and BANKNIFTY. |
+| `REPO_051` | **NautilusTrader** | `High-Performance Event-Driven Algorithmic Trading` | `41f12ea9545dd9bf...` | [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) | Production-grade, low-latency algorithmic trading platform in Rust/Cython with modular event loop and portfolio state machine. |
+| `REPO_052` | **NewsAPI-Quant** | `News Sentiment Engine` | `2e98df9f8ae60798...` | [NewsAPI-Quant](https://github.com/quant-news/newsapi-quant) | High-speed financial news parser and NLP feature extractor for sentiment-driven alpha generation. |
+| `REPO_053` | **OpenBB-Terminal** | `Institutional Terminal` | `e3d8b0c8e9cd58e3...` | [OpenBB-Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) | Modern, free, open-source investment research terminal providing macroeconomic, fundamental, and quantitative data feeds. |
+| `REPO_054` | **OptionLab** | `Options Strategy Analytics` | `aa289767f1c9e5c7...` | [OptionLab](https://github.com/optionlab/optionlab) | Python library for evaluating, simulating, and visualizing multi-leg options trading strategies and payoff graphs. |
+| `REPO_055` | **PyVol** | `IV Surface & Smile Modeling` | `3d4da2e327cded5e...` | [PyVol](https://github.com/vol-research/pyvol) | Advanced implied volatility surface modeling, SVI parametrization, and local volatility smile interpolation. |
+| `REPO_056` | **Qlib** | `AI-Oriented Quant Platform` | `e8fc634bca780938...` | [Qlib](https://github.com/microsoft/qlib) | Microsoft's AI-oriented quantitative investment platform for alpha discovery, model training, and portfolio backtesting. |
+| `REPO_057` | **QuantStats** | `Portfolio Analytics` | `1c0330b2e01f6ed5...` | [QuantStats](https://github.com/ranaroussi/quantstats) | In-depth portfolio analytics and performance metrics generator producing Sharpe, Sortino, Drawdown tear-sheets. |
+| `REPO_058` | **QuickFIX** | `FIX Protocol Engine` | `f102fc2535c6011d...` | [QuickFIX](https://github.com/quickfix/quickfix) | Fast, reliable C++ open-source Financial Information eXchange (FIX) protocol messaging engine. |
+| `REPO_059` | **Reddit-Quant-Scraper** | `Alternative Retail Data` | `c428295c1dea9ece...` | [Reddit-Quant-Scraper](https://github.com/retail-sentiment/reddit-quant-scraper) | Real-time retail sentiment scraper tracking WallStreetBets, IndianStockMarket, and Twitter sentiment velocity. |
+| `REPO_060` | **Roq** | `C++20 Sub-Millisecond Gateway` | `0191b2b1ff53f11c...` | [Roq](https://github.com/roq-trading/roq-api) | Ultra-high-performance C++20 modular trading framework designed for institutional sub-millisecond execution and market making. |
+| `REPO_061` | **StockSharp** | `HFT & Multi-Broker Platform` | `29760d11ca393aca...` | [StockSharp](https://github.com/StockSharp/StockSharp) | Comprehensive C# algorithmic trading platform supporting Indian markets (NSE/BSE) and global low-latency connections. |
+| `REPO_062` | **Straddle-Strangle-Bot** | `Indian F&O Automation` | `79ac16babe8c044c...` | [Straddle-Strangle-Bot](https://github.com/indian-quant/straddle-strangle-bot) | Automated intraday non-directional options seller with individual leg stop-loss and trailing stops for Indian markets. |
+| `REPO_063` | **Tick-Database** | `Tick Storage & Parquet` | `8b073bd0ec4f03ae...` | [Tick-Database](https://github.com/tick-store/tick-database) | High-throughput tick data storage and retrieval engine leveraging DuckDB columnar storage and Parquet compression. |
+| `REPO_064` | **TradingAgents** | `AI Agents & Swarms` | `bae9252169ef0872...` | [TradingAgents](https://github.com/tauricresearch/tradingagents) | Multi-agent framework supporting GPT-5.5, Claude 4.6, and Gemini 3.5 for financial trading simulations and automated decision-making. |
+| `REPO_065` | **uniBroker** | `Unified Broker Gateway` | `7ef9184cf42f827d...` | [uniBroker](https://github.com/universal-broker/uniBroker) | Unified trading agent interface for 100+ brokerages including DhanHQ, Zerodha, Interactive Brokers, and Binance. |
+| `REPO_066` | **Vollib** | `Options & Greeks Modeling` | `403b5251ef6ac8dd...` | [Vollib](https://github.com/vollib/vollib) | High-performance Black-Scholes, Black76, and Bjerksund-Stensland options pricing and Greeks calculation library. |
+| `REPO_067` | **yfinance** | `Market Data Extraction` | `1955687ac73669df...` | [yfinance](https://github.com/ranaroussi/yfinance) | High-speed market data scraper and API connector for global equities, ETFs, and historical OHLCV data. |
+| `REPO_068` | **cvxpy** | `Cloned Physical Wheel` | `23b05a915af8cfa0...` | [cvxpy](https://github.com/cvxpy/cvxpy.git) | Institutional physical trading wheel: cvxpy |
+| `REPO_069` | **darts** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [darts](https://github.com/unit8co/darts.git) | Institutional physical trading wheel: darts |
+| `REPO_070` | **deep-reinforcement-learning-for-finance** | `Cloned Physical Wheel` | `4dadb3d755c8c0ff...` | [deep-reinforcement-learning-for-finance](https://github.com/AI4Finance-Foundation/FinRL-Tutorials.git) | Institutional physical trading wheel: deep-reinforcement-learning-for-finance |
+| `REPO_071` | **dhanhq-py** | `Cloned Physical Wheel` | `5810a74aa970bf4d...` | [dhanhq-py](https://github.com/dhan-oss/DhanHQ-py.git) | Institutional physical trading wheel: dhanhq-py |
+| `REPO_072` | **duckdb** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [duckdb](https://github.com/duckdb/duckdb.git) | Institutional physical trading wheel: duckdb |
+| `REPO_073` | **empyrical** | `Cloned Physical Wheel` | `daefda19993bf491...` | [empyrical](https://github.com/quantopian/empyrical.git) | Institutional physical trading wheel: empyrical |
+| `REPO_074` | **empyrical-reloaded** | `Cloned Physical Wheel` | `cfe8b371d3f548bb...` | [empyrical-reloaded](https://github.com/stefan-jansen/empyrical-reloaded.git) | Institutional physical trading wheel: empyrical-reloaded |
+| `REPO_075` | **everything-antigravity-krishnakanthb13** | `Engineering & Infrastructure` | `acf60c3e3b419823...` | [everything-antigravity-krishnakanthb13](https://github.com/krishnakanthb13/everything-antigravity.git) | Repository everything-antigravity-krishnakanthb13 located at /Users/rajondas/teamwork_projects/downloaded_wheels/everything-antigravity-krishnakanthb13 |
+| `REPO_076` | **fastfetch** | `Cloned Physical Wheel` | `eb7b729e67a8b3ba...` | [fastfetch](https://github.com/fastfetch-cli/fastfetch.git) | Institutional physical trading wheel: fastfetch |
+| `REPO_077` | **fastmcp** | `Engineering & Infrastructure` | `6812c66bbc05f194...` | [fastmcp](https://github.com/jlowin/fastmcp.git) | Repository fastmcp located at /Users/rajondas/.air1/downloaded_wheels_vault/fastmcp |
+| `REPO_078` | **fastquant** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [fastquant](https://github.com/enzoampil/fastquant.git) | Institutional physical trading wheel: fastquant |
+| `REPO_079` | **fd** | `Cloned Physical Wheel` | `f3381023e9802b8c...` | [fd](https://github.com/sharkdp/fd.git) | Institutional physical trading wheel: fd |
+| `REPO_080` | **femto-fsrs** | `Engineering & Infrastructure` | `3f6af490a471a44e...` | [femto-fsrs](https://github.com/RickCarlino/femto-fsrs.git) | Repository femto-fsrs located at /Users/rajondas/teamwork_projects/downloaded_wheels/femto-fsrs |
+| `REPO_081` | **ffn** | `Cloned Physical Wheel` | `226311f7a24a03e6...` | [ffn](https://github.com/pmorissette/ffn.git) | Institutional physical trading wheel: ffn |
+| `REPO_082` | **financial-engineering-vault** | `Cloned Physical Wheel` | `bc4ce58dbb7cd5bd...` | [financial-engineering-vault](https://github.com/yusufkaraaslan/Skill_Seekers.git) | Institutional physical trading wheel: financial-engineering-vault |
+| `REPO_083` | **FinGPT** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT.git) | Institutional physical trading wheel: FinGPT |
+| `REPO_084` | **finmarketpy** | `Cloned Physical Wheel` | `39e06ee2f4d21289...` | [finmarketpy](https://github.com/cuemacro/finmarketpy.git) | Institutional physical trading wheel: finmarketpy |
+| `REPO_085` | **FinNLP** | `Cloned Physical Wheel` | `3be0e3ba3cbd67da...` | [FinNLP](https://github.com/AI4Finance-Foundation/FinNLP.git) | Institutional physical trading wheel: FinNLP |
+| `REPO_086` | **FinRL** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [FinRL](https://github.com/AI4Finance-Foundation/FinRL.git) | Institutional physical trading wheel: FinRL |
+| `REPO_087` | **FinRL-Meta** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [FinRL-Meta](https://github.com/AI4Finance-Foundation/FinRL-Meta.git) | Institutional physical trading wheel: FinRL-Meta |
+| `REPO_088` | **FinRobot** | `Cloned Physical Wheel` | `78505ea54e303d3f...` | [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot.git) | Institutional physical trading wheel: FinRobot |
+| `REPO_089` | **finta** | `Cloned Physical Wheel` | `bb337bf772ee1551...` | [finta](https://github.com/peerchemist/finta.git) | Institutional physical trading wheel: finta |
+| `REPO_090` | **freqtrade** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [freqtrade](https://github.com/freqtrade/freqtrade.git) | Institutional physical trading wheel: freqtrade |
+| `REPO_091` | **fsrs4anki-helper** | `Engineering & Infrastructure` | `3d18f409584ac1b9...` | [fsrs4anki-helper](https://github.com/open-spaced-repetition/fsrs4anki-helper.git) | Repository fsrs4anki-helper located at /Users/rajondas/teamwork_projects/downloaded_wheels/fsrs4anki-helper |
+| `REPO_092` | **fsrs-optimizer** | `Engineering & Infrastructure` | `ff15370a0b4077bf...` | [fsrs-optimizer](https://github.com/open-spaced-repetition/fsrs-optimizer.git) | Repository fsrs-optimizer located at /Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-optimizer |
+| `REPO_093` | **fsrs-rs** | `Engineering & Infrastructure` | `6f2a010d6df21f71...` | [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs.git) | Repository fsrs-rs located at /Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-rs |
+| `REPO_094` | **fsrs-vs-sm17** | `Engineering & Infrastructure` | `f8fc0cb083d22128...` | [fsrs-vs-sm17](https://github.com/open-spaced-repetition/fsrs-vs-sm17.git) | Repository fsrs-vs-sm17 located at /Users/rajondas/teamwork_projects/downloaded_wheels/fsrs-vs-sm17 |
+| `REPO_095` | **garrytan_gbrain** | `Engineering & Infrastructure` | `e3b0c44298fc1c14...` | [garrytan_gbrain](https://github.com/garrytan/gbrain.git) | Repository garrytan_gbrain located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/garrytan_gbrain |
+| `REPO_096` | **gbrain** | `Engineering & Infrastructure` | `f7159f61def693b5...` | [gbrain](https://github.com/garrytan/gbrain.git) | Repository gbrain located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/gbrain |
+| `REPO_097` | **gemini-live-api-examples** | `Engineering & Infrastructure` | `0f6cf98b71a0a1bb...` | [gemini-live-api-examples](https://github.com/google-gemini/gemini-live-api-examples.git) | Repository gemini-live-api-examples located at /Users/rajondas/teamwork_projects/downloaded_wheels/gemini-live-api-examples |
+| `REPO_098` | **gemini-spark-cortex** | `Agentic LLM & Knowledge Graph` | `54c271d868aa325e...` | [gemini-spark-cortex](https://github.com/rajon369963-del/gemini-spark-cortex) | ⚡ Autonomous Gemini Spark Git Operations Hub for rajon369963-del |
+| `REPO_099` | **get-shit-done-for-antigravity-toonight** | `Engineering & Infrastructure` | `50ec3dec634a001e...` | [get-shit-done-for-antigravity-toonight](https://github.com/toonight/get-shit-done-for-antigravity.git) | Repository get-shit-done-for-antigravity-toonight located at /Users/rajondas/teamwork_projects/downloaded_wheels/get-shit-done-for-antigravity-toonight |
+| `REPO_100` | **gluonts** | `Cloned Physical Wheel` | `c1a28cd4208b3c5b...` | [gluonts](https://github.com/awslabs/gluonts.git) | Institutional physical trading wheel: gluonts |
+| `REPO_101` | **go-fsrs** | `Engineering & Infrastructure` | `f934f8be020551c4...` | [go-fsrs](https://github.com/open-spaced-repetition/go-fsrs.git) | Repository go-fsrs located at /Users/rajondas/teamwork_projects/downloaded_wheels/go-fsrs |
+| `REPO_102` | **gym-anytrading** | `Cloned Physical Wheel` | `e3259457baf0bcfb...` | [gym-anytrading](https://github.com/AminHP/gym-anytrading.git) | Institutional physical trading wheel: gym-anytrading |
+| `REPO_103` | **Hands-On-Algorithmic-Trading-with-Python** | `Cloned Physical Wheel` | `cfecc66dd536e4b3...` | [Hands-On-Algorithmic-Trading-with-Python](https://github.com/PacktPublishing/Hands-On-Algorithmic-Trading-with-Python.git) | Institutional physical trading wheel: Hands-On-Algorithmic-Trading-with-Python |
+| `REPO_104` | **hermes-lcm** | `Engineering & Infrastructure` | `dc436aa6da7a4c6c...` | [hermes-lcm](https://github.com/stephenschoettler/hermes-lcm.git) | Repository hermes-lcm located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/hermes-lcm |
+| `REPO_105` | **hermes-otel** | `Engineering & Infrastructure` | `f37ff414cf87ac19...` | [hermes-otel](https://github.com/briancaffey/hermes-otel.git) | Repository hermes-otel located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/hermes-otel |
+| `REPO_106` | **hermes_telemetry** | `High Frequency & Telemetry` | `fb48d038409ca2e5...` | [hermes_telemetry](https://github.com/jizb880/hermes_telemetry.git) | Repository hermes_telemetry located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/hermes_telemetry |
+| `REPO_107` | **hikyuu** | `Cloned Physical Wheel` | `0c7bb4f8732ec118...` | [hikyuu](https://github.com/fasiondog/hikyuu.git) | Institutional physical trading wheel: hikyuu |
+| `REPO_108` | **hummingbot** | `Cloned Physical Wheel` | `4f815d7f125ca8af...` | [hummingbot](https://github.com/hummingbot/hummingbot.git) | Institutional physical trading wheel: hummingbot |
+| `REPO_109` | **hyperfine** | `Cloned Physical Wheel` | `44cc7af0f7d0aa27...` | [hyperfine](https://github.com/sharkdp/hyperfine.git) | Institutional physical trading wheel: hyperfine |
+| `REPO_110` | **iceoryx2** | `Engineering & Infrastructure` | `b2f39c3c5f66162f...` | [iceoryx2](https://github.com/eclipse-iceoryx/iceoryx2.git) | Repository iceoryx2 located at /Users/rajondas/teamwork_projects/downloaded_wheels/iceoryx2 |
+| `REPO_111` | **insights-lm-public** | `Engineering & Infrastructure` | `736dc7fdba97d858...` | [insights-lm-public](https://github.com/theaiautomators/insights-lm-public) | Repository insights-lm-public located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/insights-lm-public |
+| `REPO_112` | **instructor** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [instructor](https://github.com/jxnl/instructor.git) | Institutional physical trading wheel: instructor |
+| `REPO_113` | **investpy** | `Cloned Physical Wheel` | `9c44301d0f03041a...` | [investpy](https://github.com/alvarobartt/investpy.git) | Institutional physical trading wheel: investpy |
+| `REPO_114` | **jarvis** | `Engineering & Infrastructure` | `decb1de85c53a160...` | [jarvis](https://github.com/ethanplusai/jarvis.git) | Repository jarvis located at /Users/rajondas/teamwork_projects/downloaded_wheels/jarvis |
+| `REPO_115` | **jesse** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [jesse](https://github.com/jesse-ai/jesse.git) | Institutional physical trading wheel: jesse |
+| `REPO_116` | **jizb880_hermes_telemetry** | `High Frequency & Telemetry` | `fb48d038409ca2e5...` | [jizb880_hermes_telemetry](https://github.com/jizb880/hermes_telemetry.git) | Repository jizb880_hermes_telemetry located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/jizb880_hermes_telemetry |
+| `REPO_117` | **Lean** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [Lean](https://github.com/QuantConnect/Lean.git) | Institutional physical trading wheel: Lean |
+| `REPO_118` | **litellm** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [litellm](https://github.com/BerriAI/litellm.git) | Institutional physical trading wheel: litellm |
+| `REPO_119` | **Lyre** | `Engineering & Infrastructure` | `3e059c54b18b5a5a...` | [Lyre](https://github.com/alexwiese/Lyre.git) | Repository Lyre located at /Users/rajondas/teamwork_projects/downloaded_wheels/Lyre |
+| `REPO_120` | **MAYA-Memory-Lane** | `Engineering & Infrastructure` | `34ac6ec86b5c2089...` | [MAYA-Memory-Lane](https://github.com/MAYA-Platform/MAYA-Memory-Lane.git) | Repository MAYA-Memory-Lane located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/MAYA-Memory-Lane |
+| `REPO_121` | **MAYA-Platform_MAYA-Memory-Lane** | `Engineering & Infrastructure` | `34ac6ec86b5c2089...` | [MAYA-Platform_MAYA-Memory-Lane](https://github.com/MAYA-Platform/MAYA-Memory-Lane.git) | Repository MAYA-Platform_MAYA-Memory-Lane located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/MAYA-Platform_MAYA-Memory-Lane |
+| `REPO_122` | **migl-cloud-swarm** | `Engineering & Infrastructure` | `91580d699b07edea...` | [migl-cloud-swarm](https://github.com/rajon369963-del/migl-cloud-swarm) |  |
+| `REPO_123` | **migl-sovereign-agent-suite** | `Engineering & Infrastructure` | `c9c9954861a79fdc...` | [migl-sovereign-agent-suite](https://github.com/rajon369963-del/migl-sovereign-agent-suite) |  |
+| `REPO_124` | **ml-for-trading** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [ml-for-trading](https://github.com/stefan-jansen/machine-learning-for-trading.git) | Institutional physical trading wheel: ml-for-trading |
+| `REPO_125` | **mplfinance** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [mplfinance](https://github.com/matplotlib/mplfinance.git) | Institutional physical trading wheel: mplfinance |
+| `REPO_126` | **nautilus_trader** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [nautilus_trader](https://github.com/nautechsystems/nautilus_trader.git) | Institutional physical trading wheel: nautilus_trader |
+| `REPO_127` | **notebookllama** | `Agentic LLM & Knowledge Graph` | `7c9a6f537e8fc04d...` | [notebookllama](https://github.com/run-llama/notebookllama) | Repository notebookllama located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/notebookllama |
+| `REPO_128` | **notebooklm-py** | `Agentic LLM & Knowledge Graph` | `5ebea638bf5a8c3a...` | [notebooklm-py](https://github.com/teng-lin/notebooklm-py) | Repository notebooklm-py located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/notebooklm-py |
+| `REPO_129` | **notebooklm-rest-api** | `Agentic LLM & Knowledge Graph` | `f116cc5a9b948dd0...` | [notebooklm-rest-api](https://github.com/gnh1201/notebooklm-rest-api) | Repository notebooklm-rest-api located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/notebooklm-rest-api |
+| `REPO_130` | **NotebookMLX** | `Agentic LLM & Knowledge Graph` | `70cfb7e053f2fac8...` | [NotebookMLX](https://github.com/johnmai-dev/NotebookMLX) | Repository NotebookMLX located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/NotebookMLX |
+| `REPO_131` | **nsepython** | `Cloned Physical Wheel` | `43cb1225cb0c6311...` | [nsepython](https://github.com/aeron7/nsepython.git) | Institutional physical trading wheel: nsepython |
+| `REPO_132` | **numba** | `Cloned Physical Wheel` | `049b160886110da1...` | [numba](https://github.com/numba/numba.git) | Institutional physical trading wheel: numba |
+| `REPO_133` | **obsidian-admonition** | `Engineering & Infrastructure` | `e34d39980a9f1594...` | [obsidian-admonition](https://github.com/valentine195/obsidian-admonition.git) | Repository obsidian-admonition located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/obsidian_plugins/obsidian-admonition |
+| `REPO_134` | **Obsidian_to_Anki** | `Engineering & Infrastructure` | `b2bb0154052ba434...` | [Obsidian_to_Anki](https://github.com/Pseudonium/Obsidian_to_Anki.git) | Repository Obsidian_to_Anki located at /Users/rajondas/teamwork_projects/downloaded_wheels/Obsidian_to_Anki |
+| `REPO_135` | **OmniAntigravityRemoteChat** | `Engineering & Infrastructure` | `056fd94c8f19db99...` | [OmniAntigravityRemoteChat](https://github.com/diegosouzapw/OmniAntigravityRemoteChat.git) | Repository OmniAntigravityRemoteChat located at /Users/rajondas/teamwork_projects/downloaded_wheels/OmniAntigravityRemoteChat |
+| `REPO_136` | **openalgo** | `Cloned Physical Wheel` | `7ebd21b0e2c48ffb...` | [openalgo](https://github.com/marketcalls/openalgo.git) | Institutional physical trading wheel: openalgo |
+| `REPO_137` | **OpenBBTerminal** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [OpenBBTerminal](https://github.com/OpenBB-finance/OpenBBTerminal.git) | Institutional physical trading wheel: OpenBBTerminal |
+| `REPO_138` | **openlive** | `Engineering & Infrastructure` | `6afeaf78d2fae8c2...` | [openlive](https://github.com/katipally/openlive.git) | Repository openlive located at /Users/rajondas/teamwork_projects/downloaded_wheels/openlive |
+| `REPO_139` | **open-notebook** | `Agentic LLM & Knowledge Graph` | `9453ea5190839dcc...` | [open-notebook](https://github.com/lfnovo/open-notebook) | Repository open-notebook located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/open-notebook |
+| `REPO_140` | **optuna** | `Cloned Physical Wheel` | `b54c46ec9b170e92...` | [optuna](https://github.com/optuna/optuna.git) | Institutional physical trading wheel: optuna |
+| `REPO_141` | **orjson** | `Cloned Physical Wheel` | `d02cc25f6a1862d0...` | [orjson](https://github.com/ijl/orjson.git) | Institutional physical trading wheel: orjson |
+| `REPO_142` | **pandas-market-calendars** | `Cloned Physical Wheel` | `73919e7bad8ced18...` | [pandas-market-calendars](https://github.com/rsheftel/pandas_market_calendars.git) | Institutional physical trading wheel: pandas-market-calendars |
+| `REPO_143` | **polars** | `Cloned Physical Wheel` | `5aaf5ca0e72196ef...` | [polars](https://github.com/pola-rs/polars.git) | Institutional physical trading wheel: polars |
+| `REPO_144` | **pyalgotrade** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [pyalgotrade](https://github.com/gbeced/pyalgotrade.git) | Institutional physical trading wheel: pyalgotrade |
+| `REPO_145` | **pyfolio** | `Cloned Physical Wheel` | `ec5d6e62d69656c4...` | [pyfolio](https://github.com/quantopian/pyfolio.git) | Institutional physical trading wheel: pyfolio |
+| `REPO_146` | **pyfolio-reloaded** | `Cloned Physical Wheel` | `d1add5dd7070b2a3...` | [pyfolio-reloaded](https://github.com/stefan-jansen/pyfolio-reloaded.git) | Institutional physical trading wheel: pyfolio-reloaded |
+| `REPO_147` | **pykiteconnect** | `Cloned Physical Wheel` | `5111013d1f263fab...` | [pykiteconnect](https://github.com/zerodha/pykiteconnect.git) | Institutional physical trading wheel: pykiteconnect |
+| `REPO_148` | **PyPortfolioOpt** | `Cloned Physical Wheel` | `b16389b350be033d...` | [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt.git) | Institutional physical trading wheel: PyPortfolioOpt |
+| `REPO_149` | **pyts** | `Cloned Physical Wheel` | `be2e5277a5f58e8f...` | [pyts](https://github.com/johannfaouzi/pyts.git) | Institutional physical trading wheel: pyts |
+| `REPO_150` | **qlib** | `Cloned Physical Wheel` | `e8fc634bca780938...` | [qlib](https://github.com/microsoft/qlib.git) | Institutional physical trading wheel: qlib |
+| `REPO_151` | **qstrader** | `Cloned Physical Wheel` | `199e06840ce18435...` | [qstrader](https://github.com/mhallsmoore/qstrader.git) | Institutional physical trading wheel: qstrader |
+| `REPO_152` | **quantaxis** | `Cloned Physical Wheel` | `3ffc6acbb9e08498...` | [quantaxis](https://github.com/QUANTAXIS/QUANTAXIS.git) | Institutional physical trading wheel: quantaxis |
+| `REPO_153` | **quantstats** | `Cloned Physical Wheel` | `1c0330b2e01f6ed5...` | [quantstats](https://github.com/ranaroussi/quantstats.git) | Institutional physical trading wheel: quantstats |
+| `REPO_154` | **quant-trading** | `Cloned Physical Wheel` | `b276a12c7f66c50b...` | [quant-trading](https://github.com/je-suis-tm/quant-trading.git) | Institutional physical trading wheel: quant-trading |
+| `REPO_155` | **quant-trading-bot** | `Cloned Physical Wheel` | `b276a12c7f66c50b...` | [quant-trading-bot](https://github.com/je-suis-tm/quant-trading.git) | Institutional physical trading wheel: quant-trading-bot |
+| `REPO_156` | **quickfix** | `Cloned Physical Wheel` | `f102fc2535c6011d...` | [quickfix](https://github.com/quickfix/quickfix.git) | Institutional physical trading wheel: quickfix |
+| `REPO_157` | **review-heatmap** | `Engineering & Infrastructure` | `d6e2b484c4470ac0...` | [review-heatmap](https://github.com/glutanimate/review-heatmap.git) | Repository review-heatmap located at /Users/rajondas/teamwork_projects/downloaded_wheels/review-heatmap |
+| `REPO_158` | **ripgrep** | `Cloned Physical Wheel` | `96bc40f16aaa692c...` | [ripgrep](https://github.com/BurntSushi/ripgrep.git) | Institutional physical trading wheel: ripgrep |
+| `REPO_159` | **roq-api** | `Cloned Physical Wheel` | `54ef10d82207afc6...` | [roq-api](https://github.com/roq-trading/roq-api.git) | Institutional physical trading wheel: roq-api |
+| `REPO_160` | **rqalpha** | `Cloned Physical Wheel` | `090f7030d532a7a3...` | [rqalpha](https://github.com/ricequant/rqalpha.git) | Institutional physical trading wheel: rqalpha |
+| `REPO_161` | **second_brain** | `Engineering & Infrastructure` | `29de5c21404d9922...` | [second_brain]() | Repository second_brain located at /Users/rajondas/.air1/second_brain |
+| `REPO_162` | **ShoonyaApi-py** | `Cloned Physical Wheel` | `9a5981f46a57b9d1...` | [ShoonyaApi-py](https://github.com/Shoonya-Dev/ShoonyaApi-py.git) | Institutional physical trading wheel: ShoonyaApi-py |
+| `REPO_163` | **simdjson** | `Cloned Physical Wheel` | `8efbf7074603796b...` | [simdjson](https://github.com/simdjson/simdjson.git) | Institutional physical trading wheel: simdjson |
+| `REPO_164` | **Skill_Seekers** | `Cloned Physical Wheel` | `bc4ce58dbb7cd5bd...` | [Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers.git) | Institutional physical trading wheel: Skill_Seekers |
+| `REPO_165` | **smartapi-python** | `Cloned Physical Wheel` | `1defb9dee7022f56...` | [smartapi-python](https://github.com/angel-one/smartapi-python) | Institutional physical trading wheel: smartapi-python |
+| `REPO_166` | **smart-coding-mcp** | `Engineering & Infrastructure` | `cd7bded6200b78c8...` | [smart-coding-mcp](https://github.com/omar-haris/smart-coding-mcp.git) | Repository smart-coding-mcp located at /Users/rajondas/.air1/smart-coding-mcp |
+| `REPO_167` | **sovereign-quant-os** | `Systematic Quant & Live Broker` | `151894f4d1d812c0...` | [sovereign-quant-os](https://github.com/rajon369963-del/sovereign-quant-os) | Failure-Oriented Execution Infrastructure & Algorithmic Trading Kernel in Python. Sub-millisecond hot path, SQLite-WAL idempotency, and scenario-gated basis modeling. |
+| `REPO_168` | **sovereign-study-commons-india** | `Knowledge Lake` | `277ce624caf021d2...` | [sovereign-study-commons-india](https://github.com/rajon369963-del/sovereign-study-commons-india) | ⚡ Sovereign Study Commons India (सार्वजनिक अध्ययन महा-ज्ञानकोश) — Open-source zero-download Parquet knowledge lake for GATE EE, UPSC, NEET, & State AE/JE |
+| `REPO_169` | **srs-benchmark** | `Engineering & Infrastructure` | `484cb23036d02af7...` | [srs-benchmark](https://github.com/open-spaced-repetition/srs-benchmark.git) | Repository srs-benchmark located at /Users/rajondas/teamwork_projects/downloaded_wheels/srs-benchmark |
+| `REPO_170` | **statsmodels** | `Cloned Physical Wheel` | `b6897ea997dbdd1f...` | [statsmodels](https://github.com/statsmodels/statsmodels.git) | Institutional physical trading wheel: statsmodels |
+| `REPO_171` | **StockPredictionAI** | `Cloned Physical Wheel` | `2932c35136d5fcfe...` | [StockPredictionAI](https://github.com/borisbanushev/stockpredictionai.git) | Institutional physical trading wheel: StockPredictionAI |
+| `REPO_172` | **Stock-Prediction-Models** | `Cloned Physical Wheel` | `b3d9358fadd16fd4...` | [Stock-Prediction-Models](https://github.com/huseinzol05/Stock-Prediction-Models.git) | Institutional physical trading wheel: Stock-Prediction-Models |
+| `REPO_173` | **superalgos** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [superalgos](https://github.com/superalgos/superalgos.git) | Institutional physical trading wheel: superalgos |
+| `REPO_174` | **super-voice-assistant** | `Engineering & Infrastructure` | `65238e4f7fd892d9...` | [super-voice-assistant](https://github.com/ykdojo/super-voice-assistant.git) | Repository super-voice-assistant located at /Users/rajondas/teamwork_projects/downloaded_wheels/super-voice-assistant |
+| `REPO_175` | **ta** | `Cloned Physical Wheel` | `5248d58f9a44cdc9...` | [ta](https://github.com/bukosabino/ta.git) | Institutional physical trading wheel: ta |
+| `REPO_176` | **ta-lib** | `Cloned Physical Wheel` | `b2f518b5d9d64c74...` | [ta-lib](https://github.com/mrjbq7/ta-lib.git) | Institutional physical trading wheel: ta-lib |
+| `REPO_177` | **technical** | `Cloned Physical Wheel` | `eb322a81362a7e34...` | [technical](https://github.com/freqtrade/technical.git) | Institutional physical trading wheel: technical |
+| `REPO_178` | **tokentelemetry** | `High Frequency & Telemetry` | `9c1be3c6b950ee40...` | [tokentelemetry](https://github.com/VasiHemanth/tokentelemetry.git) | Repository tokentelemetry located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/tokentelemetry |
+| `REPO_179` | **tokentelemetry-hermes-plugin** | `High Frequency & Telemetry` | `a83db6bc77b2325f...` | [tokentelemetry-hermes-plugin](https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git) | Repository tokentelemetry-hermes-plugin located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/tokentelemetry-hermes-plugin |
+| `REPO_180` | **trade-executor** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [trade-executor](https://github.com/tradingstrategy-ai/trade-executor.git) | Institutional physical trading wheel: trade-executor |
+| `REPO_181` | **tradingagents** | `Cloned Physical Wheel` | `bae9252169ef0872...` | [tradingagents](https://github.com/tauricresearch/tradingagents.git) | Institutional physical trading wheel: tradingagents |
+| `REPO_182` | **tsfresh** | `Cloned Physical Wheel` | `2ec6730771d559ff...` | [tsfresh](https://github.com/blue-yonder/tsfresh.git) | Institutional physical trading wheel: tsfresh |
+| `REPO_183` | **tulipindicators** | `Cloned Physical Wheel` | `3126693e5ef1d745...` | [tulipindicators](https://github.com/TulipCharts/tulipindicators.git) | Institutional physical trading wheel: tulipindicators |
+| `REPO_184` | **upsc_polity_24h_mvp** | `Engineering & Infrastructure` | `c422a1b81822988a...` | [upsc_polity_24h_mvp]() | Repository upsc_polity_24h_mvp located at /Users/rajondas/teamwork_projects/_QUARANTINE_POLITY_VAULT/upsc_polity_24h_mvp |
+| `REPO_185` | **upstox-python** | `Cloned Physical Wheel` | `fbdd450381f6b099...` | [upstox-python](https://github.com/upstox/upstox-python.git) | Institutional physical trading wheel: upstox-python |
+| `REPO_186` | **usearch** | `Cloned Physical Wheel` | `271590ebf1938ed4...` | [usearch](https://github.com/unum-cloud/usearch.git) | Institutional physical trading wheel: usearch |
+| `REPO_187` | **uv** | `Cloned Physical Wheel` | `469408d5cc8a084a...` | [uv](https://github.com/astral-sh/uv.git) | Institutional physical trading wheel: uv |
+| `REPO_188` | **VasiHemanth_tokentelemetry** | `High Frequency & Telemetry` | `99dced79adce7ca8...` | [VasiHemanth_tokentelemetry](https://github.com/VasiHemanth/tokentelemetry.git) | Repository VasiHemanth_tokentelemetry located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/VasiHemanth_tokentelemetry |
+| `REPO_189` | **VasiHemanth_tokentelemetry-hermes-plugin** | `High Frequency & Telemetry` | `a83db6bc77b2325f...` | [VasiHemanth_tokentelemetry-hermes-plugin](https://github.com/VasiHemanth/tokentelemetry-hermes-plugin.git) | Repository VasiHemanth_tokentelemetry-hermes-plugin located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/HERMES_AIR10_SUPERPOWER_LAB/staged_acquisitions/plugins_and_repos/VasiHemanth_tokentelemetry-hermes-plugin |
+| `REPO_190` | **vectorbt** | `Cloned Physical Wheel` | `e3b0c44298fc1c14...` | [vectorbt](https://github.com/polakowo/vectorbt.git) | Institutional physical trading wheel: vectorbt |
+| `REPO_191` | **vibepod-cli** | `Engineering & Infrastructure` | `9c4cadca22f06884...` | [vibepod-cli](https://github.com/VibePod/vibepod-cli.git) | Repository vibepod-cli located at /Users/rajondas/teamwork_projects/downloaded_wheels/vibepod-cli |
+| `REPO_192` | **vnpy** | `Cloned Physical Wheel` | `c65d69707fce57f9...` | [vnpy](https://github.com/vnpy/vnpy.git) | Institutional physical trading wheel: vnpy |
+| `REPO_193` | **vollib** | `Cloned Physical Wheel` | `403b5251ef6ac8dd...` | [vollib](https://github.com/vollib/vollib.git) | Institutional physical trading wheel: vollib |
+| `REPO_194` | **wallstreet** | `Cloned Physical Wheel` | `663d791535dd1b2b...` | [wallstreet](https://github.com/mcdallas/wallstreet.git) | Institutional physical trading wheel: wallstreet |
+| `REPO_195` | **wallstreet-core** | `Cloned Physical Wheel` | `4956af1799e3e14a...` | [wallstreet-core](https://github.com/mcdallas/wallstreet.git) | Institutional physical trading wheel: wallstreet-core |
+| `REPO_196` | **whisper.cpp** | `Engineering & Infrastructure` | `72fae068add04c2c...` | [whisper.cpp](https://github.com/ggml-org/whisper.cpp.git) | Repository whisper.cpp located at /Users/rajondas/teamwork_projects/downloaded_wheels/whisper.cpp |
+| `REPO_197` | **yfinance** | `Cloned Physical Wheel` | `1955687ac73669df...` | [yfinance](https://github.com/ranaroussi/yfinance.git) | Institutional physical trading wheel: yfinance |
+| `REPO_198` | **yomitan** | `Engineering & Infrastructure` | `7455b6597f1cd59d...` | [yomitan](https://github.com/themoeway/yomitan.git) | Repository yomitan located at /Users/rajondas/teamwork_projects/downloaded_wheels/yomitan |
+| `REPO_199` | **youtube-transcriber** | `Engineering & Infrastructure` | `05552a5b407b1550...` | [youtube-transcriber](https://github.com/lifesized/youtube-transcriber) | Repository youtube-transcriber located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/youtube-transcriber |
+| `REPO_200` | **youtube-workflows** | `Engineering & Infrastructure` | `a44d9f617d877231...` | [youtube-workflows](https://github.com/ZeroPointRepo/youtube-workflows) | Repository youtube-workflows located at /Users/rajondas/teamwork_projects/hermes_air10_supertutor/harvest_wheels/youtube-workflows |
+| `REPO_201` | **zerodha-algo-trading** | `Cloned Physical Wheel` | `1c0330b2e01f6ed5...` | [zerodha-algo-trading](https://github.com/ranaroussi/quantstats.git) | Institutional physical trading wheel: zerodha-algo-trading |
+| `REPO_202` | **zipline** | `Cloned Physical Wheel` | `592c5f5924790b63...` | [zipline](https://github.com/quantopian/zipline.git) | Institutional physical trading wheel: zipline |
+| `REPO_203` | **zipline-trader** | `Cloned Physical Wheel` | `da37d0cd2d461b9f...` | [zipline-trader](https://github.com/shlomikushchi/zipline-trader.git) | Institutional physical trading wheel: zipline-trader |
