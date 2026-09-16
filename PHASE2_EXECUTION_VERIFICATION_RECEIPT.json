@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-16 17:20:07 IST",
+  "test_name": "10X Adversarial Concurrency & APFS Lock Collision Test",
+  "architecture": "Single-Writer SQLite WAL + Deterministic SHA-256 Idempotency Shield",
+  "platform": "Apple Silicon M1 arm64 (macOS Darwin)",
+  "metrics": {
+    "total_orders_dispatched": 200,
+    "concurrent_worker_threads": 20,
+    "drain_time_seconds": 1.02,
+    "throughput_orders_per_sec": 196.1,
+    "concurrent_sqlite_reads": 50,
+    "apfs_lock_errors": 0,
+    "unique_orders_approved_submitted": 10,
+    "idempotency_duplicates_intercepted": 190,
+    "cold_restart_persistence_verified": true
+  },
+  "compliance": {
+    "sebi_10_ops_limiter": "ENFORCED",
+    "sebi_otr_band_clamping": "ENFORCED",
+    "spread_anomaly_shield": "ENFORCED",
+    "daily_circuit_breaker": "ENFORCED",
+    "dead_man_switch": "ENFORCED"
+  },
+  "verdict": "PASSED_WITH_ZERO_ERRORS"
+}
