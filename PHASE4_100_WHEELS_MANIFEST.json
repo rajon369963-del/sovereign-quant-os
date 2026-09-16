@@ -1,0 +1,1002 @@
+[
+  {
+    "repo_id": "PHASE4-QUANT-001",
+    "repo_name": "PHASE4-QUANT-001_hudson-and-thames__mlfinlab",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-001_hudson-and-thames__mlfinlab",
+    "file_count": 132,
+    "total_size_mb": 1.7,
+    "sha256": "0e5b08d2f03de0afd5882f425ddf39166ca2ba63e2dd5461130548d0995d5f04",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-002",
+    "repo_name": "PHASE4-QUANT-002_wangpage__quant-ashare",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-002_wangpage__quant-ashare",
+    "file_count": 166,
+    "total_size_mb": 1.08,
+    "sha256": "119ee0ba7a27146ecc216745d604ed1ff646a4f95c5633b9013ffbd15979cd4c",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-003",
+    "repo_name": "PHASE4-QUANT-003_muditbhargava66__High-Frequency-Trading-FPGA-System",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-003_muditbhargava66__High-Frequency-Trading-FPGA-System",
+    "file_count": 18,
+    "total_size_mb": 0.17,
+    "sha256": "b25b5ef9205e5bbdd6e2a166e149ba0940a7c83d083f5570f5bfe5ec778521fb",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-004",
+    "repo_name": "PHASE4-QUANT-004_Azhagesan-dev__OrderFlowMap",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-004_Azhagesan-dev__OrderFlowMap",
+    "file_count": 7,
+    "total_size_mb": 0.6,
+    "sha256": "5572c9f65b33c8e98ab5e26916bfd19b924784b6b62f53d562186b5873fa0609",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-005",
+    "repo_name": "PHASE4-QUANT-005_VivekPa__AIAlpha",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-005_VivekPa__AIAlpha",
+    "file_count": 46,
+    "total_size_mb": 40.4,
+    "sha256": "bbb482b1aca44acea14054ff59a773b2fb4b92e4ebbaade2b27d1d929f7cd126",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-006",
+    "repo_name": "PHASE4-QUANT-006_wangzhe3224__awesome-systematic-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-006_wangzhe3224__awesome-systematic-trading",
+    "file_count": 17,
+    "total_size_mb": 0.35,
+    "sha256": "7e5d7cdb4c4e30b2f6a213078839138f67829d8f75a01a7d11c8b98a7954b5dc",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-007",
+    "repo_name": "PHASE4-QUANT-007_tradytics__eiten",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-007_tradytics__eiten",
+    "file_count": 26,
+    "total_size_mb": 0.61,
+    "sha256": "d7a939f76cf933fa7103e57bcd27f744918fa59b4d4d274529a4d331bff4bdf5",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-008",
+    "repo_name": "PHASE4-QUANT-008_al1enjesus__polymarket-whales",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-008_al1enjesus__polymarket-whales",
+    "file_count": 11,
+    "total_size_mb": 2.0,
+    "sha256": "5f589620f7e3f5dc419d590688326247c3f564560ca31b28d8919b37150199f6",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-009",
+    "repo_name": "PHASE4-QUANT-009_exchange-core__exchange-core",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-009_exchange-core__exchange-core",
+    "file_count": 159,
+    "total_size_mb": 0.9,
+    "sha256": "f9e5205ad195a00112e329f50e92f147e3e1e5f7aa4bd38bb94afe63dde950f8",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-010",
+    "repo_name": "PHASE4-QUANT-010_timkpaine__tributary",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-010_timkpaine__tributary",
+    "file_count": 224,
+    "total_size_mb": 8.51,
+    "sha256": "f72301facc6759a84a9cc24265f4c686e5a8f148241c0a9ec5cbb0cceef6e214",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-011",
+    "repo_name": "PHASE4-QUANT-011_thinh-vu__vnstock",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-011_thinh-vu__vnstock",
+    "file_count": 186,
+    "total_size_mb": 5.55,
+    "sha256": "397413b5e0882aa9575690f7359776466cffc57911135b0813f1f79461ac79f2",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-012",
+    "repo_name": "PHASE4-QUANT-012_monty-se__PINstimation",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-012_monty-se__PINstimation",
+    "file_count": 101,
+    "total_size_mb": 2.43,
+    "sha256": "bfc4939e4a55c4b24aa52319c94766ed96b58abc65d98368bab7a22ca151c656",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-013",
+    "repo_name": "PHASE4-QUANT-013_codetradesalgo-cmyk__dhan-api-tradingview-webhook-python",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-013_codetradesalgo-cmyk__dhan-api-tradingview-webhook-python",
+    "file_count": 3,
+    "total_size_mb": 0.01,
+    "sha256": "9a997da6968cbdfb512fe2aa5d92d5e8f42c4d242ba775d828a16506afed76ab",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-014",
+    "repo_name": "PHASE4-QUANT-014_firmai__financial-machine-learning",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-014_firmai__financial-machine-learning",
+    "file_count": 31,
+    "total_size_mb": 0.93,
+    "sha256": "0ab3fad798f0e2d54422d2aed39cde989ade02eef5bca3305a9a79e380fce642",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-015",
+    "repo_name": "PHASE4-QUANT-015_achillesrasquinha__bulbea",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-015_achillesrasquinha__bulbea",
+    "file_count": 64,
+    "total_size_mb": 0.47,
+    "sha256": "2742b9c1c4429ec684e73fed02a93d837504562473d8ad971e68794822aa7f4d",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-016",
+    "repo_name": "PHASE4-QUANT-016_zvtvz__zvt",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-016_zvtvz__zvt",
+    "file_count": 580,
+    "total_size_mb": 20.03,
+    "sha256": "6c1f02f4ceed4f1eabc2d17f273cc04d83682d8149e47f9ac14333064e8c2c4a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-017",
+    "repo_name": "PHASE4-QUANT-017_cbailes__awesome-deep-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-017_cbailes__awesome-deep-trading",
+    "file_count": 3,
+    "total_size_mb": 0.03,
+    "sha256": "db63c17bf2a637d5cb18872415aca781ea593a3c463da2bc82b75a7f1ec5ab69",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-018",
+    "repo_name": "PHASE4-QUANT-018_refraction-ray__xalpha",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-018_refraction-ray__xalpha",
+    "file_count": 98,
+    "total_size_mb": 21.6,
+    "sha256": "24e11f1b245f888527eecc555677dc7f280aacf377e0f108ae4d4670dd27a71a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-019",
+    "repo_name": "PHASE4-QUANT-019_CryptoSignal__Crypto-Signal",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-019_CryptoSignal__Crypto-Signal",
+    "file_count": 49,
+    "total_size_mb": 1.37,
+    "sha256": "4d3499dc2384d2448c02baf706f572c2892f206da1044fecd3143b7e861a21ef",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-020",
+    "repo_name": "PHASE4-QUANT-020_FinancialComputingUCL__LOBFrame",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-020_FinancialComputingUCL__LOBFrame",
+    "file_count": 37,
+    "total_size_mb": 0.19,
+    "sha256": "eb2d6d5461fa6bfefe1b9e3b69c9e2958a6ec41299b17793a7e49439acc64176",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-021",
+    "repo_name": "PHASE4-QUANT-021_man-group__ArcticDB",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-021_man-group__ArcticDB",
+    "file_count": 2189,
+    "total_size_mb": 73.32,
+    "sha256": "2ae326f7b333dbbf4c38ac90443ce490dd9a0f5f0523bbf54f98bf01c7362502",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-022",
+    "repo_name": "PHASE4-QUANT-022_nkaz001__hftbacktest",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-022_nkaz001__hftbacktest",
+    "file_count": 232,
+    "total_size_mb": 68.86,
+    "sha256": "32427326f828b3eb25c8d2dd93a5f528cc47359d448ba18d2eca902e060d897b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-023",
+    "repo_name": "PHASE4-QUANT-023_Adamant-im__adamant-tradebot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-023_Adamant-im__adamant-tradebot",
+    "file_count": 240,
+    "total_size_mb": 5.72,
+    "sha256": "145639d5c3631aa919f1ac8e3e3dc3a102c802d606e029b95871cc79ed74b699",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-024",
+    "repo_name": "PHASE4-QUANT-024_Crypto-toolbox__HFT-Orderbook",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-024_Crypto-toolbox__HFT-Orderbook",
+    "file_count": 16,
+    "total_size_mb": 0.1,
+    "sha256": "82fd4ca207dc98ab59710ba695d8d062cf8d542923a5388f3cfb9e9f529f1e3b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-025",
+    "repo_name": "PHASE4-QUANT-025_man-group__dtale",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-025_man-group__dtale",
+    "file_count": 879,
+    "total_size_mb": 8.37,
+    "sha256": "378d67352d8de4fe41046380cb15b009f53679b6236db96c010e1f71727f722a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-026",
+    "repo_name": "PHASE4-QUANT-026_jialuechen__flowforge",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-026_jialuechen__flowforge",
+    "file_count": 21,
+    "total_size_mb": 0.06,
+    "sha256": "077b5c77220da20e69a900c0cb1325022c58b9a43574798210b370ad875aa701",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-027",
+    "repo_name": "PHASE4-QUANT-027_0xemmkty__QuantMuse",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-027_0xemmkty__QuantMuse",
+    "file_count": 168,
+    "total_size_mb": 1.25,
+    "sha256": "f73566021b92772ed47d133a7e5d56ca891e9aa2f8cdc3dd2b7124d36486fbd8",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-028",
+    "repo_name": "PHASE4-QUANT-028_Aniket-16-S__Stock_Trade_CLI",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-028_Aniket-16-S__Stock_Trade_CLI",
+    "file_count": 8,
+    "total_size_mb": 0.02,
+    "sha256": "956bea8cfbb9e1bba5f94b1a013699bc665be5bc67ff2c5b53dbb4779c074f31",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-029",
+    "repo_name": "PHASE4-QUANT-029_robertmartin8__MachineLearningStocks",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-029_robertmartin8__MachineLearningStocks",
+    "file_count": 17,
+    "total_size_mb": 18.52,
+    "sha256": "8a33e61e9afc230d420ce359f77c9b75d2d4ceee44373f06c900e5edae971b51",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-030",
+    "repo_name": "PHASE4-QUANT-030_EliteQuant__EliteQuant",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-030_EliteQuant__EliteQuant",
+    "file_count": 3,
+    "total_size_mb": 1.14,
+    "sha256": "a8b6d6c1e32ec79ad36bfa87ecb8401c2ef70b594725af2c1ab9cb5d201e08b9",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-031",
+    "repo_name": "PHASE4-QUANT-031_vishwamartur__dhan-trader-bot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-031_vishwamartur__dhan-trader-bot",
+    "file_count": 26,
+    "total_size_mb": 0.12,
+    "sha256": "c6d5157b5bf08275ff262f92597519d7a54ae12f3b0eb0153a70df2f571f8bdd",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-032",
+    "repo_name": "PHASE4-QUANT-032_nkaz001__hftbacktest",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-032_nkaz001__hftbacktest",
+    "file_count": 232,
+    "total_size_mb": 68.86,
+    "sha256": "32427326f828b3eb25c8d2dd93a5f528cc47359d448ba18d2eca902e060d897b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-033",
+    "repo_name": "PHASE4-QUANT-033_jasonstrimpel__volatility-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-033_jasonstrimpel__volatility-trading",
+    "file_count": 28,
+    "total_size_mb": 0.46,
+    "sha256": "8dc7dfff6704daaf05462dff5dae11478602dc1e20efd3df4e4dc4faa13fdfc2",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-034",
+    "repo_name": "PHASE4-QUANT-034_AllTick-Official__alltick-realtime-forex-crypto-stock-tick-finance-websocket-api",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-034_AllTick-Official__alltick-realtime-forex-crypto-stock-tick-finance-websocket-api",
+    "file_count": 89,
+    "total_size_mb": 0.29,
+    "sha256": "2207b20de6a50f8495b802ff4da3250314544ffefe0c44b299ab9758bab951bd",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-035",
+    "repo_name": "PHASE4-QUANT-035_erdewit__ib_insync",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-035_erdewit__ib_insync",
+    "file_count": 105,
+    "total_size_mb": 4.59,
+    "sha256": "57005f6361a79ef726af89203d42ee535f6a7fa0dc3632c5690bafa7414f3f84",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-036",
+    "repo_name": "PHASE4-QUANT-036_sadighian__crypto-rl",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-036_sadighian__crypto-rl",
+    "file_count": 70,
+    "total_size_mb": 9.36,
+    "sha256": "90a010d82a7ce82bf79e8eae72bd9bdcb290992b720603aa488ddbf7d8457892",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-037",
+    "repo_name": "PHASE4-QUANT-037_paperswithbacktest__awesome-systematic-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-037_paperswithbacktest__awesome-systematic-trading",
+    "file_count": 73,
+    "total_size_mb": 1.44,
+    "sha256": "c95f37223446e89636a2c8b54743047d361a039bd6e97a59f27497576d344f9d",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-038",
+    "repo_name": "PHASE4-QUANT-038_cuemacro__chartpy",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-038_cuemacro__chartpy",
+    "file_count": 506,
+    "total_size_mb": 10.26,
+    "sha256": "ed3050ae1dfd9bc52ddd32e7f564c8b7be8d30c3c2ca98f8604a5f7e5ade91d4",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-039",
+    "repo_name": "PHASE4-QUANT-039_shy3130__tick-stock-panel",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-039_shy3130__tick-stock-panel",
+    "file_count": 783,
+    "total_size_mb": 20.19,
+    "sha256": "df135bf8e02197b8a5d4509d52806e392ed5e243b14cd6060a865d1600c2b325",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-040",
+    "repo_name": "PHASE4-QUANT-040_edtechre__pybroker",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-040_edtechre__pybroker",
+    "file_count": 279,
+    "total_size_mb": 6.02,
+    "sha256": "f87c392cf4773c1940ff08bb57ef3bfc0724b0082b1066cb6f4875bbc558a6cb",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-041",
+    "repo_name": "PHASE4-QUANT-041_fasenderos__nodejs-order-book",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-041_fasenderos__nodejs-order-book",
+    "file_count": 261,
+    "total_size_mb": 1.47,
+    "sha256": "ce983c0cab5af28ff81d2c8a8eb76c41d07a9c791353830093e0cb7ff2040ede",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-042",
+    "repo_name": "PHASE4-QUANT-042_ArjunVachhani__order-matcher",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-042_ArjunVachhani__order-matcher",
+    "file_count": 154,
+    "total_size_mb": 0.96,
+    "sha256": "f567d7fc9fa69b8ce7801892566ca4a19f1846f4f0c43b4435c72b9bdf8567b6",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-043",
+    "repo_name": "PHASE4-QUANT-043_Jeonghwan-Cheon__lob-deep-learning",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-043_Jeonghwan-Cheon__lob-deep-learning",
+    "file_count": 27,
+    "total_size_mb": 0.2,
+    "sha256": "b02de0f336298430876d8a73ee31e0dadfedda39748309759b416fe63c4bd53b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-044",
+    "repo_name": "PHASE4-QUANT-044_AsthaMishra__matching-engine",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-044_AsthaMishra__matching-engine",
+    "file_count": 639,
+    "total_size_mb": 0.35,
+    "sha256": "28f30f56234dbbfffeab2607137ec60f18c068db689cf7d85b41716d42aec131",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-045",
+    "repo_name": "PHASE4-QUANT-045_eelixir__mercury",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-045_eelixir__mercury",
+    "file_count": 114,
+    "total_size_mb": 1.12,
+    "sha256": "1decc543458853e43f98a5e2bae1f364df2d4e13191bbdf792dc7b0b0930e78a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-046",
+    "repo_name": "PHASE4-QUANT-046_vgreg__MeatPy",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-046_vgreg__MeatPy",
+    "file_count": 127,
+    "total_size_mb": 1.3,
+    "sha256": "0c3b1ac02f25496b0788c717c837890658a152ccd59ad365f2e289453358d259",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-047",
+    "repo_name": "PHASE4-QUANT-047_DegenSugarBoo__OpenBook",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-047_DegenSugarBoo__OpenBook",
+    "file_count": 17,
+    "total_size_mb": 2.1,
+    "sha256": "b4eb78bd5dab9a2ac0069b09ac326ddd1300af15d42c1a0eb1b744d53f631b9a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-048",
+    "repo_name": "PHASE4-QUANT-048_GunnarPDX__Nice-Charts",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-048_GunnarPDX__Nice-Charts",
+    "file_count": 45,
+    "total_size_mb": 1.46,
+    "sha256": "4e7deefe53b090265f64b29f5008d4001583d62030b98ef56cd575c558314578",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-049",
+    "repo_name": "PHASE4-QUANT-049_LabinatorSolutions__awesome-institutional-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-049_LabinatorSolutions__awesome-institutional-trading",
+    "file_count": 5,
+    "total_size_mb": 0.05,
+    "sha256": "2cb6b699b6c912a1cdfac0fa37c00101a5ed95447de67fa75420aa7d59559e33",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-050",
+    "repo_name": "PHASE4-QUANT-050_NavnoorBawa__Options-Flow-Predictor",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-050_NavnoorBawa__Options-Flow-Predictor",
+    "file_count": 3,
+    "total_size_mb": 0.3,
+    "sha256": "aacaf191ba80024e2a7badd6062b11a7dc3ee98547bdfab866a0fa9de88f7c0e",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-051",
+    "repo_name": "PHASE4-QUANT-051_leionion__orderbook-imbalance-indicator-hft",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-051_leionion__orderbook-imbalance-indicator-hft",
+    "file_count": 17,
+    "total_size_mb": 0.02,
+    "sha256": "a90c145de66b6876348869233e14730ad255f93c573a96a6f7e953e27192ad6d",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-052",
+    "repo_name": "PHASE4-QUANT-052_joaquinbejar__matchbook",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-052_joaquinbejar__matchbook",
+    "file_count": 294,
+    "total_size_mb": 1.45,
+    "sha256": "60aa273c4bb1eda23dc3676d3fc670e05dd8bd8d23de7221087707cfcc59cab8",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-053",
+    "repo_name": "PHASE4-QUANT-053_drewstone__gym-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-053_drewstone__gym-trading",
+    "file_count": 25,
+    "total_size_mb": 0.05,
+    "sha256": "c2f94098d3b34bfe7d6343fb49289a5b919766cff8a813f5158d9b8915a03a16",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-054",
+    "repo_name": "PHASE4-QUANT-054_CameronScarpati__lob-regime-scanner",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-054_CameronScarpati__lob-regime-scanner",
+    "file_count": 58,
+    "total_size_mb": 1.64,
+    "sha256": "4ea1720d3d4b46d2f14a1f559178c7e747078272bbaf48d63bce7468997f6ace",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-055",
+    "repo_name": "PHASE4-QUANT-055_Jeonghwan-Cheon__lob-world-models",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-055_Jeonghwan-Cheon__lob-world-models",
+    "file_count": 5,
+    "total_size_mb": 1.05,
+    "sha256": "b3b03b4106988f341f0a2b879e947e8ff0ebae3699f767f9a7ba8ddbff7a891b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-056",
+    "repo_name": "PHASE4-QUANT-056_sjdKRM__EPAT",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-056_sjdKRM__EPAT",
+    "file_count": 10,
+    "total_size_mb": 4.17,
+    "sha256": "df424b567d6450d4a939f2614670737c7427be5d794e96eb3dc3d72bcecc5ba5",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-057",
+    "repo_name": "PHASE4-QUANT-057_outsmartchad__outsmart-cli",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-057_outsmartchad__outsmart-cli",
+    "file_count": 131,
+    "total_size_mb": 1.9,
+    "sha256": "85970ce6cbb4534b26517c5b4abd9d431aeb1d9b186de54fb11491cbf40e48ad",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-058",
+    "repo_name": "PHASE4-QUANT-058_TickDB__tickdb-unified-realtime-marketdata-api",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-058_TickDB__tickdb-unified-realtime-marketdata-api",
+    "file_count": 46,
+    "total_size_mb": 0.34,
+    "sha256": "c29a7c2d3c5fe4c0ca177682362779b7eefa0563192e7191da0ea99845a97807",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-059",
+    "repo_name": "PHASE4-QUANT-059_bigmacman1129__crypto-ai-trading-bot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-059_bigmacman1129__crypto-ai-trading-bot",
+    "file_count": 131,
+    "total_size_mb": 3.12,
+    "sha256": "1246d346c5a382d440e62b8bc2095e60496fca86ece225e05a1a38688a57ff85",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-060",
+    "repo_name": "PHASE4-QUANT-060_nelso0__barbotine-scalping-bot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-060_nelso0__barbotine-scalping-bot",
+    "file_count": 2,
+    "total_size_mb": 0.0,
+    "sha256": "b90e8f53987f7c25720e41134cea03901dda2c99179047cd2a8f7769c03af385",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-061",
+    "repo_name": "PHASE4-QUANT-061_ivopetiz__crypto-database",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-061_ivopetiz__crypto-database",
+    "file_count": 15,
+    "total_size_mb": 0.03,
+    "sha256": "4784e9585a2050602ab61d8c0a91428b905fd68f98cc85ebc58132f75c46eb53",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-062",
+    "repo_name": "PHASE4-QUANT-062_jialuechen__trademind",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-062_jialuechen__trademind",
+    "file_count": 35,
+    "total_size_mb": 0.25,
+    "sha256": "a667689c2e3732cfaaa17126ecf40efc694dc1183c8d68bab27c21c4b02e24a6",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-063",
+    "repo_name": "PHASE4-QUANT-063_mitulpatel123__dhanhq-trading-system",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-063_mitulpatel123__dhanhq-trading-system",
+    "file_count": 108,
+    "total_size_mb": 0.84,
+    "sha256": "14d319a88d0298a9b396170d1e000fb287d4cbc64b9922483d3723e1e1ec4b9c",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-064",
+    "repo_name": "PHASE4-QUANT-064_intraday-algo-bot__intraday-algo-bot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-064_intraday-algo-bot__intraday-algo-bot",
+    "file_count": 10,
+    "total_size_mb": 0.01,
+    "sha256": "7d6e8c508da93f781ea18d789c17c43797c45f32a3e64663673975c1cb32e981",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-065",
+    "repo_name": "PHASE4-QUANT-065_NDZCorp__dhan-trading-engine",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-065_NDZCorp__dhan-trading-engine",
+    "file_count": 3,
+    "total_size_mb": 0.01,
+    "sha256": "94620d79b7e72506558cd1f7e29d070c11bb5017e99ea44faea970132f49f511",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-066",
+    "repo_name": "PHASE4-QUANT-066_naman-n-choudhary__Dhan-Calculator",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-066_naman-n-choudhary__Dhan-Calculator",
+    "file_count": 2,
+    "total_size_mb": 0.02,
+    "sha256": "27e58eccab95fc22ce862d1c68fa9638c6cf8398f98a18175144ac101e24bcaa",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-067",
+    "repo_name": "PHASE4-QUANT-067_harsh5i__dhan-mcp-fw",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-067_harsh5i__dhan-mcp-fw",
+    "file_count": 24,
+    "total_size_mb": 0.21,
+    "sha256": "1e9c4fa5ee49c735b162b362f91ee9b3ef774337a0dfa20eea12807b5c07c72d",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-068",
+    "repo_name": "PHASE4-QUANT-068_arneish__zerodha-kite-auto-trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-068_arneish__zerodha-kite-auto-trading",
+    "file_count": 1,
+    "total_size_mb": 0.01,
+    "sha256": "72cc1d0bcdc5a445779ca55d846c173bd7f413c4d51b11e61959e3825512f5d5",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-069",
+    "repo_name": "PHASE4-QUANT-069_Raahi-Bhushan__ui-trading-system",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-069_Raahi-Bhushan__ui-trading-system",
+    "file_count": 144,
+    "total_size_mb": 2.44,
+    "sha256": "6cf2b9d177a5ecc3db5f58061007737859859569b66e0e7c3d5a2bb36a2f8545",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-070",
+    "repo_name": "PHASE4-QUANT-070_Pranavoro__kite_kill_switch",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-070_Pranavoro__kite_kill_switch",
+    "file_count": 8,
+    "total_size_mb": 0.05,
+    "sha256": "3dc6e0725a398025a24ce54cbfb00eda33ee27a1d92387674345149accd7e2d8",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-071",
+    "repo_name": "PHASE4-QUANT-071_arcofdescent__KiteConnect.jl",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-071_arcofdescent__KiteConnect.jl",
+    "file_count": 12,
+    "total_size_mb": 0.01,
+    "sha256": "336a9e7c2664f520b9c79e2d3575959386967a8b2e308825ada55133e7b74ced",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-072",
+    "repo_name": "PHASE4-QUANT-072_vinay-ram1999__AlgoTrade-API",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-072_vinay-ram1999__AlgoTrade-API",
+    "file_count": 18,
+    "total_size_mb": 0.05,
+    "sha256": "6b7b516bfded8f808fe4a2a765f8fcbabd1e43b5046c574284b6263ce1e7780f",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-073",
+    "repo_name": "PHASE4-QUANT-073_RajeshSivadasan__alice-blue-futures",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-073_RajeshSivadasan__alice-blue-futures",
+    "file_count": 8,
+    "total_size_mb": 0.21,
+    "sha256": "6378708e5c5a7db3ce2ccaad05d602988a81754b7eee9af78174afd06b8dd0f0",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-074",
+    "repo_name": "PHASE4-QUANT-074_boudhayan-dev__TradingView-Extension",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-074_boudhayan-dev__TradingView-Extension",
+    "file_count": 11,
+    "total_size_mb": 0.22,
+    "sha256": "3e1c389018321b70b9ffbe699ceed57d6ccbd823bb52019731a78b8547785628",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-075",
+    "repo_name": "PHASE4-QUANT-075_SoRalenka__ORBBacktesting",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-075_SoRalenka__ORBBacktesting",
+    "file_count": 2,
+    "total_size_mb": 1.21,
+    "sha256": "e97671e9697bc196296f6f90b74615c7d06925a29eaf15bf37eb2eb1c395ea8d",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-076",
+    "repo_name": "PHASE4-QUANT-076_pratikj37__Stocks-Algo-Trading",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-076_pratikj37__Stocks-Algo-Trading",
+    "file_count": 7,
+    "total_size_mb": 0.01,
+    "sha256": "083dfbf76e594d155f418df2010bc847aadd30d835506d9af7de43e1e76cc7a9",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-077",
+    "repo_name": "PHASE4-QUANT-077_KhushJ-17__Algorithmic-Trading-Engine",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-077_KhushJ-17__Algorithmic-Trading-Engine",
+    "file_count": 16,
+    "total_size_mb": 0.22,
+    "sha256": "bbb185e39ccef3774a81da20bd68406bbdabdfd682b285ff45882d73c16dc3a5",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-078",
+    "repo_name": "PHASE4-QUANT-078_nimishj3__StockTradingBot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-078_nimishj3__StockTradingBot",
+    "file_count": 32,
+    "total_size_mb": 0.17,
+    "sha256": "561aaece8da56fb59110dfc99e8c7037683e7930477ace946413e6d3867e82a3",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-079",
+    "repo_name": "PHASE4-QUANT-079_Algo-Ankit__TradeProject",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-079_Algo-Ankit__TradeProject",
+    "file_count": 95,
+    "total_size_mb": 0.25,
+    "sha256": "9fe3f4668b7a012230190e6b2ef8347f497f9b0d0616604657594e093ab56b46",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-080",
+    "repo_name": "PHASE4-QUANT-080_beingamanforever__Finstreet",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-080_beingamanforever__Finstreet",
+    "file_count": 52,
+    "total_size_mb": 2.71,
+    "sha256": "3578022ec3d8fdbbe8257937c343c526c7640060e95f87ff88c6457802d8de7b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-081",
+    "repo_name": "PHASE4-QUANT-081_Rahulghuge94__KIRA",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-081_Rahulghuge94__KIRA",
+    "file_count": 179,
+    "total_size_mb": 1.33,
+    "sha256": "0624f664c027044d3555b9debaf4ff235d783bc882ba8e4994e37bf3aad013bd",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-082",
+    "repo_name": "PHASE4-QUANT-082_tradevectorsrobots__AI-ML",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-082_tradevectorsrobots__AI-ML",
+    "file_count": 2,
+    "total_size_mb": 0.01,
+    "sha256": "c23d0ae4814e8864e4ef211acc0d459afa7cd7abb2c7cb7fc630e5e0f97fa374",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-083",
+    "repo_name": "PHASE4-QUANT-083_nabrahma__ShortCircuit",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-083_nabrahma__ShortCircuit",
+    "file_count": 120,
+    "total_size_mb": 1.05,
+    "sha256": "8e636f7519f56a83fb28a4e2140302f5e76297101e7ce7df788a3594e989f499",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-084",
+    "repo_name": "PHASE4-QUANT-084_hemanthsai8104__Motilal-Oswal-Algo-Trading-Engine",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-084_hemanthsai8104__Motilal-Oswal-Algo-Trading-Engine",
+    "file_count": 9,
+    "total_size_mb": 0.02,
+    "sha256": "4ec4530757f4f4cce88338b71a46d3d7a8678e67f840c0b13e04ac3d33a70acc",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-085",
+    "repo_name": "PHASE4-QUANT-085_jitenkr2030__Quantum-Trading-Bot-for-NSE-BSE",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-085_jitenkr2030__Quantum-Trading-Bot-for-NSE-BSE",
+    "file_count": 75,
+    "total_size_mb": 1.05,
+    "sha256": "7bd0c296e907dadbd4c141c1a816fcd2a98ac5c9e332ab44c9fc1809127ff67b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-086",
+    "repo_name": "PHASE4-QUANT-086_Suprath__KIRA",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-086_Suprath__KIRA",
+    "file_count": 309,
+    "total_size_mb": 5.92,
+    "sha256": "c6f2de1ad67724dd5926316d074cca21b2ff9e4bc2988fa48add4821335a18b2",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-087",
+    "repo_name": "PHASE4-QUANT-087_dreamhigh0525__hjAlgos_notebooks",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-087_dreamhigh0525__hjAlgos_notebooks",
+    "file_count": 156,
+    "total_size_mb": 21.15,
+    "sha256": "53b8135f837d63452f53e6747193aec00de1a54ec20e7919bf363938afec7587",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-088",
+    "repo_name": "PHASE4-QUANT-088_santoshlite__EigenLedger",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-088_santoshlite__EigenLedger",
+    "file_count": 20,
+    "total_size_mb": 0.18,
+    "sha256": "04e4758afa03a23a78a7c73d85a4757822a480ab170818f67b2abdf832e88e9e",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-089",
+    "repo_name": "PHASE4-QUANT-089_ryanfrigo__kalshi-ai-trading-bot",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-089_ryanfrigo__kalshi-ai-trading-bot",
+    "file_count": 118,
+    "total_size_mb": 1.09,
+    "sha256": "f5ed37a27447ec1b410540b80fc7df58666febf50a013b00465a8079894757c8",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-090",
+    "repo_name": "PHASE4-QUANT-090_jankrepl__deepdow",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-090_jankrepl__deepdow",
+    "file_count": 84,
+    "total_size_mb": 5.44,
+    "sha256": "9c5c8f24ff411a05d1311862791bc99d5eca9a96a571278afe3257cd6b2f450a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-091",
+    "repo_name": "PHASE4-QUANT-091_VivekPa__OptimalPortfolio",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-091_VivekPa__OptimalPortfolio",
+    "file_count": 46,
+    "total_size_mb": 2.27,
+    "sha256": "4bdada9e8ead296cfbc2e6d4510ef335770e5c5048671691b5c4f2a5ae1d7003",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-092",
+    "repo_name": "PHASE4-QUANT-092_cn-vhql__FactorHub",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-092_cn-vhql__FactorHub",
+    "file_count": 153,
+    "total_size_mb": 14.45,
+    "sha256": "f214efac89055fc27cbf369d7aeac9191715a1d7cdf5bfe2214f9acf56f4362e",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-093",
+    "repo_name": "PHASE4-QUANT-093_bshaw2019__Crypto_Trader",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-093_bshaw2019__Crypto_Trader",
+    "file_count": 20,
+    "total_size_mb": 0.04,
+    "sha256": "934634a19c1ab0b65125aa5276449b278def2fe8b273349af9b32e9e42bf0c97",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-094",
+    "repo_name": "PHASE4-QUANT-094_skfolio__skfolio",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-094_skfolio__skfolio",
+    "file_count": 689,
+    "total_size_mb": 8.47,
+    "sha256": "fac264e23cdac70df8e5d4d6cda6e2f124528aab8f6b10df34dc0f1874960d84",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-095",
+    "repo_name": "PHASE4-QUANT-095_convexfi__riskparity.py",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-095_convexfi__riskparity.py",
+    "file_count": 1640,
+    "total_size_mb": 11.74,
+    "sha256": "d35aa494d26fd5b26a090c1365cc85ce249f4de43fb51041cbd877dcaa3eb7e9",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-096",
+    "repo_name": "PHASE4-QUANT-096_OnePunchMonk__AgentQuant",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-096_OnePunchMonk__AgentQuant",
+    "file_count": 170,
+    "total_size_mb": 2.74,
+    "sha256": "3782ff8c1b078f033a1f123891d014d8249ed6640601c35a7a1e9b2797c20475",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-097",
+    "repo_name": "PHASE4-QUANT-097_bqth29__simulated-bifurcation-algorithm",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-097_bqth29__simulated-bifurcation-algorithm",
+    "file_count": 87,
+    "total_size_mb": 0.27,
+    "sha256": "23f6fbf25ed5ff039a52af4a075c1b6ad6a565accfaa764654981f7dfc2e2d05",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-098",
+    "repo_name": "PHASE4-QUANT-098_SilvioBaratto__optimizer",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-098_SilvioBaratto__optimizer",
+    "file_count": 674,
+    "total_size_mb": 4.35,
+    "sha256": "e0992b33b32da391bb9cc0ce08ba8af3a61a103481ffa7f7d7ac78c864d7e83b",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-099",
+    "repo_name": "PHASE4-QUANT-099_WLM1ke__poptimizer",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-099_WLM1ke__poptimizer",
+    "file_count": 153,
+    "total_size_mb": 1.1,
+    "sha256": "dffc0e02bd57b76817346c5936100ffb98a44c842feef03a3c6092b05f4a392a",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  },
+  {
+    "repo_id": "PHASE4-QUANT-100",
+    "repo_name": "PHASE4-QUANT-100_jcrichard__pyrb",
+    "physical_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/phase4_quant_wheels_100/PHASE4-QUANT-100_jcrichard__pyrb",
+    "file_count": 16,
+    "total_size_mb": 0.53,
+    "sha256": "81ef3c090fcec8ab3e61818a2fc133a27dc7622a47aca788703976bba4feacd3",
+    "source_location": "phase4_quant_wheels_100",
+    "git_status": "GIT_CLONED"
+  }
+]
