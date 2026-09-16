@@ -37,6 +37,7 @@ jobs:
         run: |
           python3 tests/test_dhan_mode_authority.py
           python3 tests/test_dhan_mode_authority_kill_mutants.py
+          python3 tests/test_dhan_live_quote_authority.py
 
       - name: Run Execution Family Hostile Court (Quant #14, #16, #18, #27, #36)
         run: python3 tests/test_execution_family_hostile_court.py
