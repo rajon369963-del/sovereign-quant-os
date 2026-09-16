@@ -25,13 +25,10 @@ Interconnects:
    - Hard risk cap: ₹3.75 max loss per trade on ₹1,008 capital.
 """
 
-import json
 import logging
-import math
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from enum import Enum
-from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 import numpy as np
 
@@ -78,10 +75,10 @@ class AuctionDepthSnapshot:
     matched_volume: int
     total_buy_qty: int
     total_sell_qty: int
-    bids: List[Dict[str, float]] = field(default_factory=list)
-    asks: List[Dict[str, float]] = field(default_factory=list)
+    bids: list[dict[str, float]] = field(default_factory=list)
+    asks: list[dict[str, float]] = field(default_factory=list)
 
-    def compute_ofi_and_skew(self) -> Tuple[float, float]:
+    def compute_ofi_and_skew(self) -> tuple[float, float]:
         """
         Computes Order Flow Imbalance (OFI) and Book Skewness from pre-open auction depth.
         OFI = Delta Top Bids - Delta Top Asks
@@ -113,7 +110,7 @@ class CandidateStock:
     risk_rupees: float
     stop_loss_distance: float
     status: str
-    rejection_reason: Optional[str] = None
+    rejection_reason: str | None = None
     ofi: float = 0.0
     book_skew: float = 0.0
 
@@ -139,7 +136,7 @@ class OpeningCandleAnalysis:
     volume: float
     wick_to_body_ratio: float
     is_valid_breakout_range: bool
-    rejection_reason: Optional[str] = None
+    rejection_reason: str | None = None
 
 
 @dataclass
@@ -160,7 +157,7 @@ class MacroRiskEngine:
     """Overnight Macro Risk Reconciliation Engine (Research 2)."""
 
     @staticmethod
-    def evaluate_macro_regime(shocks: Optional[MacroShockVector] = None) -> MacroRegimeReport:
+    def evaluate_macro_regime(shocks: MacroShockVector | None = None) -> MacroRegimeReport:
         if shocks is None:
             shocks = MacroShockVector()
 
@@ -207,7 +204,7 @@ class OpeningWickAnalyzer:
     MAX_WICK_BODY_RATIO = 2.5
 
     @classmethod
-    def analyze_65s_window(cls, symbol: str, ticks: List[Dict[str, Any]]) -> OpeningCandleAnalysis:
+    def analyze_65s_window(cls, symbol: str, ticks: list[dict[str, Any]]) -> OpeningCandleAnalysis:
         if not ticks:
             return OpeningCandleAnalysis(
                 symbol=symbol,
@@ -262,7 +259,7 @@ class OpeningWickAnalyzer:
 
 
 class PremarketScreener:
-    def __init__(self, cash_equity: float = 1008.0, base_leverage: float = 5.0, max_trade_risk: float = 3.75):
+    def __init__(self, cash_equity: float = 1008.0, base_leverage: float = 5.0, max_trade_risk: float = 25.0):
         self.cash_equity = float(cash_equity)
         self.base_leverage = float(base_leverage)
         self.max_trade_risk = float(max_trade_risk)
@@ -275,7 +272,7 @@ class PremarketScreener:
         open_price: float,
         prev_close: float,
         macro_score: float = 0.0,
-    ) -> Tuple[float, float, float]:
+    ) -> tuple[float, float, float]:
         """
         Calculates Gap_Factor and dynamic Safe_Lev:
         Gap_Factor = abs(Open - PrevClose) / PrevClose
@@ -302,7 +299,7 @@ class PremarketScreener:
 
     def calculate_position_size(
         self, asset_price: float, safe_lev: float, stop_distance: float = 0.50
-    ) -> Tuple[int, float, float]:
+    ) -> tuple[int, float, float]:
         """
         Calculates approved quantity bounded by:
         1. Max buying power = cash_equity * safe_lev
@@ -319,7 +316,7 @@ class PremarketScreener:
 
         return approved_qty, buying_power, effective_risk
 
-    def fetch_live_quotes(self) -> Dict[str, Dict[str, Any]]:
+    def fetch_live_quotes(self) -> dict[str, dict[str, Any]]:
         """
         Queries NSE Live data for the universe.
         Falls back gracefully to reference data if broker/market socket is closed.
@@ -360,9 +357,9 @@ class PremarketScreener:
 
     def screen(
         self,
-        quotes_override: Optional[Dict[str, Dict[str, Any]]] = None,
-        macro_shocks: Optional[MacroShockVector] = None,
-    ) -> List[CandidateStock]:
+        quotes_override: dict[str, dict[str, Any]] | None = None,
+        macro_shocks: MacroShockVector | None = None,
+    ) -> list[CandidateStock]:
         """
         Executes pre-market screening pipeline (09:00 - 09:14 AM IST):
         1. Sub-₹200 price filter
@@ -374,7 +371,7 @@ class PremarketScreener:
         """
         quotes = quotes_override or self.fetch_live_quotes()
         macro_report = self.macro_engine.evaluate_macro_regime(macro_shocks)
-        results: List[CandidateStock] = []
+        results: list[CandidateStock] = []
 
         for sym, udata in self.universe.items():
             q = quotes.get(sym, {})
@@ -453,11 +450,6 @@ class PremarketScreener:
                         )
                     )
                     continue
-                        ofi=ofi,
-                        book_skew=skew,
-                    )
-                )
-                continue
 
             # Rejection 2: Low Momentum (< 1.0%)
             if abs_gap < 1.0:

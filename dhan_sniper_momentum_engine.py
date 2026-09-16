@@ -32,13 +32,20 @@ from risk_gatekeeper import RiskConfig, RiskGatekeeper
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("SniperMomentumEngine")
 
-# Liquid Sub-₹200 NSE Equity Universe
+# High-Velocity Trending Momentum Universe (Sub-₹500 NSE Equities with Explosive Liquidity)
 SNIPER_UNIVERSE = {
-    "TATASTEEL": {"security_id": "3499", "lot_size": 1, "tick_size": 0.05, "ref_price": 150.0},
-    "SAIL": {"security_id": "2963", "lot_size": 1, "tick_size": 0.05, "ref_price": 125.0},
-    "PNB": {"security_id": "10666", "lot_size": 1, "tick_size": 0.05, "ref_price": 105.0},
-    "ASHOKLEY": {"security_id": "212", "lot_size": 1, "tick_size": 0.05, "ref_price": 185.0},
-    "ZOMATO": {"security_id": "5097", "lot_size": 1, "tick_size": 0.05, "ref_price": 195.0},
+    "TATASTEEL": {"security_id": "3499", "lot_size": 1, "tick_size": 0.05, "ref_price": 181.74},
+    "SAIL": {"security_id": "2963", "lot_size": 1, "tick_size": 0.05, "ref_price": 171.86},
+    "NATIONALUM": {"security_id": "6364", "lot_size": 1, "tick_size": 0.05, "ref_price": 185.0},
+    "ASHOKLEY": {"security_id": "212", "lot_size": 1, "tick_size": 0.05, "ref_price": 156.08},
+    "PNB": {"security_id": "10666", "lot_size": 1, "tick_size": 0.05, "ref_price": 115.18},
+    "IDFCFIRSTB": {"security_id": "11184", "lot_size": 1, "tick_size": 0.05, "ref_price": 72.50},
+    "IRFC": {"security_id": "2029", "lot_size": 1, "tick_size": 0.05, "ref_price": 176.0},
+    "SUZLON": {"security_id": "12018", "lot_size": 1, "tick_size": 0.05, "ref_price": 74.50},
+    "BHEL": {"security_id": "438", "lot_size": 1, "tick_size": 0.05, "ref_price": 285.0},
+    "NBCC": {"security_id": "31415", "lot_size": 1, "tick_size": 0.05, "ref_price": 172.0},
+    "ZENSARTECH": {"security_id": "1076", "lot_size": 1, "tick_size": 0.05, "ref_price": 440.0},
+    "HCLTECH": {"security_id": "7229", "lot_size": 1, "tick_size": 0.05, "ref_price": 1264.0},
 }
 
 
@@ -273,14 +280,14 @@ class DhanSniperMomentumEngine:
         max_margin = self.current_equity * effective_leverage
         shares_by_margin = int(max_margin / price)
         
-        # Hard risk cap: ₹3.75 for Stage 1, expanding proportionally in higher stages
-        stage_risk = 3.75 if self.active_stage.stage_id == 1 else min(self.active_stage.risk_budget, 10.0)
+        # God-Level Sizing: Scaled from ₹3.75 canary up to ₹25.00 aggressive risk (utilizing 5x MIS leverage power)
+        stage_risk = 25.00 if self.active_stage.stage_id == 1 else min(self.active_stage.risk_budget * 5.0, 50.0)
         effective_risk_budget = min(stage_risk, remaining_loss_budget)
         shares_by_risk = int(effective_risk_budget / sl_distance)
         quantity = max(1, min(shares_by_risk, shares_by_margin))
 
         # Re-check that total possible loss does not exceed remaining budget
-        if (quantity * sl_distance) > (remaining_loss_budget + 2.0):
+        if (quantity * sl_distance) > (remaining_loss_budget + 5.0):
             quantity = max(1, int(remaining_loss_budget / sl_distance))
             if quantity < 1:
                 return None

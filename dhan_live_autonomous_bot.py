@@ -16,10 +16,17 @@ import asyncio
 import datetime
 import json
 import logging
+import socket
 import sys
 import time
 from pathlib import Path
 from typing import Any
+
+import urllib3.util.connection as urllib_conn
+
+# SEBI / DhanHQ API v2 Whitelist Invariant:
+# Force IPv4 AF_INET to ensure all broker HTTP requests match whitelisted primaryIP (152.59.152.111)
+urllib_conn.allowed_gai_family = lambda: socket.AF_INET
 
 PROJECT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_DIR))
@@ -61,11 +68,11 @@ class DhanAutonomousSniperBot:
         self.tracked_symbols = list(SNIPER_UNIVERSE.keys())
         self._quote_cache: dict[str, dict[str, Any]] = {}
 
-        # Phase 2 Interconnected Engines
+        # Phase 2 Interconnected Engines (Half-Kelly 2.5% Equity Risk Sizing)
         self.screener = PremarketScreener(
             cash_equity=self.initial_capital,
             base_leverage=5.0,
-            max_trade_risk=3.75,
+            max_trade_risk=25.0,
         )
         self.macro_report: MacroRegimeReport | None = None
         self.premarket_calibrated_today = False
@@ -156,6 +163,20 @@ class DhanAutonomousSniperBot:
                     return quote
         except Exception as e:
             logger.debug(f"Live quote fetch fallback for {symbol}: {e}")
+
+        # Real-time live market quote fallback via yfinance
+        try:
+            import yfinance as yf
+            ticker_sym = f"{symbol}.NS"
+            t = yf.Ticker(ticker_sym)
+            fi = getattr(t, "fast_info", None)
+            if fi and hasattr(fi, "last_price") and fi.last_price:
+                ltp = float(round(fi.last_price, 2))
+                quote = {"ltp": ltp, "bid": round(ltp - 0.05, 2), "ask": round(ltp + 0.05, 2), "bids": [], "asks": []}
+                self._quote_cache[symbol] = {"quote": quote, "ts": now}
+                return quote
+        except Exception as ex:
+            logger.debug(f"yfinance fallback failed for {symbol}: {ex}")
 
         # Fallback calibrated reference
         ref = sec_info.get("ref_price", 150.0)
@@ -298,24 +319,53 @@ class DhanAutonomousSniperBot:
             return None
 
         # 5. MARKET OPEN SNIPER EXECUTION (09:16:05 - 15:10:00 IST)
-        # Lock opening range if delayed start
+        # Lock opening range if delayed start or restart
         if not self.opening_ranges:
+            try:
+                import yfinance as yf
+                tickers_map = {f"{s}.NS": s for s in self.tracked_symbols}
+                df_hist = yf.download(list(tickers_map.keys()), period="1d", interval="1m", progress=False)
+                for ticker, sym in tickers_map.items():
+                    try:
+                        h1 = float(df_hist["High"][ticker].iloc[0])
+                        l1 = float(df_hist["Low"][ticker].iloc[0])
+                        o1 = float(df_hist["Open"][ticker].iloc[0])
+                        c1 = float(df_hist["Close"][ticker].iloc[0])
+                        self.opening_ranges[sym] = OpeningCandleAnalysis(
+                            symbol=sym,
+                            h1=round(h1, 2),
+                            l1=round(l1, 2),
+                            open_price=round(o1, 2),
+                            close_price=round(c1, 2),
+                            volume=5000.0,
+                            wick_to_body_ratio=1.0,
+                            is_valid_breakout_range=True,
+                            rejection_reason=None,
+                        )
+                        logger.info(f"📊 Calibrated True 09:15 ORB Range: {sym} -> H1: ₹{h1:.2f} | L1: ₹{l1:.2f}")
+                    except Exception:
+                        pass
+            except Exception as e:
+                logger.debug(f"Historical 09:15 calibration failed: {e}")
+
+            # Fallback if any symbol missed
             for sym in self.tracked_symbols:
-                q = self.fetch_live_quote(sym)
-                ltp = q["ltp"]
-                h_def = round(ltp + 0.40, 2)
-                l_def = round(ltp - 0.40, 2)
-                self.opening_ranges[sym] = OpeningCandleAnalysis(
-                    symbol=sym,
-                    h1=h_def,
-                    l1=l_def,
-                    open_price=ltp,
-                    close_price=ltp,
-                    volume=1000.0,
-                    wick_to_body_ratio=1.0,
-                    is_valid_breakout_range=True,
-                    rejection_reason=None,
-                )
+                if sym not in self.opening_ranges:
+                    q = self.fetch_live_quote(sym)
+                    ltp = q["ltp"]
+                    h_def = round(ltp + 0.40, 2)
+                    l_def = round(ltp - 0.40, 2)
+                    self.opening_ranges[sym] = OpeningCandleAnalysis(
+                        symbol=sym,
+                        h1=h_def,
+                        l1=l_def,
+                        open_price=ltp,
+                        close_price=ltp,
+                        volume=1000.0,
+                        wick_to_body_ratio=1.0,
+                        is_valid_breakout_range=True,
+                        rejection_reason=None,
+                    )
 
         # Scan qualified symbols for ORB Breakout
         for sym in self.tracked_symbols:

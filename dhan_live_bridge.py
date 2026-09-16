@@ -8,8 +8,16 @@ Enforces the 3-Gate Variance Shield and keeps simulated and live broker authorit
 import json
 import logging
 import os
+import socket
 import time
 from typing import Any
+
+import urllib3.util.connection as urllib_conn
+
+# SEBI / DhanHQ API v2 Whitelist Invariant:
+# macOS defaults to dynamic IPv6, which causes DH-905 Invalid IP mismatch.
+# Forcing AF_INET routes all Dhan HTTP requests strictly over whitelisted primary IPv4 (152.59.152.111).
+urllib_conn.allowed_gai_family = lambda: socket.AF_INET
 
 try:
     from dhanhq import dhanhq

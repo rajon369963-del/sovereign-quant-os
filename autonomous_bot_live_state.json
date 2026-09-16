@@ -1,32 +1,59 @@
 {
-  "timestamp": "2026-09-16 06:02:16 IST",
-  "stage_label": "PRE_MARKET_STANDBY",
-  "message": "Pre-market standby (06:02:16 IST). Pre-open starts at 09:00 AM IST.",
-  "initial_capital": 1008.0,
-  "current_equity": 1008.0,
-  "total_return_pct": 0.0,
-  "daily_loss": 0.0,
-  "active_stage": 1,
-  "circuit_breaker_active": false,
-  "has_active_position": false,
-  "active_position": null,
-  "tracked_symbols": [
-    "TATASTEEL",
-    "SAIL",
-    "PNB",
-    "ASHOKLEY",
-    "ZOMATO"
-  ],
-  "execution_mode": "LIVE",
-  "premarket_calibrated": true,
-  "qualified_targets": [],
-  "macro_score": -0.385,
-  "macro_regime": "MEAN_REVERTING_OU",
-  "locked_orb_ranges": {
-    "TATASTEEL": "H1:150.4|L1:149.6",
-    "SAIL": "H1:125.4|L1:124.6",
-    "PNB": "H1:105.4|L1:104.6",
-    "ASHOKLEY": "H1:185.4|L1:184.6",
-    "ZOMATO": "H1:195.4|L1:194.6"
+  "timestamp": "2026-09-16 11:28:28 IST",
+  "stage_label": "BASKET_GUARDIAN_LIVE",
+  "message": "Active Legs: 0/4 | Unrealized PnL: \u20b9-0.20",
+  "total_unrealized_pnl": -0.2,
+  "live_quotes": {
+    "ZENSARTECH": 449.8
+  },
+  "legs": {
+    "TATASTEEL": {
+      "security_id": "3499",
+      "side": "SHORT",
+      "qty": 4,
+      "entry": 182.01,
+      "sl": 182.59,
+      "tp": 179.86,
+      "trail_trigger": 180.7,
+      "breakeven_sl": 181.68,
+      "is_trailed": false,
+      "closed": true
+    },
+    "SAIL": {
+      "security_id": "2963",
+      "side": "SHORT",
+      "qty": 5,
+      "entry": 172.66,
+      "sl": 173.5,
+      "tp": 169.5,
+      "trail_trigger": 171.0,
+      "breakeven_sl": 172.66,
+      "is_trailed": false,
+      "closed": true
+    },
+    "ASHOKLEY": {
+      "security_id": "212",
+      "side": "SHORT",
+      "qty": 5,
+      "entry": 157.18,
+      "sl": 158.0,
+      "tp": 153.0,
+      "trail_trigger": 155.0,
+      "breakeven_sl": 157.18,
+      "is_trailed": false,
+      "closed": true
+    },
+    "ZENSARTECH": {
+      "security_id": "1076",
+      "side": "LONG",
+      "qty": 2,
+      "entry": 449.9,
+      "sl": 449.9,
+      "tp": 468.0,
+      "trail_trigger": 458.0,
+      "breakeven_sl": 449.9,
+      "is_trailed": true,
+      "closed": true
+    }
   }
 }

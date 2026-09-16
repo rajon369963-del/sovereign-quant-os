@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-09-16 10:52:15 IST",
+  "results": [
+    {
+      "item": {
+        "symbol": "SAIL",
+        "security_id": "2963",
+        "qty": 5,
+        "side": "SELL",
+        "order_type": "MARKET",
+        "sl": 173.5,
+        "tp": 169.5
+      },
+      "response": {
+        "status": "ORDER_PLACED",
+        "result_class": "LIVE_ORDER_SUBMISSION",
+        "execution_mode": "LIVE",
+        "cl_ord_id": "DHAN_SAIL_36131569",
+        "broker_order_id": "34126091680701",
+        "data": {
+          "status": "success",
+          "remarks": "",
+          "data": {
+            "orderId": "34126091680701",
+            "orderStatus": "TRANSIT"
+          }
+        }
+      }
+    },
+    {
+      "item": {
+        "symbol": "ASHOKLEY",
+        "security_id": "212",
+        "qty": 5,
+        "side": "SELL",
+        "order_type": "MARKET",
+        "sl": 158.0,
+        "tp": 153.0
+      },
+      "response": {
+        "status": "ORDER_PLACED",
+        "result_class": "LIVE_ORDER_SUBMISSION",
+        "execution_mode": "LIVE",
+        "cl_ord_id": "DHAN_ASHO_36132691",
+        "broker_order_id": "23126091677701",
+        "data": {
+          "status": "success",
+          "remarks": "",
+          "data": {
+            "orderId": "23126091677701",
+            "orderStatus": "TRANSIT"
+          }
+        }
+      }
+    },
+    {
+      "item": {
+        "symbol": "ZENSARTECH",
+        "security_id": "1076",
+        "qty": 2,
+        "side": "BUY",
+        "order_type": "MARKET",
+        "sl": 444.0,
+        "tp": 468.0
+      },
+      "response": {
+        "status": "ORDER_PLACED",
+        "result_class": "LIVE_ORDER_SUBMISSION",
+        "execution_mode": "LIVE",
+        "cl_ord_id": "DHAN_ZENS_36133833",
+        "broker_order_id": "23126091677801",
+        "data": {
+          "status": "success",
+          "remarks": "",
+          "data": {
+            "orderId": "23126091677801",
+            "orderStatus": "TRANSIT"
+          }
+        }
+      }
+    }
+  ]
+}
