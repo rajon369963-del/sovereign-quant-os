@@ -1,0 +1,60 @@
+{
+  "phase": "PHASE_2_M1_INTERCONNECTION_SQUARED",
+  "timestamp_ns": 52993255167833,
+  "timestamp_iso": "2026-09-16T22:34:04+0530",
+  "hardware": "Apple Silicon M1 (ARM64 Darwin)",
+  "cache_line_size": 128,
+  "results": {
+    "test_1_dhan_l2_ingress": {
+      "ticks": 10000,
+      "total_ms": 274.736958,
+      "avg_us_per_tick": 27.4736958,
+      "status": "PASSED"
+    },
+    "test_2_m1_spsc_ring_buffer": {
+      "items": 50000,
+      "duration_s": 0.050956417,
+      "throughput_ops_sec": 981230.6858231418,
+      "status": "PASSED"
+    },
+    "test_3_duckdb_zero_copy": {
+      "rows": 10000,
+      "query_ms": 51.18475,
+      "analytics": {
+        "tick_count": 10000,
+        "mean_ofi": 0.0,
+        "cumulative_ofi": 0.0,
+        "mean_basis_drift": -12.36713456662591,
+        "mean_spread": 1.0,
+        "vwap": 3812.4150639484565,
+        "microprice_volatility": 0.008438261371884746
+      },
+      "status": "PASSED"
+    },
+    "test_4_sqlite_wal_concurrency": {
+      "threads": 10,
+      "ops": 5000,
+      "total_ms": 702.112,
+      "lock_errors": 0,
+      "status": "PASSED"
+    },
+    "test_5_headless_outbox_pacing": {
+      "drained": 5,
+      "status": "PASSED"
+    },
+    "test_6_readback_verification": {
+      "valid_status": "VERIFIED",
+      "tampered_status": "INTEGRITY_MISMATCH",
+      "dlq_intercepts": 1,
+      "status": "PASSED"
+    },
+    "test_7_dlq_dynamic_adaptation": {
+      "baseline_rate": 30,
+      "adapted_rate": 6,
+      "adapted_jitter": 3.0,
+      "adaptation_id": 1,
+      "status": "PASSED"
+    }
+  },
+  "verdict": "ALL_TESTS_PASSED_100_PERCENT"
+}
