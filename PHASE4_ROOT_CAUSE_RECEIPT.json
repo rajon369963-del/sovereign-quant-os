@@ -1,11 +1,11 @@
 {
   "phase": 4,
-  "timestamp": "2026-09-16T16:26:40Z",
+  "timestamp": "2026-09-16T18:07:25Z",
   "status": "ALL_TESTS_PASSED",
   "test_results": {
     "test_1_binary_tick_ingress": {
       "status": "PASSED",
-      "avg_tick_us": 0.5
+      "avg_tick_us": 0.615
     },
     "test_2_max_notional_gate": {
       "status": "PASSED"
@@ -29,8 +29,8 @@
       "status": "PASSED",
       "total_orders": 1000,
       "threads": 50,
-      "elapsed_ms": 11.27,
-      "journal_count": 192,
+      "elapsed_ms": 12.07,
+      "journal_count": 204,
       "events_count": 1007
     }
   },
@@ -43,7 +43,7 @@
     "circuit_breaker_state": "CLOSED",
     "primary_broker_failures": 0,
     "active_positions": {
-      "NIFTY 50": 6,
+      "NIFTY 50": 8,
       "RELIANCE": 10
     },
     "active_dedup_hashes": 47
