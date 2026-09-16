@@ -37,7 +37,7 @@ import threading
 import time
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 logging.basicConfig(
     level=logging.INFO,
@@ -98,13 +98,21 @@ TICK_STRUCT = struct.Struct('<IIfIff')
 
 @dataclass
 class MarketTick:
-    token: int
-    exchange_ts: int
-    ltp: float
-    volume: int
-    best_bid: float
-    best_ask: float
+    token: int = 0
+    exchange_ts: int = 0
+    ltp: float = 0.0
+    volume: int = 0
+    best_bid: float = 0.0
+    best_ask: float = 0.0
+    symbol: str = ""
+    timestamp: float = 0.0
     local_ts_ns: int = field(default_factory=time.perf_counter_ns)
+
+    def __post_init__(self):
+        if not self.exchange_ts and self.timestamp:
+            self.exchange_ts = int(self.timestamp)
+        if not self.token and self.symbol:
+            self.token = abs(hash(self.symbol)) % 100000
     
     @property
     def ofi(self) -> float:
@@ -174,7 +182,7 @@ class SEBI2026RiskGate:
                 return True
             return False
 
-    def validate_order(self, order: OrderIntent, current_ltp: float) -> Tuple[bool, str]:
+    def validate_order(self, order: OrderIntent, current_ltp: float) -> tuple[bool, str]:
         # 0. Physical Kill Switch Check
         if os.path.exists("/tmp/QUANT_KILL_SWITCH"):
             return False, "REJECTED_PHYSICAL_KILL_SWITCH_ACTIVE"
@@ -218,8 +226,7 @@ class SEBI2026RiskGate:
     def record_fill(self, pnl_delta: float = 0.0):
         self.total_trades_filled += 1
         self.cumulative_pnl += pnl_delta
-        if self.cumulative_pnl > self.peak_pnl:
-            self.peak_pnl = self.cumulative_pnl
+        self.peak_pnl = max(self.peak_pnl, self.cumulative_pnl)
 
 # =====================================================================
 # Multi-Broker Resilient Failover Dispatcher (Hacks 75 & 1-15)
@@ -237,7 +244,7 @@ class MultiBrokerFailoverDispatcher:
         self.max_failures_before_failover = 2
         self.simulated_failure_mode = False
 
-    def dispatch(self, order: OrderIntent) -> Tuple[bool, str, str, str]:
+    def dispatch(self, order: OrderIntent) -> tuple[bool, str, str, str]:
         """
         Returns: (success, assigned_broker, broker_order_id, err_message)
         """
@@ -263,9 +270,9 @@ class MultiBrokerFailoverDispatcher:
             # Fallback to secondary
             try:
                 broker_order_id = f"KITE-FAILOVER-{int(time.time()*1000)}-{os.urandom(3).hex()}"
-                return True, "ZERODHA", broker_order_id, f"FAILOVER_AFTER_PRIMARY_ERROR: {str(e)}"
+                return True, "ZERODHA", broker_order_id, f"FAILOVER_AFTER_PRIMARY_ERROR: {e!s}"
             except Exception as e2:
-                return False, "NONE", "", f"ALL_BROKERS_EXHAUSTED: {str(e2)}"
+                return False, "NONE", "", f"ALL_BROKERS_EXHAUSTED: {e2!s}"
 
 # =====================================================================
 # Single-Writer WAL Execution Ledger (Hacks 16-30)
@@ -400,9 +407,11 @@ class SovereignInterconnectionSquaredCortex:
         self.cb_trip_timestamp = 0.0
         self.cb_recovery_timeout_sec = 5.0
         
-        # Market Data Cache (Tokens -> MarketTick)
-        self.market_ticks: Dict[int, MarketTick] = {}
-        self.token_to_symbol: Dict[int, str] = {
+        # Market Data Cache (Tokens -> MarketTick & Symbols -> MarketTick)
+        self.tick_lock = threading.Lock()
+        self.market_ticks: dict[int, MarketTick] = {}
+        self.market_ticks_by_symbol: dict[str, MarketTick] = {}
+        self.token_to_symbol: dict[int, str] = {
             26000: "NIFTY 50",
             26009: "BANKNIFTY",
             2885: "RELIANCE",
@@ -410,16 +419,46 @@ class SovereignInterconnectionSquaredCortex:
             11536: "TCS"
         }
         self.symbol_to_token = {v: k for k, v in self.token_to_symbol.items()}
+        self.last_receipts: dict[str, ExecutionReceipt] = {}
         
         # Metrics
         self.processed_ticks = 0
         self.processed_orders = 0
-        self.active_positions: Dict[str, int] = {}
+        self.active_positions: dict[str, int] = {}
         
         logger.info("⚡ Sovereign Interconnection² Cortex initialized successfully.")
 
+    def start(self):
+        """Lifecycle start hook."""
+        logger.info("SovereignInterconnectionSquaredCortex operational.")
+
+    def stop(self):
+        """Lifecycle stop hook."""
+        self.shutdown()
+
+    def update_market_tick(self, tick: MarketTick, symbol: str | None = None):
+        """Streams live tick updates into cortex with thread safety."""
+        with self.tick_lock:
+            sym = symbol or self.token_to_symbol.get(tick.token)
+            if sym:
+                self.market_ticks_by_symbol[sym] = tick
+                if sym not in self.symbol_to_token:
+                    self.symbol_to_token[sym] = tick.token
+                    self.token_to_symbol[tick.token] = sym
+            self.market_ticks[tick.token] = tick
+            self.processed_ticks += 1
+
+    def submit_intent(self, intent: OrderIntent) -> str:
+        """Submits order intent and returns deterministic idempotency tag for bridge compatibility."""
+        receipt = self.submit_order(intent)
+        return receipt.idempotency_tag
+
+    def query_receipt(self, idempotency_tag: str) -> ExecutionReceipt | None:
+        """Queries receipt by idempotency tag from low-latency memory cache."""
+        return self.last_receipts.get(idempotency_tag)
+
     # --- Binary Tick Ingress (Hacks 4, 8, 31, 32) ---
-    def process_binary_tick_packet(self, packet_bytes: bytes) -> Optional[MarketTick]:
+    def process_binary_tick_packet(self, packet_bytes: bytes) -> MarketTick | None:
         """
         Zero-copy unpack of binary tick packets using pre-compiled struct.Struct.
         Executes in < 400 nanoseconds on Apple Silicon M1.
@@ -502,12 +541,14 @@ class SovereignInterconnectionSquaredCortex:
                 rejection_reason="CIRCUIT_BREAKER_OPEN",
                 latency_us=(time.perf_counter_ns() - start_ns) / 1000.0
             )
+            self.last_receipts[receipt.idempotency_tag] = receipt
             self.ledger.record_receipt(receipt)
             return receipt
 
         # 3. Resolve Current Market Price
         token = self.symbol_to_token.get(order.symbol, 0)
-        tick = self.market_ticks.get(token)
+        with self.tick_lock:
+            tick = self.market_ticks.get(token) or self.market_ticks_by_symbol.get(order.symbol)
         current_ltp = tick.ltp if tick else order.price
         if current_ltp <= 0.0:
             current_ltp = 100.0 # Safe default fallback
@@ -530,6 +571,7 @@ class SovereignInterconnectionSquaredCortex:
                 rejection_reason=reason,
                 latency_us=(time.perf_counter_ns() - start_ns) / 1000.0
             )
+            self.last_receipts[receipt.idempotency_tag] = receipt
             self.ledger.record_receipt(receipt)
             return receipt
 
@@ -551,6 +593,7 @@ class SovereignInterconnectionSquaredCortex:
                 rejection_reason=dispatch_msg,
                 latency_us=(time.perf_counter_ns() - start_ns) / 1000.0
             )
+            self.last_receipts[receipt.idempotency_tag] = receipt
             self.ledger.record_receipt(receipt)
             return receipt
 
@@ -577,10 +620,11 @@ class SovereignInterconnectionSquaredCortex:
             rejection_reason=dispatch_msg,
             latency_us=latency_us
         )
+        self.last_receipts[receipt.idempotency_tag] = receipt
         self.ledger.record_receipt(receipt)
         return receipt
 
-    def get_telemetry_snapshot(self) -> Dict[str, Any]:
+    def get_telemetry_snapshot(self) -> dict[str, Any]:
         return {
             "processed_ticks": self.processed_ticks,
             "processed_orders": self.processed_orders,

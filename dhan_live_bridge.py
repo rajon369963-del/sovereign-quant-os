@@ -32,11 +32,22 @@ try:
 except ImportError:
     dhanhq = None
 
-from unified_sovereign_execution_cortex import (
-    MarketTick,
-    OrderIntent,
-    UnifiedSovereignExecutionCortex,
-)
+try:
+    from sovereign_interconnection_squared_cortex import (
+        ExecutionReceipt,
+        MarketTick,
+        OrderIntent,
+        OrderStatus,
+        SovereignInterconnectionSquaredCortex,
+    )
+except ImportError:
+    from unified_sovereign_execution_cortex import (
+        MarketTick,
+        OrderIntent,
+    )
+    from unified_sovereign_execution_cortex import (
+        UnifiedSovereignExecutionCortex as SovereignInterconnectionSquaredCortex,
+    )
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DhanLiveBridge")
@@ -59,11 +70,11 @@ class DhanLiveBridge:
         self.dhan = None
         self.is_connected = False
 
-        # Phase 3: Wire to Unified Sovereign Execution Cortex (Single-Writer Engine)
-        self.ledger_db = str(PROJECT_DIR / "CANONICAL_LIVE_EXECUTION_LEDGER.sqlite")
-        self.cortex = UnifiedSovereignExecutionCortex(db_path=self.ledger_db)
+        # Phase 4: Wire to Sovereign Interconnection² Cortex (90k ops/sec Single-Writer Engine)
+        self.ledger_db = str(PROJECT_DIR / "TRADING_CANONICAL_SHA256_VAULT.sqlite")
+        self.cortex = SovereignInterconnectionSquaredCortex(db_path=self.ledger_db)
         self.cortex.start()
-        logger.info("✓ [PHASE 3 CHERRY-ON-TOP] UnifiedSovereignExecutionCortex wired to DhanLiveBridge.")
+        logger.info("✓ [PHASE 4 INTERCONNECTION²] SovereignInterconnectionSquaredCortex wired to DhanLiveBridge.")
 
         if self.client_id and self.access_token and dhanhq:
             try:
@@ -184,12 +195,12 @@ class DhanLiveBridge:
 
         # Ensure cortex has a live or calibrated tick for the symbol
         with self.cortex.tick_lock:
-            has_tick = symbol in self.cortex.market_ticks
+            has_tick = (symbol in getattr(self.cortex, "market_ticks_by_symbol", {})) or (symbol in getattr(self.cortex, "market_ticks", {}))
         if not has_tick:
             ref_p = float(price) if price > 0 else 200.0
             self.update_tick(symbol=symbol, ltp=ref_p)
 
-        # Step 1: Submit intent to Single-Writer Cortex
+        # Step 1: Submit intent to Sovereign Interconnection² Cortex (Sub-microsecond validation)
         intent = OrderIntent(
             strategy_id="SNIPER_TRIANGLE",
             symbol=symbol,
@@ -199,45 +210,32 @@ class DhanLiveBridge:
             price=float(price),
             client_id=self.client_id or "LAKHI_DAS_DHAN"
         )
-        tag = self.cortex.submit_intent(intent)
-
-        # Brief spin-wait for single writer thread to drain and commit
-        time.sleep(0.08)
-
-        # Step 2: Query Single-Writer Ledger for decision
-        conn = self.cortex.ledger._get_connection()
-        cur = conn.cursor()
-        cur.execute("SELECT order_id, status, rejection_reason, price FROM orders WHERE idempotency_tag = ?", (tag,))
-        row = cur.fetchone()
-
-        cur.execute("SELECT details FROM order_events WHERE event_type = 'IDEMPOTENCY_DUPLICATE_INTERCEPTED' AND details LIKE ? ORDER BY event_id DESC LIMIT 1", (f"%{tag}%",))
-        dup_row = cur.fetchone()
-        conn.close()
+        receipt = self.cortex.submit_order(intent)
+        tag = receipt.idempotency_tag
 
         # Check if duplicate intercept occurred
-        if dup_row:
+        if receipt.status == OrderStatus.DUPLICATE_BLOCKED:
             logger.warning(f"⚠️ [IDEMPOTENCY SHIELD] Duplicate intent intercepted for {symbol} | Tag: {tag}")
             return {
                 "status": "REJECTED",
                 "result_class": "IDEMPOTENCY_DUPLICATE_INTERCEPTED",
                 "execution_mode": "SHIELD_BLOCKED",
                 "cl_ord_id": tag,
-                "rejection_reason": dup_row[0]
+                "rejection_reason": receipt.rejection_reason
             }
 
-        if not row or row[1] == "REJECTED":
-            reason = row[2] if row else "PRE_TRADE_VARIANCE_SHIELD_BLOCKED"
-            logger.warning(f"⚠️ [VARIANCE SHIELD REJECTED] {side} {quantity} {symbol} @ {price} rejected: {reason}")
+        if receipt.status == OrderStatus.REJECTED:
+            logger.warning(f"⚠️ [VARIANCE SHIELD REJECTED] {side} {quantity} {symbol} @ {price} rejected: {receipt.rejection_reason}")
             return {
                 "status": "REJECTED",
                 "result_class": "VARIANCE_SHIELD_REJECTED",
                 "execution_mode": "SHIELD_BLOCKED",
                 "cl_ord_id": tag,
-                "rejection_reason": reason
+                "rejection_reason": receipt.rejection_reason
             }
 
-        order_id = row[0]
-        clamped_price = row[3]
+        order_id = receipt.order_id
+        clamped_price = receipt.price
 
         # Step 3: Approved - Dispatch to DhanHQ API if Live
         if not is_dry and self.is_connected and self.dhan:
