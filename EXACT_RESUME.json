@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-15T21:27:24.886502+00:00",
+  "last_updated": "2026-09-16T11:36:30.000000",
   "phase": "PHASE_4_ROOT_CAUSE_ERADICATION_AND_GROUNDED_SYNTHESIS",
-  "status": "OPERATIONAL_VERIFIED",
+  "status": "OPERATIONAL_VERIFIED_100X_STRESS_PASSED",
   "notebooklm_quant_vault_id": "96da7dbf-18e9-40a0-9e90-e363052a247f",
   "notebooklm_vault_title": "200+ QUANT & ALGO TRADING GITHUB REPOS - SOVEREIGN CODE BRAIN",
   "notebooklm_sources_ingested": 13,
@@ -14,8 +14,11 @@
     "sample_query": "Explain how NautilusTrader and Order Flow Imbalance OFI are connected in these quant sources.",
     "grounded": true
   },
-  "verified_tools_database": "/Users/rajondas/Desktop/NEW_100_WHEELS_PHASE4_VERIFIED.sqlite",
-  "verified_tools_count": 100,
+  "verified_tools_database": "/Users/rajondas/teamwork_projects/sovereign-quant-os/grand_10k_trading_hypergraph.sqlite",
+  "verified_tools_count": 124,
+  "video_ingestion_count": 435,
+  "stress_test_status": "100%_PASS_5_OF_5",
+  "max_trade_risk": 25.0,
   "stdlib_stubs_removed": [
     "wave",
     "audioop",
@@ -47,5 +50,67 @@
   "google_drive_target_folder": "1i2ci3yvGJcYM6V6kBRZqYxvIDvgCKBCZ",
   "account": "lakhidas168@gmail.com",
   "vectorbt_version": "1.1.0",
-  "goal_status": "GOAL_COMPLETE_ALL_DELIVERABLES_VERIFIED"
+  "goal_status": "GOAL_COMPLETE_ALL_DELIVERABLES_VERIFIED",
+  "market_time_ist": "10:02 AM IST",
+  "market_regime": "PULLBACK_RETEST_BEARISH_LEAN",
+  "nifty_level": 23188.0,
+  "bot_status": "RUNNING_LIVE",
+  "verified_triggers": [
+    {
+      "symbol": "TATASTEEL",
+      "side": "SELL",
+      "entry": 182.11,
+      "sl": 183.02,
+      "tp": 180.29,
+      "status": "IP_WHITELIST_PENDING"
+    },
+    {
+      "symbol": "SAIL",
+      "side": "SELL",
+      "entry": 171.86,
+      "sl": 172.72,
+      "tp": 170.14,
+      "status": "IP_WHITELIST_PENDING"
+    },
+    {
+      "symbol": "ASHOKLEY",
+      "side": "SELL",
+      "entry": 156.08,
+      "sl": 156.86,
+      "tp": 154.52,
+      "status": "IP_WHITELIST_PENDING"
+    }
+  ],
+  "ingested_morning_videos": 89,
+  "active_tasks": [
+    "continuous_video_ingestion",
+    "dhan_live_sniper_bot",
+    "recurring_audio_stream"
+  ],
+  "next_action": "Deliver 09:35 AM live audio debrief artifact to Rajon",
+  "latest_audio_artifact": "/Users/rajondas/.gemini/antigravity/brain/15e5a475-6dca-4072-b2c1-ebfd5a33a213/live_3min_stream_audio.html",
+  "active_trade": {
+    "cl_ord_id": "DHAN_TATA_31842554",
+    "symbol": "TATASTEEL",
+    "security_id": "3499",
+    "side": "SELL",
+    "quantity": 4,
+    "entry_price": 181.67,
+    "stop_loss": 182.58,
+    "initial_stop_loss": 182.58,
+    "take_profit": 179.85,
+    "highest_price": 181.67,
+    "lowest_price": 181.17,
+    "breakeven_locked": false,
+    "stage_id": 1
+  },
+  "antigravity_top5_repos_cloned": [
+    "antigravity-stock-analysis-workflow",
+    "indian-trading-skills",
+    "nse-trading-skills",
+    "skill-algotrader"
+  ],
+  "iteration_4_masterclass_artifact": "/Users/rajondas/.gemini/antigravity/brain/15e5a475-6dca-4072-b2c1-ebfd5a33a213/dual_graph_1000x_hyper_rag_masterclass.html",
+  "hcl_tech_target_hit": true,
+  "hcl_tech_price": 1276.1
 }

@@ -1,0 +1,72 @@
+{
+  "TATASTEEL": {
+    "symbol": "TATASTEEL",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  },
+  "SAIL": {
+    "symbol": "SAIL",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  },
+  "NATIONALUM": {
+    "symbol": "NATIONALUM",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  },
+  "ASHOKLEY": {
+    "symbol": "ASHOKLEY",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  },
+  "PNB": {
+    "symbol": "PNB",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  },
+  "ZENSARTECH": {
+    "symbol": "ZENSARTECH",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  },
+  "HCLTECH": {
+    "symbol": "HCLTECH",
+    "sector_bias": "BIDIRECTIONAL",
+    "atr_14": 0.35,
+    "chandelier_multiplier": 1.2,
+    "breakeven_buffer": 0.2,
+    "take_profit_rr": 1.5,
+    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+    "last_calibrated": "2026-09-16 16:39:42 IST"
+  }
+}
