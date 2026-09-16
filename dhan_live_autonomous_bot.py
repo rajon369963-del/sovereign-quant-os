@@ -16,6 +16,7 @@ import asyncio
 import datetime
 import json
 import logging
+import math
 import sys
 import time
 from pathlib import Path
@@ -47,6 +48,10 @@ STATE_FILE = PROJECT_DIR / "autonomous_bot_live_state.json"
 DB_PATH = PROJECT_DIR / "micro_canary_1k_ledger.sqlite"
 
 
+class QuoteAuthorityError(RuntimeError):
+    """Raised when LIVE execution has no fresh authoritative provider quote."""
+
+
 class DhanAutonomousSniperBot:
     def __init__(self, initial_capital: float = 1008.0, dry_run: bool = True):
         self.initial_capital = initial_capital
@@ -60,6 +65,7 @@ class DhanAutonomousSniperBot:
         self.is_running = True
         self.tracked_symbols = list(SNIPER_UNIVERSE.keys())
         self._quote_cache: dict[str, dict[str, Any]] = {}
+        self._quote_authority: dict[str, dict[str, Any]] = {}
 
         # Phase 2 Interconnected Engines
         self.screener = PremarketScreener(
@@ -123,6 +129,7 @@ class DhanAutonomousSniperBot:
             "active_position": summary["active_position"],
             "tracked_symbols": self.tracked_symbols,
             "execution_mode": "DRY_RUN" if self.dry_run else "LIVE",
+            "quote_authority": self._quote_authority,
             "premarket_calibrated": self.premarket_calibrated_today,
             "qualified_targets": qualified_symbols,
             "macro_score": self.macro_report.macro_score if self.macro_report else None,
@@ -132,35 +139,122 @@ class DhanAutonomousSniperBot:
         with open(STATE_FILE, "w", encoding="utf-8") as f:
             json.dump(state_payload, f, indent=2)
 
+    def _record_quote_authority(self, symbol: str, quote: dict[str, Any]) -> None:
+        self._quote_authority[symbol] = {
+            "source": quote.get("source"),
+            "security_id": quote.get("security_id"),
+            "provider_timestamp": quote.get("provider_timestamp"),
+            "received_at_epoch": quote.get("received_at_epoch"),
+            "age_seconds": quote.get("age_seconds"),
+            "decision_eligible": bool(quote.get("decision_eligible")),
+        }
+        if quote.get("error"):
+            self._quote_authority[symbol]["error"] = quote["error"]
+
     def fetch_live_quote(self, symbol: str) -> dict[str, Any]:
-        """Fetches live market quote with caching and fallback."""
+        """Fetch market data with explicit source authority; LIVE mode fails closed."""
         sec_info = SNIPER_UNIVERSE.get(symbol, {"security_id": "3499", "ref_price": 150.0})
-        sec_id = sec_info["security_id"]
+        sec_id = str(sec_info["security_id"])
         now = time.time()
 
-        if symbol in self._quote_cache and (now - self._quote_cache[symbol]["ts"]) < 3.0:
-            return self._quote_cache[symbol]["quote"]
+        cached = self._quote_cache.get(symbol)
+        if cached and (now - cached["ts"]) < 3.0:
+            quote = dict(cached["quote"])
+            quote["age_seconds"] = round(now - cached["ts"], 6)
+            if quote.get("source") == "LIVE_PROVIDER":
+                quote["source"] = "CACHE_LIVE_PROVIDER"
+            if not self.dry_run and quote.get("source") not in {"LIVE_PROVIDER", "CACHE_LIVE_PROVIDER"}:
+                quote["decision_eligible"] = False
+                quote["error"] = "non-authoritative cached quote rejected in LIVE mode"
+                self._record_quote_authority(symbol, quote)
+                raise QuoteAuthorityError(f"LIVE quote authority unavailable for {symbol}: cached source rejected")
+            self._record_quote_authority(symbol, quote)
+            return quote
 
+        provider_error = "provider quote unavailable"
         try:
-            raw = self.bridge.get_market_quote(str(sec_id), "NSE_EQ")
-            if raw and raw.get("status") == "SUCCESS" and "data" in raw:
+            raw = self.bridge.get_market_quote(sec_id, "NSE_EQ")
+            authoritative_envelope = (
+                isinstance(raw, dict)
+                and raw.get("status") == "SUCCESS"
+                and raw.get("result_class") == "LIVE_MARKET_QUOTE"
+                and raw.get("execution_mode") == "LIVE"
+                and raw.get("connection_authority") == "PRESENT"
+                and raw.get("is_simulated") is False
+                and isinstance(raw.get("data"), dict)
+            )
+            if authoritative_envelope:
                 qd = raw["data"]
-                if isinstance(qd, dict) and "last_price" in qd:
-                    ltp = float(qd.get("last_price", sec_info["ref_price"]))
-                    depth_buys = qd.get("depth", {}).get("buy", [])
-                    depth_sells = qd.get("depth", {}).get("sell", [])
-                    bid = float(depth_buys[0].get("price", ltp - 0.02) if depth_buys else ltp - 0.02)
-                    ask = float(depth_sells[0].get("price", ltp + 0.02) if depth_sells else ltp + 0.02)
-                    quote = {"ltp": ltp, "bid": bid, "ask": ask, "bids": depth_buys, "asks": depth_sells}
-                    self._quote_cache[symbol] = {"quote": quote, "ts": now}
-                    return quote
+                ltp = float(qd["last_price"])
+                depth = qd.get("depth")
+                depth_buys = depth.get("buy", []) if isinstance(depth, dict) else []
+                depth_sells = depth.get("sell", []) if isinstance(depth, dict) else []
+                if not math.isfinite(ltp) or ltp <= 0 or not depth_buys or not depth_sells:
+                    raise ValueError("malformed live quote: finite LTP and two-sided depth required")
+                bid = float(depth_buys[0]["price"])
+                ask = float(depth_sells[0]["price"])
+                if not all(math.isfinite(v) and v > 0 for v in (bid, ask)) or bid > ask:
+                    raise ValueError("malformed live quote: invalid bid/ask")
+                quote = {
+                    "ltp": ltp,
+                    "bid": bid,
+                    "ask": ask,
+                    "bids": depth_buys,
+                    "asks": depth_sells,
+                    "symbol": symbol,
+                    "security_id": sec_id,
+                    "source": "LIVE_PROVIDER",
+                    "provider_timestamp": qd.get("timestamp") or qd.get("last_trade_time") or qd.get("lastTradeTime"),
+                    "received_at_epoch": now,
+                    "age_seconds": 0.0,
+                    "decision_eligible": True,
+                }
+                self._quote_cache[symbol] = {"quote": quote, "ts": now}
+                self._record_quote_authority(symbol, quote)
+                return quote
+            if isinstance(raw, dict):
+                provider_error = (
+                    f"non-authoritative envelope status={raw.get('status')} "
+                    f"class={raw.get('result_class')} mode={raw.get('execution_mode')} "
+                    f"authority={raw.get('connection_authority')} simulated={raw.get('is_simulated')}"
+                )
         except Exception as e:
-            logger.debug(f"Live quote fetch fallback for {symbol}: {e}")
+            provider_error = f"provider quote error: {type(e).__name__}: {e}"
+            logger.debug(f"Live quote authority failure for {symbol}: {e}")
 
-        # Fallback calibrated reference
-        ref = sec_info.get("ref_price", 150.0)
-        quote = {"ltp": ref, "bid": round(ref - 0.02, 2), "ask": round(ref + 0.02, 2), "bids": [], "asks": []}
+        if not self.dry_run:
+            hold = {
+                "symbol": symbol,
+                "security_id": sec_id,
+                "source": "UNAVAILABLE",
+                "provider_timestamp": None,
+                "received_at_epoch": now,
+                "age_seconds": None,
+                "decision_eligible": False,
+                "error": provider_error,
+            }
+            self._record_quote_authority(symbol, hold)
+            raise QuoteAuthorityError(f"LIVE quote authority unavailable for {symbol}: {provider_error}")
+
+        # Explicit DRY_RUN only: calibrated synthetic reference remains truth-labelled.
+        ref = float(sec_info.get("ref_price", 150.0))
+        quote = {
+            "ltp": ref,
+            "bid": round(ref - 0.02, 2),
+            "ask": round(ref + 0.02, 2),
+            "bids": [],
+            "asks": [],
+            "symbol": symbol,
+            "security_id": sec_id,
+            "source": "SYNTHETIC_FALLBACK",
+            "provider_timestamp": None,
+            "received_at_epoch": now,
+            "age_seconds": 0.0,
+            "decision_eligible": True,
+            "error": provider_error,
+        }
         self._quote_cache[symbol] = {"quote": quote, "ts": now}
+        self._record_quote_authority(symbol, quote)
         return quote
 
     async def run_single_iteration(self) -> dict[str, Any] | None:
@@ -365,6 +459,10 @@ class DhanAutonomousSniperBot:
             try:
                 await self.run_single_iteration()
                 await asyncio.sleep(2)
+            except QuoteAuthorityError as e:
+                logger.error(f"MARKET_DATA_HOLD: {e}")
+                self.update_live_state("MARKET_DATA_HOLD", str(e))
+                await asyncio.sleep(5)
             except Exception as e:
                 logger.error(f"Error in autonomous sniper loop: {e}", exc_info=True)
                 await asyncio.sleep(5)
