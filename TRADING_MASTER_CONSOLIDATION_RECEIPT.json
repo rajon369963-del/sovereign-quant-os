@@ -1,0 +1,14 @@
+{
+  "timestamp_ist": "2026-09-16 17:05:14 IST",
+  "database_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/TRADING_CANONICAL_SHA256_VAULT.sqlite",
+  "total_registered_repos": 325,
+  "total_unique_sha256_files": 110249,
+  "total_duplicate_files_flagged": 31654,
+  "breakdown": {
+    "indian_quant_vault_repos": 120,
+    "cloned_trading_wheels_repos": 205,
+    "harvested_290_archives": 290,
+    "compound_cortex_modules": 9
+  },
+  "status": "CONSOLIDATION_CANONICAL_LEDGER_ACTIVE"
+}
