@@ -591,7 +591,7 @@ class PremarketScreener:
 
 
 if __name__ == "__main__":
-    screener = PremarketScreener(cash_equity=1008.0, base_leverage=5.0, max_trade_risk=3.75)
+    screener = PremarketScreener(cash_equity=1008.0, base_leverage=5.0, max_trade_risk=25.0)
     candidates = screener.screen()
     macro = screener.macro_engine.evaluate_macro_regime()
     print("================================================================================")
