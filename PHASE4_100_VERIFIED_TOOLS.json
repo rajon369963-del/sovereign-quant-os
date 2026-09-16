@@ -1,0 +1,802 @@
+[
+  {
+    "tool_id": "TOOL-001",
+    "name": "orjson",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 4.04,
+    "version": "3.12.0"
+  },
+  {
+    "tool_id": "TOOL-002",
+    "name": "json",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 6.71,
+    "version": "2.0.9"
+  },
+  {
+    "tool_id": "TOOL-003",
+    "name": "msgpack",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 4095.42,
+    "version": "1.2.2"
+  },
+  {
+    "tool_id": "TOOL-004",
+    "name": "cbor2",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 5962.08,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-005",
+    "name": "xxhash",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 3354.88,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-006",
+    "name": "mmh3",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 1445.83,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-007",
+    "name": "pydantic",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 14103.79,
+    "version": "2.13.5"
+  },
+  {
+    "tool_id": "TOOL-008",
+    "name": "struct",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 3.5,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-009",
+    "name": "hashlib",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 1414.54,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-010",
+    "name": "base64",
+    "category": "PARSING_SERIALIZATION",
+    "status": "PASSED",
+    "latency_us": 488.5,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-011",
+    "name": "talipp",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 35444.88,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-012",
+    "name": "ta",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 433724.83,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-013",
+    "name": "stockstats",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 1476.42,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-014",
+    "name": "mplfinance",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 260433.21,
+    "version": "0.12.10b0"
+  },
+  {
+    "tool_id": "TOOL-015",
+    "name": "yfinance",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 220164.5,
+    "version": "1.7.0"
+  },
+  {
+    "tool_id": "TOOL-016",
+    "name": "hftbacktest",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 340303.08,
+    "version": "2.4.4"
+  },
+  {
+    "tool_id": "TOOL-017",
+    "name": "math",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 1.79,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-018",
+    "name": "decimal",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 9.54,
+    "version": "1.70"
+  },
+  {
+    "tool_id": "TOOL-019",
+    "name": "bisect",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 2.04,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-020",
+    "name": "heapq",
+    "category": "MARKET_MICROSTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 3.33,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-021",
+    "name": "pyportfolioopt",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 955222.54,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-022",
+    "name": "arch",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 195735.83,
+    "version": "8.0.0"
+  },
+  {
+    "tool_id": "TOOL-023",
+    "name": "ffn",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 429772.96,
+    "version": "1.2.1"
+  },
+  {
+    "tool_id": "TOOL-024",
+    "name": "bt",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 12597.92,
+    "version": "1.2.3"
+  },
+  {
+    "tool_id": "TOOL-025",
+    "name": "scipy.optimize",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 2.42,
+    "version": "1.17.1"
+  },
+  {
+    "tool_id": "TOOL-026",
+    "name": "scipy.stats",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 455.46,
+    "version": "1.17.1"
+  },
+  {
+    "tool_id": "TOOL-027",
+    "name": "numpy",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 24.33,
+    "version": "2.2.6"
+  },
+  {
+    "tool_id": "TOOL-028",
+    "name": "pandas",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 142.42,
+    "version": "2.3.3"
+  },
+  {
+    "tool_id": "TOOL-029",
+    "name": "sklearn",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 1.46,
+    "version": "1.9.1"
+  },
+  {
+    "tool_id": "TOOL-030",
+    "name": "statsmodels",
+    "category": "PORTFOLIO_OPTIMIZATION",
+    "status": "PASSED",
+    "latency_us": 1.33,
+    "version": "0.15.0"
+  },
+  {
+    "tool_id": "TOOL-031",
+    "name": "circuitbreaker",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 396.62,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-032",
+    "name": "tenacity",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 25753.21,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-033",
+    "name": "threading",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 3.21,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-034",
+    "name": "multiprocessing",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 6.42,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-035",
+    "name": "concurrent.futures",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 2.17,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-036",
+    "name": "signal",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 1.42,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-037",
+    "name": "time",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 1.0,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-038",
+    "name": "datetime",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 5.29,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-039",
+    "name": "contextlib",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 1.29,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-040",
+    "name": "inspect",
+    "category": "REGULATORY_RESILIENCE",
+    "status": "PASSED",
+    "latency_us": 0.79,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-041",
+    "name": "duckdb",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 153661.0,
+    "version": "1.5.5"
+  },
+  {
+    "tool_id": "TOOL-042",
+    "name": "polars",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 290.12,
+    "version": "1.44.1"
+  },
+  {
+    "tool_id": "TOOL-043",
+    "name": "pyarrow",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 1.71,
+    "version": "25.0.1"
+  },
+  {
+    "tool_id": "TOOL-044",
+    "name": "sqlite3",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 37.21,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-045",
+    "name": "tinydb",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 2571.96,
+    "version": "4.9.0"
+  },
+  {
+    "tool_id": "TOOL-046",
+    "name": "peewee",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 3.04,
+    "version": "3.17.3"
+  },
+  {
+    "tool_id": "TOOL-047",
+    "name": "diskcache",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 3682.71,
+    "version": "5.6.3"
+  },
+  {
+    "tool_id": "TOOL-048",
+    "name": "cachetools",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 1130.42,
+    "version": "7.1.8"
+  },
+  {
+    "tool_id": "TOOL-049",
+    "name": "sortedcontainers",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 1659.25,
+    "version": "2.4.0"
+  },
+  {
+    "tool_id": "TOOL-050",
+    "name": "boltons",
+    "category": "HIGH_CONCURRENCY_STORAGE",
+    "status": "PASSED",
+    "latency_us": 1523.0,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-051",
+    "name": "httpx",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 49060.21,
+    "version": "0.28.1"
+  },
+  {
+    "tool_id": "TOOL-052",
+    "name": "aiohttp",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 142353.75,
+    "version": "3.9.3"
+  },
+  {
+    "tool_id": "TOOL-053",
+    "name": "websockets",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 1.54,
+    "version": "16.1.1"
+  },
+  {
+    "tool_id": "TOOL-054",
+    "name": "aiosqlite",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 2182.67,
+    "version": "0.22.1"
+  },
+  {
+    "tool_id": "TOOL-055",
+    "name": "uvicorn",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 15574.71,
+    "version": "0.53.0"
+  },
+  {
+    "tool_id": "TOOL-056",
+    "name": "fastapi",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 182316.33,
+    "version": "0.141.1"
+  },
+  {
+    "tool_id": "TOOL-057",
+    "name": "starlette",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 0.79,
+    "version": "1.6.0"
+  },
+  {
+    "tool_id": "TOOL-058",
+    "name": "asyncio",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 1.5,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-059",
+    "name": "socket",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 1.71,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-060",
+    "name": "urllib.parse",
+    "category": "ASYNC_NETWORKING",
+    "status": "PASSED",
+    "latency_us": 15.21,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-061",
+    "name": "numba",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 1.83,
+    "version": "0.67.0"
+  },
+  {
+    "tool_id": "TOOL-062",
+    "name": "sympy",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 173611.75,
+    "version": "1.14.0"
+  },
+  {
+    "tool_id": "TOOL-063",
+    "name": "hyperopt",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 133715.29,
+    "version": "0.3.0"
+  },
+  {
+    "tool_id": "TOOL-064",
+    "name": "optuna",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 148103.71,
+    "version": "5.0.0"
+  },
+  {
+    "tool_id": "TOOL-065",
+    "name": "random",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 2.38,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-066",
+    "name": "secrets",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 9.42,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-067",
+    "name": "itertools",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 2.25,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-068",
+    "name": "functools",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 0.92,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-069",
+    "name": "collections",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 2.92,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-070",
+    "name": "dataclasses",
+    "category": "MATH_MODELING",
+    "status": "PASSED",
+    "latency_us": 1.33,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-071",
+    "name": "fastmcp",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 425268.21,
+    "version": "4.0.3"
+  },
+  {
+    "tool_id": "TOOL-072",
+    "name": "structlog",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 55699.71,
+    "version": "26.1.0"
+  },
+  {
+    "tool_id": "TOOL-073",
+    "name": "loguru",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 8544.71,
+    "version": "0.7.3"
+  },
+  {
+    "tool_id": "TOOL-074",
+    "name": "rich",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 3.08,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-075",
+    "name": "click",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 1.46,
+    "version": "8.5.0"
+  },
+  {
+    "tool_id": "TOOL-076",
+    "name": "typer",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 18033.58,
+    "version": "0.27.2"
+  },
+  {
+    "tool_id": "TOOL-077",
+    "name": "tqdm",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 1.96,
+    "version": "4.70.1"
+  },
+  {
+    "tool_id": "TOOL-078",
+    "name": "prompt_toolkit",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 36987.33,
+    "version": "3.0.53"
+  },
+  {
+    "tool_id": "TOOL-079",
+    "name": "logging",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 4.71,
+    "version": "0.5.1.2"
+  },
+  {
+    "tool_id": "TOOL-080",
+    "name": "traceback",
+    "category": "OBSERVABILITY_TELEMETRY",
+    "status": "PASSED",
+    "latency_us": 1.62,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-081",
+    "name": "paramiko",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 49512.0,
+    "version": "5.0.0"
+  },
+  {
+    "tool_id": "TOOL-082",
+    "name": "scp",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 431.58,
+    "version": "0.16.1"
+  },
+  {
+    "tool_id": "TOOL-083",
+    "name": "minio",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 95563.46,
+    "version": "7.2.20"
+  },
+  {
+    "tool_id": "TOOL-084",
+    "name": "pathlib",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 66.54,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-085",
+    "name": "shutil",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 62.29,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-086",
+    "name": "tempfile",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 331.58,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-087",
+    "name": "glob",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 362.04,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-088",
+    "name": "tarfile",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 1.92,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-089",
+    "name": "zipfile",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 1.25,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-090",
+    "name": "gzip",
+    "category": "IO_INFRASTRUCTURE",
+    "status": "PASSED",
+    "latency_us": 37.08,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-091",
+    "name": "pytest",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 215165.21,
+    "version": "9.1.1"
+  },
+  {
+    "tool_id": "TOOL-092",
+    "name": "hypothesis",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 231325.62,
+    "version": "6.167.1"
+  },
+  {
+    "tool_id": "TOOL-093",
+    "name": "coverage",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 1.5,
+    "version": "7.16.0"
+  },
+  {
+    "tool_id": "TOOL-094",
+    "name": "unittest",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 1.67,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-095",
+    "name": "mock",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 7.29,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-096",
+    "name": "frozendict",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 6.79,
+    "version": "2.4.7"
+  },
+  {
+    "tool_id": "TOOL-097",
+    "name": "enum",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 1.79,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-098",
+    "name": "typing",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 0.67,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-099",
+    "name": "uuid",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 18.75,
+    "version": "builtin/module"
+  },
+  {
+    "tool_id": "TOOL-100",
+    "name": "os",
+    "category": "CHAOS_VERIFICATION",
+    "status": "PASSED",
+    "latency_us": 2.0,
+    "version": "builtin/module"
+  }
+]
