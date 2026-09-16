@@ -44,7 +44,7 @@ jobs:
           if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
             authority_commit="$(git merge-base HEAD origin/main)"
           else
-            authority_commit="$(git rev-parse HEAD^1)"
+            authority_commit="$(git merge-base HEAD origin/main 2>/dev/null || git rev-parse HEAD^1)"
           fi
           test -n "$authority_commit"
           python3 scripts/verify_showcase_identity.py \
