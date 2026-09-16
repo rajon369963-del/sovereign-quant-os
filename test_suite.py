@@ -166,7 +166,7 @@ def run_test_suite():
     # STAGE 7: END-TO-END PIPELINE & REAL READBACK PROOF
     # --------------------------------------------------------------------------
     print("\n▶ [STAGE 7/7] Full End-to-End Live Simulation & Physical Readback...")
-    final_db = "/Users/rajondas/.gemini/antigravity/scratch/antigravity_yolo_trading_engine/legacy_trading_ledger.sqlite"
+    final_db = "/tmp/legacy_trading_ledger.sqlite"
     if os.path.exists(final_db):
         os.remove(final_db)
 

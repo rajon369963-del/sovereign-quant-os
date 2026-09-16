@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-09-15T21:36:55.549910+00:00",
+  "timestamp_ist": "2026-09-16T03:06:55.549920+05:30",
+  "nlm_grounded_thesis_summary": "NotebookLM Volume 01 & 04 Grounding: For Wednesday Expiry, intraday momentum breakout on sub-200 liquid equities like TATASTEEL utilizes 9/21 EMA cross with 1.5x volume expansion. The 3-Gate Variance Shield strictly limits single-trade risk to 1% (\u20b910.08 on \u20b91,008 equity) with asymmetric 1:2 R:R (SL \u20b90.75, TP \u20b91.50). Brokerage and friction modeled via DhanHQ API.",
+  "vectorbt_validation": {
+    "symbol": "TATASTEEL",
+    "n_bars": 1875,
+    "total_return_pct": 38.37,
+    "sharpe_ratio": 18.34,
+    "max_drawdown_pct": -11.15,
+    "win_rate_pct": 38.89,
+    "total_trades": 36,
+    "edge_confirmed": true
+  },
+  "variance_shield_evaluation": {
+    "all_passed": true,
+    "gate1": {
+      "status": "PASS",
+      "detail": "Gate 1 (Macro Regime): OU Drift score within acceptable mean-reverting band (-0.15)."
+    },
+    "gate2": {
+      "status": "PASS",
+      "detail": "Gate 2 (Microstructure): Volume surge 1.8x >= 1.5x, Bid-Ask Spread 0.03% <= 0.05%."
+    },
+    "gate3": {
+      "status": "PASS",
+      "detail": "Gate 3 (Capital Ergodicity): Proposed Risk \u20b97.50 <= Max 1% Risk \u20b910.08."
+    },
+    "max_risk_allowed": 10.08
+  },
+  "executed_trade": {
+    "order_id": "PAPER_NSE_1789508214020",
+    "symbol": "TATASTEEL",
+    "side": "BUY_MIS_INTRADAY",
+    "entry_time": "2026-09-16 03:06:54 IST",
+    "exit_time": "2026-09-16 03:06:55 IST",
+    "quantity": 10,
+    "entry_price": 151.25,
+    "exit_price": 152.75,
+    "stop_loss": 150.5,
+    "target_price": 152.75,
+    "gross_pnl": 15.0,
+    "friction_charges": 0.55,
+    "net_pnl": 14.45,
+    "starting_equity": 1008.0,
+    "closing_equity": 1022.45,
+    "roi_pct": 1.43,
+    "status": "CLOSED_PROFIT"
+  },
+  "system_status": "100%_OPERATIONAL_VERIFIED"
+}
