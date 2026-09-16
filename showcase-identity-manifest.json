@@ -1,7 +1,7 @@
 {
   "version": 1,
   "claim_class": "SHOWCASE_REPO_ARTIFACT_IDENTITY",
-  "artifact_set_baseline_commit": "ed120c3649278207b51c30e39e284d2cf6063a47",
+  "artifact_set_baseline_commit": "b51545beaec65dd44c87fadbfdcc77bff2aaa488",
   "artifacts": [
     {
       "path": "llms.txt",
