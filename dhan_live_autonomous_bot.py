@@ -16,11 +16,8 @@ import asyncio
 import datetime
 import orjson
 import logging
-<<<<<<< HEAD
-import socket
-=======
 import math
->>>>>>> origin/main
+import socket
 import sys
 import time
 from pathlib import Path
@@ -347,7 +344,8 @@ class DhanAutonomousSniperBot:
         hour, minute, second = now_ist.hour, now_ist.minute, now_ist.second
 
         # Regularly sync physical broker equity
-        self.engine.sync_broker_equity()
+        if hasattr(self.engine, "sync_broker_equity"):
+            self.engine.sync_broker_equity()
 
         # Ingest dynamic alpha signal from continuous research daemon
         alpha_signal_path = PROJECT_DIR / "live_macro_alpha_signal.json"
@@ -369,20 +367,22 @@ class DhanAutonomousSniperBot:
                         self.macro_report.regime = alpha_sig.get("macro_bias", self.macro_report.regime)
                     
                     # Interconnect alpha tactics with active positions
-                    for sym, pos in self.engine.active_positions.items():
-                        tactics = alpha_sig.get("active_tactics", {}).get(sym)
-                        if tactics:
-                            target_tp = tactics.get("target_take_profit")
-                            if target_tp and target_tp > pos.get("entry_price", 0):
-                                pos["take_profit"] = target_tp
+                    if hasattr(self.engine, "active_positions") and isinstance(self.engine.active_positions, dict):
+                        for sym, pos in self.engine.active_positions.items():
+                            tactics = alpha_sig.get("active_tactics", {}).get(sym)
+                            if tactics:
+                                target_tp = tactics.get("target_take_profit")
+                                if target_tp and target_tp > pos.get("entry_price", 0):
+                                    pos["take_profit"] = target_tp
             except Exception as e:
                 logger.debug(f"Alpha signal ingestion error: {e}")
 
 
         # Check square-off time (15:10 IST)
         if self.engine.is_square_off_time():
-            if self.squared_off_today:
-                self.update_live_state("SQUARED_OFF", "3:10 PM square-off executed. Standing by post-market.")
+            if getattr(self, "squared_off_today", False):
+                if hasattr(self, "update_live_state"):
+                    self.update_live_state("SQUARED_OFF", "3:10 PM square-off executed. Standing by post-market.")
                 return None
 
             self.squared_off_today = True
@@ -390,7 +390,7 @@ class DhanAutonomousSniperBot:
 
             # Step 1: Reconcile and close all positions directly from DhanHQ physical broker reality
             physically_closed = set()
-            if self.bridge.is_connected and not self.dry_run and self.bridge.dhan:
+            if getattr(self.bridge, "is_connected", False) and not self.dry_run and getattr(self.bridge, "dhan", None):
                 try:
                     pos_resp = self.bridge.dhan.get_positions()
                     if pos_resp and pos_resp.get("status") == "success":
@@ -426,16 +426,25 @@ class DhanAutonomousSniperBot:
                     logger.error(f"Error during broker physical position square-off: {bpe}")
 
             # Step 2: Clear internal engine positions and record closure (prevent duplicate broker orders)
-            for sym in list(self.engine.active_positions.keys()):
-                q = self.fetch_live_quote(sym)
-                live_p = q.get("ltp", 100.0)
-                await self.engine.close_position(
-                    live_p,
-                    symbol=sym,
-                    reason="TIME_CUTOFF_0310_PM",
-                    dispatch_broker_order=(sym not in physically_closed),
-                )
-            self.engine.active_positions.clear()
+            if hasattr(self.engine, "active_position") and self.engine.active_position:
+                pos = self.engine.active_position
+                sym = pos.get("symbol") if isinstance(pos, dict) else None
+                if sym:
+                    q = self.fetch_live_quote(sym)
+                    live_p = q.get("ltp", 100.0)
+                    await self.engine.close_position(live_p, reason="TIME_CUTOFF_0310_PM")
+                self.engine.active_position = None
+            elif hasattr(self.engine, "active_positions") and isinstance(self.engine.active_positions, dict):
+                for sym in list(self.engine.active_positions.keys()):
+                    q = self.fetch_live_quote(sym)
+                    live_p = q.get("ltp", 100.0)
+                    await self.engine.close_position(
+                        live_p,
+                        symbol=sym,
+                        reason="TIME_CUTOFF_0310_PM",
+                        dispatch_broker_order=(sym not in physically_closed),
+                    )
+                self.engine.active_positions.clear()
 
             self.update_live_state("SQUARED_OFF", "All physical and internal positions closed before 03:15 PM RMS cutoff. Zero residue.")
             logger.info("✅ 3:10 PM Square-off routine completed successfully. Zero RMS residue.")
