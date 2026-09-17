@@ -56,9 +56,9 @@ logger = logging.getLogger("DhanLiveBridge")
 class DhanLiveBridge:
     def __init__(self, client_id: str | None = None, access_token: str | None = None, dry_run: bool = False):
         self.dry_run = dry_run
-        self.client_id = client_id or os.environ.get("DHAN_CLIENT_ID", "")
-        self.access_token = access_token or os.environ.get("DHAN_ACCESS_TOKEN", "")
-        if not self.client_id or not self.access_token:
+        self.client_id = os.environ.get("DHAN_CLIENT_ID", "") if client_id is None else client_id
+        self.access_token = os.environ.get("DHAN_ACCESS_TOKEN", "") if access_token is None else access_token
+        if client_id is None and access_token is None and (not self.client_id or not self.access_token):
             env_path = os.path.expanduser("~/teamwork_projects/sovereign-quant-os/.env.dhan")
             if os.path.exists(env_path):
                 with open(env_path) as f:
@@ -168,7 +168,7 @@ class DhanLiveBridge:
             return self._simulated_envelope(
                 "SIMULATED_ACCOUNT_SNAPSHOT",
                 client_id=self.client_id or "AWAITING_INPUT",
-                simulated_balance_hint=1008.00,
+                simulated_balance_hint=1.00,
                 note="Awaiting DHAN_CLIENT_ID & DHAN_ACCESS_TOKEN from web.dhan.co",
             )
         try:
@@ -192,7 +192,7 @@ class DhanLiveBridge:
             return self._simulated_envelope(
                 "SIMULATED_MARKET_QUOTE",
                 security_id=security_id,
-                simulated_ltp_hint=183.74,
+                simulated_ltp_hint=684.85,
             )
         try:
             quote = self.dhan.quote_data(security_id=security_id, exchange_segment=exchange_segment)
@@ -205,6 +205,46 @@ class DhanLiveBridge:
                 "data": quote,
             }
         except Exception as e:
+            return {"status": "ERROR", "error": str(e)}
+
+    def place_canary_order(self, symbol: str, security_id: str, quantity: int = 1, price: float = 0.0) -> dict[str, Any]:
+        """Place a live micro-order only when explicit broker authority is present."""
+        if not self.is_connected or not self.dhan:
+            logger.info(f"[SIMULATION] Micro order: BUY {quantity} {symbol} @ market. No broker authority.")
+            return self._simulated_envelope(
+                "SIMULATED_ORDER",
+                symbol=symbol,
+                quantity=quantity,
+                est_risk=1.00,
+            )
+        try:
+            order_resp = self.dhan.place_order(
+                security_id=security_id,
+                exchange_segment=self.dhan.NSE,
+                transaction_type=self.dhan.BUY,
+                quantity=quantity,
+                order_type=self.dhan.MARKET,
+                product_type=self.dhan.CNC,
+                price=price,
+            )
+            broker_order_id = None
+            if isinstance(order_resp, dict):
+                broker_order_id = (
+                    order_resp.get("orderId")
+                    or order_resp.get("order_id")
+                    or (order_resp.get("data", {}).get("orderId") if isinstance(order_resp.get("data"), dict) else None)
+                )
+            return {
+                "status": "ORDER_PLACED",
+                "result_class": "LIVE_ORDER_SUBMISSION",
+                "execution_mode": "LIVE",
+                "connection_authority": "PRESENT",
+                "is_simulated": False,
+                "broker_order_id": broker_order_id,
+                "data": order_resp,
+            }
+        except Exception as e:
+            logger.error(f"Failed to place order: {e}")
             return {"status": "ERROR", "error": str(e)}
 
     def get_positions(self) -> dict[str, Any]:

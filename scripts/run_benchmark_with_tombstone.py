@@ -8,8 +8,11 @@ import argparse
 import datetime
 import hashlib
 import os
+import shlex
 import subprocess
 import sys
+
+import orjson
 
 
 def get_git_output(cmd):
@@ -82,10 +85,9 @@ def main():
     print(f"⚡ [tombstone-wrapper] Initial tombstone persisted: {args.status_output}")
 
     with open(args.stdout_log, "w") as out_f, open(args.stderr_log, "w") as err_f:
-        cmd_args = shlex.split(args.benchmark_cmd) if isinstance(args.benchmark_cmd, str) else args.benchmark_cmd
         proc = subprocess.Popen(
-            cmd_args,
-            shell=False,
+            args.benchmark_cmd,
+            shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
