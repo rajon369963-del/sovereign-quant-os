@@ -43,8 +43,26 @@
     "backtesting",
     "fyers-apiv3",
     "kiteconnect",
-    "vectorbt"
+    "vectorbt",
+    "orjson",
+    "pybase64",
+    "httpx"
   ],
+  "sovereign_wheels_milestone_3": {
+    "status": "COMPLETED_VERIFIED",
+    "target_repo": "sovereign-quant-os",
+    "wheels": {
+      "orjson": "stdlib json replaced across hot-paths (bots, bridges, cortexes, outbox)",
+      "pybase64": "stdlib base64 replaced across 27 audio and artifact generators",
+      "duckdb": "pandas read_sql_query replaced in streamlit_live_pnl_dashboard.py",
+      "httpx": "urllib.request replaced in alpha daemon, news ingestor, paper trader"
+    },
+    "test_suites_verified": [
+      "test_friday_hardening_regression_suite.py (14/14 PASS)",
+      "test_phase2_m1_interconnection_squared_benchmark.py (7/7 PASS)"
+    ],
+    "completed_at": "2026-09-17T20:21:00.000000"
+  },
   "live_bot_pid": 31654,
   "capital_inr": 1008.0,
   "google_drive_target_folder": "1i2ci3yvGJcYM6V6kBRZqYxvIDvgCKBCZ",

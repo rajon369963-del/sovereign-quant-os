@@ -13,7 +13,7 @@ Rebates, and Shoonya Zero-Brokerage Indian Regulatory Tax Accounting.
 import os
 import sys
 import time
-import json
+import orjson
 import sqlite3
 import random
 from datetime import datetime, timezone, timedelta
@@ -106,7 +106,7 @@ def execute_interactive_paper_trade(symbol="BTC/USDT", dry_run_cycles=3, venue_o
 
     # 1. Load current capital
     with open(STATE_FILE) as f:
-        state = json.load(f)
+        state = orjson.loads(f.read())
     capital = state["capital"]
     print(f"💰 {C_BOLD}Active Portfolio Capital:{C_RESET} {C_GREEN}₹{capital:,.2f}{C_RESET} (Starting: ₹1,000.00 | Net ROI: {C_GREEN}+{(capital-1000)/10:+.1f}%{C_RESET})")
 
@@ -255,7 +255,7 @@ def execute_interactive_paper_trade(symbol="BTC/USDT", dry_run_cycles=3, venue_o
     state["winning_trades"] += sum(1 for r in executed_trades if r["win"])
     state["total_pnl"] = round(state["total_pnl"] + sum(r["net_pnl_inr"] for r in executed_trades), 2)
     with open(STATE_FILE, "w") as f:
-        json.dump(state, f, indent=2)
+        f.write(orjson.dumps(state, option=orjson.OPT_INDENT_2).decode("utf-8"))
 
     print(f"\n{C_CYAN}{C_BOLD}{'='*85}{C_RESET}")
     print(f"🎉 {C_BOLD}PRE-TRADE TCA LIVE EXECUTION BURST COMPLETED!{C_RESET}")

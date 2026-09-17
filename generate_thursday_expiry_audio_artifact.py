@@ -9,7 +9,7 @@ Embeds audio into an interactive HTML artifact conforming to:
 - hi-IN-MadhurNeural voice
 """
 
-import base64
+import pybase64 as base64
 import subprocess
 from pathlib import Path
 

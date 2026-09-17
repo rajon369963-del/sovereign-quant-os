@@ -10,7 +10,7 @@ Enforces Zero Audio Disk Bloat by purging ephemeral mp3 bytes.
 """
 
 import asyncio
-import base64
+import pybase64 as base64
 import os
 import subprocess
 from pathlib import Path

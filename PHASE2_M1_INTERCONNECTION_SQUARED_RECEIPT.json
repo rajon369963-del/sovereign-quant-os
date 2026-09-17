@@ -1,25 +1,25 @@
 {
   "phase": "PHASE_2_M1_INTERCONNECTION_SQUARED",
-  "timestamp_ns": 52993255167833,
-  "timestamp_iso": "2026-09-16T22:34:04+0530",
+  "timestamp_ns": 131406499742625,
+  "timestamp_iso": "2026-09-17T20:20:57+0530",
   "hardware": "Apple Silicon M1 (ARM64 Darwin)",
   "cache_line_size": 128,
   "results": {
     "test_1_dhan_l2_ingress": {
       "ticks": 10000,
-      "total_ms": 274.736958,
-      "avg_us_per_tick": 27.4736958,
+      "total_ms": 375.225708,
+      "avg_us_per_tick": 37.522570800000004,
       "status": "PASSED"
     },
     "test_2_m1_spsc_ring_buffer": {
       "items": 50000,
-      "duration_s": 0.050956417,
-      "throughput_ops_sec": 981230.6858231418,
+      "duration_s": 0.138926959,
+      "throughput_ops_sec": 359901.349312627,
       "status": "PASSED"
     },
     "test_3_duckdb_zero_copy": {
       "rows": 10000,
-      "query_ms": 51.18475,
+      "query_ms": 113.22775,
       "analytics": {
         "tick_count": 10000,
         "mean_ofi": 0.0,
@@ -34,7 +34,7 @@
     "test_4_sqlite_wal_concurrency": {
       "threads": 10,
       "ops": 5000,
-      "total_ms": 702.112,
+      "total_ms": 1477.303083,
       "lock_errors": 0,
       "status": "PASSED"
     },

@@ -6,7 +6,7 @@ Generates the definitive Bollywood x Hollywood cinematic audio masterclass
 using voice hi-IN-SwaraNeural at default 3.0x speed with pitch preservation.
 """
 
-import base64
+import pybase64 as base64
 import os
 import subprocess
 import sys

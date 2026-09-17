@@ -10,12 +10,10 @@ for sub-second consumption by the Dhan Live Autonomous Bot.
 """
 
 import datetime
-import json
 import re
 import sys
 import time
 import urllib.parse
-import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -48,9 +46,9 @@ def fetch_google_news_stream():
         encoded_q = urllib.parse.quote(q)
         url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(req, timeout=3) as resp:
-                xml_data = resp.read()
+            resp = httpx.get(url, headers={"User-Agent": USER_AGENT}, timeout=3.0)
+            if resp.status_code == 200:
+                xml_data = resp.content
                 root = ET.fromstring(xml_data)
                 for item in root.findall(".//item")[:5]:
                     title = item.find("title").text if item.find("title") is not None else ""
@@ -105,9 +103,9 @@ def fetch_youtube_live_streams():
         encoded_q = urllib.parse.quote(q)
         url = f"https://www.youtube.com/results?search_query={encoded_q}"
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(req, timeout=3) as resp:
-                html = resp.read().decode("utf-8", errors="ignore")
+            resp = httpx.get(url, headers={"User-Agent": USER_AGENT}, timeout=3.0)
+            if resp.status_code == 200:
+                html = resp.text
                 
                 # High-speed linear scan avoiding ReDoS
                 for m in re.finditer(r'\"videoRenderer\":\{\"videoId\":\"([^\"]+)\"', html):
@@ -180,9 +178,8 @@ def sync_and_synthesize():
     
     if FEED_FILE.exists():
         try:
-            with open(FEED_FILE, "r", encoding="utf-8") as f:
-                existing = json.load(f)
-                feed_data["continuous_feed_queue"] = existing.get("continuous_feed_queue", [])
+            existing = orjson.loads(FEED_FILE.read_bytes())
+            feed_data["continuous_feed_queue"] = existing.get("continuous_feed_queue", [])
         except Exception:
             pass
             
@@ -220,46 +217,44 @@ def sync_and_synthesize():
     }
     
     # Atomic write to LIVE_YOUTUBE_MACRO_FEED_STREAM.json
-    with open(FEED_FILE, "w", encoding="utf-8") as f:
-        json.dump(feed_data, f, indent=2)
+    FEED_FILE.write_bytes(orjson.dumps(feed_data, option=orjson.OPT_INDENT_2))
         
     # Read active positions from bot state to generate tactical updates
     active_tactics = {}
     if STATE_FILE.exists():
         try:
-            with open(STATE_FILE, "r", encoding="utf-8") as f:
-                state_data = json.load(f)
-                active_pos_list = state_data.get("active_positions", [])
-                for pos in active_pos_list:
-                    sym = pos.get("symbol")
-                    entry = pos.get("entry_price", 0)
-                    sl = pos.get("stop_loss", 0)
-                    tp = pos.get("take_profit", 0)
-                    
-                    if sym == "PNB":
-                        # PNB upward momentum target expansion
-                        active_tactics[sym] = {
-                            "support": 118.50,
-                            "trailing_stop": max(sl, 118.55),
-                            "target_take_profit": 120.13,
-                            "status": "PROFIT_RATCHET_ACTIVE"
-                        }
-                    elif sym == "RBLBANK":
-                        # RBL Bank trailing locked
-                        active_tactics[sym] = {
-                            "support": 407.50,
-                            "trailing_stop": max(sl, 408.56),
-                            "target_take_profit": 411.07,
-                            "status": "PROTECTED_GREEN"
-                        }
-                    elif sym == "TATASTEEL":
-                        # Tata steel steel sector momentum
-                        active_tactics[sym] = {
-                            "support": 183.80,
-                            "trailing_stop": max(sl, 183.65),
-                            "target_take_profit": 185.95,
-                            "status": "ACCUMULATING"
-                        }
+            state_data = orjson.loads(STATE_FILE.read_bytes())
+            active_pos_list = state_data.get("active_positions", [])
+            for pos in active_pos_list:
+                sym = pos.get("symbol")
+                entry = pos.get("entry_price", 0)
+                sl = pos.get("stop_loss", 0)
+                tp = pos.get("take_profit", 0)
+                
+                if sym == "PNB":
+                    # PNB upward momentum target expansion
+                    active_tactics[sym] = {
+                        "support": 118.50,
+                        "trailing_stop": max(sl, 118.55),
+                        "target_take_profit": 120.13,
+                        "status": "PROFIT_RATCHET_ACTIVE"
+                    }
+                elif sym == "RBLBANK":
+                    # RBL Bank trailing locked
+                    active_tactics[sym] = {
+                        "support": 407.50,
+                        "trailing_stop": max(sl, 408.56),
+                        "target_take_profit": 411.07,
+                        "status": "PROTECTED_GREEN"
+                    }
+                elif sym == "TATASTEEL":
+                    # Tata steel steel sector momentum
+                    active_tactics[sym] = {
+                        "support": 183.80,
+                        "trailing_stop": max(sl, 183.65),
+                        "target_take_profit": 185.95,
+                        "status": "ACCUMULATING"
+                    }
         except Exception:
             pass
             
@@ -278,8 +273,7 @@ def sync_and_synthesize():
         "anti_ip_ban_enforced": True
     }
     
-    with open(ALPHA_SIGNAL_FILE, "w", encoding="utf-8") as f:
-        json.dump(alpha_signal, f, indent=2)
+    ALPHA_SIGNAL_FILE.write_bytes(orjson.dumps(alpha_signal, option=orjson.OPT_INDENT_2))
         
     print(f"[{now_str}] Sync complete: {len(yt_items)} YouTube streams, {len(news_items)} live news articles ingested.")
 

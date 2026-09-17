@@ -13,7 +13,6 @@ Production-Grade Implementation of the 9 Google Deep Researches:
 """
 
 import hashlib
-import json
 import logging
 import os
 import queue
@@ -22,7 +21,7 @@ import threading
 import time
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 import duckdb
 
@@ -148,7 +147,7 @@ class Phase2DeterministicRiskEngine:
         threshold = max(0.40 * ltp, 20.0)
         return abs(price - ltp) <= threshold
 
-    def evaluate_intent(self, intent: Phase2OrderIntent, ltp: float) -> Tuple[bool, str, bool]:
+    def evaluate_intent(self, intent: Phase2OrderIntent, ltp: float) -> tuple[bool, str, bool]:
         """
         Returns: (passed, reason, is_exempt)
         """
@@ -248,7 +247,7 @@ class CryptographicHashChainedLedger:
                 item = self.write_queue.get(timeout=0.1)
                 epoch, intent_id, event_type, state, payload_dict, ts_ns = item
                 
-                payload_str = json.dumps(payload_dict, sort_keys=True)
+                payload_str = orjson.dumps(payload_dict, option=orjson.OPT_SORT_KEYS).decode('utf-8')
                 raw = f"{epoch}:{intent_id}:{event_type}:{state}:{payload_str}:{self.last_hash}:{ts_ns}"
                 event_hash = hashlib.sha256(raw.encode('utf-8')).hexdigest()
                 prev_hash = self.last_hash
@@ -268,10 +267,10 @@ class CryptographicHashChainedLedger:
                 logger.error(f"LedgerWriter Error: {e}")
         conn.close()
 
-    def commit_event(self, epoch: int, intent_id: str, event_type: str, state: str, payload: Dict[str, Any]):
+    def commit_event(self, epoch: int, intent_id: str, event_type: str, state: str, payload: dict[str, Any]):
         self.write_queue.put((epoch, intent_id, event_type, state, payload, time.perf_counter_ns()))
 
-    def verify_integrity(self) -> Tuple[bool, int, str]:
+    def verify_integrity(self) -> tuple[bool, int, str]:
         """
         Audits every link in the SHA-256 hash chain from seq 1 to N.
         Returns: (is_valid, total_checked, message)
@@ -319,12 +318,12 @@ class Phase2ExecutionGateway:
     """
     def __init__(self, ledger: CryptographicHashChainedLedger):
         self.ledger = ledger
-        self.active_outbox: Dict[str, Phase2OrderIntent] = {}
-        self.order_states: Dict[str, OrderLifecycleState] = {}
-        self.broker_order_ids: Dict[str, str] = {}
+        self.active_outbox: dict[str, Phase2OrderIntent] = {}
+        self.order_states: dict[str, OrderLifecycleState] = {}
+        self.broker_order_ids: dict[str, str] = {}
         self.simulated_timeout_trigger = False
 
-    def execute_intent(self, intent: Phase2OrderIntent, broker_name: str = "DHANHQ") -> Tuple[OrderLifecycleState, str]:
+    def execute_intent(self, intent: Phase2OrderIntent, broker_name: str = "DHANHQ") -> tuple[OrderLifecycleState, str]:
         # 1. Transactional Outbox Commit Locally First
         self.active_outbox[intent.intent_id] = intent
         self.order_states[intent.intent_id] = OrderLifecycleState.OUTBOX_COMMITTED
@@ -363,7 +362,7 @@ class Phase2ExecutionGateway:
         )
         return OrderLifecycleState.SUBMITTED, broker_order_id
 
-    def reconcile_unknown_outcomes(self) -> Dict[str, str]:
+    def reconcile_unknown_outcomes(self) -> dict[str, str]:
         """
         Reconciliation Loop: queries broker REST for orders stuck in ACK_UNKNOWN.
         """
@@ -395,7 +394,7 @@ class Phase2DuckDBAnalyticsEngine:
         self.sqlite_path = sqlite_path
         self.duck_conn = duckdb.connect()
 
-    def get_ledger_summary(self) -> Dict[str, Any]:
+    def get_ledger_summary(self) -> dict[str, Any]:
         query = f"""
             INSTALL sqlite;
             LOAD sqlite;
@@ -446,7 +445,7 @@ class Phase2DeterministicExecutionCortex:
         quantity: int,
         price: float,
         current_ltp: float
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         # 1. Sequence Intent
         intent = self.sequencer.generate_intent(
             strategy_id, symbol, side, order_type, quantity, price

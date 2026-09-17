@@ -15,7 +15,7 @@ covering the 2026 India Agentic Stack:
 import os
 import sys
 import subprocess
-import base64
+import pybase64 as base64
 import time
 from pathlib import Path
 

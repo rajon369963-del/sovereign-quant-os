@@ -10,11 +10,9 @@ Runs as an autonomous background service in Sovereign Quant OS.
 """
 
 import datetime
-import json
 import sqlite3
 import sys
 import time
-import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -45,10 +43,11 @@ def fetch_rss_headlines():
     headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
     for source, url in FEEDS:
         try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=8) as resp:
-                xml_data = resp.read()
-                root = ET.fromstring(xml_data)
+            with httpx.Client(timeout=8.0, headers=headers) as client:
+                resp = client.get(url)
+                if resp.status_code == 200:
+                    xml_data = resp.content
+                    root = ET.fromstring(xml_data)
                 for item in root.findall(".//item")[:5]:
                     title = item.findtext("title", "").strip()
                     link = item.findtext("link", "").strip()
@@ -111,7 +110,7 @@ def update_hypergraphs_with_news(headlines):
                 h["title"][:90],
                 "Breaking market catalyst from " + str(h.get("source", "")), 
                 h["desc"],
-                json.dumps({"source": h["source"], "link": h["link"], "timestamp": now_iso})
+                orjson.dumps({"source": h["source"], "link": h["link"], "timestamp": now_iso}).decode("utf-8")
             ))
             title_u = h["title"].upper()
             if any(k in title_u for k in ["STEEL", "TATA", "METAL"]):
@@ -145,8 +144,8 @@ def compute_and_emit_alpha_signal():
         "anti_ip_ban_enforced": True
     }
     try:
-        with open(SIGNAL_FILE, "w", encoding="utf-8") as f:
-            json.dump(payload, f, indent=2)
+        with open(SIGNAL_FILE, "wb") as f:
+            f.write(orjson.dumps(payload, option=orjson.OPT_INDENT_2))
     except Exception as e:
         log(f"Signal emit error: {e}")
 

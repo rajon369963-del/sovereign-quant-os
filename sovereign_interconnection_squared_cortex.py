@@ -27,7 +27,6 @@ Fuses:
 """
 
 import hashlib
-import json
 import logging
 import os
 import queue
@@ -360,7 +359,7 @@ class SingleWriterExecutionLedger:
                         ) VALUES (?, ?, ?, ?, ?)
                     """, (
                         r.order_id, r.idempotency_tag, r.status.value,
-                        json.dumps({"broker": r.broker, "price": r.price, "qty": r.quantity, "reason": r.rejection_reason}),
+                        orjson.dumps({"broker": r.broker, "price": r.price, "qty": r.quantity, "reason": r.rejection_reason}).decode("utf-8"),
                         r.timestamp_ns
                     ))
                     conn.commit()
@@ -666,5 +665,5 @@ if __name__ == "__main__":
     print(f"Duplicate Receipt: ID={receipt_dup.order_id}, Status={receipt_dup.status.value}, Reason={receipt_dup.rejection_reason}")
     
     # 4. Check telemetry
-    print("Telemetry:", json.dumps(cortex.get_telemetry_snapshot(), indent=2))
+    print("Telemetry:", orjson.dumps(cortex.get_telemetry_snapshot(), option=orjson.OPT_INDENT_2).decode("utf-8"))
     cortex.shutdown()

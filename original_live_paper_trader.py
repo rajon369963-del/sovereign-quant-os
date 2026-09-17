@@ -14,7 +14,6 @@ Persists physical truth into original_live_paper_ledger.sqlite.
 ================================================================================
 """
 
-import json
 import sqlite3
 import time
 from datetime import datetime, timedelta, timezone
@@ -74,11 +73,10 @@ class OriginalLivePaperTrader:
     def load_state(self):
         if STATE_FILE.exists():
             try:
-                with open(STATE_FILE, "r") as f:
-                    state = json.load(f)
-                    self.capital = state.get("capital", self.initial_capital)
-                    self.daily_start_capital = state.get("daily_start_capital", self.capital)
-                    self.circuit_breaker_active = state.get("circuit_breaker_active", False)
+                state = orjson.loads(STATE_FILE.read_bytes())
+                self.capital = state.get("capital", self.initial_capital)
+                self.daily_start_capital = state.get("daily_start_capital", self.capital)
+                self.circuit_breaker_active = state.get("circuit_breaker_active", False)
             except Exception:
                 pass
 
@@ -92,22 +90,20 @@ class OriginalLivePaperTrader:
             "open_positions": len(self.open_positions),
             "timestamp": datetime.now(IST).isoformat()
         }
-        with open(STATE_FILE, "w") as f:
-            json.dump(state, f, indent=2)
+        STATE_FILE.write_bytes(orjson.dumps(state, option=orjson.OPT_INDENT_2))
 
     def fetch_live_tick(self, symbol: str):
         """Fetches true live market prices without random mock numbers."""
-        import urllib.parse
-        import urllib.request
+        import httpx
 
         # 1. Crypto Pairs via Binance public ticker API
         if "/" in symbol or symbol in ["BTC", "ETH"]:
             try:
                 pair = f"{symbol}USDT" if "/" not in symbol else symbol.replace("/", "")
                 url = f"https://api.binance.com/api/v3/ticker/bookTicker?symbol={pair}"
-                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                with urllib.request.urlopen(req, timeout=3) as resp:
-                    data = json.loads(resp.read().decode())
+                resp = httpx.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=3.0)
+                if resp.status_code == 200:
+                    data = orjson.loads(resp.content)
                     bid = float(data["bidPrice"])
                     ask = float(data["askPrice"])
                     last = (bid + ask) / 2.0
@@ -125,9 +121,9 @@ class OriginalLivePaperTrader:
             }
             yf_sym = ticker_map.get(symbol, symbol)
             url = f"https://query1.finance.yahoo.com/v8/finance/chart/{yf_sym}?interval=1m&range=1d"
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=3) as resp:
-                data = json.loads(resp.read().decode())
+            resp = httpx.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=3.0)
+            if resp.status_code == 200:
+                data = orjson.loads(resp.content)
                 meta = data["chart"]["result"][0]["meta"]
                 price = float(meta["regularMarketPrice"])
                 spread = price * 0.00025  # Realistic 2.5 bps spread

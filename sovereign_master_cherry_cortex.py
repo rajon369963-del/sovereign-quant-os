@@ -31,7 +31,6 @@ Synthesizes:
 """
 
 import hashlib
-import json
 import logging
 import os
 import queue
@@ -527,7 +526,7 @@ class CryptographicHashChainedLedger:
 
             elif task_type == "EVENT":
                 intent_id, event_type, payload, now = data
-                payload_str = json.dumps(payload, sort_keys=True)
+                payload_str = orjson.dumps(payload, option=orjson.OPT_SORT_KEYS).decode("utf-8")
                 with self._lock:
                     self._current_seq += 1
                     seq_id = self._current_seq

@@ -8,7 +8,6 @@ Validates credentials, tests live ₹1 balance, and connects to the Quant OS eng
 """
 
 import argparse
-import json
 import os
 import subprocess
 
@@ -62,7 +61,7 @@ def verify_dhan_connection():
         print("⚡ DHANHQ LIVE ACCOUNT CONNECTION VERIFIED")
         print("==================================================")
         print(f"Client ID     : {client_id}")
-        print(f"Funds Status  : {json.dumps(limits, indent=2)}")
+        print(f"Funds Status  : {orjson.dumps(limits, option=orjson.OPT_INDENT_2).decode('utf-8')}")
         print("==================================================")
         return True
     except Exception as e:

@@ -20,7 +20,7 @@ Synthesizes a deep, captivating, brotherly Hinglish audio briefing:
 import os
 import sys
 import json
-import base64
+import pybase64 as base64
 import asyncio
 import subprocess
 import time

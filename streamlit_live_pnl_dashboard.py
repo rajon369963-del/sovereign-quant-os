@@ -7,9 +7,7 @@ September 2026 Edition — Indian Algo-Trading God Mode Stack.
 """
 
 import os
-import sqlite3
 
-import pandas as pd
 import streamlit as st
 
 # Streamlit Page Config
@@ -126,9 +124,7 @@ DB_PATH = "/Users/rajondas/teamwork_projects/sovereign-quant-os/grand_10k_tradin
 with tab1:
     st.subheader("Top 30 Advanced Hacks & Vibe Coding Insights")
     if os.path.exists(DB_PATH):
-        conn = sqlite3.connect(DB_PATH)
-        df_hacks = pd.read_sql_query("SELECT hack_number, phase, title, mechanism, impact_on_dhan_bot FROM indian_algo_trading_top_30_hacks ORDER BY hack_number", conn)
-        conn.close()
+        df_hacks = duckdb.sql(f"SELECT hack_number, phase, title, mechanism, impact_on_dhan_bot FROM sqlite_scan('{DB_PATH}', 'indian_algo_trading_top_30_hacks') ORDER BY hack_number").df()
         st.dataframe(df_hacks, use_container_width=True, height=400)
     else:
         st.info("Database not yet connected.")
@@ -136,9 +132,7 @@ with tab1:
 with tab2:
     st.subheader("Top 30 Powerful Tools, Libraries & MCP Wheels")
     if os.path.exists(DB_PATH):
-        conn = sqlite3.connect(DB_PATH)
-        df_down = pd.read_sql_query("SELECT item_number, category, tool_name, source, purpose, system_status FROM indian_algo_trading_top_30_downloads ORDER BY item_number", conn)
-        conn.close()
+        df_down = duckdb.sql(f"SELECT item_number, category, tool_name, source, purpose, system_status FROM sqlite_scan('{DB_PATH}', 'indian_algo_trading_top_30_downloads') ORDER BY item_number").df()
         st.dataframe(df_down, use_container_width=True, height=400)
 
 with tab3:

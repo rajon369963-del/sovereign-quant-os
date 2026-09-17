@@ -20,7 +20,7 @@ Automatically runs at 08:35 AM IST before market open:
 """
 
 import ast
-import json
+import orjson
 import sqlite3
 import time
 from datetime import datetime
@@ -387,7 +387,7 @@ class SovereignAdaptiveAlpha:
             }
             
         with open(MATRIX_FILE, "w", encoding="utf-8") as f:
-            json.dump(matrix, f, indent=2)
+            f.write(orjson.dumps(matrix, option=orjson.OPT_INDENT_2).decode("utf-8"))
         print(f"✓ Calibrated dynamic strategy matrix for Thursday Expiry: {MATRIX_FILE.name}")
 
     def run_full_pipeline(self) -> dict[str, Any]:

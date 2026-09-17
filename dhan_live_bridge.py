@@ -82,9 +82,9 @@ class DhanLiveBridge:
         config_path = PROJECT_DIR / "config" / "bot_live_parameters.json"
         if config_path.exists():
             try:
-                import json
+                import orjson
                 with open(config_path) as f:
-                    cfg = json.load(f)
+                    cfg = orjson.loads(f.read())
                     self.max_daily_turnover = float(cfg.get("CAPITAL_PRESERVATION_LAW", {}).get("MAX_TURNOVER_CAP", 2500.0))
             except Exception as e:
                 logger.debug(f"Could not load bot parameters: {e}")

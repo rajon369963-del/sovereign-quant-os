@@ -11,7 +11,7 @@ Storyline adheres strictly to prompt sections 26 to 35:
 - Persists log to /Users/rajondas/Desktop/GURU_VOICE_CONVERSATION_TRUTH.md.
 """
 
-import base64
+import pybase64 as base64
 import json
 import os
 import subprocess

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import asyncio
-import base64
+import pybase64 as base64
 import os
 from pathlib import Path
 import edge_tts

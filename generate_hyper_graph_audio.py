@@ -1,5 +1,5 @@
 import subprocess
-import base64
+import pybase64 as base64
 import os
 import re
 

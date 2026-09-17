@@ -19,11 +19,12 @@ Core Capabilities:
      mean-reversion parameters, variance shields, and position sizes.
 """
 
-import json
 import logging
 import sqlite3
 import time
 from dataclasses import asdict, dataclass
+
+import orjson
 
 logger = logging.getLogger("FeedbackCortex")
 
@@ -223,7 +224,7 @@ class SovereignSelfEvolvingFeedbackCortex:
         """
         Commits an adaptation cycle into SQLite and updates local state file.
         """
-        payload_str = json.dumps(asdict(telemetry), sort_keys=True)
+        payload_str = orjson.dumps(asdict(telemetry), option=orjson.OPT_SORT_KEYS).decode("utf-8")
         now_ns = time.perf_counter_ns()
 
         conn = sqlite3.connect(self.db_path, timeout=5.0)
@@ -254,7 +255,7 @@ class SovereignSelfEvolvingFeedbackCortex:
             "adapted_volatility_cap": telemetry.adapted_volatility_cap,
             "sha256_hash": sha256_hash
         }
-        with open(self.state_file, "w") as f:
-            json.dump(state_data, f, indent=2)
+        with open(self.state_file, "wb") as f:
+            f.write(orjson.dumps(state_data, option=orjson.OPT_INDENT_2))
 
         return adaptation_id

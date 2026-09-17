@@ -1,5 +1,5 @@
 import asyncio
-import base64
+import pybase64 as base64
 import json
 import sqlite3
 from pathlib import Path

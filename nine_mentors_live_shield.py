@@ -20,7 +20,6 @@ QUANT REPO UPGRADES (NautilusTrader / Riskfolio-Lib / statsmodels):
 
 import datetime
 import fcntl
-import json
 import logging
 import sys
 import time
@@ -65,17 +64,16 @@ class NineMentorsLiveShield:
         config_path = PROJECT_DIR / "config" / "bot_live_parameters.json"
         if config_path.exists():
             try:
-                with open(config_path) as f:
-                    cfg = json.load(f)
-                    cap_law = cfg.get("CAPITAL_PRESERVATION_LAW", {})
-                    self.max_daily_trades = int(cap_law.get("MAX_DAILY_TRADES", 2))
-                    self.max_turnover_cap = float(cap_law.get("MAX_TURNOVER_CAP", 2500.0))
-                    self.max_allowed_turnover = self.max_turnover_cap
-                    timing = cfg.get("TIMING_DISCIPLINE", {})
-                    self.noise_avoidance_sleep_until = timing.get("NOISE_AVOIDANCE_SLEEP_UNTIL", "10:15:00")
-                    exec_rules = cfg.get("EXECUTION_RULES", {})
-                    self.cooldown_seconds = float(exec_rules.get("COOLDOWN_SECONDS_AFTER_EXIT", exec_rules.get("COOLDOWN_SECONDS", 900.0)))
-                    self.tick_size_quantization = float(exec_rules.get("TICK_SIZE_QUANTIZATION", exec_rules.get("TICK_SIZE", 0.05)))
+                cfg = orjson.loads(config_path.read_bytes())
+                cap_law = cfg.get("CAPITAL_PRESERVATION_LAW", {})
+                self.max_daily_trades = int(cap_law.get("MAX_DAILY_TRADES", 2))
+                self.max_turnover_cap = float(cap_law.get("MAX_TURNOVER_CAP", 2500.0))
+                self.max_allowed_turnover = self.max_turnover_cap
+                timing = cfg.get("TIMING_DISCIPLINE", {})
+                self.noise_avoidance_sleep_until = timing.get("NOISE_AVOIDANCE_SLEEP_UNTIL", "10:15:00")
+                exec_rules = cfg.get("EXECUTION_RULES", {})
+                self.cooldown_seconds = float(exec_rules.get("COOLDOWN_SECONDS_AFTER_EXIT", exec_rules.get("COOLDOWN_SECONDS", 900.0)))
+                self.tick_size_quantization = float(exec_rules.get("TICK_SIZE_QUANTIZATION", exec_rules.get("TICK_SIZE", 0.05)))
             except Exception as e:
                 logger.debug(f"Could not load bot parameters: {e}")
         
@@ -151,8 +149,7 @@ class NineMentorsLiveShield:
             "active_positions": reconciled
         }
         
-        with open(state_file, "w", encoding="utf-8") as f:
-            json.dump(new_state, f, indent=2)
+        state_file.write_bytes(orjson.dumps(new_state, option=orjson.OPT_INDENT_2))
         return True
 
     def execute_310_pm_graceful_square_off(self, now_ist: datetime.datetime | None = None) -> dict[str, Any]:

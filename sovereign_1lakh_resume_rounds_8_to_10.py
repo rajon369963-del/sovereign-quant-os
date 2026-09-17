@@ -17,7 +17,7 @@ import sqlite3
 import os
 import asyncio
 import edge_tts
-import base64
+import pybase64 as base64
 from pathlib import Path
 
 BASE_DIR = Path("/Users/rajondas/teamwork_projects/sovereign-quant-os")

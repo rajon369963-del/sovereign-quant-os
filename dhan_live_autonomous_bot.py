@@ -14,7 +14,7 @@ Interconnects (Phase 2 Master Loop):
 
 import asyncio
 import datetime
-import json
+import orjson
 import logging
 import socket
 import sys
@@ -166,7 +166,7 @@ class DhanAutonomousSniperBot:
         elif STATE_FILE.exists():
             try:
                 with open(STATE_FILE, "r", encoding="utf-8") as f:
-                    saved = json.load(f)
+                    saved = orjson.loads(f.read())
                     if saved.get("active_positions"):
                         for p in saved["active_positions"]:
                             self.engine.active_positions[p["symbol"]] = p
@@ -211,7 +211,7 @@ class DhanAutonomousSniperBot:
             "locked_orb_ranges": locked_ranges,
         }
         with open(STATE_FILE, "w", encoding="utf-8") as f:
-            json.dump(state_payload, f, indent=2)
+            f.write(orjson.dumps(state_payload, option=orjson.OPT_INDENT_2).decode("utf-8"))
 
     def fetch_live_quote(self, symbol: str) -> dict[str, Any]:
         """Fetches live market quote with caching, yfinance fast_info, and safe fallback."""
@@ -273,7 +273,7 @@ class DhanAutonomousSniperBot:
         if alpha_signal_path.exists():
             try:
                 with open(alpha_signal_path, "r", encoding="utf-8") as f:
-                    alpha_sig = json.load(f)
+                    alpha_sig = orjson.loads(f.read())
                     if not self.macro_report:
                         from premarket_screener import MacroRegimeReport
                         self.macro_report = MacroRegimeReport(
@@ -620,7 +620,7 @@ class DhanAutonomousSniperBot:
             if matrix_path.exists():
                 try:
                     with open(matrix_path, "r", encoding="utf-8") as mf:
-                        strat_matrix = json.load(mf)
+                        strat_matrix = orjson.loads(mf.read())
                         sym_cfg = strat_matrix.get(sym, {})
                         s_bias = sym_cfg.get("sector_bias", "BIDIRECTIONAL")
                         if target_side == "SELL" and s_bias == "BULLISH_ONLY":

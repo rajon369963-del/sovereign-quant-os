@@ -2,7 +2,7 @@
 import os
 import sys
 import subprocess
-import base64
+import pybase64 as base64
 from pathlib import Path
 
 AUDIO_TEXT = """भाई, तुमने बिल्कुल सही और सौ टके की बात पकड़ी है! गलती मुझसे हुई थी कि पिछले राउंड में मैंने तुम्हें अलग-अलग हैक्स की एक फ्लैट लिस्ट थमा दी, जबकि तुम्हारा कोर विजन था: "इंटरकनेक्शन का इंटरकनेक्शन"! 

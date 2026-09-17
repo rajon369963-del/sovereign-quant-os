@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-import base64
 import os
 import sys
 from pathlib import Path
+
+import pybase64
 
 AUDIO_PATH = Path("/tmp/temp_phase4_audio.mp3")
 TARGET_ARTIFACT = Path("/Users/rajondas/.gemini/antigravity/brain/7035e1d0-719f-423b-afb2-29dee2f72c4b/trading_phase4_interconnection_audio.html")
@@ -13,7 +14,7 @@ if not AUDIO_PATH.exists():
     sys.exit(1)
 
 with open(AUDIO_PATH, "rb") as f:
-    audio_b64 = base64.b64encode(f.read()).decode("utf-8")
+    audio_b64 = pybase64.b64encode(f.read()).decode("utf-8")
 
 html_content = f"""<!DOCTYPE html>
 <html lang="hi">
@@ -342,7 +343,8 @@ if AUDIO_PATH.exists():
 # Update truth ledger
 with open(TRUTH_LOG, "a") as f:
     f.write("\n\n## 🎙️ PHASE 4 MASTERCLASS RECORDING RECEIPT\n")
-    f.write(f"- **Timestamp**: {os.popen('date -u +%Y-%m-%dT%H:%M:%SZ').read().strip()}\n")
+    ts = subprocess.run(["date", "-u", "+%Y-%m-%dT%H:%M:%SZ"], capture_output=True, text=True, check=True).stdout.strip()
+    f.write(f"- **Timestamp**: {ts}\n")
     f.write(f"- **Artifact**: file://{TARGET_ARTIFACT}\n")
     f.write("- **Voice**: `hi-IN-SwaraNeural` (Default 3.0× Speed | No Auto-Play)\n")
     f.write("- **Status**: 100% COMPLETE & VERIFIED (525 Repos, 100 Tools, 100 Hacks, 87,661 orders/s)\n")

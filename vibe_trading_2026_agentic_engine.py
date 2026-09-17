@@ -17,7 +17,7 @@ Comprehensive Indian Market (NSE/BSE/NFO) Implementation integrating:
 import os
 import sys
 import time
-import json
+import orjson
 import sqlite3
 import random
 import math

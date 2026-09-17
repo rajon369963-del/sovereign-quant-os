@@ -15,7 +15,7 @@ Synthesizes a high-energy, captivating, story-driven audio briefing in natural H
 import os
 import sys
 import json
-import base64
+import pybase64 as base64
 import asyncio
 import subprocess
 import edge_tts

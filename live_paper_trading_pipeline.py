@@ -10,7 +10,7 @@ Demonstrating full real-time flow:
 5. State Persistence: SQLite Ledger, Heartbeat State & Session Receipt
 """
 
-import json
+import orjson
 import sqlite3
 import sys
 import time
@@ -250,7 +250,7 @@ def execute_paper_order(symbol: str = "TATASTEEL", cash_equity: float = 1008.0):
         "gates_status": "ONLINE_HEALTHY"
     }
     with open(STATE_FILE, "w", encoding="utf-8") as f:
-        json.dump(heartbeat_state, f, indent=2)
+        f.write(orjson.dumps(heartbeat_state, option=orjson.OPT_INDENT_2).decode("utf-8"))
 
     return trade_record
 
@@ -282,7 +282,7 @@ def run_full_pipeline(nlm_thesis: str):
     }
 
     with open(RECEIPT_FILE, "w", encoding="utf-8") as f:
-        json.dump(session_receipt, f, indent=2)
+        f.write(orjson.dumps(session_receipt, option=orjson.OPT_INDENT_2).decode("utf-8"))
 
     print("\n" + "=" * 70)
     print("⚡ PIPELINE EXECUTION COMPLETE: RECEIPT SAVED TO", RECEIPT_FILE)

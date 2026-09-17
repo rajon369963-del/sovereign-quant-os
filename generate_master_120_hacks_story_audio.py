@@ -15,7 +15,7 @@ Comprehensive Grand Synthesis Narrative (>= 6 min floor | 1,800+ words):
 import os
 import sys
 import subprocess
-import base64
+import pybase64 as base64
 import time
 from pathlib import Path
 

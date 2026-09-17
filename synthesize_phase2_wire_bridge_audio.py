@@ -1,7 +1,7 @@
 import os
 import sys
 import time
-import base64
+import pybase64 as base64
 import subprocess
 from pathlib import Path
 
