@@ -1,0 +1,33 @@
+{
+  "SWEET_SPOT_CONFIG_VERSION": "2026.09.18-v1",
+  "EFFECTIVE_DATE": "2026-09-18",
+  "CAPITAL_PRESERVATION_LAW": {
+    "ACCOUNT_BASE_CAPITAL": 918.43,
+    "MAX_DAILY_LOSS_LIMIT": 35.0,
+    "MAX_TURNOVER_CAP": 2500.0,
+    "MAX_DAILY_TRADES": 2,
+    "STRICT_TURNOVER_RATIO_CEILING": 2.5
+  },
+  "TIMING_DISCIPLINE": {
+    "MARKET_OPEN": "09:15:00",
+    "NOISE_AVOIDANCE_SLEEP_UNTIL": "10:15:00",
+    "PROFESSIONAL_SETUP_WINDOW_START": "10:15:00",
+    "PROFESSIONAL_SETUP_WINDOW_END": "13:30:00",
+    "NO_NEW_ENTRIES_AFTER": "14:15:00",
+    "MANDATORY_GRACEFUL_SQUARE_OFF": "15:10:00"
+  },
+  "EXECUTION_RULES": {
+    "ENTRY_TYPE": "LIMIT_ORDER_PASSIVE",
+    "TICK_SIZE": 0.05,
+    "MIN_RISK_REWARD_RATIO": 2.0,
+    "STOP_LOSS_PCT": 0.8,
+    "TARGET_PROFIT_PCT": 1.6,
+    "ATOMIC_POSIX_LOCK": "/tmp/dhan_bot_atomic.lock",
+    "SINGLE_INSTANCE_ONLY": true
+  },
+  "PROVENANCE_AND_LESSONS_LEARNED": {
+    "2026_09_17_LESSON_1": "PNB Short proved directional alpha (+\u20b919.59 peak), confirming high-signal news-to-stock translation.",
+    "2026_09_17_LESSON_2": "Morning churn (26 orders, \u20b925k turnover) generated \u20b935-40 statutory taxes on a \u20b9918 capital, wiping out gross alpha.",
+    "2026_09_17_LESSON_3": "Hard single-bullet constraint (turnover <= \u20b92,500) cuts transaction taxes to under \u20b93.00, securing net positive returns."
+  }
+}

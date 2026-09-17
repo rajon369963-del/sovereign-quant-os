@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-16 07:49:16 IST",
+  "shield_status": "ONLINE_ACTIVE",
+  "layer1_caffeinate": {
+    "active": true,
+    "caffeinate_pid": 92129,
+    "network_heartbeat_ok": true
+  },
+  "layer2_supervisor": {
+    "bot_running": true,
+    "bot_pid": 31654,
+    "restart_count": 0
+  },
+  "layer3_risk_guardian": {
+    "max_loss_limit_inr": 50.0,
+    "circuit_breaker_armed": true,
+    "auto_square_off_time": "15:10:00 IST"
+  }
+}

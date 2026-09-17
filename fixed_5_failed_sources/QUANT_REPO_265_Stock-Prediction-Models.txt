@@ -1,0 +1,1765 @@
+# QUANT_REPO_265 [6299e0e9e7d79da4]: Stock-Prediction-Models (FULL END-TO-END CODE)
+**Deterministic SHA-256 ID**: `6299e0e9e7d79da4be2d3e514dec8d4903fd2a1c721efde879b1381111baf256`
+**Source Index**: 265 / 290
+**Primary Entity**: `Stock-Prediction-Models`
+**Included Repositories (1)**: Stock-Prediction-Models
+**Total Source Files Included**: 6
+**Cryptographic Provenance**: Physical disk verified, tamper-proof SHA-256
+**Domain**: Indian Stock Market Algorithmic Trading & High-Frequency Quantitative Execution
+
+---
+
+<!-- QUANT_SOURCE_UNIT_265: Stock-Prediction-Models -->
+
+## System Architecture & Technical Specifications: Stock-Prediction-Models
+
+- **Primary Unit**: `Stock-Prediction-Models`
+- **Contained Repositories**: `Stock-Prediction-Models`
+- **Total Contained Repositories**: 1
+
+---
+
+
+# ======================================================================
+# REPOSITORY: Stock-Prediction-Models (FULL SOURCE CODE & LOGIC)
+# Path: /Users/rajondas/teamwork_projects/sovereign-quant-os/cloned_trading_wheels/Stock-Prediction-Models
+# ======================================================================
+
+
+### FILE: `README.md`
+```md
+<p align="center">
+    <a href="#readme">
+        <img alt="logo" width="50%" src="output/evolution-strategy.png">
+    </a>
+</p>
+<p align="center">
+  <a href="https://github.com/huseinzol05/Stock-Prediction-Models/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-Apache--License--2.0-yellow.svg"></a>
+  <a href="#"><img src="https://img.shields.io/badge/deeplearning-30--models-success.svg"></a>
+  <a href="#"><img src="https://img.shields.io/badge/agent-23--models-success.svg"></a>
+</p>
+
+---
+
+**Stock-Prediction-Models**, Gathers machine learning and deep learning models for Stock forecasting, included trading bots and simulations.
+
+## Table of contents
+  * [Models](#models)
+  * [Agents](#agents)
+  * [Realtime Agent](realtime-agent)
+  * [Data Explorations](#data-explorations)
+  * [Simulations](#simulations)
+  * [Tensorflow-js](#tensorflow-js)
+  * [Misc](#misc)
+  * [Results](#results)
+    * [Results Agent](#results-agent)
+    * [Results signal prediction](#results-signal-prediction)
+    * [Results analysis](#results-analysis)
+    * [Results simulation](#results-simulation)
+
+## Contents
+
+### Models
+
+#### [Deep-learning models](deep-learning)
+ 1. LSTM
+ 2. LSTM Bidirectional
+ 3. LSTM 2-Path
+ 4. GRU
+ 5. GRU Bidirectional
+ 6. GRU 2-Path
+ 7. Vanilla
+ 8. Vanilla Bidirectional
+ 9. Vanilla 2-Path
+ 10. LSTM Seq2seq
+ 11. LSTM Bidirectional Seq2seq
+ 12. LSTM Seq2seq VAE
+ 13. GRU Seq2seq
+ 14. GRU Bidirectional Seq2seq
+ 15. GRU Seq2seq VAE
+ 16. Attention-is-all-you-Need
+ 17. CNN-Seq2seq
+ 18. Dilated-CNN-Seq2seq
+
+**Bonus**
+
+1. How to use one of the model to forecast `t + N`, [how-to-forecast.ipynb](deep-learning/how-to-forecast.ipynb)
+2. Consensus, how to use sentiment data to forecast `t + N`, [sentiment-consensus.ipynb](deep-learning/sentiment-consensus.ipynb)
+
+#### [Stacking models](stacking)
+ 1. Deep Feed-forward Auto-Encoder Neural Network to reduce dimension + Deep Recurrent Neural Network + ARIMA + Extreme Boosting Gradient Regressor
+ 2. Adaboost + Bagging + Extra Trees + Gradient Boosting + Random Forest + XGB
+
+### [Agents](agent)
+
+1. Turtle-trading agent
+2. Moving-average agent
+3. Signal rolling agent
+4. Policy-gradient agent
+5. Q-learning agent
+6. Evolution-strategy agent
+7. Double Q-learning agent
+8. Recurrent Q-learning agent
+9. Double Recurrent Q-learning agent
+10. Duel Q-learning agent
+11. Double Duel Q-learning agent
+12. Duel Recurrent Q-learning agent
+13. Double Duel Recurrent Q-learning agent
+14. Actor-critic agent
+15. Actor-critic Duel agent
+16. Actor-critic Recurrent agent
+17. Actor-critic Duel Recurrent agent
+18. Curiosity Q-learning agent
+19. Recurrent Curiosity Q-learning agent
+20. Duel Curiosity Q-learning agent
+21. Neuro-evolution agent
+22. Neuro-evolution with Novelty search agent
+23. ABCD strategy agent
+
+### [Data Explorations](misc)
+
+1. stock market study on TESLA stock, [tesla-study.ipynb](misc/tesla-study.ipynb)
+2. Outliers study using K-means, SVM, and Gaussian on TESLA stock, [outliers.ipynb](misc/outliers.ipynb)
+3. Overbought-Oversold study on TESLA stock, [overbought-oversold.ipynb](misc/overbought-oversold.ipynb)
+4. Which stock you need to buy? [which-stock.ipynb](misc/which-stock.ipynb)
+
+### [Simulations](simulation)
+
+1. Simple Monte Carlo, [monte-carlo-drift.ipynb](simulation/monte-carlo-drift.ipynb)
+2. Dynamic volatility Monte Carlo, [monte-carlo-dynamic-volatility.ipynb](simulation/monte-carlo-dynamic-volatility.ipynb)
+3. Drift Monte Carlo, [monte-carlo-drift.ipynb](simulation/monte-carlo-drift.ipynb)
+4. Multivariate Drift Monte Carlo BTC/USDT with Bitcurate sentiment, [multivariate-drift-monte-carlo.ipynb](simulation/multivariate-drift-monte-carlo.ipynb)
+5. Portfolio optimization, [portfolio-optimization.ipynb](simulation/portfolio-optimization.ipynb), inspired from https://pythonforfinance.net/2017/01/21/investment-portfolio-optimisation-with-python/
+
+### [Tensorflow-js](stock-forecasting-js)
+
+I code [LSTM Recurrent Neural Network](deep-learning/1.lstm.ipynb) and [Simple signal rolling agent](agent/simple-agent.ipynb) inside Tensorflow JS, you can try it here, [huseinhouse.com/stock-forecasting-js](https://huseinhouse.com/stock-forecasting-js/), you can download any historical CSV and upload dynamically.
+
+### [Misc](misc)
+
+1. fashion trending prediction with cross-validation, [fashion-forecasting.ipynb](misc/fashion-forecasting.ipynb)
+2. Bitcoin analysis with LSTM prediction, [bitcoin-analysis-lstm.ipynb](misc/bitcoin-analysis-lstm.ipynb)
+3. Kijang Emas Bank Negara, [kijang-emas-bank-negara.ipynb](misc/kijang-emas-bank-negara.ipynb)
+
+## Results
+
+### Results Agent
+
+**This agent only able to buy or sell 1 unit per transaction.**
+
+1. Turtle-trading agent, [turtle-agent.ipynb](agent/1.turtle-agent.ipynb)
+
+<img src="output-agent/turtle-agent.png" width="70%" align="">
+
+2. Moving-average agent, [moving-average-agent.ipynb](agent/2.moving-average-agent.ipynb)
+
+<img src="output-agent/moving-average-agent.png" width="70%" align="">
+
+3. Signal rolling agent, [signal-rolling-agent.ipynb](agent/3.signal-rolling-agent.ipynb)
+
+<img src="output-agent/signal-rolling-agent.png" width="70%" align="">
+
+4. Policy-gradient agent, [policy-gradient-agent.ipynb](agent/4.policy-gradient-agent.ipynb)
+
+<img src="output-agent/policy-gradient-agent.png" width="70%" align="">
+
+5. Q-learning agent, [q-learning-agent.ipynb](agent/5.q-learning-agent.ipynb)
+
+<img src="output-agent/q-learning-agent.png" width="70%" align="">
+
+6. Evolution-strategy agent, [evolution-strategy-agent.ipynb](agent/6.evolution-strategy-agent.ipynb)
+
+<img src="output-agent/evolution-strategy-agent.png" width="70%" align="">
+
+7. Double Q-learning agent, [double-q-learning-agent.ipynb](agent/7.double-q-learning-agent.ipynb)
+
+<img src="output-agent/double-q-learning.png" width="70%" align="">
+
+8. Recurrent Q-learning agent, [recurrent-q-learning-agent.ipynb](agent/8.recurrent-q-learning-agent.ipynb)
+
+<img src="output-agent/recurrent-q-learning.png" width="70%" align="">
+
+9. Double Recurrent Q-learning agent, [double-recurrent-q-learning-agent.ipynb](agent/9.double-recurrent-q-learning-agent.ipynb)
+
+<img src="output-agent/double-recurrent-q-learning.png" width="70%" align="">
+
+10. Duel Q-learning agent, [duel-q-learning-agent.ipynb](agent/10.duel-q-learning-agent.ipynb)
+
+<img src="output-agent/double-q-learning.png" width="70%" align="">
+
+11. Double Duel Q-learning agent, [double-duel-q-learning-agent.ipynb](agent/11.double-duel-q-learning-agent.ipynb)
+
+<img src="output-agent/double-duel-q-learning.png" width="70%" align="">
+
+12. Duel Recurrent Q-learning agent, [duel-recurrent-q-learning-agent.ipynb](agent/12.duel-recurrent-q-learning-agent.ipynb)
+
+<img src="output-agent/duel-recurrent-q-learning.png" width="70%" align="">
+
+13. Double Duel Recurrent Q-learning agent, [double-duel-recurrent-q-learning-agent.ipynb](agent/13.double-duel-recurrent-q-learning-agent.ipynb)
+
+<img src="output-agent/double-duel-recurrent-q-learning.png" width="70%" align="">
+
+14. Actor-critic agent, [actor-critic-agent.ipynb](agent/14.actor-critic-agent.ipynb)
+
+<img src="output-agent/actor-critic.png" width="70%" align="">
+
+15. Actor-critic Duel agent, [actor-critic-duel-agent.ipynb](agent/14.actor-critic-duel-agent.ipynb)
+
+<img src="output-agent/actor-critic-duel.png" width="70%" align="">
+
+16. Actor-critic Recurrent agent, [actor-critic-recurrent-agent.ipynb](agent/16.actor-critic-recurrent-agent.ipynb)
+
+<img src="output-agent/actor-critic-recurrent.png" width="70%" align="">
+
+17. Actor-critic Duel Recurrent agent, [actor-critic-duel-recurrent-agent.ipynb](agent/17.actor-critic-duel-recurrent-agent.ipynb)
+
+<img src="output-agent/actor-critic-duel-recurrent.png" width="70%" align="">
+
+18. Curiosity Q-learning agent, [curiosity-q-learning-agent.ipynb](agent/18.curiosity-q-learning-agent.ipynb)
+
+<img src="output-agent/curiosity-q-learning.png" width="70%" align="">
+
+19. Recurrent Curiosity Q-learning agent, [recurrent-curiosity-q-learning.ipynb](agent/19.recurrent-curiosity-q-learning-agent.ipynb)
+
+<img src="output-agent/recurrent-curiosity-q-learning.png" width="70%" align="">
+
+20. Duel Curiosity Q-learning agent, [duel-curiosity-q-learning-agent.ipynb](agent/20.duel-curiosity-q-learning-agent.ipynb)
+
+<img src="output-agent/duel-curiosity-q-learning.png" width="70%" align="">
+
+21. Neuro-evolution agent, [neuro-evolution.ipynb](agent/21.neuro-evolution-agent.ipynb)
+
+<img src="output-agent/neuro-evolution.png" width="70%" align="">
+
+22. Neuro-evolution with Novelty search agent, [neuro-evolution-novelty-search.ipynb](agent/22.neuro-evolution-novelty-search-agent.ipynb)
+
+<img src="output-agent/neuro-evolution-novelty-search.png" width="70%" align="">
+
+23. ABCD strategy agent, [abcd-strategy.ipynb](agent/23.abcd-strategy-agent.ipynb)
+
+<img src="output-agent/abcd-strategy.png" width="70%" align="">
+
+### Results signal prediction
+
+I will cut the dataset to train and test datasets,
+
+1. Train dataset derived from starting timestamp until last 30 days
+2. Test dataset derived from last 30 days until end of the dataset
+
+So we will let the model do forecasting based on last 30 days, and we will going to repeat the experiment for 10 times. You can increase it locally if you want, and tuning parameters will help you by a lot.
+
+1. LSTM, accuracy 95.693%, time taken for 1 epoch 01:09
+
+<img src="output/lstm.png" width="70%" align="">
+
+2. LSTM Bidirectional, accuracy 93.8%, time taken for 1 epoch 01:40
+
+<img src="output/bidirectional-lstm.png" width="70%" align="">
+
+3. LSTM 2-Path, accuracy 94.63%, time taken for 1 epoch 01:39
+
+<img src="output/lstm-2path.png" width="70%" align="">
+
+4. GRU, accuracy 94.63%, time taken for 1 epoch 02:10
+
+<img src="output/gru.png" width="70%" align="">
+
+5. GRU Bidirectional, accuracy 92.5673%, time taken for 1 epoch 01:40
+
+<img src="output/bidirectional-gru.png" width="70%" align="">
+
+6. GRU 2-Path, accuracy 93.2117%, time taken for 1 epoch 01:39
+
+<img src="output/gru-2path.png" width="70%" align="">
+
+7. Vanilla, accuracy 91.4686%, time taken for 1 epoch 00:52
+
+<img src="output/vanilla.png" width="70%" align="">
+
+8. Vanilla Bidirectional, accuracy 88.9927%, time taken for 1 epoch 01:06
+
+<img src="output/bidirectional-vanilla.png" width="70%" align="">
+
+9. Vanilla 2-Path, accuracy 91.5406%, time taken for 1 epoch 01:08
+
+<img src="output/vanilla-2path.png" width="70%" align="">
+
+10. LSTM Seq2seq, accuracy 94.9817%, time taken for 1 epoch 01:36
+
+<img src="output/lstm-seq2seq.png" width="70%" align="">
+
+11. LSTM Bidirectional Seq2seq, accuracy 94.517%, time taken for 1 epoch 02:30
+
+<img src="output/bidirectional-lstm-seq2seq.png" width="70%" align="">
+
+12. LSTM Seq2seq VAE, accuracy 95.4190%, time taken for 1 epoch 01:48
+
+<img src="output/lstm-seq2seq-vae.png" width="70%" align="">
+
+13. GRU Seq2seq, accuracy 90.8854%, time taken for 1 epoch 01:34
+
+<img src="output/gru-seq2seq.png" width="70%" align="">
+
+14. GRU Bidirectional Seq2seq, accuracy 67.9915%, time taken for 1 epoch 02:30
+
+<img src="output/bidirectional-gru-seq2seq.png" width="70%" align="">
+
+15. GRU Seq2seq VAE, accuracy 89.1321%, time taken for 1 epoch 01:48
+
+<img src="output/gru-seq2seq-vae.png" width="70%" align="">
+
+16. Attention-is-all-you-Need, accuracy 94.2482%, time taken for 1 epoch 01:41
+
+<img src="output/attention-is-all-you-need.png" width="70%" align="">
+
+17. CNN-Seq2seq, accuracy 90.74%, time taken for 1 epoch 00:43
+
+<img src="output/cnn-seq2seq.png" width="70%" align="">
+
+18. Dilated-CNN-Seq2seq, accuracy 95.86%, time taken for 1 epoch 00:14
+
+<img src="output/dilated-cnn-seq2seq.png" width="70%" align="">
+
+**Bonus**
+
+1. How to forecast,
+
+<img src="output/how-to-forecast.png" width="70%" align="">
+
+2. Sentiment consensus,
+
+<img src="output/sentiment-consensus.png" width="70%" align="">
+
+### Results analysis
+
+1. Outliers study using K-means, SVM, and Gaussian on TESLA stock
+
+<img src="misc/outliers.png" width="70%" align="">
+
+2. Overbought-Oversold study on TESLA stock
+
+<img src="misc/overbought-oversold.png" width="70%" align="">
+
+3. Which stock you need to buy?
+
+<img src="misc/which-stock.png" width="40%" align="">
+
+### Results simulation
+
+1. Simple Monte Carlo
+
+<img src="simulation/monte-carlo-simple.png" width="70%" align="">
+
+2. Dynamic volatity Monte Carlo
+
+<img src="simulation/monte-carlo-dynamic-volatility.png" width="70%" align="">
+
+3. Drift Monte Carlo
+
+<img src="simulation/monte-carlo-drift.png" width="70%" align="">
+
+4. Multivariate Drift Monte Carlo BTC/USDT with Bitcurate sentiment
+
+<img src="simulation/multivariate-drift-monte-carlo.png" width="70%" align="">
+
+5. Portfolio optimization
+
+<img src="simulation/portfolio-optimization.png" width="40%" align="">
+
+```
+
+
+### FILE: `stock-forecasting-js/init.js`
+```js
+var color_list = ['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'];
+var colors = ['#5793f3', '#d14a61', '#675bba','#b62f46'];
+var close = GOOGLE['data'].map(function(el, idx) {
+  return el[1];
+})
+var stocks = GOOGLE['data'].map(function(el, idx) {
+  return [el[0],el[1],el[3],el[2]];
+})
+var stock_date = GOOGLE['date'];
+var volume = GOOGLE['volume'];
+var csv;
+var indeces = {};
+var dataMA5, dataMA10, dataMA20, dataMA30;
+var total_investment, total_gain, stock_changes, stock_changes_percent
+
+function smoothing_line(scalars,weight){
+  last = scalars[0]
+  smoothed = []
+  for(var i = 0; i < scalars.length;i++){
+    smoothed_val = last * weight + (1 - weight) * scalars[i]
+    smoothed.push(smoothed_val)
+    last = smoothed_val
+  }
+  return smoothed
+}
+
+function generate_investment(strings,values){
+  colors = "";
+  for(var i = 0; i < strings.length;i++){
+    if(values[i]>=0) colors += "<div class='col s12 m2'><div class='card'><div class='card-content'><a class='btn-floating waves-effect waves-light green' style='width:100px;height:100px;margin-bottom:20px'><i class='material-icons' style='font-size:3rem; line-height:95px'>arrow_upward</i></a><p><h6>"+strings[i]+values[i]+"</h6></p></div></div></div>";
+    else colors += "<div class='col s12 m2'><div class='card'><div class='card-content'><a class='btn-floating waves-effect waves-light red' style='width:100px;height:100px;margin-bottom:20px'><i class='material-icons' style='font-size:3rem; line-height:95px'>arrow_downward</i></a><p><h6>"+strings[i]+values[i]+"</h6></p></div></div></div>";
+  }
+  $('#color-investment').html(colors);
+}
+
+function buildConfig() {
+  return {
+    delimiter: $('#delimiter').val(),
+    header: $('#header').prop('checked'),
+    dynamicTyping: $('#dynamicTyping').prop('checked'),
+    skipEmptyLines: $('#skipEmptyLines').prop('checked'),
+    preview: parseInt($('#preview').val() || 0),
+    step: $('#stream').prop('checked') ? stepFn : undefined,
+    encoding: $('#encoding').val(),
+    worker: $('#worker').prop('checked'),
+    comments: $('#comments').val(),
+    complete: completeFn,
+    error: errorFn
+  }
+}
+
+function errorFn(err, file) {
+    Materialize.toast("ERROR: " + err + file,3000)
+}
+
+function completeFn(results) {
+  if (results && results.errors) {
+    if (results.errors) {
+      errorCount = results.errors.length;
+      firstError = results.errors[0]
+    }
+    if (results.data && results.data.length > 0)
+    rowCount = results.data.length
+  }
+  csv = results['data'];
+  for(var i = 0;i<csv[0].length;i++) indeces[csv[0][i].toLowerCase()] = i;
+  stocks = [];
+  volume = [];
+  stock_date = [];
+  for(var i = 1;i<csv.length;i++){
+    if(!isNaN(csv[i][indeces['open']]) && !isNaN(csv[i][indeces['close']]) && !isNaN(csv[i][indeces['low']]) && !isNaN(csv[i][indeces['high']]) && !isNaN(csv[i][indeces['volume']])){
+      stocks.push([parseFloat(csv[i][indeces['open']]),
+      parseFloat(csv[i][indeces['close']]),
+      parseFloat(csv[i][indeces['low']]),
+      parseFloat(csv[i][indeces['high']])]);
+      volume.push(csv[i][indeces['volume']]);
+      stock_date.push(csv[i][indeces['date']]);
+    }
+  }
+  close = stocks.map(function(el, idx) {
+    return el[1];
+  })
+  plot_stock();
+}
+
+var csv, config = buildConfig();
+$('#uploadcsv').change(function() {
+    csv = null;
+    file = document.getElementById('uploadcsv');
+    if ($(this).val().search('.csv') <= 0) {
+        $(this).val('');
+        Materialize.toast('Only support CSV', 4000);
+        return
+    }
+    $(this).parse({
+        config: config
+    })
+})
+
+function calculate_distribution(real,predict){
+  data_plot = []
+  data_arr = [real,predict]
+  for(var outer = 0; outer < data_arr.length;outer++){
+    data = data_arr[outer]
+    max_arr = Math.max(...data)
+    min_arr = Math.min(...data)
+    num_bins = Math.ceil(Math.sqrt(data.length));
+    kde = kernelDensityEstimator(epanechnikovKernel(max_arr/50), arange(min_arr,max_arr,(max_arr-min_arr)/num_bins))
+    kde = kde(data)
+    bar_x = [], bar_y = []
+    for(var i = 0; i < kde.length;i++){
+      bar_x.push(kde[i][0])
+      bar_y.push(kde[i][1])
+    }
+    min_line_y = Math.min(...bar_y)
+    for(var i = 0; i < bar_y.length;i++) bar_y[i] -= min_line_y
+    data_plot.push({'bar_x':bar_x,'bar_y':bar_y})
+  }
+  option = {
+    color: colors,
+
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'cross'
+      }
+    },
+    legend: {
+      data:['real histogram','predict histogram']
+    },
+    xAxis: [
+      {
+        type: 'category',
+        data: data_plot[0]['bar_x']
+      },
+      {
+        type: 'category',
+        data: data_plot[1]['bar_x']
+      }
+    ],
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        name:'real histogram',
+        type:'bar',
+        data:data_plot[0]['bar_y']
+      },
+      {
+        name:'predict histogram',
+        type:'bar',
+        data:data_plot[1]['bar_y'].slice(0,data_plot[1]['bar_y'].length-2)
+      }
+    ]
+  };
+  var bar_plot = echarts.init(document.getElementById('div_dist'));
+  bar_plot.setOption(option,true);
+}
+
+function calculateMA(dayCount, data) {
+  var result = [];
+  for (var i = 0, len = data.length; i < len; i++) {
+    if (i < dayCount) {
+      result.push('-');
+      continue;
+    }
+    var sum = 0;
+    for (var j = 0; j < dayCount; j++) {
+      sum += data[i - j][1];
+    }
+    result.push((sum / dayCount).toFixed(2));
+  }
+  return result;
+}
+
+function plot_stock(){
+  dataMA5 = calculateMA(5, stocks);
+  dataMA10 = calculateMA(10, stocks);
+  dataMA20 = calculateMA(20, stocks);
+  dataMA30 = calculateMA(30, stocks);
+  option = {
+    animation: false,
+    color: color_list,
+    title: {
+      left: 'center'
+    },
+    legend: {
+      top: 30,
+      data: ['STOCK', 'MA5', 'MA10', 'MA20', 'MA30']
+    },
+    tooltip: {
+      trigger: 'axis',
+      position: function (pt) {
+        return [pt[0], '10%'];
+      }
+    },
+    axisPointer: {
+      link: [{
+        xAxisIndex: [0, 1]
+      }]
+    },
+    dataZoom: [{
+      type: 'slider',
+      xAxisIndex: [0, 1],
+      realtime: false,
+      start: 0,
+      end: 100,
+      top: 65,
+      height: 20,
+      handleIcon: 'M10.7,11.9H9.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4h1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+      handleSize: '120%'
+    }, {
+      type: 'inside',
+      xAxisIndex: [0, 1],
+      start: 40,
+      end: 70,
+      top: 30,
+      height: 20
+    }],
+    xAxis: [{
+      type: 'category',
+      data: stock_date,
+      boundaryGap : false,
+      axisLine: { lineStyle: { color: '#777' } },
+      axisLabel: {
+        formatter: function (value) {
+          return echarts.format.formatTime('MM-dd', value);
+        }
+      },
+      min: 'dataMin',
+      max: 'dataMax',
+      axisPointer: {
+        show: true
+      }
+    }, {
+      type: 'category',
+      gridIndex: 1,
+      data: stock_date,
+      scale: true,
+      boundaryGap : false,
+      splitLine: {show: false},
+      axisLabel: {show: false},
+      axisTick: {show: false},
+      axisLine: { lineStyle: { color: '#777' } },
+      splitNumber: 20,
+      min: 'dataMin',
+      max: 'dataMax',
+      axisPointer: {
+        type: 'shadow',
+        label: {show: false},
+        triggerTooltip: true,
+        handle: {
+          show: true,
+          margin: 30,
+          color: '#B80C00'
+        }
+      }
+    }],
+    yAxis: [{
+      scale: true,
+      splitNumber: 2,
+      axisLine: { lineStyle: { color: '#777' } },
+      splitLine: { show: true },
+      axisTick: { show: false },
+      axisLabel: {
+        inside: true,
+        formatter: '{value}\n'
+      }
+    }, {
+      scale: true,
+      gridIndex: 1,
+      splitNumber: 2,
+      axisLabel: {show: false},
+      axisLine: {show: false},
+      axisTick: {show: false},
+      splitLine: {show: false}
+    }],
+    grid: [{
+      left: 20,
+      right: 30,
+      top: 110,
+    }, {
+      left: 20,
+      right: 30,
+      top: 400
+    }],
+    graphic: [{
+      type: 'group',
+      left: 'center',
+      top: 70,
+      width: 300,
+      bounding: 'raw',
+      children: [{
+        id: 'MA5',
+        type: 'text',
+        style: {fill: color_list[1]},
+        left: 0
+      }, {
+        id: 'MA10',
+        type: 'text',
+        style: {fill: color_list[2]},
+        left: 'center'
+      }, {
+        id: 'MA20',
+        type: 'text',
+        style: {fill: color_list[3]},
+        right: 0
+      }]
+    }],
+    series: [{
+      name: 'Volume',
+      type: 'bar',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      itemStyle: {
+        normal: {
+          color: '#7fbe9e'
+        },
+        emphasis: {
+          color: '#140'
+        }
+      },
+      data: volume
+    }, {
+      type: 'candlestick',
+      name: 'STOCK',
+      data: stocks,
+      itemStyle: {
+        normal: {
+          color: '#ef232a',
+          color0: '#14b143',
+          borderColor: '#ef232a',
+          borderColor0: '#14b143'
+        },
+        emphasis: {
+          color: 'black',
+          color0: '#444',
+          borderColor: 'black',
+          borderColor0: '#444'
+        }
+      }
+    }, {
+      name: 'MA5',
+      type: 'line',
+      data: dataMA5,
+      smooth: true,
+      showSymbol: false,
+      lineStyle: {
+        normal: {
+          width: 1
+        }
+      }
+    }, {
+      name: 'MA10',
+      type: 'line',
+      data: dataMA10,
+      smooth: true,
+      showSymbol: false,
+      lineStyle: {
+        normal: {
+          width: 1
+        }
+      }
+    }, {
+      name: 'MA20',
+      type: 'line',
+      data: dataMA20,
+      smooth: true,
+      showSymbol: false,
+      lineStyle: {
+        normal: {
+          width: 1
+        }
+      }
+    },
+    {
+      name: 'MA30',
+      type: 'line',
+      data: dataMA30,
+      smooth: true,
+      showSymbol: false,
+      lineStyle: {
+        normal: {
+          width: 1
+        }
+      }
+    }]
+  };
+
+  var chart_stock = echarts.init(document.getElementById('div_output'));
+  chart_stock.setOption(option,true);
+}
+plot_stock();
+
+$('#suggestbutton').click(function(){
+  $('#learningrate').val(0.01)
+  $('#inputdropoutrate').val(1.0)
+  $('#outputdropoutrate').val(0.8)
+  $('#timestamp').val(5)
+  $('#sizelayer').val(32)
+  $('#initialmoney').val(10000)
+  $('#maxbuy').val(5)
+  $('#maxsell').val(10)
+  $('#epoch').val(10)
+  $('#history').val(4)
+  $('#future').val(30)
+  $('#smooth').val(0.5)
+})
+$('#suggestbutton').click()
+$('#trainbutton').click(function(){
+  $('#log').html('');
+  $('#log-invest').html('');
+  $('.close-first').css('display','block');
+  if(parseFloat($('#inputdropoutrate').val())<0 || parseFloat($('#inputdropoutrate').val())>1){
+    Materialize.toast('input dropout must bigger than 0 and less than 1', 4000)
+    return
+  }
+  if(parseFloat($('#smooth').val())<0 || parseFloat($('#smooth').val())>1){
+    Materialize.toast('smoothing weights must bigger than 0 and less than 1', 4000)
+    return
+  }
+  if(parseFloat($('#outputdropoutrate').val())<0 || parseFloat($('#outputdropoutrate').val())>1){
+    Materialize.toast('output dropout must bigger than 0 and less than 1', 4000)
+    return
+  }
+  setTimeout(function(){
+    minmax_scaled = minmax_1d(close);
+    timestamp = parseInt($('#timestamp').val())
+    epoch = parseInt($('#epoch').val())
+    future = parseInt($('#future').val())
+    X_scaled = minmax_scaled.scaled.slice([0],[Math.floor(minmax_scaled.scaled.shape[0]/timestamp)*timestamp+1])
+    cells = [tf.layers.lstmCell({units: parseInt($('#sizelayer').val())})];
+    rnn = tf.layers.rnn({cell: cells, returnSequences: true,returnState:true});
+    dense_layer = tf.layers.dense({units: 1, activation: 'linear'});
+    function f(x,states){
+      x = dropout_nn(x,parseFloat($('#inputdropoutrate').val()))
+      forward = rnn.apply(x,{initialState:states});
+      last_sequences = dropout_nn(forward[0].reshape([x.shape[1],parseInt($('#sizelayer').val())]),parseFloat($('#outputdropoutrate').val()))
+      return {'forward':dense_layer.apply(last_sequences),'states_1':forward[1],'states_2':forward[2]}
+    }
+    cost = (label, pred) => tf.square(tf.sub(label,pred)).mean();
+    optimizer = tf.train.adam(parseFloat($('#learningrate').val()));
+    batch_states = [tf.zeros([1,parseInt($('#sizelayer').val())]),tf.zeros([1,parseInt($('#sizelayer').val())])];
+    arr_loss = [], arr_layer = []
+    function async_training_loop(callback) {
+      (function loop(i) {
+        var total_loss = 0
+        for(var k = 0; k < Math.floor(X_scaled.shape[0]/timestamp)*timestamp; k+=timestamp){
+          batch_x = X_scaled.slice([k],[timestamp]).reshape([1,-1,1])
+          batch_y = X_scaled.slice([k+1],[timestamp]).reshape([-1,1])
+          feed = f(batch_x,batch_states)
+          optimizer.minimize(() => cost(batch_y,f(batch_x,batch_states)['forward']));
+          total_loss += parseFloat(cost(batch_y,f(batch_x,batch_states)['forward']).toString().slice(7));
+          batch_states = [feed.states_1,feed.states_2]
+        }
+        total_loss /= Math.floor(X_scaled.shape[0]/timestamp);
+        arr_loss.push(total_loss)
+        output_predict = nj.zeros([X_scaled.shape[0]+future, 1])
+        output_predict.slice([0,1],null).assign(tf_str_tolist(X_scaled.slice(0,1))[0],false)
+        upper_b = Math.floor(X_scaled.shape[0]/timestamp)*timestamp
+        distance_upper_b = X_scaled.shape[0] - upper_b
+        batch_states = [tf.zeros([1,parseInt($('#sizelayer').val())]),tf.zeros([1,parseInt($('#sizelayer').val())])];
+        for(var k = 0; k < (Math.floor(X_scaled.shape[0]/timestamp)*timestamp); k+=timestamp){
+          batch_x = X_scaled.slice([k],[timestamp]).reshape([1,-1,1])
+          feed = f(batch_x,batch_states)
+          state_forward = tf_nj_list(feed.forward)
+          output_predict.slice([k+1,k+1+timestamp],null).assign(state_forward,false)
+          batch_states = [feed.states_1,feed.states_2]
+        }
+        batch_x = X_scaled.slice([upper_b],[distance_upper_b]).reshape([1,-1,1])
+        feed = f(batch_x,batch_states)
+        state_forward = tf_nj_list(feed.forward)
+        output_predict.slice([upper_b+1,X_scaled.shape[0]+1],null).assign(state_forward,false)
+        pointer = X_scaled.shape[0]+1
+        tensor_output_predict = output_predict.reshape([-1]).tolist()
+        batch_states = [feed.states_1,feed.states_2]
+        for(var k = 0; k < future-1; k+=1){
+          batch_x = tf.tensor(tensor_output_predict.slice(pointer-timestamp,pointer)).reshape([1,-1,1])
+          feed = f(batch_x,batch_states)
+          state_forward = tf_nj_list(feed.forward.transpose())
+          tensor_output_predict[pointer] = state_forward[0][4]
+          pointer += 1
+          batch_states = [feed.states_1,feed.states_2]
+        }
+        $('#log').append('Epoch: '+(i+1)+', avg loss: '+total_loss+'<br>');
+        predicted_val = tf_nj_list_flatten(reverse_minmax_1d(tf.tensor(tensor_output_predict),minmax_scaled['min'],minmax_scaled['max']))
+        predicted_val = smoothing_line(predicted_val,parseFloat($('#smooth').val()))
+        $('#div_output').attr('style','height:450px;');
+        new_date = stock_date.slice()
+        for(var k = 0; k < future; k+=1){
+          somedate = new Date(new_date[new_date.length-1])
+          somedate.setDate(somedate.getDate() + 1)
+          dd = somedate.getDate()
+          mm = somedate.getMonth() + 1
+          y = somedate.getFullYear()
+          new_date.push(y.toString()+'-'+mm.toString()+'-'+dd.toString())
+        }
+
+        option = {
+          animation: false,
+          color: color_list,
+          title: {
+            left: 'center'
+          },
+          legend: {
+            top: 30,
+            data: ['STOCK', 'MA5', 'MA10', 'MA20', 'MA30','predicted close']
+          },
+          tooltip: {
+            trigger: 'axis',
+            position: function (pt) {
+              return [pt[0], '10%'];
+            }
+          },
+          axisPointer: {
+            link: [{
+              xAxisIndex: [0, 1]
+            }]
+          },
+          dataZoom: [{
+            type: 'slider',
+            xAxisIndex: [0, 1],
+            realtime: false,
+            start: 0,
+            end: 100,
+            top: 65,
+            height: 20,
+            handleIcon: 'M10.7,11.9H9.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4h1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+            handleSize: '120%'
+          }, {
+            type: 'inside',
+            xAxisIndex: [0, 1],
+            start: 40,
+            end: 70,
+            top: 30,
+            height: 20
+          }],
+          xAxis: [{
+            type: 'category',
+            data: new_date,
+            boundaryGap : false,
+            axisLine: { lineStyle: { color: '#777' } },
+            axisLabel: {
+              formatter: function (value) {
+                return echarts.format.formatTime('MM-dd', value);
+              }
+            },
+            min: 'dataMin',
+            max: 'dataMax',
+            axisPointer: {
+              show: true
+            }
+          }, {
+            type: 'category',
+            gridIndex: 1,
+            data: stock_date,
+            scale: true,
+            boundaryGap : false,
+            splitLine: {show: false},
+            axisLabel: {show: false},
+            axisTick: {show: false},
+            axisLine: { lineStyle: { color: '#777' } },
+            splitNumber: 20,
+            min: 'dataMin',
+            max: 'dataMax',
+            axisPointer: {
+              type: 'shadow',
+              label: {show: false},
+              triggerTooltip: true,
+              handle: {
+                show: true,
+                margin: 30,
+                color: '#B80C00'
+              }
+            }
+          }],
+          yAxis: [{
+            scale: true,
+            splitNumber: 2,
+            axisLine: { lineStyle: { color: '#777' } },
+            splitLine: { show: true },
+            axisTick: { show: false },
+            axisLabel: {
+              inside: true,
+              formatter: '{value}\n'
+            }
+          }, {
+            scale: true,
+            gridIndex: 1,
+            splitNumber: 2,
+            axisLabel: {show: false},
+            axisLine: {show: false},
+            axisTick: {show: false},
+            splitLine: {show: false}
+          }],
+          grid: [{
+            left: 20,
+            right: 20,
+            top: 110,
+          }, {
+            left: 20,
+            right: 20,
+            top: 400
+          }],
+          graphic: [{
+            type: 'group',
+            left: 'center',
+            top: 70,
+            width: 300,
+            bounding: 'raw',
+            children: [{
+              id: 'MA5',
+              type: 'text',
+              style: {fill: color_list[1]},
+              left: 0
+            }, {
+              id: 'MA10',
+              type: 'text',
+              style: {fill: color_list[2]},
+              left: 'center'
+            }, {
+              id: 'MA20',
+              type: 'text',
+              style: {fill: color_list[3]},
+              right: 0
+            }]
+          }],
+          series: [{
+            name: 'Volume',
+            type: 'bar',
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            itemStyle: {
+              normal: {
+                color: '#7fbe9e'
+              },
+              emphasis: {
+                color: '#140'
+              }
+            },
+            data: volume
+          }, {
+            type: 'candlestick',
+            name: 'STOCK',
+            data: stocks,
+            itemStyle: {
+              normal: {
+                color: '#ef232a',
+                color0: '#14b143',
+                borderColor: '#ef232a',
+                borderColor0: '#14b143'
+              },
+              emphasis: {
+                color: 'black',
+                color0: '#444',
+                borderColor: 'black',
+                borderColor0: '#444'
+              }
+            }
+          }, {
+            name: 'MA5',
+            type: 'line',
+            data: dataMA5,
+            smooth: true,
+            showSymbol: false,
+            lineStyle: {
+              normal: {
+                width: 1
+              }
+            }
+          }, {
+            name: 'MA10',
+            type: 'line',
+            data: dataMA10,
+            smooth: true,
+            showSymbol: false,
+            lineStyle: {
+              normal: {
+                width: 1
+              }
+            }
+          }, {
+            name: 'MA20',
+            type: 'line',
+            data: dataMA20,
+            smooth: true,
+            showSymbol: false,
+            lineStyle: {
+              normal: {
+                width: 1
+              }
+            }
+          },
+          {
+            name: 'MA30',
+            type: 'line',
+            data: dataMA30,
+            smooth: true,
+            showSymbol: false,
+            lineStyle: {
+              normal: {
+                width: 1
+              }
+            }
+          },
+          {
+            name: 'predicted close',
+            type: 'line',
+            data: predicted_val,
+            smooth: false,
+            showSymbol: false,
+            lineStyle: {
+              normal: {
+                width: 2
+              }
+            }
+          }]
+        };
+
+        var chart_stock = echarts.init(document.getElementById('div_output'));
+        chart_stock.setOption(option,true);
+        calculate_distribution(close,predicted_val)
+        option = {
+          title:{
+            text:'loss graph'
+          },
+          xAxis: {
+            type: 'category',
+            data: arange(0,arr_loss.length,1)
+          },
+          yAxis: {
+            type: 'value'
+          },
+          grid:{
+            bottom:'10%'
+          },
+          series: [{
+            data: arr_loss,
+            type: 'line'
+          }]
+        };
+        var chart_line = echarts.init(document.getElementById('div_loss'));
+        chart_line.setOption(option,true);
+        if (i < (epoch-1)) {
+          setTimeout(function() {loop(++i)}, 2000);
+        } else {
+          callback();
+        }
+      }(0));
+    }
+    async_training_loop(function() {
+      $('#log').append('Done training!');
+      my_investment = simple_investor(close,predicted_val,parseInt($('#history').val()),
+      parseFloat($('#initialmoney').val()),parseInt($('#maxbuy').val()),parseInt($('#maxsell').val()),new_date)
+      $('#table-body').html('');
+      for(var i = 0; i < my_investment['output'].length; i++) $('#table-body').append(my_investment['output'][i]);
+      $('#log-invest').append("<h6 class='header'>Overall gain: "+my_investment['overall gain']+", Overall investment: "+my_investment['overall investment']+"%</h5>")
+      total_investment = my_investment['overall investment']
+      total_gain = my_investment['overall gain']
+      stock_changes = predicted_val[predicted_val.length-1] - close[0]
+      stock_changes_percent = (stock_changes / close[0])*100
+
+      var markpoints = []
+      for (var i = 0; i < my_investment['buy_X'].length;i++){
+        ind = new_date.indexOf(my_investment['buy_X'][i])
+        markpoints.push({name: 'buy', value: 'buy', xAxis: ind, yAxis: my_investment['buy_Y'][i],itemStyle:{color:'#61a0a8'}})
+      }
+      for (var i = 0; i < my_investment['sell_X'].length;i++){
+        ind = new_date.indexOf(my_investment['sell_X'][i])
+        markpoints.push({name: 'sell', value: 'sell', xAxis: ind, yAxis: my_investment['sell_Y'][i],itemStyle:{color:'#c23531'}})
+      }
+      option = {
+        animation: false,
+        color: color_list,
+        title: {
+          left: 'center'
+        },
+        legend: {
+          top: 30,
+          data: ['STOCK', 'MA5', 'MA10', 'MA20', 'MA30','predicted close','sell','buy']
+        },
+        tooltip: {
+          trigger: 'axis',
+          position: function (pt) {
+            return [pt[0], '10%'];
+          }
+        },
+        axisPointer: {
+          link: [{
+            xAxisIndex: [0, 1]
+          }]
+        },
+        dataZoom: [{
+          type: 'slider',
+          xAxisIndex: [0, 1],
+          realtime: false,
+          start: 0,
+          end: 100,
+          top: 65,
+          height: 20,
+          handleIcon: 'M10.7,11.9H9.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4h1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+          handleSize: '120%'
+        }, {
+          type: 'inside',
+          xAxisIndex: [0, 1],
+          start: 40,
+          end: 70,
+          top: 30,
+          height: 20
+        }],
+        xAxis: [{
+          type: 'category',
+          data: new_date,
+          boundaryGap : false,
+          axisLine: { lineStyle: { color: '#777' } },
+          axisLabel: {
+            formatter: function (value) {
+              return echarts.format.formatTime('MM-dd', value);
+            }
+          },
+          min: 'dataMin',
+          max: 'dataMax',
+          axisPointer: {
+            show: true
+          }
+        }, {
+          type: 'category',
+          gridIndex: 1,
+          data: stock_date,
+          scale: true,
+          boundaryGap : false,
+          splitLine: {show: false},
+          axisLabel: {show: false},
+          axisTick: {show: false},
+          axisLine: { lineStyle: { color: '#777' } },
+          splitNumber: 20,
+          min: 'dataMin',
+          max: 'dataMax',
+          axisPointer: {
+            type: 'shadow',
+            label: {show: false},
+            triggerTooltip: true,
+            handle: {
+              show: true,
+              margin: 30,
+              color: '#B80C00'
+            }
+          }
+        }],
+        yAxis: [{
+          scale: true,
+          splitNumber: 2,
+          axisLine: { lineStyle: { color: '#777' } },
+          splitLine: { show: true },
+          axisTick: { show: false },
+          axisLabel: {
+            inside: true,
+            formatter: '{value}\n'
+          }
+        }, {
+          scale: true,
+          gridIndex: 1,
+          splitNumber: 2,
+          axisLabel: {show: false},
+          axisLine: {show: false},
+          axisTick: {show: false},
+          splitLine: {show: false}
+        }],
+        grid: [{
+          left: 20,
+          right: 20,
+          top: 110,
+        }, {
+          left: 20,
+          right: 20,
+          top: 400
+        }],
+        graphic: [{
+          type: 'group',
+          left: 'center',
+          top: 70,
+          width: 300,
+          bounding: 'raw',
+          children: [{
+            id: 'MA5',
+            type: 'text',
+            style: {fill: color_list[1]},
+            left: 0
+          }, {
+            id: 'MA10',
+            type: 'text',
+            style: {fill: color_list[2]},
+            left: 'center'
+          }, {
+            id: 'MA20',
+            type: 'text',
+            style: {fill: color_list[3]},
+            right: 0
+          }]
+        }],
+        series: [{
+          name: 'Volume',
+          type: 'bar',
+          xAxisIndex: 1,
+          yAxisIndex: 1,
+          itemStyle: {
+            normal: {
+              color: '#7fbe9e'
+            },
+            emphasis: {
+              color: '#140'
+            }
+          },
+          data: volume
+        }, {
+          type: 'candlestick',
+          name: 'STOCK',
+          data: stocks,
+          markPoint: {
+            data: markpoints
+          },
+          itemStyle: {
+            normal: {
+              color: '#ef232a',
+              color0: '#14b143',
+              borderColor: '#ef232a',
+              borderColor0: '#14b143'
+            },
+            emphasis: {
+              color: 'black',
+              color0: '#444',
+              borderColor: 'black',
+              borderColor0: '#444'
+            }
+          }
+        }, {
+          name: 'MA5',
+          type: 'line',
+          data: dataMA5,
+          smooth: true,
+          showSymbol: false,
+          lineStyle: {
+            normal: {
+              width: 1
+            }
+          }
+        }, {
+          name: 'MA10',
+          type: 'line',
+          data: dataMA10,
+          smooth: true,
+          showSymbol: false,
+          lineStyle: {
+            normal: {
+              width: 1
+            }
+          }
+        }, {
+          name: 'MA20',
+          type: 'line',
+          data: dataMA20,
+          smooth: true,
+          showSymbol: false,
+          lineStyle: {
+            normal: {
+              width: 1
+            }
+          }
+        },
+        {
+          name: 'MA30',
+          type: 'line',
+          data: dataMA30,
+          smooth: true,
+          showSymbol: false,
+          lineStyle: {
+            normal: {
+              width: 1
+            }
+          }
+        },
+        {
+          name: 'predicted close',
+          type: 'line',
+          data: predicted_val,
+          smooth: false,
+          showSymbol: false,
+          lineStyle: {
+            normal: {
+              width: 2
+            }
+          }
+        }]
+      };
+
+      var chart_stock = echarts.init(document.getElementById('div_output'));
+      chart_stock.setOption(option,true);
+      // $('#after-hell').css('display','block');
+      // formData = new FormData();
+      // formData.append("date", JSON.stringify(stock_date));
+      // formData.append("close", JSON.stringify(close));
+      // formData.append("rolling", $('#history').val());
+      //
+      // xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onreadystatechange = function() {
+      //   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      //     try{
+      //       data = JSON.parse(this.responseText);
+      //       plot_pairplot(data)
+      //     }
+      //     catch(err){
+      //       Materialize.toast("error, unable to do post-processing, please try with different data",3000);
+      //       return;
+      //     }
+      //     if(data['error']){
+      //       Materialize.toast("error, unable to do post-processing, please try with different data",3000);
+      //       return;
+      //     }
+      //     else{
+      //     }
+      //   }
+      // };
+      // xmlhttp.open("POST", "http://huseinhouse.com:8070/uploader", true);
+      // xmlhttp.send(formData);
+
+    });
+  }, 500);
+})
+
+function plot_pairplot(val){
+  var chart = echarts.init(document.getElementById('pairplot'));
+  var columns = ['Close','Crude Oil','Diesel', 'Gasoline', 'Gold', 'Heating Oil', 'Kerosene', 'Natural Gas', 'Propane'];
+
+  var grids = [];
+  var xAxes = [];
+  var yAxes = [];
+  var series = [];
+  var titles = [];
+  var count = 0;
+  for(var k = 8; k >= 0;k--){
+    grids.push({
+      show: false,
+      borderWidth: 0,
+      backgroundColor: '#fff',
+      shadowColor: 'rgba(0, 0, 0, 0.3)',
+      shadowBlur: 2
+    });
+    if(k%9==0){
+      xAxes.push({
+        type: 'category',
+        name:'sell',
+        show:true,
+        data: val['pairplot'][k][0][0],
+        gridIndex: count
+      })
+      xAxes.push({
+        type: 'category',
+        name:'buy',
+        show:false,
+        data: val['pairplot'][k][1][0],
+        gridIndex: count
+      })
+      yAxes.push({
+        type: 'value',
+        show:true,
+        gridIndex: count
+      })
+      series.push({
+        data: val['pairplot'][k][0][1],
+        name:'sell',
+        type: 'bar',
+        xAxisIndex: count,
+        yAxisIndex: count,
+      })
+      series.push({
+        data: val['pairplot'][k][1][1],
+        name:'buy',
+        type: 'bar',
+        xAxisIndex: count,
+        yAxisIndex: count,
+      })
+      titles.push({
+        textAlign: 'center',
+        text: columns[k]+' histogram',
+        textStyle: {
+          fontSize: 12,
+          fontWeight: 'normal'
+        }
+      })
+    }
+    else{
+      titles.push({
+        textAlign: 'center',
+        text: columns[0]+' vs '+columns[k],
+        textStyle: {
+          fontSize: 12,
+          fontWeight: 'normal'
+        }
+      })
+      xAxes.push({
+        type: 'value',
+        gridIndex: count,
+        show: true,
+        min:'dataMin',
+        max:'dataMax'
+      })
+      yAxes.push({
+        type: 'value',
+        show: true,
+        gridIndex: count,
+        min:'dataMin',
+        max:'dataMax'
+      })
+      series.push({
+        data: val['pairplot'][k][0][0].map(function(el, idx) {
+          return [el,val['pairplot'][k][0][1][idx]];
+        }),
+        type: 'scatter',
+        name:'sell',
+        xAxisIndex: count,
+        yAxisIndex: count,
+      })
+      series.push({
+        data: val['pairplot'][k][1][0].map(function(el, idx) {
+          return [el,val['pairplot'][k][1][1][idx]];
+        }),
+        type: 'scatter',
+        name:'buy',
+        xAxisIndex: count,
+        yAxisIndex: count,
+      })
+    }
+    count++;
+  }
+
+  var rowNumber = Math.ceil(Math.sqrt(count));
+  echarts.util.each(grids, function (grid, idx) {
+    grid.left = ((idx % rowNumber) / rowNumber * 100 + 2) + '%';
+    grid.top = (Math.floor(idx / rowNumber) / rowNumber * 93 + 15) + '%';
+    grid.width = (1 / rowNumber * 100 - 5) + '%';
+    grid.height = (1 / rowNumber * 90 -11) + '%';
+
+    titles[idx].left = parseFloat(grid.left) + parseFloat(grid.width) / 2 + '%';
+    titles[idx].top = (parseFloat(grid.top)-5) + '%';
+  });
+
+  option = {
+    color:['#c23531', '#61a0a8'],
+    legend: {
+      data:['sell','buy'],
+      top:'5%'
+    },
+    title: titles.concat([{
+      text: 'Pairplot Study',
+      top: 'top',
+      left: 'center'
+    }]),
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        animation: false
+      }
+    },
+    grid: grids,
+    xAxis: xAxes,
+    yAxis: yAxes,
+    series: series
+  };
+  chart.setOption(option)
+
+
+  var chart_pi = echarts.init(document.getElementById('pi_correlation'));
+  var seriesData = [];
+  var selected = {};
+  for(var i = 0; i < val['pi'].length;i++){
+    seriesData.push({'name':columns[i+1],'value':val['pi'][i]})
+    selected[columns[i+1]]=true
+  }
+  option = {
+    title : {
+      text: 'Correlation Piechart',
+      x:'center'
+    },
+    tooltip : {
+      trigger: 'item',
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      type: 'scroll',
+      orient: 'vertical',
+      right: 10,
+      top: 20,
+      bottom: 20,
+      data: columns.slice(1),
+      selected: selected
+    },
+    series : [
+      {
+        name: 'correlation',
+        type: 'pie',
+        radius : '55%',
+        center: ['40%', '50%'],
+        data: seriesData,
+        itemStyle: {
+          emphasis: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    ]
+  };
+  chart_pi.setOption(option)
+
+  option = {
+    legend: {},
+    tooltip: {
+      trigger: 'axis',
+      showContent: false
+    },
+    dataset: {
+      source: val['data_stack']
+    },
+    xAxis: {type: 'category'},
+    yAxis: {gridIndex: 0},
+    grid: {top: '60%'},
+    series: [
+      {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+      {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+      {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+      {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+      {
+        type: 'pie',
+        id: 'pie',
+        radius: '30%',
+        center: ['50%', '35%'],
+        label: {
+          formatter: '{b}: {@2017-07-31} ({d}%)'
+        },
+        encode: {
+          itemName: 'data',
+          value: '2017-07-31',
+          tooltip: '2017-07-31'
+        }
+      }
+    ]
+  };
+  var chart_pie = echarts.init(document.getElementById('div_pie'));
+  chart_pie.on('updateAxisPointer', function (event) {
+    var xAxisInfo = event.axesInfo[0];
+    if (xAxisInfo) {
+      var dimension = xAxisInfo.value + 1;
+      chart_pie.setOption({
+        series: {
+          id: 'pie',
+          label: {
+            formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+          },
+          encode: {
+            value: dimension,
+            tooltip: dimension
+          }
+        }
+      });
+    }
+  });
+  chart_pie.setOption(option);
+
+  var grids = [];
+  var xAxes = [];
+  var yAxes = [];
+  var series = [];
+  var titles = [];
+  var count = 0;
+  for(var i = 0; i < val['movement_changes'].length; i++){
+    var data = [];
+    for (var k = 0; k < val['movement_changes'][i]['movement'].length; k++) {
+      data.push([val['movement_changes'][i]['date'][k],val['movement_changes'][i]['movement'][k]])
+    }
+    grids.push({
+      show: true,
+      borderWidth: 0,
+      backgroundColor: '#fff',
+      shadowColor: 'rgba(0, 0, 0, 0.3)',
+      shadowBlur: 2
+    });
+    xAxes.push({
+      type: 'category',
+      show: false,
+      min:'dataMin',
+      max:'dataMax',
+      gridIndex: count
+    });
+    yAxes.push({
+      type: 'value',
+      show: false,
+      min:'dataMin',
+      max:'dataMax',
+      gridIndex: count
+    });
+    if(val['pct_changes'][i] < 0) color_graph = 'red';
+    else color_graph = 'green';
+    series.push({
+      type: 'line',
+      xAxisIndex: count,
+      yAxisIndex: count,
+      data: data,
+      itemStyle:{
+        color:color_graph
+      },
+      showSymbol: false,
+      animationDuration: 1000
+    });
+    titles.push({
+      textAlign: 'center',
+      text: val['movement_changes'][i]['title']+' '+(val['pct_changes'][i]).toFixed(2)+'%',
+      textStyle: {
+        fontSize: 12,
+        fontWeight: 'normal'
+      }
+    });
+    count++;
+  }
+  var rowNumber = Math.ceil(Math.sqrt(count));
+  echarts.util.each(grids, function (grid, idx) {
+    grid.left = ((idx % rowNumber) / rowNumber * 100 + 0.5) + '%';
+    grid.top = (Math.floor(idx / rowNumber) / rowNumber * 120 + 10) + '%';
+    grid.width = (1 / rowNumber * 100 - 1) + '%';
+    grid.height = (1 / rowNumber * 120 - 1) + '%';
+
+    titles[idx].left = parseFloat(grid.left) + parseFloat(grid.width) / 2 + '%';
+    titles[idx].top = parseFloat(grid.top) + '%';
+  });
+
+  option = {
+    title: titles.concat([{
+      text: 'Weekly % changes',
+      top: 'top',
+      left: 'center'
+    }]),
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        animation: false
+      }
+    },
+    grid: grids,
+    xAxis: xAxes,
+    yAxis: yAxes,
+    series: series
+  };
+  var chart_changes = echarts.init(document.getElementById('percent_changes'));
+  chart_changes.setOption(option)
+  generate_investment(['total investment(%): ','total gains: ','stock changes: ','stock changes (%): ','gold changes(%): ','crude oil changes(%): '],
+[total_investment.toFixed(2), total_gain.toFixed(2), stock_changes.toFixed(2),
+  stock_changes_percent.toFixed(2),(val['gain_crude_oil']*100).toFixed(2),(val['gain_gold']*100).toFixed(2)])
+}
+
+```
+
+
+### FILE: `stock-forecasting-js/js/numeric-1.2.6.min.js`
+```js
+```
+
+
+### FILE: `stock-forecasting-js/js/jquery-3.3.1.min.js`
+```js
+/*! jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license */
+
+```
+
+
+### FILE: `stock-forecasting-js/js/echarts-gl.min.js`
+```js
+```
+
+
+### FILE: `stock-forecasting-js/js/plotly-latest.min.js`
+```js
+/**
+* plotly.js v1.38.3
+* Copyright 2012-2018, Plotly, Inc.
+* All rights reserved.
+* Licensed under the MIT license
+*/
+```
+
+
+<!-- Source capacity ceiling reached (2.0 MB) -->

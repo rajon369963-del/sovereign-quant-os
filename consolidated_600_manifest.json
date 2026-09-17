@@ -1,0 +1,3241 @@
+[
+  {
+    "bundle_idx": 1,
+    "filename": "QUANT_BUNDLE_001_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 32207,
+    "size_bytes": 32242,
+    "sha256": "384807f8393b9f36f539cbc919308e73fac9da320feda7333eda7c1881b6918c",
+    "repos": [
+      "pykiteconnect",
+      "Mastering-AlgoTrading-A-Beginners-Guide-using-KiteConnect-API",
+      "dhanhq-py"
+    ]
+  },
+  {
+    "bundle_idx": 2,
+    "filename": "QUANT_BUNDLE_002_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 52281,
+    "size_bytes": 52579,
+    "sha256": "24fbdbcf32489f07c1f3d2d80be51e2be734a05810c995b0964cc3c0f57be6f6",
+    "repos": [
+      "upstox-python",
+      "ShoonyaApi-py",
+      "fyers-api-sample-code"
+    ]
+  },
+  {
+    "bundle_idx": 3,
+    "filename": "QUANT_BUNDLE_003_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 13428,
+    "size_bytes": 13442,
+    "sha256": "a90e09808b85429df5a51236f86e5153a236d79edf4fc5fd17368876914e27cf",
+    "repos": [
+      "zerodha-4",
+      "indian-stock-market-platform",
+      "NSE-TradeHub-Pro"
+    ]
+  },
+  {
+    "bundle_idx": 4,
+    "filename": "QUANT_BUNDLE_004_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 54642,
+    "size_bytes": 54734,
+    "sha256": "4d34b721a5ec4ed89b5475ec6d6688273ab0345a742beacbed21ca07ddd5a5bb",
+    "repos": [
+      "stock-market-india",
+      "nsepython",
+      "Indian-Stock-Market-API"
+    ]
+  },
+  {
+    "bundle_idx": 5,
+    "filename": "QUANT_BUNDLE_005_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 48677,
+    "size_bytes": 48760,
+    "sha256": "6c8e6cb0bbcc535728c50348887f0f8fc8146afde94424b29ea2c88c5d7665aa",
+    "repos": [
+      "nsepythonserver",
+      "NSEpy-Continuous-data",
+      "indian-market-data"
+    ]
+  },
+  {
+    "bundle_idx": 6,
+    "filename": "QUANT_BUNDLE_006_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 44936,
+    "size_bytes": 45000,
+    "sha256": "eaf507cea1b50d9e1442c8904f1b79d641e5b1a6530dc535a5678f1b46cb336b",
+    "repos": [
+      "india-stocks-api",
+      "nsemine",
+      "nse-rs"
+    ]
+  },
+  {
+    "bundle_idx": 7,
+    "filename": "QUANT_BUNDLE_007_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 21453,
+    "size_bytes": 21576,
+    "sha256": "954cd23631020960047cdf4fb7b79dfe8dc50a1b5bd012794642ef4a282ca819",
+    "repos": [
+      "indian-stock-market",
+      "market-holidays-india",
+      "nse-scraper"
+    ]
+  },
+  {
+    "bundle_idx": 8,
+    "filename": "QUANT_BUNDLE_008_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 31696,
+    "size_bytes": 31750,
+    "sha256": "b35210ba66a243b33560f58705576336c28eb8a2f7a6511441bd24ebf5e0ca8d",
+    "repos": [
+      "BseIndiaApi",
+      "Extract-data-from-fyers-api",
+      "IndianStocksR"
+    ]
+  },
+  {
+    "bundle_idx": 9,
+    "filename": "QUANT_BUNDLE_009_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 22512,
+    "size_bytes": 22600,
+    "sha256": "9d3706d29bc4e960ff98fb9174944169ddcd46e3122332ceb468718e39defe9c",
+    "repos": [
+      "indian-share-market",
+      "IndianStockMarketData",
+      "bulk_dwd_yfinanance_indian_market_data"
+    ]
+  },
+  {
+    "bundle_idx": 10,
+    "filename": "QUANT_BUNDLE_010_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 18797,
+    "size_bytes": 18800,
+    "sha256": "8134980e21ab5e49067c22679af72a92989aa39c9e4e8a13ae560bead1b24e35",
+    "repos": [
+      "nse-query-builder",
+      "Indian-Stock-Markets",
+      "nse-data"
+    ]
+  },
+  {
+    "bundle_idx": 11,
+    "filename": "QUANT_BUNDLE_011_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 13052,
+    "size_bytes": 13117,
+    "sha256": "901c08a17fd3e971fad574ec0c37f31f7e907889eeb534f43a4721baaca405d2",
+    "repos": [
+      "Indian-Stock-Market_BEL.NS-and-IITL.NS-Dataset-2014-2024",
+      "IndianStockMarket",
+      "zipline-reloaded"
+    ]
+  },
+  {
+    "bundle_idx": 12,
+    "filename": "QUANT_BUNDLE_012_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 46603,
+    "size_bytes": 46831,
+    "sha256": "75e0ce1bd228d2556399ada345753bdc20c55c5a69a26e21a3cb11205994a6c4",
+    "repos": [
+      "RRG-Sector-Rotation-India",
+      "small-trading-indian-stock-market-survival-kit",
+      "Pairs-Trading-Indian-IT-Stocks"
+    ]
+  },
+  {
+    "bundle_idx": 13,
+    "filename": "QUANT_BUNDLE_013_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 16707,
+    "size_bytes": 16923,
+    "sha256": "84a70d71be752ad2a8eb0bdd40085ccf4d31f4c453162fccc59d45705e6148b9",
+    "repos": [
+      "Python-for-Indian-Traders",
+      "nifty-breakout-lab",
+      "Based_trading_with_dhan_API"
+    ]
+  },
+  {
+    "bundle_idx": 14,
+    "filename": "QUANT_BUNDLE_014_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 30934,
+    "size_bytes": 31523,
+    "sha256": "df40f9a436c82602f8000fc181ee48c9b58b8607d20fd2699e0e41b542d446ff",
+    "repos": [
+      "Dhan_Integration",
+      "Algorithmic-Trading",
+      "trading_dhan"
+    ]
+  },
+  {
+    "bundle_idx": 15,
+    "filename": "QUANT_BUNDLE_015_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 42625,
+    "size_bytes": 42653,
+    "sha256": "dbee67e814a0aee909e5036123bf35dabc0f409f6b7dbf7159003d9bcb539194",
+    "repos": [
+      "Dhan-React-Engine",
+      "DhanHQ-Ticker-py",
+      "DhanMCP"
+    ]
+  },
+  {
+    "bundle_idx": 16,
+    "filename": "QUANT_BUNDLE_016_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 47835,
+    "size_bytes": 50504,
+    "sha256": "f777ed6b92b8a70dc31d97a995a4c468291c5cafb86ed3536cbbe8b48ecc4445",
+    "repos": [
+      "DhanSetu",
+      "api_trading",
+      "automation1"
+    ]
+  },
+  {
+    "bundle_idx": 17,
+    "filename": "QUANT_BUNDLE_017_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 58894,
+    "size_bytes": 59195,
+    "sha256": "01d6d19236f5f109520f8d6927651f476dc8c6e236c3621c57a3f1cd1bd938bc",
+    "repos": [
+      "DhaneyBot",
+      "Jiraiya",
+      "API_Based_Trading"
+    ]
+  },
+  {
+    "bundle_idx": 18,
+    "filename": "QUANT_BUNDLE_018_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 55041,
+    "size_bytes": 55458,
+    "sha256": "60d7c33503a8bba32a21f2733a7dc7e6b5eac2b1193e9ff58462947b9969eb89",
+    "repos": [
+      "Learn.NSE-Algorithm",
+      "Multi-Regime-Algorithmic-Trading-System",
+      "My-Algo-Trading-Code"
+    ]
+  },
+  {
+    "bundle_idx": 19,
+    "filename": "QUANT_BUNDLE_019_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 40094,
+    "size_bytes": 40249,
+    "sha256": "8152424a319dc345e6fb3e33155f6f1fa68dd98eb96151a630a5f8ce9f3e603e",
+    "repos": [
+      "NIFTY50-Fno-AI-Decision-Engine",
+      "ML_algo",
+      "SMACrossoverStrategy-DhanAPI"
+    ]
+  },
+  {
+    "bundle_idx": 20,
+    "filename": "QUANT_BUNDLE_020_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 32960,
+    "size_bytes": 33244,
+    "sha256": "320c5868621e6c231ba21e8b3afa66b9ba45dd8b3354e745c927de521b42437d",
+    "repos": [
+      "Streamlit-Scanner-App",
+      "VWAP-HMA-RSI-NSE-Algorithm-Python",
+      "algo-trading-bot-fyers"
+    ]
+  },
+  {
+    "bundle_idx": 21,
+    "filename": "QUANT_BUNDLE_021_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 73647,
+    "size_bytes": 74183,
+    "sha256": "1d5f4e8f0129b8e652be5097990852b7a27d3410a3c68e2022e591e117c758bc",
+    "repos": [
+      "algo-trading-in-india",
+      "trading_strategies_india",
+      "algorithmic-trading-system"
+    ]
+  },
+  {
+    "bundle_idx": 22,
+    "filename": "QUANT_BUNDLE_022_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 61286,
+    "size_bytes": 63408,
+    "sha256": "dff13d7d9d7f9bccd766f9a94a5d4276d7d44f7beb52cf7321e76962466d6837",
+    "repos": [
+      "awesome-algo-trading-india",
+      "dhan-ai-trading-bot",
+      "dhan-algo-suite"
+    ]
+  },
+  {
+    "bundle_idx": 23,
+    "filename": "QUANT_BUNDLE_023_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 15746,
+    "size_bytes": 15790,
+    "sha256": "c0766920a60fe7e1a9c91e36de307bbbefa356c4176af40d0429a62744c364f7",
+    "repos": [
+      "dhan-api-tradingview-webhook-python",
+      "dhan-appscript-trading",
+      "dhan-bot-research"
+    ]
+  },
+  {
+    "bundle_idx": 24,
+    "filename": "QUANT_BUNDLE_024_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 61002,
+    "size_bytes": 61240,
+    "sha256": "5bac33db419ac924d6f5f1df82f48dc4447f0293d8f1662038534e87f22bc5d7",
+    "repos": [
+      "dhan-java-sdk",
+      "dhan-nifty-algo-trading-lab",
+      "dhan-nifty-lab"
+    ]
+  },
+  {
+    "bundle_idx": 25,
+    "filename": "QUANT_BUNDLE_025_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 15218,
+    "size_bytes": 15487,
+    "sha256": "8264e3eb2eab2a2b2153a5cf0ff1de0197c7cc58551d6d249adeb5a085daa7ea",
+    "repos": [
+      "dhan-trading-app",
+      "dhan-trading-bot",
+      "dhanhq-ts"
+    ]
+  },
+  {
+    "bundle_idx": 26,
+    "filename": "QUANT_BUNDLE_026_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 50040,
+    "size_bytes": 50467,
+    "sha256": "4de5c6ae408d6c161861fe4f4608754ddb8f1dfc1e6aaffbe86804c2b1eba8a1",
+    "repos": [
+      "indian-algo-ai-skill",
+      "marketwatch",
+      "nifty-930-breakout-trading-system"
+    ]
+  },
+  {
+    "bundle_idx": 27,
+    "filename": "QUANT_BUNDLE_027_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 78900,
+    "size_bytes": 81748,
+    "sha256": "779ac9a818d4170f1ef9b39e92bd001d5e1d772cbb6993ece3144b689d656694",
+    "repos": [
+      "nifty-algo-trader",
+      "nse-algo-bot",
+      "nse-bse-algo-strategies"
+    ]
+  },
+  {
+    "bundle_idx": 28,
+    "filename": "QUANT_BUNDLE_028_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 47638,
+    "size_bytes": 47806,
+    "sha256": "cf3ed732b96b040229d78c6ec5d995bb334114c3388c16f318317e9538722af9",
+    "repos": [
+      "nse-data-resources",
+      "nse-derivatives-warehouse",
+      "nselib"
+    ]
+  },
+  {
+    "bundle_idx": 29,
+    "filename": "QUANT_BUNDLE_029_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 11350,
+    "size_bytes": 11491,
+    "sha256": "9e78bac420778de71809c4321474b42d7a7a9884c33fd6867c615e0a9c26f02b",
+    "repos": [
+      "nseutility",
+      "quantiq",
+      "stockbreakindia-test"
+    ]
+  },
+  {
+    "bundle_idx": 30,
+    "filename": "QUANT_BUNDLE_030_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 71675,
+    "size_bytes": 72418,
+    "sha256": "5f0aa2edeff988db96db9ec7c877e4d8f2270d7097dd7d43fe3ffb77d5746398",
+    "repos": [
+      "tradehull-dhan-live-algo-skills",
+      "trading-bot",
+      "turtlestack-lite"
+    ]
+  },
+  {
+    "bundle_idx": 31,
+    "filename": "QUANT_BUNDLE_031_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 48553,
+    "size_bytes": 48870,
+    "sha256": "02c5a03f4935e51b0a0c5923a841504aa27c948935db7b535aeb788d47360d3a",
+    "repos": [
+      "upx-momentum-nse",
+      "zerodha-algo-trading",
+      "Stock_Trade_CLI"
+    ]
+  },
+  {
+    "bundle_idx": 32,
+    "filename": "QUANT_BUNDLE_032_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 15458,
+    "size_bytes": 15586,
+    "sha256": "fb3b6dc9d781ecfad678c67192b203351473f7b7fb5f6f23843fedcaf715de19",
+    "repos": [
+      "dhanhq-trading-system",
+      "intraday-algo-bot",
+      "dhan-trading-engine"
+    ]
+  },
+  {
+    "bundle_idx": 33,
+    "filename": "QUANT_BUNDLE_033_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 27515,
+    "size_bytes": 27601,
+    "sha256": "cc18fadd76544537443ffe4be06d6b7cb2a915e7f1aa5ffd69f70ebf044a69ad",
+    "repos": [
+      "Dhan-Calculator",
+      "zerodha-kite-auto-trading",
+      "kite_kill_switch"
+    ]
+  },
+  {
+    "bundle_idx": 34,
+    "filename": "QUANT_BUNDLE_034_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 13081,
+    "size_bytes": 13083,
+    "sha256": "03f4cad6c0bc348863051eb16e6a4b44148abe2ba6a02506a6ce5a6a3da2e6ce",
+    "repos": [
+      "KiteConnect.jl",
+      "AlgoTrade-API",
+      "TradingView-Extension"
+    ]
+  },
+  {
+    "bundle_idx": 35,
+    "filename": "QUANT_BUNDLE_035_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 17178,
+    "size_bytes": 17838,
+    "sha256": "cd09b35c0a6ce73f7463c77b82d56b764c626c66b4428c04c1efb293078f7a66",
+    "repos": [
+      "ORBBacktesting",
+      "Stocks-Algo-Trading",
+      "StockTradingBot"
+    ]
+  },
+  {
+    "bundle_idx": 36,
+    "filename": "QUANT_BUNDLE_036_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 35700,
+    "size_bytes": 36451,
+    "sha256": "5ce336b3c48319caa1a9803a3af7f778e603239bbf0322b3511fcbce7736b9b5",
+    "repos": [
+      "Finstreet",
+      "AI-ML",
+      "ShortCircuit"
+    ]
+  },
+  {
+    "bundle_idx": 37,
+    "filename": "QUANT_BUNDLE_037_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 71369,
+    "size_bytes": 72164,
+    "sha256": "3aa7becb48e7e56ba070fea1e0245f6db8f3d0882929f52d89a3f9f83c64489d",
+    "repos": [
+      "Motilal-Oswal-Algo-Trading-Engine",
+      "Quantum-Trading-Bot-for-NSE-BSE",
+      "hjAlgos_notebooks"
+    ]
+  },
+  {
+    "bundle_idx": 38,
+    "filename": "QUANT_BUNDLE_038_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 28347,
+    "size_bytes": 33526,
+    "sha256": "f61ad3103d61e42aac5dae197df7d9014cb235ed42d68cbfc0ba738be1a1f585",
+    "repos": [
+      "daily_stock_analysis",
+      "financial_response_spread_year",
+      "dhan-tradingview-chrome-extension"
+    ]
+  },
+  {
+    "bundle_idx": 39,
+    "filename": "QUANT_BUNDLE_039_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 41651,
+    "size_bytes": 42997,
+    "sha256": "6ac5080cba8f03b055f23259b2afe00ff485a08d7c7e55e07d64f75f68f25114",
+    "repos": [
+      "AlgoMLN",
+      "khata",
+      "Dhanbot_Trading"
+    ]
+  },
+  {
+    "bundle_idx": 40,
+    "filename": "QUANT_BUNDLE_040_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 27761,
+    "size_bytes": 27766,
+    "sha256": "6ceeaf97dc5f418448e629f968ba81d022395bd0e88af129c987de81596c9fbd",
+    "repos": [
+      "Stock_Market_Live_Trading_using_AI",
+      "ZerodhaAtom",
+      "kite-automatic-trading"
+    ]
+  },
+  {
+    "bundle_idx": 41,
+    "filename": "QUANT_BUNDLE_041_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 35553,
+    "size_bytes": 35573,
+    "sha256": "e44e0870980db9377bbecd07e7dd75e8843bb423905888669e549d314fba737b",
+    "repos": [
+      "ZerodhaStrikesAllowedToTrade",
+      "Auto_Trader",
+      "zerodha-mcp"
+    ]
+  },
+  {
+    "bundle_idx": 42,
+    "filename": "QUANT_BUNDLE_042_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 46831,
+    "size_bytes": 46971,
+    "sha256": "5aea801c362c72f60239c4672a6eda58ccd5173ec33697153060544fe0c0c358",
+    "repos": [
+      "watchlistpro",
+      "Zerodha-MCP-Trading",
+      "AutocopyTrade"
+    ]
+  },
+  {
+    "bundle_idx": 43,
+    "filename": "QUANT_BUNDLE_043_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 37973,
+    "size_bytes": 38068,
+    "sha256": "f241bd5205036a7e328102a4aa1ba10bebf8e2c414a87b3b913d703aeacdfc64",
+    "repos": [
+      "kiteconnect-ts",
+      "chartink_kite_amo_mean_reversion",
+      "kite-mcp"
+    ]
+  },
+  {
+    "bundle_idx": 44,
+    "filename": "QUANT_BUNDLE_044_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 68766,
+    "size_bytes": 69659,
+    "sha256": "d773ddc665208392fb9bec2457d74db74cbb256a84f7f21e77698f587c9806e6",
+    "repos": [
+      "Ai-portfolio-analyzer-and-trading",
+      "AI-Quant-Trading-Platform",
+      "CopyTradingDHAN"
+    ]
+  },
+  {
+    "bundle_idx": 45,
+    "filename": "QUANT_BUNDLE_045_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 40899,
+    "size_bytes": 42269,
+    "sha256": "cbb391df3790c775b9121936bf4bbae2ecf143a4dd7fd0afd6f49e87b01dad61",
+    "repos": [
+      "zerodha-algo-trader",
+      "nse_scrap",
+      "Finvasia"
+    ]
+  },
+  {
+    "bundle_idx": 46,
+    "filename": "QUANT_BUNDLE_046_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 40486,
+    "size_bytes": 41462,
+    "sha256": "b25bb49db620e05fb5ce1c4d72e6b1b55c3b72fbbb61c2ffc5c25d3ef67dca48",
+    "repos": [
+      "skopaqtrader",
+      "next-gen-algo-trading-bot",
+      "Kite-Dhan_API_Based_Trading"
+    ]
+  },
+  {
+    "bundle_idx": 47,
+    "filename": "QUANT_BUNDLE_047_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3470,
+    "size_bytes": 3472,
+    "sha256": "b49d698e9ad132e70c16dccbcf288a1d37b1bad6bd4fba8025ab0d339a9f3c99",
+    "repos": [
+      "Dhan_api_trading",
+      "TradingBot",
+      "Zerodha"
+    ]
+  },
+  {
+    "bundle_idx": 48,
+    "filename": "QUANT_BUNDLE_048_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 4024,
+    "size_bytes": 4031,
+    "sha256": "678b456e04927af3d5014f865f329c4527c7ff7ec8365a60f1ea0b7d72f35abd",
+    "repos": [
+      "Algorithmic_Trading_System",
+      "excel-liquidity-pool-simulator",
+      "RakshaQuant"
+    ]
+  },
+  {
+    "bundle_idx": 49,
+    "filename": "QUANT_BUNDLE_049_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3434,
+    "size_bytes": 3436,
+    "sha256": "9ed8c074590827e1a2829f3d2a9ab838f1008596dd6f5f5d24ec516f783d0cbc",
+    "repos": [
+      "dhanhq-skills",
+      "DhanHQ-js",
+      "Dhan-Tradehull"
+    ]
+  },
+  {
+    "bundle_idx": 50,
+    "filename": "QUANT_BUNDLE_050_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3342,
+    "size_bytes": 3344,
+    "sha256": "47123ad1360e0d776edb21f750132dd41f070f6a707652756839e1ae52666160",
+    "repos": [
+      "dhanhq-client",
+      "DhanHQ-java",
+      "dhanhq-sdk"
+    ]
+  },
+  {
+    "bundle_idx": 51,
+    "filename": "QUANT_BUNDLE_051_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3689,
+    "size_bytes": 3691,
+    "sha256": "3a65577254a56006fdaf83359cbee348a7b1ebdedc74cbdd87c2c7666eecac63",
+    "repos": [
+      "godhanhq",
+      "AlgorithmicTrading",
+      "Dhan"
+    ]
+  },
+  {
+    "bundle_idx": 52,
+    "filename": "QUANT_BUNDLE_052_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3395,
+    "size_bytes": 3397,
+    "sha256": "77cd2f3f5ec901aab8fef52150924b34fed74520ec4f15ab8a9c7e4fc2085cd9",
+    "repos": [
+      "DhanhqDocsCurrent",
+      "dhanhq",
+      "algo_trading_api"
+    ]
+  },
+  {
+    "bundle_idx": 53,
+    "filename": "QUANT_BUNDLE_053_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 4076,
+    "size_bytes": 4078,
+    "sha256": "316d2adaad1777ab36383173dcc31dba4db2a972c9ab2717bc0b53756e81a244",
+    "repos": [
+      "Screeni-py",
+      "PKScreener",
+      "AI-for-Finance-Stocks-real-time-analysis-"
+    ]
+  },
+  {
+    "bundle_idx": 54,
+    "filename": "QUANT_BUNDLE_054_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3660,
+    "size_bytes": 3664,
+    "sha256": "660331686efaea6081c954667ee7ab974601cc99bfc2637de2535ac7f4de45d0",
+    "repos": [
+      "nse-trading-skills",
+      "ZerodhaWebsocket",
+      "nse-bse-api"
+    ]
+  },
+  {
+    "bundle_idx": 55,
+    "filename": "QUANT_BUNDLE_055_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3692,
+    "size_bytes": 3697,
+    "sha256": "c9941572820b9e6cb0e5a080604720d1ba4af11105aaa19429666796887610c2",
+    "repos": [
+      "stock-price-forecaster-lstm",
+      "NSEDatabase",
+      "NSE-Neuron"
+    ]
+  },
+  {
+    "bundle_idx": 56,
+    "filename": "QUANT_BUNDLE_056_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3725,
+    "size_bytes": 3727,
+    "sha256": "c0485628a064826356b41b6ac5d5e0e2e3dc9d4d2822021df81ac190b5a02377",
+    "repos": [
+      "NSEBhavcopy",
+      "finstack-mcp",
+      "NSE-BSE-Stock-Prices-Automation"
+    ]
+  },
+  {
+    "bundle_idx": 57,
+    "filename": "QUANT_BUNDLE_057_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3569,
+    "size_bytes": 3573,
+    "sha256": "46cfb2b8e608bac902f01b192b6272777ebb8337dc8c9d66860084a83ea70cb5",
+    "repos": [
+      "nse-bse-mcp",
+      "NSE-India-PreOpen-Market-Data",
+      "PaperTrade-India"
+    ]
+  },
+  {
+    "bundle_idx": 58,
+    "filename": "QUANT_BUNDLE_058_INDIAN_BROKERS_DHAN_KITE_FYERS.md",
+    "category": "INDIAN_BROKERS_DHAN_KITE_FYERS",
+    "char_count": 3756,
+    "size_bytes": 3766,
+    "sha256": "a3e74b9ff907e716690c6e9b61ba6411bb2bc5e6bfb37708ef43fb7e824a2095",
+    "repos": [
+      "nsedt",
+      "attack-control-framework-mappings",
+      "VectorSmuggle"
+    ]
+  },
+  {
+    "bundle_idx": 59,
+    "filename": "QUANT_BUNDLE_059_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 83325,
+    "size_bytes": 83547,
+    "sha256": "ce241ee8d16c5bc8f8a296f6da2122b3f45856215c8f3d25eeb573f230ecfad7",
+    "repos": [
+      "broker-api-docs",
+      "Kotak-neo-api-v2",
+      "kotak-neo-python"
+    ]
+  },
+  {
+    "bundle_idx": 60,
+    "filename": "QUANT_BUNDLE_060_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 76518,
+    "size_bytes": 76954,
+    "sha256": "e1d7f025fc18a12f317d02fa1f469056b44d23ca9214b80c7cbeb1d544d63a5b",
+    "repos": [
+      "alice_blue",
+      "pythonAPI",
+      "hdfcsec-strapi"
+    ]
+  },
+  {
+    "bundle_idx": 61,
+    "filename": "QUANT_BUNDLE_061_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 33478,
+    "size_bytes": 40969,
+    "sha256": "125bb4f4dc2662f67698fad5fb1047b30f1abdc3a3ca2498557bbb197f881af2",
+    "repos": [
+      "pyPMClient",
+      "vnpy",
+      "uniBroker"
+    ]
+  },
+  {
+    "bundle_idx": 62,
+    "filename": "QUANT_BUNDLE_062_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 47136,
+    "size_bytes": 47234,
+    "sha256": "6fc34f8c30a582cdf856af9474efb1ccac9b1fd26b9bf2f780f5ab13c453bf48",
+    "repos": [
+      "labs-scripts-2525",
+      "pandas",
+      "prefect"
+    ]
+  },
+  {
+    "bundle_idx": 63,
+    "filename": "QUANT_BUNDLE_063_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 15815,
+    "size_bytes": 15842,
+    "sha256": "b553a7ca9a5ca9dafc05b81ec0c96c8fbaa35639946e47e550ec4c073ff1bce6",
+    "repos": [
+      "yfinance",
+      "arrow",
+      "dask"
+    ]
+  },
+  {
+    "bundle_idx": 64,
+    "filename": "QUANT_BUNDLE_064_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 57303,
+    "size_bytes": 57331,
+    "sha256": "1305f33b09f86226a9e38521416860e562fdd517ae6764031e5104c6234d10e1",
+    "repos": [
+      "jugaad-data",
+      "mftool",
+      "MoneyControl-Stock-Data-News-Scraper"
+    ]
+  },
+  {
+    "bundle_idx": 65,
+    "filename": "QUANT_BUNDLE_065_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 29353,
+    "size_bytes": 29378,
+    "sha256": "12c43ffafbb9f573575ab82acd44d896058c493b10fe20c1b7d84877b353d58b",
+    "repos": [
+      "ipo-data-scraper-python",
+      "XTS_MasterInstruments",
+      "Bharat-SM-Data"
+    ]
+  },
+  {
+    "bundle_idx": 66,
+    "filename": "QUANT_BUNDLE_066_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 45643,
+    "size_bytes": 45664,
+    "sha256": "a174a869b7a4dc37bc27caca20b92585de7ab3444dfa36e827a61276e1dbb3ef",
+    "repos": [
+      "Python-Stock-News-Scraper",
+      "kinetick",
+      "stock-news"
+    ]
+  },
+  {
+    "bundle_idx": 67,
+    "filename": "QUANT_BUNDLE_067_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 43076,
+    "size_bytes": 43154,
+    "sha256": "0b4e515ef5b63f507cb38ba06f4b0786052157807971d4663ca492462e1a89c0",
+    "repos": [
+      "bhav",
+      "stock_data_analyzer",
+      "ta"
+    ]
+  },
+  {
+    "bundle_idx": 68,
+    "filename": "QUANT_BUNDLE_068_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 19117,
+    "size_bytes": 19121,
+    "sha256": "73b4ba1e24bfa2b45ce72eb91264247888dc9e1cfa58049a3ae0419cb956aefc",
+    "repos": [
+      "empyrical",
+      "ffn",
+      "StockVizGit"
+    ]
+  },
+  {
+    "bundle_idx": 69,
+    "filename": "QUANT_BUNDLE_069_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 47178,
+    "size_bytes": 47232,
+    "sha256": "c727804774f92e81a602fce83539344a02b415ce6cd0769b86eb1425741dd0b3",
+    "repos": [
+      "QuantInsti_InterIIT2023",
+      "price-action-lib",
+      "kha-ching"
+    ]
+  },
+  {
+    "bundle_idx": 70,
+    "filename": "QUANT_BUNDLE_070_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 23991,
+    "size_bytes": 27045,
+    "sha256": "7b3847a53ff9aeacef244f196856341635df88670089309d0ee86244430ba953",
+    "repos": [
+      "CREDIT-CARD-FRAUD-DETECTION-1",
+      "FinNLP",
+      "Market-Impact-Model"
+    ]
+  },
+  {
+    "bundle_idx": 71,
+    "filename": "QUANT_BUNDLE_071_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 32917,
+    "size_bytes": 33262,
+    "sha256": "d8d730daa7b055f65a0cd7626acce93567a08e8abd11e5f4487530c9ee271637",
+    "repos": [
+      "PineScript",
+      "Seekers",
+      "Sovereign-Wealth-US"
+    ]
+  },
+  {
+    "bundle_idx": 72,
+    "filename": "QUANT_BUNDLE_072_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 85048,
+    "size_bytes": 86342,
+    "sha256": "19b1903a2dcb44a85d1f09512bfbf55a411e0bde81afaf5a9d42adc8b71f10b2",
+    "repos": [
+      "Stock-Prediction-Models",
+      "Trade_CLI",
+      "XAUUSD-GOLD-SCALPER-MT5-EA-FREE-SOURCE-CODE"
+    ]
+  },
+  {
+    "bundle_idx": 73,
+    "filename": "QUANT_BUNDLE_073_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 56466,
+    "size_bytes": 56498,
+    "sha256": "dd52e856c8e1170b8e98637c7d32b66984d27cbfe86205b779384ea007ed6bf7",
+    "repos": [
+      "alpaca-py",
+      "alpaca-trade-api-python",
+      "arch"
+    ]
+  },
+  {
+    "bundle_idx": 74,
+    "filename": "QUANT_BUNDLE_074_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 59530,
+    "size_bytes": 59573,
+    "sha256": "c13c5694e9f5a8c937a83fb8ae7761346c0e57f698a249386e322df8d4591ce7",
+    "repos": [
+      "awesome-quant",
+      "bat",
+      "bulls-vs-bears"
+    ]
+  },
+  {
+    "bundle_idx": 75,
+    "filename": "QUANT_BUNDLE_075_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 44169,
+    "size_bytes": 44259,
+    "sha256": "2f7bff2c044167bfab6929bb54ce2e934cfd0915b7df64d77bb5b41a8d98f970",
+    "repos": [
+      "ccxt",
+      "cooc",
+      "cvxpy"
+    ]
+  },
+  {
+    "bundle_idx": 76,
+    "filename": "QUANT_BUNDLE_076_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 47869,
+    "size_bytes": 47921,
+    "sha256": "9ca5df6785b065bcc8c7d96bd826a7df1c54b891bbcceb3bf5888a531c872a2a",
+    "repos": [
+      "edge",
+      "empyrical-reloaded",
+      "fastfetch"
+    ]
+  },
+  {
+    "bundle_idx": 77,
+    "filename": "QUANT_BUNDLE_077_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 64207,
+    "size_bytes": 64298,
+    "sha256": "e7d13270e0543dd4b851d12a25f1a20c66c72aaa33f1145991928f4c32577ff9",
+    "repos": [
+      "fastquant",
+      "fd",
+      "findatapy"
+    ]
+  },
+  {
+    "bundle_idx": 78,
+    "filename": "QUANT_BUNDLE_078_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 51508,
+    "size_bytes": 56500,
+    "sha256": "6b4de5208b4f60415eda4ce85e3efd6e8e1c7403fec70fc230e496ecf92ba3a4",
+    "repos": [
+      "finmarketpy",
+      "gluonts",
+      "hikyuu"
+    ]
+  },
+  {
+    "bundle_idx": 79,
+    "filename": "QUANT_BUNDLE_079_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 41153,
+    "size_bytes": 41205,
+    "sha256": "57b300b19aacbd1bc644f226326090a972ddb6dcd346f0306998f589a872ba0b",
+    "repos": [
+      "hyperfine",
+      "investpy",
+      "numba"
+    ]
+  },
+  {
+    "bundle_idx": 80,
+    "filename": "QUANT_BUNDLE_080_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 48541,
+    "size_bytes": 48552,
+    "sha256": "994bf23afcbd062f9c6d5f22e5a3ea5f204d41fb6c01c6354cf274cabfcd2f0b",
+    "repos": [
+      "optuna",
+      "orjson",
+      "pandas-market-calendars"
+    ]
+  },
+  {
+    "bundle_idx": 81,
+    "filename": "QUANT_BUNDLE_081_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 26578,
+    "size_bytes": 26580,
+    "sha256": "c4e69c0b0ad11d28ebbce89e48dd0e27f8ec4b3b6754c710b93f9a9a680e18d8",
+    "repos": [
+      "polars",
+      "pyfolio",
+      "pyfolio-reloaded"
+    ]
+  },
+  {
+    "bundle_idx": 82,
+    "filename": "QUANT_BUNDLE_082_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 49496,
+    "size_bytes": 54288,
+    "sha256": "d4acc176696ef945b0f90e3920875214c8b364bed378d30edc7bd55e97c9b80a",
+    "repos": [
+      "pyts",
+      "quantaxis",
+      "quantick"
+    ]
+  },
+  {
+    "bundle_idx": 83,
+    "filename": "QUANT_BUNDLE_083_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 37418,
+    "size_bytes": 37420,
+    "sha256": "033a4261b03ff87b70ff775af313fbc5b4650c7956fb517eb180d858c6a81df6",
+    "repos": [
+      "quickfix",
+      "ripgrep",
+      "roq-api"
+    ]
+  },
+  {
+    "bundle_idx": 84,
+    "filename": "QUANT_BUNDLE_084_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 34463,
+    "size_bytes": 34483,
+    "sha256": "bc2c69197a2cca21466ddc36f01fa43218f6986faca9b9d5055b6fd377df72a5",
+    "repos": [
+      "simdjson",
+      "statsmodels",
+      "tardis-python-private"
+    ]
+  },
+  {
+    "bundle_idx": 85,
+    "filename": "QUANT_BUNDLE_085_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 37677,
+    "size_bytes": 37926,
+    "sha256": "c1655a123d6437595c99630599e26be5258afed9b932373565bdd2f4e2887e99",
+    "repos": [
+      "tradeapp",
+      "tsfresh",
+      "usearch"
+    ]
+  },
+  {
+    "bundle_idx": 86,
+    "filename": "QUANT_BUNDLE_086_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 25120,
+    "size_bytes": 25133,
+    "sha256": "21d42ed0b835940672c6a46e9ebf3a586b33d486b9a32e7621b51b2ab3a5d03e",
+    "repos": [
+      "uv",
+      "vollib",
+      "wallstreet"
+    ]
+  },
+  {
+    "bundle_idx": 87,
+    "filename": "QUANT_BUNDLE_087_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 53006,
+    "size_bytes": 66144,
+    "sha256": "946706f2f97e6717331661e10ff44ad4673b4d4aa7caae0bc120704716cbe069",
+    "repos": [
+      "wallstreet-core",
+      "quant-ashare",
+      "vnstock"
+    ]
+  },
+  {
+    "bundle_idx": 88,
+    "filename": "QUANT_BUNDLE_088_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 84381,
+    "size_bytes": 84884,
+    "sha256": "6e870b7804ec699108540b14d05036dce7f3a0f1ab506e56b938d434d44a22fd",
+    "repos": [
+      "zvt",
+      "dtale",
+      "MachineLearningStocks"
+    ]
+  },
+  {
+    "bundle_idx": 89,
+    "filename": "QUANT_BUNDLE_089_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 38857,
+    "size_bytes": 38898,
+    "sha256": "012cb992e28ed29e773aaa6e039eda44d1cf09bee27713bfa780bda453cef800",
+    "repos": [
+      "alltick-realtime-forex-crypto-stock-tick-finance-websocket-api",
+      "ib_insync",
+      "chartpy"
+    ]
+  },
+  {
+    "bundle_idx": 90,
+    "filename": "QUANT_BUNDLE_090_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 36296,
+    "size_bytes": 44768,
+    "sha256": "e00c70200ca8fe48ea0089392aedea0988840698e6e7a753c51fea024b85852e",
+    "repos": [
+      "tick-stock-panel",
+      "MeatPy",
+      "Nice-Charts"
+    ]
+  },
+  {
+    "bundle_idx": 91,
+    "filename": "QUANT_BUNDLE_091_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3638,
+    "size_bytes": 3722,
+    "sha256": "3d6bd816fbdd10b3f776cca064b66ce3ba99b35328742029aabe1acba4aa5dc9",
+    "repos": [
+      "abu",
+      "FinanceToolkit",
+      "FinceptTerminal"
+    ]
+  },
+  {
+    "bundle_idx": 92,
+    "filename": "QUANT_BUNDLE_092_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3421,
+    "size_bytes": 3527,
+    "sha256": "a39047b42a517433f2372361e985c231ef4f744fac77797f92548cf0687d2d5c",
+    "repos": [
+      "questdb",
+      "stock",
+      "QuantLib"
+    ]
+  },
+  {
+    "bundle_idx": 93,
+    "filename": "QUANT_BUNDLE_093_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3610,
+    "size_bytes": 3612,
+    "sha256": "1ec4e9be707fdf64c90697ef2f0edf96afe320bd084616d2aa7a8419ffa1c3f1",
+    "repos": [
+      "tumbleweed_gdax",
+      "blue_collar_gdax",
+      "volume-anomaly"
+    ]
+  },
+  {
+    "bundle_idx": 94,
+    "filename": "QUANT_BUNDLE_094_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3614,
+    "size_bytes": 3616,
+    "sha256": "c857e9e231aa8f70807508f93847e6eaed10adfeeaeae9caf91eaf0a96149e5a",
+    "repos": [
+      "willowtree",
+      "time-series-machine-learning",
+      "Financial-Formulas-Library-.NET-Standard"
+    ]
+  },
+  {
+    "bundle_idx": 95,
+    "filename": "QUANT_BUNDLE_095_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3631,
+    "size_bytes": 3633,
+    "sha256": "1364a0c830223bb13216228e79dd82c7e5dbd9d9dbf263098529177ec2e3815b",
+    "repos": [
+      "Tiger",
+      "financial-forecasting-challenge-gresearch",
+      "Awesome-MATLAB-Quant-Finance-"
+    ]
+  },
+  {
+    "bundle_idx": 96,
+    "filename": "QUANT_BUNDLE_096_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3486,
+    "size_bytes": 3648,
+    "sha256": "6101728f7e074fcaa7e051ea6dca15ebe209304250c8b26e4aeb9a053a410663",
+    "repos": [
+      "MathWarehouse",
+      "Miletus.jl",
+      "RustyQLib"
+    ]
+  },
+  {
+    "bundle_idx": 97,
+    "filename": "QUANT_BUNDLE_097_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3394,
+    "size_bytes": 3482,
+    "sha256": "de2831da681962581dcb353873eb51e3f8ad866fa0447d91f29ab9f9de7ce93d",
+    "repos": [
+      "derivatives",
+      "gs-quant",
+      "aswan"
+    ]
+  },
+  {
+    "bundle_idx": 98,
+    "filename": "QUANT_BUNDLE_098_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3533,
+    "size_bytes": 3535,
+    "sha256": "c4f1e3802af4da9ddbcdfc8cc722c6c2c1bee73e646cb927e36009cf922f0545",
+    "repos": [
+      "LogESP",
+      "lifelib",
+      "torchquant"
+    ]
+  },
+  {
+    "bundle_idx": 99,
+    "filename": "QUANT_BUNDLE_099_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3550,
+    "size_bytes": 3552,
+    "sha256": "cde1237d342e0a2a6f4c62cf0c95958007c5210d7162f48dd044c7a8e6d242f1",
+    "repos": [
+      "aggregate",
+      "vulnometry",
+      "finvizfinance"
+    ]
+  },
+  {
+    "bundle_idx": 100,
+    "filename": "QUANT_BUNDLE_100_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 3429,
+    "size_bytes": 3585,
+    "sha256": "7cceb5c3bae37f03f0d34fd67fd0371e4f879f4e6820372e4bfa5d6e7130d985",
+    "repos": [
+      "tradecat-public",
+      "maverick-mcp",
+      "KHunter"
+    ]
+  },
+  {
+    "bundle_idx": 101,
+    "filename": "QUANT_BUNDLE_101_QUANT_SYSTEMS_INFRASTRUCTURE.md",
+    "category": "QUANT_SYSTEMS_INFRASTRUCTURE",
+    "char_count": 2412,
+    "size_bytes": 2414,
+    "sha256": "63506dfb077775c7672357aa6dc06d429527a9c3dfd0a03c540a59b48f0ea20e",
+    "repos": [
+      "candlestick-patterns",
+      "stock-pattern"
+    ]
+  },
+  {
+    "bundle_idx": 102,
+    "filename": "QUANT_BUNDLE_102_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 18871,
+    "size_bytes": 19140,
+    "sha256": "d54d4f6affa60d69a8a8f60063b45c86c16d8779b758d3ea341bbb815d485c66",
+    "repos": [
+      "smartapi-python",
+      "fyres-algo-trading",
+      "groww-trader"
+    ]
+  },
+  {
+    "bundle_idx": 103,
+    "filename": "QUANT_BUNDLE_103_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 49565,
+    "size_bytes": 49601,
+    "sha256": "7a9582a7167d4c2110093106243053eb93377a235e9179f7a447d30aa3d86edc",
+    "repos": [
+      "openalgo",
+      "algotradersonline",
+      "openalgo-trading"
+    ]
+  },
+  {
+    "bundle_idx": 104,
+    "filename": "QUANT_BUNDLE_104_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 24285,
+    "size_bytes": 24287,
+    "sha256": "8c803ef49b301d3f19c1c7e0bc5c6e18e7ccdada99926aaf642ba11aabe5da32",
+    "repos": [
+      "pyalgotrade",
+      "qstrader",
+      "pycon2017_algo_trading"
+    ]
+  },
+  {
+    "bundle_idx": 105,
+    "filename": "QUANT_BUNDLE_105_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 15658,
+    "size_bytes": 15689,
+    "sha256": "fd0a21ea4f01cb80d8580c01d5ac46a57d080235e47b375a735ed19cd7ac951f",
+    "repos": [
+      "pyalgotrading",
+      "Algo-Trading-with-python",
+      "Algorithmic"
+    ]
+  },
+  {
+    "bundle_idx": 106,
+    "filename": "QUANT_BUNDLE_106_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 41751,
+    "size_bytes": 42346,
+    "sha256": "b0756e9892af0fe786066936ece2da5010113cf011616ba7aade37b028be5d57",
+    "repos": [
+      "Trading_System",
+      "FinRobot",
+      "Hands-On-Algorithmic-Trading-with-Python"
+    ]
+  },
+  {
+    "bundle_idx": 107,
+    "filename": "QUANT_BUNDLE_107_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 41660,
+    "size_bytes": 41680,
+    "sha256": "a1452ab26fe80e89bad6a0bcdad243d84734218915b1db7d6a1d3c8695d02adb",
+    "repos": [
+      "SwingTradingAlgorithm",
+      "Trading-APIs",
+      "TradingView"
+    ]
+  },
+  {
+    "bundle_idx": 108,
+    "filename": "QUANT_BUNDLE_108_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 30431,
+    "size_bytes": 30797,
+    "sha256": "a3a3f55367b33920577374767414511bd44735e3b1f454367d5d8329841059ac",
+    "repos": [
+      "adheera-algo-trader",
+      "algo-fno-trading-bot",
+      "algorithmic-trading-samples"
+    ]
+  },
+  {
+    "bundle_idx": 109,
+    "filename": "QUANT_BUNDLE_109_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 40399,
+    "size_bytes": 40401,
+    "sha256": "d506db2d26de3df18b0f1082d7258b3cd25bfc0776be50294bd144b16c2d4275",
+    "repos": [
+      "python_algo",
+      "freqtrade",
+      "gym-anytrading"
+    ]
+  },
+  {
+    "bundle_idx": 110,
+    "filename": "QUANT_BUNDLE_110_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 89439,
+    "size_bytes": 89491,
+    "sha256": "7914ff28dea9f470d97407193848d98ff2cfee1cecb517f6c2f5261b0a7c26fd",
+    "repos": [
+      "hummingbot",
+      "machine-learning-for-trading",
+      "quant-trading-bot"
+    ]
+  },
+  {
+    "bundle_idx": 111,
+    "filename": "QUANT_BUNDLE_111_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 51064,
+    "size_bytes": 51222,
+    "sha256": "2973bc0a0859da68798d29003f4a7bcbeff7d776b6e1d22e571f3357e180fa44",
+    "repos": [
+      "quant-trading-strategies",
+      "rda-stock-trading",
+      "shark-bot"
+    ]
+  },
+  {
+    "bundle_idx": 112,
+    "filename": "QUANT_BUNDLE_112_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 46973,
+    "size_bytes": 49039,
+    "sha256": "38f10d32db665a9835f0b420c5762ea79ccf487316bccda5b4748d77231ed51d",
+    "repos": [
+      "trading-algoo",
+      "trading-strategy-templates-python",
+      "trading-system"
+    ]
+  },
+  {
+    "bundle_idx": 113,
+    "filename": "QUANT_BUNDLE_113_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 41983,
+    "size_bytes": 42049,
+    "sha256": "6a52101f792c70320afa0bec3bca2522eb4042a80b68663f54d0f072de7e9774",
+    "repos": [
+      "tradingagents",
+      "tradingbots",
+      "eiten"
+    ]
+  },
+  {
+    "bundle_idx": 114,
+    "filename": "QUANT_BUNDLE_114_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 40010,
+    "size_bytes": 42344,
+    "sha256": "4e44b33e9e31d2ed47bb766176d0fcc405c96eaff4dfce0e0bf2ffad60f240e7",
+    "repos": [
+      "polymarket-whales",
+      "pybroker",
+      "EPAT"
+    ]
+  },
+  {
+    "bundle_idx": 115,
+    "filename": "QUANT_BUNDLE_115_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 30216,
+    "size_bytes": 31342,
+    "sha256": "cd60b872df8291efb440035bef55bc9c03e90b6fe8f923b3f2123f0382058b60",
+    "repos": [
+      "catalyst",
+      "qtpylib",
+      "hummingbot_chinese"
+    ]
+  },
+  {
+    "bundle_idx": 116,
+    "filename": "QUANT_BUNDLE_116_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 51350,
+    "size_bytes": 51386,
+    "sha256": "5c1f7ea14c905d95791d9d80efb65055fe3b0406196044123f2b35f24660bf18",
+    "repos": [
+      "futu_algo",
+      "stocklook",
+      "448Project"
+    ]
+  },
+  {
+    "bundle_idx": 117,
+    "filename": "QUANT_BUNDLE_117_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 3469,
+    "size_bytes": 3471,
+    "sha256": "8e0e62d953e85952eb38f0fd72d5102dd2043d4f3f5451b1b703965d1e7523b6",
+    "repos": [
+      "Vibe-Trading",
+      "algotrading",
+      "tribeca"
+    ]
+  },
+  {
+    "bundle_idx": 118,
+    "filename": "QUANT_BUNDLE_118_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 3497,
+    "size_bytes": 3502,
+    "sha256": "0de79c533399098a2388cf611bc81f4cf3dcc7a7080745573433e527397df511",
+    "repos": [
+      "Krypto-trading-bot",
+      "v1-contracts",
+      "Pumpfun-Volume-Market-Maker-Bot"
+    ]
+  },
+  {
+    "bundle_idx": 119,
+    "filename": "QUANT_BUNDLE_119_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 3479,
+    "size_bytes": 3481,
+    "sha256": "e1bc20af8bcc93b365300844ab5648af73a5e30743bdd250b2785a70f9a68f7a",
+    "repos": [
+      "nombot",
+      "cex-withdrawal-bot",
+      "amm-frontrun-bot"
+    ]
+  },
+  {
+    "bundle_idx": 120,
+    "filename": "QUANT_BUNDLE_120_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 3650,
+    "size_bytes": 3670,
+    "sha256": "bf5e03d057111b096025eef0be40801e33286c559277eaceae414dfbcce441ac",
+    "repos": [
+      "Entropy",
+      "Stock-Market-Analysis",
+      "pycryptobot"
+    ]
+  },
+  {
+    "bundle_idx": 121,
+    "filename": "QUANT_BUNDLE_121_EXECUTION_ALGORITHMS_ROUTING.md",
+    "category": "EXECUTION_ALGORITHMS_ROUTING",
+    "char_count": 3640,
+    "size_bytes": 3648,
+    "sha256": "6661ffa5e3aa9cf5f14aef835a391895caaa9cfdd9c599944944c947dd80eb6d",
+    "repos": [
+      "TradingView-Screener",
+      "fooltrader",
+      "PatternPy"
+    ]
+  },
+  {
+    "bundle_idx": 122,
+    "filename": "QUANT_BUNDLE_122_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 76049,
+    "size_bytes": 76212,
+    "sha256": "2998bc6f5696e7895c0819e5f3b6becdec8e8204c0c3719a82dabb3c1943817f",
+    "repos": [
+      "py5paisa",
+      "groww",
+      "alphatrade"
+    ]
+  },
+  {
+    "bundle_idx": 123,
+    "filename": "QUANT_BUNDLE_123_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 54931,
+    "size_bytes": 55434,
+    "sha256": "5177b29c1c8b8455d04702de87798658d97ae3fc3dd7e03a98c886d680c53f6c",
+    "repos": [
+      "ai-trading-platform-v2",
+      "Bridge",
+      "fenix"
+    ]
+  },
+  {
+    "bundle_idx": 124,
+    "filename": "QUANT_BUNDLE_124_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 34138,
+    "size_bytes": 34245,
+    "sha256": "1ce0b68d742381b14b16ea701694daf1223998f68acde52e5480ea5270eff2ce",
+    "repos": [
+      "airflow",
+      "stock-market-analysis-with-sql",
+      "TradeBrain_api"
+    ]
+  },
+  {
+    "bundle_idx": 125,
+    "filename": "QUANT_BUNDLE_125_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 62001,
+    "size_bytes": 62131,
+    "sha256": "8633b120099197d1bfcfbd48c98f3c14bdeeaa57a1d63d9338ab4c62c7f51a4e",
+    "repos": [
+      "vectorbt",
+      "raptorbt",
+      "Clairvoyant"
+    ]
+  },
+  {
+    "bundle_idx": 126,
+    "filename": "QUANT_BUNDLE_126_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 33346,
+    "size_bytes": 33429,
+    "sha256": "a6a1564b58ac0fbb365bbaba79684b3e6297a092052d500884ef090c66bad654",
+    "repos": [
+      "Flow_Imbalance_Strategy",
+      "StockPredictionAI",
+      "trading_bot"
+    ]
+  },
+  {
+    "bundle_idx": 127,
+    "filename": "QUANT_BUNDLE_127_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 50332,
+    "size_bytes": 50558,
+    "sha256": "e12c3132f4a82e02c39c15a7678a90abd73a6a63a579ef287da0e72d43d84292",
+    "repos": [
+      "ai_skill",
+      "alpha-vantage-sdk",
+      "vantage"
+    ]
+  },
+  {
+    "bundle_idx": 128,
+    "filename": "QUANT_BUNDLE_128_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 40920,
+    "size_bytes": 41441,
+    "sha256": "9be0f41506ec04cb897edfcd1a32e78e6d2dcd80cc5f347faed3183450c7b6ec",
+    "repos": [
+      "alphalens-reloaded",
+      "deep-reinforcement-learning-for-finance",
+      "ml-trading-screener"
+    ]
+  },
+  {
+    "bundle_idx": 129,
+    "filename": "QUANT_BUNDLE_129_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 43185,
+    "size_bytes": 46294,
+    "sha256": "bd88665f8b02c8059e3a407a3141056b7f7d69d635bd4e41d4899021e3b79b4b",
+    "repos": [
+      "qlib",
+      "rqalpha",
+      "stocks-ai-trader"
+    ]
+  },
+  {
+    "bundle_idx": 130,
+    "filename": "QUANT_BUNDLE_130_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 52656,
+    "size_bytes": 52679,
+    "sha256": "f7025312e0fe660021c2096ee820d0d9f2e48f2d5e629cc2029b1b44a650f723",
+    "repos": [
+      "AIAlpha",
+      "tributary",
+      "financial-machine-learning"
+    ]
+  },
+  {
+    "bundle_idx": 131,
+    "filename": "QUANT_BUNDLE_131_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 41260,
+    "size_bytes": 43169,
+    "sha256": "6364f4dd29bdf84ea31cdd63b53572b119c1c17f79ac9f7340bcbf374192534a",
+    "repos": [
+      "bulbea",
+      "awesome-deep-trading",
+      "xalpha"
+    ]
+  },
+  {
+    "bundle_idx": 132,
+    "filename": "QUANT_BUNDLE_132_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 69848,
+    "size_bytes": 70596,
+    "sha256": "558de6a963e97fd91bd9e6123f751ea91c1303e966d26f2d8f689bd5870439e7",
+    "repos": [
+      "ArcticDB",
+      "gym-trading",
+      "outsmart-cli"
+    ]
+  },
+  {
+    "bundle_idx": 133,
+    "filename": "QUANT_BUNDLE_133_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 56008,
+    "size_bytes": 59316,
+    "sha256": "45996e442da243227990ee4413b29067f006439b5365222e32e9db89adda2afe",
+    "repos": [
+      "tickdb-unified-realtime-marketdata-api",
+      "kalshi-ai-trading-bot",
+      "AgentQuant"
+    ]
+  },
+  {
+    "bundle_idx": 134,
+    "filename": "QUANT_BUNDLE_134_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 33383,
+    "size_bytes": 33512,
+    "sha256": "b1ff1aadd423fd0656a3afce74291f9ebcd7a89642ab07ec5ff2ffcdd772e03d",
+    "repos": [
+      "jesse",
+      "passivbot",
+      "exploring-order-book-predictability"
+    ]
+  },
+  {
+    "bundle_idx": 135,
+    "filename": "QUANT_BUNDLE_135_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 26431,
+    "size_bytes": 26574,
+    "sha256": "046542ded11356f06ba171f592bead9830d20033f277a8ba08d932ce662fe9d2",
+    "repos": [
+      "gym-continuousDoubleAuction",
+      "polymarket-microstructure",
+      "botvana"
+    ]
+  },
+  {
+    "bundle_idx": 136,
+    "filename": "QUANT_BUNDLE_136_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 59950,
+    "size_bytes": 67790,
+    "sha256": "3ee0cd6b20963d7d81d2663e6a61e984acf1fd76adaddf5bf5664b42afa0c413",
+    "repos": [
+      "openmtops",
+      "MLInference",
+      "VisionQuant-Pro"
+    ]
+  },
+  {
+    "bundle_idx": 137,
+    "filename": "QUANT_BUNDLE_137_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3760,
+    "size_bytes": 3884,
+    "sha256": "d0e274da094a7c4e5940d2a5310f2922a42559d720daf5c5afa298b187b9aae9",
+    "repos": [
+      "Qbot",
+      "TradeMaster",
+      "Introduction-to-Quantitative-Finance"
+    ]
+  },
+  {
+    "bundle_idx": 138,
+    "filename": "QUANT_BUNDLE_138_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3785,
+    "size_bytes": 3837,
+    "sha256": "e4d34beda01e9db228010573c515281877c9ee09071c535b2c30951263b801e9",
+    "repos": [
+      "OpenBB",
+      "QuantDinger",
+      "a-stock-data"
+    ]
+  },
+  {
+    "bundle_idx": 139,
+    "filename": "QUANT_BUNDLE_139_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3571,
+    "size_bytes": 3576,
+    "sha256": "c4ca6cf89c0d18f32060a07dc56b8cda07d119c1a6317fe0ef0b7d4bf3eb9981",
+    "repos": [
+      "awesome-ai-in-finance",
+      "bonds",
+      "srl-ctrader-indicators"
+    ]
+  },
+  {
+    "bundle_idx": 140,
+    "filename": "QUANT_BUNDLE_140_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3887,
+    "size_bytes": 3889,
+    "sha256": "ec86f550fdb03e92b0570c4cb6a72061bb965aa431f129330b024d9c202084ae",
+    "repos": [
+      "MarketGPT",
+      "hyperliquid-order-flow-bot",
+      "darkflow"
+    ]
+  },
+  {
+    "bundle_idx": 141,
+    "filename": "QUANT_BUNDLE_141_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3583,
+    "size_bytes": 3585,
+    "sha256": "25b7779c88ffca561a6dc0306ddb67a4095adfb29552687ae05c4db9bc0a67bb",
+    "repos": [
+      "DataFrame",
+      "Deep_Learning_Machine_Learning_Stock",
+      "DGFraud"
+    ]
+  },
+  {
+    "bundle_idx": 142,
+    "filename": "QUANT_BUNDLE_142_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3588,
+    "size_bytes": 3590,
+    "sha256": "0dbaa814c41d53e19bffebd8c40e73707889375f59456c97ada4722e6cbf5104",
+    "repos": [
+      "financial-engineering",
+      "DGFraud-TF2",
+      "open-MFE"
+    ]
+  },
+  {
+    "bundle_idx": 143,
+    "filename": "QUANT_BUNDLE_143_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3667,
+    "size_bytes": 3669,
+    "sha256": "3c38e2fea74069a677bdba9cf56fd34de3a615b4a1b2f4e51652f582067e21c3",
+    "repos": [
+      "WQU-Projects",
+      "finefinance",
+      "mcp-server"
+    ]
+  },
+  {
+    "bundle_idx": 144,
+    "filename": "QUANT_BUNDLE_144_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3724,
+    "size_bytes": 3728,
+    "sha256": "2910ec374f844b55a56d3e9493150118217c9a6d61e490dcca092b41e76a9a89",
+    "repos": [
+      "Thesis",
+      "iFixAi",
+      "alpha-forge"
+    ]
+  },
+  {
+    "bundle_idx": 145,
+    "filename": "QUANT_BUNDLE_145_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 3991,
+    "size_bytes": 3993,
+    "sha256": "c7bb340218f4ddb694e2ca3c2b2dccbf6a1178ec4148fbfa606281d69e5f9e5f",
+    "repos": [
+      "auditpilot",
+      "harden-freebsd",
+      "Deep-Convolution-Stock-Technical-Analysis"
+    ]
+  },
+  {
+    "bundle_idx": 146,
+    "filename": "QUANT_BUNDLE_146_MACHINE_LEARNING_RL_ALPHA.md",
+    "category": "MACHINE_LEARNING_RL_ALPHA",
+    "char_count": 1420,
+    "size_bytes": 1425,
+    "sha256": "1992c6540c3be078369febee31f79eea2860134ebb26890f268bed46e8dda434",
+    "repos": [
+      "ai-hedge-fund-crypto"
+    ]
+  },
+  {
+    "bundle_idx": 147,
+    "filename": "QUANT_BUNDLE_147_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 107093,
+    "size_bytes": 107291,
+    "sha256": "50cd466714f5749dbe5050853a3927d35f47d226d82afa76791e4ee0759914d6",
+    "repos": [
+      "StockSharp",
+      "Python-NSE-Option-Chain-Analyzer",
+      "nse-options-data-pipeline"
+    ]
+  },
+  {
+    "bundle_idx": 148,
+    "filename": "QUANT_BUNDLE_148_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 21437,
+    "size_bytes": 21586,
+    "sha256": "66ec7998c7ec8af88b3935870755b39e05cdd82a8cb5b8c27837a2292809f6e7",
+    "repos": [
+      "Extract-Historical-Data-from-NSE-for-FUTURE-OPTION",
+      "nse-options-data-collector",
+      "option-chain-refresher"
+    ]
+  },
+  {
+    "bundle_idx": 149,
+    "filename": "QUANT_BUNDLE_149_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 26973,
+    "size_bytes": 26975,
+    "sha256": "a8f84dacf812b1d4096c9dacb2a9ff69f5c93431fe39e36b345f8a8d796566ba",
+    "repos": [
+      "fetchNSEOptionChainData",
+      "NSE-Options-Scrapper",
+      "NseOptionsChainScrapper"
+    ]
+  },
+  {
+    "bundle_idx": 150,
+    "filename": "QUANT_BUNDLE_150_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 106773,
+    "size_bytes": 107214,
+    "sha256": "f4c04d668e6df843e00abbe07c2bc25ba65c7f1e3831dc69b1de3fd0f38877a7",
+    "repos": [
+      "NseOptionsChainData",
+      "algo_trading_strategies_india",
+      "nifty-options-algorithmic-backtester"
+    ]
+  },
+  {
+    "bundle_idx": 151,
+    "filename": "QUANT_BUNDLE_151_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 13878,
+    "size_bytes": 14023,
+    "sha256": "108303c90b035e7b087e5e97effea821f45f2f076340757bc8d301a141bf85ad",
+    "repos": [
+      "Awesome-options",
+      "Option-Writing-Calls-Using-Open-Interest",
+      "KJStockScreener"
+    ]
+  },
+  {
+    "bundle_idx": 152,
+    "filename": "QUANT_BUNDLE_152_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 82504,
+    "size_bytes": 85535,
+    "sha256": "1978a2061ca5fd6f2864c35d0362eea31c2cdfc31cf8110b42d758943fd0ed24",
+    "repos": [
+      "NiftyOptionTradingSystem",
+      "OPTION-DASHBOARD",
+      "ai-algorithmic-trading-bot"
+    ]
+  },
+  {
+    "bundle_idx": 153,
+    "filename": "QUANT_BUNDLE_153_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 71830,
+    "size_bytes": 72508,
+    "sha256": "6df52e52f6d7c9f7d24373c92db41c937af9f5de0cf452a760fa9bce040820af",
+    "repos": [
+      "dhan-trader-bot",
+      "quant-trading",
+      "volatility-trading"
+    ]
+  },
+  {
+    "bundle_idx": 154,
+    "filename": "QUANT_BUNDLE_154_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 67741,
+    "size_bytes": 68845,
+    "sha256": "7b6b18d4702b9bff9ff8ff3783533b3b1001911d77a6467d7460852486ca8125",
+    "repos": [
+      "awesome-institutional-trading",
+      "Options-Flow-Predictor",
+      "dhan-mcp-fw"
+    ]
+  },
+  {
+    "bundle_idx": 155,
+    "filename": "QUANT_BUNDLE_155_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 27258,
+    "size_bytes": 27352,
+    "sha256": "f99c90bc2579a53408601ad4ec5c521c991056bf170e3b3976a9e4dc788bfb95",
+    "repos": [
+      "ui-trading-system",
+      "TradeProject",
+      "trade-frame"
+    ]
+  },
+  {
+    "bundle_idx": 156,
+    "filename": "QUANT_BUNDLE_156_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 44325,
+    "size_bytes": 44366,
+    "sha256": "254ea5b4026e1e98cf9480ed3fd4bfaff9babefda8d694321e7a69d25fc27a6c",
+    "repos": [
+      "nifty-options-paper-trading-bot",
+      "fully-automated-nifty-options-trading",
+      "betterOptionsTrading"
+    ]
+  },
+  {
+    "bundle_idx": 157,
+    "filename": "QUANT_BUNDLE_157_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 38248,
+    "size_bytes": 38276,
+    "sha256": "8a6b7300f0155ff6f9f44bddf22be2b016d0f7202aa9fd1138940593b262fc0f",
+    "repos": [
+      "zerodha-algorithmic-trader",
+      "options-strats",
+      "python-option-calculator"
+    ]
+  },
+  {
+    "bundle_idx": 158,
+    "filename": "QUANT_BUNDLE_158_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 46807,
+    "size_bytes": 47669,
+    "sha256": "c0df14463ce44c87cf6a4f67505d1eb296425f778540d0d417717921c06fab61",
+    "repos": [
+      "deribit-options-collector",
+      "adaptive-volatility-arbitrage",
+      "lox"
+    ]
+  },
+  {
+    "bundle_idx": 159,
+    "filename": "QUANT_BUNDLE_159_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 78606,
+    "size_bytes": 79748,
+    "sha256": "83807920fb4e929df74a603d731a8ce153ec97c8ba032a966ad5bf11485506fd",
+    "repos": [
+      "Options-Trading-Strategies-2010-2020",
+      "ivsurf",
+      "Trivya-portfolio-tracker"
+    ]
+  },
+  {
+    "bundle_idx": 160,
+    "filename": "QUANT_BUNDLE_160_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 41171,
+    "size_bytes": 42784,
+    "sha256": "1eea410155f77702894e15d83016bfed43a1dbab213bbef32fdd4292dbb0a493",
+    "repos": [
+      "OptionsLab",
+      "crypto_options_desk_mcp",
+      "fx-volatility-trading-system"
+    ]
+  },
+  {
+    "bundle_idx": 161,
+    "filename": "QUANT_BUNDLE_161_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 48149,
+    "size_bytes": 48409,
+    "sha256": "a729749ac0c5eaf84a6fc1aa04ebb4dc16a2cc5b0fe456e68f2c426e006891b2",
+    "repos": [
+      "options-trading-bot",
+      "options-trading",
+      "Black-Scholes-Options-Trading"
+    ]
+  },
+  {
+    "bundle_idx": 162,
+    "filename": "QUANT_BUNDLE_162_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 24459,
+    "size_bytes": 24623,
+    "sha256": "6eb77c84e0e214c5d5161c44b01b7805a3d7cbb2b24b097397237bcd21311839",
+    "repos": [
+      "FX-Options-Dashboard",
+      "theta-reaper-template",
+      "options-trading-strategy"
+    ]
+  },
+  {
+    "bundle_idx": 163,
+    "filename": "QUANT_BUNDLE_163_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 20658,
+    "size_bytes": 22831,
+    "sha256": "54f2e314bdfe8c563afff02316edb462c5e79662f2d54acd9bfb3ce91713e283",
+    "repos": [
+      "optionsx-platform",
+      "options-trading-py",
+      "alpaca-options-trading-ai-agent"
+    ]
+  },
+  {
+    "bundle_idx": 164,
+    "filename": "QUANT_BUNDLE_164_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 32250,
+    "size_bytes": 32252,
+    "sha256": "4a151b721b3d91515a14c2423db3f2e2312b830f4087b27e0adb055e40bfc663",
+    "repos": [
+      "option-contract-grader",
+      "Option-Trading-Backend",
+      "lumibot"
+    ]
+  },
+  {
+    "bundle_idx": 165,
+    "filename": "QUANT_BUNDLE_165_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 4033,
+    "size_bytes": 4035,
+    "sha256": "b20c4b25d11088a1a1b2549fa294f4a921399e826d7a1994fc36f6a24d226403",
+    "repos": [
+      "gex-llm-patterns",
+      "ai_trading_bot",
+      "options"
+    ]
+  },
+  {
+    "bundle_idx": 166,
+    "filename": "QUANT_BUNDLE_166_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 4236,
+    "size_bytes": 4246,
+    "sha256": "95407493f42b5d91757b6d7b102521c2fd0eea468935bcad948c4f17fd8ce59f",
+    "repos": [
+      "RL-Driven-FX-Options-Trading-and-Hedging-Strategies",
+      "voice-options-trader",
+      "Equity-Option-Pricing-and-Delta-Hedging-in-Python"
+    ]
+  },
+  {
+    "bundle_idx": 167,
+    "filename": "QUANT_BUNDLE_167_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3926,
+    "size_bytes": 3928,
+    "sha256": "f6ed91e08e386f71d03c2382aad047a0a5eb6febd4c3a9abeaa20ce78456fc8b",
+    "repos": [
+      "schwab-algorithmic-options-trading",
+      "greeks",
+      "greeks-driven-options-engine"
+    ]
+  },
+  {
+    "bundle_idx": 168,
+    "filename": "QUANT_BUNDLE_168_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3871,
+    "size_bytes": 3873,
+    "sha256": "8516388aa95e2fdc3cae3effa27355df3ee64c9af97c7ecb3971fcc6f12d157d",
+    "repos": [
+      "options-pricing-greeks-tool",
+      "polymarket-btc-edge",
+      "OptionStratLib"
+    ]
+  },
+  {
+    "bundle_idx": 169,
+    "filename": "QUANT_BUNDLE_169_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3646,
+    "size_bytes": 3648,
+    "sha256": "6cc7077e9bf353335eb1a9dd35d55b9dfdb2b508e8621b20750221a88d58bd85",
+    "repos": [
+      "demeter",
+      "Jdmbs",
+      "OptionsScraper"
+    ]
+  },
+  {
+    "bundle_idx": 170,
+    "filename": "QUANT_BUNDLE_170_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3812,
+    "size_bytes": 3816,
+    "sha256": "67ad670c6c58a0bec1285563206f5a3dd38f116b8907e6cc0be56cadf20bd71a",
+    "repos": [
+      "AI-trader",
+      "nse-bse-indian-stock-market-data-mcp",
+      "optionlab"
+    ]
+  },
+  {
+    "bundle_idx": 171,
+    "filename": "QUANT_BUNDLE_171_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3526,
+    "size_bytes": 3528,
+    "sha256": "09905edb90b7594d88e76fa9582fb6ed382da15056375ebf305202d8b821e251",
+    "repos": [
+      "options-implied-probability",
+      "GraphVega",
+      "optionmatrix"
+    ]
+  },
+  {
+    "bundle_idx": 172,
+    "filename": "QUANT_BUNDLE_172_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3631,
+    "size_bytes": 3633,
+    "sha256": "685da98ac8844f1b26f56e25fe33ab0c2c08a01d8e057853cb65e1acd0aec68e",
+    "repos": [
+      "Options-Calculator",
+      "cutebacktests",
+      "fypy"
+    ]
+  },
+  {
+    "bundle_idx": 173,
+    "filename": "QUANT_BUNDLE_173_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3782,
+    "size_bytes": 3784,
+    "sha256": "55d55bccbffd53edcd0b099a2d23ba6bb47f9993b45d9862939642c2679cf7ee",
+    "repos": [
+      "ProjectReward",
+      "BlackScholes",
+      "thetadata-python"
+    ]
+  },
+  {
+    "bundle_idx": 174,
+    "filename": "QUANT_BUNDLE_174_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3793,
+    "size_bytes": 3795,
+    "sha256": "8ca8970581f461a33c47c6e4ad5840edca8c3716e7a8da1c3b054b28b9b84d67",
+    "repos": [
+      "options-pricing",
+      "black-scholes-cpp",
+      "VolSurface"
+    ]
+  },
+  {
+    "bundle_idx": 175,
+    "filename": "QUANT_BUNDLE_175_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3609,
+    "size_bytes": 3611,
+    "sha256": "12075e63ae5d17b46f9752f6ae5430a640b8fd1c4db293b940cbbce99265db5d",
+    "repos": [
+      "Binary-Option-Pricing",
+      "PutPremiumProcessor",
+      "OptionsProfitCalculator"
+    ]
+  },
+  {
+    "bundle_idx": 176,
+    "filename": "QUANT_BUNDLE_176_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 3693,
+    "size_bytes": 3697,
+    "sha256": "7aeb2fada6b4cbf506708b805059ca78f674659934756ec3c24052f7dd1a2d29",
+    "repos": [
+      "CQF_Trading_Competition",
+      "OptionsPricingCPP",
+      "options-market-making"
+    ]
+  },
+  {
+    "bundle_idx": 177,
+    "filename": "QUANT_BUNDLE_177_OPTIONS_GREEKS_VOLATILITY.md",
+    "category": "OPTIONS_GREEKS_VOLATILITY",
+    "char_count": 2454,
+    "size_bytes": 2456,
+    "sha256": "5d1c3d1117e2d290e86dc904c03f82f5d626eda2d0bf500123de2249260ddf9a",
+    "repos": [
+      "calcbsimpvol",
+      "tuneta"
+    ]
+  },
+  {
+    "bundle_idx": 178,
+    "filename": "QUANT_BUNDLE_178_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 48536,
+    "size_bytes": 48771,
+    "sha256": "4f163e581c80b28ac5d5044af770f0d9167a300a6951e5294a6bf9e4c7caeb1c",
+    "repos": [
+      "tradesphere",
+      "Multi-Level-Order-Flow-Imbalance-And-Market-Cross-Impact",
+      "OFI"
+    ]
+  },
+  {
+    "bundle_idx": 179,
+    "filename": "QUANT_BUNDLE_179_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 10823,
+    "size_bytes": 10880,
+    "sha256": "b839b64df7e087c16f0848aa3c8623adc3c517a3f0982f438c3d6cc5d4acf5b8",
+    "repos": [
+      "FLOW_IMBALANCE",
+      "Order-Flow-Imbalance",
+      "Order-Flow-Imbalance-OFI-"
+    ]
+  },
+  {
+    "bundle_idx": 180,
+    "filename": "QUANT_BUNDLE_180_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 15773,
+    "size_bytes": 18254,
+    "sha256": "04c0836ab72ca4f672517269bb42336debc79cf2fbe7e430e12b20615d757dfb",
+    "repos": [
+      "Order-Flow-Imbalance-OFI-features",
+      "Order-Flow-Imbalance-analysis",
+      "Order-Flow-Imbalances"
+    ]
+  },
+  {
+    "bundle_idx": 181,
+    "filename": "QUANT_BUNDLE_181_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 3624,
+    "size_bytes": 3626,
+    "sha256": "e3abac2567fe9148db63c591065df7aa19d59ae38fecbf680e8a74f2d64108f9",
+    "repos": [
+      "Order-Flow-Imbalances-OFI",
+      "OrderFlowImbalance",
+      "OrderFlowImbalanceAnalysis"
+    ]
+  },
+  {
+    "bundle_idx": 182,
+    "filename": "QUANT_BUNDLE_182_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 46002,
+    "size_bytes": 46066,
+    "sha256": "6f0992a8dd0effae35fb2fbfddf36422285edd42e74861d63021908d38a1e35e",
+    "repos": [
+      "Flow_Imbalances-AAPL-",
+      "TapeFlow",
+      "Work-Trial-Task-Cross-Impact-Analysis-of-Order-Flow-Imbalance-OFI-"
+    ]
+  },
+  {
+    "bundle_idx": 183,
+    "filename": "QUANT_BUNDLE_183_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 33928,
+    "size_bytes": 34942,
+    "sha256": "ace518279572032aa9d7b425ed05e0c0b9617e9bc3297490102b39c422629f40",
+    "repos": [
+      "genpark-order-flow-imbalance-ofi-skill",
+      "hawkes-ofi-market-microstructure",
+      "ofi-cross-impact"
+    ]
+  },
+  {
+    "bundle_idx": 184,
+    "filename": "QUANT_BUNDLE_184_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 56383,
+    "size_bytes": 56841,
+    "sha256": "7b9fe9a9d7950077deffe9926e3d30039dd95f6090b0028a8fbca3a5f1690501",
+    "repos": [
+      "ofi-cross-impact-analysis",
+      "order-flow-imbalance-strategy",
+      "orderflow-metrics"
+    ]
+  },
+  {
+    "bundle_idx": 185,
+    "filename": "QUANT_BUNDLE_185_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 58978,
+    "size_bytes": 59773,
+    "sha256": "dbde088bb31370186f1e0b22cbf465ee31b4fba2cfb297acd3b179df26c174dc",
+    "repos": [
+      "smart-money-forex-strategy-mt4",
+      "awesome-systematic-trading",
+      "adamant-tradebot"
+    ]
+  },
+  {
+    "bundle_idx": 186,
+    "filename": "QUANT_BUNDLE_186_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 58025,
+    "size_bytes": 58133,
+    "sha256": "a5f21f759ea71bb4748731c671d1ae8d81a2a8f5d972274dd9b72995963a5746",
+    "repos": [
+      "flowforge",
+      "OpenBook",
+      "ITCH"
+    ]
+  },
+  {
+    "bundle_idx": 187,
+    "filename": "QUANT_BUNDLE_187_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 3499,
+    "size_bytes": 3525,
+    "sha256": "d50977d04f714e638a0f16f740f6a54a911299dde2aa345ca44e877c53079256",
+    "repos": [
+      "Financial-Models-Numerical-Methods",
+      "QuantsPlaybook",
+      "tf-quant-finance"
+    ]
+  },
+  {
+    "bundle_idx": 188,
+    "filename": "QUANT_BUNDLE_188_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 3768,
+    "size_bytes": 3772,
+    "sha256": "4cfa160452e1c8b11af55e22e28826532546c51c0aea4aac53509d5d63a52bc2",
+    "repos": [
+      "OrderFlow-Analysis-Pro",
+      "Quant-Edge-Indicators",
+      "Pulse"
+    ]
+  },
+  {
+    "bundle_idx": 189,
+    "filename": "QUANT_BUNDLE_189_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 3748,
+    "size_bytes": 3754,
+    "sha256": "0ffd0f10958975cf35fe9a7ff12e7e6f15af602052e16110cf5dbc43f172f758",
+    "repos": [
+      "trading-assistant",
+      "OrderFlow-Scalper",
+      "flowdepth"
+    ]
+  },
+  {
+    "bundle_idx": 190,
+    "filename": "QUANT_BUNDLE_190_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 3892,
+    "size_bytes": 3896,
+    "sha256": "093faedcad92db372ed86c92ba3d701b622af4d64229646be6117c006fbd80d8",
+    "repos": [
+      "Smart-Order-Flow-Visualizer",
+      "MT5-volume-profile-indicator",
+      "Trading-radar"
+    ]
+  },
+  {
+    "bundle_idx": 191,
+    "filename": "QUANT_BUNDLE_191_MARKET_MAKING_ORDER_FLOW.md",
+    "category": "MARKET_MAKING_ORDER_FLOW",
+    "char_count": 2401,
+    "size_bytes": 2403,
+    "sha256": "14b2a8d32214bfbaf43aac497741b89b4769bf20a892c4bd7986e9da5acba5b3",
+    "repos": [
+      "quant_research",
+      "modelx"
+    ]
+  },
+  {
+    "bundle_idx": 192,
+    "filename": "QUANT_BUNDLE_192_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 31053,
+    "size_bytes": 31113,
+    "sha256": "ed8aec04af118546dcd3601df2ac2369b1f851edc8f61e43d0ff8c8a7ee1f1fa",
+    "repos": [
+      "dbt-core",
+      "backtrader",
+      "backtesting.py"
+    ]
+  },
+  {
+    "bundle_idx": 193,
+    "filename": "QUANT_BUNDLE_193_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 64642,
+    "size_bytes": 64726,
+    "sha256": "506c0dad8438a9518ffef99ac2261ffabc7f5a34766af0d06691176652d30b28",
+    "repos": [
+      "nautilus_trader",
+      "bt",
+      "survivorship-free-backtester"
+    ]
+  },
+  {
+    "bundle_idx": 194,
+    "filename": "QUANT_BUNDLE_194_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 55068,
+    "size_bytes": 55394,
+    "sha256": "a1ad137f9562014a43dbe6a46ec1bf83c1302a770718aa94034f3b9e385074a2",
+    "repos": [
+      "financial-engineering-vault",
+      "trader",
+      "zipline"
+    ]
+  },
+  {
+    "bundle_idx": 195,
+    "filename": "QUANT_BUNDLE_195_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 33050,
+    "size_bytes": 33126,
+    "sha256": "573bd51d020080c228d4988a19e59468e2dfe0fa7b7b1fba73171d0ac38aab9c",
+    "repos": [
+      "zipline-trader",
+      "trademind",
+      "intelligent-trading-bot"
+    ]
+  },
+  {
+    "bundle_idx": 196,
+    "filename": "QUANT_BUNDLE_196_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 23932,
+    "size_bytes": 26325,
+    "sha256": "60a41c93237aa46e0200c749612458269fabc5d3430587d142436e1fc79c72a8",
+    "repos": [
+      "barter-rs",
+      "bitquant",
+      "Superalgos"
+    ]
+  },
+  {
+    "bundle_idx": 197,
+    "filename": "QUANT_BUNDLE_197_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 3565,
+    "size_bytes": 3567,
+    "sha256": "d6378a131334f52c713502cb74bb5d7392caf0afb2807b4963302cdacad98365",
+    "repos": [
+      "QuantResearch",
+      "investing-algorithm-framework",
+      "OsEngine"
+    ]
+  },
+  {
+    "bundle_idx": 198,
+    "filename": "QUANT_BUNDLE_198_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 3577,
+    "size_bytes": 3579,
+    "sha256": "dd861dd410f3cfcdefcd1b7a79a52786c9ec564d429da7281a3a3a489be10d99",
+    "repos": [
+      "market-making-backtest",
+      "PyFENG",
+      "fractal-defi"
+    ]
+  },
+  {
+    "bundle_idx": 199,
+    "filename": "QUANT_BUNDLE_199_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 3511,
+    "size_bytes": 3513,
+    "sha256": "9a072b9cb7f7c6f7436425809532c09b6c4f68e3a330a956e292e20cde0be146",
+    "repos": [
+      "Everything-Financial-Engineering",
+      "backtesting-python",
+      "PrivacyEngCollabSpace"
+    ]
+  },
+  {
+    "bundle_idx": 200,
+    "filename": "QUANT_BUNDLE_200_EVENT_DRIVEN_BACKTESTERS.md",
+    "category": "EVENT_DRIVEN_BACKTESTERS",
+    "char_count": 3635,
+    "size_bytes": 3637,
+    "sha256": "9d0f086e984177f7ccd1f2d921445db4a270e6afa75473b8ea99a88b3d672eec",
+    "repos": [
+      "gym-fx",
+      "AutoTrader",
+      "algo-trader"
+    ]
+  },
+  {
+    "bundle_idx": 201,
+    "filename": "QUANT_BUNDLE_201_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 43120,
+    "size_bytes": 43342,
+    "sha256": "9ef0101524535eb5c4f4a8bbeaf02a6ebc149e20e931d0e6e2c6cf4be108d8b7",
+    "repos": [
+      "stock-nse-india",
+      "NSE",
+      "Algorithmic-Trading-Strategies-Python"
+    ]
+  },
+  {
+    "bundle_idx": 202,
+    "filename": "QUANT_BUNDLE_202_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 51680,
+    "size_bytes": 51836,
+    "sha256": "f9066500a7e7a9da78f6b7e3e1f020d82c70cefdb6dc16d2b5991ca8e0e6b9fa",
+    "repos": [
+      "crypto-lob-data-pipeline",
+      "orderbook-heatmap",
+      "High-Frequency-Trading-FPGA-System"
+    ]
+  },
+  {
+    "bundle_idx": 203,
+    "filename": "QUANT_BUNDLE_203_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 47082,
+    "size_bytes": 48272,
+    "sha256": "e6ef9c3dd5e22ec3e0285b768aaf1afae1eaccd576cd7cb256314f3b37fb6c9a",
+    "repos": [
+      "OrderFlowMap",
+      "exchange-core",
+      "LOBFrame"
+    ]
+  },
+  {
+    "bundle_idx": 204,
+    "filename": "QUANT_BUNDLE_204_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 50863,
+    "size_bytes": 50938,
+    "sha256": "be0bbd286114fe36399a22bef2d9126ffc72d4fef2a4263f887ed32941a42acd",
+    "repos": [
+      "hftbacktest",
+      "HFT-Orderbook",
+      "crypto-rl"
+    ]
+  },
+  {
+    "bundle_idx": 205,
+    "filename": "QUANT_BUNDLE_205_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 45047,
+    "size_bytes": 45121,
+    "sha256": "1c8fa932e3ce1822bd3d89637ae6df0cd93346baf15a0065074787ccc465c017",
+    "repos": [
+      "nodejs-order-book",
+      "order-matcher",
+      "lob-deep-learning"
+    ]
+  },
+  {
+    "bundle_idx": 206,
+    "filename": "QUANT_BUNDLE_206_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 40252,
+    "size_bytes": 40462,
+    "sha256": "dba26cc88aa878b7404983dc3bfe92c65e9decb372eba1d5776161917454384b",
+    "repos": [
+      "matching-engine",
+      "mercury",
+      "orderbook-imbalance-indicator-hft"
+    ]
+  },
+  {
+    "bundle_idx": 207,
+    "filename": "QUANT_BUNDLE_207_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 28973,
+    "size_bytes": 30118,
+    "sha256": "5fbd131f8bcec7e53ce8a901c5854c289b84984ccda116755365a5247ae35ed8",
+    "repos": [
+      "matchbook",
+      "lob-regime-scanner",
+      "lob-world-models"
+    ]
+  },
+  {
+    "bundle_idx": 208,
+    "filename": "QUANT_BUNDLE_208_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 51883,
+    "size_bytes": 52137,
+    "sha256": "e174d3c9a29db1c3ae91ce5ec6cd6fe95cca2aac039694db25fd2bc51d38535a",
+    "repos": [
+      "crypto-ai-trading-bot",
+      "barbotine-scalping-bot",
+      "crypto-database"
+    ]
+  },
+  {
+    "bundle_idx": 209,
+    "filename": "QUANT_BUNDLE_209_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 105766,
+    "size_bytes": 106158,
+    "sha256": "904342fcaf8c67ad3320190a03b556ebb58c3e3b003ccde6dc48b1a0e67d52f7",
+    "repos": [
+      "alice-blue-futures",
+      "Algorithmic-Trading-Engine",
+      "KIRA"
+    ]
+  },
+  {
+    "bundle_idx": 210,
+    "filename": "QUANT_BUNDLE_210_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 34573,
+    "size_bytes": 34575,
+    "sha256": "5a565212a6a2e6e6bc6cf8f26a02eb8a36af0702685faea05c59d2b6dc2eafb1",
+    "repos": [
+      "Crypto_Trader",
+      "SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+      "CppTrader"
+    ]
+  },
+  {
+    "bundle_idx": 211,
+    "filename": "QUANT_BUNDLE_211_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 45694,
+    "size_bytes": 49588,
+    "sha256": "28ea18a3a8f5127714001730714e38bbc66d560643fe81b482b68cf49fce340c",
+    "repos": [
+      "DistributedATS",
+      "submicro-execution-engine",
+      "open-outcry"
+    ]
+  },
+  {
+    "bundle_idx": 212,
+    "filename": "QUANT_BUNDLE_212_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 116863,
+    "size_bytes": 123203,
+    "sha256": "64d0e5cc112521f87817ae87d606fcb51e1e039b38c9d4805a75417e8f1f83e2",
+    "repos": [
+      "MicroExchange",
+      "HFT-Races",
+      "crypto-liquidity-ai-trading-bot"
+    ]
+  },
+  {
+    "bundle_idx": 213,
+    "filename": "QUANT_BUNDLE_213_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 25879,
+    "size_bytes": 25923,
+    "sha256": "a475bf3a32c5d0cbeeff2e973e52f4a5f506f2bfa06294936c5d65e41e7a8de3",
+    "repos": [
+      "TigerTrade-DOM-Trading-Premium",
+      "crobat",
+      "aux-exchange"
+    ]
+  },
+  {
+    "bundle_idx": 214,
+    "filename": "QUANT_BUNDLE_214_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 99162,
+    "size_bytes": 106008,
+    "sha256": "d09540d40294d571d1805540ec132e16bc179f06b0d95c6a84143a2a0f10ae6f",
+    "repos": [
+      "LOB-Latent-Regimes",
+      "OrderBook-rs",
+      "Limit-Order-Book"
+    ]
+  },
+  {
+    "bundle_idx": 215,
+    "filename": "QUANT_BUNDLE_215_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 33439,
+    "size_bytes": 34334,
+    "sha256": "d203319b781fc79dcb66a09cf16197d5152b9267c5257e603650f0fa5b3ff40a",
+    "repos": [
+      "HFT-price-prediction",
+      "AlgoTradingNSE",
+      "AlphaMatrix"
+    ]
+  },
+  {
+    "bundle_idx": 216,
+    "filename": "QUANT_BUNDLE_216_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 4009,
+    "size_bytes": 4073,
+    "sha256": "03cf4321695d45424d200c0093c14262acbbe3ce4a327c3c78dfdf407bffd3f3",
+    "repos": [
+      "quant-wiki",
+      "Quant-Developers-Resources",
+      "order-book-heatmap"
+    ]
+  },
+  {
+    "bundle_idx": 217,
+    "filename": "QUANT_BUNDLE_217_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 4074,
+    "size_bytes": 4076,
+    "sha256": "540389c7dd375d4569168273908365637b4c585d75a1b3547eee86157d516b1f",
+    "repos": [
+      "fpga-trading-systems",
+      "Automated-Financial-Market-Trading-System",
+      "VisualHFT"
+    ]
+  },
+  {
+    "bundle_idx": 218,
+    "filename": "QUANT_BUNDLE_218_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3564,
+    "size_bytes": 3568,
+    "sha256": "0f32d7fde8e075e377446cecea42df3e824c3f587f02e0bc1cb5718158b9a86e",
+    "repos": [
+      "orderbook",
+      "tectonicdb",
+      "ML-HFT"
+    ]
+  },
+  {
+    "bundle_idx": 219,
+    "filename": "QUANT_BUNDLE_219_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3991,
+    "size_bytes": 3995,
+    "sha256": "4473575766f06792d517b78ee3e560fc8202a70e88eed60f9bda87ba206bd7c6",
+    "repos": [
+      "HFTFramework",
+      "NSE-Stock-Scanner",
+      "TK-Options-Trader"
+    ]
+  },
+  {
+    "bundle_idx": 220,
+    "filename": "QUANT_BUNDLE_220_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3743,
+    "size_bytes": 3801,
+    "sha256": "477c538a298a32ebff6b26138370a2a2fb9d6dd437d90c2e8d978d883863df00",
+    "repos": [
+      "kelp",
+      "binance_grid_trader",
+      "barbotine-arbitrage-bot"
+    ]
+  },
+  {
+    "bundle_idx": 221,
+    "filename": "QUANT_BUNDLE_221_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3564,
+    "size_bytes": 3611,
+    "sha256": "9f8062e354c31485f67738148c6988afcb70e3bcfaa6bdd0a6a867e77da10036",
+    "repos": [
+      "ctc-executioner",
+      "docker_grid_trader",
+      "market-maker-bot"
+    ]
+  },
+  {
+    "bundle_idx": 222,
+    "filename": "QUANT_BUNDLE_222_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3692,
+    "size_bytes": 3792,
+    "sha256": "9809aae5f44e859263e14ef77d472577ab2774d8bf9816cbd9cff4c193bd4d42",
+    "repos": [
+      "MarketMaker",
+      "nexus-trade-bot",
+      "XRPL-trading-bot"
+    ]
+  },
+  {
+    "bundle_idx": 223,
+    "filename": "QUANT_BUNDLE_223_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3639,
+    "size_bytes": 3644,
+    "sha256": "dc95956d3dad58be20e416c34b71ff95395580796b1fc57f0b141a09a94b68ec",
+    "repos": [
+      "python-api",
+      "quant-order-book",
+      "flowmap"
+    ]
+  },
+  {
+    "bundle_idx": 224,
+    "filename": "QUANT_BUNDLE_224_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3615,
+    "size_bytes": 3617,
+    "sha256": "c8490c8370544faed51602a78d6ccd22f185cb8b4e1a459e2f8889ca5d8806cc",
+    "repos": [
+      "Horizontal-Dom-Trader",
+      "sats-trading-monitor",
+      "NseIndiaApi"
+    ]
+  },
+  {
+    "bundle_idx": 225,
+    "filename": "QUANT_BUNDLE_225_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3734,
+    "size_bytes": 3736,
+    "sha256": "82713bde88925ce538b04c6daf0e7659719ffbda6fb301f09e8de2d9c0e95464",
+    "repos": [
+      "openchart",
+      "nseta",
+      "NSE-India-Web-Scraping"
+    ]
+  },
+  {
+    "bundle_idx": 226,
+    "filename": "QUANT_BUNDLE_226_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3942,
+    "size_bytes": 3944,
+    "sha256": "55da2f2b3c5d547f7a08af02f1881c0aa5b589397d70ab74e57da58a641b6202",
+    "repos": [
+      "VSE",
+      "StockMarket-Data-Analysis-Vizualization",
+      "GetBhavCopy"
+    ]
+  },
+  {
+    "bundle_idx": 227,
+    "filename": "QUANT_BUNDLE_227_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 3946,
+    "size_bytes": 3950,
+    "sha256": "113b5c2bd29b7c03437e802ac77b0e78a0f56e6732d3858752cb14fbc00ba778",
+    "repos": [
+      "ciso-assistant-community",
+      "ftmo-risk-control",
+      "ai-automated-trading-bot"
+    ]
+  },
+  {
+    "bundle_idx": 228,
+    "filename": "QUANT_BUNDLE_228_HFT_MICROSTRUCTURE_LOB.md",
+    "category": "HFT_MICROSTRUCTURE_LOB",
+    "char_count": 1493,
+    "size_bytes": 1497,
+    "sha256": "0e29bdee613066730bb54426458ad82379881df673ad93ff65f7438f2c580a45",
+    "repos": [
+      "tradingview-mcp"
+    ]
+  },
+  {
+    "bundle_idx": 229,
+    "filename": "QUANT_BUNDLE_229_INDICATORS_FEATURE_ENGINEERING.md",
+    "category": "INDICATORS_FEATURE_ENGINEERING",
+    "char_count": 73135,
+    "size_bytes": 73199,
+    "sha256": "35127d3f604d4749fba99fec1c0290950f6a972eab6381c6109273afe46610a1",
+    "repos": [
+      "ta-lib-python",
+      "finta",
+      "ta-lib"
+    ]
+  },
+  {
+    "bundle_idx": 230,
+    "filename": "QUANT_BUNDLE_230_INDICATORS_FEATURE_ENGINEERING.md",
+    "category": "INDICATORS_FEATURE_ENGINEERING",
+    "char_count": 13883,
+    "size_bytes": 13885,
+    "sha256": "bf10439fd30b722c3e424a1aa4a4491a713ca56408258ee80a611c795f094df8",
+    "repos": [
+      "tulipindicators",
+      "Crypto-Signal",
+      "Algo-Trading"
+    ]
+  },
+  {
+    "bundle_idx": 231,
+    "filename": "QUANT_BUNDLE_231_INDICATORS_FEATURE_ENGINEERING.md",
+    "category": "INDICATORS_FEATURE_ENGINEERING",
+    "char_count": 3576,
+    "size_bytes": 3578,
+    "sha256": "5502194e957a5b2a689a176af6d407624cf73d2e36ee4999c53b14370abd2609",
+    "repos": [
+      "Surge",
+      "python-tradingview-ta",
+      "Binance-Futures-Trading-Bot"
+    ]
+  },
+  {
+    "bundle_idx": 232,
+    "filename": "QUANT_BUNDLE_232_INDICATORS_FEATURE_ENGINEERING.md",
+    "category": "INDICATORS_FEATURE_ENGINEERING",
+    "char_count": 3589,
+    "size_bytes": 3591,
+    "sha256": "cf9eaec9914e94f9506951b77203698f08fbd464bcb28d4b92919e9be8533daa",
+    "repos": [
+      "fast-trade",
+      "talipp",
+      "automating-technical-analysis"
+    ]
+  },
+  {
+    "bundle_idx": 233,
+    "filename": "QUANT_BUNDLE_233_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 46502,
+    "size_bytes": 46521,
+    "sha256": "af229af1a10683d7c7e77ee19cc4650dd9f68876b6d9bba0a52f94ea3fe9aff6",
+    "repos": [
+      "quantstats",
+      "AutoHedge",
+      "PyPortfolioOpt"
+    ]
+  },
+  {
+    "bundle_idx": 234,
+    "filename": "QUANT_BUNDLE_234_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 23741,
+    "size_bytes": 23845,
+    "sha256": "339576873d5a5670b74bbbbaa7f62a3651e9f68f233b7bed461763fdf8c7b1fd",
+    "repos": [
+      "Trading-Strategies",
+      "technical",
+      "varsity-algo"
+    ]
+  },
+  {
+    "bundle_idx": 235,
+    "filename": "QUANT_BUNDLE_235_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 33761,
+    "size_bytes": 34693,
+    "sha256": "782b72ff487cf553c4634193b357a9183cc664f82bc00ed93c332994c10b5a95",
+    "repos": [
+      "mlfinlab",
+      "PINstimation",
+      "QuantMuse"
+    ]
+  },
+  {
+    "bundle_idx": 236,
+    "filename": "QUANT_BUNDLE_236_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 48136,
+    "size_bytes": 48273,
+    "sha256": "13079221d59932119d877ba1db6f8f33526e003d18d96ce8f9da1ce854f90602",
+    "repos": [
+      "EliteQuant",
+      "EigenLedger",
+      "deepdow"
+    ]
+  },
+  {
+    "bundle_idx": 237,
+    "filename": "QUANT_BUNDLE_237_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 48504,
+    "size_bytes": 48793,
+    "sha256": "c578c80c1b519faea34d5a892b5f4ccdbbd7224472d2e8ec2d123a0116430142",
+    "repos": [
+      "OptimalPortfolio",
+      "FactorHub",
+      "skfolio"
+    ]
+  },
+  {
+    "bundle_idx": 238,
+    "filename": "QUANT_BUNDLE_238_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 42400,
+    "size_bytes": 42473,
+    "sha256": "c3500aeeed61c302a13bc6e6cf83b56fdbcfbd93074fb08dd76b8dd79952a00a",
+    "repos": [
+      "riskparity.py",
+      "simulated-bifurcation-algorithm",
+      "optimizer"
+    ]
+  },
+  {
+    "bundle_idx": 239,
+    "filename": "QUANT_BUNDLE_239_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 22451,
+    "size_bytes": 30333,
+    "sha256": "0ba0d8c0d875d8f72df0c5ec7928dce9b7b3eaf996d8be67a888e2627c568ea8",
+    "repos": [
+      "poptimizer",
+      "pyrb",
+      "Finance-World"
+    ]
+  },
+  {
+    "bundle_idx": 240,
+    "filename": "QUANT_BUNDLE_240_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 45132,
+    "size_bytes": 45146,
+    "sha256": "2dccc865c5d87ce6fc5c0afba5f1950b9ede02aa8925b7cb07336291bbc527f6",
+    "repos": [
+      "portfolio-optimization",
+      "fortitudo.tech",
+      "deepfolio"
+    ]
+  },
+  {
+    "bundle_idx": 241,
+    "filename": "QUANT_BUNDLE_241_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 66450,
+    "size_bytes": 67350,
+    "sha256": "e8ffcca58e9ba6db208fb54d43b60f5331ec0b53db1851419730bdacc3343926",
+    "repos": [
+      "okama",
+      "ml-quant-trading",
+      "OptimalPortfolios"
+    ]
+  },
+  {
+    "bundle_idx": 242,
+    "filename": "QUANT_BUNDLE_242_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 58053,
+    "size_bytes": 58055,
+    "sha256": "8bd79f49e1ca8f7d9fb67b3d01f3ef8cee52044202bae5546d8cd401af58b905",
+    "repos": [
+      "cardiel",
+      "generative-opt",
+      "portfolio-optimize"
+    ]
+  },
+  {
+    "bundle_idx": 243,
+    "filename": "QUANT_BUNDLE_243_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 3607,
+    "size_bytes": 3609,
+    "sha256": "de51b469153b7ee31bdb253848906c98ad6ae05ee57a2734f19bbee1fa2eaac5",
+    "repos": [
+      "Stock_Analysis_For_Quant",
+      "Finance",
+      "cvxportfolio"
+    ]
+  },
+  {
+    "bundle_idx": 244,
+    "filename": "QUANT_BUNDLE_244_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 3659,
+    "size_bytes": 3661,
+    "sha256": "08645d62fd4cb0bf1f1de8d2dc253e84f73c4e8893f62a3bbc5ad857ad36495b",
+    "repos": [
+      "portfolioopt",
+      "tyumex-trading-terminal",
+      "markowitz-portfolio-optimization"
+    ]
+  },
+  {
+    "bundle_idx": 245,
+    "filename": "QUANT_BUNDLE_245_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 3844,
+    "size_bytes": 3846,
+    "sha256": "341609482a986f95317b7f81a318cd3a8b7f3cddeaf82dddde0866a6bce1c2f9",
+    "repos": [
+      "Finance-and-Risk-Management-Algorithms",
+      "Quantalytics-26",
+      "risk_free_interest_rate"
+    ]
+  },
+  {
+    "bundle_idx": 246,
+    "filename": "QUANT_BUNDLE_246_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 4022,
+    "size_bytes": 4026,
+    "sha256": "05f977db098d96fccca61f8985a499260ae11d3f0d6eeb878ebfd0a5900a8e8c",
+    "repos": [
+      "tern",
+      "marvis-risk-agent",
+      "FriesTrader"
+    ]
+  },
+  {
+    "bundle_idx": 247,
+    "filename": "QUANT_BUNDLE_247_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 3837,
+    "size_bytes": 3951,
+    "sha256": "43cc713281f6ec7301be423299e2aee603e951bed7196af816bb2b5e46416725",
+    "repos": [
+      "Python_Portfolio__VaR_Tool",
+      "mt5_live_trading_bot",
+      "riskguard"
+    ]
+  },
+  {
+    "bundle_idx": 248,
+    "filename": "QUANT_BUNDLE_248_PORTFOLIO_OPTIMIZATION_RISK.md",
+    "category": "PORTFOLIO_OPTIMIZATION_RISK",
+    "char_count": 2670,
+    "size_bytes": 2672,
+    "sha256": "5af6446545942b87b2257b6bd5428db630beb706dde8e82fd25e135d2c356cd9",
+    "repos": [
+      "trading-server",
+      "pyti"
+    ]
+  },
+  {
+    "bundle_idx": 249,
+    "filename": "QUANT_BUNDLE_249_STATISTICAL_ARBITRAGE_PAIRS.md",
+    "category": "STATISTICAL_ARBITRAGE_PAIRS",
+    "char_count": 2739,
+    "size_bytes": 2741,
+    "sha256": "9b3cce755d30323f67ae92f6eacba031760d91166b96e6dba10998b87a1d242a",
+    "repos": [
+      "Statistical-Arbitrage",
+      "Polymarket-trading-bot-python-V2"
+    ]
+  },
+  {
+    "bundle_idx": 250,
+    "filename": "QUANT_BUNDLE_250_STATISTICAL_ARBITRAGE_PAIRS.md",
+    "category": "STATISTICAL_ARBITRAGE_PAIRS",
+    "char_count": 1286,
+    "size_bytes": 1288,
+    "sha256": "ae8938fde33e9b8419bd14a7a520ca05b5ae51261e894b2516c366be868689a4",
+    "repos": [
+      "ceres"
+    ]
+  }
+]

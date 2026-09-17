@@ -1,0 +1,38 @@
+//@version=5
+indicator("Qullamaggie Trading System Pro (Antigravity Edition)", overlay=true)
+
+// Moving Averages
+ema10 = ta.ema(close, 10)
+ema20 = ta.ema(close, 20)
+sma50 = ta.sma(close, 50)
+sma200 = ta.sma(close, 200)
+
+plot(ema10, color=color.new(#38bdf8, 0), title="10 EMA", linewidth=2)
+plot(ema20, color=color.new(#f59e0b, 0), title="20 EMA", linewidth=2)
+plot(sma50, color=color.new(#ec4899, 0), title="50 SMA", linewidth=2)
+plot(sma200, color=color.new(#ffffff, 30), title="200 SMA", linewidth=3)
+
+// Trend Filter
+trend_up = close > ema10 and ema10 > ema20 and ema20 > sma50 and sma50 > sma200
+
+// Consolidation / High Tight Flag Filter (Antigravity Tight Range)
+hh = ta.highest(high, 20)
+ll = ta.lowest(low, 20)
+range_pct = (hh - ll) / ll * 100
+tight_consolidation = range_pct < 8.0
+
+// Volume Contraction
+vol_ma = ta.sma(volume, 20)
+low_vol = volume < vol_ma * 0.8
+
+// Episodic Pivot (EP) / Breakout Signal
+breakout = ta.crossover(close, hh[1]) and volume > vol_ma * 1.5 and trend_up
+
+// Relative Strength against NIFTY (Antigravity Divergence)
+nifty_close = request.security("NSE:NIFTY", timeframe.period, close)
+nifty_ret = (nifty_close - nifty_close[5]) / nifty_close[5]
+stock_ret = (close - close[5]) / close[5]
+antigravity_divergence = (stock_ret > 0) and (nifty_ret < 0)
+
+plotshape(breakout, title="Qullamaggie Breakout", location=location.belowbar, color=color.green, style=shape.triangleup, size=size.normal, text="BREAKOUT")
+plotshape(antigravity_divergence and tight_consolidation, title="Antigravity Setup", location=location.abovebar, color=color.yellow, style=shape.diamond, size=size.small, text="ANTIGRAVITY")

@@ -1,0 +1,292 @@
+# LIVE REAL-TIME YOUTUBE & MACRO NEWS STREAM INGESTION PULSE (17 SEP 2026 - 10:15 IST)
+Synchronized with Google Antigravity Sovereign Quant OS & Dhan v2 DMA Broker
+
+## 1. 0-DTE EXPIRY & MACRO REGIME CONTEXT
+- Nifty Support: 23,100 holding firmly. Bank Nifty: 55,700 base with aggressive short-covering.
+- NSE IPO approval news injecting institutional liquidity into BFSI and capital markets.
+- 0-DTE Thursday Sensex expiry witnessing heavy call unwind at 76,000 / 76,200 strikes.
+
+## 2. INGESTED LIVE STREAMS & NEWS ITEMS
+### Item [1] [LIVE_NEWS] RBL Bank Ltd. (RBLBANK): RBL Bank Share Price hits fresh 52-week high at Rs 411.5 - Univest
+- Source: Univest | Timestamp: 2026-09-17 10:11:48 IST | Sentiment Score: +1 | Tickers: ['RBLBANK']
+
+### Item [2] [LIVE_NEWS] RBL Bank shares rise 4% as lender mops up $3.4 bn from FCNR deposits, Citi says it 'reshapes earnings... - Moneycontrol.com
+- Source: Moneycontrol.com | Timestamp: 2026-09-17 10:11:48 IST | Sentiment Score: +1 | Tickers: ['RBLBANK']
+
+### Item [3] [LIVE_NEWS] RBL Bank: Is investor frenzy over FCNR (B) deposits justified? - Livemint
+- Source: Livemint | Timestamp: 2026-09-17 10:11:48 IST | Sentiment Score: +0 | Tickers: ['RBLBANK']
+
+### Item [4] [LIVE_NEWS] RBL Bank rallies 5%, hits 52-week high on huge volume; here's why - Business Standard
+- Source: Business Standard | Timestamp: 2026-09-17 10:11:14 IST | Sentiment Score: +1 | Tickers: ['RBLBANK']
+
+### Item [5] [LIVE_NEWS] Stocks To Watch Today: Infosys, Mazagon Dock, Fortis Healthcare, Shriram Finance, RBL Bank, South Indian Bank & More - NDTV Profit
+- Source: NDTV Profit | Timestamp: 2026-09-17 10:11:14 IST | Sentiment Score: +1 | Tickers: ['RBLBANK']
+
+### Item [6] [LIVE_NEWS] Tata Sons listing: Tata Steel, TMPV, Tata Chemicals among stocks that could benefit; here's why - Business Today
+- Source: Business Today | Timestamp: 2026-09-17 10:11:12 IST | Sentiment Score: +0 | Tickers: ['TATASTEEL']
+
+### Item [7] [LIVE_NEWS] Tata Steel share price falls 3%, among top Nifty 50 laggards; what experts say - Livemint
+- Source: Livemint | Timestamp: 2026-09-17 10:11:12 IST | Sentiment Score: +-1 | Tickers: ['TATASTEEL']
+
+### Item [8] [LIVE_NEWS] Tata Chemicals shares jump 20% on Tata Sons listing developments; Here's how others are faring - CNBC TV18
+- Source: CNBC TV18 | Timestamp: 2026-09-17 10:10:35 IST | Sentiment Score: +1 | Tickers: []
+
+### Item [9] [LIVE_NEWS] Tata Steel fixes July 2 for 119th AGM, recommends ₹4 dividend - scanx.trade
+- Source: scanx.trade | Timestamp: 2026-09-17 10:10:35 IST | Sentiment Score: +0 | Tickers: ['TATASTEEL']
+
+### Item [10] [LIVE_NEWS] Tata Steel Share Price Update: Market Cap and Fundamentals - Univest
+- Source: Univest | Timestamp: 2026-09-17 10:10:35 IST | Sentiment Score: +0 | Tickers: ['TATASTEEL']
+
+### Item [11] [YOUTUBE_LIVE_STREAM] LIVE TRADING USING ICT CONCEPTS | NIFTY | BANKNIFTY | SENSEX OPTIONS  | 17 september | #livetrading
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:10:37 IST | Sentiment Score: +None | Tickers: []
+
+### Item [12] [LIVE_NEWS] PNB shares decline 3% after Q1 business update; global business nears Rs 30 lakh crore - The Economic Times
+- Source: The Economic Times | Timestamp: 2026-09-17 10:10:00 IST | Sentiment Score: +-1 | Tickers: ['PNB']
+
+### Item [13] [LIVE_NEWS] Punjab National Bank shares in focus as board approves raising $1.5 billion in foreign currency funds - Upstox
+- Source: Upstox | Timestamp: 2026-09-17 10:10:00 IST | Sentiment Score: +0 | Tickers: ['PNB']
+
+### Item [14] [LIVE_NEWS] PNB shares jump up to 5% as Q1 net profit surges over three-fold, brokerages see up to 28% upside - Moneycontrol.com
+- Source: Moneycontrol.com | Timestamp: 2026-09-17 10:10:00 IST | Sentiment Score: +3 | Tickers: ['PNB']
+
+### Item [15] [LIVE_NEWS] 150% Dividend: PSU Bank Rewards Investors With Bumper Payout, Stock Up 114% In 3 Yrs | How To Get Eligible? - Goodreturns
+- Source: Goodreturns | Timestamp: 2026-09-17 10:09:26 IST | Sentiment Score: +0 | Tickers: []
+
+### Item [16] [LIVE_NEWS] Punjab National Bank Share Price Today With Sector View - Univest
+- Source: Univest | Timestamp: 2026-09-17 10:09:26 IST | Sentiment Score: +0 | Tickers: ['PNB']
+
+### Item [17] [LIVE_NEWS] Share Market Today: Nifty 50, Bank Nifty | Sep 15, 2026 - Liquide Blog
+- Source: Liquide Blog | Timestamp: 2026-09-17 10:09:25 IST | Sentiment Score: +0 | Tickers: []
+
+### Item [18] [LIVE_NEWS] Stock Market Outlook Today, June 8: Sensex, Nifty Likely to Trade Range-Bound Amid RBI Pause and FII Outflows - Goodreturns
+- Source: Goodreturns | Timestamp: 2026-09-17 10:08:48 IST | Sentiment Score: +0 | Tickers: []
+
+### Item [19] [LIVE_NEWS] September 2026 F&O Monthly Expiry - Groww
+- Source: Groww | Timestamp: 2026-09-17 10:08:48 IST | Sentiment Score: +0 | Tickers: []
+
+### Item [20] [YOUTUBE_LIVE_STREAM] LIVE Trading Nifty Bank Nifty Sensex  | 17 sep |#livetrading #live #Nifty
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:08:54 IST | Sentiment Score: +None | Tickers: []
+
+### Item [21] [LIVE_NEWS] Share Market Today: Nifty 50, Bank Nifty | Sep 16, 2026 - Liquide Blog
+- Source: Liquide Blog | Timestamp: 2026-09-17 10:08:13 IST | Sentiment Score: +0 | Tickers: []
+
+### Item [22] [YOUTUBE_LIVE_STREAM] Sensex Expiry Special | Nifty Sensex Analysis for 17 Sept 2026 Thursday | Nifty Sensex Prediction
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:08:16 IST | Sentiment Score: +None | Tickers: []
+
+### Item [23] [LIVE_NEWS] US Fed rate hike impact on Indian stock market - Sensex, Nifty, Bank Nifty, Nifty IT - Livemint
+- Source: Livemint | Timestamp: 2026-09-17 10:07:39 IST | Sentiment Score: +0 | Tickers: []
+
+### Item [24] [YOUTUBE_LIVE_STREAM] Live Trading Nifty Bank nifty Analysis || 17 SEP || #livetrading #nifty #banknifty
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:07:42 IST | Sentiment Score: +None | Tickers: []
+
+### Item [25] [YOUTUBE_LIVE_STREAM] Share Market LIVE Update | Business News | Latest Stock Market News| 17 September | ET Now Swadesh
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:07:08 IST | Sentiment Score: +None | Tickers: []
+
+### Item [26] [YOUTUBE_LIVE_STREAM] LIVE NIFTY 50 SENSEX AND BANK NIFTY TRADING ||17 September 2026 ||
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:06:31 IST | Sentiment Score: +None | Tickers: []
+
+### Item [27] [YOUTUBE_LIVE_STREAM] Nifty Prediction and Bank Nifty Analysis for Thursday | 17 September 26 | Bank NIFTY Tomorrow
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:05:57 IST | Sentiment Score: +None | Tickers: []
+
+### Item [28] [YOUTUBE_LIVE_STREAM] NIFTY LIVE TRADING | BANKNIFTY and SENSEX OPTIONS | ZERO HERO TRADE #livetrading #NIFTYLIVE |17-SEP
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:05:57 IST | Sentiment Score: +None | Tickers: []
+
+### Item [29] [YOUTUBE_LIVE_STREAM] Nifty Prediction & Bank Nifty Analysis for Thursday| 17th September 2026 | nifty Tomorrow
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:05:23 IST | Sentiment Score: +None | Tickers: []
+
+### Item [30] [YOUTUBE_LIVE_STREAM] 17 Sep 🔴LIVE NIFTY, BANK NIFTY & SENSEX Analysis🔥| Option Trading Stock Market | Intraday Scalping
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:05:23 IST | Sentiment Score: +None | Tickers: []
+
+### Item [31] [YOUTUBE_LIVE_STREAM] LIVE || 17 Sept 2026  || Nifty & Bank Nifty Analysis 📈 #livetrading
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:04:12 IST | Sentiment Score: +None | Tickers: []
+
+### Item [32] [YOUTUBE_LIVE_STREAM] Nifty live trading Bank nifty trading|| 17 SEP #trading #livetrading #niftylivetrading #sensex
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:03:37 IST | Sentiment Score: +None | Tickers: []
+
+### Item [33] [YOUTUBE_LIVE_STREAM] 🔴 NIFTY LIVE TRADING | Nifty 50 Live | Bank Nifty Live | Option Trading Live Today | 17 Sep 2026
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:03:37 IST | Sentiment Score: +None | Tickers: []
+
+### Item [34] [YOUTUBE_LIVE_STREAM] Stock Market LIVE | 17 September Share Market Live Today | Nifty Live | Sensex Live | Bank Nifty
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:03:37 IST | Sentiment Score: +None | Tickers: []
+
+### Item [35] [YOUTUBE_LIVE_STREAM] 17 September 26 Bazar ki baat | BANKNIFTY NIFTY and SENSEX OPTIONS      @TrickToTrade
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:03:03 IST | Sentiment Score: +None | Tickers: []
+
+### Item [36] [YOUTUBE_LIVE_STREAM] 🔴 NIFTY LIVE TRADING | BANK NIFTY • SENSEX • STOCK MARKET LIVE | 17 SEP #livetrading
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:03:03 IST | Sentiment Score: +None | Tickers: []
+
+### Item [37] [YOUTUBE_LIVE_STREAM] LIVE Trading analysis  Nifty  Banknifty Sensex | Option Buying  | 17 Sept  26
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:02:28 IST | Sentiment Score: +None | Tickers: []
+
+### Item [38] [YOUTUBE_LIVE_STREAM] Sensex Expiry | Bank Nifty & Nifty50 | Options Trading with Live Analysis | 17 Sep | #livetrading
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:02:28 IST | Sentiment Score: +None | Tickers: []
+
+### Item [39] [YOUTUBE_LIVE_STREAM] Expiry Hero Zero Trade Nifty SENSEX | Live Trading | Banknifty Analysis | 17-sept | #livetrading
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:01:51 IST | Sentiment Score: +None | Tickers: []
+
+### Item [40] [YOUTUBE_LIVE_STREAM] LIVE TRADING Nifty BankNifty and SENSEX | Option Buying  | 17 Sept #livetrading
+- Source: YouTube Live Stream | Timestamp: 2026-09-17 10:01:51 IST | Sentiment Score: +None | Tickers: []
+
+
+## 3. REAL-TIME GOOGLE SEARCH NEWS PULSE INGESTION (2026-09-17 10:56:16 IST)
+- Ingested directly from User Live Google News Search Stream (1-hour window).
+
+### Google News Item [1] [Entrackr]
+- Content: RentoMojo makes stock market debut at 19% premium (Thursday, September 17)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [2] [Equitymaster]
+- Content: Sensex Today Trades Flat | Nifty Above 23,200 | Bajaj Finance & Bharat Elec Top Gainers
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [3] [ChiniMandi]
+- Content: Indian equity market opens flat after Fed rate hike; Sensex up 80 points; Nifty above 23,200 (September 17)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [4] [The Economic Times]
+- Content: Glass Wall Systems shares rally 32% in 2 days after IPO
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [5] [The New Indian Express]
+- Content: Stock markets trade marginally higher after US Fed rate hike; NSE IPO in focus
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [6] [Business Standard]
+- Content: Syrma SGS Technology soars 9%, up 125% in 2026; what's driving EMS stock?
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [7] [Investing.com India]
+- Content: Why is Moore Threads Technology stock surging today?
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [8] [Sahi]
+- Content: Asset Reconstruction Lists Shares At ₹139, In Line With IPO Issue Price
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [9] [Moneycontrol.com]
+- Content: Strong market debut: LCC Projects shares list at over 29% premium
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [10] [Business Standard]
+- Content: LCC Projects shares make strong debut, list at over 31% premium
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [11] [Business Standard]
+- Content: Manipal Payment and Identity Solutions slips on debut (discount of 4.82% at Rs 322.65 at 10:15 IST)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [12] [Business Standard]
+- Content: Home First Finance Company India allots 3,681 equity shares under ESOP
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [13] [The Economic Times]
+- Content: LCC Projects makes strong D-Street debut, listing at 31% premium
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [14] [Business Standard]
+- Content: Manipal Payment shares off to weak start, list at 3% discount to IPO price
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [15] [Moneycontrol.com]
+- Content: NSE IPO opens for bidding: Rs 22,569 crore issue subscribed 9% in 15 minutes; Price band, GMP among 10 key... (opened at 10 am today Thursday)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [16] [NDTV Profit]
+- Content: This Penny Stock Under Rs 30 Hits 20% Upper Circuit In Trade Today (Suratwwala Business Group)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [17] [Investing.com India]
+- Content: Boston Omaha director Keating sells $1.37m in Class A stock
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [18] [Rediff]
+- Content: Stock Markets Today: Sensex, Nifty Open Higher Post Fed Rate Hike; NSE IPO
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [19] [Investing.com India]
+- Content: Landmark Bancorp director Jim Lewis sells $13,168 LARK shares
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [20] [Investing.com India]
+- Content: Why is Sumitomo stock climbing today?
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [21] [Business Standard]
+- Content: Nifty IT slumps 1% as Fed rate hike sparks fresh selling in tech stocks (US Fed rate hike 0.25 bps to 3.75-4%)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [22] [Investing.com India]
+- Content: Why is Weichai Power stock rallying today?
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [23] [Business Standard]
+- Content: Karamtara Engineering makes strong debut (shares trading at Rs 351.95 at 10:15 IST, premium of 38.56%)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [24] [Business Standard]
+- Content: Steamhouse India shares list with 17% premium over IPO price
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [25] [Business Standard]
+- Content: Asset Reconstruction Company (India) is flat on debut
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [26] [Business Standard]
+- Content: Rentomojo shares make positive debut, list at nearly 20% premium
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [27] [Business Standard]
+- Content: Karamtara Engineering IPO: Shares debut with 26% premium on BSE
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+### Google News Item [28] [BusinessLine]
+- Content: National Stock Exchange's $2.3-billion IPO opens for subscription (₹22,569 crore opened on Thursday)
+- Timestamp: 2026-09-17 10:56:16 IST | Verified: TRUE
+
+
+
+## 4. REAL-TIME VIDEO & SOCIAL MEDIA FEED INGESTION (2026-09-17 10:58:04 IST)
+### Video/Social Item [1] [CNBC-TV18] Indices Open Flat Amid Mixed Global Cues; Sensex Down 55
+- URL: https://www.youtube.com/watch?v=PJGTuecIJcc
+- Sentiment: NEUTRAL | Ingested: TRUE
+
+### Video/Social Item [2] [YouTube] Correction Nearing Its End? Technicals Flash Bullish Signals
+- URL: https://www.youtube.com/watch?v=wWejbtnE1qc
+- Sentiment: BULLISH | Ingested: TRUE
+
+### Video/Social Item [3] [CNBC-TV18] NSE IPO Opens Today | Believe NSE IPO Has Been Priced Attractively
+- URL: https://www.youtube.com/watch?v=Pydi7OUMICU
+- Sentiment: BULLISH_BFSI | Ingested: TRUE
+
+### Video/Social Item [4] [CNBC Awaaz] Top Money Making Stocks | आज Buy या Sell करने से होगा आपको मुनाफा
+- URL: https://www.youtube.com/watch?v=6ZOCj6NmqbE
+- Sentiment: BULLISH | Ingested: TRUE
+
+### Video/Social Item [5] [ET Now] Market Correction Opportunity? Experts Decode Auto, FMCG
+- URL: https://www.youtube.com/watch?v=N86I1tlTMMw
+- Sentiment: BULLISH_FMCG | Ingested: TRUE
+
+### Video/Social Item [6] [Zee Business] Stock Of The Day KRSNAA Diagnostics: SL 525 Tgt 540, 545
+- URL: https://www.youtube.com/shorts/oNxAP7VCU6U
+- Sentiment: BULLISH | Ingested: TRUE
+
+### Video/Social Item [7] [ANI News] TVS Motor Chief Srinivasan and Tata Steel MD Narendran arrive for board meeting
+- URL: https://www.facebook.com/ANINEWS.IN/posts/1583775150616462/
+- Sentiment: BULLISH_TATASTEEL | Ingested: TRUE
+
+### Video/Social Item [8] [MyFinTV] FMCG Index surges - FMCG stocks seeing aggressive accumulation
+- URL: https://www.facebook.com/myfintv/posts/1406588701690226/
+- Sentiment: BULLISH_ITC | Ingested: TRUE
+
+### Video/Social Item [9] [Moneycontrol Hindi] US Fed Rate Hike 25 bps: Impact on Indian Equities
+- URL: https://www.facebook.com/moneycontrolhindi/videos/1776872286684960/
+- Sentiment: NEUTRAL_DEFENSIVE | Ingested: TRUE
+
+### Video/Social Item [10] [Zee Business] IPO Listing Rentomojo NSE opens at 20% premium
+- URL: https://www.instagram.com/reel/DdYBfsstepL
+- Sentiment: BULLISH_IPO | Ingested: TRUE
+
+### Video/Social Item [11] [Kotak MF] The SIP ride is getting bigger, ₹18.61 lakh crore already built through SIP
+- URL: https://www.facebook.com/KotakMF/posts/1495784642578595/
+- Sentiment: BULLISH_LIQUIDITY | Ingested: TRUE
+

@@ -451,32 +451,16 @@ class PremarketScreener:
                     )
                     continue
 
-            # Rejection 2: Low Momentum (< 1.0%)
-            if abs_gap < 1.0:
-                results.append(
-                    CandidateStock(
-                        symbol=sym,
-                        security_id=udata["security_id"],
-                        previous_close=prev_close,
-                        open_price=open_price,
-                        current_price=curr_price,
-                        gap_pct=gap_pct,
-                        gap_factor=gap_factor,
-                        safe_leverage=safe_lev,
-                        max_buying_power=self.cash_equity * safe_lev,
-                        approved_quantity=0,
-                        risk_rupees=0.0,
-                        stop_loss_distance=0.0,
-                        status="REJECTED",
-                        rejection_reason=f"INSUFFICIENT_MOMENTUM (|Gap| {abs_gap:.2f}% < 1.0%)",
-                        ofi=ofi,
-                        book_skew=skew,
-                    )
-                )
-                continue
-
-            # Status: QUALIFIED (1.5% <= |Gap| <= 3.0% is PRIME, 1.0% <= |Gap| < 1.5% is SECONDARY)
-            status = "PRIME_TARGET" if abs_gap >= 1.5 else "SECONDARY_TARGET"
+            # Status: QUALIFIED
+            # 1.5% <= |Gap| <= 3.0% -> PRIME_TARGET
+            # 1.0% <= |Gap| < 1.5%  -> SECONDARY_TARGET
+            # |Gap| < 1.0%          -> FLAT_ORB_TARGET (Pre-Open Flat: Valid for 65s ORB Breakout to prevent Day 1 zero-trade trap)
+            if abs_gap >= 1.5:
+                status = "PRIME_TARGET"
+            elif abs_gap >= 1.0:
+                status = "SECONDARY_TARGET"
+            else:
+                status = "FLAT_ORB_TARGET"
 
             # Position sizing with conservative stop loss distance (0.50 INR)
             stop_dist = max(0.20, round(open_price * 0.003, 2))  # ~0.3% stop

@@ -1,0 +1,108 @@
+//@version=5
+strategy("Antigravity OCC Strategy (MA 5 + Delayed TSL)", overlay=true, initial_capital=100000, default_qty_type=strategy.percent_of_equity, default_qty_value=100)
+
+// ==============================================================================
+// 🏛️ ANTIGRAVITY + NOTEBOOKLM "GOD MODE" STACK — INDIAN ALGO TRADING (SEP 2026)
+// Strategy: Open-Close Cross (OCC) with MA 5 & Delayed Trailing Stop Loss (TSL)
+// Target Instruments: NIFTY 50, BANKNIFTY (5-Minute Timeframe)
+// Broker Integration: DhanHQ v2 / Fyers API v3 Webhook Ready
+// ==============================================================================
+
+// --- Inputs ---
+maLength        = input.int(5, title="Fast SMA Length", minval=1)
+maSource        = input.source(close, title="MA Source")
+delayedBars     = input.int(2, title="Delay Bars Before TSL Activation", minval=0)
+profitTriggerPct= input.float(0.75, title="TSL Profit Trigger Threshold (%)", minval=0.1, step=0.05)
+tslPct          = input.float(0.5, title="Trailing Stop Loss (%)", minval=0.1, step=0.05)
+hardSlPct       = input.float(1.0, title="Hard Stop Loss (%)", minval=0.2, step=0.1)
+
+// --- Session Filter (Indian Market Hours: 09:15 to 15:15 IST) ---
+sessionTime     = input.session("0915-1515", title="Trading Session (IST)")
+inSession       = not na(time(timeframe.period, sessionTime + ":23456"))
+isSquareOff     = hour == 15 and minute >= 15
+
+// --- Calculations ---
+fastMA = ta.sma(maSource, maLength)
+
+// Entry Signals
+longCondition  = ta.crossover(close, fastMA) and inSession and not isSquareOff
+shortCondition = ta.crossunder(close, fastMA) and inSession and not isSquareOff
+
+// --- State Variables for Delayed TSL ---
+var float entryPrice = na
+var int barsInTrade  = 0
+var float highSinceEntry = na
+var float lowSinceEntry  = na
+var float trailingStop   = na
+
+// Update Trade Duration & Price Tracking
+if strategy.position_size != 0
+    barsInTrade := barsInTrade + 1
+    if strategy.position_size > 0
+        highSinceEntry := math.max(nz(highSinceEntry, high), high)
+        // Check if profit trigger reached and delay period passed
+        bool canTrail = barsInTrade >= delayedBars and (highSinceEntry - entryPrice) / entryPrice >= (profitTriggerPct / 100.0)
+        if canTrail
+            trailingStop := highSinceEntry * (1.0 - tslPct / 100.0)
+        else
+            trailingStop := entryPrice * (1.0 - hardSlPct / 100.0)
+    else if strategy.position_size < 0
+        lowSinceEntry := math.min(nz(lowSinceEntry, low), low)
+        bool canTrail = barsInTrade >= delayedBars and (entryPrice - lowSinceEntry) / entryPrice >= (profitTriggerPct / 100.0)
+        if canTrail
+            trailingStop := lowSinceEntry * (1.0 + tslPct / 100.0)
+        else
+            trailingStop := entryPrice * (1.0 + hardSlPct / 100.0)
+else
+    entryPrice     := na
+    barsInTrade    := 0
+    highSinceEntry := na
+    lowSinceEntry  := na
+    trailingStop   := na
+
+// --- Strategy Execution ---
+
+// Long Entry
+if longCondition and strategy.position_size <= 0
+    strategy.entry("Long_OCC", strategy.long, comment="BUY_LONG")
+    entryPrice := close
+    barsInTrade := 0
+    highSinceEntry := high
+    trailingStop := close * (1.0 - hardSlPct / 100.0)
+
+// Short Entry
+if shortCondition and strategy.position_size >= 0
+    strategy.entry("Short_OCC", strategy.short, comment="SELL_SHORT")
+    entryPrice := close
+    barsInTrade := 0
+    lowSinceEntry := low
+    trailingStop := close * (1.0 + hardSlPct / 100.0)
+
+// Exit Conditions
+if strategy.position_size > 0
+    // Long Trailing Stop or Hard Stop Hit
+    if close < trailingStop
+        strategy.close("Long_OCC", comment="EXIT_TSL_LONG")
+    // End of day square off
+    if isSquareOff
+        strategy.close("Long_OCC", comment="EXIT_INTRADAY_SQUAREOFF")
+
+if strategy.position_size < 0
+    // Short Trailing Stop or Hard Stop Hit
+    if close > trailingStop
+        strategy.close("Short_OCC", comment="EXIT_TSL_SHORT")
+    // End of day square off
+    if isSquareOff
+        strategy.close("Short_OCC", comment="EXIT_INTRADAY_SQUAREOFF")
+
+// --- Visual Plots ---
+plot(fastMA, title="Fast MA (5)", color=color.yellow, linewidth=2)
+plot(strategy.position_size != 0 ? trailingStop : na, title="Dynamic TSL", color=strategy.position_size > 0 ? color.green : color.red, style=plot.style_linebr, linewidth=2)
+
+// Background highlights for market regime
+bgcolor(strategy.position_size > 0 ? color.new(color.green, 92) : strategy.position_size < 0 ? color.new(color.red, 92) : na)
+
+// --- Webhook Alert Payloads for Antigravity / Dhan Live Bot ---
+alertcondition(longCondition, title="Antigravity OCC BUY Signal", message='{"action": "BUY", "ticker": "{{ticker}}", "price": {{close}}, "strategy": "Antigravity_OCC", "timestamp": "{{timenow}}"}')
+alertcondition(shortCondition, title="Antigravity OCC SELL Signal", message='{"action": "SELL", "ticker": "{{ticker}}", "price": {{close}}, "strategy": "Antigravity_OCC", "timestamp": "{{timenow}}"}')
+alertcondition(isSquareOff, title="Antigravity Intraday Square-off", message='{"action": "SQUAREOFF", "ticker": "{{ticker}}", "strategy": "Antigravity_OCC", "timestamp": "{{timenow}}"}')

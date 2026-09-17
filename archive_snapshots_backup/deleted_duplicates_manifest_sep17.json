@@ -1,0 +1,1795 @@
+{
+  "date": "2026-09-17",
+  "canonical_master_id": "d5006465-ea4d-41dd-a0cf-202cbb110325",
+  "deleted_duplicates": [
+    {
+      "id": "3cb1f21f-b92e-4166-bb3a-0ca5dce8c17e",
+      "title": "ANTIGRAVITY MASTER ARCHIVE (ALL CHATS CONSOLIDATED)",
+      "sources_count": 198,
+      "sources": [
+        {
+          "id": "4ba37a73-8879-455e-919e-b71c08a66d2a",
+          "title": "SOURCE_001_2026-09-01_01_EE_EXAMS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b9ac0700-6d00-43f1-9202-de9bc6bdd2bf",
+          "title": "SOURCE_002_2026-09-01_02_HERMES_MEMORY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bb67244e-5717-4c89-bd5f-6ce65cb64146",
+          "title": "SOURCE_003_2026-09-01_03_FACTORY_OS_AUTONOMY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bbb9988c-5039-4095-8d29-11c496014b5a",
+          "title": "SOURCE_004_2026-09-01_04_CINEMATIC_UI.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f774bb0d-0d39-4aaf-ae7f-60c833c95654",
+          "title": "SOURCE_005_2026-09-02_01_EE_EXAMS_PART_1_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "35763075-67d1-4f24-ad39-693a4d265545",
+          "title": "SOURCE_005_2026-09-02_01_EE_EXAMS_PART_1_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5613df92-c521-405e-aa9a-6e2d3dae60d5",
+          "title": "SOURCE_005_2026-09-02_01_EE_EXAMS_PART_1_SUB_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "810ff5d3-28bb-4821-807e-d33b14374289",
+          "title": "SOURCE_005_2026-09-02_01_EE_EXAMS_PART_1_SUB_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ac7ecc72-3d69-44f5-969a-12814bc8c79e",
+          "title": "SOURCE_006_2026-09-02_01_EE_EXAMS_PART_2_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b84b088d-22fa-4c15-bc01-5c06ac7d8721",
+          "title": "SOURCE_006_2026-09-02_01_EE_EXAMS_PART_2_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ac271e81-6dfe-4f4d-bce8-64f865d454e8",
+          "title": "SOURCE_006_2026-09-02_01_EE_EXAMS_PART_2_SUB_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7c9d404e-4cbb-4758-8118-48188ac1c1c2",
+          "title": "SOURCE_006_2026-09-02_01_EE_EXAMS_PART_2_SUB_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3c06bab0-4635-413e-aad2-9703bdc33337",
+          "title": "SOURCE_007_2026-09-02_01_EE_EXAMS_PART_3_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9d10e6b5-e3a1-47c8-a8b9-c9132608f86e",
+          "title": "SOURCE_007_2026-09-02_01_EE_EXAMS_PART_3_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d73dc620-101e-4444-a130-af1a3c891be6",
+          "title": "SOURCE_007_2026-09-02_01_EE_EXAMS_PART_3_SUB_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fcf23a34-aa3e-4280-af40-0756427abb55",
+          "title": "SOURCE_008_2026-09-02_02_HERMES_MEMORY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7109b865-fb9a-49ea-a201-6dd078113bb2",
+          "title": "SOURCE_009_2026-09-02_03_FACTORY_OS_AUTONOMY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "992da57e-7a1a-48d3-aa52-52e5afaea89a",
+          "title": "SOURCE_010_2026-09-02_04_CINEMATIC_UI.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "474aed85-49e4-4a8d-870d-72fe5c9e3fb4",
+          "title": "SOURCE_011_2026-09-02_05_TOOLS_AND_SCRAPERS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "adf999df-aca2-40bb-897f-0ee1f619334e",
+          "title": "SOURCE_012_2026-09-02_07_STRATEGY_AND_SYSTEM.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c3d31f59-dd56-4af2-a35c-a93daffe97d0",
+          "title": "SOURCE_013_2026-09-04_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c0f6d19b-1c93-42d7-8452-74011ff67382",
+          "title": "SOURCE_014_2026-09-04_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "69cf1680-caf7-43d9-a782-947659337911",
+          "title": "SOURCE_015_2026-09-04_01_EE_EXAMS_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "043efdb7-7603-4ab9-a1f5-ba13d1ede8e1",
+          "title": "SOURCE_016_2026-09-04_01_EE_EXAMS_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c226d821-0855-45b9-9364-5149503c3ae6",
+          "title": "SOURCE_017_2026-09-04_01_EE_EXAMS_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "44f5d247-09d8-4190-a6e3-1b04bf4f3e14",
+          "title": "SOURCE_018_2026-09-04_01_EE_EXAMS_PART_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9becf4fb-6c06-4db6-9297-ab384e21025d",
+          "title": "SOURCE_019_2026-09-04_01_EE_EXAMS_PART_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d66ee667-8638-4ebe-9af3-a78b4685b450",
+          "title": "SOURCE_020_2026-09-04_01_EE_EXAMS_PART_8.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "41cedbf2-3d7b-4703-b907-8212d0d9d75c",
+          "title": "SOURCE_021_2026-09-04_01_EE_EXAMS_PART_9.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2a283ed3-c3f4-4ee7-b2bc-dc41a7ef147f",
+          "title": "SOURCE_022_2026-09-04_01_EE_EXAMS_PART_10.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ff77a5a6-ae0d-4c16-801c-019abb6e8037",
+          "title": "SOURCE_023_2026-09-04_01_EE_EXAMS_PART_11.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ceec5573-4fb4-40ad-984c-a2fecfa21197",
+          "title": "SOURCE_024_2026-09-04_01_EE_EXAMS_PART_12.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b64a76e1-8348-4beb-b48f-a61c2f6bb964",
+          "title": "SOURCE_025_2026-09-04_02_HERMES_MEMORY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "24b19bc2-c45c-488e-8761-f02ed7c9ef02",
+          "title": "SOURCE_026_2026-09-04_02_HERMES_MEMORY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1e51868f-46e2-418e-8218-526c95706496",
+          "title": "SOURCE_027_2026-09-04_03_FACTORY_OS_AUTONOMY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3bef9867-1bdc-41fe-8ed7-16abb1cefcc6",
+          "title": "SOURCE_028_2026-09-04_04_CINEMATIC_UI_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c79b028d-dd49-4b3a-99d5-52e4d5d2ee3f",
+          "title": "SOURCE_029_2026-09-04_04_CINEMATIC_UI_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "498191f1-1c54-41c7-91d0-16c9164e3802",
+          "title": "SOURCE_030_2026-09-04_07_STRATEGY_AND_SYSTEM.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "af40c767-a349-401d-8a92-f76d356c6e03",
+          "title": "SOURCE_031_2026-09-05_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "383f2cbf-4ed3-4beb-bba2-708d26cfb551",
+          "title": "SOURCE_032_2026-09-05_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0b5ad3a5-56f0-4a07-9d88-2c7b936e6cf8",
+          "title": "SOURCE_033_2026-09-05_01_EE_EXAMS_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c7cd1ab6-4f38-43a3-86fc-54f1f384c21c",
+          "title": "SOURCE_034_2026-09-05_01_EE_EXAMS_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e96a3cc9-f6f8-428f-ac54-ca3a40d60c34",
+          "title": "SOURCE_035_2026-09-05_01_EE_EXAMS_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7a84ba1d-5318-425f-ac85-4a09b2a1aacb",
+          "title": "SOURCE_036_2026-09-05_01_EE_EXAMS_PART_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6c4fdaf0-9c83-4f04-a162-be5a4f68ac3f",
+          "title": "SOURCE_037_2026-09-05_01_EE_EXAMS_PART_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7ceeea2a-4173-4541-a6e3-904f49797e7b",
+          "title": "SOURCE_038_2026-09-05_01_EE_EXAMS_PART_8.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1ccf7306-c0d5-45a6-92b7-91570ce643a1",
+          "title": "SOURCE_039_2026-09-05_01_EE_EXAMS_PART_9.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "44eb2ac4-7e08-400c-80cf-7e9d85beceb6",
+          "title": "SOURCE_040_2026-09-05_01_EE_EXAMS_PART_10.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d7e48d0d-d5a4-4c40-aac2-b0c3145700a6",
+          "title": "SOURCE_041_2026-09-05_01_EE_EXAMS_PART_11.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "82cc87e4-b531-4156-847d-4823dbbefd7c",
+          "title": "SOURCE_042_2026-09-05_01_EE_EXAMS_PART_12.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c5a082a8-e374-44e4-98f8-094966cd8026",
+          "title": "SOURCE_043_2026-09-05_01_EE_EXAMS_PART_13.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "458d0bd9-423b-43ad-9912-c7e57ec247eb",
+          "title": "SOURCE_044_2026-09-05_01_EE_EXAMS_PART_14.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8bcb095f-26c8-477e-bf21-b1f1bbda874e",
+          "title": "SOURCE_045_2026-09-05_01_EE_EXAMS_PART_15.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0b036686-cc2a-4aa0-8c74-4a2865ceedc8",
+          "title": "SOURCE_046_2026-09-05_01_EE_EXAMS_PART_16.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "394e358d-9156-42de-82aa-2abf3c9e42c7",
+          "title": "SOURCE_047_2026-09-05_02_HERMES_MEMORY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8cf902a3-eea4-4a3f-b4a7-20bfa25fa89c",
+          "title": "SOURCE_048_2026-09-05_02_HERMES_MEMORY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "be2a964e-7f99-488b-8ab2-5b2841ba2735",
+          "title": "SOURCE_049_2026-09-05_04_CINEMATIC_UI.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "17ab101d-1879-4b5b-b421-d2af70bff592",
+          "title": "SOURCE_050_2026-09-05_07_STRATEGY_AND_SYSTEM.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0b4b07ed-9014-4b52-a360-a6b170829b6d",
+          "title": "SOURCE_051_2026-09-06_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "07237970-4fd6-4e2b-8123-578f1855edc2",
+          "title": "SOURCE_052_2026-09-06_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "298732c7-922b-43df-98e6-6db0c523dd65",
+          "title": "SOURCE_053_2026-09-06_01_EE_EXAMS_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "cfde7813-b1e0-4c88-9d4f-f07903018cc7",
+          "title": "SOURCE_054_2026-09-06_01_EE_EXAMS_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e80e4963-400e-4f32-b83b-9940d6c2b653",
+          "title": "SOURCE_055_2026-09-06_01_EE_EXAMS_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "663fc6f8-e02b-477a-88a4-dadcc0eb5e41",
+          "title": "SOURCE_056_2026-09-06_01_EE_EXAMS_PART_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "dbb56459-bcbd-4b69-839a-f8e35bb618f8",
+          "title": "SOURCE_057_2026-09-06_01_EE_EXAMS_PART_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5f81b8d6-88e8-4832-a0fa-fdc41fc40e85",
+          "title": "SOURCE_058_2026-09-06_01_EE_EXAMS_PART_8.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "a08fb596-9255-45d6-b82e-b3980bd6f61e",
+          "title": "SOURCE_059_2026-09-06_01_EE_EXAMS_PART_9.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6af89990-c8e9-4fc7-90b9-26c6ff543ffc",
+          "title": "SOURCE_060_2026-09-06_01_EE_EXAMS_PART_10.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bb46c553-776d-4df1-9bb6-827a96d05608",
+          "title": "SOURCE_061_2026-09-06_01_EE_EXAMS_PART_11.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "32096393-fa8d-41f3-8c11-d941b16de969",
+          "title": "SOURCE_062_2026-09-06_01_EE_EXAMS_PART_12.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c40a4511-382c-4021-a396-18871142504a",
+          "title": "SOURCE_063_2026-09-06_01_EE_EXAMS_PART_13.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "184d92a2-ce2a-4e9f-bb8f-6f7c55bf4121",
+          "title": "SOURCE_064_2026-09-06_01_EE_EXAMS_PART_14.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d8d6a701-5c19-44e3-b20b-ef4273efdef3",
+          "title": "SOURCE_065_2026-09-06_01_EE_EXAMS_PART_15.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3b18f41b-c36e-47ee-9777-38257c7b5612",
+          "title": "SOURCE_066_2026-09-06_01_EE_EXAMS_PART_16.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3a81d739-6291-4d69-ad8e-2c1494209009",
+          "title": "SOURCE_067_2026-09-06_01_EE_EXAMS_PART_17.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7ceb93f1-00b5-44ec-a98c-acc966a7942e",
+          "title": "SOURCE_068_2026-09-06_01_EE_EXAMS_PART_18.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8629d472-d1fb-45e9-958e-45746ef53307",
+          "title": "SOURCE_069_2026-09-06_01_EE_EXAMS_PART_19.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "be67a909-f7a6-40a0-83de-66fecf273e94",
+          "title": "SOURCE_070_2026-09-06_01_EE_EXAMS_PART_20.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ac4d7464-f673-42ea-b445-27d38ba23927",
+          "title": "SOURCE_071_2026-09-06_01_EE_EXAMS_PART_21.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "620b7975-2757-4af5-a91d-de5e92d8e3f2",
+          "title": "SOURCE_072_2026-09-06_01_EE_EXAMS_PART_22.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "05d7f303-43df-4fee-9ba9-f58c5f932239",
+          "title": "SOURCE_073_2026-09-06_01_EE_EXAMS_PART_23.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7a42f84e-1dbf-4503-bb6a-b308721dd7f1",
+          "title": "SOURCE_074_2026-09-06_01_EE_EXAMS_PART_24.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "079e8378-02e5-4f10-8a11-d3387fd5f232",
+          "title": "SOURCE_075_2026-09-06_01_EE_EXAMS_PART_25.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f7bd2211-d55b-427e-9ba9-aab327eb8f26",
+          "title": "SOURCE_076_2026-09-06_01_EE_EXAMS_PART_26.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8d1145ec-ac3e-47f1-8bae-4885708f367b",
+          "title": "SOURCE_077_2026-09-06_01_EE_EXAMS_PART_27.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7bd31a4b-0f0e-4635-97f0-4343244bc064",
+          "title": "SOURCE_078_2026-09-06_01_EE_EXAMS_PART_28.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6d8735e3-cb06-49fe-adbd-36cea59948aa",
+          "title": "SOURCE_079_2026-09-06_01_EE_EXAMS_PART_29.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0d006015-184f-4b4a-828f-23bf7be11939",
+          "title": "SOURCE_080_2026-09-06_01_EE_EXAMS_PART_30.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2e8abb2e-5de0-4ded-8ca8-a236a20c31a6",
+          "title": "SOURCE_081_2026-09-06_02_HERMES_MEMORY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "eab1af46-b852-4ab3-95a5-e76a7a2e1620",
+          "title": "SOURCE_082_2026-09-06_03_FACTORY_OS_AUTONOMY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d12607fd-6bab-48d3-9db1-b64294faacdb",
+          "title": "SOURCE_083_2026-09-06_03_FACTORY_OS_AUTONOMY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2b740bf1-e4a5-4f63-a50b-e2e67747c471",
+          "title": "SOURCE_084_2026-09-06_03_FACTORY_OS_AUTONOMY_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2290d144-3866-4497-be3d-8bd712747083",
+          "title": "SOURCE_085_2026-09-06_03_FACTORY_OS_AUTONOMY_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4be648ce-3ab0-41ba-89cf-d5cd7dc65934",
+          "title": "SOURCE_086_2026-09-06_04_CINEMATIC_UI.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "60c2f784-a8c6-4a73-9dac-abefc44c8374",
+          "title": "SOURCE_087_2026-09-06_05_TOOLS_AND_SCRAPERS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "82a89845-3f12-4161-9945-e8ea4bcf8a9e",
+          "title": "SOURCE_088_2026-09-06_07_STRATEGY_AND_SYSTEM.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "03f6978c-cfaf-4683-aef1-3973e959c234",
+          "title": "SOURCE_089_2026-09-07_01_EE_EXAMS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fde667dc-f6cc-42c7-8682-c218ddec1cea",
+          "title": "SOURCE_090_2026-09-07_02_HERMES_MEMORY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f430f5b2-d80d-46aa-8dad-3a8324f113a6",
+          "title": "SOURCE_091_2026-09-07_02_HERMES_MEMORY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e16ead56-55c1-47ff-8ff0-2270c90752bc",
+          "title": "SOURCE_092_2026-09-07_03_FACTORY_OS_AUTONOMY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1cefa975-e8f4-4c94-b8b5-d7ee87be6ed6",
+          "title": "SOURCE_093_2026-09-07_04_CINEMATIC_UI.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7353bf78-43dd-48e6-9df6-d7b47bcdcbf1",
+          "title": "SOURCE_094_2026-09-07_07_STRATEGY_AND_SYSTEM.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1969c9ba-0897-440e-9979-15c52616d578",
+          "title": "SOURCE_095_2026-09-08_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ac12ea37-30e9-4bba-a76e-e47b547d3c18",
+          "title": "SOURCE_096_2026-09-08_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2203601c-754f-4fb0-b0a4-81196fcf1637",
+          "title": "SOURCE_097_2026-09-08_01_EE_EXAMS_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f7fe475e-c726-4a07-878a-e8bdd26e19c4",
+          "title": "SOURCE_098_2026-09-08_01_EE_EXAMS_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7de2c30b-4b55-4651-aa64-c21f2bde3c8c",
+          "title": "SOURCE_099_2026-09-08_01_EE_EXAMS_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "02efe26e-37fd-4db9-aa5f-12a8741bc699",
+          "title": "SOURCE_100_2026-09-08_01_EE_EXAMS_PART_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f0b04e95-49cf-4de7-a9a7-a93ee2aa0c98",
+          "title": "SOURCE_101_2026-09-08_01_EE_EXAMS_PART_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "267e4691-0e0c-4e4d-bfce-a037a8e36733",
+          "title": "SOURCE_102_2026-09-08_01_EE_EXAMS_PART_8.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "726cbdac-a786-49ab-a106-c60227af110e",
+          "title": "SOURCE_103_2026-09-08_01_EE_EXAMS_PART_9.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3f573af4-74e2-442f-b573-8b727e123a7a",
+          "title": "SOURCE_104_2026-09-08_01_EE_EXAMS_PART_10.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "55c9d325-cd3d-4432-b6cc-e766f8a5b5fb",
+          "title": "SOURCE_105_2026-09-08_01_EE_EXAMS_PART_11.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fec7f35c-cbaf-4dd3-bdbe-3be6e6be8251",
+          "title": "SOURCE_106_2026-09-08_01_EE_EXAMS_PART_12.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "78bc14c3-5968-490b-9626-d8fc2bbd3bb3",
+          "title": "SOURCE_107_2026-09-08_01_EE_EXAMS_PART_13.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "74d23012-fa18-4dab-b029-c83b5f9c0a5a",
+          "title": "SOURCE_108_2026-09-08_01_EE_EXAMS_PART_14.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f5070c3f-ecb5-45fc-bca9-f80b6bdc2009",
+          "title": "SOURCE_109_2026-09-08_01_EE_EXAMS_PART_15.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c152fdf6-c25f-4180-9f79-7a9e9b43171f",
+          "title": "SOURCE_110_2026-09-08_01_EE_EXAMS_PART_16.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6ac8804b-12ef-49bf-b491-689d051a6669",
+          "title": "SOURCE_111_2026-09-08_01_EE_EXAMS_PART_17.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b1a89423-5afc-4938-854f-8d1da74eaa4f",
+          "title": "SOURCE_112_2026-09-08_01_EE_EXAMS_PART_18.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "90989caf-1766-4f25-9409-bee542757f55",
+          "title": "SOURCE_113_2026-09-08_01_EE_EXAMS_PART_19.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4c5b5672-abe9-4335-b899-0e01046ecf49",
+          "title": "SOURCE_114_2026-09-08_01_EE_EXAMS_PART_20.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0c72fcaa-f47f-4da1-8359-900c2188f115",
+          "title": "SOURCE_115_2026-09-08_01_EE_EXAMS_PART_21.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "827ad068-3b73-461e-a7be-eb5e5665ab0b",
+          "title": "SOURCE_116_2026-09-08_01_EE_EXAMS_PART_22.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "405467b0-0db7-4bad-b50d-9d8a365f31ee",
+          "title": "SOURCE_117_2026-09-08_01_EE_EXAMS_PART_23.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8e9f4a4c-1aa2-440d-9bbb-13ac34388193",
+          "title": "SOURCE_118_2026-09-08_01_EE_EXAMS_PART_24.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6e7f5127-a280-4fbb-862f-fb15e2c2c9d9",
+          "title": "SOURCE_119_2026-09-08_01_EE_EXAMS_PART_25.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "29edf255-97f4-4ef6-8407-a56f5859f67d",
+          "title": "SOURCE_120_2026-09-08_01_EE_EXAMS_PART_26.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2c6738ae-1817-4c53-8d9a-741541b8df82",
+          "title": "SOURCE_121_2026-09-08_01_EE_EXAMS_PART_27.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "32ead603-cde7-42a1-981a-9d45f3eb7088",
+          "title": "SOURCE_122_2026-09-08_01_EE_EXAMS_PART_28.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e995fa9b-5ef1-4561-9ab3-742bcae5147a",
+          "title": "SOURCE_123_2026-09-08_02_HERMES_MEMORY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e330f5cc-c4fa-46ff-bc9c-087934af2b61",
+          "title": "SOURCE_124_2026-09-08_03_FACTORY_OS_AUTONOMY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "830f8711-ec7e-423e-9bce-987aa9928b99",
+          "title": "SOURCE_125_2026-09-08_03_FACTORY_OS_AUTONOMY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0dd13ad1-2b95-4f1a-a1cf-7f29c8ed3bf0",
+          "title": "SOURCE_126_2026-09-08_03_FACTORY_OS_AUTONOMY_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "db824561-7561-495c-8c43-91820ab667b0",
+          "title": "SOURCE_127_2026-09-08_07_STRATEGY_AND_SYSTEM_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b1214106-f40f-4cd3-9c9a-6b3d3cd12924",
+          "title": "SOURCE_128_2026-09-08_07_STRATEGY_AND_SYSTEM_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9a7e6dd1-aa5f-4321-a1e4-c6b308ffe403",
+          "title": "SOURCE_129_2026-09-08_07_STRATEGY_AND_SYSTEM_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5fbb5950-675d-4bfb-bcaa-adaa289eed06",
+          "title": "SOURCE_130_2026-09-08_07_STRATEGY_AND_SYSTEM_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "063b3636-8108-4c8d-99ab-31c6a851119e",
+          "title": "SOURCE_131_2026-09-08_07_STRATEGY_AND_SYSTEM_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d4047ab0-4b00-4b04-82ea-674aecfc37dd",
+          "title": "SOURCE_132_2026-09-09_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7dc86829-f4d7-47cd-9533-ffed0d27a70c",
+          "title": "SOURCE_133_2026-09-09_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bdd1bdc1-c42c-4715-b5d1-51ce1ddc5dcb",
+          "title": "SOURCE_134_2026-09-09_02_HERMES_MEMORY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "465daaca-053f-4a24-8969-885448c17578",
+          "title": "SOURCE_135_2026-09-09_03_FACTORY_OS_AUTONOMY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "75b840d3-b661-4f43-9c47-683de4cd3297",
+          "title": "SOURCE_136_2026-09-09_05_TOOLS_AND_SCRAPERS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2b810857-9435-467c-b2e4-fb2d7eaa71f3",
+          "title": "SOURCE_137_2026-09-10_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7bab91fb-562d-4b9a-8a48-f2f4017e3e06",
+          "title": "SOURCE_138_2026-09-10_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f75684ee-f975-4eba-ac28-67ed4f31aab0",
+          "title": "SOURCE_139_2026-09-10_01_EE_EXAMS_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "779b6a9f-01d0-4bed-9053-dc89e5d7a525",
+          "title": "SOURCE_140_2026-09-10_01_EE_EXAMS_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "51e46d6d-8552-4879-bd80-f5af28546513",
+          "title": "SOURCE_141_2026-09-10_01_EE_EXAMS_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e527ea18-a7f6-4be3-8150-1058acf59b4d",
+          "title": "SOURCE_142_2026-09-10_01_EE_EXAMS_PART_6_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fa753ab2-51a4-4114-a7a4-1e66d01a9993",
+          "title": "SOURCE_142_2026-09-10_01_EE_EXAMS_PART_6_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4048e749-1a12-4255-b1e4-d7d9879a2972",
+          "title": "SOURCE_142_2026-09-10_01_EE_EXAMS_PART_6_SUB_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2c6e5d79-6443-42d7-9a0a-997dbe11b7de",
+          "title": "SOURCE_142_2026-09-10_01_EE_EXAMS_PART_6_SUB_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "77e363f3-1f7b-43c8-8c59-aeebb913c476",
+          "title": "SOURCE_142_2026-09-10_01_EE_EXAMS_PART_6_SUB_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6d92a9a8-c5c5-4cd2-8d33-244cef7ff67d",
+          "title": "SOURCE_143_2026-09-10_01_EE_EXAMS_PART_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7dab2cdc-ce4c-4695-8cd5-1a1aa7c0de0d",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9656e738-264c-4f5c-8942-9340d31a7332",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "79abe2e5-01f6-4857-9157-88d7b47929d3",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fb9d9458-0ee1-46c6-961e-c17f703db7dc",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ec60e423-67e0-41bc-9d4a-3604c1a1814d",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2f351534-645d-47eb-9490-988f7c992565",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0d37c851-e3c6-4c4c-96eb-a13789c53dd5",
+          "title": "SOURCE_144_2026-09-10_01_EE_EXAMS_PART_8_SUB_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "78cedc4d-7f9b-46c6-b083-57ac5462ce06",
+          "title": "SOURCE_145_2026-09-10_01_EE_EXAMS_PART_9.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "29dabe69-4c2a-4dc8-8435-eab1cc21b0c1",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d970fdcb-20c2-4ce5-ada7-8c8719a8aae5",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e1984b14-db78-48bf-b57f-24b29ba3ab1d",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c816810c-0d11-4769-a831-40a1e847b1a4",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4b8bca23-4730-4666-a8c7-e20e69fb1354",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e4e179c7-4f2d-41a9-b5de-fe81b91774fd",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "68cd5ff3-d56d-4c93-b506-c9c506f8f8cd",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "43edf12f-362c-4f94-95aa-76b20616e332",
+          "title": "SOURCE_146_2026-09-10_01_EE_EXAMS_PART_10_SUB_8.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f49eb58a-9109-403e-becf-d43eb50bacd9",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "adc5480b-45e9-4e1b-81c7-e9eb1832843a",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fa9be42d-25c6-4717-a3ba-73e22004eb52",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_3_A.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6edb5fe5-bb28-45d2-b30e-d129c181da47",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_3_B.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f54ce34e-478d-4c56-8933-d0ec4caace88",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "67978a2c-6d49-4048-a6c2-b488b8605683",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_5_A.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ad8b2127-7844-4ed0-bf67-ab9ccf67ec3a",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_5_B.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d09d64f2-9a11-467f-9c1e-8308af7a8b66",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_6.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "cbf2bcfc-4151-46d9-b99b-4b1f12736219",
+          "title": "SOURCE_147_2026-09-10_01_EE_EXAMS_PART_11_SUB_7.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6ff91bdd-c823-4b54-bfee-36add2b32a6f",
+          "title": "SOURCE_148_2026-09-10_02_HERMES_MEMORY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "83b32fa5-ff93-4fc4-96b0-a79c0497d00f",
+          "title": "SOURCE_149_2026-09-10_02_HERMES_MEMORY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4a65b45a-176e-4166-a67d-d5b851a5d03c",
+          "title": "SOURCE_150_2026-09-10_03_FACTORY_OS_AUTONOMY.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "a6e9da84-64bf-46fe-8651-789f70de374e",
+          "title": "SOURCE_151_2026-09-10_04_CINEMATIC_UI.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "03476d4c-5b49-4b3f-88d1-b1cf1c2479e2",
+          "title": "SOURCE_152_2026-09-10_06_QUANT_AND_FINANCE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "00e8dfc7-ec55-48b9-ba95-531876c3d251",
+          "title": "SOURCE_153_2026-09-10_07_STRATEGY_AND_SYSTEM.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "897fe2fb-169e-40ea-8ddc-3e95d6af6b6d",
+          "title": "SOURCE_154_2026-09-11_01_EE_EXAMS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "16315db0-d848-41e6-bcb5-0cedc962613c",
+          "title": "SOURCE_155_2026-09-11_05_TOOLS_AND_SCRAPERS.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c0e1bfef-9cc2-4aa8-bf78-8393aac9e390",
+          "title": "SOURCE_156_2026-09-11_06_QUANT_AND_FINANCE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ad461e82-9298-4228-8c0e-34ed6aa439ac",
+          "title": "SOURCE_157_2026-09-12_01_EE_EXAMS_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f7615179-6433-46f9-97c6-214bcae4e22d",
+          "title": "SOURCE_158_2026-09-12_01_EE_EXAMS_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bb5f1ca0-1420-4988-a01a-18fcf6e12d1f",
+          "title": "SOURCE_159_2026-09-12_01_EE_EXAMS_PART_3.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f9e42dd3-b943-4873-a25c-321d1450e67d",
+          "title": "SOURCE_160_2026-09-12_01_EE_EXAMS_PART_4.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b09c2592-d60b-4576-ba13-f21679ea393f",
+          "title": "SOURCE_161_2026-09-12_01_EE_EXAMS_PART_5.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b262ebbb-1474-41fc-bb3d-1582e221ea36",
+          "title": "SOURCE_162_2026-09-12_02_HERMES_MEMORY_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "56374fc6-9c56-46e2-9db2-826cd6ba5ca8",
+          "title": "SOURCE_163_2026-09-12_02_HERMES_MEMORY_PART_2.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "716cbbcd-895b-400e-8d3f-ea33e0a5e553",
+          "title": "SOURCE_164_2026-09-12_07_STRATEGY_AND_SYSTEM_PART_1.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c87d53b3-5b2d-455f-898f-d243250e33ce",
+          "title": "SOURCE_165_2026-09-12_07_STRATEGY_AND_SYSTEM_PART_2.md",
+          "status": "SourceStatus.READY"
+        }
+      ]
+    },
+    {
+      "id": "0ffcffb5-8e84-4f72-bee6-c44f2c45b960",
+      "title": "ANTIGRAVITY BEFORE MAC RESET",
+      "sources_count": 157,
+      "sources": [
+        {
+          "id": "6b2ec02b-1399-4535-ab82-ac9149155d1c",
+          "title": "antigravity_00a59922-e131-4daa-af25-bdd78edad7ca_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "c8855626-487e-4f0e-9ad7-c9a0c8074490",
+          "title": "antigravity_019e4cf4-2993-4440-ba2f-fdf6cd117547_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fae6e383-eb32-4106-950b-566a599829dc",
+          "title": "antigravity_02c5920d-1ea1-4607-82d4-3d3683690831_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e20c706e-956a-4d0b-ae1d-132549a25cc3",
+          "title": "antigravity_02e7e151-6af5-4151-88b9-f8425ebb4f19_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0e2e66c6-dd77-4dc2-a604-70c3c8090422",
+          "title": "antigravity_05cc941f-d8da-4969-be95-95b1120b4c40_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "640a8b96-04e2-4241-a03e-a8a47ffa97a3",
+          "title": "antigravity_08a43f82-0ac8-4a3a-8f9c-9af1e34f6cc0_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "75c0cc31-59b9-413b-a1e4-f625dd799b3a",
+          "title": "antigravity_08cd914d-261e-4708-a7f9-0f9bc7ecce6b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3597910c-8ef5-4c27-b327-03bb1c8b75cd",
+          "title": "antigravity_0dd272ec-523e-4483-a3ad-c940f89b7022_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f1c6bdf8-6b39-410b-b399-7e5863928e1b",
+          "title": "antigravity_0fda5333-d6fa-4e68-bac9-b516b1e558d2_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "36b845f2-b7af-4ef8-9c7b-3979d4d8370c",
+          "title": "antigravity_11262e74-5aac-448c-8b05-12a7999f57d1_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bffeb94b-1647-4591-84d2-707cc38ff8e4",
+          "title": "antigravity_139a72ee-c4d1-4273-94cb-e9c9be760e8d_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fc5c5d7d-a81a-4ae0-b3f0-9076cfda84c2",
+          "title": "antigravity_15e550ec-4d6a-4139-9eaf-2ba42456e8a5_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5f44e4a5-aeb6-464f-806d-2287ffb89eee",
+          "title": "antigravity_1e1f68c1-e01e-4fa0-b00c-4e4dadcc362f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6514b083-c057-4e29-8154-3c304c07e21a",
+          "title": "antigravity_1ffb78a2-af7b-4e48-a26c-4af3bed9049e_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ef338f7d-8503-4cbc-8672-f17f161abab0",
+          "title": "antigravity_22054fac-b3b2-4d4b-8d10-87a21e009acc_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8450769e-853a-4acd-a5f5-153f27474af2",
+          "title": "antigravity_224d2e2d-75d7-4270-91f6-3108c29e78b7_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d61f0ed9-31ce-486f-836b-acc6e7c70ce6",
+          "title": "antigravity_23fa1edd-7a7f-48f3-ad1a-eadd9b4470b2_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "930e71e8-1bd0-4fdc-9116-eb5de594e43b",
+          "title": "antigravity_244236b3-165c-476e-a40f-031138c8c339_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "589f1230-e9c9-48ef-9916-81d06481c966",
+          "title": "antigravity_2797ef85-7863-4ee6-8c35-e92fcbb0b8c9_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "673ff697-35a5-44e0-86d9-aacf5ed6b16a",
+          "title": "antigravity_27a609f9-d4b8-4770-800d-ce74718414ba_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2b76d7b1-9e9f-4eb7-af08-dbb66eb6c1c4",
+          "title": "antigravity_28c40806-bd15-4a3d-9f7c-36dbbf3764a2_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3214a5af-b10b-4ac4-914e-933afcf52fd2",
+          "title": "antigravity_2aa83ee8-7223-428d-b931-de2352d3db29_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4caa724e-98de-4611-9d09-7c0a23b2bb74",
+          "title": "antigravity_2e7da1d2-82fa-4def-aafb-f8ef08d601ee_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f88d54ac-8f30-4508-a724-022c258e36e9",
+          "title": "antigravity_2ee394ba-0f52-48fc-83b0-6fb6592d9294_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ceda4207-1fcc-49fb-9d42-20de2620a296",
+          "title": "antigravity_2fcf3dfb-43c5-4503-bd6a-a97bd0c663bf_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "417222d5-fff2-4092-8816-e9a4ce38506a",
+          "title": "antigravity_3022344e-9170-471b-9089-d86e3ddca787_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "93dfed6e-4bbd-46df-8487-adc41a8cb6f4",
+          "title": "antigravity_337abf07-13a2-4151-8be8-69fd0f4ca2f2_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f42e4b38-e774-4a8c-9c5a-b541a5c37659",
+          "title": "antigravity_349746e9-a2bd-4016-9a34-5230b4cc3ccf_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e65ae625-df39-4f6b-abd2-b8deb9671421",
+          "title": "antigravity_361da543-eab1-4db0-a6ef-c6948e62a8e1_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8a2b86b5-e00e-42c1-8c92-a9076eb85aa1",
+          "title": "antigravity_36e9d5ab-4b2f-444b-9a44-2a3ff1bc2c9b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "998e8e4d-26ef-453e-bbc7-8f6205a95415",
+          "title": "antigravity_37469066-2abe-4909-ae0a-d83fa1b200a2_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "53064336-a404-4f28-9823-b41c5e47f119",
+          "title": "antigravity_38a74f3f-c277-4a04-8226-fb62be221702_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "73e2047e-1e95-4a04-bea9-6b687e7414a0",
+          "title": "antigravity_39c9dc6b-f1f5-409d-acaf-f50bff9a67d4_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0d53d9b4-4ce7-4109-9f9b-2b77f37909d8",
+          "title": "antigravity_3df67c13-ffe5-4bb6-aa6e-24bdb86e5065_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "329334af-c53e-424e-acbf-297f17570bc0",
+          "title": "antigravity_3e7334d7-5c57-41d2-8fbf-5e85e3b11e42_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "300e99d7-e1ee-4d2c-ad3e-8834d320d697",
+          "title": "antigravity_3fe350eb-da90-4ce6-8080-b3cc3bc2bd72_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "34186e6d-cd37-4873-9983-2bdceb990a78",
+          "title": "antigravity_4351523a-c35b-4cb8-beed-2103bd62043b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "429561ff-c509-4ad3-bd54-f6745515ad21",
+          "title": "antigravity_45105baf-21d0-4036-8b8e-535cc1b5753a_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5da7bfe3-83d0-4361-9e17-dbfa380a7146",
+          "title": "antigravity_4ad58d56-f51c-4cb8-8b64-6a11a327ac8b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "04b7deab-99da-4dff-9c76-ee69d99adec6",
+          "title": "antigravity_4b79f41a-29ee-4ca7-8485-78148f6f1ae8_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5add5883-460e-4c46-b2fb-d59c738789e0",
+          "title": "antigravity_4b9a6afb-e5fa-40d6-bef5-6b57478ccefe_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9b8892a0-2d53-421e-bd1b-09dc8808e551",
+          "title": "antigravity_4d9ba374-0696-486b-bcc2-85daa0206aa3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1698b44a-bdac-4a01-be9a-17d0b9910c2b",
+          "title": "antigravity_4f2bba56-813d-4606-9c5f-8eae2a5182ec_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "56a2e07e-c998-4d90-856b-428d3ccc63d6",
+          "title": "antigravity_4fdff1b9-b0e2-4ebd-bb68-9788ed64f1a9_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e265f15b-b987-40e4-a2e6-940f425d5e74",
+          "title": "antigravity_51e7e07a-07b3-41af-8172-314e39b16abe_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e0d0965d-2eb8-4083-9dc9-ebf73f85943e",
+          "title": "antigravity_5210d17a-8817-4d43-8d66-f876f5b1872d_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "00d02fd8-1ea4-44ef-bce9-8c69fa964384",
+          "title": "antigravity_529e37b6-4efe-4764-90ac-dc76f75e520e_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9afaf7af-7e09-4cfd-a109-0ab77f5fcfed",
+          "title": "antigravity_52f6f21a-8a39-455d-82f4-33918881318d_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f10da957-4d25-40bc-8aa6-ab3b50aa3c88",
+          "title": "antigravity_53cd82c1-837a-4d20-bcb2-1f950c40581d_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5788a885-41ae-416c-b5b8-faf1c19af845",
+          "title": "antigravity_561679a1-456b-42c1-9d68-0c413de8c437_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9c26c07e-ee29-4dab-8275-3fb28739debb",
+          "title": "antigravity_5698bbfb-42f6-42c8-8d3d-acdd2994934e_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "251e2059-e291-4b9b-b4d6-24e51379f945",
+          "title": "antigravity_5849d29f-99c7-427e-b8a9-d84a8324118b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f0f33344-63ef-491f-94f3-2508b7e7d332",
+          "title": "antigravity_59009eab-992b-449a-ad4d-6fd2423b1a25_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f9c93957-7a9a-497c-9fa2-1726366a1bbe",
+          "title": "antigravity_5b1f1961-db6d-41d3-bba7-ddacd4ddf7b0_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "78072a7b-a935-431d-bb83-108bd8d3557f",
+          "title": "antigravity_5cbc3209-db50-4f70-9ddb-bd0f048a56cb_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bded9864-56f5-4b2b-a827-af2b45e08afe",
+          "title": "antigravity_5cbec65b-7546-417b-9aa3-9087a7a67f51_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4ff0c985-a999-4730-b37e-641ac074c597",
+          "title": "antigravity_5cfb3117-9912-4aee-afb5-96e5a823fc29_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ab6a5c29-24f7-48be-80b0-6b54ad7ee0b9",
+          "title": "antigravity_5d33a726-f879-4b42-bd3d-6052537be72f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fb247fa5-1bb1-4877-b2c1-2f166a5cb31d",
+          "title": "antigravity_5f250f1c-7edf-46c2-96af-f29a8bfa6bbb_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "07b035a1-83fb-4569-97d3-96cb9f3558ec",
+          "title": "antigravity_5f3b9781-772c-4504-9a35-7268420ea8d7_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d384565c-3434-4972-82dc-4b73c05bcd23",
+          "title": "antigravity_5f832930-85fe-4fd0-9a6f-76157b9bd500_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3a8984f9-6477-43eb-8e85-172e4c0e9d14",
+          "title": "antigravity_5fb4af16-2cf9-4b0f-bcc9-0a1b5a2c9eb3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f99b8059-6c92-41e7-a331-8b0ee851ebbc",
+          "title": "antigravity_5fc2aee0-95e0-4d73-b4b9-8151c7597479_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4f6171ed-90cd-472a-bd91-0fcb8bca21c5",
+          "title": "antigravity_60f49716-ea3d-4099-a908-c184266bc81c_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7f52e9bb-56fa-4e74-8d9b-46529b61425a",
+          "title": "antigravity_61b566a9-867d-44c3-b8fe-75bae2c4f704_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "85bb2748-1999-4049-933d-f8f9fe2e8bb7",
+          "title": "antigravity_63a97e2f-25a5-4c33-ab6e-2ac3dd77554d_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "a7b119c7-e90d-4235-87d0-ab8546ceb6b4",
+          "title": "antigravity_65f5c184-7c4c-4b7f-a339-90f4c65ac4b7_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f22609d1-d8e3-4e2c-afd6-29983ee7d064",
+          "title": "antigravity_66038799-db07-405a-ac55-d60ac0933e3a_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "efe7329b-f9f1-46f9-bacf-bdfbe864d3ca",
+          "title": "antigravity_67d30da3-5032-4de4-ba8d-ed681a31fcec_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "414a8872-ca66-4f20-8b33-f0426c79c4e9",
+          "title": "antigravity_685c299e-af20-4e02-aa7c-78464c718bcf_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b4797c80-87f1-4b4f-83da-0dde34a0d66c",
+          "title": "antigravity_6a25929f-1a12-4ea7-b6cc-075971cac082_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f2efe727-02fa-49a5-925c-482c2edede85",
+          "title": "antigravity_6d7759b4-86a0-41a7-b99e-a6b5d00f41fc_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "70a2d4a0-49b1-43b3-ac70-55ed59559825",
+          "title": "antigravity_6f158036-806c-4a7b-b1f1-56b34f00abda_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d71e6036-c026-442d-b049-fc70f33d3c7e",
+          "title": "antigravity_6f32d452-8e8d-4eeb-8c02-50b7407ea205_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "668f203f-e19f-48bb-b8e0-1ded485c26fc",
+          "title": "antigravity_7333335f-80dc-4ece-b8c4-6d6da1ed49ae_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d836cc93-634b-4dcc-9a30-961fe764df6e",
+          "title": "antigravity_74ea252b-3313-4801-9ef7-dad6110c0e5f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "a2c98eae-165e-4b49-b4ee-af3c6b4459df",
+          "title": "antigravity_76379ddf-4dd7-4d41-a6f6-5ef442cc7853_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "a6beacb5-7843-495f-b477-99866f4af859",
+          "title": "antigravity_783e46ab-6526-4dd0-9e7d-016535d4c8c3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fb2156d5-cf10-4ec6-87db-ec7e5f26c8a5",
+          "title": "antigravity_7b579cc1-f542-4813-841c-cb81253bc281_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b26dee86-6cd5-45da-b78e-e67a06aa69d4",
+          "title": "antigravity_8264bfa8-871f-4480-89e0-4c41423cc26f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bf7fcae1-5106-4bc0-9556-c06d2699f89e",
+          "title": "antigravity_82fa3bc9-a58d-48ff-9392-efbeb5a09407_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f4be34c4-1ed5-46ae-bf0f-8d31200f3626",
+          "title": "antigravity_831a26ea-58f1-49a4-90c8-d4cedb72837a_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4de88939-0caa-457f-bd5c-aacc21fab017",
+          "title": "antigravity_85460447-6051-433e-bb55-2ead61b879b0_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b6a4b057-8a8b-4d2f-8452-800b1fad190b",
+          "title": "antigravity_858e0015-4759-4c22-b9cd-787c46e46845_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6209e4cb-44e6-462d-bc39-acb9da2aeb97",
+          "title": "antigravity_85e2c52c-72a7-4399-8ba4-5fc62e1f95a6_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f0122d74-9487-4c3d-b732-dc2bc79ef27c",
+          "title": "antigravity_88b7da90-e18e-46c5-8450-33e6e3010541_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "88dcf5ea-67d7-46e5-a361-97891bcb3548",
+          "title": "antigravity_8a9fad3a-cba9-49f4-b6a6-c519e35bbcb8_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "97020c95-4e8a-416f-ac2b-f103d3c7db8b",
+          "title": "antigravity_8c5a61a4-fa90-42cf-9a02-e7f0b6ab16ef_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "70f284f7-989d-466e-8750-5333f21df4c0",
+          "title": "antigravity_8d67b70c-79e4-409a-a46b-885c5b05538f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ce30b495-221e-46ae-b68c-f26ef6a92e1a",
+          "title": "antigravity_8ed2592c-eb87-4ce5-9ca2-c6eb59d44e77_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bb2730fb-43df-4a1b-8546-2bd0a7ac98d6",
+          "title": "antigravity_8f2cf659-e87b-461a-93f6-8dfc7544174c_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "aea82b44-cfb0-499a-b5a7-b37f510ff5bf",
+          "title": "antigravity_910303f3-9516-4df3-a39d-81fbbc843d01_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "124e3b2c-d579-40d3-852c-6fb801cb6d9d",
+          "title": "antigravity_91d6b5d1-5fa9-40c9-9b2c-d4267643a6cb_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "14a0da1f-b6c3-435c-9a76-fb6b7014633f",
+          "title": "antigravity_9377fcd1-51f7-4e76-873f-c7939ff58426_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1c4aca73-51c6-41ea-a385-9cb86a48af60",
+          "title": "antigravity_9585b0b0-0c11-467e-adb6-4047a1ef0bfc_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "9771e258-ef4a-4293-b0cb-07f2a5450ea3",
+          "title": "antigravity_9689e76a-648b-4fd0-bed4-6738e31994c4_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f8ef1554-4e6a-45bc-81c7-8e5732d2d1cc",
+          "title": "antigravity_96d0b1f7-75a0-44f8-b887-bd2f06f1c340_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d7b34386-2ca3-44e5-89e8-89079e097647",
+          "title": "antigravity_9843a0eb-c1bb-4471-bef0-1778b7979212_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "621dbf2f-5d87-4792-ab4f-834b64534d69",
+          "title": "antigravity_9b990227-7bae-4ef3-8118-f428e1c57c4c_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "bb73f2dd-edf9-4349-a734-bef815ecefb2",
+          "title": "antigravity_9d86fa71-2cef-4700-8a0b-382c95d5cbd1_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "01b2e149-d162-4eb8-ac69-2eb2504d8359",
+          "title": "antigravity_9f1b8b0e-c6e7-4049-80d8-ea8ce2545207_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f43311e1-518a-4cfc-b200-1e5ae6ad8eef",
+          "title": "antigravity_9ff9cfc5-e86c-4fc2-abcd-0d2db6097496_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "31e6c494-1d68-4210-a056-bd31c256f3e9",
+          "title": "antigravity_a0323a9e-3c8d-4c30-9933-4ce92de6aab1_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5b8b33b1-a62e-4aed-b5c6-c073eb8066d1",
+          "title": "antigravity_a264ab66-3b61-48e5-b111-6b64fcb7890b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f52d0efc-dbab-4387-bc86-c7f8a461109e",
+          "title": "antigravity_a2dc955e-1f18-45ae-ab5c-5c1d03cb0340_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2a86bddf-925b-426f-bac5-dca8deb9daf6",
+          "title": "antigravity_a3412cef-3e1e-4137-a1df-0720dc8a3c7b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4ff8e6ec-7237-4338-8376-32d387afb393",
+          "title": "antigravity_a526c0ca-c653-4faa-bdf2-cfed1e6dc1a0_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4598bc90-3d3c-4fdd-beab-7659c57490e2",
+          "title": "antigravity_a63a78ba-6a09-4b6c-a976-764efe0a7b14_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7b1e7452-6042-455d-94ea-563af44b2a6b",
+          "title": "antigravity_a6dec06f-cbec-4d26-8e13-b112d076371e_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "862cacff-eea9-44c3-b95d-eada1abb8269",
+          "title": "antigravity_a870f8bb-eb29-40c0-a012-bd74dc185af3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2e126eab-12d7-4a50-b65b-276e0c8c9d20",
+          "title": "antigravity_a8967414-8446-4012-ab99-c47f84a3a337_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1d050d54-f98c-4908-a8f2-69e102a1d63e",
+          "title": "antigravity_a924f2bd-5611-4fbe-a01a-f5022eafe2ae_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "a592fa66-bb8a-40a3-b778-cecfe13ebc39",
+          "title": "antigravity_a9aa5cf3-5887-4f30-b9c2-5729e32b0ec1_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "06d0ebd7-32b4-440e-93c0-cb6c71a8075b",
+          "title": "antigravity_ab79b9e0-0dd4-4c65-92de-4b32e6930d0c_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "53878588-ecdd-43c9-8e72-6d76578bfd48",
+          "title": "antigravity_b0ed4170-1a73-48d8-9e38-29ba19c77d5f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "1d3c7290-af62-48dd-bbec-5df4caae5e6b",
+          "title": "antigravity_b10eb4d7-4d2e-46ed-af7f-334a1c264a5b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "276499e7-f043-41da-bd09-8856bde5ea6b",
+          "title": "antigravity_b16a51f5-385d-422a-ad49-74791aabba41_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "7afc50b8-4427-434e-8f63-88ac729b25b2",
+          "title": "antigravity_b1a2e9f0-b71e-4fe2-9eff-d9f8c5c0b51b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3d6680aa-a506-46f9-b220-8f345d230a74",
+          "title": "antigravity_b362839e-66ae-4952-bf11-796afc46ba58_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d25b9859-41d5-419b-a6f1-769581886432",
+          "title": "antigravity_b6af29bf-8a8b-48af-86a5-a151a424e268_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e8b53ddf-42bc-4f68-ac94-6d7dfd7849cd",
+          "title": "antigravity_b7286478-d949-4993-9428-bd32aa93187f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "6cec2819-8eaf-473e-9818-088463292a30",
+          "title": "antigravity_b7e0d626-bb2e-4f9a-901a-ddff6c6bdb0f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "8ee1d409-ec1d-40e3-ace6-91f1d2fb2aa1",
+          "title": "antigravity_b92a8fb4-dade-4976-9065-7a7d66335334_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "2cd80b83-7f70-4781-82c7-62290a98161f",
+          "title": "antigravity_be519049-9996-4576-8d19-508bbeaacce3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "72417324-d4d6-4b4b-8f8f-309a838e6afc",
+          "title": "antigravity_c1f20795-82a4-4005-b230-8f6e2c18fc35_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ec5d3aac-4b9b-4cc8-b243-80f5e0d7c6cd",
+          "title": "antigravity_c3706210-e2b8-49fb-8bb8-9442c28d3e4e_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "b4ef0f54-923c-40ff-9be2-b06d1f307c7b",
+          "title": "antigravity_c41bb7cc-2d81-455d-b69b-f54fafb130c0_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3f067f85-1f19-49e5-b987-8d7a95fc40eb",
+          "title": "antigravity_c444206b-6431-48c9-841a-40eb10ac7656_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5bc31d55-57b5-40fd-acd7-3ac8765c56a8",
+          "title": "antigravity_c659e785-ce88-427a-b51f-e37811fee7d2_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "153631b6-4cf4-4d64-951b-f4b147468305",
+          "title": "antigravity_c9d95adc-aedb-4a97-b42d-290721592aa3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "59739324-ef08-4c62-b063-3966e92c2c72",
+          "title": "antigravity_cd2837e6-c204-4807-a262-d76f01418b20_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "4737f01f-57fd-456b-9c4d-08c42e81b2cb",
+          "title": "antigravity_cff3555e-f01f-48e6-b998-02ebd072fbf6_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "d50d54a9-c7d6-4b09-a141-ea0e7f62b550",
+          "title": "antigravity_d014c12e-df93-469f-91fe-1b52731b474b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "eb26a4fd-74d7-4a67-86b0-ee011ca1b0ce",
+          "title": "antigravity_d1fbd7b9-1368-461f-bea8-bb93ca429219_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fd950d73-8fe9-4cef-bf54-d573d9b15793",
+          "title": "antigravity_d5833ac2-9960-4d84-8de7-2a5c20da697b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e0e35b30-d580-4757-965d-92564c56f766",
+          "title": "antigravity_d5e639b8-7c68-4550-a89d-45e7cef9fdbc_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "3bc1db20-229d-4956-bd76-052fbb0f5ad5",
+          "title": "antigravity_d6a59a84-0253-483c-8997-30de139240b3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "be733db0-df6c-4f31-943b-09692c6e754c",
+          "title": "antigravity_d6cf2156-a7a5-4949-9f1c-e63b75710152_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "fb271538-dcaf-4051-b653-564d89262d32",
+          "title": "antigravity_d9726bc4-25c4-4ba0-8547-07655ad85307_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "56edd997-1b41-4cd4-931b-dfa432ae2fd7",
+          "title": "antigravity_d9995620-cd02-419d-92c4-670e8ac93f49_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "ce69a64a-78c0-4928-99d1-51921b85cb43",
+          "title": "antigravity_da329aad-bac6-4306-acda-eec0a565d427_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "19484d73-e672-490c-9419-f416cb0a99e8",
+          "title": "antigravity_dc39f333-db0e-4fda-8df5-1763a0fb2062_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "e810cc7d-b14b-4a24-9298-06b94a18f5de",
+          "title": "antigravity_de2a9d2a-6700-44f7-9c4e-c67c463eeec4_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "95ff81fc-3843-4f00-989b-fd27a868cf8c",
+          "title": "antigravity_df0e6510-9d95-4d37-8b56-ad79dc4d93e9_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "47a0d3de-aa37-4ee7-bc21-ea94726c727d",
+          "title": "antigravity_e1fd0b91-9c45-4910-b2ef-98cfbf7cd50b_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "df55c3b9-3e4b-41a5-af6c-b4189c0e2a54",
+          "title": "antigravity_e35a44a9-4341-4d8c-9b89-f403cc4c2805_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f75848c7-2465-4ca7-a296-da12f9375593",
+          "title": "antigravity_e447dfeb-da2b-4e26-ad70-c4ce79a242b8_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "98e7eb5e-17e0-4f64-846c-06a880135215",
+          "title": "antigravity_e47a1c3c-76c0-49b6-a7a3-72b626e17ac6_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5641e858-cb89-4f01-b58c-918cedb445be",
+          "title": "antigravity_ea01b45c-74b3-4dd7-9a44-61882608400f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "dfc301ed-55d7-4212-8cb7-2ac31f6ce92d",
+          "title": "antigravity_eb615ced-8bac-41f9-b0de-5061a69f170f_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "f5e898be-0fde-4be3-93c7-61231da07def",
+          "title": "antigravity_f2d4a52d-47d1-4706-8748-0c2f2054dde3_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5afada55-e88b-43a5-9131-b49d3bf779cc",
+          "title": "antigravity_f61bdcaf-710a-4e9d-b9aa-7115cf6a5a2c_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "062a4257-0c74-4d07-8d82-f113a5052832",
+          "title": "antigravity_f70d50ea-9600-4570-a523-fef05eec2e39_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "edf0399a-930e-44e2-a68d-da47d7afec8f",
+          "title": "antigravity_f7f33595-ed49-4cca-b3dd-d4bc84a59243_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "561cb2ff-c32b-4ab5-9f34-0d9e04330225",
+          "title": "antigravity_fc28777e-284c-478e-afa8-a7096c718143_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "5678a75b-fcea-47cd-bff2-0588cf9bedef",
+          "title": "antigravity_fdaae74b-c7c2-4ce9-8266-3c80122bb7ef_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        },
+        {
+          "id": "0a5b681a-c6d6-4b9b-9c90-5849d6257279",
+          "title": "antigravity_fdde891e-ff22-4e94-990e-9f9e48b20ed5_CHAT_ARCHIVE.md",
+          "status": "SourceStatus.READY"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "locked_at": "2026-09-17T07:55:25.345611+05:30",
+  "strategy_file": "/Users/rajondas/teamwork_projects/sovereign-quant-os/live_verified_strategy.py",
+  "strategy_sha256": "4c3120b6fd139ecf47d81c0f7cc72f9f4e30d20565c5855d5f6e2412394c63e3",
+  "total_symbols_calibrated": 7,
+  "mode": "BIDIRECTIONAL_EXPIRY_FROZEN",
+  "gate_status": "LOCKED"
+}

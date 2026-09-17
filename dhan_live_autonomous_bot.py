@@ -127,7 +127,8 @@ class DhanAutonomousSniperBot:
                             side = "BUY" if net_qty > 0 else "SELL"
                             avg_p = float(p.get("buyAvg") if side == "BUY" else p.get("sellAvg", 0.0))
                             sl_dist = round(avg_p * 0.005, 2)
-                            tp_dist = round(avg_p * 0.010, 2)
+                            # Dynamic Trend Expansion: 2.5% target to ride trend with Chandelier ATR Trailing
+                            tp_dist = round(avg_p * 0.025, 2)
                             sl_val = round(avg_p - sl_dist, 2) if side == "BUY" else round(avg_p + sl_dist, 2)
                             tp_val = round(avg_p + tp_dist, 2) if side == "BUY" else round(avg_p - tp_dist, 2)
                             sec_id = str(p.get("securityId", "0"))
@@ -418,6 +419,14 @@ class DhanAutonomousSniperBot:
             return None
 
         # 5. MARKET OPEN SNIPER EXECUTION (09:16:05 - 15:10:00 IST)
+        # First lock opening range from collected 65s ticks buffer if available
+        for sym in self.tracked_symbols:
+            if sym not in self.opening_ranges and self.opening_ticks.get(sym):
+                self.opening_ranges[sym] = OpeningWickAnalyzer.analyze_65s_window(sym, self.opening_ticks[sym])
+                logger.info(
+                    f"🔒 [65s RANGE LOCKED FROM TICKS] {sym} -> H1: ₹{self.opening_ranges[sym].h1:.2f} | L1: ₹{self.opening_ranges[sym].l1:.2f} | Valid: {self.opening_ranges[sym].is_valid_breakout_range}"
+                )
+
         # Lock opening range if delayed start or restart
         if not self.opening_ranges:
             try:

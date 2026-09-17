@@ -22,6 +22,7 @@ import logging
 import sqlite3
 import time
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 from data_engine import DataEngine
@@ -32,20 +33,20 @@ from risk_gatekeeper import RiskConfig, RiskGatekeeper
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("SniperMomentumEngine")
 
-# High-Velocity Trending Momentum Universe (Sub-₹500 NSE Equities with Explosive Liquidity)
+# Genuine YouTube NotebookLM Consensus Universe (17 Sept 2026 Morning Analysts Picks)
 SNIPER_UNIVERSE = {
-    "TATASTEEL": {"security_id": "3499", "lot_size": 1, "tick_size": 0.05, "ref_price": 181.74},
-    "SAIL": {"security_id": "2963", "lot_size": 1, "tick_size": 0.05, "ref_price": 171.86},
-    "NATIONALUM": {"security_id": "6364", "lot_size": 1, "tick_size": 0.05, "ref_price": 185.0},
-    "ASHOKLEY": {"security_id": "212", "lot_size": 1, "tick_size": 0.05, "ref_price": 156.08},
-    "PNB": {"security_id": "10666", "lot_size": 1, "tick_size": 0.05, "ref_price": 115.18},
-    "IDFCFIRSTB": {"security_id": "11184", "lot_size": 1, "tick_size": 0.05, "ref_price": 72.50},
-    "IRFC": {"security_id": "2029", "lot_size": 1, "tick_size": 0.05, "ref_price": 176.0},
-    "SUZLON": {"security_id": "12018", "lot_size": 1, "tick_size": 0.05, "ref_price": 74.50},
-    "BHEL": {"security_id": "438", "lot_size": 1, "tick_size": 0.05, "ref_price": 285.0},
-    "NBCC": {"security_id": "31415", "lot_size": 1, "tick_size": 0.05, "ref_price": 172.0},
-    "ZENSARTECH": {"security_id": "1076", "lot_size": 1, "tick_size": 0.05, "ref_price": 440.0},
-    "HCLTECH": {"security_id": "7229", "lot_size": 1, "tick_size": 0.05, "ref_price": 1264.0},
+    "YESBANK": {"security_id": "11915", "lot_size": 1, "tick_size": 0.05, "ref_price": 22.50, "theme": "UPI_MDR_CATALYST"},
+    "ITC": {"security_id": "1660", "lot_size": 1, "tick_size": 0.05, "ref_price": 264.50, "theme": "DEFENSIVE_FMCG_SUPPORT"},
+    "COLPAL": {"security_id": "15141", "lot_size": 1, "tick_size": 0.05, "ref_price": 1850.00, "theme": "FMCG_OUTPERFORMER"},
+    "HDFCBANK": {"security_id": "1333", "lot_size": 1, "tick_size": 0.05, "ref_price": 732.00, "theme": "PRIVATE_BANK_CONSENSUS"},
+    "SBIN": {"security_id": "3045", "lot_size": 1, "tick_size": 0.05, "ref_price": 800.00, "theme": "PSU_BANK_DIP_BUY"},
+    "RBLBANK": {"security_id": "18391", "lot_size": 1, "tick_size": 0.05, "ref_price": 403.00, "theme": "MOMENTUM_BREAKOUT"},
+    "TATASTEEL": {"security_id": "3499", "lot_size": 1, "tick_size": 0.05, "ref_price": 183.00, "theme": "CONTRA_VALUE_SUPPORT"},
+    "PNB": {"security_id": "10666", "lot_size": 1, "tick_size": 0.05, "ref_price": 116.80, "theme": "PSU_BANK_EXPANSION"},
+    "M&M": {"security_id": "2031", "lot_size": 1, "tick_size": 0.05, "ref_price": 3100.00, "theme": "AUTO_PAIR_BUY"},
+    "TVSMOTOR": {"security_id": "8479", "lot_size": 1, "tick_size": 0.05, "ref_price": 2450.00, "theme": "AUTO_PAIR_SELL"},
+    "TCS": {"security_id": "11536", "lot_size": 1, "tick_size": 0.05, "ref_price": 2190.00, "theme": "IT_SELL_ON_RISE"},
+    "TECHM": {"security_id": "13538", "lot_size": 1, "tick_size": 0.05, "ref_price": 1410.00, "theme": "IT_BEARISH_MARUBOZU"},
 }
 
 
@@ -74,7 +75,7 @@ class DhanSniperMomentumEngine:
         self.initial_capital = initial_capital
         self.current_equity = initial_capital
         self.daily_loss = 0.0
-        self.max_daily_loss = 200.0  # 20% hard circuit breaker
+        self.max_daily_loss = min(50.0, round(initial_capital * 0.055, 2))  # Strict Gate 2: ₹50.00 hard circuit breaker
         self.dry_run = dry_run
         self.db_path = db_path
         self.tick_db_path = tick_db_path
@@ -82,9 +83,10 @@ class DhanSniperMomentumEngine:
         # Components
         self.data_engine = DataEngine(db_path=self.tick_db_path)
         self.bridge = DhanLiveBridge(dry_run=self.dry_run)
+        trade_risk = min(22.96, round(self.current_equity * 0.025, 2))  # Gate 1: 2.5% Half-Kelly
         self.risk_config = RiskConfig(
             max_capital=self.current_equity,
-            single_trade_risk_limit=200.0,
+            single_trade_risk_limit=trade_risk,
             daily_loss_limit=self.max_daily_loss,
             max_spread_pct=0.15,
             max_variance=2.5,
@@ -92,25 +94,69 @@ class DhanSniperMomentumEngine:
         self.gatekeeper = RiskGatekeeper(
             config=self.risk_config,
             account_equity=self.current_equity,
-            base_risk_unit=200.0,
+            base_risk_unit=trade_risk,
         )
 
-        # Stage Setup (The Sniper Triangle)
+        # Stage Setup (The Sniper Triangle - 2.5% Half-Kelly Sizing)
         self.stage_definitions = [
-            {"stage": 1, "target_gain": 400.0, "risk": 200.0, "next_eq": 1358.0},
-            {"stage": 2, "target_gain": 540.0, "risk": 270.0, "next_eq": 1848.0},
-            {"stage": 3, "target_gain": 740.0, "risk": 370.0, "next_eq": 2538.0},
+            {"stage": 1, "target_gain": round(trade_risk * 2.0, 2), "risk": trade_risk, "next_eq": round(self.current_equity + trade_risk * 2.0, 2)},
+            {"stage": 2, "target_gain": round(trade_risk * 2.2, 2), "risk": round(trade_risk * 1.1, 2), "next_eq": round(self.current_equity + trade_risk * 4.2, 2)},
+            {"stage": 3, "target_gain": round(trade_risk * 2.5, 2), "risk": round(trade_risk * 1.25, 2), "next_eq": round(self.current_equity + trade_risk * 6.7, 2)},
         ]
         self.current_stage_idx = 0
         self.active_stage = self._init_stage(0)
-        self.active_position: dict[str, Any] | None = None
+        self.max_concurrent_positions = 3
+        self.active_positions: dict[str, dict[str, Any]] = {}
         self.circuit_breaker_tripped = False
 
         # Phase 2 Pre-Market Screener & Gap-Leverage Engine
-        self.screener = PremarketScreener(cash_equity=self.current_equity, base_leverage=5.0, max_trade_risk=3.75)
+        self.screener = PremarketScreener(cash_equity=self.current_equity, base_leverage=5.0, max_trade_risk=trade_risk)
         self.premarket_candidates: dict[str, CandidateStock] = {}
 
         self._init_ledger_db()
+
+    @property
+    def active_position(self) -> dict[str, Any] | None:
+        """Backward-compatible single active position view."""
+        if self.active_positions:
+            return next(iter(self.active_positions.values()))
+        return None
+
+    @active_position.setter
+    def active_position(self, pos: dict[str, Any] | None):
+        if pos is None:
+            self.active_positions.clear()
+        elif isinstance(pos, dict) and "symbol" in pos:
+            self.active_positions[pos["symbol"]] = pos
+
+    def sync_broker_equity(self):
+        """Synchronizes internal equity and loss metrics directly with DhanHQ broker truth."""
+        if self.bridge and self.bridge.is_connected and not self.dry_run and self.bridge.dhan:
+            try:
+                funds = self.bridge.dhan.get_fund_limits()
+                if funds and funds.get("status") == "success":
+                    data = funds.get("data", {})
+                    avail = float(data.get("availabelBalance", 0.0))
+                    util = float(data.get("utilizedAmount", 0.0))
+                    sod = float(data.get("sodLimit", self.initial_capital))
+                    real_equity = round(avail + util, 2)
+                    if real_equity > 0:
+                        self.current_equity = real_equity
+                        self.daily_loss = max(0.0, round(sod - real_equity, 2))
+                        self.active_stage.current_equity = self.current_equity
+
+                # Position reconciliation with Dhan Broker Truth
+                pos_resp = self.bridge.dhan.get_positions()
+                if pos_resp and pos_resp.get("status") == "success":
+                    broker_positions = {p.get("tradingSymbol"): p for p in pos_resp.get("data", [])}
+                    for sym in list(self.active_positions.keys()):
+                        bp = broker_positions.get(sym)
+                        if not bp or bp.get("netQty", 0) == 0:
+                            logger.info(f"Reconciling closed/rejected position for {sym} (Net Qty on Dhan = 0)")
+                            del self.active_positions[sym]
+            except Exception as e:
+                logger.debug(f"Failed to sync broker equity: {e}")
+
 
     def run_premarket_screening(self, quotes_override: dict[str, dict[str, float]] | None = None) -> list[CandidateStock]:
         """
@@ -214,17 +260,21 @@ class DhanSniperMomentumEngine:
 
         # 2. Hard Square-off Check
         if self.is_square_off_time():
-            if self.active_position:
-                logger.warning("⏰ 03:10 PM Cutoff Hit: Executing Auto-Square-Off to protect capital.")
-                return await self.close_position(price, reason="TIME_CUTOFF_0310_PM")
+            results = []
+            for sym in list(self.active_positions.keys()):
+                logger.warning(f"⏰ 03:10 PM Cutoff Hit: Executing Auto-Square-Off for {sym} to protect capital.")
+                res = await self.close_position(price, symbol=sym, reason="TIME_CUTOFF_0310_PM")
+                results.append(res)
+            if results:
+                return {"status": "INACTIVE", "reason": "POST_MARKET_HOURS", "closed": results}
             return {"status": "INACTIVE", "reason": "POST_MARKET_HOURS"}
 
-        # 3. Active Position Management (Ratcheting Trailing SL)
-        if self.active_position and self.active_position["symbol"] == symbol:
-            return await self._manage_active_position(price)
+        # 3. Active Position Management (Ratcheting Trailing SL for this symbol)
+        if symbol in self.active_positions:
+            return await self._manage_active_position(price, symbol=symbol)
 
-        # 4. New Entry Evaluation
-        if not self.active_position and not self.circuit_breaker_tripped:
+        # 4. New Entry Evaluation (Concurrent Multi-Slot Engine up to 3 slots)
+        if len(self.active_positions) < self.max_concurrent_positions and not self.circuit_breaker_tripped:
             if not self.is_market_open_for_entry():
                 return {"status": "WAITING_FOR_MARKET_OPEN", "reason": "Pre-market / Zero-order opening buffer active"}
             return await self._check_entry_opportunity(symbol, price, bid, ask, side=side)
@@ -239,7 +289,36 @@ class DhanSniperMomentumEngine:
         ask: float,
         side: str = "BUY",
     ) -> dict[str, Any] | None:
-        """Evaluates entry conditions against 3-Gate Variance Shield."""
+        """Evaluates entry conditions against 3-Gate Variance Shield and concurrent slot capacity."""
+        if symbol in self.active_positions:
+            return None
+
+        # Capacity Gate: Bound to max_concurrent_positions
+        if len(self.active_positions) >= self.max_concurrent_positions:
+            logger.debug(f"Max concurrent positions ({self.max_concurrent_positions}) reached. Skipping {symbol}.")
+            return None
+
+        # Sanity check on tick price
+        if price <= 0.0 or price > 50000.0:
+            logger.warning(f"Rejecting abnormal tick for {symbol}: ₹{price}")
+            return None
+
+        # Sector Diversification Gate: Prevent holding 2 correlated stocks from same industry
+        sector_map = {
+            "TATASTEEL": "METALS", "SAIL": "METALS", "NATIONALUM": "METALS",
+            "ASHOKLEY": "AUTO",
+            "PNB": "BANKING", "IDFCFIRSTB": "BANKING",
+            "IRFC": "RAILWAY_PSU",
+            "SUZLON": "POWER_GREEN",
+            "BHEL": "CAP_GOODS_PSU", "NBCC": "REALTY_PSU",
+            "ZENSARTECH": "IT", "HCLTECH": "IT"
+        }
+        sym_sector = sector_map.get(symbol, "GENERAL")
+        active_sectors = [sector_map.get(s, "GENERAL") for s in self.active_positions.keys()]
+        if sym_sector in active_sectors:
+            logger.debug(f"Sector {sym_sector} already represented in active positions ({list(self.active_positions.keys())}). Skipping.")
+            return None
+
         # 1:2 Risk-Reward Setup: 0.5% risk (SL), 1.0% target (TP)
         sl_distance = round(price * 0.005, 2)
         tp_distance = round(price * 0.010, 2)
@@ -268,22 +347,36 @@ class DhanSniperMomentumEngine:
             logger.debug(f"Risk Gates VETO for {symbol} ({order_side}) @ ₹{price}")
             return None
 
-        # Position Sizing: Bound by remaining loss budget and 5x MIS leverage
+        # Position Sizing: Bound by remaining loss budget, slot allocation, and 5x MIS leverage
         remaining_loss_budget = max(0.0, self.max_daily_loss - self.daily_loss)
         if remaining_loss_budget <= 1.0:
             logger.warning(f"Remaining daily loss budget (₹{remaining_loss_budget:.2f}) too small. Skipping entry.")
             return None
 
-        sec_info = SNIPER_UNIVERSE.get(symbol, {"security_id": "0"})
         candidate = self.premarket_candidates.get(symbol)
         effective_leverage = candidate.safe_leverage if candidate else 5.0
-        max_margin = self.current_equity * effective_leverage
+
+        # Sync live Dhan funds
+        self.sync_broker_equity()
+        live_avail_cash = self.current_equity
+        if self.bridge.is_connected and not self.dry_run and self.bridge.dhan:
+            try:
+                fund_limits = self.bridge.dhan.get_fund_limits()
+                if fund_limits and fund_limits.get("status") == "success":
+                    live_avail_cash = float(fund_limits.get("data", {}).get("availabelBalance", self.current_equity))
+            except Exception:
+                pass
+
+        free_slots = max(1, self.max_concurrent_positions - len(self.active_positions))
+        cash_per_slot = (live_avail_cash * 0.90) / free_slots
+        max_margin = cash_per_slot * effective_leverage
         shares_by_margin = int(max_margin / price)
         
-        # God-Level Sizing: Scaled from ₹3.75 canary up to ₹25.00 aggressive risk (utilizing 5x MIS leverage power)
-        stage_risk = 25.00 if self.active_stage.stage_id == 1 else min(self.active_stage.risk_budget * 5.0, 50.0)
-        effective_risk_budget = min(stage_risk, remaining_loss_budget)
-        shares_by_risk = int(effective_risk_budget / sl_distance)
+        # Sizing scaled per slot
+        base_stage_risk = 25.00 if self.active_stage.stage_id == 1 else min(self.active_stage.risk_budget * 5.0, 50.0)
+        slot_risk = base_stage_risk / self.max_concurrent_positions
+        effective_risk_budget = min(slot_risk, remaining_loss_budget / free_slots)
+        shares_by_risk = int(effective_risk_budget / max(sl_distance, 0.05))
         quantity = max(1, min(shares_by_risk, shares_by_margin))
 
         # Re-check that total possible loss does not exceed remaining budget
@@ -292,15 +385,20 @@ class DhanSniperMomentumEngine:
             if quantity < 1:
                 return None
 
-        logger.info(f"🎯 SNIPER TRIGGER: {symbol} Passed 3 Gates! Stage: {self.active_stage.stage_id} | Side: {order_side} | Qty: {quantity} | Entry: ₹{price} | SL: ₹{stop_loss} | TP: ₹{take_profit}")
+        logger.info(f"🎯 SNIPER TRIGGER: {symbol} Passed 3 Gates! Stage: {self.active_stage.stage_id} | Side: {order_side} | Qty: {quantity} | Entry: ₹{price} | SL: ₹{stop_loss} | TP: ₹{take_profit} | Open Slots: {len(self.active_positions)+1}/{self.max_concurrent_positions}")
+
+        # Limit-Market Hybrid Order: Cap slippage to ±0.3% to avoid 0-DTE expiry spikes while guaranteeing execution (Strict NSE 0.05 Tick Size)
+        raw_limit = price * 1.003 if order_side == "BUY" else price * 0.997
+        hybrid_limit_price = round(round(raw_limit / 0.05) * 0.05, 2)
 
         # Execute Order via Bridge
+        sec_info = SNIPER_UNIVERSE.get(symbol, {"security_id": "0"})
         order_res = self.bridge.execute_micro_order(
             symbol=symbol,
             security_id=sec_info["security_id"],
             quantity=quantity,
             side=order_side,
-            price=price,
+            price=hybrid_limit_price,
             order_type="LIMIT",
             product_type="INTRADAY",
             dry_run=self.dry_run,
@@ -308,7 +406,7 @@ class DhanSniperMomentumEngine:
 
         if order_res.get("status") in ("SUCCESS", "ORDER_PLACED"):
             cl_ord_id = order_res.get("cl_ord_id", f"SNIPER_{int(time.time()*1000)}")
-            self.active_position = {
+            new_pos = {
                 "cl_ord_id": cl_ord_id,
                 "symbol": symbol,
                 "security_id": sec_info["security_id"],
@@ -323,6 +421,7 @@ class DhanSniperMomentumEngine:
                 "breakeven_locked": False,
                 "stage_id": self.active_stage.stage_id,
             }
+            self.active_positions[symbol] = new_pos
 
             # Commit to SQLite WAL Ledger
             with sqlite3.connect(self.db_path) as conn:
@@ -334,89 +433,123 @@ class DhanSniperMomentumEngine:
                 )
                 conn.commit()
 
-            return {"status": "POSITION_OPENED", "position": self.active_position}
+            return {"status": "POSITION_OPENED", "position": new_pos}
 
         return None
 
-    async def _manage_active_position(self, current_price: float) -> dict[str, Any] | None:
+    async def _manage_active_position(self, current_price: float, symbol: str | None = None) -> dict[str, Any] | None:
         """Ratchets trailing stop-loss and checks TP/SL triggers for both BUY and SELL."""
-        pos = self.active_position
+        if symbol:
+            pos = self.active_positions.get(symbol)
+        else:
+            pos = self.active_position
+
         if not pos:
+            return None
+
+        # Data outlier check: Ignore tick if price deviates more than 15% from entry in single tick
+        if current_price <= 0 or abs(current_price - pos["entry_price"]) / pos["entry_price"] > 0.15:
+            logger.warning(f"Ignoring suspicious outlier tick for {pos['symbol']}: ₹{current_price} vs entry ₹{pos['entry_price']}")
             return None
 
         pos_side = pos.get("side", "BUY").upper()
         pos.setdefault("breakeven_locked", False)
+        target_sym = pos["symbol"]
+
+        # Ingest dynamic matrix parameters (Chandelier Stop, Breakeven Ratchet, Expiry Mode)
+        matrix_file = Path(__file__).resolve().parent / "dynamic_strategy_matrix.json"
+        chand_mult = 1.1
+        be_trigger_ratio = 0.7  # Activate breakeven at 0.7R (~0.35% gain) instead of waiting for 1.0R
+        atr_val = 0.35
+        be_buffer_fixed = 0.10
+        if matrix_file.exists():
+            try:
+                with open(matrix_file, "r", encoding="utf-8") as mf:
+                    strat_m = json.load(mf)
+                    sym_m = strat_m.get(target_sym, {})
+                    chand_mult = float(sym_m.get("chandelier_multiplier", 1.1))
+                    atr_val = float(sym_m.get("atr_14", 0.35))
+                    be_buffer_fixed = float(sym_m.get("breakeven_buffer", 0.10))
+            except Exception:
+                pass
 
         if pos_side == "BUY":
             pos.setdefault("highest_price", pos.get("entry_price", current_price))
             pos.setdefault("initial_stop_loss", pos.get("stop_loss", current_price - 0.75))
             pos["highest_price"] = max(pos["highest_price"], current_price)
 
-            gain_per_share = current_price - pos["entry_price"]
+            gain_from_peak = pos["highest_price"] - pos["entry_price"]
             sl_distance = pos["entry_price"] - pos["initial_stop_loss"]
+            safe_buffer = be_buffer_fixed if self.dry_run else max(0.10, round(be_buffer_fixed, 2))
 
-            # Ratchet Rule: Move SL to Breakeven (+0.05 buffer) once gain reaches +1R
-            if not pos["breakeven_locked"] and gain_per_share >= sl_distance:
-                pos["stop_loss"] = pos["entry_price"] + 0.05
+            # Ratchet Rule: Move SL to Breakeven (+safe_buffer) once peak gain reaches 0.7R (~+0.35%)
+            if not pos["breakeven_locked"] and gain_from_peak >= (be_trigger_ratio * sl_distance):
+                pos["stop_loss"] = round(pos["entry_price"] + safe_buffer, 2)
                 pos["breakeven_locked"] = True
-                logger.info(f"🔒 RATCHET ACTIVATED: Stop-Loss moved to Breakeven+ ₹{pos['stop_loss']:.2f} (+1R reached)")
+                logger.info(f"🔒 RATCHET ACTIVATED (0-DTE EXPIRY): {target_sym} Stop-Loss moved to Breakeven+ ₹{pos['stop_loss']:.2f} (Buffer: ₹{safe_buffer:.2f})")
 
-            # Trail SL further if gain expands beyond +1.5R
-            if pos["breakeven_locked"] and gain_per_share > 1.5 * sl_distance:
-                trailing_sl = pos["highest_price"] - (sl_distance * 0.6)
-                if trailing_sl > pos["stop_loss"]:
-                    pos["stop_loss"] = round(trailing_sl, 2)
-                    logger.debug(f"📈 Trailing SL ratcheted to ₹{pos['stop_loss']:.2f}")
+            # Dynamic Chandelier Trailing SL once locked: Highest Price - (Chandelier_Mult * ATR)
+            if pos["breakeven_locked"]:
+                chandelier_sl = round(pos["highest_price"] - (chand_mult * atr_val), 2)
+                if chandelier_sl > pos["stop_loss"]:
+                    pos["stop_loss"] = chandelier_sl
+                    logger.info(f"📈 CHANDELIER TRAILING SL RATCHETED: {target_sym} New SL ₹{pos['stop_loss']:.2f} (Peak: ₹{pos['highest_price']:.2f} | Chandelier: {chand_mult}x ATR)")
 
             # Check Take-Profit Trigger
             if current_price >= pos["take_profit"]:
-                logger.info(f"🎉 TAKE-PROFIT HIT: {pos['symbol']} at ₹{current_price:.2f} (Target: ₹{pos['take_profit']:.2f})")
-                return await self.close_position(current_price, reason="TAKE_PROFIT")
+                logger.info(f"🎉 TAKE-PROFIT HIT: {target_sym} at ₹{current_price:.2f} (Target: ₹{pos['take_profit']:.2f})")
+                return await self.close_position(current_price, symbol=target_sym, reason="TAKE_PROFIT")
 
             # Check Stop-Loss Trigger
             if current_price <= pos["stop_loss"]:
-                logger.warning(f"🛑 STOP-LOSS HIT: {pos['symbol']} at ₹{current_price:.2f} (SL: ₹{pos['stop_loss']:.2f})")
-                return await self.close_position(current_price, reason="STOP_LOSS")
+                logger.warning(f"🛑 STOP-LOSS HIT: {target_sym} at ₹{current_price:.2f} (SL: ₹{pos['stop_loss']:.2f})")
+                return await self.close_position(current_price, symbol=target_sym, reason="STOP_LOSS")
         else:
             # SHORT / SELL POSITION
             pos.setdefault("lowest_price", pos.get("entry_price", current_price))
             pos.setdefault("initial_stop_loss", pos.get("stop_loss", current_price + 0.75))
             pos["lowest_price"] = min(pos["lowest_price"], current_price)
 
-            gain_per_share = pos["entry_price"] - current_price
+            gain_from_trough = pos["entry_price"] - pos["lowest_price"]
             sl_distance = pos["initial_stop_loss"] - pos["entry_price"]
+            safe_buffer = be_buffer_fixed if self.dry_run else max(0.10, round(be_buffer_fixed, 2))
 
-            # Ratchet Rule: Move SL to Breakeven (-0.05 buffer) once gain reaches +1R
-            if not pos["breakeven_locked"] and gain_per_share >= sl_distance:
-                pos["stop_loss"] = pos["entry_price"] - 0.05
+            # Ratchet Rule: Move SL to Breakeven (-safe_buffer) once trough gain reaches 0.7R (~+0.35%)
+            if not pos["breakeven_locked"] and gain_from_trough >= (be_trigger_ratio * sl_distance):
+                pos["stop_loss"] = round(pos["entry_price"] - safe_buffer, 2)
                 pos["breakeven_locked"] = True
-                logger.info(f"🔒 SHORT RATCHET ACTIVATED: Stop-Loss moved to Breakeven- ₹{pos['stop_loss']:.2f} (+1R reached)")
+                logger.info(f"🔒 SHORT RATCHET ACTIVATED (0-DTE EXPIRY): {target_sym} Stop-Loss moved to Breakeven- ₹{pos['stop_loss']:.2f} (Buffer: ₹{safe_buffer:.2f})")
 
-            # Trail SL further if gain expands beyond +1.5R
-            if pos["breakeven_locked"] and gain_per_share > 1.5 * sl_distance:
-                trailing_sl = pos["lowest_price"] + (sl_distance * 0.6)
-                if trailing_sl < pos["stop_loss"]:
-                    pos["stop_loss"] = round(trailing_sl, 2)
-                    logger.debug(f"📉 Short Trailing SL ratcheted down to ₹{pos['stop_loss']:.2f}")
+            # Dynamic Chandelier Trailing SL once locked: Lowest Price + (Chandelier_Mult * ATR)
+            if pos["breakeven_locked"]:
+                chandelier_sl = round(pos["lowest_price"] + (chand_mult * atr_val), 2)
+                if chandelier_sl < pos["stop_loss"]:
+                    pos["stop_loss"] = chandelier_sl
+                    logger.info(f"📉 SHORT CHANDELIER TRAILING SL RATCHETED: {target_sym} New SL ₹{pos['stop_loss']:.2f} (Trough: ₹{pos['lowest_price']:.2f} | Chandelier: {chand_mult}x ATR)")
 
             # Check Take-Profit Trigger for Short
             if current_price <= pos["take_profit"]:
-                logger.info(f"🎉 SHORT TAKE-PROFIT HIT: {pos['symbol']} at ₹{current_price:.2f} (Target: ₹{pos['take_profit']:.2f})")
-                return await self.close_position(current_price, reason="TAKE_PROFIT")
+                logger.info(f"🎉 SHORT TAKE-PROFIT HIT: {target_sym} at ₹{current_price:.2f} (Target: ₹{pos['take_profit']:.2f})")
+                return await self.close_position(current_price, symbol=target_sym, reason="TAKE_PROFIT")
 
             # Check Stop-Loss Trigger for Short
             if current_price >= pos["stop_loss"]:
-                logger.warning(f"🛑 SHORT STOP-LOSS HIT: {pos['symbol']} at ₹{current_price:.2f} (SL: ₹{pos['stop_loss']:.2f})")
-                return await self.close_position(current_price, reason="STOP_LOSS")
+                logger.warning(f"🛑 SHORT STOP-LOSS HIT: {target_sym} at ₹{current_price:.2f} (SL: ₹{pos['stop_loss']:.2f})")
+                return await self.close_position(current_price, symbol=target_sym, reason="STOP_LOSS")
 
         return None
 
-    async def close_position(self, exit_price: float, reason: str = "MANUAL") -> dict[str, Any]:
-        """Closes active position, records PnL, and progresses the Sniper Triangle stage."""
-        pos = self.active_position
+    async def close_position(self, exit_price: float, symbol: str | None = None, reason: str = "MANUAL") -> dict[str, Any]:
+        """Closes active position for given symbol, records PnL, syncs broker funds, and progresses stage."""
+        if symbol:
+            pos = self.active_positions.get(symbol)
+        else:
+            pos = self.active_position
+
         if not pos:
             return {"status": "NO_ACTIVE_POSITION"}
 
+        target_sym = pos["symbol"]
         pos_side = pos.get("side", "BUY").upper()
         if pos_side == "BUY":
             pnl = round((exit_price - pos["entry_price"]) * pos["quantity"], 2)
@@ -429,19 +562,21 @@ class DhanSniperMomentumEngine:
 
         # Dispatch offsetting exit order via Bridge (Live or Dry-Run)
         if self.bridge:
-            sec_info = SNIPER_UNIVERSE.get(pos["symbol"], {"security_id": pos.get("security_id", "0")})
+            sec_info = SNIPER_UNIVERSE.get(target_sym, {"security_id": pos.get("security_id", "0")})
             exit_side = "SELL" if pos.get("side", "BUY") == "BUY" else "BUY"
+            raw_exit_limit = exit_price * 0.997 if exit_side == "SELL" else exit_price * 1.003
+            exit_hybrid_limit = round(round(raw_exit_limit / 0.05) * 0.05, 2)
             exit_res = self.bridge.execute_micro_order(
-                symbol=pos["symbol"],
+                symbol=target_sym,
                 security_id=sec_info["security_id"],
                 quantity=pos["quantity"],
                 side=exit_side,
-                price=exit_price,
-                order_type="MARKET",
+                price=exit_hybrid_limit,
+                order_type="LIMIT",
                 product_type="INTRADAY",
                 dry_run=self.dry_run,
             )
-            logger.info(f"Broker exit order dispatched: {exit_res}")
+            logger.info(f"Broker exit order dispatched for {target_sym}: {exit_res}")
 
         self.current_equity += net_pnl
         if net_pnl < 0:
@@ -456,6 +591,9 @@ class DhanSniperMomentumEngine:
         self.active_stage.current_equity = self.current_equity
         self.gatekeeper.record_trade_outcome(net_pnl)
 
+        # Sync physical broker equity if live
+        self.sync_broker_equity()
+
         # Update SQLite WAL Ledger
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
@@ -466,7 +604,7 @@ class DhanSniperMomentumEngine:
             )
             conn.commit()
 
-        logger.info(f"📋 TRADE CLOSED ({reason}): {pos['symbol']} | Qty: {pos['quantity']} | Entry: ₹{pos['entry_price']} | Exit: ₹{exit_price} | Net PnL: ₹{net_pnl:+.2f} | Balance: ₹{self.current_equity:.2f}")
+        logger.info(f"📋 TRADE CLOSED ({reason}): {target_sym} | Qty: {pos['quantity']} | Entry: ₹{pos['entry_price']} | Exit: ₹{exit_price} | Net PnL: ₹{net_pnl:+.2f} | Balance: ₹{self.current_equity:.2f}")
 
         # Stage Progression Check
         if self.current_equity >= self.active_stage.target_equity:
@@ -480,7 +618,7 @@ class DhanSniperMomentumEngine:
                 logger.info(f"🌟 GRAND MISSION ACCOMPLISHED! ₹1,000 doubled to ₹{self.current_equity:.2f}!")
 
         closed_pos_info = {
-            "symbol": pos["symbol"],
+            "symbol": target_sym,
             "quantity": pos["quantity"],
             "entry_price": pos["entry_price"],
             "exit_price": exit_price,
@@ -490,11 +628,14 @@ class DhanSniperMomentumEngine:
             "current_stage": self.active_stage.stage_id,
         }
 
-        self.active_position = None
+        # Remove from active positions dictionary
+        if target_sym in self.active_positions:
+            del self.active_positions[target_sym]
+
         return {"status": "POSITION_CLOSED", "details": closed_pos_info}
 
     def get_summary(self) -> dict[str, Any]:
-        """Provides full operational telemetry."""
+        """Provides full operational telemetry with multi-slot awareness."""
         return {
             "initial_capital": self.initial_capital,
             "current_equity": self.current_equity,
@@ -502,7 +643,11 @@ class DhanSniperMomentumEngine:
             "daily_loss": self.daily_loss,
             "circuit_breaker_active": self.circuit_breaker_tripped,
             "current_stage": self.active_stage.stage_id,
-            "has_active_position": self.active_position is not None,
+            "max_concurrent_positions": self.max_concurrent_positions,
+            "open_position_count": len(self.active_positions),
+            "has_active_position": len(self.active_positions) > 0,
+            "active_positions": list(self.active_positions.values()),
             "active_position": self.active_position,
             "dry_run": self.dry_run,
         }
+

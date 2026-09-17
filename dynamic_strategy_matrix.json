@@ -1,72 +1,120 @@
 {
+  "_meta": {
+    "regime": "THURSDAY_0DTE_MAX_PROFIT_ACTIVE",
+    "updated_at": "2026-09-17 09:08:00 IST",
+    "calibrated_from": "NotebookLM YouTube Morning Consensus (DUI + AK) + 200 Quant Repos",
+    "breakeven_trigger_r": 0.7,
+    "breakeven_buffer_rs": 0.1,
+    "atr_chandelier_mult": 1.1,
+    "max_trade_risk_rs": 22.96,
+    "daily_loss_cap_rs": 50.0
+  },
+  "YESBANK": {
+    "sector": "FINTECH_BANKING",
+    "theme": "UPI_MDR_0.4_PCT_CATALYST",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "ITC": {
+    "sector": "FMCG_DEFENSIVE",
+    "theme": "HISTORICAL_SUPPORT_262",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "COLPAL": {
+    "sector": "FMCG_DEFENSIVE",
+    "theme": "DEFENSIVE_OUTPERFORMER",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "HDFCBANK": {
+    "sector": "PRIVATE_BANKING",
+    "theme": "CONSENSUS_VALUE_ACCUMULATION",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "SBIN": {
+    "sector": "PSU_BANKING",
+    "theme": "TOP_PSU_DIP_BUY",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "RBLBANK": {
+    "sector": "BANKING",
+    "theme": "TECHNICAL_SUPPORT_403",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
   "TATASTEEL": {
-    "symbol": "TATASTEEL",
+    "sector": "METALS",
+    "theme": "CONTRA_VALUE_175_SUPPORT",
     "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
-  },
-  "SAIL": {
-    "symbol": "SAIL",
-    "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
-  },
-  "NATIONALUM": {
-    "symbol": "NATIONALUM",
-    "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
-  },
-  "ASHOKLEY": {
-    "symbol": "ASHOKLEY",
-    "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
   },
   "PNB": {
-    "symbol": "PNB",
-    "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
+    "sector": "PSU_BANKING",
+    "theme": "HIGH_MOMENTUM_BREAKOUT",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
   },
-  "ZENSARTECH": {
-    "symbol": "ZENSARTECH",
-    "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
+  "M&M": {
+    "sector": "AUTO",
+    "theme": "AUTO_PAIR_TRADE_LONG",
+    "sector_bias": "BULLISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
   },
-  "HCLTECH": {
-    "symbol": "HCLTECH",
-    "sector_bias": "BIDIRECTIONAL",
-    "atr_14": 0.35,
-    "chandelier_multiplier": 1.2,
-    "breakeven_buffer": 0.2,
-    "take_profit_rr": 1.5,
-    "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
-    "last_calibrated": "2026-09-16 16:39:42 IST"
+  "TVSMOTOR": {
+    "sector": "AUTO",
+    "theme": "AUTO_PAIR_TRADE_SHORT",
+    "sector_bias": "BEARISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "TCS": {
+    "sector": "IT",
+    "theme": "SELL_ON_RISE_RESISTANCE",
+    "sector_bias": "BEARISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
+  },
+  "TECHM": {
+    "sector": "IT",
+    "theme": "BEARISH_MARUBOZU_BREAKDOWN",
+    "sector_bias": "BEARISH_ONLY",
+    "atr_multiplier": 1.1,
+    "breakeven_pct": 0.35,
+    "target_gain_rs": 45.92,
+    "max_spread_pct": 0.15
   }
 }

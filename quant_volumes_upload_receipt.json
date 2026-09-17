@@ -1,0 +1,42 @@
+[
+  {
+    "volume": "01_HFT_EVENT_DRIVEN.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "02_OPTIONS_GREEKS_VOL.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "03_INDIAN_DERIVATIVES_BROKERS.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "04_VECTOR_BACKTEST_PORTFOLIO.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "05_STAT_ARB_FIN_ML.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "06_MICROSTRUCTURE_ORDERFLOW.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "07_FINANCIAL_NLP_SENTIMENT.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "08_MULTI_AGENT_QUANT_LLM.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "09_INFRA_ENGINEERING.md",
+    "status": "SUCCESS"
+  },
+  {
+    "volume": "10_CLONED_PHYSICAL_WHEELS.md",
+    "status": "SUCCESS"
+  }
+]

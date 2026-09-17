@@ -1,0 +1,119 @@
+Thoughts
+Structuring Ideas...
+Implementing Risk Controls...
+Exploring Trading...
+Analyzing Strategies...
+Searched your sources...
+Searching your sources...
+Identifying Algorithmic Strategies...
+Defining Key Strategies...
+expand_more
+Across the quantitative trading repositories and architecture blueprints in these sources, the primary algorithmic strategies and risk management techniques are organized into a multi-layered, dual-engine framework ("NotebookLM Brain" + "Google AntiGravity Hands")
+1
+2
+.
+1. Primary Algorithmic Strategies
+Intraday Trend-Following & Momentum:
+Antigravity OCC (Open-Close Cross): Uses a 5-period Simple Moving Average (SMA) on 5-minute charts coupled with a delayed trailing stop-loss (TSL) to ride large options expansion moves on indices like Nifty and BankNifty
+3
+more_horiz
+.
+Exponential Moving Average (EMA) Crossovers: Applies short-term crossover rules (e.g., 9/21 EMA) to capture intraday momentum on liquid equities and derivatives
+4
+.
+Options & Volatility Strategies:
+Expiry Day Non-Directional Automation: Automates Iron Fly setups for index expiries (Wednesday BankNifty / Thursday Nifty), tracking combined straddle premiums with automated exits at a +20% premium expansion (stop-loss) or -50% decay (take-profit)
+4
+more_horiz
+.
+Automated Straddle & Strangle Selling: Systematically sells options legs while enforcing individual leg stop-losses and dynamic trailing stops for Indian F&O contracts
+8
+.
+Implied Volatility (IV) & Greeks Analytics: Models IV surfaces, SVI parametrizations, and local volatility smiles using libraries like vollib and PyVol, while optimizing dynamic Delta/Gamma/Vega hedging via Greeks-Optimizer
+9
+more_horiz
+.
+Statistical Arbitrage & Pairs Trading:
+2-Sigma Spread Mean Reversion: Monitors the spread/ratio between Nifty 50 and BankNifty, executing market-neutral pairs trades when deviations exceed ±2σ from the 20-day mean
+4
+more_horiz
+.
+Ornstein-Uhlenbeck Mean Reversion: Employs mean-reverting mathematical engines combined with volatility/ADX filters on heavyweights like Reliance
+12
+13
+.
+High-Frequency & Market Microstructure Arbitrage:
+Order Flow Imbalance (OFI) & Lead-Lag: Evaluates real-time limit order book imbalance and microsecond cross-correlations across exchanges and correlated assets
+14
+.
+Market-Maker Inventory Management: Dynamically adjusts bid-ask quotation distances during options scalping to offload inventory skew
+6
+more_horiz
+.
+Prediction Market Arbitrage: Autonomous agents (e.g., CloddsBot) perform cross-platform arbitrage across prediction markets and retail brokerages
+16
+.
+Multi-Agent AI & Sentiment Alpha:
+Parallel Agent Swarms: Combines real-time NLP sentiment analysis (parsing regulatory filings and news via FinGPT / FinNLP) with technical order book agents to require unanimous consensus before unlocking trade entries
+4
+more_horiz
+.
+LLM Financial Research & Factor Mining: Platforms like FinRobot, AutoHedge, and Qlib run multi-agent financial simulations, alpha factor extraction, and autonomous equity research
+19
+more_horiz
+.
+2. Core Risk Management Techniques
+The 3-Gate Variance Shield:
+Acts as an automated pre-trade risk gate prior to dispatching orders to broker APIs (such as Dhan, Fyers, or Zerodha)
+1
+2
+.
+Filters out sub-second market noise, verifies technical breakout volume against institutional variance thresholds, and auto-defaults conflicting directional setups into market-neutral structures like Iron Flies
+2
+more_horiz
+.
+Dynamic agents.md Risk Constitution:
+Enforces an immutable rulebook before every API call, mandating a maximum 1% account risk per intraday trade and prohibiting overnight naked short options
+2
+more_horiz
+.
+Hardcoded 7% Portfolio Drawdown Rule:
+Serves as a non-negotiable emergency kill-switch that triggers immediate position liquidation if any setup or portfolio draws down by 7% or more
+4
+more_horiz
+.
+Delayed Trailing Stop-Loss (TSL):
+Locks trailing mechanisms for the first few bars (e.g., N=2 bars) after entry to avoid being stopped out by initial market noise
+3
+5
+.
+Activates dynamic trailing (e.g., 0.5% below highest high) only after profit targets (e.g., +0.75%) are reached
+3
+5
+.
+Multi-Analyst Citation Conflict Matrix & Pre-Trade War-Game:
+Compiles cross-literature and multi-analyst consensus matrices in NotebookLM to resolve contradictory signals before entering trades
+22
+23
+.
+Instantiates adversarial AI debate sessions ("Director's Cut") between aggressive momentum personas and conservative risk personas to verify trade safety
+24
+.
+Real-Time Telemetry & Glassmorphic Risk Dashboards:
+Displays live P&L, real-time Greek exposures (Delta, Theta, Vega), and kill-switch states on Streamlit mission control dashboards
+7
+more_horiz
+.
+Integrates OpenTelemetry plugins (hermes_telemetry, TokenTelemetry) for full-chain trace tracking and LLM session token/cost monitoring
+25
+more_horiz
+.
+📊 Would you like me to construct an interactive Python Streamlit dashboard script to monitor these risk gates and live Greeks in real time?
+keep_pin
+Save to note
+copy_all
+thumb_up
+thumb_down
+Show me the Antigravity OCC strategy Python code
+How do I configure the agents.md risk constitution?
+Compare VectorBT and NautilusTrader performance

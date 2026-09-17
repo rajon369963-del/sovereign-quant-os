@@ -1,0 +1,1802 @@
+[
+  {
+    "full_name": "ZhuLinsen/daily_stock_analysis",
+    "clone_url": "https://github.com/ZhuLinsen/daily_stock_analysis.git",
+    "stars": 65133,
+    "desc": "LLM \u9a71\u52a8\u7684\u591a\u5e02\u573a\u80a1\u7968\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff1a\u591a\u6e90\u884c\u60c5\u3001\u5b9e\u65f6\u65b0\u95fb\u3001\u51b3\u7b56\u770b\u677f\u4e0e\u81ea\u52a8\u63a8\u9001\uff0c\u652f\u6301\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\u3002  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs."
+  },
+  {
+    "full_name": "microsoft/qlib",
+    "clone_url": "https://github.com/microsoft/qlib.git",
+    "stars": 48602,
+    "desc": "Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process."
+  },
+  {
+    "full_name": "wilsonfreitas/awesome-quant",
+    "clone_url": "https://github.com/wilsonfreitas/awesome-quant.git",
+    "stars": 29619,
+    "desc": "A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)"
+  },
+  {
+    "full_name": "bbfamily/abu",
+    "clone_url": "https://github.com/bbfamily/abu.git",
+    "stars": 18621,
+    "desc": "\u963f\u5e03\u91cf\u5316\u4ea4\u6613\u7cfb\u7edf(\u80a1\u7968\uff0c\u671f\u6743\uff0c\u671f\u8d27\uff0c\u6bd4\u7279\u5e01\uff0c\u673a\u5668\u5b66\u4e60) \u57fa\u4e8epython\u7684\u5f00\u6e90\u91cf\u5316\u4ea4\u6613\uff0c\u91cf\u5316\u6295\u8d44\u67b6\u6784"
+  },
+  {
+    "full_name": "UFund-Me/Qbot",
+    "clone_url": "https://github.com/UFund-Me/Qbot.git",
+    "stars": 18510,
+    "desc": "[\ud83d\udd25updating ...] AI \u81ea\u52a8\u91cf\u5316\u4ea4\u6613\u673a\u5668\u4eba(\u5b8c\u5168\u672c\u5730\u90e8\u7f72) AI-powered Quantitative Investment Research Platform. \ud83d\udcc3 online docs: https://ufund-me.github.io/Qbot   \u2728 :news: qbot-mini: https://github.com/Charmve/iQuant"
+  },
+  {
+    "full_name": "paperswithbacktest/awesome-systematic-trading",
+    "clone_url": "https://github.com/paperswithbacktest/awesome-systematic-trading.git",
+    "stars": 14291,
+    "desc": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading."
+  },
+  {
+    "full_name": "je-suis-tm/quant-trading",
+    "clone_url": "https://github.com/je-suis-tm/quant-trading.git",
+    "stars": 10738,
+    "desc": "Python quantitative trading strategies including VIX Calculator, Pattern Recognition, Commodity Trading Advisor, Monte Carlo, Options Straddle, Shooting Star, London Breakout, Heikin-Ashi, Pair Trading, RSI, Bollinger Bands, Parabolic SAR, Dual Thrust, Awesome, MACD"
+  },
+  {
+    "full_name": "jesse-ai/jesse",
+    "clone_url": "https://github.com/jesse-ai/jesse.git",
+    "stars": 8521,
+    "desc": "An advanced crypto trading bot written in Python"
+  },
+  {
+    "full_name": "ranaroussi/quantstats",
+    "clone_url": "https://github.com/ranaroussi/quantstats.git",
+    "stars": 7640,
+    "desc": "Portfolio analytics for quants, written in Python"
+  },
+  {
+    "full_name": "The-Swarm-Corporation/AutoHedge",
+    "clone_url": "https://github.com/The-Swarm-Corporation/AutoHedge.git",
+    "stars": 6127,
+    "desc": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution."
+  },
+  {
+    "full_name": "Superalgos/Superalgos",
+    "clone_url": "https://github.com/Superalgos/Superalgos.git",
+    "stars": 5658,
+    "desc": "Free, open-source crypto trading bot, automated bitcoin / cryptocurrency trading software, algorithmic trading bots. Visually design your crypto trading bot, leveraging an integrated charting system, data-mining, backtesting, paper trading, and multi-server crypto bot deployments."
+  },
+  {
+    "full_name": "wangzhe3224/awesome-systematic-trading",
+    "clone_url": "https://github.com/wangzhe3224/awesome-systematic-trading.git",
+    "stars": 5139,
+    "desc": "A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more | \u91cf\u5316\u4ea4\u6613 | \u91cf\u5316\u6295\u8d44"
+  },
+  {
+    "full_name": "shy3130/tick-stock-panel",
+    "clone_url": "https://github.com/shy3130/tick-stock-panel.git",
+    "stars": 4735,
+    "desc": "TSP\u81ea\u6258\u7ba1\u3001\u96f6\u8fd0\u7ef4\u7684 A \u80a1\u300c\u9009\u80a1 + \u76d1\u63a7 + \u56de\u6d4b\u300d\u91cf\u5316\u5de5\u4f5c\u53f0  | LLM\u80fd\u529b\u9a71\u4f7f\u7b56\u7565\u5b9a\u5236+\u4e2a\u80a1\u5206\u6790+\u590d\u76d8 | \u81ea\u7531\u63a5\u5165\u7b2c\u4e09\u65b9\u6570\u636e\u6e90\u4e0e\u4e2a\u6027\u5316\u6269\u5c55\u6570\u636e | \u4e2a\u4eba\u5f00\u6e90"
+  },
+  {
+    "full_name": "nkaz001/hftbacktest",
+    "clone_url": "https://github.com/nkaz001/hftbacktest.git",
+    "stars": 4697,
+    "desc": "Free, open source, a high frequency trading and market making backtesting and trading bot, which accounts for limit orders, queue positions, and latencies, utilizing full tick data for trades and order books(Level-2 and Level-3), with real-world crypto trading examples for Binance and Bybit"
+  },
+  {
+    "full_name": "zvtvz/zvt",
+    "clone_url": "https://github.com/zvtvz/zvt.git",
+    "stars": 4304,
+    "desc": "modular quant framework."
+  },
+  {
+    "full_name": "LLMQuant/quant-wiki",
+    "clone_url": "https://github.com/LLMQuant/quant-wiki.git",
+    "stars": 4214,
+    "desc": "We are committed to the open-sourcing quantitative knowledge, aiming to bridge the information gap between the domestic and international quantitative finance industries. \u6211\u4eec\u81f4\u529b\u4e8e\u91cf\u5316\u77e5\u8bc6\u7684\u5f00\u6e90\u4e0e\u6c49\u5316\uff0c\u6253\u7834\u56fd\u5185\u5916\u91cf\u5316\u91d1\u878d\u884c\u4e1a\u4fe1\u606f\u5dee\u3002"
+  },
+  {
+    "full_name": "EliteQuant/EliteQuant",
+    "clone_url": "https://github.com/EliteQuant/EliteQuant.git",
+    "stars": 4186,
+    "desc": "A list of online resources for quantitative modeling, trading, portfolio management"
+  },
+  {
+    "full_name": "cybergeekgyan/Quant-Developers-Resources",
+    "clone_url": "https://github.com/cybergeekgyan/Quant-Developers-Resources.git",
+    "stars": 3922,
+    "desc": "Resources to Prepare for Quant Developers/ Quantitative Researcher/ Quantitative Trader/ Quant Analyst/ Software Engineers in Quant Trading Firms, HFTs and Hedge Funds"
+  },
+  {
+    "full_name": "TradeMaster-NTU/TradeMaster",
+    "clone_url": "https://github.com/TradeMaster-NTU/TradeMaster.git",
+    "stars": 3072,
+    "desc": "TradeMaster is an open-source platform for quantitative trading empowered by reinforcement learning :fire: :zap: :rainbow:"
+  },
+  {
+    "full_name": "letianzj/QuantResearch",
+    "clone_url": "https://github.com/letianzj/QuantResearch.git",
+    "stars": 3031,
+    "desc": "Quantitative analysis, strategies and backtests"
+  },
+  {
+    "full_name": "0xemmkty/QuantMuse",
+    "clone_url": "https://github.com/0xemmkty/QuantMuse.git",
+    "stars": 2925,
+    "desc": "A comprehensive quantitative trading system with AI-powered analysis, real-time data processing, and advanced risk management"
+  },
+  {
+    "full_name": "refraction-ray/xalpha",
+    "clone_url": "https://github.com/refraction-ray/xalpha.git",
+    "stars": 2703,
+    "desc": "\u57fa\u91d1\u6295\u8d44\u7ba1\u7406\u56de\u6d4b\u5f15\u64ce"
+  },
+  {
+    "full_name": "man-group/ArcticDB",
+    "clone_url": "https://github.com/man-group/ArcticDB.git",
+    "stars": 2511,
+    "desc": "ArcticDB is a high performance, serverless DataFrame database built for the Python Data Science ecosystem."
+  },
+  {
+    "full_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+    "clone_url": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy.git",
+    "stars": 2338,
+    "desc": "Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data."
+  },
+  {
+    "full_name": "achillesrasquinha/bulbea",
+    "clone_url": "https://github.com/achillesrasquinha/bulbea.git",
+    "stars": 2331,
+    "desc": ":boar: :bear: Deep Learning based Python Library for Stock Market Prediction and Modelling"
+  },
+  {
+    "full_name": "coding-kitties/investing-algorithm-framework",
+    "clone_url": "https://github.com/coding-kitties/investing-algorithm-framework.git",
+    "stars": 2070,
+    "desc": "Framework for quantitative trading. Complete framework for development, backtesting, and deploying automated trading algorithms and trading bots."
+  },
+  {
+    "full_name": "LastAncientOne/Stock_Analysis_For_Quant",
+    "clone_url": "https://github.com/LastAncientOne/Stock_Analysis_For_Quant.git",
+    "stars": 2060,
+    "desc": "Various Types of Stock Analysis in Excel, Matlab, Power BI, Python, R, and Tableau"
+  },
+  {
+    "full_name": "cbailes/awesome-deep-trading",
+    "clone_url": "https://github.com/cbailes/awesome-deep-trading.git",
+    "stars": 2042,
+    "desc": "List of awesome resources for machine learning-based algorithmic trading"
+  },
+  {
+    "full_name": "Barca0412/Introduction-to-Quantitative-Finance",
+    "clone_url": "https://github.com/Barca0412/Introduction-to-Quantitative-Finance.git",
+    "stars": 1751,
+    "desc": "AI+\u91d1\u878d\uff08\u91cf\u5316\uff09\uff1a1.\u591a\u56e0\u5b50\u80a1\u7968\u91cf\u5316\u6846\u67b6\u5f00\u6e90\u6559\u7a0b 2.\u5b66\u754c\u548c\u4e1a\u754c\u7684\u7ecf\u5178\u8d44\u6599\u6536\u5f55 3.AI + \u91d1\u878d\u7684\u76f8\u5173\u5de5\u4f5c\uff0c\u5305\u62ecLLM, Agent, benchmark(evaluation), etc."
+  },
+  {
+    "full_name": "thinh-vu/vnstock",
+    "clone_url": "https://github.com/thinh-vu/vnstock.git",
+    "stars": 1397,
+    "desc": "A beginner-friendly yet powerful Python toolkit for financial analysis and automation \u2014 built to make modern investing accessible to everyone"
+  },
+  {
+    "full_name": "freqtrade/freqtrade",
+    "clone_url": "https://github.com/freqtrade/freqtrade.git",
+    "stars": 54442,
+    "desc": "Free, open source crypto trading bot"
+  },
+  {
+    "full_name": "microsoft/qlib",
+    "clone_url": "https://github.com/microsoft/qlib.git",
+    "stars": 48602,
+    "desc": "Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process."
+  },
+  {
+    "full_name": "HKUDS/Vibe-Trading",
+    "clone_url": "https://github.com/HKUDS/Vibe-Trading.git",
+    "stars": 33540,
+    "desc": "\"Vibe-Trading: Your Personal Trading Agent\""
+  },
+  {
+    "full_name": "quantopian/zipline",
+    "clone_url": "https://github.com/quantopian/zipline.git",
+    "stars": 20099,
+    "desc": "Zipline, a Pythonic Algorithmic Trading Library"
+  },
+  {
+    "full_name": "bbfamily/abu",
+    "clone_url": "https://github.com/bbfamily/abu.git",
+    "stars": 18621,
+    "desc": "\u963f\u5e03\u91cf\u5316\u4ea4\u6613\u7cfb\u7edf(\u80a1\u7968\uff0c\u671f\u6743\uff0c\u671f\u8d27\uff0c\u6bd4\u7279\u5e01\uff0c\u673a\u5668\u5b66\u4e60) \u57fa\u4e8epython\u7684\u5f00\u6e90\u91cf\u5316\u4ea4\u6613\uff0c\u91cf\u5316\u6295\u8d44\u67b6\u6784"
+  },
+  {
+    "full_name": "paperswithbacktest/awesome-systematic-trading",
+    "clone_url": "https://github.com/paperswithbacktest/awesome-systematic-trading.git",
+    "stars": 14291,
+    "desc": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading."
+  },
+  {
+    "full_name": "je-suis-tm/quant-trading",
+    "clone_url": "https://github.com/je-suis-tm/quant-trading.git",
+    "stars": 10738,
+    "desc": "Python quantitative trading strategies including VIX Calculator, Pattern Recognition, Commodity Trading Advisor, Monte Carlo, Options Straddle, Shooting Star, London Breakout, Heikin-Ashi, Pair Trading, RSI, Bollinger Bands, Parabolic SAR, Dual Thrust, Awesome, MACD"
+  },
+  {
+    "full_name": "polakowo/vectorbt",
+    "clone_url": "https://github.com/polakowo/vectorbt.git",
+    "stars": 9100,
+    "desc": "The backtesting engine that gives you an unfair advantage. Run thousands of trading ideas before others finish one."
+  },
+  {
+    "full_name": "kernc/backtesting.py",
+    "clone_url": "https://github.com/kernc/backtesting.py.git",
+    "stars": 8966,
+    "desc": "\ud83d\udd0e \ud83d\udcc8 \ud83d\udc0d \ud83d\udcb0  Backtest trading strategies in Python."
+  },
+  {
+    "full_name": "firmai/financial-machine-learning",
+    "clone_url": "https://github.com/firmai/financial-machine-learning.git",
+    "stars": 8785,
+    "desc": "A curated list of practical financial machine learning tools and applications."
+  },
+  {
+    "full_name": "jesse-ai/jesse",
+    "clone_url": "https://github.com/jesse-ai/jesse.git",
+    "stars": 8521,
+    "desc": "An advanced crypto trading bot written in Python"
+  },
+  {
+    "full_name": "ranaroussi/quantstats",
+    "clone_url": "https://github.com/ranaroussi/quantstats.git",
+    "stars": 7640,
+    "desc": "Portfolio analytics for quants, written in Python"
+  },
+  {
+    "full_name": "CryptoSignal/Crypto-Signal",
+    "clone_url": "https://github.com/CryptoSignal/Crypto-Signal.git",
+    "stars": 5639,
+    "desc": "Github.com/CryptoSignal - Trading & Technical Analysis Bot - 4,100+ stars, 1,100+ forks"
+  },
+  {
+    "full_name": "JerBouma/FinanceToolkit",
+    "clone_url": "https://github.com/JerBouma/FinanceToolkit.git",
+    "stars": 5346,
+    "desc": "Transparent and Efficient Financial Analysis"
+  },
+  {
+    "full_name": "hudson-and-thames/mlfinlab",
+    "clone_url": "https://github.com/hudson-and-thames/mlfinlab.git",
+    "stars": 4923,
+    "desc": "MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. "
+  },
+  {
+    "full_name": "zvtvz/zvt",
+    "clone_url": "https://github.com/zvtvz/zvt.git",
+    "stars": 4304,
+    "desc": "modular quant framework."
+  },
+  {
+    "full_name": "shashankvemuri/Finance",
+    "clone_url": "https://github.com/shashankvemuri/Finance.git",
+    "stars": 4267,
+    "desc": "Python toolkit for quantitative finance: stock analysis, technical indicators, strategy backtesting, portfolio optimization, and financial modeling."
+  },
+  {
+    "full_name": "cybergeekgyan/Quant-Developers-Resources",
+    "clone_url": "https://github.com/cybergeekgyan/Quant-Developers-Resources.git",
+    "stars": 3922,
+    "desc": "Resources to Prepare for Quant Developers/ Quantitative Researcher/ Quantitative Trader/ Quant Analyst/ Software Engineers in Quant Trading Firms, HFTs and Hedge Funds"
+  },
+  {
+    "full_name": "edtechre/pybroker",
+    "clone_url": "https://github.com/edtechre/pybroker.git",
+    "stars": 3542,
+    "desc": "Algorithmic Trading in Python with Machine Learning"
+  },
+  {
+    "full_name": "tradytics/eiten",
+    "clone_url": "https://github.com/tradytics/eiten.git",
+    "stars": 3298,
+    "desc": "Statistical and Algorithmic Investing Strategies for Everyone"
+  },
+  {
+    "full_name": "marketcalls/openalgo",
+    "clone_url": "https://github.com/marketcalls/openalgo.git",
+    "stars": 2670,
+    "desc": "Open Source Algo Trading Platform for Everyone"
+  },
+  {
+    "full_name": "scrtlabs/catalyst",
+    "clone_url": "https://github.com/scrtlabs/catalyst.git",
+    "stars": 2558,
+    "desc": "An Algorithmic Trading Library for Crypto-Assets in Python"
+  },
+  {
+    "full_name": "ranaroussi/qtpylib",
+    "clone_url": "https://github.com/ranaroussi/qtpylib.git",
+    "stars": 2267,
+    "desc": "QTPyLib, Pythonic Algorithmic Trading "
+  },
+  {
+    "full_name": "peerchemist/finta",
+    "clone_url": "https://github.com/peerchemist/finta.git",
+    "stars": 2264,
+    "desc": "Common financial technical indicators implemented in Pandas."
+  },
+  {
+    "full_name": "enarjord/passivbot",
+    "clone_url": "https://github.com/enarjord/passivbot.git",
+    "stars": 2100,
+    "desc": "Trading bot running on Bybit, Bitget, OKX, GateIO, Binance, Kucoin, WEEX and Hyperliquid"
+  },
+  {
+    "full_name": "coding-kitties/investing-algorithm-framework",
+    "clone_url": "https://github.com/coding-kitties/investing-algorithm-framework.git",
+    "stars": 2070,
+    "desc": "Framework for quantitative trading. Complete framework for development, backtesting, and deploying automated trading algorithms and trading bots."
+  },
+  {
+    "full_name": "Lumiwealth/lumibot",
+    "clone_url": "https://github.com/Lumiwealth/lumibot.git",
+    "stars": 2069,
+    "desc": "Backtestable AI trading agents and Python algorithmic trading strategies for stocks, options, crypto, futures, forex, SEC filings, FRED macro data, and real brokers."
+  },
+  {
+    "full_name": "robertmartin8/MachineLearningStocks",
+    "clone_url": "https://github.com/robertmartin8/MachineLearningStocks.git",
+    "stars": 1960,
+    "desc": "Using python and scikit-learn to make stock predictions"
+  },
+  {
+    "full_name": "VivekPa/AIAlpha",
+    "clone_url": "https://github.com/VivekPa/AIAlpha.git",
+    "stars": 1959,
+    "desc": "Use unsupervised and supervised learning to predict stocks"
+  },
+  {
+    "full_name": "asavinov/intelligent-trading-bot",
+    "clone_url": "https://github.com/asavinov/intelligent-trading-bot.git",
+    "stars": 1874,
+    "desc": "Intelligent Trading Bot: Automatically generating signals and trading based on machine learning and feature engineering"
+  },
+  {
+    "full_name": "exchange-core/exchange-core",
+    "clone_url": "https://github.com/exchange-core/exchange-core.git",
+    "stars": 2627,
+    "desc": "Ultra-fast matching engine written in Java based on LMAX Disruptor, Eclipse Collections, Real Logic Agrona, OpenHFT, LZ4 Java, and Adaptive Radix Trees."
+  },
+  {
+    "full_name": "chronoxor/CppTrader",
+    "clone_url": "https://github.com/chronoxor/CppTrader.git",
+    "stars": 1070,
+    "desc": "High performance components for building Trading Platform such as ultra fast matching engine, order book processor"
+  },
+  {
+    "full_name": "sadighian/crypto-rl",
+    "clone_url": "https://github.com/sadighian/crypto-rl.git",
+    "stars": 965,
+    "desc": "Deep Reinforcement Learning toolkit: record and replay cryptocurrency limit order book data & train a DDQN agent"
+  },
+  {
+    "full_name": "Adamant-im/adamant-tradebot",
+    "clone_url": "https://github.com/Adamant-im/adamant-tradebot.git",
+    "stars": 853,
+    "desc": "Free self-hosted liquidity bot for token issuers who want to improve CEX market quality without sending tokens, funds, or API keys to a third-party market maker."
+  },
+  {
+    "full_name": "TickDB/tickdb-unified-realtime-marketdata-api",
+    "clone_url": "https://github.com/TickDB/tickdb-unified-realtime-marketdata-api.git",
+    "stars": 794,
+    "desc": "TickDB: AI-native real time stock API and market data API for US stocks, HK stocks, A-shares, forex, crypto, indices and commodities. Skill, CLI, MCP, REST API and WebSocket. AI \u539f\u751f\u5b9e\u65f6\u80a1\u7968 API \u4e0e\u91d1\u878d\u884c\u60c5\u6570\u636e API\uff0c\u652f\u6301\u7f8e\u80a1\u3001\u6e2f\u80a1\u3001A \u80a1\u3001\u5916\u6c47\u3001\u52a0\u5bc6\u8d27\u5e01\u3001\u6307\u6570\u548c\u5927\u5b97\u5546\u54c1\u3002"
+  },
+  {
+    "full_name": "AllTick-Official/alltick-realtime-forex-crypto-stock-tick-finance-websocket-api",
+    "clone_url": "https://github.com/AllTick-Official/alltick-realtime-forex-crypto-stock-tick-finance-websocket-api.git",
+    "stars": 613,
+    "desc": "AllTick real-time financial market data API with REST and WebSocket access to stocks, forex, crypto, commodities, and indices."
+  },
+  {
+    "full_name": "roq-trading/roq-api",
+    "clone_url": "https://github.com/roq-trading/roq-api.git",
+    "stars": 517,
+    "desc": "C++ interfaces used to communicate with Roq's market gateways."
+  },
+  {
+    "full_name": "Elenchev/order-book-heatmap",
+    "clone_url": "https://github.com/Elenchev/order-book-heatmap.git",
+    "stars": 514,
+    "desc": "OrderBook Heatmap visualizes the limit order book, compares resting limit orders and shows a time & sales log with live market data streamed directly from the Binance WS API. This was a short exploratory project. Keep in mind that a lot of work is needed for this to work in all market conditions."
+  },
+  {
+    "full_name": "martinobdl/ITCH",
+    "clone_url": "https://github.com/martinobdl/ITCH.git",
+    "stars": 285,
+    "desc": "Nasdaq Order Book Reconstructor"
+  },
+  {
+    "full_name": "bigmacman1129/crypto-ai-trading-bot",
+    "clone_url": "https://github.com/bigmacman1129/crypto-ai-trading-bot.git",
+    "stars": 221,
+    "desc": "Crypto liquidity detection & algorithmic trading bot. Order book analysis, stop-loss clusters, liquidity sweeps. Multi-exchange (Binance, Bybit, Kraken, OKX). Trading signals, quant research, market microstructure."
+  },
+  {
+    "full_name": "fasenderos/nodejs-order-book",
+    "clone_url": "https://github.com/fasenderos/nodejs-order-book.git",
+    "stars": 207,
+    "desc": "Ultra-fast Limit Order Book for Node.js written in TypeScript for high-frequency trading (HFT) :rocket::rocket:"
+  },
+  {
+    "full_name": "ArjunVachhani/order-matcher",
+    "clone_url": "https://github.com/ArjunVachhani/order-matcher.git",
+    "stars": 173,
+    "desc": "simple, fast and feature rich order matching engine supports limit, market, stop-loss, iceberg, IOC, FOK, GTD orders"
+  },
+  {
+    "full_name": "mkipnis/DistributedATS",
+    "clone_url": "https://github.com/mkipnis/DistributedATS.git",
+    "stars": 119,
+    "desc": "DistributedATS is a FIX Protocol based multi matching engine exchange(CLOB) that integrates QuickFIX and LiquiBook over DDS"
+  },
+  {
+    "full_name": "krish567366/submicro-execution-engine",
+    "clone_url": "https://github.com/krish567366/submicro-execution-engine.git",
+    "stars": 103,
+    "desc": "Sub-microsecond bare-metal execution engine with deterministic replay, lock-free order path, and hardware-timestamped latency measurement."
+  },
+  {
+    "full_name": "mansoor-mamnoon/limit-order-book",
+    "clone_url": "https://github.com/mansoor-mamnoon/limit-order-book.git",
+    "stars": 85,
+    "desc": "High-performance limit order book engine with C++ core and Python SDK. Processes 20M+ msgs/sec with \u00b5s latency. Supports real crypto/equity data replay, spread/imbalance/impact analytics, and backtesting of VWAP, TWAP, POV, and market-making strategies with reproducible PnL and risk metrics."
+  },
+  {
+    "full_name": "tolyo/open-outcry",
+    "clone_url": "https://github.com/tolyo/open-outcry.git",
+    "stars": 74,
+    "desc": "A multi-asset matching engine for market places of all sizes"
+  },
+  {
+    "full_name": "adilsondias-engineer/fpga-trading-systems",
+    "clone_url": "https://github.com/adilsondias-engineer/fpga-trading-systems.git",
+    "stars": 74,
+    "desc": "Production-grade low-latency FPGA trading system. Features custom VHDL 10GBASE-R PHY, hardware NASDAQ ITCH 5.0 order book, C++ DPDK/XDP kernel bypass, and PCIe DMA acceleration. LLM-Inference"
+  },
+  {
+    "full_name": "Azhagesan-dev/OrderFlowMap",
+    "clone_url": "https://github.com/Azhagesan-dev/OrderFlowMap.git",
+    "stars": 70,
+    "desc": "Bookmap-style order flow visualizer in a single HTML file \u2014 real-time heatmaps, trade bubbles, DOM ladder, volume profile, CVD, and liquidity wall detection. Works with OpenAlgo WebSocket for live Indian market data (NSE/NFO/BSE/MCX)."
+  },
+  {
+    "full_name": "aitradingbotspro/crypto-liquidity-ai-trading-bot",
+    "clone_url": "https://github.com/aitradingbotspro/crypto-liquidity-ai-trading-bot.git",
+    "stars": 68,
+    "desc": "Crypto liquidity detection & algorithmic trading bot. Order book analysis, stop-loss clusters, liquidity sweeps. Multi-exchange (Binance, Bybit, Kraken, OKX). Trading signals, quant research, market microstructure."
+  },
+  {
+    "full_name": "Leotaby/MicroExchange",
+    "clone_url": "https://github.com/Leotaby/MicroExchange.git",
+    "stars": 67,
+    "desc": "Exchange-grade CLOB matching engine + microstructure analytics in C++20"
+  },
+  {
+    "full_name": "al1enjesus/polymarket-whales",
+    "clone_url": "https://github.com/al1enjesus/polymarket-whales.git",
+    "stars": 63,
+    "desc": "\ud83d\udc0b Real-time whale trade tracker for Polymarket \u2014 get terminal alerts + Telegram notifications when smart money moves"
+  },
+  {
+    "full_name": "toma-x/exploring-order-book-predictability",
+    "clone_url": "https://github.com/toma-x/exploring-order-book-predictability.git",
+    "stars": 60,
+    "desc": "Deep learning approach for market price prediction, in JAX"
+  },
+  {
+    "full_name": "aux-exchange/aux-exchange",
+    "clone_url": "https://github.com/aux-exchange/aux-exchange.git",
+    "stars": 55,
+    "desc": "https://aux.exchange/"
+  },
+  {
+    "full_name": "ericbudish/HFT-Races",
+    "clone_url": "https://github.com/ericbudish/HFT-Races.git",
+    "stars": 47,
+    "desc": "Code package to analyze high-frequency trading (HFT) races using financial-exchange message data, following Aquilina, Budish and O'Neill (2021)."
+  },
+  {
+    "full_name": "AsthaMishra/matching-engine",
+    "clone_url": "https://github.com/AsthaMishra/matching-engine.git",
+    "stars": 47,
+    "desc": "From-scratch limit order book + matching engine in Rust. ~100 ns book ops replaying 104M operations from real NASDAQ ITCH 5.0 data; 143-fill sweeps in 2 \u00b5s. Binary OUCH order entry, 10 \u00b5s order-to-ack."
+  },
+  {
+    "full_name": "eelixir/mercury",
+    "clone_url": "https://github.com/eelixir/mercury.git",
+    "stars": 41,
+    "desc": "High-performance C++ matching engine with unified market simulation, live market data streaming, and a browser-based dashboard"
+  },
+  {
+    "full_name": "GunnarPDX/Nice-Charts",
+    "clone_url": "https://github.com/GunnarPDX/Nice-Charts.git",
+    "stars": 37,
+    "desc": "\ud83d\udcca\ud83c\udfa8 Nice looking financial chart examples."
+  },
+  {
+    "full_name": "ThePredictiveDev/Automated-Financial-Market-Trading-System",
+    "clone_url": "https://github.com/ThePredictiveDev/Automated-Financial-Market-Trading-System.git",
+    "stars": 37,
+    "desc": "This project is a Python-based trading simulator that allows users to simulate trading strategies, manage an order book, and interact with a mock trading environment using various algorithmic traders. The simulator includes a FIX (Financial Information eXchange) protocol handler, a market-making algorithm, and synthetic liquidity generation."
+  },
+  {
+    "full_name": "jadecaptainlose/TigerTrade-DOM-Trading-Premium",
+    "clone_url": "https://github.com/jadecaptainlose/TigerTrade-DOM-Trading-Premium.git",
+    "stars": 36,
+    "desc": "TigerTrade DOM Trading Premium - Practical Windows release with complete modules and an easy first launch."
+  },
+  {
+    "full_name": "vgreg/MeatPy",
+    "clone_url": "https://github.com/vgreg/MeatPy.git",
+    "stars": 36,
+    "desc": "MeatPy"
+  },
+  {
+    "full_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+    "clone_url": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy.git",
+    "stars": 2338,
+    "desc": "Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data."
+  },
+  {
+    "full_name": "visualHFT/VisualHFT",
+    "clone_url": "https://github.com/visualHFT/VisualHFT.git",
+    "stars": 1197,
+    "desc": "Open-source desktop application for real-time market microstructure analysis. Explore live Level 2 order books, trades, liquidity, and built-in studies."
+  },
+  {
+    "full_name": "FinancialComputingUCL/LOBFrame",
+    "clone_url": "https://github.com/FinancialComputingUCL/LOBFrame.git",
+    "stars": 259,
+    "desc": "We release `LOBFrame', a novel, open-source code base which presents a renewed way to process large-scale Limit Order Book (LOB) data."
+  },
+  {
+    "full_name": "DegenSugarBoo/OpenBook",
+    "clone_url": "https://github.com/DegenSugarBoo/OpenBook.git",
+    "stars": 181,
+    "desc": "Real-time Crypto Futures depth heatmap in Rust (egui/eframe) with live order flow and trade tape."
+  },
+  {
+    "full_name": "Jeonghwan-Cheon/lob-deep-learning",
+    "clone_url": "https://github.com/Jeonghwan-Cheon/lob-deep-learning.git",
+    "stars": 159,
+    "desc": "Implementation of various deep learning models for limit order book. DeepLOB (Zhang et al., 2018), TransLOB (Wallbridge, 2020), DeepFolio (Sangadiev et al., 2020), etc."
+  },
+  {
+    "full_name": "ChuaCheowHuan/gym-continuousDoubleAuction",
+    "clone_url": "https://github.com/ChuaCheowHuan/gym-continuousDoubleAuction.git",
+    "stars": 154,
+    "desc": "A custom MARL (multi-agent reinforcement learning) environment where multiple agents trade against one another (self-play) in a zero-sum continuous double auction. Ray [RLlib] is used for training."
+  },
+  {
+    "full_name": "jialuechen/flowforge",
+    "clone_url": "https://github.com/jialuechen/flowforge.git",
+    "stars": 143,
+    "desc": "Algo Library for Order Flow Inference and TCA"
+  },
+  {
+    "full_name": "krish567366/submicro-execution-engine",
+    "clone_url": "https://github.com/krish567366/submicro-execution-engine.git",
+    "stars": 103,
+    "desc": "Sub-microsecond bare-metal execution engine with deterministic replay, lock-free order path, and hardware-timestamped latency measurement."
+  },
+  {
+    "full_name": "mansoor-mamnoon/limit-order-book",
+    "clone_url": "https://github.com/mansoor-mamnoon/limit-order-book.git",
+    "stars": 85,
+    "desc": "High-performance limit order book engine with C++ core and Python SDK. Processes 20M+ msgs/sec with \u00b5s latency. Supports real crypto/equity data replay, spread/imbalance/impact analytics, and backtesting of VWAP, TWAP, POV, and market-making strategies with reproducible PnL and risk metrics."
+  },
+  {
+    "full_name": "Azhagesan-dev/OrderFlowMap",
+    "clone_url": "https://github.com/Azhagesan-dev/OrderFlowMap.git",
+    "stars": 70,
+    "desc": "Bookmap-style order flow visualizer in a single HTML file \u2014 real-time heatmaps, trade bubbles, DOM ladder, volume profile, CVD, and liquidity wall detection. Works with OpenAlgo WebSocket for live Indian market data (NSE/NFO/BSE/MCX)."
+  },
+  {
+    "full_name": "Leotaby/MicroExchange",
+    "clone_url": "https://github.com/Leotaby/MicroExchange.git",
+    "stars": 67,
+    "desc": "Exchange-grade CLOB matching engine + microstructure analytics in C++20"
+  },
+  {
+    "full_name": "orderbooktools/crobat",
+    "clone_url": "https://github.com/orderbooktools/crobat.git",
+    "stars": 55,
+    "desc": "Academic python library that records changes to instances of the limit order book for pairs supported on the coinbase exchange."
+  },
+  {
+    "full_name": "AsthaMishra/matching-engine",
+    "clone_url": "https://github.com/AsthaMishra/matching-engine.git",
+    "stars": 47,
+    "desc": "From-scratch limit order book + matching engine in Rust. ~100 ns book ops replaying 104M operations from real NASDAQ ITCH 5.0 data; 143-fill sweeps in 2 \u00b5s. Binary OUCH order entry, 10 \u00b5s order-to-ack."
+  },
+  {
+    "full_name": "coorung/Finance-World",
+    "clone_url": "https://github.com/coorung/Finance-World.git",
+    "stars": 43,
+    "desc": "Optimization techniques on the financial area for the hedging, investment starategies, and risk measures"
+  },
+  {
+    "full_name": "monty-se/PINstimation",
+    "clone_url": "https://github.com/monty-se/PINstimation.git",
+    "stars": 41,
+    "desc": "A comprehensive bundle of utilities for the estimation of probability of informed trading models: original PIN in Easley and O'Hara (1992) and Easley et al. (1996); Multilayer PIN (MPIN) in Ersan (2016); Adjusted PIN (AdjPIN) in Duarte and Young (2009); and volume-synchronized PIN (VPIN) in Easley et al. (2011, 2012). Implementations of various estimation methods suggested in the literature are included. Additional compelling features comprise posterior probabilities, an implementation of an expectation-maximization (EM) algorithm, and PIN decomposition into layers, and into bad/good components. Versatile data simulation tools, and trade classification algorithms are among the supplementary utilities. The package provides fast, compact, and precise utilities to tackle the sophisticated, error-prone, and time-consuming estimation procedure of informed trading, and this solely using the raw trade-level data. "
+  },
+  {
+    "full_name": "LabinatorSolutions/awesome-institutional-trading",
+    "clone_url": "https://github.com/LabinatorSolutions/awesome-institutional-trading.git",
+    "stars": 33,
+    "desc": "The ultimate collection of institutional trading resources: order flow, market microstructure, options GEX, and algorithmic frameworks."
+  },
+  {
+    "full_name": "iAmGiG/gex-llm-patterns",
+    "clone_url": "https://github.com/iAmGiG/gex-llm-patterns.git",
+    "stars": 31,
+    "desc": "LLM structural reasoning validation via gamma exposure analysis in options markets. Papers 1 & 2 complete. Digital Finance (Springer) submission in progress."
+  },
+  {
+    "full_name": "wangpage/quant-ashare",
+    "clone_url": "https://github.com/wangpage/quant-ashare.git",
+    "stars": 26,
+    "desc": "\u673a\u6784\u7ea7 A\u80a1\u91cf\u5316\u7cfb\u7edf - Hermes \u591a\u667a\u80fd\u4f53 + Barra \u4e2d\u6027\u5316 + Level2 \u5fae\u7ed3\u6784 + 15 \u4e2a\u5708\u5185 tricks \u5b8c\u6574\u5b9e\u73b0"
+  },
+  {
+    "full_name": "NavnoorBawa/Options-Flow-Predictor",
+    "clone_url": "https://github.com/NavnoorBawa/Options-Flow-Predictor.git",
+    "stars": 24,
+    "desc": "Options-flow features, unusual activity, dealer positioning, and short-horizon forecasting."
+  },
+  {
+    "full_name": "joaquinbejar/matchbook",
+    "clone_url": "https://github.com/joaquinbejar/matchbook.git",
+    "stars": 19,
+    "desc": "Decentralized exchange infrastructure on Solana: on-chain order book, real-time WebSocket streaming, REST API, Geyser indexer, and Rust SDK. Non-custodial and optimized for high-frequency trading."
+  },
+  {
+    "full_name": "leionion/orderbook-imbalance-indicator-hft",
+    "clone_url": "https://github.com/leionion/orderbook-imbalance-indicator-hft.git",
+    "stars": 19,
+    "desc": "A high-frequency tool that monitors the \"Bid-Ask\" spread and order book depth to predict the next 10-second price move."
+  },
+  {
+    "full_name": "philippdubach/polymarket-microstructure",
+    "clone_url": "https://github.com/philippdubach/polymarket-microstructure.git",
+    "stars": 19,
+    "desc": "Replication package for 'The Anatomy of a Decentralized Prediction Market: Microstructure Evidence from the Polymarket Order Book.' Eight stylized facts on a pre-registered 600-market panel plus a methodological result: feed-inferred trade direction agrees with on-chain ground truth on ~59% of buckets vs ~80% Lee-Ready on equities."
+  },
+  {
+    "full_name": "prakulhiremath/LOB-Latent-Regimes",
+    "clone_url": "https://github.com/prakulhiremath/LOB-Latent-Regimes.git",
+    "stars": 17,
+    "desc": "Identification and early detection of unobserved microstructure states in High-Frequency Limit Order Books using semi-parametric state-space models. Includes proofs of identifiability and lead-lag empirical analysis."
+  },
+  {
+    "full_name": "CameronScarpati/lob-regime-scanner",
+    "clone_url": "https://github.com/CameronScarpati/lob-regime-scanner.git",
+    "stars": 16,
+    "desc": "HMM-based market microstructure regime detection for cryptocurrency order books \u2014 30+ features, Gaussian HMM, C++/pybind11 LOB engine, interactive Plotly Dash dashboard"
+  },
+  {
+    "full_name": "intrepidkarthi/orderbook",
+    "clone_url": "https://github.com/intrepidkarthi/orderbook.git",
+    "stars": 16,
+    "desc": "A fast, embeddable limit-order-book & matching engine in Go \u2014 plus a microstructure research harness and a WASM-powered animated explainer. MIT."
+  },
+  {
+    "full_name": "drewstone/gym-trading",
+    "clone_url": "https://github.com/drewstone/gym-trading.git",
+    "stars": 15,
+    "desc": "Reinforcement learning environment for trading"
+  },
+  {
+    "full_name": "juanhenao21/financial_response_spread_year",
+    "clone_url": "https://github.com/juanhenao21/financial_response_spread_year.git",
+    "stars": 15,
+    "desc": "Price response function and spread impact analysis in correlated financial markets"
+  },
+  {
+    "full_name": "Jeonghwan-Cheon/lob-world-models",
+    "clone_url": "https://github.com/Jeonghwan-Cheon/lob-world-models.git",
+    "stars": 12,
+    "desc": "Implementation of the paper <Model-based Reinforcement Learning for Predictions and Control for Limit Order Books (Wei et al., J.P. Morgan AI Research, 2019)>."
+  },
+  {
+    "full_name": "sjdKRM/EPAT",
+    "clone_url": "https://github.com/sjdKRM/EPAT.git",
+    "stars": 11,
+    "desc": "Executive Programme in Algorithmic Trading by QuantInsti"
+  },
+  {
+    "full_name": "twowaymind/orderflow-metrics",
+    "clone_url": "https://github.com/twowaymind/orderflow-metrics.git",
+    "stars": 10,
+    "desc": "Microstructure order-flow metrics \u2014 Order Flow Imbalance (OFI), depth and trade imbalance. Dependency-free TypeScript."
+  },
+  {
+    "full_name": "nkaz001/hftbacktest",
+    "clone_url": "https://github.com/nkaz001/hftbacktest.git",
+    "stars": 4697,
+    "desc": "Free, open source, a high frequency trading and market making backtesting and trading bot, which accounts for limit orders, queue positions, and latencies, utilizing full tick data for trades and order books(Level-2 and Level-3), with real-world crypto trading examples for Binance and Bybit"
+  },
+  {
+    "full_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+    "clone_url": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy.git",
+    "stars": 2338,
+    "desc": "Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data."
+  },
+  {
+    "full_name": "barter-rs/barter-rs",
+    "clone_url": "https://github.com/barter-rs/barter-rs.git",
+    "stars": 2291,
+    "desc": "Open-source Rust framework for building event-driven live-trading & backtesting systems"
+  },
+  {
+    "full_name": "ivopetiz/algotrading",
+    "clone_url": "https://github.com/ivopetiz/algotrading.git",
+    "stars": 1682,
+    "desc": "Algorithmic trading framework for cryptocurrencies."
+  },
+  {
+    "full_name": "Crypto-toolbox/HFT-Orderbook",
+    "clone_url": "https://github.com/Crypto-toolbox/HFT-Orderbook.git",
+    "stars": 1387,
+    "desc": "Limit Order Book for high-frequency trading (HFT), as described by WK Selph, implemented in Python3 and C"
+  },
+  {
+    "full_name": "visualHFT/VisualHFT",
+    "clone_url": "https://github.com/visualHFT/VisualHFT.git",
+    "stars": 1197,
+    "desc": "Open-source desktop application for real-time market microstructure analysis. Explore live Level 2 order books, trades, liquidity, and built-in studies."
+  },
+  {
+    "full_name": "51bitquant/bitquant",
+    "clone_url": "https://github.com/51bitquant/bitquant.git",
+    "stars": 1157,
+    "desc": "51bitquant Python\u6570\u5b57\u8d27\u5e01\u91cf\u5316\u4ea4\u6613\u89c6\u9891 CCXT\u6846\u67b6 \u722c\u53d6\u4ea4\u6613\u6240\u6570\u636e \u6bd4\u7279\u5e01\u91cf\u5316\u4ea4\u6613 \u4ea4\u6613\u673a\u5668\u4eba51bitquant tradingbot cryptocurrency quantitative trading btc trading"
+  },
+  {
+    "full_name": "AlexWan/OsEngine",
+    "clone_url": "https://github.com/AlexWan/OsEngine.git",
+    "stars": 1026,
+    "desc": "Open Source algo trading platform"
+  },
+  {
+    "full_name": "ttggs/hummingbot_chinese",
+    "clone_url": "https://github.com/ttggs/hummingbot_chinese.git",
+    "stars": 798,
+    "desc": "hummingbot\u4e2d\u6587\u8d44\u6e90"
+  },
+  {
+    "full_name": "0b01/tectonicdb",
+    "clone_url": "https://github.com/0b01/tectonicdb.git",
+    "stars": 753,
+    "desc": "Database for L2 orderbook"
+  },
+  {
+    "full_name": "rburkholder/trade-frame",
+    "clone_url": "https://github.com/rburkholder/trade-frame.git",
+    "stars": 677,
+    "desc": "C++ 17 based library (with sample applications) for testing equities, futures, currencies, etfs & options based automated trading ideas using DTN IQFeed real time data feed and Interactive Brokers (IB TWS API) for trade execution. libtorch/lstm/cuda demo. Support for Alpaca & Phemex. Notifications via Telegram."
+  },
+  {
+    "full_name": "bradleyboyuyang/ML-HFT",
+    "clone_url": "https://github.com/bradleyboyuyang/ML-HFT.git",
+    "stars": 612,
+    "desc": " High frequency trading (HFT) framework built for futures using machine learning and deep learning techniques"
+  },
+  {
+    "full_name": "billpwchan/futu_algo",
+    "clone_url": "https://github.com/billpwchan/futu_algo.git",
+    "stars": 590,
+    "desc": "Futu Algorithmic Trading Solution (Python) \u57fa\u65bc\u5bcc\u9014OpenAPI\u6240\u958b\u767c\u91cf\u5316\u4ea4\u6613\u7a0b\u5e8f"
+  },
+  {
+    "full_name": "outsmartchad/outsmart-cli",
+    "clone_url": "https://github.com/outsmartchad/outsmart-cli.git",
+    "stars": 582,
+    "desc": "Agent-first CLI for trading on Solana \u2014 18 DEX adapters, 12 SWQoS TX landing processors. Buy, sell, lp, snipe, create pool, launch coin, and stream real-time onchain events from your terminal."
+  },
+  {
+    "full_name": "joaquinbejar/OrderBook-rs",
+    "clone_url": "https://github.com/joaquinbejar/OrderBook-rs.git",
+    "stars": 530,
+    "desc": "A high-performance, thread-safe limit order book implementation written in Rust. This project provides a comprehensive order matching engine designed for low-latency trading systems, with a focus on concurrent access patterns and lock-free data structures."
+  },
+  {
+    "full_name": "Elenchev/order-book-heatmap",
+    "clone_url": "https://github.com/Elenchev/order-book-heatmap.git",
+    "stars": 514,
+    "desc": "OrderBook Heatmap visualizes the limit order book, compares resting limit orders and shows a time & sales log with live market data streamed directly from the Binance WS API. This was a short exploratory project. Keep in mind that a lot of work is needed for this to work in all market conditions."
+  },
+  {
+    "full_name": "javifalces/HFTFramework",
+    "clone_url": "https://github.com/javifalces/HFTFramework.git",
+    "stars": 307,
+    "desc": "HFTFramework utilized  for research on \" A reinforcement learning approach to improve the performance of the Avellaneda-Stoikov market-making algorithm \" "
+  },
+  {
+    "full_name": "bradleyboyuyang/Statistical-Arbitrage",
+    "clone_url": "https://github.com/bradleyboyuyang/Statistical-Arbitrage.git",
+    "stars": 280,
+    "desc": "High-frequency statistical arbitrage"
+  },
+  {
+    "full_name": "featherenvy/botvana",
+    "clone_url": "https://github.com/featherenvy/botvana.git",
+    "stars": 252,
+    "desc": "Botvana is high-performance and event-driven trading system built using Rust (in early development)."
+  },
+  {
+    "full_name": "brprojects/Limit-Order-Book",
+    "clone_url": "https://github.com/brprojects/Limit-Order-Book.git",
+    "stars": 208,
+    "desc": "Low latency Limit Order Book and Matching Engine created in C++, able to handle over 1.4 million transactions per second."
+  },
+  {
+    "full_name": "muditbhargava66/High-Frequency-Trading-FPGA-System",
+    "clone_url": "https://github.com/muditbhargava66/High-Frequency-Trading-FPGA-System.git",
+    "stars": 194,
+    "desc": "The High-Frequency Trading FPGA System is an ultra-low latency platform for electronic trading on FPGAs. It features a TCP/IP stack, order matching engine, custom IP core, and risk management module for accelerated and reliable trade execution."
+  },
+  {
+    "full_name": "hzjken/HFT-price-prediction",
+    "clone_url": "https://github.com/hzjken/HFT-price-prediction.git",
+    "stars": 186,
+    "desc": "A project of using machine learning model (tree-based) to predict short-term instrument price up or down in high frequency trading. "
+  },
+  {
+    "full_name": "zbarge/stocklook",
+    "clone_url": "https://github.com/zbarge/stocklook.git",
+    "stars": 174,
+    "desc": "crypto currency library for trading & market making bots, account management, and data analysis"
+  },
+  {
+    "full_name": "Jeonghwan-Cheon/lob-deep-learning",
+    "clone_url": "https://github.com/Jeonghwan-Cheon/lob-deep-learning.git",
+    "stars": 159,
+    "desc": "Implementation of various deep learning models for limit order book. DeepLOB (Zhang et al., 2018), TransLOB (Wallbridge, 2020), DeepFolio (Sangadiev et al., 2020), etc."
+  },
+  {
+    "full_name": "ChuaCheowHuan/gym-continuousDoubleAuction",
+    "clone_url": "https://github.com/ChuaCheowHuan/gym-continuousDoubleAuction.git",
+    "stars": 154,
+    "desc": "A custom MARL (multi-agent reinforcement learning) environment where multiple agents trade against one another (self-play) in a zero-sum continuous double auction. Ray [RLlib] is used for training."
+  },
+  {
+    "full_name": "Manudecara/Algo-Trading",
+    "clone_url": "https://github.com/Manudecara/Algo-Trading.git",
+    "stars": 150,
+    "desc": "This is my github repository where I post trading strategies, tutorials and research on quantitative finance with R, C++ and Python. Some of the topics explored include: machine learning, high frequency trading, NLP, technical analysis and more. Hope you enjoy it!"
+  },
+  {
+    "full_name": "nelso0/barbotine-scalping-bot",
+    "clone_url": "https://github.com/nelso0/barbotine-scalping-bot.git",
+    "stars": 131,
+    "desc": "Powered by Bitfinex's orderbooks data, Barbotine Scalping is a medium-frequency trading bot capable of taking successful trades without worrying about trends or market direction."
+  },
+  {
+    "full_name": "jialuechen/trademind",
+    "clone_url": "https://github.com/jialuechen/trademind.git",
+    "stars": 128,
+    "desc": "Hybrid Event-driven and Vectorized Strategy Backtesting Library"
+  },
+  {
+    "full_name": "HujiaYuYoyo/448Project",
+    "clone_url": "https://github.com/HujiaYuYoyo/448Project.git",
+    "stars": 110,
+    "desc": "High Frequency Trading "
+  },
+  {
+    "full_name": "ivopetiz/crypto-database",
+    "clone_url": "https://github.com/ivopetiz/crypto-database.git",
+    "stars": 106,
+    "desc": "Database for crypto data, supporting several exchanges. Can be used for TA, bots, backtest, realtime trading, etc."
+  },
+  {
+    "full_name": "CApsUNlocked123/openmtops",
+    "clone_url": "https://github.com/CApsUNlocked123/openmtops.git",
+    "stars": 15,
+    "desc": "This is open source retail trading assistant written in flask"
+  },
+  {
+    "full_name": "DoRmAmMu1997/My-Algo-Trading-Code",
+    "clone_url": "https://github.com/DoRmAmMu1997/My-Algo-Trading-Code.git",
+    "stars": 13,
+    "desc": "Python algorithmic trading suite: signal generators, backtests, and a multithreaded paper-trading runner for NIFTY/BANKNIFTY/FINNIFTY via the Dhan API. Also contains a Claude-based AI agent for SL hunting-based strategies and a Codex-based AI agent for CPR-based strategies"
+  },
+  {
+    "full_name": "Quant-IQ/quantiq",
+    "clone_url": "https://github.com/Quant-IQ/quantiq.git",
+    "stars": 6,
+    "desc": " End-to-end algorithmic trading system | NSE | Python | Dhan API"
+  },
+  {
+    "full_name": "turtlehq-tech/turtlestack-lite",
+    "clone_url": "https://github.com/turtlehq-tech/turtlestack-lite.git",
+    "stars": 6,
+    "desc": "TurtleStack Trading MCP Server is a comprehensive Model Context Protocol (MCP) server that provides unified access to multiple Indian stock brokers through Claude AI. It enables seamless trading operations, portfolio management, and advanced technical analysis across Kite (Zerodha), Groww, Dhan, and AngelOne brokers."
+  },
+  {
+    "full_name": "Marketing-Studios/Jiraiya",
+    "clone_url": "https://github.com/Marketing-Studios/Jiraiya.git",
+    "stars": 4,
+    "desc": "Backtesting and strategy-research workspace for NSE trading ideas using Streamlit, Yahoo Finance, Dhan, and Kite data. Use your Own API"
+  },
+  {
+    "full_name": "codetradesalgo-cmyk/dhan-api-tradingview-webhook-python",
+    "clone_url": "https://github.com/codetradesalgo-cmyk/dhan-api-tradingview-webhook-python.git",
+    "stars": 4,
+    "desc": "Asynchronous ASGI webhook execution engine for Dhan v2 API. Sub-50ms TradingView signal routing for Nifty, BankNifty, and MCX algorithmic trading"
+  },
+  {
+    "full_name": "MelogneStudio/AlgoMLN",
+    "clone_url": "https://github.com/MelogneStudio/AlgoMLN.git",
+    "stars": 4,
+    "desc": "An Algo client for Dhan. Work In Progress"
+  },
+  {
+    "full_name": "workratananmol-hub/nifty-options-paper-trading-bot",
+    "clone_url": "https://github.com/workratananmol-hub/nifty-options-paper-trading-bot.git",
+    "stars": 4,
+    "desc": "Paper-only NIFTY 50 options research bot with read-only Dhan data, risk gates, backtesting, and P&L journals."
+  },
+  {
+    "full_name": "Aniket-16-S/Stock_Trade_CLI",
+    "clone_url": "https://github.com/Aniket-16-S/Stock_Trade_CLI.git",
+    "stars": 4,
+    "desc": "lightweight CLI application designed to place and manage equity and derivatives orders and view profile details with Dhan's api."
+  },
+  {
+    "full_name": "vishwamartur/dhan-trader-bot",
+    "clone_url": "https://github.com/vishwamartur/dhan-trader-bot.git",
+    "stars": 3,
+    "desc": "High-frequency Bank Nifty options scalping bot using DhanHQ API with async event-driven architecture, dual-momentum strategy, and built\u2011in risk management."
+  },
+  {
+    "full_name": "vinay-sd17/dhan-tradingview-chrome-extension",
+    "clone_url": "https://github.com/vinay-sd17/dhan-tradingview-chrome-extension.git",
+    "stars": 3,
+    "desc": "DhanHQ Tradingview Chrome Extension - Roadmap Repository"
+  },
+  {
+    "full_name": "websivasankar/MLInference",
+    "clone_url": "https://github.com/websivasankar/MLInference.git",
+    "stars": 3,
+    "desc": "Real-time ML trading pipeline. Advanced microstructure features, dual LightGBM models. Production-ready."
+  },
+  {
+    "full_name": "khata-dev/khata",
+    "clone_url": "https://github.com/khata-dev/khata.git",
+    "stars": 3,
+    "desc": "Open-source trading journal for Indian brokers. Self-hosted, broker-synced, attachment-friendly."
+  },
+  {
+    "full_name": "mitulpatel123/dhanhq-trading-system",
+    "clone_url": "https://github.com/mitulpatel123/dhanhq-trading-system.git",
+    "stars": 2,
+    "desc": ""
+  },
+  {
+    "full_name": "vk0sharma0/Kite-Dhan_API_Based_Trading",
+    "clone_url": "https://github.com/vk0sharma0/Kite-Dhan_API_Based_Trading.git",
+    "stars": 2,
+    "desc": "This repository provides an API bridge between Kite and Dhan trading platforms, enabling seamless integration for automated trading systems.  It supports:   Live market data fetching  Order placement, modification, and cancellation   Position, holdings, and trade management etc"
+  },
+  {
+    "full_name": "naman-n-choudhary/Dhan-Calculator",
+    "clone_url": "https://github.com/naman-n-choudhary/Dhan-Calculator.git",
+    "stars": 2,
+    "desc": "Risk Management & Position Sizing Calculator for traders. Calculates real post-tax Risk:Reward, position size, and brokerage costs using Dhan charges."
+  },
+  {
+    "full_name": "Pusparaj99op/NiftyOptionTradingSystem",
+    "clone_url": "https://github.com/Pusparaj99op/NiftyOptionTradingSystem.git",
+    "stars": 2,
+    "desc": "NOTS - is a autonomus Program that trades into Derivate Market Of Nifty 50, uses multiple analysis, Using Dhan API"
+  },
+  {
+    "full_name": "abhisheksoni27/marketwatch",
+    "clone_url": "https://github.com/abhisheksoni27/marketwatch.git",
+    "stars": 2,
+    "desc": "A beautiful, privacy-first Chrome extension to instantly view your Dhan trading portfolio, real-time net P&L, and open/closed positions\u2014right from your browser. Features a modern UI, one-click reload, and local proxy for secure API access. Open source, easy to set up, and perfect for active traders!"
+  },
+  {
+    "full_name": "SAI141003/ai_trading_bot",
+    "clone_url": "https://github.com/SAI141003/ai_trading_bot.git",
+    "stars": 1,
+    "desc": "AI-powered trading bot for the Indian market. Uses Python & ML to predict market direction, select option strikes, place trades via Dhan API, and log PnL. Includes backtesting, scheduler, Telegram alerts, and a dashboard for live monitoring a full end-to-end automation of stocks & options."
+  },
+  {
+    "full_name": "intraday-algo-bot/intraday-algo-bot",
+    "clone_url": "https://github.com/intraday-algo-bot/intraday-algo-bot.git",
+    "stars": 1,
+    "desc": "Algo Trading Bot (RSI + MACD + EMA with Dhan)"
+  },
+  {
+    "full_name": "NDZCorp/dhan-trading-engine",
+    "clone_url": "https://github.com/NDZCorp/dhan-trading-engine.git",
+    "stars": 1,
+    "desc": "Production-grade algorithmic trading engine for Dhan broker"
+  },
+  {
+    "full_name": "tejak6958/Dhan_api_trading",
+    "clone_url": "https://github.com/tejak6958/Dhan_api_trading.git",
+    "stars": 1,
+    "desc": "Live Trading Setup"
+  },
+  {
+    "full_name": "naveenstar3/Dhanbot_Trading",
+    "clone_url": "https://github.com/naveenstar3/Dhanbot_Trading.git",
+    "stars": 1,
+    "desc": ""
+  },
+  {
+    "full_name": "SonicAlgo/dhan-java-sdk",
+    "clone_url": "https://github.com/SonicAlgo/dhan-java-sdk.git",
+    "stars": 1,
+    "desc": "Unofficial Kotlin/Java SDK for the DhanHQ Trading API."
+  },
+  {
+    "full_name": "Ayush1906saxena/TradingBot",
+    "clone_url": "https://github.com/Ayush1906saxena/TradingBot.git",
+    "stars": 1,
+    "desc": "Algo trading system for NSE with 14 strategies, backtesting, paper trading, and live execution via Dhan/Zerodha"
+  },
+  {
+    "full_name": "aXedge/dhan-trading-bot",
+    "clone_url": "https://github.com/aXedge/dhan-trading-bot.git",
+    "stars": 1,
+    "desc": "Swing & positional equity trading bot with Piotroski F-score screening and Dhan API execution"
+  },
+  {
+    "full_name": "akshaykotish/CopyTradingDHAN",
+    "clone_url": "https://github.com/akshaykotish/CopyTradingDHAN.git",
+    "stars": 1,
+    "desc": ""
+  },
+  {
+    "full_name": "Ashish1730a/DhanSetu",
+    "clone_url": "https://github.com/Ashish1730a/DhanSetu.git",
+    "stars": 1,
+    "desc": "DhanSetu is a full-stack MERN Zerodha clone featuring user authentication, dashboards, and real-time trading-style UI. Built to practice scalable architecture, clean APIs, and modern frontend\u2013backend integration."
+  },
+  {
+    "full_name": "harsh5i/dhan-mcp-fw",
+    "clone_url": "https://github.com/harsh5i/dhan-mcp-fw.git",
+    "stars": 1,
+    "desc": "MCP server for NSE stock analysis & NIFTY/BANKNIFTY options trading via Dhan. 39 tools + strategy framework. LGPL-3.0"
+  },
+  {
+    "full_name": "gurmeetgupta22/DhaneyBot",
+    "clone_url": "https://github.com/gurmeetgupta22/DhaneyBot.git",
+    "stars": 1,
+    "desc": "DhaneyBot is a premium, fully autonomous algorithmic trading system designed for the Indian Stock Market (NSE). It scans markets for opportunities, scores candidates using multi-signal quantitative metrics, uses an AI Council of Five investor personas to critique and vote on candidate setups, and executes orders automatically via the Dhan API."
+  },
+  {
+    "full_name": "deshwalmahesh/NSE-Stock-Scanner",
+    "clone_url": "https://github.com/deshwalmahesh/NSE-Stock-Scanner.git",
+    "stars": 341,
+    "desc": "National Stock Exchange (NSE), India based Stock screener program. Supports Live Data, Swing / Momentum Trading, Intraday Trading, Connect to online brokers as Zerodha Kite, Risk Management, Emotion Control, Screening, Strategies, Backtesting, Automatic Stock Downloading after closing, live free day trading data and much more"
+  },
+  {
+    "full_name": "srikar-kodakandla/fully-automated-nifty-options-trading",
+    "clone_url": "https://github.com/srikar-kodakandla/fully-automated-nifty-options-trading.git",
+    "stars": 248,
+    "desc": "It is fully automated algo trading , It trades for you in Nifty options using Zerodha kite . You don't need to pay 4000 indian rupees monthly for kite api because this program uses selenium to access zerodha kite website"
+  },
+  {
+    "full_name": "ashishkumar30/Stock_Market_Live_Trading_using_AI",
+    "clone_url": "https://github.com/ashishkumar30/Stock_Market_Live_Trading_using_AI.git",
+    "stars": 222,
+    "desc": "The apex of my CSE tenure at UIET Kurukshetra University in 2018, This project focuses on Zerodha, involving live online trading in the NSE-BSE with real money, utilizing Artificial Intelligence techniques. The project employs Python programming, incorporating live trading bots, indicator screeners, and back testers through REST API and websockets."
+  },
+  {
+    "full_name": "amit0rana/betterOptionsTrading",
+    "clone_url": "https://github.com/amit0rana/betterOptionsTrading.git",
+    "stars": 135,
+    "desc": "This repository has 2 userscripts. (1) To add features to kite.zerodha.com (2) To add features to pro.upstox.com"
+  },
+  {
+    "full_name": "harpalnain/ZerodhaAtom",
+    "clone_url": "https://github.com/harpalnain/ZerodhaAtom.git",
+    "stars": 112,
+    "desc": "Zerodha Browser Atomation for Algo trading without subscribing Kite API"
+  },
+  {
+    "full_name": "aeron7/Mastering-AlgoTrading-A-Beginners-Guide-using-KiteConnect-API",
+    "clone_url": "https://github.com/aeron7/Mastering-AlgoTrading-A-Beginners-Guide-using-KiteConnect-API.git",
+    "stars": 61,
+    "desc": "Launch into the realm of algorithmic trading with this beginner's guide. Explore the intricacies of the Indian Stock Market through practical examples and hands-on experience. This guide is tailored for those looking to harness the power of Zerodha's KiteConnect API for effective and efficient trading strategies."
+  },
+  {
+    "full_name": "yash12392/kite-automatic-trading",
+    "clone_url": "https://github.com/yash12392/kite-automatic-trading.git",
+    "stars": 58,
+    "desc": "To automatic trade on Kite (By Zerodha) with a Simple Moving Average strategy"
+  },
+  {
+    "full_name": "Raahi-Bhushan/ui-trading-system",
+    "clone_url": "https://github.com/Raahi-Bhushan/ui-trading-system.git",
+    "stars": 52,
+    "desc": "Self-hosted algorithmic options-trading dashboard for Zerodha Kite Connect (NIFTY/SENSEX)"
+  },
+  {
+    "full_name": "aptro/zerodha-mcp",
+    "clone_url": "https://github.com/aptro/zerodha-mcp.git",
+    "stars": 46,
+    "desc": "Mcp server to connect with zerodha's kite trade apis"
+  },
+  {
+    "full_name": "The-Great-One/Auto_Trader",
+    "clone_url": "https://github.com/The-Great-One/Auto_Trader.git",
+    "stars": 35,
+    "desc": "AutoTrader Bot is a Python-based stock trading bot for Indian markets, using indicators like MACD, RSI, and EMA. It integrates with Zerodha Kite for real-time trading and supports customizable strategies."
+  },
+  {
+    "full_name": "karthikramx/algorithmic-trading",
+    "clone_url": "https://github.com/karthikramx/algorithmic-trading.git",
+    "stars": 34,
+    "desc": "This is code base for a trading robot using Zerodha Kite Connect API and python"
+  },
+  {
+    "full_name": "TechfaneTechnologies/ZerodhaStrikesAllowedToTrade",
+    "clone_url": "https://github.com/TechfaneTechnologies/ZerodhaStrikesAllowedToTrade.git",
+    "stars": 30,
+    "desc": "A Python Script To Fetch The Nifty, BankNifty And FinNifty Contracts Allowed For Trading At Zerodha Kite Platform."
+  },
+  {
+    "full_name": "bogadib/chartink_kite_amo_mean_reversion",
+    "clone_url": "https://github.com/bogadib/chartink_kite_amo_mean_reversion.git",
+    "stars": 24,
+    "desc": "Python Algorithmic Trading code for using zerodha kite to place AMO orders based on Chartink scanner "
+  },
+  {
+    "full_name": "muraliprajapati/watchlistpro",
+    "clone_url": "https://github.com/muraliprajapati/watchlistpro.git",
+    "stars": 12,
+    "desc": "Advanced TradingView like watchlists for Zerodha Kite"
+  },
+  {
+    "full_name": "anurag-roy/kiteconnect-ts",
+    "clone_url": "https://github.com/anurag-roy/kiteconnect-ts.git",
+    "stars": 12,
+    "desc": "Unofficial library for the Kite Connect trading APIs, written in TypeScript"
+  },
+  {
+    "full_name": "tomtillo/Zerodha",
+    "clone_url": "https://github.com/tomtillo/Zerodha.git",
+    "stars": 11,
+    "desc": "Algo Trading on zerodha Kite"
+  },
+  {
+    "full_name": "xzaviourr/zerodha-algorithmic-trader",
+    "clone_url": "https://github.com/xzaviourr/zerodha-algorithmic-trader.git",
+    "stars": 8,
+    "desc": "Archived Flask trading-server prototype integrating Zerodha Kite Connect with five-EMA and Bank NIFTY short-straddle strategies; not investment advice."
+  },
+  {
+    "full_name": "arneish/zerodha-kite-auto-trading",
+    "clone_url": "https://github.com/arneish/zerodha-kite-auto-trading.git",
+    "stars": 7,
+    "desc": ""
+  },
+  {
+    "full_name": "SirCharan/Zerodha-MCP-Trading",
+    "clone_url": "https://github.com/SirCharan/Zerodha-MCP-Trading.git",
+    "stars": 7,
+    "desc": "MCP server for Zerodha's Kite API. Gives an LLM the tools to read market data, run strategies, and place orders on Indian equities and F&O."
+  },
+  {
+    "full_name": "ssjha/AutocopyTrade",
+    "clone_url": "https://github.com/ssjha/AutocopyTrade.git",
+    "stars": 6,
+    "desc": "Zerodha Kite trade replicator"
+  },
+  {
+    "full_name": "Pranavoro/kite_kill_switch",
+    "clone_url": "https://github.com/Pranavoro/kite_kill_switch.git",
+    "stars": 6,
+    "desc": "A simple kill switch for a kite to prevent overtrading."
+  },
+  {
+    "full_name": "arcofdescent/KiteConnect.jl",
+    "clone_url": "https://github.com/arcofdescent/KiteConnect.jl.git",
+    "stars": 6,
+    "desc": "Julia package for interfacing with Zerodha's KiteConnect API"
+  },
+  {
+    "full_name": "sandeepkumar0801/Ai-portfolio-analyzer-and-trading",
+    "clone_url": "https://github.com/sandeepkumar0801/Ai-portfolio-analyzer-and-trading.git",
+    "stars": 6,
+    "desc": "ai analysis and trading | Python | mysql | streamlit | Zerodha-kite | tradingview | gpt-4"
+  },
+  {
+    "full_name": "aranjan/kite-mcp",
+    "clone_url": "https://github.com/aranjan/kite-mcp.git",
+    "stars": 6,
+    "desc": "MCP server for Zerodha Kite -- trade Indian stocks via any MCP-compatible AI assistant"
+  },
+  {
+    "full_name": "turtlehq-tech/turtlestack-lite",
+    "clone_url": "https://github.com/turtlehq-tech/turtlestack-lite.git",
+    "stars": 6,
+    "desc": "TurtleStack Trading MCP Server is a comprehensive Model Context Protocol (MCP) server that provides unified access to multiple Indian stock brokers through Claude AI. It enables seamless trading operations, portfolio management, and advanced technical analysis across Kite (Zerodha), Groww, Dhan, and AngelOne brokers."
+  },
+  {
+    "full_name": "aayushpandey01/AI-Quant-Trading-Platform",
+    "clone_url": "https://github.com/aayushpandey01/AI-Quant-Trading-Platform.git",
+    "stars": 6,
+    "desc": "A personal, full stack algorithmic trading platform for Indian stocks/ETFs, built on Zerodha Kite Connect. It covers the whole loop: pull market data \u2192 backtest a strategy \u2192 paper/live trade it \u2192 watch it on a live dashboard."
+  },
+  {
+    "full_name": "anshuman-75/zerodha-algo-trader",
+    "clone_url": "https://github.com/anshuman-75/zerodha-algo-trader.git",
+    "stars": 5,
+    "desc": "Automated NSE trading bot using Zerodha Kite API and Claude AI"
+  },
+  {
+    "full_name": "linkwithjoydeep/kite-mcp",
+    "clone_url": "https://github.com/linkwithjoydeep/kite-mcp.git",
+    "stars": 5,
+    "desc": "A Model Context Protocol (MCP) server for integrating with Zerodha Kite API. This server provides Claude with tools to interact with your Kite trading account. This is an unofficial integration with Zerodha Kite API. Use at your own risk. Always verify trades and orders before execution."
+  },
+  {
+    "full_name": "boudhayan-dev/TradingView-Extension",
+    "clone_url": "https://github.com/boudhayan-dev/TradingView-Extension.git",
+    "stars": 4,
+    "desc": "A chrome extension that extends tradingview charts by facilitating order creation in Zerodha Kite."
+  },
+  {
+    "full_name": "SoRalenka/ORBBacktesting",
+    "clone_url": "https://github.com/SoRalenka/ORBBacktesting.git",
+    "stars": 4,
+    "desc": "Run Back testing algorithm on algo trading strategies like opening range breakout with historical data collected from Zerodha kite connect api to get performance metrics of said strategy on the particular stocks."
+  },
+  {
+    "full_name": "RajeshSivadasan/alice-blue-futures",
+    "clone_url": "https://github.com/RajeshSivadasan/alice-blue-futures.git",
+    "stars": 83,
+    "desc": "Fully automated Algorithmic Trading Bot created with Python for Alice Blue broker. Works on exchanges NSE and MCX for Nifty / Crude / Banknifty futures and options , absolutely FREE"
+  },
+  {
+    "full_name": "buzzsubash/algo_trading_strategies_india",
+    "clone_url": "https://github.com/buzzsubash/algo_trading_strategies_india.git",
+    "stars": 67,
+    "desc": "Open-source Python repository for algorithmic trading on NSE and BSE, focusing on option selling in NIFTY 50, BANK NIFTY, FIN NIFTY, MIDCAP NIFTY, and SENSEX. Currently supports Zerodha, with plans for multi-broker integration."
+  },
+  {
+    "full_name": "studiogangster/next-gen-algo-trading-bot",
+    "clone_url": "https://github.com/studiogangster/next-gen-algo-trading-bot.git",
+    "stars": 36,
+    "desc": "AI-powered, real-time NSE algorithmic trading engine with Zerodha integration, Redis caching, and live indicator/signal computation."
+  },
+  {
+    "full_name": "vinay-ram1999/AlgoTrade-API",
+    "clone_url": "https://github.com/vinay-ram1999/AlgoTrade-API.git",
+    "stars": 24,
+    "desc": "Fully automated NSE Stock/Equity trading-bot for Kotak Securities API with integrated back testing and ML algorithms."
+  },
+  {
+    "full_name": "akashyadavv/AlgoTradingNSE",
+    "clone_url": "https://github.com/akashyadavv/AlgoTradingNSE.git",
+    "stars": 22,
+    "desc": "A project that tries to influence buying and selling of stocks using an algorithmic model built using an ensemble of KNN, Decision Tree, Random forest and SVM. The model depicts an ideal scenario for maximizing profits from a trade. A momentum strategy that is used to predict trading signal has been modelled based on a set of rules using various technical indicators"
+  },
+  {
+    "full_name": "Skopaq-AI/skopaqtrader",
+    "clone_url": "https://github.com/Skopaq-AI/skopaqtrader.git",
+    "stars": 15,
+    "desc": "Open-source AI algorithmic trading platform for Indian equities. Multi-agent LLM pipeline with autonomous daemon, INDstocks broker integration, and AI-powered position management. Built on TradingAgents. For educational/research purposes only \u2014 not financial advice."
+  },
+  {
+    "full_name": "ParthVatsalya/Algorithmic-Trading-Strategies-Python",
+    "clone_url": "https://github.com/ParthVatsalya/Algorithmic-Trading-Strategies-Python.git",
+    "stars": 13,
+    "desc": "Algorithmic Trading Stratagies for stocks listed on National Stock Exchange India(NSE -India) with buy and sell logic"
+  },
+  {
+    "full_name": "vaibhavswaminathan/options-strats",
+    "clone_url": "https://github.com/vaibhavswaminathan/options-strats.git",
+    "stars": 7,
+    "desc": "Algorithmic trading strategies for options on NSE/BSE (Indian stock markets)"
+  },
+  {
+    "full_name": "Quant-IQ/quantiq",
+    "clone_url": "https://github.com/Quant-IQ/quantiq.git",
+    "stars": 6,
+    "desc": " End-to-end algorithmic trading system | NSE | Python | Dhan API"
+  },
+  {
+    "full_name": "singhanuj620/nse_scrap",
+    "clone_url": "https://github.com/singhanuj620/nse_scrap.git",
+    "stars": 6,
+    "desc": "NSE Stock Data Scraper - Full-stack web app for downloading Indian stock market data. Features Node.js/Express backend with direct NSE API integration (10x faster than web scraping) and React frontend. Provides real-time progress tracking, configurable stock lists, and automated CSV export. Perfect for financial analysis and algorithmic trading."
+  },
+  {
+    "full_name": "Indian-Algorithmic-Trading-Community/Finvasia",
+    "clone_url": "https://github.com/Indian-Algorithmic-Trading-Community/Finvasia.git",
+    "stars": 4,
+    "desc": "All Codes Which Will Help You Do Algorithmic Trading With Finvasia Broker"
+  },
+  {
+    "full_name": "pratikj37/Stocks-Algo-Trading",
+    "clone_url": "https://github.com/pratikj37/Stocks-Algo-Trading.git",
+    "stars": 3,
+    "desc": "Algorithmic Trading System for NSE Stocks and Derivatives"
+  },
+  {
+    "full_name": "tradevectorsrobots/Algorithmic-Trading",
+    "clone_url": "https://github.com/tradevectorsrobots/Algorithmic-Trading.git",
+    "stars": 2,
+    "desc": "Algorithmic trading strategies, articles & software for NSE/BSE India | Python automated trading | Backtesting | Quantitative finance"
+  },
+  {
+    "full_name": "KhushJ-17/Algorithmic-Trading-Engine",
+    "clone_url": "https://github.com/KhushJ-17/Algorithmic-Trading-Engine.git",
+    "stars": 2,
+    "desc": "A comprehensive algorithmic trading dashboard built with Streamlit that integrates with Zerodha's KiteConnect API. This platform provides real-time portfolio management, automated arbitrage detection between NSE and BSE exchanges, cash-futures spread analysis for theta capture strategies, and historical analytics with database-driven insights."
+  },
+  {
+    "full_name": "dreamhigh0525/hjAlgos_notebooks",
+    "clone_url": "https://github.com/dreamhigh0525/hjAlgos_notebooks.git",
+    "stars": 2,
+    "desc": "Algorithmic trading NSE and BSE stocks using Zerodha's kite-connect API."
+  },
+  {
+    "full_name": "tradevectorsrobots/awesome-algo-trading-india",
+    "clone_url": "https://github.com/tradevectorsrobots/awesome-algo-trading-india.git",
+    "stars": 2,
+    "desc": "A curated awesome list of algorithmic trading resources, tools, APIs, brokers & strategies for Indian markets (NSE/BSE/MCX)"
+  },
+  {
+    "full_name": "beingamanforever/Finstreet",
+    "clone_url": "https://github.com/beingamanforever/Finstreet.git",
+    "stars": 2,
+    "desc": "Algorithmic trading engine for NSE. Regime-Adaptive Ensemble ML (XGBoost + LightGBM). Features automated bias auditing (CI/CD), Triple-Barrier Labeling, and dynamic risk management"
+  },
+  {
+    "full_name": "nimishj3/StockTradingBot",
+    "clone_url": "https://github.com/nimishj3/StockTradingBot.git",
+    "stars": 2,
+    "desc": "algorithmic trading bot for Indian equity and F&O markets, built on Zerodha KiteConnect. Scans 200+ NSE symbols every 5 minutes, detects high-probability intraday setups using multi-strategy technical analysis, and delivers trade signals with entry, stop-loss, and target directly to Telegram."
+  },
+  {
+    "full_name": "Algo-Ankit/TradeProject",
+    "clone_url": "https://github.com/Algo-Ankit/TradeProject.git",
+    "stars": 2,
+    "desc": "Production-grade, event-driven algorithmic trading infrastructure for NSE India. Features real-time microstructure   analysis (OFI, VPIN), Options Greeks/IV surface calibration, institutional risk controls (Kill Switch), and   high-fidelity backtesting with Deflated Sharpe Ratio (DSR) validation"
+  },
+  {
+    "full_name": "Suprath/KIRA",
+    "clone_url": "https://github.com/Suprath/KIRA.git",
+    "stars": 2,
+    "desc": "A high-frequency, event-driven algorithmic trading platform designed for NSE/BSE (India) using the Upstox V3 API.  Built with a microservices architecture, it handles real-time ingestion, market microstructure analysis (VWAP, Order Book Imbalance), and automated execution \u2014 all while staying within Upstox free-tier API limits."
+  },
+  {
+    "full_name": "Rahulghuge94/KIRA",
+    "clone_url": "https://github.com/Rahulghuge94/KIRA.git",
+    "stars": 1,
+    "desc": "A high-frequency, event-driven algorithmic trading platform designed for NSE/BSE (India) using the Upstox V3 API.  Built with a microservices architecture, it handles real-time ingestion, market microstructure analysis (VWAP, Order Book Imbalance), and automated execution \u2014 all while staying within Upstox free-tier API limits."
+  },
+  {
+    "full_name": "nabrahma/ShortCircuit",
+    "clone_url": "https://github.com/nabrahma/ShortCircuit.git",
+    "stars": 1,
+    "desc": "Institutional-Grade Algorithmic Trading System for NSE."
+  },
+  {
+    "full_name": "KR1SHNA464/ai-algorithmic-trading-bot",
+    "clone_url": "https://github.com/KR1SHNA464/ai-algorithmic-trading-bot.git",
+    "stars": 1,
+    "desc": "AI-assisted intraday NSE options trading bot using Python, Angel One SmartAPI, Claude, Telegram alerts, and backtesting tools."
+  },
+  {
+    "full_name": "ari2612sarkar/Algorithmic_Trading_System",
+    "clone_url": "https://github.com/ari2612sarkar/Algorithmic_Trading_System.git",
+    "stars": 1,
+    "desc": "End-to-end NSE algo-trading platform: LSTM + LightGBM ensemble, RSI/SMA strategy, risk-aware backtesting, and an interactive Streamlit dashboard with one-command Docker deployment."
+  },
+  {
+    "full_name": "ridash2005/Multi-Regime-Algorithmic-Trading-System",
+    "clone_url": "https://github.com/ridash2005/Multi-Regime-Algorithmic-Trading-System.git",
+    "stars": 1,
+    "desc": "Regime-adaptive algorithmic trading system achieving 2.276 portfolio Sharpe ratio across Indian equities (NIFTY50, RELIANCE, SUNPHARMA, VBL, YESBANK) with novel RSI boosting innovation, symbol-specific strategy design, and 5-layer validation framework."
+  },
+  {
+    "full_name": "rishabhbhati634/Algorithmic-Trading-System",
+    "clone_url": "https://github.com/rishabhbhati634/Algorithmic-Trading-System.git",
+    "stars": 1,
+    "desc": "A trading system that trains DRL agents (PPO, A2C, DDPG, TD3, SAC) to make Buy/Hold/Sell decisions on real NSE market data. Supports single- and multi-stock trading, high-frequency and intraday data, custom trading environments, feature-rich state spaces, and risk-adjusted evaluation (Sharpe, Sortino). Built a research project at IIT Bombay."
+  },
+  {
+    "full_name": "tradevectorsrobots/AI-ML",
+    "clone_url": "https://github.com/tradevectorsrobots/AI-ML.git",
+    "stars": 1,
+    "desc": "AI & Machine Learning for algorithmic trading India | Python ML trading models | Predictive analytics for NSE/BSE markets"
+  },
+  {
+    "full_name": "Kartik-061/trading-bot",
+    "clone_url": "https://github.com/Kartik-061/trading-bot.git",
+    "stars": 1,
+    "desc": "Statistically-validated algorithmic trading system for NSE equities \u2014 FastAPI + React, real Indian cost modeling, honest strategy rejection"
+  },
+  {
+    "full_name": "jitenkr2030/Quantum-Trading-Bot-for-NSE-BSE",
+    "clone_url": "https://github.com/jitenkr2030/Quantum-Trading-Bot-for-NSE-BSE.git",
+    "stars": 1,
+    "desc": "A next-generation, enterprise-grade algorithmic trading platform with quantum-enhanced machine learning, real-time market analysis, and institutional-quality performance reporting. Built for professional traders, quantitative analysts, and financial institutions."
+  },
+  {
+    "full_name": "hemanthsai8104/Motilal-Oswal-Algo-Trading-Engine",
+    "clone_url": "https://github.com/hemanthsai8104/Motilal-Oswal-Algo-Trading-Engine.git",
+    "stars": 1,
+    "desc": "FastAPI middleware for algorithmic trading via the Motilal Oswal API across NSE, BSE, MCX, and more."
+  },
+  {
+    "full_name": "polakowo/vectorbt",
+    "clone_url": "https://github.com/polakowo/vectorbt.git",
+    "stars": 9100,
+    "desc": "The backtesting engine that gives you an unfair advantage. Run thousands of trading ideas before others finish one."
+  },
+  {
+    "full_name": "hudson-and-thames/mlfinlab",
+    "clone_url": "https://github.com/hudson-and-thames/mlfinlab.git",
+    "stars": 4923,
+    "desc": "MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. "
+  },
+  {
+    "full_name": "shashankvemuri/Finance",
+    "clone_url": "https://github.com/shashankvemuri/Finance.git",
+    "stars": 4267,
+    "desc": "Python toolkit for quantitative finance: stock analysis, technical indicators, strategy backtesting, portfolio optimization, and financial modeling."
+  },
+  {
+    "full_name": "tradytics/eiten",
+    "clone_url": "https://github.com/tradytics/eiten.git",
+    "stars": 3298,
+    "desc": "Statistical and Algorithmic Investing Strategies for Everyone"
+  },
+  {
+    "full_name": "skfolio/skfolio",
+    "clone_url": "https://github.com/skfolio/skfolio.git",
+    "stars": 2405,
+    "desc": "Python library for portfolio optimization built on top of scikit-learn"
+  },
+  {
+    "full_name": "cvxgrp/cvxportfolio",
+    "clone_url": "https://github.com/cvxgrp/cvxportfolio.git",
+    "stars": 1287,
+    "desc": "Portfolio optimization and back-testing."
+  },
+  {
+    "full_name": "jankrepl/deepdow",
+    "clone_url": "https://github.com/jankrepl/deepdow.git",
+    "stars": 1184,
+    "desc": "Portfolio optimization with deep learning."
+  },
+  {
+    "full_name": "santoshlite/EigenLedger",
+    "clone_url": "https://github.com/santoshlite/EigenLedger.git",
+    "stars": 1081,
+    "desc": "An Open Source Portfolio Backtesting Engine for Everyone | \u9762\u5411\u6240\u6709\u4eba\u7684\u5f00\u6e90\u6295\u8d44\u7ec4\u5408\u56de\u6d4b\u5f15\u64ce"
+  },
+  {
+    "full_name": "ryanfrigo/kalshi-ai-trading-bot",
+    "clone_url": "https://github.com/ryanfrigo/kalshi-ai-trading-bot.git",
+    "stars": 588,
+    "desc": "A toolkit for building AI-automated trading strategies on Kalshi prediction markets."
+  },
+  {
+    "full_name": "cn-vhql/FactorHub",
+    "clone_url": "https://github.com/cn-vhql/FactorHub.git",
+    "stars": 416,
+    "desc": "FactorHub is an open-source modern quantitative factor analysis platform designed specifically for the Chinese A-share market.  FactorHub = Factor + Hub  A full-stack quantitative investment research system integrating factor management, analysis, mining, portfolio optimization, and strategy backtesting."
+  },
+  {
+    "full_name": "VivekPa/OptimalPortfolio",
+    "clone_url": "https://github.com/VivekPa/OptimalPortfolio.git",
+    "stars": 373,
+    "desc": "An open source library for portfolio optimisation"
+  },
+  {
+    "full_name": "convexfi/riskparity.py",
+    "clone_url": "https://github.com/convexfi/riskparity.py.git",
+    "stars": 325,
+    "desc": "Fast and scalable construction of risk parity portfolios"
+  },
+  {
+    "full_name": "czielinski/portfolioopt",
+    "clone_url": "https://github.com/czielinski/portfolioopt.git",
+    "stars": 312,
+    "desc": "Financial Portfolio Optimization Routines in Python"
+  },
+  {
+    "full_name": "fortitudo-tech/fortitudo.tech",
+    "clone_url": "https://github.com/fortitudo-tech/fortitudo.tech.git",
+    "stars": 310,
+    "desc": "Entropy Pooling views and stress testing combined with Conditional Value-at-Risk (CVaR) portfolio optimization in Python."
+  },
+  {
+    "full_name": "mbk-dev/okama",
+    "clone_url": "https://github.com/mbk-dev/okama.git",
+    "stars": 273,
+    "desc": "Investment portfolio and stocks analyzing tools for Python with free historical data"
+  },
+  {
+    "full_name": "OnePunchMonk/AgentQuant",
+    "clone_url": "https://github.com/OnePunchMonk/AgentQuant.git",
+    "stars": 201,
+    "desc": "Autonomous quantitative trading research platform with self-improving AI agents using adaptive harness evolution, transforms stock lists into fully backtested strategies without coding"
+  },
+  {
+    "full_name": "bshaw2019/Crypto_Trader",
+    "clone_url": "https://github.com/bshaw2019/Crypto_Trader.git",
+    "stars": 192,
+    "desc": "Q-Learning Based Cryptocurrency Trader and Portfolio Optimizer for the Poloniex Exchange"
+  },
+  {
+    "full_name": "SilvioBaratto/optimizer",
+    "clone_url": "https://github.com/SilvioBaratto/optimizer.git",
+    "stars": 173,
+    "desc": "Quantitative portfolio construction and optimization platform built on skfolio and scikit-learn."
+  },
+  {
+    "full_name": "bqth29/simulated-bifurcation-algorithm",
+    "clone_url": "https://github.com/bqth29/simulated-bifurcation-algorithm.git",
+    "stars": 168,
+    "desc": "Python CPU/GPU implementation of the Simulated Bifurcation (SB) algorithm to solve quadratic optimization problems (QUBO, Ising, TSP, optimal asset allocations for a portfolio, etc.)."
+  },
+  {
+    "full_name": "WLM1ke/poptimizer",
+    "clone_url": "https://github.com/WLM1ke/poptimizer.git",
+    "stars": 163,
+    "desc": "\u041e\u043f\u0442\u0438\u043c\u0438\u0437\u0430\u0446\u0438\u044f \u0434\u043e\u043b\u0433\u043e\u0441\u0440\u043e\u0447\u043d\u043e\u0433\u043e \u043f\u043e\u0440\u0442\u0444\u0435\u043b\u044f \u0430\u043a\u0446\u0438\u0439"
+  },
+  {
+    "full_name": "panyisheng095-ux/VisionQuant-Pro",
+    "clone_url": "https://github.com/panyisheng095-ux/VisionQuant-Pro.git",
+    "stars": 143,
+    "desc": "\ud83e\udd16 \u57fa\u4e8e\u6df1\u5ea6\u5b66\u4e60\u7684AI\u91cf\u5316\u6295\u8d44\u7cfb\u7edf | Vision-Based Quantitative Trading System with Deep Learning"
+  },
+  {
+    "full_name": "jcrichard/pyrb",
+    "clone_url": "https://github.com/jcrichard/pyrb.git",
+    "stars": 131,
+    "desc": "Constrained and Unconstrained Risk Budgeting / Risk Parity Allocation in Python"
+  },
+  {
+    "full_name": "areed1192/portfolio-optimization",
+    "clone_url": "https://github.com/areed1192/portfolio-optimization.git",
+    "stars": 108,
+    "desc": "A python application, that demonstrates optimizing a portfolio using machine learning."
+  },
+  {
+    "full_name": "manujajay/portfolio-optimize",
+    "clone_url": "https://github.com/manujajay/portfolio-optimize.git",
+    "stars": 105,
+    "desc": "A simple Python package for optimizing investment portfolios using historical return data from Yahoo Finance. Users can easily determine the optimal portfolio allocation among a given set of tickers based on the mean-variance optimization method or other algorithms."
+  },
+  {
+    "full_name": "kvsnoufal/portfolio-optimization",
+    "clone_url": "https://github.com/kvsnoufal/portfolio-optimization.git",
+    "stars": 104,
+    "desc": ""
+  },
+  {
+    "full_name": "jialuechen/deepfolio",
+    "clone_url": "https://github.com/jialuechen/deepfolio.git",
+    "stars": 100,
+    "desc": "Quadratic Programming based Python Package for Portfolio Optimization"
+  },
+  {
+    "full_name": "ArturSepp/OptimalPortfolios",
+    "clone_url": "https://github.com/ArturSepp/OptimalPortfolios.git",
+    "stars": 94,
+    "desc": "Production multi-asset portfolio construction and rolling backtesting in Python"
+  },
+  {
+    "full_name": "initial-d/ml-quant-trading",
+    "clone_url": "https://github.com/initial-d/ml-quant-trading.git",
+    "stars": 86,
+    "desc": "PyTorch research stack for ML multi-factor trading: 213 factors, bias correction, portfolio optimization, and vectorized backtesting."
+  },
+  {
+    "full_name": "thk3421-models/cardiel",
+    "clone_url": "https://github.com/thk3421-models/cardiel.git",
+    "stars": 83,
+    "desc": "A tool for portfolio managers: use the Black-Litterman model to view optimal portfolio allocations using several of the most popular optimization methods."
+  },
+  {
+    "full_name": "kayuksel/generative-opt",
+    "clone_url": "https://github.com/kayuksel/generative-opt.git",
+    "stars": 82,
+    "desc": "Democratizing Index Tracking for Small Investors in Europe: A Meta-Learning Method for Sparse Portfolio Optimization"
+  },
+  {
+    "full_name": "yzoz/python-option-calculator",
+    "clone_url": "https://github.com/yzoz/python-option-calculator.git",
+    "stars": 135,
+    "desc": "Vanilla option pricing and visualisation using Black-Scholes model in pure Python"
+  },
+  {
+    "full_name": "willhammondhimself/adaptive-volatility-arbitrage",
+    "clone_url": "https://github.com/willhammondhimself/adaptive-volatility-arbitrage.git",
+    "stars": 6,
+    "desc": "Volatility arbitrage trading system with delta-neutral options, backtesting, live trading, and comprehensive Greeks management."
+  },
+  {
+    "full_name": "Kirill-Miroshnichenko/deribit-options-collector",
+    "clone_url": "https://github.com/Kirill-Miroshnichenko/deribit-options-collector.git",
+    "stars": 4,
+    "desc": "Real-time cryptocurrency options data collector with Greeks, IV tracking, and market data analysis"
+  },
+  {
+    "full_name": "pythonjeff/lox",
+    "clone_url": "https://github.com/pythonjeff/lox.git",
+    "stars": 4,
+    "desc": "Macro regime research platform \u2014 10-pillar scoring engine, live web dashboard, portfolio Greeks, Monte Carlo scenarios. CLI + Flask. Built for a PM morning risk meeting."
+  },
+  {
+    "full_name": "thedhruvhegde/ivsurf",
+    "clone_url": "https://github.com/thedhruvhegde/ivsurf.git",
+    "stars": 4,
+    "desc": "Options volatility research terminal with 3D spatial analytics, opening scanner, and quant models. Python, Streamlit, FastAPI."
+  },
+  {
+    "full_name": "cearps/AlphaMatrix",
+    "clone_url": "https://github.com/cearps/AlphaMatrix.git",
+    "stars": 2,
+    "desc": "Open-source options trading platform that ingests market data, models volatility (GARCH + greeks), back-tests strategies, and executes them in low-latency Python + C++."
+  },
+  {
+    "full_name": "nirajneupane17/Options-Trading-Strategies-2010-2020",
+    "clone_url": "https://github.com/nirajneupane17/Options-Trading-Strategies-2010-2020.git",
+    "stars": 2,
+    "desc": "European \u00b7 American \u00b7 Asian \u00b7 Barrier \u00b7 Binary options \u2014 10 trading strategies \u00b7 P&L profiles \u00b7 Greeks surfaces \u00b7 regime analysis \u00b7 Draghi recovery to COVID crash 2010\u20132020. Python."
+  },
+  {
+    "full_name": "valerian-drmt/fx-volatility-trading-system",
+    "clone_url": "https://github.com/valerian-drmt/fx-volatility-trading-system.git",
+    "stars": 2,
+    "desc": "EUR/USD FX options trading desk: live IB feed \u2192 SVI/SSVI surface, GARCH/HAR-RV fair vol, GMM regime   + PCA signals \u2192 delta-hedged execution. FastAPI \u00b7 React \u00b7 Postgres \u00b7 Redis on AWS."
+  },
+  {
+    "full_name": "diegourda/OptionsLab",
+    "clone_url": "https://github.com/diegourda/OptionsLab.git",
+    "stars": 2,
+    "desc": "A modular Python toolkit for advanced options pricing, volatility modeling, Greeks computation, and risk analysis. Includes Monte Carlo and Black-Scholes models, machine learning volatility surfaces, and interactive visualizations via Streamlit."
+  },
+  {
+    "full_name": "GoDkILLeR-04/Trivya-portfolio-tracker",
+    "clone_url": "https://github.com/GoDkILLeR-04/Trivya-portfolio-tracker.git",
+    "stars": 2,
+    "desc": "Real-time equity & options portfolio tracker with Greeks calculation, P&L analytics, and Streamlit dashboard for Indian markets (NSE/BSE)"
+  },
+  {
+    "full_name": "dasein108/crypto_options_desk_mcp",
+    "clone_url": "https://github.com/dasein108/crypto_options_desk_mcp.git",
+    "stars": 2,
+    "desc": "MCP server giving an LLM a typed, read-only tool surface over crypto-options analytics \u2014 GEX, vanna, skew, vol surface, greeks, IV-RV, live positions. Point Claude at Bybit data."
+  },
+  {
+    "full_name": "Viprasol-Tech/options-trading-bot",
+    "clone_url": "https://github.com/Viprasol-Tech/options-trading-bot.git",
+    "stars": 1,
+    "desc": "Options trading bot \u2014 Black-Scholes pricing, Greeks & strategy payoffs in Python. By Viprasol Tech."
+  },
+  {
+    "full_name": "samirhrl/options-trading",
+    "clone_url": "https://github.com/samirhrl/options-trading.git",
+    "stars": 1,
+    "desc": "Interactive Python/Dash dashboard for European options pricing, portfolio P&L, and Greeks visualization."
+  },
+  {
+    "full_name": "ishest/options",
+    "clone_url": "https://github.com/ishest/options.git",
+    "stars": 1,
+    "desc": "\"OptionBasics\" offers a deep dive into options trading. Using Jupyter notebooks, it elucidates fundamental concepts, from option definitions to the 'Greeks'. Interactive Python segments visualize payoffs and essential calculations, making it an ideal primer for budding options traders."
+  },
+  {
+    "full_name": "Skipflap/Black-Scholes-Options-Trading",
+    "clone_url": "https://github.com/Skipflap/Black-Scholes-Options-Trading.git",
+    "stars": 1,
+    "desc": "An interactive Python model for European option pricing with Greeks and implied volatility. Features a GUI and real-time API integration for live market data."
+  },
+  {
+    "full_name": "dmitrybudreyka/FX-Options-Dashboard",
+    "clone_url": "https://github.com/dmitrybudreyka/FX-Options-Dashboard.git",
+    "stars": 1,
+    "desc": "A Python project for FX Options Trading and Financial Markets. It builds a synthetic EUR/USD implied volatility surface, prices European FX options with the Garman-Kohlhagen model, calculates Greeks, runs scenario analysis, and produces a simple delta-hedging recommendation in an interactive Streamlit dashboard."
+  },
+  {
+    "full_name": "socials-zanskar/theta-reaper-template",
+    "clone_url": "https://github.com/socials-zanskar/theta-reaper-template.git",
+    "stars": 1,
+    "desc": "A defined-risk Iron Condor template for the Nubra Python SDK. Delta-based strike selection, Greeks, margin check before trading, and 4-leg multi-leg execution in one order."
+  },
+  {
+    "full_name": "csnyder256/option-contract-grader",
+    "clone_url": "https://github.com/csnyder256/option-contract-grader.git",
+    "stars": 1,
+    "desc": "Local FastAPI screener for long single-leg US equity options. Solves implied volatility and Greeks from Black-Scholes-Merton, scores each contract on seven weighted factors, and returns an A-F grade per ticker or across the full optionable universe."
+  },
+  {
+    "full_name": "parameshwaran-vijayakumar/optionsx-platform",
+    "clone_url": "https://github.com/parameshwaran-vijayakumar/optionsx-platform.git",
+    "stars": 0,
+    "desc": "Advanced Options Trading Platform - Strategy Builder, Greeks Lab, Risk Analysis, Data Lab | Python + Streamlit"
+  },
+  {
+    "full_name": "Preeti15-github/options-trading-strategy",
+    "clone_url": "https://github.com/Preeti15-github/options-trading-strategy.git",
+    "stars": 0,
+    "desc": "\"A Python-based Options Trading Strategy using Greeks (Delta, Gamma, Theta, Vega) with a web dashboard built in Streamlit.\""
+  },
+  {
+    "full_name": "harshkmr/alpaca-options-trading-ai-agent",
+    "clone_url": "https://github.com/harshkmr/alpaca-options-trading-ai-agent.git",
+    "stars": 0,
+    "desc": "OptionPulse AI \u2014 Autonomous options trading agent powered by Alpaca Markets, Black-Scholes quantitative Greeks, Google Gemini 3.6 Flash reasoning, and hardcoded deterministic risk gates."
+  },
+  {
+    "full_name": "KevinSheeranxyj/options-trading-py",
+    "clone_url": "https://github.com/KevinSheeranxyj/options-trading-py.git",
+    "stars": 0,
+    "desc": "Black-scholes + Greeks +   IV + Binomial Tree implement in python"
+  },
+  {
+    "full_name": "txnujk09/TK-Options-Trader",
+    "clone_url": "https://github.com/txnujk09/TK-Options-Trader.git",
+    "stars": 0,
+    "desc": "A full-stack options trading simulator with Monte Carlo & Black-Scholes pricing, real-time Greeks calculation, and a robust order-matching engine \u2014 built with Python, Flask, and SQLite."
+  },
+  {
+    "full_name": "DarkThyme/RL-Driven-FX-Options-Trading-and-Hedging-Strategies",
+    "clone_url": "https://github.com/DarkThyme/RL-Driven-FX-Options-Trading-and-Hedging-Strategies.git",
+    "stars": 0,
+    "desc": "A comprehensive FX options trading simulation using reinforcement learning, statistical arbitrage, momentum indicators, and risk management tools like the Greeks and Monte Carlo simulations\u2014all built in Python with Tensorflow."
+  },
+  {
+    "full_name": "v-quant-lab/voice-options-trader",
+    "clone_url": "https://github.com/v-quant-lab/voice-options-trader.git",
+    "stars": 0,
+    "desc": "Interactive voice-controlled options trading simulator. Speak strategy intents \u2192 Claude NLP parsing \u2192 real-time payoff visualization. Whisper STT, Black-Scholes/Monte Carlo pricing, Greeks dashboard, scenario analysis. Built with Dash, WebSocket streaming, Python."
+  },
+  {
+    "full_name": "MahBa88/Equity-Option-Pricing-and-Delta-Hedging-in-Python",
+    "clone_url": "https://github.com/MahBa88/Equity-Option-Pricing-and-Delta-Hedging-in-Python.git",
+    "stars": 0,
+    "desc": "The goal of this project is to understand how dynamic hedging impacts the profitability and risk profile of options trading. Using historical stock price data, the model computes option prices and Greeks (via the Black\u2013Scholes framework) and simulates periodic delta hedging."
+  },
+  {
+    "full_name": "zkuang84-arch/schwab-algorithmic-options-trading",
+    "clone_url": "https://github.com/zkuang84-arch/schwab-algorithmic-options-trading.git",
+    "stars": 0,
+    "desc": "A production-ready quantitative options trading and risk management system built in Python. The system interfaces directly with real-time market data feeds and automated order execution, coupled with custom analytical modules for Black-Scholes option pricing, Greeks calculations, Kelly Criterion position sizing, and dynamic exit management."
+  },
+  {
+    "full_name": "saksham10arora-dotcom/greeks",
+    "clone_url": "https://github.com/saksham10arora-dotcom/greeks.git",
+    "stars": 0,
+    "desc": "Black-Scholes prices, all greeks, implied volatility. Single file, zero dependencies, finite-difference verified."
+  },
+  {
+    "full_name": "Divyansh151005/greeks-driven-options-engine",
+    "clone_url": "https://github.com/Divyansh151005/greeks-driven-options-engine.git",
+    "stars": 0,
+    "desc": "Systematic options research & backtesting engine with Greeks-based risk management"
+  },
+  {
+    "full_name": "biancarubbico-spec/options-pricing-greeks-tool",
+    "clone_url": "https://github.com/biancarubbico-spec/options-pricing-greeks-tool.git",
+    "stars": 0,
+    "desc": "Interactive educational tool showing how six inputs affect an option's theoretical value and its Greeks. Streamlit + Plotly. No live data."
+  }
+]

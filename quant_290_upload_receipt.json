@@ -1,0 +1,111 @@
+{
+  "status": "SUCCESS",
+  "timestamp": "2026-09-16T14:00:45.452564",
+  "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+  "notebook_title": "290+ QUANT & ALGO TRADING GITHUB REPOS - SOVEREIGN CODE BRAIN",
+  "total_volumes": 10,
+  "total_source_bytes": 8583420,
+  "chrome_active_session": "NONE",
+  "volumes": [
+    {
+      "volume_idx": 1,
+      "volume_file": "01_HFT_SUB_MILLISECOND_EXECUTION.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 01_HFT_SUB_MILLISECOND_EXECUTION",
+      "sha256": "4fb7f574ba3252564fabfacaab09c965a95206b124ec881c7494178bd49fc301",
+      "size_bytes": 85298,
+      "unique_repos_count": 2,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 2,
+      "volume_file": "02_OPTIONS_GREEKS_VOLATILITY.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 02_OPTIONS_GREEKS_VOLATILITY",
+      "sha256": "58476362c44bbfff3b71e4b467b727fb86eb91e3a7b9e692d9e9c3b4b6f63e7f",
+      "size_bytes": 306326,
+      "unique_repos_count": 10,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 3,
+      "volume_file": "03_INDIAN_DERIVATIVES_DHAN_FYERS.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 03_INDIAN_DERIVATIVES_DHAN_FYERS",
+      "sha256": "d058af81a166d6e14ad57416f3b087847ad371650c43ea014cdb4af1e1523b6e",
+      "size_bytes": 1128079,
+      "unique_repos_count": 47,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 4,
+      "volume_file": "04_ORDER_FLOW_IMBALANCE_MICROSTRUCTURE.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 04_ORDER_FLOW_IMBALANCE_MICROSTRUCTURE",
+      "sha256": "6a51aa215ece68af8f59f2fbb8286bd777a294a767c23300bfe11e58820aa6af",
+      "size_bytes": 402161,
+      "unique_repos_count": 22,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 5,
+      "volume_file": "05_STAT_ARB_FINANCIAL_ML.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 05_STAT_ARB_FINANCIAL_ML",
+      "sha256": "23266a43c31183e250fef1f380a9c4d0d5e0d3fac45a9e8ea2e736b6fa73e77a",
+      "size_bytes": 290586,
+      "unique_repos_count": 11,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 6,
+      "volume_file": "06_VECTOR_EVENT_BACKTEST_ENGINES.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 06_VECTOR_EVENT_BACKTEST_ENGINES",
+      "sha256": "07953f0ccde57bbc4896b2e5f06e44735f9779cb03d95642a07c4da7afa0247d",
+      "size_bytes": 457863,
+      "unique_repos_count": 12,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 7,
+      "volume_file": "07_FINANCIAL_NLP_SENTIMENT_RAG.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 07_FINANCIAL_NLP_SENTIMENT_RAG",
+      "sha256": "f79c5c46c25d4637a7d7b095d14c572850617bf253dd1c07d8e7171721b516a2",
+      "size_bytes": 417824,
+      "unique_repos_count": 10,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 8,
+      "volume_file": "08_MULTI_AGENT_QUANT_SWARMS.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 08_MULTI_AGENT_QUANT_SWARMS",
+      "sha256": "2a964535be0eb31de9de00150cd45f59d1ccf997cf6682de9499e91dfe3b3242",
+      "size_bytes": 138135,
+      "unique_repos_count": 6,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 9,
+      "volume_file": "09_HIGH_PERFORMANCE_SIMD_DATA_INFRA.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 09_HIGH_PERFORMANCE_SIMD_DATA_INFRA",
+      "sha256": "383887515ed8fa430132e5cdda50fb17b8684b090d6979fbd411ae1a44a901e3",
+      "size_bytes": 465691,
+      "unique_repos_count": 13,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    },
+    {
+      "volume_idx": 10,
+      "volume_file": "10_SOVEREIGN_QUANT_PRODUCTION_BOTS.md",
+      "title": "\ud83c\udfdb\ufe0f NotebookLM Quant Source: 10_SOVEREIGN_QUANT_PRODUCTION_BOTS",
+      "sha256": "52b45fc86ae5b5c90cd4a16cb76fd9180d45d735615b7cdba00f5f5c445f942f",
+      "size_bytes": 4891457,
+      "unique_repos_count": 157,
+      "notebook_id": "55417afe-c86a-4d8a-8c41-19cb4375dc59",
+      "status": "INGESTED"
+    }
+  ]
+}

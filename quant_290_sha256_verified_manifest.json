@@ -1,0 +1,3866 @@
+[
+  {
+    "index": 1,
+    "filename": "QUANT_REPO_001_dhanhq_ecosystem.txt",
+    "title": "QUANT_REPO_001 [8f16f93dd61623fb]: dhanhq_ecosystem (FULL END-TO-END CODE)",
+    "sha256": "8f16f93dd61623fbfaa698ebde4d5509d5b1b3b16907eca63cbc0f9123e7d49b",
+    "sha256_short": "8f16f93dd61623fb",
+    "primary_name": "dhanhq_ecosystem",
+    "included_repos": [
+      "dhan-trading-bot",
+      "Ai_Based_trading_with_dhan_API",
+      "Kite-Dhan_API_Based_Trading"
+    ],
+    "file_count": 56,
+    "byte_size": 2432390
+  },
+  {
+    "index": 2,
+    "filename": "QUANT_REPO_002_zerodha_kite_suite.txt",
+    "title": "QUANT_REPO_002 [c1ea697b94308006]: zerodha_kite_suite (FULL END-TO-END CODE)",
+    "sha256": "c1ea697b943080065038f983800e67b5517c7d0b0a46eb5b25c552dc2219b59e",
+    "sha256_short": "c1ea697b94308006",
+    "primary_name": "zerodha_kite_suite",
+    "included_repos": [
+      "Lean.Brokerages.Zerodha"
+    ],
+    "file_count": 4,
+    "byte_size": 14301
+  },
+  {
+    "index": 3,
+    "filename": "QUANT_REPO_003_fyers_trading_suite.txt",
+    "title": "QUANT_REPO_003 [a1c9ea7c933a5c6a]: fyers_trading_suite (FULL END-TO-END CODE)",
+    "sha256": "a1c9ea7c933a5c6ada2a0969a7f9e23b9c498fd8fd9318dd29087dca576b2d8a",
+    "sha256_short": "a1c9ea7c933a5c6a",
+    "primary_name": "fyers_trading_suite",
+    "included_repos": [
+      "fyers-api-sample-code",
+      "IN-QUANT-012_FyersDev__fyers-api-sample-code"
+    ],
+    "file_count": 154,
+    "byte_size": 330489
+  },
+  {
+    "index": 4,
+    "filename": "QUANT_REPO_004_finvasia_shoonya_suite.txt",
+    "title": "QUANT_REPO_004 [4d195e217c3aada1]: finvasia_shoonya_suite (FULL END-TO-END CODE)",
+    "sha256": "4d195e217c3aada1179fba4f08d3c1e6dde42b7d39582e9a8c4335fab168c41c",
+    "sha256_short": "4d195e217c3aada1",
+    "primary_name": "finvasia_shoonya_suite",
+    "included_repos": [
+      "ShoonyaApi-py",
+      "IN-QUANT-008_Shoonya-Dev__ShoonyaApi-py"
+    ],
+    "file_count": 42,
+    "byte_size": 225723
+  },
+  {
+    "index": 5,
+    "filename": "QUANT_REPO_005_angel_one_smartapi_suite.txt",
+    "title": "QUANT_REPO_005 [3a9bc0fa92301b3b]: angel_one_smartapi_suite (FULL END-TO-END CODE)",
+    "sha256": "3a9bc0fa92301b3b0c671dbce9420ff8a7fc0c76745ae116cea1643464d82746",
+    "sha256_short": "3a9bc0fa92301b3b",
+    "primary_name": "angel_one_smartapi_suite",
+    "included_repos": [
+      "smartapi-python",
+      "IN-QUANT-007_angel-one__smartapi-python"
+    ],
+    "file_count": 32,
+    "byte_size": 213327
+  },
+  {
+    "index": 6,
+    "filename": "QUANT_REPO_006_nse_bse_option_chain_suite.txt",
+    "title": "QUANT_REPO_006 [648825685604ad05]: nse_bse_option_chain_suite (FULL END-TO-END CODE)",
+    "sha256": "648825685604ad0566ab1c3731df229d1611980959ffff7f9db0571524ad53c3",
+    "sha256_short": "648825685604ad05",
+    "primary_name": "nse_bse_option_chain_suite",
+    "included_repos": [
+      "Python-NSE-Option-Chain-Analyzer",
+      "IN-QUANT-046_VarunS2002__Python-NSE-Option-Chain-Analyzer",
+      "express-option-chain",
+      "option_chain_analysis",
+      "Option-Trading-Backend"
+    ],
+    "file_count": 19,
+    "byte_size": 2164415
+  },
+  {
+    "index": 7,
+    "filename": "QUANT_REPO_007_sensibull_oi_live_suite.txt",
+    "title": "QUANT_REPO_007 [05a0321852f7e4ae]: sensibull_oi_live_suite (FULL END-TO-END CODE)",
+    "sha256": "05a0321852f7e4aeccec413a00e5abeedec228be92049ebd2424eccc475e2042",
+    "sha256_short": "05a0321852f7e4ae",
+    "primary_name": "sensibull_oi_live_suite",
+    "included_repos": [
+      "sensibull-realtime-options-api-ingestor",
+      "Open-Interest-NSE-Live-Analysis",
+      "nse-oi-analysis"
+    ],
+    "file_count": 22,
+    "byte_size": 1909620
+  },
+  {
+    "index": 8,
+    "filename": "QUANT_REPO_008_nse_stock_scanners_suite.txt",
+    "title": "QUANT_REPO_008 [d6044d677da7c992]: nse_stock_scanners_suite (FULL END-TO-END CODE)",
+    "sha256": "d6044d677da7c992b2659612bd5581b8453231c00c4e57ae84864e859b28d9ac",
+    "sha256_short": "d6044d677da7c992",
+    "primary_name": "nse_stock_scanners_suite",
+    "included_repos": [
+      "NSE-Stock-Scanner",
+      "Screeni-py",
+      "PKScreener",
+      "Streamlit-Scanner-App"
+    ],
+    "file_count": 164,
+    "byte_size": 2109770
+  },
+  {
+    "index": 9,
+    "filename": "QUANT_REPO_009_multibroker_bridges_suite.txt",
+    "title": "QUANT_REPO_009 [73a880440f4d0ea4]: multibroker_bridges_suite (FULL END-TO-END CODE)",
+    "sha256": "73a880440f4d0ea449082a99a642fd7abda9de10d0ef2fd5d68b3efcde8910f6",
+    "sha256_short": "73a880440f4d0ea4",
+    "primary_name": "multibroker_bridges_suite",
+    "included_repos": [
+      "uniBroker",
+      "IN-QUANT-027_SU1199__uniBroker",
+      "alphatrade",
+      "IN-QUANT-025_algo2t__alphatrade",
+      "kinetick",
+      "IN-QUANT-073_imvinaypatil__kinetick",
+      "kha-ching",
+      "IN-QUANT-125_aakashlpin__kha-ching"
+    ],
+    "file_count": 318,
+    "byte_size": 1616424
+  },
+  {
+    "index": 10,
+    "filename": "QUANT_REPO_010_indian_stock_market_apis_suite.txt",
+    "title": "QUANT_REPO_010 [25fca1a9b8972c1d]: indian_stock_market_apis_suite (FULL END-TO-END CODE)",
+    "sha256": "25fca1a9b8972c1d8a720fc5ac2cef574a61b702aeb41340e02a55d2a21eeed8",
+    "sha256_short": "25fca1a9b8972c1d",
+    "primary_name": "indian_stock_market_apis_suite",
+    "included_repos": [
+      "stock-nse-india",
+      "IN-QUANT-049_hi-imcodeman__stock-nse-india",
+      "Indian-Stock-Market-API",
+      "IN-QUANT-079_Clayborninconsistent906__Indian-Stock-Market-API",
+      "IN-QUANT-051_0xramm__Indian-Stock-Market-API",
+      "IN-QUANT-068_BennyThadikaran__BseIndiaApi",
+      "jugaad-data",
+      "IN-QUANT-047_jugaad-py__jugaad-data"
+    ],
+    "file_count": 119,
+    "byte_size": 2100798
+  },
+  {
+    "index": 11,
+    "filename": "QUANT_REPO_011_indian_quant_mcp_servers_suite.txt",
+    "title": "QUANT_REPO_011 [01cc019998e65744]: indian_quant_mcp_servers_suite (FULL END-TO-END CODE)",
+    "sha256": "01cc019998e657442868d2e446de90605cdae99e7fe8c867d531d1b0865e0e05",
+    "sha256_short": "01cc019998e65744",
+    "primary_name": "indian_quant_mcp_servers_suite",
+    "included_repos": [
+      "Live-NSE-BSE-MCP",
+      "Indian-Option-MCP",
+      "nse-bse-indian-stock-market-data-mcp"
+    ],
+    "file_count": 69,
+    "byte_size": 614458
+  },
+  {
+    "index": 12,
+    "filename": "QUANT_REPO_012_rl_trading_suite.txt",
+    "title": "QUANT_REPO_012 [d7046f72acd7ade5]: rl_trading_suite (FULL END-TO-END CODE)",
+    "sha256": "d7046f72acd7ade5e32b551a6a73228633ad5a417ad81dafabf07a92ca018be5",
+    "sha256_short": "d7046f72acd7ade5",
+    "primary_name": "rl_trading_suite",
+    "included_repos": [
+      "FinRL",
+      "ElegantRL",
+      "Autonomous-RL-Trading-Bot-Laplace"
+    ],
+    "file_count": 246,
+    "byte_size": 2108754
+  },
+  {
+    "index": 13,
+    "filename": "QUANT_REPO_013_orderflow_imbalance_suite.txt",
+    "title": "QUANT_REPO_013 [e9403ac3d347e2b6]: orderflow_imbalance_suite (FULL END-TO-END CODE)",
+    "sha256": "e9403ac3d347e2b63738c666462bd79839089a76b80595daa431f0e6b014d511",
+    "sha256_short": "e9403ac3d347e2b6",
+    "primary_name": "orderflow_imbalance_suite",
+    "included_repos": [
+      "Work-Trial-Task-Cross-Impact-Analysis-of-Order-Flow-Imbalance-OFI-",
+      "TapeFlow"
+    ],
+    "file_count": 70,
+    "byte_size": 628446
+  },
+  {
+    "index": 14,
+    "filename": "QUANT_REPO_014_volatility_greeks_suite.txt",
+    "title": "QUANT_REPO_014 [34d49fa43825f437]: volatility_greeks_suite (FULL END-TO-END CODE)",
+    "sha256": "34d49fa43825f437ae445c6483032836ed7f0dbb9668464c4c91d4836c19cf2c",
+    "sha256_short": "34d49fa43825f437",
+    "primary_name": "volatility_greeks_suite",
+    "included_repos": [
+      "vollib",
+      "PHASE4-QUANT-018_jasonstrimpel__volatility-trading"
+    ],
+    "file_count": 36,
+    "byte_size": 164278
+  },
+  {
+    "index": 15,
+    "filename": "QUANT_REPO_015_nautilus_hft_suite.txt",
+    "title": "QUANT_REPO_015 [d32fb8bfa3f5b2dc]: nautilus_hft_suite (FULL END-TO-END CODE)",
+    "sha256": "d32fb8bfa3f5b2dca92e3cc73b527351e972c4ce9dd44eef8613b426489d1f69",
+    "sha256_short": "d32fb8bfa3f5b2dc",
+    "primary_name": "nautilus_hft_suite",
+    "included_repos": [
+      "nautilus_trader",
+      "IN-QUANT-098_nautechsystems__nautilus_trader"
+    ],
+    "file_count": 263,
+    "byte_size": 2177083
+  },
+  {
+    "index": 16,
+    "filename": "QUANT_REPO_016_backtesting_powerhouses_suite.txt",
+    "title": "QUANT_REPO_016 [c20317c3705eebd1]: backtesting_powerhouses_suite (FULL END-TO-END CODE)",
+    "sha256": "c20317c3705eebd1c4f655869ea9a8af3d5bed6b7959c98c22e246eff63711df",
+    "sha256_short": "c20317c3705eebd1",
+    "primary_name": "backtesting_powerhouses_suite",
+    "included_repos": [
+      "vectorbt",
+      "IN-QUANT-096_polakowo__vectorbt",
+      "zipline",
+      "zipline-trader",
+      "backtrader",
+      "IN-QUANT-094_mementum__backtrader"
+    ],
+    "file_count": 84,
+    "byte_size": 2126271
+  },
+  {
+    "index": 17,
+    "filename": "QUANT_REPO_017_fin_llm_agents_suite.txt",
+    "title": "QUANT_REPO_017 [8bf8256821b2dc5f]: fin_llm_agents_suite (FULL END-TO-END CODE)",
+    "sha256": "8bf8256821b2dc5f4a05bf41f833e62206315a3e508d4bfc9f6a88851bb1863b",
+    "sha256_short": "8bf8256821b2dc5f",
+    "primary_name": "fin_llm_agents_suite",
+    "included_repos": [
+      "FinRobot",
+      "FinNLP",
+      "financial-agent-india",
+      "Stock-Market-Analyzer-AI-Agent",
+      "AI-trader"
+    ],
+    "file_count": 182,
+    "byte_size": 2423982
+  },
+  {
+    "index": 18,
+    "filename": "QUANT_REPO_018_dhan-nifty-algo-trading-lab.txt",
+    "title": "QUANT_REPO_018 [c8367890c42bd325]: dhan-nifty-algo-trading-lab (FULL END-TO-END CODE)",
+    "sha256": "c8367890c42bd325c9af543152b18990cf98866d88c9ef5171432c746a76c8a2",
+    "sha256_short": "c8367890c42bd325",
+    "primary_name": "dhan-nifty-algo-trading-lab",
+    "included_repos": [
+      "dhan-nifty-algo-trading-lab"
+    ],
+    "file_count": 49,
+    "byte_size": 228972
+  },
+  {
+    "index": 19,
+    "filename": "QUANT_REPO_019_DhanSetu.txt",
+    "title": "QUANT_REPO_019 [4fbe4d8305be49a6]: DhanSetu (FULL END-TO-END CODE)",
+    "sha256": "4fbe4d8305be49a65287e418928060ad8c01923382f3dc5ebe0decf9aa3ee512",
+    "sha256_short": "4fbe4d8305be49a6",
+    "primary_name": "DhanSetu",
+    "included_repos": [
+      "DhanSetu"
+    ],
+    "file_count": 67,
+    "byte_size": 1930730
+  },
+  {
+    "index": 20,
+    "filename": "QUANT_REPO_020_dhan-nifty-lab.txt",
+    "title": "QUANT_REPO_020 [4a5a8e296faaed1d]: dhan-nifty-lab (FULL END-TO-END CODE)",
+    "sha256": "4a5a8e296faaed1df277cfa7d0c844ac4a09668cd6d94f07d91a1d309f405e58",
+    "sha256_short": "4a5a8e296faaed1d",
+    "primary_name": "dhan-nifty-lab",
+    "included_repos": [
+      "dhan-nifty-lab"
+    ],
+    "file_count": 49,
+    "byte_size": 228855
+  },
+  {
+    "index": 21,
+    "filename": "QUANT_REPO_021_IN-QUANT-103_stefan-jansen__zipline-reloaded.txt",
+    "title": "QUANT_REPO_021 [715d584826f86f0d]: IN-QUANT-103_stefan-jansen__zipline-reloaded (FULL END-TO-END CODE)",
+    "sha256": "715d584826f86f0d1d0e47e5678a848b2d5f689fd1e9e76fc67fd80dbd8cd1dc",
+    "sha256_short": "715d584826f86f0d",
+    "primary_name": "IN-QUANT-103_stefan-jansen__zipline-reloaded",
+    "included_repos": [
+      "IN-QUANT-103_stefan-jansen__zipline-reloaded"
+    ],
+    "file_count": 129,
+    "byte_size": 2125989
+  },
+  {
+    "index": 22,
+    "filename": "QUANT_REPO_022_DhanMCP.txt",
+    "title": "QUANT_REPO_022 [a26211d127661d8b]: DhanMCP (FULL END-TO-END CODE)",
+    "sha256": "a26211d127661d8b9a8f605974d36e6cf2233a510ab3d3ce59cffcc554a0574a",
+    "sha256_short": "a26211d127661d8b",
+    "primary_name": "DhanMCP",
+    "included_repos": [
+      "DhanMCP"
+    ],
+    "file_count": 8,
+    "byte_size": 99872
+  },
+  {
+    "index": 23,
+    "filename": "QUANT_REPO_023_zerodha-algo-trading.txt",
+    "title": "QUANT_REPO_023 [d0192debe16a1a1a]: zerodha-algo-trading (FULL END-TO-END CODE)",
+    "sha256": "d0192debe16a1a1a4fd22e080e455ba8b9283d95a8786bb30244497f93621e19",
+    "sha256_short": "d0192debe16a1a1a",
+    "primary_name": "zerodha-algo-trading",
+    "included_repos": [
+      "zerodha-algo-trading"
+    ],
+    "file_count": 27,
+    "byte_size": 473014
+  },
+  {
+    "index": 24,
+    "filename": "QUANT_REPO_024_tradehull-dhan-live-algo-skills.txt",
+    "title": "QUANT_REPO_024 [ca4cd7439c8b6ee1]: tradehull-dhan-live-algo-skills (FULL END-TO-END CODE)",
+    "sha256": "ca4cd7439c8b6ee1d2182ab250309c76d4476fc04e6924e5c38c7cf1ea9a6320",
+    "sha256_short": "ca4cd7439c8b6ee1",
+    "primary_name": "tradehull-dhan-live-algo-skills",
+    "included_repos": [
+      "tradehull-dhan-live-algo-skills"
+    ],
+    "file_count": 4,
+    "byte_size": 34384
+  },
+  {
+    "index": 25,
+    "filename": "QUANT_REPO_025_SMACrossoverStrategy-DhanAPI.txt",
+    "title": "QUANT_REPO_025 [00ed568defaabf52]: SMACrossoverStrategy-DhanAPI (FULL END-TO-END CODE)",
+    "sha256": "00ed568defaabf52b2e642ab7677c4a3752cd65583fcf8a56c1d01e9fb2f2c96",
+    "sha256_short": "00ed568defaabf52",
+    "primary_name": "SMACrossoverStrategy-DhanAPI",
+    "included_repos": [
+      "SMACrossoverStrategy-DhanAPI"
+    ],
+    "file_count": 4,
+    "byte_size": 19335
+  },
+  {
+    "index": 26,
+    "filename": "QUANT_REPO_026_IN-QUANT-070_sunnysaxena__Extract-data-from-fyers-.txt",
+    "title": "QUANT_REPO_026 [e2751107e6c32f31]: IN-QUANT-070_sunnysaxena__Extract-data-from-fyers- (FULL END-TO-END CODE)",
+    "sha256": "e2751107e6c32f31fd4ddd74a67b1e027a61eb078cfe8ddbf0d96b3c1da40f45",
+    "sha256_short": "e2751107e6c32f31",
+    "primary_name": "IN-QUANT-070_sunnysaxena__Extract-data-from-fyers-api",
+    "included_repos": [
+      "IN-QUANT-070_sunnysaxena__Extract-data-from-fyers-api"
+    ],
+    "file_count": 38,
+    "byte_size": 112304
+  },
+  {
+    "index": 27,
+    "filename": "QUANT_REPO_027_IN-QUANT-020_rakshitdabral__groww-trader.txt",
+    "title": "QUANT_REPO_027 [f3cc663eae02229d]: IN-QUANT-020_rakshitdabral__groww-trader (FULL END-TO-END CODE)",
+    "sha256": "f3cc663eae02229d27699798be914547e181ffe09ae18e7e83844ffaf1ef8e27",
+    "sha256_short": "f3cc663eae02229d",
+    "primary_name": "IN-QUANT-020_rakshitdabral__groww-trader",
+    "included_repos": [
+      "IN-QUANT-020_rakshitdabral__groww-trader"
+    ],
+    "file_count": 19,
+    "byte_size": 84539
+  },
+  {
+    "index": 28,
+    "filename": "QUANT_REPO_028_IN-QUANT-019_webclinic017__zerodha-4.txt",
+    "title": "QUANT_REPO_028 [8cb4c0b799ebd573]: IN-QUANT-019_webclinic017__zerodha-4 (FULL END-TO-END CODE)",
+    "sha256": "8cb4c0b799ebd57381ee7fa6a1c55e8f817ed3367703fa5ab6d49da13100bdfa",
+    "sha256_short": "8cb4c0b799ebd573",
+    "primary_name": "IN-QUANT-019_webclinic017__zerodha-4",
+    "included_repos": [
+      "IN-QUANT-019_webclinic017__zerodha-4"
+    ],
+    "file_count": 1,
+    "byte_size": 2558
+  },
+  {
+    "index": 29,
+    "filename": "QUANT_REPO_029_IN-QUANT-018_kuldeepverma__groww.txt",
+    "title": "QUANT_REPO_029 [cec2a0cabdc262a1]: IN-QUANT-018_kuldeepverma__groww (FULL END-TO-END CODE)",
+    "sha256": "cec2a0cabdc262a1ae43d630485b45ee593498d26c44adedff0c8690c05bbc5c",
+    "sha256_short": "cec2a0cabdc262a1",
+    "primary_name": "IN-QUANT-018_kuldeepverma__groww",
+    "included_repos": [
+      "IN-QUANT-018_kuldeepverma__groww"
+    ],
+    "file_count": 9,
+    "byte_size": 107870
+  },
+  {
+    "index": 30,
+    "filename": "QUANT_REPO_030_IN-QUANT-013_krishnavelu__alice_blue.txt",
+    "title": "QUANT_REPO_030 [b6b9593a33958a21]: IN-QUANT-013_krishnavelu__alice_blue (FULL END-TO-END CODE)",
+    "sha256": "b6b9593a33958a21756b04e0d392a9d4900fa709a0a367f7c9eb2a8243c3c21b",
+    "sha256_short": "b6b9593a33958a21",
+    "primary_name": "IN-QUANT-013_krishnavelu__alice_blue",
+    "included_repos": [
+      "IN-QUANT-013_krishnavelu__alice_blue"
+    ],
+    "file_count": 4,
+    "byte_size": 99491
+  },
+  {
+    "index": 31,
+    "filename": "QUANT_REPO_031_IN-QUANT-011_Kotak-Neo__kotak-neo-python.txt",
+    "title": "QUANT_REPO_031 [16f64e893cc0219e]: IN-QUANT-011_Kotak-Neo__kotak-neo-python (FULL END-TO-END CODE)",
+    "sha256": "16f64e893cc0219ea9260f260b76f1645e1fe90a2d60dcb843f89e2795692493",
+    "sha256_short": "16f64e893cc0219e",
+    "primary_name": "IN-QUANT-011_Kotak-Neo__kotak-neo-python",
+    "included_repos": [
+      "IN-QUANT-011_Kotak-Neo__kotak-neo-python"
+    ],
+    "file_count": 111,
+    "byte_size": 846132
+  },
+  {
+    "index": 32,
+    "filename": "QUANT_REPO_032_IN-QUANT-009_Kotak-Neo__Kotak-neo-api-v2.txt",
+    "title": "QUANT_REPO_032 [2dc0a04a94e47c65]: IN-QUANT-009_Kotak-Neo__Kotak-neo-api-v2 (FULL END-TO-END CODE)",
+    "sha256": "2dc0a04a94e47c656d1fcbcc9806b4aa4b3ea26f4ec0dc76505be3b40be10fa0",
+    "sha256_short": "2dc0a04a94e47c65",
+    "primary_name": "IN-QUANT-009_Kotak-Neo__Kotak-neo-api-v2",
+    "included_repos": [
+      "IN-QUANT-009_Kotak-Neo__Kotak-neo-api-v2"
+    ],
+    "file_count": 30,
+    "byte_size": 217889
+  },
+  {
+    "index": 33,
+    "filename": "QUANT_REPO_033_IN-QUANT-006_upstox__upstox-python.txt",
+    "title": "QUANT_REPO_033 [6f6e90e58bf55a6c]: IN-QUANT-006_upstox__upstox-python (FULL END-TO-END CODE)",
+    "sha256": "6f6e90e58bf55a6c8922e2f388264a1d720fe74d62f5e1ab73b25927fc04b5ae",
+    "sha256_short": "6f6e90e58bf55a6c",
+    "primary_name": "IN-QUANT-006_upstox__upstox-python",
+    "included_repos": [
+      "IN-QUANT-006_upstox__upstox-python"
+    ],
+    "file_count": 403,
+    "byte_size": 2100849
+  },
+  {
+    "index": 34,
+    "filename": "QUANT_REPO_034_IN-QUANT-005_dhan-oss__DhanHQ-py.txt",
+    "title": "QUANT_REPO_034 [03254b6acc00c4bc]: IN-QUANT-005_dhan-oss__DhanHQ-py (FULL END-TO-END CODE)",
+    "sha256": "03254b6acc00c4bc73c268ca2195fb6faeacf5320a1f6fda844aa13beb2a3390",
+    "sha256_short": "03254b6acc00c4bc",
+    "primary_name": "IN-QUANT-005_dhan-oss__DhanHQ-py",
+    "included_repos": [
+      "IN-QUANT-005_dhan-oss__DhanHQ-py"
+    ],
+    "file_count": 89,
+    "byte_size": 250916
+  },
+  {
+    "index": 35,
+    "filename": "QUANT_REPO_035_IN-QUANT-004_aeron7__Mastering-AlgoTrading-A-Begin.txt",
+    "title": "QUANT_REPO_035 [bdd9d49f4c74c359]: IN-QUANT-004_aeron7__Mastering-AlgoTrading-A-Begin (FULL END-TO-END CODE)",
+    "sha256": "bdd9d49f4c74c359de4c7e5cb7ffc92f3be8eafd8ed6624a561393aac2985477",
+    "sha256_short": "bdd9d49f4c74c359",
+    "primary_name": "IN-QUANT-004_aeron7__Mastering-AlgoTrading-A-Beginners-Guide-using-KiteConnect-API",
+    "included_repos": [
+      "IN-QUANT-004_aeron7__Mastering-AlgoTrading-A-Beginners-Guide-using-KiteConnect-API"
+    ],
+    "file_count": 1,
+    "byte_size": 7270
+  },
+  {
+    "index": 36,
+    "filename": "QUANT_REPO_036_IN-QUANT-001_zerodha__pykiteconnect.txt",
+    "title": "QUANT_REPO_036 [8be5263b7cf7e7ea]: IN-QUANT-001_zerodha__pykiteconnect (FULL END-TO-END CODE)",
+    "sha256": "8be5263b7cf7e7ea4b0653ef43dd4d1f4466b988d16704535770b49780431815",
+    "sha256_short": "8be5263b7cf7e7ea",
+    "primary_name": "IN-QUANT-001_zerodha__pykiteconnect",
+    "included_repos": [
+      "IN-QUANT-001_zerodha__pykiteconnect"
+    ],
+    "file_count": 24,
+    "byte_size": 162581
+  },
+  {
+    "index": 37,
+    "filename": "QUANT_REPO_037_Dhan_api_trading.txt",
+    "title": "QUANT_REPO_037 [ef572e0e1fb2314d]: Dhan_api_trading (FULL END-TO-END CODE)",
+    "sha256": "ef572e0e1fb2314d7b78d5c02c5742fbe6ada0dadcc4823ad92db5b6d5b0b660",
+    "sha256_short": "ef572e0e1fb2314d",
+    "primary_name": "Dhan_api_trading",
+    "included_repos": [
+      "Dhan_api_trading"
+    ],
+    "file_count": 15,
+    "byte_size": 144827
+  },
+  {
+    "index": 38,
+    "filename": "QUANT_REPO_038_dhan-trading-app.txt",
+    "title": "QUANT_REPO_038 [f6a4048ee1140b00]: dhan-trading-app (FULL END-TO-END CODE)",
+    "sha256": "f6a4048ee1140b008c089d675cdda3bdd225e1e39339097bd9cc2f7381b11ec5",
+    "sha256_short": "f6a4048ee1140b00",
+    "primary_name": "dhan-trading-app",
+    "included_repos": [
+      "dhan-trading-app"
+    ],
+    "file_count": 5,
+    "byte_size": 15617
+  },
+  {
+    "index": 39,
+    "filename": "QUANT_REPO_039_dhan-appscript-trading.txt",
+    "title": "QUANT_REPO_039 [48e4b9c30bd5c1ef]: dhan-appscript-trading (FULL END-TO-END CODE)",
+    "sha256": "48e4b9c30bd5c1ef301e5e2462dd8898d75482ee99672a0d3d317334842753e8",
+    "sha256_short": "48e4b9c30bd5c1ef",
+    "primary_name": "dhan-appscript-trading",
+    "included_repos": [
+      "dhan-appscript-trading"
+    ],
+    "file_count": 1,
+    "byte_size": 6734
+  },
+  {
+    "index": 40,
+    "filename": "QUANT_REPO_040_dhan-api-tradingview-webhook-python.txt",
+    "title": "QUANT_REPO_040 [0ad7a8dcc534e52c]: dhan-api-tradingview-webhook-python (FULL END-TO-END CODE)",
+    "sha256": "0ad7a8dcc534e52c443c94baab79831bf33ca84b7749f50cb65a257ff30f54ee",
+    "sha256_short": "0ad7a8dcc534e52c",
+    "primary_name": "dhan-api-tradingview-webhook-python",
+    "included_repos": [
+      "dhan-api-tradingview-webhook-python"
+    ],
+    "file_count": 2,
+    "byte_size": 9178
+  },
+  {
+    "index": 41,
+    "filename": "QUANT_REPO_041_dhan-algo-suite.txt",
+    "title": "QUANT_REPO_041 [076ea1ffe665aa58]: dhan-algo-suite (FULL END-TO-END CODE)",
+    "sha256": "076ea1ffe665aa58046fd791427b947de52da6749f7f3031167eff30495858ed",
+    "sha256_short": "076ea1ffe665aa58",
+    "primary_name": "dhan-algo-suite",
+    "included_repos": [
+      "dhan-algo-suite"
+    ],
+    "file_count": 30,
+    "byte_size": 2099885
+  },
+  {
+    "index": 42,
+    "filename": "QUANT_REPO_042_dhan-ai-trading-bot.txt",
+    "title": "QUANT_REPO_042 [c1530c89e476cf6f]: dhan-ai-trading-bot (FULL END-TO-END CODE)",
+    "sha256": "c1530c89e476cf6fd82c66206512d16a7cbe7fe20986c304a5701394bc251dae",
+    "sha256_short": "c1530c89e476cf6f",
+    "primary_name": "dhan-ai-trading-bot",
+    "included_repos": [
+      "dhan-ai-trading-bot"
+    ],
+    "file_count": 7,
+    "byte_size": 32885
+  },
+  {
+    "index": 43,
+    "filename": "QUANT_REPO_043_Automate_trading_dhan.txt",
+    "title": "QUANT_REPO_043 [f8ba1fc9e315fc28]: Automate_trading_dhan (FULL END-TO-END CODE)",
+    "sha256": "f8ba1fc9e315fc287620ca938bcc85a61b5d0898e9ed18a050637a800bc8b9bd",
+    "sha256_short": "f8ba1fc9e315fc28",
+    "primary_name": "Automate_trading_dhan",
+    "included_repos": [
+      "Automate_trading_dhan"
+    ],
+    "file_count": 20,
+    "byte_size": 1367976
+  },
+  {
+    "index": 44,
+    "filename": "QUANT_REPO_044_Algo_Dhan_Integration.txt",
+    "title": "QUANT_REPO_044 [2bfb98b22e72a3f7]: Algo_Dhan_Integration (FULL END-TO-END CODE)",
+    "sha256": "2bfb98b22e72a3f7fe930dbbab62b43cdf8beb65d082cd9af3fa22a080449cae",
+    "sha256_short": "2bfb98b22e72a3f7",
+    "primary_name": "Algo_Dhan_Integration",
+    "included_repos": [
+      "Algo_Dhan_Integration"
+    ],
+    "file_count": 5,
+    "byte_size": 3592
+  },
+  {
+    "index": 45,
+    "filename": "QUANT_REPO_045_algo-trading-bot-fyers.txt",
+    "title": "QUANT_REPO_045 [80220cad0ead14fb]: algo-trading-bot-fyers (FULL END-TO-END CODE)",
+    "sha256": "80220cad0ead14fb07f2329ed712d7f5f6e8cda3cc8b86fba872979f39744a75",
+    "sha256_short": "80220cad0ead14fb",
+    "primary_name": "algo-trading-bot-fyers",
+    "included_repos": [
+      "algo-trading-bot-fyers"
+    ],
+    "file_count": 1,
+    "byte_size": 4538
+  },
+  {
+    "index": 46,
+    "filename": "QUANT_REPO_046_VWAP-HMA-RSI-NSE-Algorithm-Python.txt",
+    "title": "QUANT_REPO_046 [9352a64495fb2e79]: VWAP-HMA-RSI-NSE-Algorithm-Python (FULL END-TO-END CODE)",
+    "sha256": "9352a64495fb2e79f8d70895a790382fd6e0b6d0f25e279636920d0c96451682",
+    "sha256_short": "9352a64495fb2e79",
+    "primary_name": "VWAP-HMA-RSI-NSE-Algorithm-Python",
+    "included_repos": [
+      "VWAP-HMA-RSI-NSE-Algorithm-Python"
+    ],
+    "file_count": 1,
+    "byte_size": 2836
+  },
+  {
+    "index": 47,
+    "filename": "QUANT_REPO_047_upstox-python.txt",
+    "title": "QUANT_REPO_047 [8a9c4484146e26b1]: upstox-python (FULL END-TO-END CODE)",
+    "sha256": "8a9c4484146e26b1ed9e9ddeb635d37b4d9098973a35afc01c34f548c7793ffc",
+    "sha256_short": "8a9c4484146e26b1",
+    "primary_name": "upstox-python",
+    "included_repos": [
+      "upstox-python"
+    ],
+    "file_count": 403,
+    "byte_size": 2100663
+  },
+  {
+    "index": 48,
+    "filename": "QUANT_REPO_048_pykiteconnect.txt",
+    "title": "QUANT_REPO_048 [a9bdccce670d9356]: pykiteconnect (FULL END-TO-END CODE)",
+    "sha256": "a9bdccce670d935608616158255781c3c4c8c3b2d71886bb61b24d335d3089c0",
+    "sha256_short": "a9bdccce670d9356",
+    "primary_name": "pykiteconnect",
+    "included_repos": [
+      "pykiteconnect"
+    ],
+    "file_count": 24,
+    "byte_size": 162339
+  },
+  {
+    "index": 49,
+    "filename": "QUANT_REPO_049_PHASE4-QUANT-022_ZhuLinsen__daily_stock_analysis.txt",
+    "title": "QUANT_REPO_049 [112c6ec33ae497d4]: PHASE4-QUANT-022_ZhuLinsen__daily_stock_analysis (FULL END-TO-END CODE)",
+    "sha256": "112c6ec33ae497d4979b60c0effc11b508ad517d3b658e537f7a3b8984153b1e",
+    "sha256_short": "112c6ec33ae497d4",
+    "primary_name": "PHASE4-QUANT-022_ZhuLinsen__daily_stock_analysis",
+    "included_repos": [
+      "PHASE4-QUANT-022_ZhuLinsen__daily_stock_analysis"
+    ],
+    "file_count": 0,
+    "byte_size": 1343
+  },
+  {
+    "index": 50,
+    "filename": "QUANT_REPO_050_NSE_ML_algo.txt",
+    "title": "QUANT_REPO_050 [e03682de761f5dc6]: NSE_ML_algo (FULL END-TO-END CODE)",
+    "sha256": "e03682de761f5dc6e4eac7045781b05f5c7cb7897b3ad5f9685ed5441e461059",
+    "sha256_short": "e03682de761f5dc6",
+    "primary_name": "NSE_ML_algo",
+    "included_repos": [
+      "NSE_ML_algo"
+    ],
+    "file_count": 44,
+    "byte_size": 267002
+  },
+  {
+    "index": 51,
+    "filename": "QUANT_REPO_051_nse-trading-skills.txt",
+    "title": "QUANT_REPO_051 [30ae25cc5ed96f05]: nse-trading-skills (FULL END-TO-END CODE)",
+    "sha256": "30ae25cc5ed96f05f84d9951af975be82a4b4a0531b3ed3603c937f2091cba82",
+    "sha256_short": "30ae25cc5ed96f05",
+    "primary_name": "nse-trading-skills",
+    "included_repos": [
+      "nse-trading-skills"
+    ],
+    "file_count": 2,
+    "byte_size": 8043
+  },
+  {
+    "index": 52,
+    "filename": "QUANT_REPO_052_nse-bse-algo-strategies.txt",
+    "title": "QUANT_REPO_052 [388cdf3dc4866cd7]: nse-bse-algo-strategies (FULL END-TO-END CODE)",
+    "sha256": "388cdf3dc4866cd7cc14894204a764e2eead1f66eb382e7ffd5220446666f851",
+    "sha256_short": "388cdf3dc4866cd7",
+    "primary_name": "nse-bse-algo-strategies",
+    "included_repos": [
+      "nse-bse-algo-strategies"
+    ],
+    "file_count": 41,
+    "byte_size": 698530
+  },
+  {
+    "index": 53,
+    "filename": "QUANT_REPO_053_nse-algo-bot.txt",
+    "title": "QUANT_REPO_053 [52e20f9e4cbfb86d]: nse-algo-bot (FULL END-TO-END CODE)",
+    "sha256": "52e20f9e4cbfb86de243e0b27ca97ec7969e666cdf402b6e5375841ad19797c6",
+    "sha256_short": "52e20f9e4cbfb86d",
+    "primary_name": "nse-algo-bot",
+    "included_repos": [
+      "nse-algo-bot"
+    ],
+    "file_count": 29,
+    "byte_size": 345462
+  },
+  {
+    "index": 54,
+    "filename": "QUANT_REPO_054_NiftyOptionTradingSystem.txt",
+    "title": "QUANT_REPO_054 [e04cc1a74323dbc5]: NiftyOptionTradingSystem (FULL END-TO-END CODE)",
+    "sha256": "e04cc1a74323dbc5a8f74daca5fa6138714b8254f922ae13d4adfbe834cb44b7",
+    "sha256_short": "e04cc1a74323dbc5",
+    "primary_name": "NiftyOptionTradingSystem",
+    "included_repos": [
+      "NiftyOptionTradingSystem"
+    ],
+    "file_count": 62,
+    "byte_size": 454596
+  },
+  {
+    "index": 55,
+    "filename": "QUANT_REPO_055_nifty-algo-trader.txt",
+    "title": "QUANT_REPO_055 [bf5c7da6f028b0c2]: nifty-algo-trader (FULL END-TO-END CODE)",
+    "sha256": "bf5c7da6f028b0c256ea4f9d07b56431fabf91651e0f003aef1d8a308a19ec38",
+    "sha256_short": "bf5c7da6f028b0c2",
+    "primary_name": "nifty-algo-trader",
+    "included_repos": [
+      "nifty-algo-trader"
+    ],
+    "file_count": 43,
+    "byte_size": 199774
+  },
+  {
+    "index": 56,
+    "filename": "QUANT_REPO_056_nifty-930-breakout-trading-system.txt",
+    "title": "QUANT_REPO_056 [7131ae99cc2813c4]: nifty-930-breakout-trading-system (FULL END-TO-END CODE)",
+    "sha256": "7131ae99cc2813c4cb09c485d6504f458d1352245139ec622e4f486f1e724a0b",
+    "sha256_short": "7131ae99cc2813c4",
+    "primary_name": "nifty-930-breakout-trading-system",
+    "included_repos": [
+      "nifty-930-breakout-trading-system"
+    ],
+    "file_count": 10,
+    "byte_size": 53543
+  },
+  {
+    "index": 57,
+    "filename": "QUANT_REPO_057_ml-trading-screener.txt",
+    "title": "QUANT_REPO_057 [6843c3c01c3e6782]: ml-trading-screener (FULL END-TO-END CODE)",
+    "sha256": "6843c3c01c3e678270959fe9219a5b2f3d6133c5eaa75d32b1cb61cede4437d2",
+    "sha256_short": "6843c3c01c3e6782",
+    "primary_name": "ml-trading-screener",
+    "included_repos": [
+      "ml-trading-screener"
+    ],
+    "file_count": 61,
+    "byte_size": 695870
+  },
+  {
+    "index": 58,
+    "filename": "QUANT_REPO_058_Learn.NSE-Algorithm.txt",
+    "title": "QUANT_REPO_058 [72c32992865d1ed4]: Learn.NSE-Algorithm (FULL END-TO-END CODE)",
+    "sha256": "72c32992865d1ed48314fa2bde9f96187286b09ea8a58efab243074086c3d384",
+    "sha256_short": "72c32992865d1ed4",
+    "primary_name": "Learn.NSE-Algorithm",
+    "included_repos": [
+      "Learn.NSE-Algorithm"
+    ],
+    "file_count": 3,
+    "byte_size": 10917
+  },
+  {
+    "index": 59,
+    "filename": "QUANT_REPO_059_IN-QUANT-124_rbhatia46__Option-Writing-Calls-Using.txt",
+    "title": "QUANT_REPO_059 [b04a8cc1e28a4241]: IN-QUANT-124_rbhatia46__Option-Writing-Calls-Using (FULL END-TO-END CODE)",
+    "sha256": "b04a8cc1e28a4241638299da433d2175880dca780a742b18503de1be2e1895e1",
+    "sha256_short": "b04a8cc1e28a4241",
+    "primary_name": "IN-QUANT-124_rbhatia46__Option-Writing-Calls-Using-Open-Interest",
+    "included_repos": [
+      "IN-QUANT-124_rbhatia46__Option-Writing-Calls-Using-Open-Interest"
+    ],
+    "file_count": 1,
+    "byte_size": 2712
+  },
+  {
+    "index": 60,
+    "filename": "QUANT_REPO_060_IN-QUANT-122_Raj1984__nifty-breakout-lab.txt",
+    "title": "QUANT_REPO_060 [87347d3b9cfcb255]: IN-QUANT-122_Raj1984__nifty-breakout-lab (FULL END-TO-END CODE)",
+    "sha256": "87347d3b9cfcb2551d8d93e8731c83b2eeeabfa0d134a6702ed7f2c3e7a07b1d",
+    "sha256_short": "87347d3b9cfcb255",
+    "primary_name": "IN-QUANT-122_Raj1984__nifty-breakout-lab",
+    "included_repos": [
+      "IN-QUANT-122_Raj1984__nifty-breakout-lab"
+    ],
+    "file_count": 1,
+    "byte_size": 9896
+  },
+  {
+    "index": 61,
+    "filename": "QUANT_REPO_061_IN-QUANT-120_Trainingtotrade__Awesome-options.txt",
+    "title": "QUANT_REPO_061 [9fdf8b3e044f2600]: IN-QUANT-120_Trainingtotrade__Awesome-options (FULL END-TO-END CODE)",
+    "sha256": "9fdf8b3e044f26003ff69a1ff384f7558073e21d4ef1344a4230c2c631b531cb",
+    "sha256_short": "9fdf8b3e044f2600",
+    "primary_name": "IN-QUANT-120_Trainingtotrade__Awesome-options",
+    "included_repos": [
+      "IN-QUANT-120_Trainingtotrade__Awesome-options"
+    ],
+    "file_count": 1,
+    "byte_size": 1877
+  },
+  {
+    "index": 62,
+    "filename": "QUANT_REPO_062_IN-QUANT-114_AdroitAnandAI__RRG-Sector-Rotation-In.txt",
+    "title": "QUANT_REPO_062 [3b4c5301fedd5be7]: IN-QUANT-114_AdroitAnandAI__RRG-Sector-Rotation-In (FULL END-TO-END CODE)",
+    "sha256": "3b4c5301fedd5be76e79f810c1ef84b439f4f9470cecfe0627b721a0b9400ae5",
+    "sha256_short": "3b4c5301fedd5be7",
+    "primary_name": "IN-QUANT-114_AdroitAnandAI__RRG-Sector-Rotation-India",
+    "included_repos": [
+      "IN-QUANT-114_AdroitAnandAI__RRG-Sector-Rotation-India"
+    ],
+    "file_count": 11,
+    "byte_size": 194202
+  },
+  {
+    "index": 63,
+    "filename": "QUANT_REPO_063_IN-QUANT-113_sudheerbez__nifty-options-algorithmic.txt",
+    "title": "QUANT_REPO_063 [cdade0cd157b3489]: IN-QUANT-113_sudheerbez__nifty-options-algorithmic (FULL END-TO-END CODE)",
+    "sha256": "cdade0cd157b3489645b5095f38b4ef8cb5eb5663729995c445dcf33053198ff",
+    "sha256_short": "cdade0cd157b3489",
+    "primary_name": "IN-QUANT-113_sudheerbez__nifty-options-algorithmic-backtester",
+    "included_repos": [
+      "IN-QUANT-113_sudheerbez__nifty-options-algorithmic-backtester"
+    ],
+    "file_count": 26,
+    "byte_size": 92715
+  },
+  {
+    "index": 64,
+    "filename": "QUANT_REPO_064_IN-QUANT-089_hellomohanakrishnan__NseOptionsChainD.txt",
+    "title": "QUANT_REPO_064 [ab0a7d2ee4b663da]: IN-QUANT-089_hellomohanakrishnan__NseOptionsChainD (FULL END-TO-END CODE)",
+    "sha256": "ab0a7d2ee4b663daf2d1b7c6b5d1333a0fed1ba463fc0ffcff6f839cd9ef2942",
+    "sha256_short": "ab0a7d2ee4b663da",
+    "primary_name": "IN-QUANT-089_hellomohanakrishnan__NseOptionsChainData",
+    "included_repos": [
+      "IN-QUANT-089_hellomohanakrishnan__NseOptionsChainData"
+    ],
+    "file_count": 2,
+    "byte_size": 3528281
+  },
+  {
+    "index": 65,
+    "filename": "QUANT_REPO_065_IN-QUANT-088_joshiadvait8__nse-data.txt",
+    "title": "QUANT_REPO_065 [a07a7a33c7968370]: IN-QUANT-088_joshiadvait8__nse-data (FULL END-TO-END CODE)",
+    "sha256": "a07a7a33c7968370f2b4e748f94f8a5c7c870c7dd66745aa937c95857249b70e",
+    "sha256_short": "a07a7a33c7968370",
+    "primary_name": "IN-QUANT-088_joshiadvait8__nse-data",
+    "included_repos": [
+      "IN-QUANT-088_joshiadvait8__nse-data"
+    ],
+    "file_count": 2,
+    "byte_size": 7964
+  },
+  {
+    "index": 66,
+    "filename": "QUANT_REPO_066_IN-QUANT-086_abbazs__NseOptionsChainScrapper.txt",
+    "title": "QUANT_REPO_066 [c1450131e782c041]: IN-QUANT-086_abbazs__NseOptionsChainScrapper (FULL END-TO-END CODE)",
+    "sha256": "c1450131e782c0414cd643225b0df5d4e73992adfe068d623fbcbf7e7f2987f4",
+    "sha256_short": "c1450131e782c041",
+    "primary_name": "IN-QUANT-086_abbazs__NseOptionsChainScrapper",
+    "included_repos": [
+      "IN-QUANT-086_abbazs__NseOptionsChainScrapper"
+    ],
+    "file_count": 2,
+    "byte_size": 2953
+  },
+  {
+    "index": 67,
+    "filename": "QUANT_REPO_067_IN-QUANT-084_Shubhamshah007__nse-query-builder.txt",
+    "title": "QUANT_REPO_067 [734b7c221c392b85]: IN-QUANT-084_Shubhamshah007__nse-query-builder (FULL END-TO-END CODE)",
+    "sha256": "734b7c221c392b853365c0b262c7b01d94adad5617be41d271684f3ecff189c2",
+    "sha256_short": "734b7c221c392b85",
+    "primary_name": "IN-QUANT-084_Shubhamshah007__nse-query-builder",
+    "included_repos": [
+      "IN-QUANT-084_Shubhamshah007__nse-query-builder"
+    ],
+    "file_count": 5,
+    "byte_size": 8453548
+  },
+  {
+    "index": 68,
+    "filename": "QUANT_REPO_068_IN-QUANT-083_maniceet__NSE-Options-Scrapper.txt",
+    "title": "QUANT_REPO_068 [a3b4f95b72a7e27d]: IN-QUANT-083_maniceet__NSE-Options-Scrapper (FULL END-TO-END CODE)",
+    "sha256": "a3b4f95b72a7e27d4064cde44cfcf8b12328c1385a4d1cc6b6cdc867e23352ff",
+    "sha256_short": "a3b4f95b72a7e27d",
+    "primary_name": "IN-QUANT-083_maniceet__NSE-Options-Scrapper",
+    "included_repos": [
+      "IN-QUANT-083_maniceet__NSE-Options-Scrapper"
+    ],
+    "file_count": 2,
+    "byte_size": 9624
+  },
+  {
+    "index": 69,
+    "filename": "QUANT_REPO_069_IN-QUANT-076_RepleteSS__fetchNSEOptionChainData.txt",
+    "title": "QUANT_REPO_069 [355ae2872d1c6ec5]: IN-QUANT-076_RepleteSS__fetchNSEOptionChainData (FULL END-TO-END CODE)",
+    "sha256": "355ae2872d1c6ec5d851e168acb6f9bd8411c042a7c987de0a6feaa362a6661d",
+    "sha256_short": "355ae2872d1c6ec5",
+    "primary_name": "IN-QUANT-076_RepleteSS__fetchNSEOptionChainData",
+    "included_repos": [
+      "IN-QUANT-076_RepleteSS__fetchNSEOptionChainData"
+    ],
+    "file_count": 3,
+    "byte_size": 34541
+  },
+  {
+    "index": 70,
+    "filename": "QUANT_REPO_070_IN-QUANT-074_paragjp__NSE.txt",
+    "title": "QUANT_REPO_070 [4cf6109f8d2fdab7]: IN-QUANT-074_paragjp__NSE (FULL END-TO-END CODE)",
+    "sha256": "4cf6109f8d2fdab76c86d81f76f52aa6f95da51e2c5df8fe566ab16696b5293a",
+    "sha256_short": "4cf6109f8d2fdab7",
+    "primary_name": "IN-QUANT-074_paragjp__NSE",
+    "included_repos": [
+      "IN-QUANT-074_paragjp__NSE"
+    ],
+    "file_count": 61,
+    "byte_size": 83644
+  },
+  {
+    "index": 71,
+    "filename": "QUANT_REPO_071_IN-QUANT-069_g-ravity__option-chain-refresher.txt",
+    "title": "QUANT_REPO_071 [6eabb9dbc25b4552]: IN-QUANT-069_g-ravity__option-chain-refresher (FULL END-TO-END CODE)",
+    "sha256": "6eabb9dbc25b4552ef4e486ffa2f268a0961f4b39280c3c6858190aef3593608",
+    "sha256_short": "6eabb9dbc25b4552",
+    "primary_name": "IN-QUANT-069_g-ravity__option-chain-refresher",
+    "included_repos": [
+      "IN-QUANT-069_g-ravity__option-chain-refresher"
+    ],
+    "file_count": 5,
+    "byte_size": 3168
+  },
+  {
+    "index": 72,
+    "filename": "QUANT_REPO_072_IN-QUANT-067_ShekarArun__nse-scraper.txt",
+    "title": "QUANT_REPO_072 [de04fc5b075ae566]: IN-QUANT-067_ShekarArun__nse-scraper (FULL END-TO-END CODE)",
+    "sha256": "de04fc5b075ae5669440f0a039076372f46a55d900eabc8626844cac618fc340",
+    "sha256_short": "de04fc5b075ae566",
+    "primary_name": "IN-QUANT-067_ShekarArun__nse-scraper",
+    "included_repos": [
+      "IN-QUANT-067_ShekarArun__nse-scraper"
+    ],
+    "file_count": 5,
+    "byte_size": 13415
+  },
+  {
+    "index": 73,
+    "filename": "QUANT_REPO_073_IN-QUANT-064_BarathGB007__nse-options-data-collect.txt",
+    "title": "QUANT_REPO_073 [af44c5115e9b7bb0]: IN-QUANT-064_BarathGB007__nse-options-data-collect (FULL END-TO-END CODE)",
+    "sha256": "af44c5115e9b7bb01e21d69418e41f36aa0d2fa07b86f229f8ed9b01c8c17aaf",
+    "sha256_short": "af44c5115e9b7bb0",
+    "primary_name": "IN-QUANT-064_BarathGB007__nse-options-data-collector",
+    "included_repos": [
+      "IN-QUANT-064_BarathGB007__nse-options-data-collector"
+    ],
+    "file_count": 15,
+    "byte_size": 101025
+  },
+  {
+    "index": 74,
+    "filename": "QUANT_REPO_074_IN-QUANT-059_ratan00__nse-rs.txt",
+    "title": "QUANT_REPO_074 [22331e6565fef636]: IN-QUANT-059_ratan00__nse-rs (FULL END-TO-END CODE)",
+    "sha256": "22331e6565fef636e70013b1d3df2bc361806c96abc6411d6bf0e1b8ee637c3d",
+    "sha256_short": "22331e6565fef636",
+    "primary_name": "IN-QUANT-059_ratan00__nse-rs",
+    "included_repos": [
+      "IN-QUANT-059_ratan00__nse-rs"
+    ],
+    "file_count": 13,
+    "byte_size": 69514
+  },
+  {
+    "index": 75,
+    "filename": "QUANT_REPO_075_IN-QUANT-058_kbizme__nsemine.txt",
+    "title": "QUANT_REPO_075 [8b970fdadd19385d]: IN-QUANT-058_kbizme__nsemine (FULL END-TO-END CODE)",
+    "sha256": "8b970fdadd19385d906f7419e287af31e4f16ef872426c69cbd9ade7ab8e52e8",
+    "sha256_short": "8b970fdadd19385d",
+    "primary_name": "IN-QUANT-058_kbizme__nsemine",
+    "included_repos": [
+      "IN-QUANT-058_kbizme__nsemine"
+    ],
+    "file_count": 16,
+    "byte_size": 123646
+  },
+  {
+    "index": 76,
+    "filename": "QUANT_REPO_076_IN-QUANT-056_Khushalsawant__Extract-Historical-Dat.txt",
+    "title": "QUANT_REPO_076 [02f3c0ebfe05afa9]: IN-QUANT-056_Khushalsawant__Extract-Historical-Dat (FULL END-TO-END CODE)",
+    "sha256": "02f3c0ebfe05afa944f5657ed30d6af1246ec9657535970cdce6fd6909a5705d",
+    "sha256_short": "02f3c0ebfe05afa9",
+    "primary_name": "IN-QUANT-056_Khushalsawant__Extract-Historical-Data-from-NSE-for-FUTURE-OPTION",
+    "included_repos": [
+      "IN-QUANT-056_Khushalsawant__Extract-Historical-Data-from-NSE-for-FUTURE-OPTION"
+    ],
+    "file_count": 2,
+    "byte_size": 5753
+  },
+  {
+    "index": 77,
+    "filename": "QUANT_REPO_077_IN-QUANT-055_darshkale__nse-options-data-pipeline.txt",
+    "title": "QUANT_REPO_077 [68b9754292d54f79]: IN-QUANT-055_darshkale__nse-options-data-pipeline (FULL END-TO-END CODE)",
+    "sha256": "68b9754292d54f7926968180eb59d34d3aefe99328cd72612b2c5456e8e1276b",
+    "sha256_short": "68b9754292d54f79",
+    "primary_name": "IN-QUANT-055_darshkale__nse-options-data-pipeline",
+    "included_repos": [
+      "IN-QUANT-055_darshkale__nse-options-data-pipeline"
+    ],
+    "file_count": 9,
+    "byte_size": 98104
+  },
+  {
+    "index": 78,
+    "filename": "QUANT_REPO_078_IN-QUANT-053_VarunDivakar__NSEpy-Continuous-data.txt",
+    "title": "QUANT_REPO_078 [4469d286fdbbfd23]: IN-QUANT-053_VarunDivakar__NSEpy-Continuous-data (FULL END-TO-END CODE)",
+    "sha256": "4469d286fdbbfd236281524a4ab6df6d3dd04e78305b4ef0dda1d2aac39d906e",
+    "sha256_short": "4469d286fdbbfd23",
+    "primary_name": "IN-QUANT-053_VarunDivakar__NSEpy-Continuous-data",
+    "included_repos": [
+      "IN-QUANT-053_VarunDivakar__NSEpy-Continuous-data"
+    ],
+    "file_count": 3,
+    "byte_size": 11417
+  },
+  {
+    "index": 79,
+    "filename": "QUANT_REPO_079_IN-QUANT-052_aeron7__nsepythonserver.txt",
+    "title": "QUANT_REPO_079 [d16cc564bdced130]: IN-QUANT-052_aeron7__nsepythonserver (FULL END-TO-END CODE)",
+    "sha256": "d16cc564bdced13050defebac9e65ad007f2007e23764d142eeca7fd5d23a5be",
+    "sha256_short": "d16cc564bdced130",
+    "primary_name": "IN-QUANT-052_aeron7__nsepythonserver",
+    "included_repos": [
+      "IN-QUANT-052_aeron7__nsepythonserver"
+    ],
+    "file_count": 5,
+    "byte_size": 62585
+  },
+  {
+    "index": 80,
+    "filename": "QUANT_REPO_080_IN-QUANT-048_aeron7__nsepython.txt",
+    "title": "QUANT_REPO_080 [19a4b79978f186a2]: IN-QUANT-048_aeron7__nsepython (FULL END-TO-END CODE)",
+    "sha256": "19a4b79978f186a28c67a982bef26236a5755cd74f29459f833bd5a2f1c94d8c",
+    "sha256_short": "19a4b79978f186a2",
+    "primary_name": "IN-QUANT-048_aeron7__nsepython",
+    "included_repos": [
+      "IN-QUANT-048_aeron7__nsepython"
+    ],
+    "file_count": 5,
+    "byte_size": 62510
+  },
+  {
+    "index": 81,
+    "filename": "QUANT_REPO_081_IN-QUANT-029_Soham-Moholkar__NSE-TradeHub-Pro.txt",
+    "title": "QUANT_REPO_081 [67d8774b0fbb75d4]: IN-QUANT-029_Soham-Moholkar__NSE-TradeHub-Pro (FULL END-TO-END CODE)",
+    "sha256": "67d8774b0fbb75d4754fd607b8fb8d238fb104e4b7ff1839c203da4ed1f4ae51",
+    "sha256_short": "67d8774b0fbb75d4",
+    "primary_name": "IN-QUANT-029_Soham-Moholkar__NSE-TradeHub-Pro",
+    "included_repos": [
+      "IN-QUANT-029_Soham-Moholkar__NSE-TradeHub-Pro"
+    ],
+    "file_count": 62,
+    "byte_size": 467084
+  },
+  {
+    "index": 82,
+    "filename": "QUANT_REPO_082_dhanhq-ts.txt",
+    "title": "QUANT_REPO_082 [e9c6d035045df04f]: dhanhq-ts (FULL END-TO-END CODE)",
+    "sha256": "e9c6d035045df04fec38cfda0bb377bb090f20fe073f9235ee16b5a8f25e8a17",
+    "sha256_short": "e9c6d035045df04f",
+    "primary_name": "dhanhq-ts",
+    "included_repos": [
+      "dhanhq-ts"
+    ],
+    "file_count": 39,
+    "byte_size": 20713
+  },
+  {
+    "index": 83,
+    "filename": "QUANT_REPO_083_DhanHQ-Ticker-py.txt",
+    "title": "QUANT_REPO_083 [6a2227e3878a7e61]: DhanHQ-Ticker-py (FULL END-TO-END CODE)",
+    "sha256": "6a2227e3878a7e61c5c5c7adff558193bf018852b5be4ffc4eb4d24c5f97045d",
+    "sha256_short": "6a2227e3878a7e61",
+    "primary_name": "DhanHQ-Ticker-py",
+    "included_repos": [
+      "DhanHQ-Ticker-py"
+    ],
+    "file_count": 10,
+    "byte_size": 134434
+  },
+  {
+    "index": 84,
+    "filename": "QUANT_REPO_084_dhanhq-py.txt",
+    "title": "QUANT_REPO_084 [4e00dd8ed95aed08]: dhanhq-py (FULL END-TO-END CODE)",
+    "sha256": "4e00dd8ed95aed08439fd43f54c0707f61aca6b690bc344579a56d24e5c75454",
+    "sha256_short": "4e00dd8ed95aed08",
+    "primary_name": "dhanhq-py",
+    "included_repos": [
+      "dhanhq-py"
+    ],
+    "file_count": 89,
+    "byte_size": 250712
+  },
+  {
+    "index": 85,
+    "filename": "QUANT_REPO_085_DhaneyBot.txt",
+    "title": "QUANT_REPO_085 [af875ae35f00ed8e]: DhaneyBot (FULL END-TO-END CODE)",
+    "sha256": "af875ae35f00ed8e2842c78365d6322b10961e9964d7ca72c0b06e6a7018a0c6",
+    "sha256_short": "af875ae35f00ed8e",
+    "primary_name": "DhaneyBot",
+    "included_repos": [
+      "DhaneyBot"
+    ],
+    "file_count": 20,
+    "byte_size": 283733
+  },
+  {
+    "index": 86,
+    "filename": "QUANT_REPO_086_Dhan_automation1.txt",
+    "title": "QUANT_REPO_086 [8ca6a4ea85850751]: Dhan_automation1 (FULL END-TO-END CODE)",
+    "sha256": "8ca6a4ea858507514469f2a4878b57b3ccb973828bb4b8b8641eb4f510647220",
+    "sha256_short": "8ca6a4ea85850751",
+    "primary_name": "Dhan_automation1",
+    "included_repos": [
+      "Dhan_automation1"
+    ],
+    "file_count": 2,
+    "byte_size": 1424
+  },
+  {
+    "index": 87,
+    "filename": "QUANT_REPO_087_dhan-trader-bot.txt",
+    "title": "QUANT_REPO_087 [811588327cf235ba]: dhan-trader-bot (FULL END-TO-END CODE)",
+    "sha256": "811588327cf235bae39bbfcee687f55994f31d7e56fd68f83166bba08e2c01a0",
+    "sha256_short": "811588327cf235ba",
+    "primary_name": "dhan-trader-bot",
+    "included_repos": [
+      "dhan-trader-bot"
+    ],
+    "file_count": 20,
+    "byte_size": 123601
+  },
+  {
+    "index": 88,
+    "filename": "QUANT_REPO_088_Dhan-React-Engine.txt",
+    "title": "QUANT_REPO_088 [8f011c004db7b7e0]: Dhan-React-Engine (FULL END-TO-END CODE)",
+    "sha256": "8f011c004db7b7e0e718bb5724a29b897e5cd551cfa83a8c97066ceec2730428",
+    "sha256_short": "8f011c004db7b7e0",
+    "primary_name": "Dhan-React-Engine",
+    "included_repos": [
+      "Dhan-React-Engine"
+    ],
+    "file_count": 19,
+    "byte_size": 670342
+  },
+  {
+    "index": 89,
+    "filename": "QUANT_REPO_089_dhan-java-sdk.txt",
+    "title": "QUANT_REPO_089 [fc75907bbf16b252]: dhan-java-sdk (FULL END-TO-END CODE)",
+    "sha256": "fc75907bbf16b25297ade877f1600662f4cab16cc49858b76712b92b1e93cb84",
+    "sha256_short": "fc75907bbf16b252",
+    "primary_name": "dhan-java-sdk",
+    "included_repos": [
+      "dhan-java-sdk"
+    ],
+    "file_count": 1,
+    "byte_size": 41020
+  },
+  {
+    "index": 90,
+    "filename": "QUANT_REPO_090_dhan-bot-research.txt",
+    "title": "QUANT_REPO_090 [30d3cd5a2fd00107]: dhan-bot-research (FULL END-TO-END CODE)",
+    "sha256": "30d3cd5a2fd001074820b081b51f4ed67e2d39ae0b47594615b1179021f388e2",
+    "sha256_short": "30d3cd5a2fd00107",
+    "primary_name": "dhan-bot-research",
+    "included_repos": [
+      "dhan-bot-research"
+    ],
+    "file_count": 1,
+    "byte_size": 1970
+  },
+  {
+    "index": 91,
+    "filename": "QUANT_REPO_091_upx-momentum-nse.txt",
+    "title": "QUANT_REPO_091 [a1af6eeb7ec67cd1]: upx-momentum-nse (FULL END-TO-END CODE)",
+    "sha256": "a1af6eeb7ec67cd1c3cc3ac09eb509c74a6fefcebbd1088757b310d3816fd485",
+    "sha256_short": "a1af6eeb7ec67cd1",
+    "primary_name": "upx-momentum-nse",
+    "included_repos": [
+      "upx-momentum-nse"
+    ],
+    "file_count": 1,
+    "byte_size": 11987
+  },
+  {
+    "index": 92,
+    "filename": "QUANT_REPO_092_PHASE4-QUANT-003_nkaz001__hftbacktest.txt",
+    "title": "QUANT_REPO_092 [1ed26dd15b2afdaa]: PHASE4-QUANT-003_nkaz001__hftbacktest (FULL END-TO-END CODE)",
+    "sha256": "1ed26dd15b2afdaaf1b8bd9cad762f7e48ba0ea6ea59bd923c4cfb8fd6f156f0",
+    "sha256_short": "1ed26dd15b2afdaa",
+    "primary_name": "PHASE4-QUANT-003_nkaz001__hftbacktest",
+    "included_repos": [
+      "PHASE4-QUANT-003_nkaz001__hftbacktest"
+    ],
+    "file_count": 147,
+    "byte_size": 1275046
+  },
+  {
+    "index": 93,
+    "filename": "QUANT_REPO_093_PHASE4-QUANT-001_nkaz001__hftbacktest.txt",
+    "title": "QUANT_REPO_093 [c659beae4779b1be]: PHASE4-QUANT-001_nkaz001__hftbacktest (FULL END-TO-END CODE)",
+    "sha256": "c659beae4779b1be11475d2e4c6ec53860db2924ad9b515a5484e9bb844b6263",
+    "sha256_short": "c659beae4779b1be",
+    "primary_name": "PHASE4-QUANT-001_nkaz001__hftbacktest",
+    "included_repos": [
+      "PHASE4-QUANT-001_nkaz001__hftbacktest"
+    ],
+    "file_count": 147,
+    "byte_size": 1275046
+  },
+  {
+    "index": 94,
+    "filename": "QUANT_REPO_094_OPTION-DASHBOARD.txt",
+    "title": "QUANT_REPO_094 [703e1a548f6db73b]: OPTION-DASHBOARD (FULL END-TO-END CODE)",
+    "sha256": "703e1a548f6db73b5b236b6e58fe9d828155c33ce6756b5604c7caf64d49d1cd",
+    "sha256_short": "703e1a548f6db73b",
+    "primary_name": "OPTION-DASHBOARD",
+    "included_repos": [
+      "OPTION-DASHBOARD"
+    ],
+    "file_count": 119,
+    "byte_size": 1089631
+  },
+  {
+    "index": 95,
+    "filename": "QUANT_REPO_095_nseutility.txt",
+    "title": "QUANT_REPO_095 [6b06aefbb852d62d]: nseutility (FULL END-TO-END CODE)",
+    "sha256": "6b06aefbb852d62d1b1609a54ca832236abe48f168d391efa9d5f1ad4b4e5815",
+    "sha256_short": "6b06aefbb852d62d",
+    "primary_name": "nseutility",
+    "included_repos": [
+      "nseutility"
+    ],
+    "file_count": 1,
+    "byte_size": 1113
+  },
+  {
+    "index": 96,
+    "filename": "QUANT_REPO_096_NseStockAnalyser.txt",
+    "title": "QUANT_REPO_096 [5f5e0461b4e4f569]: NseStockAnalyser (FULL END-TO-END CODE)",
+    "sha256": "5f5e0461b4e4f569a564e8f30374be917d7fa80f49e877f9807426f43babbbab",
+    "sha256_short": "5f5e0461b4e4f569",
+    "primary_name": "NseStockAnalyser",
+    "included_repos": [
+      "NseStockAnalyser"
+    ],
+    "file_count": 8,
+    "byte_size": 16548
+  },
+  {
+    "index": 97,
+    "filename": "QUANT_REPO_097_nsepython.txt",
+    "title": "QUANT_REPO_097 [80828e55e448e71c]: nsepython (FULL END-TO-END CODE)",
+    "sha256": "80828e55e448e71c49f3af20aa95db017a29ceeebcfe6956b5bf2589d1c0d92b",
+    "sha256_short": "80828e55e448e71c",
+    "primary_name": "nsepython",
+    "included_repos": [
+      "nsepython"
+    ],
+    "file_count": 5,
+    "byte_size": 62324
+  },
+  {
+    "index": 98,
+    "filename": "QUANT_REPO_098_nselib.txt",
+    "title": "QUANT_REPO_098 [0cd22a0f89ea7a8c]: nselib (FULL END-TO-END CODE)",
+    "sha256": "0cd22a0f89ea7a8c2871905efdcdee407e4ca76711ad65d3c6130fbefd6b3aef",
+    "sha256_short": "0cd22a0f89ea7a8c",
+    "primary_name": "nselib",
+    "included_repos": [
+      "nselib"
+    ],
+    "file_count": 25,
+    "byte_size": 241348
+  },
+  {
+    "index": 99,
+    "filename": "QUANT_REPO_099_nse-derivatives-warehouse.txt",
+    "title": "QUANT_REPO_099 [707c2cec0478faed]: nse-derivatives-warehouse (FULL END-TO-END CODE)",
+    "sha256": "707c2cec0478faed7bdefffd9c1263715dcd6f31bd170acbe994aeefc7d641ad",
+    "sha256_short": "707c2cec0478faed",
+    "primary_name": "nse-derivatives-warehouse",
+    "included_repos": [
+      "nse-derivatives-warehouse"
+    ],
+    "file_count": 25,
+    "byte_size": 161422
+  },
+  {
+    "index": 100,
+    "filename": "QUANT_REPO_100_nse-data-resources.txt",
+    "title": "QUANT_REPO_100 [fb7af87e816bb762]: nse-data-resources (FULL END-TO-END CODE)",
+    "sha256": "fb7af87e816bb762bfdf209ef708dfa8b2695b98f5dc3e34cfe2a0ed09167ccb",
+    "sha256_short": "fb7af87e816bb762",
+    "primary_name": "nse-data-resources",
+    "included_repos": [
+      "nse-data-resources"
+    ],
+    "file_count": 1,
+    "byte_size": 6895
+  },
+  {
+    "index": 101,
+    "filename": "QUANT_REPO_101_NIFTY50-Fno-AI-Decision-Engine.txt",
+    "title": "QUANT_REPO_101 [26ef74d342001bc6]: NIFTY50-Fno-AI-Decision-Engine (FULL END-TO-END CODE)",
+    "sha256": "26ef74d342001bc6e8beb1700ce87ab483c4e1cd88774940d4f6843f8f0f010e",
+    "sha256_short": "26ef74d342001bc6",
+    "primary_name": "NIFTY50-Fno-AI-Decision-Engine",
+    "included_repos": [
+      "NIFTY50-Fno-AI-Decision-Engine"
+    ],
+    "file_count": 6,
+    "byte_size": 17394
+  },
+  {
+    "index": 102,
+    "filename": "QUANT_REPO_102_KJStockScreener.txt",
+    "title": "QUANT_REPO_102 [409be482224a2788]: KJStockScreener (FULL END-TO-END CODE)",
+    "sha256": "409be482224a278831b4c51c10c408d4dceccdec820c29c24eda9590058ab794",
+    "sha256_short": "409be482224a2788",
+    "primary_name": "KJStockScreener",
+    "included_repos": [
+      "KJStockScreener"
+    ],
+    "file_count": 59,
+    "byte_size": 815657
+  },
+  {
+    "index": 103,
+    "filename": "QUANT_REPO_103_Indian-Stock-Market-Screener.txt",
+    "title": "QUANT_REPO_103 [d760028d2e5eeefd]: Indian-Stock-Market-Screener (FULL END-TO-END CODE)",
+    "sha256": "d760028d2e5eeefd8ee2b4a927513ffd6ff6e81902dd14d4ad633c1272aca006",
+    "sha256_short": "d760028d2e5eeefd",
+    "primary_name": "Indian-Stock-Market-Screener",
+    "included_repos": [
+      "Indian-Stock-Market-Screener"
+    ],
+    "file_count": 11,
+    "byte_size": 184658
+  },
+  {
+    "index": 104,
+    "filename": "QUANT_REPO_104_IN-QUANT-021_vnpy__vnpy.txt",
+    "title": "QUANT_REPO_104 [36937dcedf78402a]: IN-QUANT-021_vnpy__vnpy (FULL END-TO-END CODE)",
+    "sha256": "36937dcedf78402ab5607aab969d13c28f2c4d09ea6fff3244e2af4347fc4ba7",
+    "sha256_short": "36937dcedf78402a",
+    "primary_name": "IN-QUANT-021_vnpy__vnpy",
+    "included_repos": [
+      "IN-QUANT-021_vnpy__vnpy"
+    ],
+    "file_count": 73,
+    "byte_size": 513501
+  },
+  {
+    "index": 105,
+    "filename": "QUANT_REPO_105_vnpy.txt",
+    "title": "QUANT_REPO_105 [e06597691da4ce7f]: vnpy (FULL END-TO-END CODE)",
+    "sha256": "e06597691da4ce7fd3dab3fbc1f37d0533188f26cc5ed40c82b954cf13b3665b",
+    "sha256_short": "e06597691da4ce7f",
+    "primary_name": "vnpy",
+    "included_repos": [
+      "vnpy"
+    ],
+    "file_count": 73,
+    "byte_size": 513333
+  },
+  {
+    "index": 106,
+    "filename": "QUANT_REPO_106_OrderFlowImbalanceAnalysis.txt",
+    "title": "QUANT_REPO_106 [bc2ac111b1fcb15f]: OrderFlowImbalanceAnalysis (FULL END-TO-END CODE)",
+    "sha256": "bc2ac111b1fcb15f86b67cb646fc8270085c2658524064c8b2712359f93f2f57",
+    "sha256_short": "bc2ac111b1fcb15f",
+    "primary_name": "OrderFlowImbalanceAnalysis",
+    "included_repos": [
+      "OrderFlowImbalanceAnalysis"
+    ],
+    "file_count": 0,
+    "byte_size": 1143
+  },
+  {
+    "index": 107,
+    "filename": "QUANT_REPO_107_OrderFlowImbalance.txt",
+    "title": "QUANT_REPO_107 [e26648488558032f]: OrderFlowImbalance (FULL END-TO-END CODE)",
+    "sha256": "e26648488558032f0bc6b1c428d3fb5cfc28642676c9b91f1ba0b8ba5c229ae0",
+    "sha256_short": "e26648488558032f",
+    "primary_name": "OrderFlowImbalance",
+    "included_repos": [
+      "OrderFlowImbalance"
+    ],
+    "file_count": 17,
+    "byte_size": 55812
+  },
+  {
+    "index": 108,
+    "filename": "QUANT_REPO_108_orderflow-metrics.txt",
+    "title": "QUANT_REPO_108 [fe6d822b00c609dd]: orderflow-metrics (FULL END-TO-END CODE)",
+    "sha256": "fe6d822b00c609dd7e0a8fa97c498d05e507fdb7a3ba38c0a523d052d8c706a8",
+    "sha256_short": "fe6d822b00c609dd",
+    "primary_name": "orderflow-metrics",
+    "included_repos": [
+      "orderflow-metrics"
+    ],
+    "file_count": 181,
+    "byte_size": 503578
+  },
+  {
+    "index": 109,
+    "filename": "QUANT_REPO_109_varsity-algo.txt",
+    "title": "QUANT_REPO_109 [6241e9bf3342ed81]: varsity-algo (FULL END-TO-END CODE)",
+    "sha256": "6241e9bf3342ed81e7bcc65a535d6c250335027ac38cdbff0828a1c70caad0f3",
+    "sha256_short": "6241e9bf3342ed81",
+    "primary_name": "varsity-algo",
+    "included_repos": [
+      "varsity-algo"
+    ],
+    "file_count": 37,
+    "byte_size": 329561
+  },
+  {
+    "index": 110,
+    "filename": "QUANT_REPO_110_TradingView.txt",
+    "title": "QUANT_REPO_110 [572884bff3857e45]: TradingView (FULL END-TO-END CODE)",
+    "sha256": "572884bff3857e45f9744c35d1b62fc7e9305c580b38b833434ac18ac3965c6f",
+    "sha256_short": "572884bff3857e45",
+    "primary_name": "TradingView",
+    "included_repos": [
+      "TradingView"
+    ],
+    "file_count": 7,
+    "byte_size": 42231
+  },
+  {
+    "index": 111,
+    "filename": "QUANT_REPO_111_tradingbots.txt",
+    "title": "QUANT_REPO_111 [8857afab47180e62]: tradingbots (FULL END-TO-END CODE)",
+    "sha256": "8857afab47180e626fb47dab98ad69db9a1447d5a0adad74c54eb19efb4f3d10",
+    "sha256_short": "8857afab47180e62",
+    "primary_name": "tradingbots",
+    "included_repos": [
+      "tradingbots"
+    ],
+    "file_count": 1,
+    "byte_size": 3777
+  },
+  {
+    "index": 112,
+    "filename": "QUANT_REPO_112_tradingagents.txt",
+    "title": "QUANT_REPO_112 [0d8c64a95b68ba76]: tradingagents (FULL END-TO-END CODE)",
+    "sha256": "0d8c64a95b68ba76fa5dfa3018a3e8c3ebe1ca1356ceefd2bed9f6829b9bd1fb",
+    "sha256_short": "0d8c64a95b68ba76",
+    "primary_name": "tradingagents",
+    "included_repos": [
+      "tradingagents"
+    ],
+    "file_count": 146,
+    "byte_size": 790681
+  },
+  {
+    "index": 113,
+    "filename": "QUANT_REPO_113_trading-system.txt",
+    "title": "QUANT_REPO_113 [48a28cff948fbbbe]: trading-system (FULL END-TO-END CODE)",
+    "sha256": "48a28cff948fbbbe248d25d22eded6399c51bed948c5e40f92ceb0f7100a6ab2",
+    "sha256_short": "48a28cff948fbbbe",
+    "primary_name": "trading-system",
+    "included_repos": [
+      "trading-system"
+    ],
+    "file_count": 31,
+    "byte_size": 212853
+  },
+  {
+    "index": 114,
+    "filename": "QUANT_REPO_114_trading-strategy-templates-python.txt",
+    "title": "QUANT_REPO_114 [3c355666a9b3031a]: trading-strategy-templates-python (FULL END-TO-END CODE)",
+    "sha256": "3c355666a9b3031ae486e9289efa2c088517003ba07236a9ebf359a01f4c1c48",
+    "sha256_short": "3c355666a9b3031a",
+    "primary_name": "trading-strategy-templates-python",
+    "included_repos": [
+      "trading-strategy-templates-python"
+    ],
+    "file_count": 7,
+    "byte_size": 41433
+  },
+  {
+    "index": 115,
+    "filename": "QUANT_REPO_115_Trading-Strategies.txt",
+    "title": "QUANT_REPO_115 [1f5f7a8c5be35311]: Trading-Strategies (FULL END-TO-END CODE)",
+    "sha256": "1f5f7a8c5be35311edd193f1f221d2ff72219905a0595ce9bd01648036d2f98a",
+    "sha256_short": "1f5f7a8c5be35311",
+    "primary_name": "Trading-Strategies",
+    "included_repos": [
+      "Trading-Strategies"
+    ],
+    "file_count": 2,
+    "byte_size": 22930
+  },
+  {
+    "index": 116,
+    "filename": "QUANT_REPO_116_trading-bot.txt",
+    "title": "QUANT_REPO_116 [306a83a4d344bfb6]: trading-bot (FULL END-TO-END CODE)",
+    "sha256": "306a83a4d344bfb6577b698504924b3220e389c7ce8cde5a780ae0296f986acb",
+    "sha256_short": "306a83a4d344bfb6",
+    "primary_name": "trading-bot",
+    "included_repos": [
+      "trading-bot"
+    ],
+    "file_count": 28,
+    "byte_size": 256787
+  },
+  {
+    "index": 117,
+    "filename": "QUANT_REPO_117_Trading-APIs.txt",
+    "title": "QUANT_REPO_117 [966a9d3b3b050121]: Trading-APIs (FULL END-TO-END CODE)",
+    "sha256": "966a9d3b3b050121aff848337e78b1275d69b4f7054a8f2d81a826cd1082f9e6",
+    "sha256_short": "966a9d3b3b050121",
+    "primary_name": "Trading-APIs",
+    "included_repos": [
+      "Trading-APIs"
+    ],
+    "file_count": 1,
+    "byte_size": 3831
+  },
+  {
+    "index": 118,
+    "filename": "QUANT_REPO_118_trading-algoo.txt",
+    "title": "QUANT_REPO_118 [08c018054657d384]: trading-algoo (FULL END-TO-END CODE)",
+    "sha256": "08c018054657d384f1639b1a4ce7363602942ea69bbffb595b17ccfe64918283",
+    "sha256_short": "08c018054657d384",
+    "primary_name": "trading-algoo",
+    "included_repos": [
+      "trading-algoo"
+    ],
+    "file_count": 91,
+    "byte_size": 551882
+  },
+  {
+    "index": 119,
+    "filename": "QUANT_REPO_119_SwingTradingAlgorithm.txt",
+    "title": "QUANT_REPO_119 [e93ac55b7177641d]: SwingTradingAlgorithm (FULL END-TO-END CODE)",
+    "sha256": "e93ac55b7177641dfd5b62e8e38edb2e618a4f62d6860e44e0ee50cb1aa3643e",
+    "sha256_short": "e93ac55b7177641d",
+    "primary_name": "SwingTradingAlgorithm",
+    "included_repos": [
+      "SwingTradingAlgorithm"
+    ],
+    "file_count": 2,
+    "byte_size": 16009
+  },
+  {
+    "index": 120,
+    "filename": "QUANT_REPO_120_smart-money-forex-strategy-mt4.txt",
+    "title": "QUANT_REPO_120 [095aa1125ab373d0]: smart-money-forex-strategy-mt4 (FULL END-TO-END CODE)",
+    "sha256": "095aa1125ab373d0971891e7bb7d240b8966e41baefe6eb03274a01db3d6f9bd",
+    "sha256_short": "095aa1125ab373d0",
+    "primary_name": "smart-money-forex-strategy-mt4",
+    "included_repos": [
+      "smart-money-forex-strategy-mt4"
+    ],
+    "file_count": 1,
+    "byte_size": 8481
+  },
+  {
+    "index": 121,
+    "filename": "QUANT_REPO_121_skill-algotrader.txt",
+    "title": "QUANT_REPO_121 [ccc9f2e6065814cf]: skill-algotrader (FULL END-TO-END CODE)",
+    "sha256": "ccc9f2e6065814cf84069fc3d57948e2bc93f06dbd83787eb008c28e6952304e",
+    "sha256_short": "ccc9f2e6065814cf",
+    "primary_name": "skill-algotrader",
+    "included_repos": [
+      "skill-algotrader"
+    ],
+    "file_count": 9,
+    "byte_size": 73593
+  },
+  {
+    "index": 122,
+    "filename": "QUANT_REPO_122_rqalpha.txt",
+    "title": "QUANT_REPO_122 [65fd2d461eca491e]: rqalpha (FULL END-TO-END CODE)",
+    "sha256": "65fd2d461eca491eac4a2832ef4545b1892b8daa71c8c9ec23d2e97adaa4ba38",
+    "sha256_short": "65fd2d461eca491e",
+    "primary_name": "rqalpha",
+    "included_repos": [
+      "rqalpha"
+    ],
+    "file_count": 94,
+    "byte_size": 2174005
+  },
+  {
+    "index": 123,
+    "filename": "QUANT_REPO_123_rda-stock-trading.txt",
+    "title": "QUANT_REPO_123 [94009951171c68bd]: rda-stock-trading (FULL END-TO-END CODE)",
+    "sha256": "94009951171c68bdceb2d967c9815b300b17ec582423b34652760ead17344de4",
+    "sha256_short": "94009951171c68bd",
+    "primary_name": "rda-stock-trading",
+    "included_repos": [
+      "rda-stock-trading"
+    ],
+    "file_count": 247,
+    "byte_size": 1850101
+  },
+  {
+    "index": 124,
+    "filename": "QUANT_REPO_124_quantstats.txt",
+    "title": "QUANT_REPO_124 [6bea4b88a0d1b4c2]: quantstats (FULL END-TO-END CODE)",
+    "sha256": "6bea4b88a0d1b4c2c4544f39676ed4de26cdfdae982c73574d99474c4521014e",
+    "sha256_short": "6bea4b88a0d1b4c2",
+    "primary_name": "quantstats",
+    "included_repos": [
+      "quantstats"
+    ],
+    "file_count": 27,
+    "byte_size": 472924
+  },
+  {
+    "index": 125,
+    "filename": "QUANT_REPO_125_quantiq.txt",
+    "title": "QUANT_REPO_125 [4d2a37108fc79a87]: quantiq (FULL END-TO-END CODE)",
+    "sha256": "4d2a37108fc79a87907289cc4663056a73d6f49fd49b9307e7de83764ad87fb5",
+    "sha256_short": "4d2a37108fc79a87",
+    "primary_name": "quantiq",
+    "included_repos": [
+      "quantiq"
+    ],
+    "file_count": 37,
+    "byte_size": 450146
+  },
+  {
+    "index": 126,
+    "filename": "QUANT_REPO_126_quantick.txt",
+    "title": "QUANT_REPO_126 [ac10cdb922249906]: quantick (FULL END-TO-END CODE)",
+    "sha256": "ac10cdb922249906f0b56dccad676ab4dd48d49933b10deea8c3b37991b23cfa",
+    "sha256_short": "ac10cdb922249906",
+    "primary_name": "quantick",
+    "included_repos": [
+      "quantick"
+    ],
+    "file_count": 99,
+    "byte_size": 2202622
+  },
+  {
+    "index": 127,
+    "filename": "QUANT_REPO_127_quantaxis.txt",
+    "title": "QUANT_REPO_127 [805241f75c0c7390]: quantaxis (FULL END-TO-END CODE)",
+    "sha256": "805241f75c0c739099ccbc730d6e5bf0a5fda63b7fa11e7444d60bdb406f6e4f",
+    "sha256_short": "805241f75c0c7390",
+    "primary_name": "quantaxis",
+    "included_repos": [
+      "quantaxis"
+    ],
+    "file_count": 241,
+    "byte_size": 2192883
+  },
+  {
+    "index": 128,
+    "filename": "QUANT_REPO_128_quant-trading-strategies.txt",
+    "title": "QUANT_REPO_128 [6cf1f727f7988d8f]: quant-trading-strategies (FULL END-TO-END CODE)",
+    "sha256": "6cf1f727f7988d8f163aeb3ac307bd76b70ec548416c97aee56ffabf94c083d5",
+    "sha256_short": "6cf1f727f7988d8f",
+    "primary_name": "quant-trading-strategies",
+    "included_repos": [
+      "quant-trading-strategies"
+    ],
+    "file_count": 28,
+    "byte_size": 525835
+  },
+  {
+    "index": 129,
+    "filename": "QUANT_REPO_129_quant-trading-bot.txt",
+    "title": "QUANT_REPO_129 [376e19cceb173fa9]: quant-trading-bot (FULL END-TO-END CODE)",
+    "sha256": "376e19cceb173fa91cbc0597e4367b441f4400ba266cc784db2e8bc451eca5eb",
+    "sha256_short": "376e19cceb173fa9",
+    "primary_name": "quant-trading-bot",
+    "included_repos": [
+      "quant-trading-bot"
+    ],
+    "file_count": 28,
+    "byte_size": 525772
+  },
+  {
+    "index": 130,
+    "filename": "QUANT_REPO_130_quant-trading.txt",
+    "title": "QUANT_REPO_130 [72e28f15034d0b52]: quant-trading (FULL END-TO-END CODE)",
+    "sha256": "72e28f15034d0b52f4bf59eca1345712dfa28e3ef868e9b87df9543327c48a58",
+    "sha256_short": "72e28f15034d0b52",
+    "primary_name": "quant-trading",
+    "included_repos": [
+      "quant-trading"
+    ],
+    "file_count": 28,
+    "byte_size": 525736
+  },
+  {
+    "index": 131,
+    "filename": "QUANT_REPO_131_PHASE4-QUANT-031_cybergeekgyan__Quant-Developers-R.txt",
+    "title": "QUANT_REPO_131 [df68de81eee46385]: PHASE4-QUANT-031_cybergeekgyan__Quant-Developers-R (FULL END-TO-END CODE)",
+    "sha256": "df68de81eee463859d1e2545e438fa516530c7f339e4791de6429feb7107aec2",
+    "sha256_short": "df68de81eee46385",
+    "primary_name": "PHASE4-QUANT-031_cybergeekgyan__Quant-Developers-Resources",
+    "included_repos": [
+      "PHASE4-QUANT-031_cybergeekgyan__Quant-Developers-Resources"
+    ],
+    "file_count": 0,
+    "byte_size": 1425
+  },
+  {
+    "index": 132,
+    "filename": "QUANT_REPO_132_PHASE4-QUANT-030_EliteQuant__EliteQuant.txt",
+    "title": "QUANT_REPO_132 [baeff84db850ab52]: PHASE4-QUANT-030_EliteQuant__EliteQuant (FULL END-TO-END CODE)",
+    "sha256": "baeff84db850ab520a51206931382afac0cc8c4a6351db3bc567284efa0b03c6",
+    "sha256_short": "baeff84db850ab52",
+    "primary_name": "PHASE4-QUANT-030_EliteQuant__EliteQuant",
+    "included_repos": [
+      "PHASE4-QUANT-030_EliteQuant__EliteQuant"
+    ],
+    "file_count": 1,
+    "byte_size": 28806
+  },
+  {
+    "index": 133,
+    "filename": "QUANT_REPO_133_PHASE4-QUANT-029_LLMQuant__quant-wiki.txt",
+    "title": "QUANT_REPO_133 [a994a2cfe6160317]: PHASE4-QUANT-029_LLMQuant__quant-wiki (FULL END-TO-END CODE)",
+    "sha256": "a994a2cfe6160317c7b3ba0b15f0bca760c8beb8f86fb0d7adbbc64d89b77193",
+    "sha256_short": "a994a2cfe6160317",
+    "primary_name": "PHASE4-QUANT-029_LLMQuant__quant-wiki",
+    "included_repos": [
+      "PHASE4-QUANT-029_LLMQuant__quant-wiki"
+    ],
+    "file_count": 0,
+    "byte_size": 1244
+  },
+  {
+    "index": 134,
+    "filename": "QUANT_REPO_134_PHASE4-QUANT-028_zvtvz__zvt.txt",
+    "title": "QUANT_REPO_134 [0a961041cc5b8a16]: PHASE4-QUANT-028_zvtvz__zvt (FULL END-TO-END CODE)",
+    "sha256": "0a961041cc5b8a1676670f741c83b7ca570fe12454ebf2fdef776eb9fdffc59e",
+    "sha256_short": "0a961041cc5b8a16",
+    "primary_name": "PHASE4-QUANT-028_zvtvz__zvt",
+    "included_repos": [
+      "PHASE4-QUANT-028_zvtvz__zvt"
+    ],
+    "file_count": 443,
+    "byte_size": 2062891
+  },
+  {
+    "index": 135,
+    "filename": "QUANT_REPO_135_PHASE4-QUANT-027_shy3130__tick-stock-panel.txt",
+    "title": "QUANT_REPO_135 [2dfb263fbed82daa]: PHASE4-QUANT-027_shy3130__tick-stock-panel (FULL END-TO-END CODE)",
+    "sha256": "2dfb263fbed82daacebf0639dc0cdf267022215e33ba37f2e2b3cb25b62e7979",
+    "sha256_short": "2dfb263fbed82daa",
+    "primary_name": "PHASE4-QUANT-027_shy3130__tick-stock-panel",
+    "included_repos": [
+      "PHASE4-QUANT-027_shy3130__tick-stock-panel"
+    ],
+    "file_count": 0,
+    "byte_size": 1289
+  },
+  {
+    "index": 136,
+    "filename": "QUANT_REPO_136_PHASE4-QUANT-026_wangzhe3224__awesome-systematic-t.txt",
+    "title": "QUANT_REPO_136 [bfa5975f8440d34e]: PHASE4-QUANT-026_wangzhe3224__awesome-systematic-t (FULL END-TO-END CODE)",
+    "sha256": "bfa5975f8440d34ea60dd977eb692dde3899558c4492d7561cb787bac1cf99ef",
+    "sha256_short": "bfa5975f8440d34e",
+    "primary_name": "PHASE4-QUANT-026_wangzhe3224__awesome-systematic-trading",
+    "included_repos": [
+      "PHASE4-QUANT-026_wangzhe3224__awesome-systematic-trading"
+    ],
+    "file_count": 7,
+    "byte_size": 102448
+  },
+  {
+    "index": 137,
+    "filename": "QUANT_REPO_137_PHASE4-QUANT-025_Superalgos__Superalgos.txt",
+    "title": "QUANT_REPO_137 [39dbb2acc84e62ac]: PHASE4-QUANT-025_Superalgos__Superalgos (FULL END-TO-END CODE)",
+    "sha256": "39dbb2acc84e62acc96e878e664be08906a52dfee3d947d75b56d5a6b8f1d7fc",
+    "sha256_short": "39dbb2acc84e62ac",
+    "primary_name": "PHASE4-QUANT-025_Superalgos__Superalgos",
+    "included_repos": [
+      "PHASE4-QUANT-025_Superalgos__Superalgos"
+    ],
+    "file_count": 0,
+    "byte_size": 1262
+  },
+  {
+    "index": 138,
+    "filename": "QUANT_REPO_138_PHASE4-QUANT-024_paperswithbacktest__awesome-syste.txt",
+    "title": "QUANT_REPO_138 [48f4a4ebf8057c54]: PHASE4-QUANT-024_paperswithbacktest__awesome-syste (FULL END-TO-END CODE)",
+    "sha256": "48f4a4ebf8057c5461ff449a649bf9ee60d06919c4fe948e107ace2faaa575ed",
+    "sha256_short": "48f4a4ebf8057c54",
+    "primary_name": "PHASE4-QUANT-024_paperswithbacktest__awesome-systematic-trading",
+    "included_repos": [
+      "PHASE4-QUANT-024_paperswithbacktest__awesome-systematic-trading"
+    ],
+    "file_count": 66,
+    "byte_size": 1146638
+  },
+  {
+    "index": 139,
+    "filename": "QUANT_REPO_139_PHASE4-QUANT-023_UFund-Me__Qbot.txt",
+    "title": "QUANT_REPO_139 [8032e5c15e5d9868]: PHASE4-QUANT-023_UFund-Me__Qbot (FULL END-TO-END CODE)",
+    "sha256": "8032e5c15e5d98687406fa72faf50546b4c2c8d17c3f52de83b0f8366872578e",
+    "sha256_short": "8032e5c15e5d9868",
+    "primary_name": "PHASE4-QUANT-023_UFund-Me__Qbot",
+    "included_repos": [
+      "PHASE4-QUANT-023_UFund-Me__Qbot"
+    ],
+    "file_count": 0,
+    "byte_size": 1190
+  },
+  {
+    "index": 140,
+    "filename": "QUANT_REPO_140_PHASE4-QUANT-017_erdewit__ib_insync.txt",
+    "title": "QUANT_REPO_140 [f68387d0277b6b95]: PHASE4-QUANT-017_erdewit__ib_insync (FULL END-TO-END CODE)",
+    "sha256": "f68387d0277b6b95602ba1c05a4906e9d3bf7a8378a82e7a8c2a35b4d94093da",
+    "sha256_short": "f68387d0277b6b95",
+    "primary_name": "PHASE4-QUANT-017_erdewit__ib_insync",
+    "included_repos": [
+      "PHASE4-QUANT-017_erdewit__ib_insync"
+    ],
+    "file_count": 37,
+    "byte_size": 1041184
+  },
+  {
+    "index": 141,
+    "filename": "QUANT_REPO_141_PHASE4-QUANT-016_timkpaine__tributary.txt",
+    "title": "QUANT_REPO_141 [f03534e6ce2bdf75]: PHASE4-QUANT-016_timkpaine__tributary (FULL END-TO-END CODE)",
+    "sha256": "f03534e6ce2bdf75d50caee78aa7543b65e5a4fef09c5235213475aa2cff0fdd",
+    "sha256_short": "f03534e6ce2bdf75",
+    "primary_name": "PHASE4-QUANT-016_timkpaine__tributary",
+    "included_repos": [
+      "PHASE4-QUANT-016_timkpaine__tributary"
+    ],
+    "file_count": 120,
+    "byte_size": 321319
+  },
+  {
+    "index": 142,
+    "filename": "QUANT_REPO_142_PHASE4-QUANT-014_man-group__dtale.txt",
+    "title": "QUANT_REPO_142 [e38674d67da67e20]: PHASE4-QUANT-014_man-group__dtale (FULL END-TO-END CODE)",
+    "sha256": "e38674d67da67e20d4eb4dbd6533c1866fa52e0fd0a6075eda66ce7341d28722",
+    "sha256_short": "e38674d67da67e20",
+    "primary_name": "PHASE4-QUANT-014_man-group__dtale",
+    "included_repos": [
+      "PHASE4-QUANT-014_man-group__dtale"
+    ],
+    "file_count": 232,
+    "byte_size": 2110484
+  },
+  {
+    "index": 143,
+    "filename": "QUANT_REPO_143_PHASE4-QUANT-013_cuemacro__chartpy.txt",
+    "title": "QUANT_REPO_143 [eeb29cb46401e117]: PHASE4-QUANT-013_cuemacro__chartpy (FULL END-TO-END CODE)",
+    "sha256": "eeb29cb46401e1176d1aa94cd06cb44f1607c73dbd265dae39ffa1553c8c5f13",
+    "sha256_short": "eeb29cb46401e117",
+    "primary_name": "PHASE4-QUANT-013_cuemacro__chartpy",
+    "included_repos": [
+      "PHASE4-QUANT-013_cuemacro__chartpy"
+    ],
+    "file_count": 256,
+    "byte_size": 1809044
+  },
+  {
+    "index": 144,
+    "filename": "QUANT_REPO_144_PHASE4-QUANT-012_hudson-and-thames__mlfinlab.txt",
+    "title": "QUANT_REPO_144 [7ca6aab58c96a964]: PHASE4-QUANT-012_hudson-and-thames__mlfinlab (FULL END-TO-END CODE)",
+    "sha256": "7ca6aab58c96a96423da78b3ee8cf028556053bd5bae82fef73ef1bd213fa398",
+    "sha256_short": "7ca6aab58c96a964",
+    "primary_name": "PHASE4-QUANT-012_hudson-and-thames__mlfinlab",
+    "included_repos": [
+      "PHASE4-QUANT-012_hudson-and-thames__mlfinlab"
+    ],
+    "file_count": 98,
+    "byte_size": 382176
+  },
+  {
+    "index": 145,
+    "filename": "QUANT_REPO_145_PHASE4-QUANT-007_0xemmkty__QuantMuse.txt",
+    "title": "QUANT_REPO_145 [a96de1c17547d757]: PHASE4-QUANT-007_0xemmkty__QuantMuse (FULL END-TO-END CODE)",
+    "sha256": "a96de1c17547d7573acb39711e99db6eaade4e9aecb566347a1c743c2a28d2dd",
+    "sha256_short": "a96de1c17547d757",
+    "primary_name": "PHASE4-QUANT-007_0xemmkty__QuantMuse",
+    "included_repos": [
+      "PHASE4-QUANT-007_0xemmkty__QuantMuse"
+    ],
+    "file_count": 95,
+    "byte_size": 708487
+  },
+  {
+    "index": 146,
+    "filename": "QUANT_REPO_146_PHASE4-QUANT-002_jesse-ai__jesse.txt",
+    "title": "QUANT_REPO_146 [352773856e98a3d6]: PHASE4-QUANT-002_jesse-ai__jesse (FULL END-TO-END CODE)",
+    "sha256": "352773856e98a3d6fb5d607b6c7592ce5c5cb3cfc5d556846859e0006905670c",
+    "sha256_short": "352773856e98a3d6",
+    "primary_name": "PHASE4-QUANT-002_jesse-ai__jesse",
+    "included_repos": [
+      "PHASE4-QUANT-002_jesse-ai__jesse"
+    ],
+    "file_count": 0,
+    "byte_size": 1199
+  },
+  {
+    "index": 147,
+    "filename": "QUANT_REPO_147_order-flow-imbalance-strategy.txt",
+    "title": "QUANT_REPO_147 [a5b2f59920044188]: order-flow-imbalance-strategy (FULL END-TO-END CODE)",
+    "sha256": "a5b2f599200441880196e11777e393d2f01208c5c8e0d7014b528c33c511849d",
+    "sha256_short": "a5b2f59920044188",
+    "primary_name": "order-flow-imbalance-strategy",
+    "included_repos": [
+      "order-flow-imbalance-strategy"
+    ],
+    "file_count": 17,
+    "byte_size": 155171
+  },
+  {
+    "index": 148,
+    "filename": "QUANT_REPO_148_openalgo.txt",
+    "title": "QUANT_REPO_148 [8a39fc2f8ae812ef]: openalgo (FULL END-TO-END CODE)",
+    "sha256": "8a39fc2f8ae812ef55a8bb21cbe7f35ad793b85d5546a9cd8ab229189f8f7ea4",
+    "sha256_short": "8a39fc2f8ae812ef",
+    "primary_name": "openalgo",
+    "included_repos": [
+      "openalgo"
+    ],
+    "file_count": 126,
+    "byte_size": 2105627
+  },
+  {
+    "index": 149,
+    "filename": "QUANT_REPO_149_My-Algo-Trading-Code.txt",
+    "title": "QUANT_REPO_149 [01f6e18e58a4776e]: My-Algo-Trading-Code (FULL END-TO-END CODE)",
+    "sha256": "01f6e18e58a4776ea856b98ce7925dea42e215a53920ae4cb481133cbb8d06d7",
+    "sha256_short": "01f6e18e58a4776e",
+    "primary_name": "My-Algo-Trading-Code",
+    "included_repos": [
+      "My-Algo-Trading-Code"
+    ],
+    "file_count": 30,
+    "byte_size": 2100857
+  },
+  {
+    "index": 150,
+    "filename": "QUANT_REPO_150_Multi-Regime-Algorithmic-Trading-System.txt",
+    "title": "QUANT_REPO_150 [77ccdb8634149e99]: Multi-Regime-Algorithmic-Trading-System (FULL END-TO-END CODE)",
+    "sha256": "77ccdb8634149e99af21b9fe39f004364d089a9ab05dc6a8ef9cdb942679b8c5",
+    "sha256_short": "77ccdb8634149e99",
+    "primary_name": "Multi-Regime-Algorithmic-Trading-System",
+    "included_repos": [
+      "Multi-Regime-Algorithmic-Trading-System"
+    ],
+    "file_count": 109,
+    "byte_size": 778391
+  },
+  {
+    "index": 151,
+    "filename": "QUANT_REPO_151_MicrostructureAlphaEngine-Order_Flow_Imbalance_Str.txt",
+    "title": "QUANT_REPO_151 [4831f55a0e7913f2]: MicrostructureAlphaEngine-Order_Flow_Imbalance_Str (FULL END-TO-END CODE)",
+    "sha256": "4831f55a0e7913f211b057e30da33df3b06ac2fc39a23e564fe7bb9a66db6f45",
+    "sha256_short": "4831f55a0e7913f2",
+    "primary_name": "MicrostructureAlphaEngine-Order_Flow_Imbalance_Strategy",
+    "included_repos": [
+      "MicrostructureAlphaEngine-Order_Flow_Imbalance_Strategy"
+    ],
+    "file_count": 17,
+    "byte_size": 108429
+  },
+  {
+    "index": 152,
+    "filename": "QUANT_REPO_152_machine-learning-for-trading.txt",
+    "title": "QUANT_REPO_152 [5a91ce487de0ebba]: machine-learning-for-trading (FULL END-TO-END CODE)",
+    "sha256": "5a91ce487de0ebba462b38b696ac8ce2e0c232bd52051c164d6acb549a83a55a",
+    "sha256_short": "5a91ce487de0ebba",
+    "primary_name": "machine-learning-for-trading",
+    "included_repos": [
+      "machine-learning-for-trading"
+    ],
+    "file_count": 62,
+    "byte_size": 2104735
+  },
+  {
+    "index": 153,
+    "filename": "QUANT_REPO_153_indian-trading-skills.txt",
+    "title": "QUANT_REPO_153 [5326755e1d27d841]: indian-trading-skills (FULL END-TO-END CODE)",
+    "sha256": "5326755e1d27d8417f1b305d60257db696f5e396e08ce3a3254b6010e8ebf724",
+    "sha256_short": "5326755e1d27d841",
+    "primary_name": "indian-trading-skills",
+    "included_repos": [
+      "indian-trading-skills"
+    ],
+    "file_count": 13,
+    "byte_size": 163713
+  },
+  {
+    "index": 154,
+    "filename": "QUANT_REPO_154_indian-algo-ai-skill.txt",
+    "title": "QUANT_REPO_154 [958ab4a112d441c6]: indian-algo-ai-skill (FULL END-TO-END CODE)",
+    "sha256": "958ab4a112d441c69eee7c39ae5d255f7bb99606c300691a40bccf72cdf95fee",
+    "sha256_short": "958ab4a112d441c6",
+    "primary_name": "indian-algo-ai-skill",
+    "included_repos": [
+      "indian-algo-ai-skill"
+    ],
+    "file_count": 17,
+    "byte_size": 153961
+  },
+  {
+    "index": 155,
+    "filename": "QUANT_REPO_155_IN-QUANT-123_nashit8421__price-action-lib.txt",
+    "title": "QUANT_REPO_155 [6e84f48a57401b24]: IN-QUANT-123_nashit8421__price-action-lib (FULL END-TO-END CODE)",
+    "sha256": "6e84f48a57401b246dfb7c46022280e5f7626693a3c0145c58e217caa801d4d0",
+    "sha256_short": "6e84f48a57401b24",
+    "primary_name": "IN-QUANT-123_nashit8421__price-action-lib",
+    "included_repos": [
+      "IN-QUANT-123_nashit8421__price-action-lib"
+    ],
+    "file_count": 19,
+    "byte_size": 278925
+  },
+  {
+    "index": 156,
+    "filename": "QUANT_REPO_156_IN-QUANT-121_SankarSrinivasan1__Python-for-Indian-.txt",
+    "title": "QUANT_REPO_156 [344780dcc10281b8]: IN-QUANT-121_SankarSrinivasan1__Python-for-Indian- (FULL END-TO-END CODE)",
+    "sha256": "344780dcc10281b81f0370f911a85244ab53ded0a1215464ca91d5075e945fd3",
+    "sha256_short": "344780dcc10281b8",
+    "primary_name": "IN-QUANT-121_SankarSrinivasan1__Python-for-Indian-Traders",
+    "included_repos": [
+      "IN-QUANT-121_SankarSrinivasan1__Python-for-Indian-Traders"
+    ],
+    "file_count": 78,
+    "byte_size": 120807
+  },
+  {
+    "index": 157,
+    "filename": "QUANT_REPO_157_IN-QUANT-119_anurag203__QuantInsti_InterIIT2023.txt",
+    "title": "QUANT_REPO_157 [2dd1246cea23d512]: IN-QUANT-119_anurag203__QuantInsti_InterIIT2023 (FULL END-TO-END CODE)",
+    "sha256": "2dd1246cea23d51229a4a831021a7844af64e139ed89fcf770feaf9dfe19f9f1",
+    "sha256_short": "2dd1246cea23d512",
+    "primary_name": "IN-QUANT-119_anurag203__QuantInsti_InterIIT2023",
+    "included_repos": [
+      "IN-QUANT-119_anurag203__QuantInsti_InterIIT2023"
+    ],
+    "file_count": 10,
+    "byte_size": 46044
+  },
+  {
+    "index": 158,
+    "filename": "QUANT_REPO_158_IN-QUANT-118_anirudhjayaraman__Pairs-Trading-India.txt",
+    "title": "QUANT_REPO_158 [566c50def6015879]: IN-QUANT-118_anirudhjayaraman__Pairs-Trading-India (FULL END-TO-END CODE)",
+    "sha256": "566c50def60158799e06250d4b42347f88dfc1e8483f1a8c982ea8043599e898",
+    "sha256_short": "566c50def6015879",
+    "primary_name": "IN-QUANT-118_anirudhjayaraman__Pairs-Trading-Indian-IT-Stocks",
+    "included_repos": [
+      "IN-QUANT-118_anirudhjayaraman__Pairs-Trading-Indian-IT-Stocks"
+    ],
+    "file_count": 1,
+    "byte_size": 1623
+  },
+  {
+    "index": 159,
+    "filename": "QUANT_REPO_159_IN-QUANT-117_sumeetkbhardwaj__small-trading-indian.txt",
+    "title": "QUANT_REPO_159 [69de2d45631d44d1]: IN-QUANT-117_sumeetkbhardwaj__small-trading-indian (FULL END-TO-END CODE)",
+    "sha256": "69de2d45631d44d162ec2977a1b103fea434fccb4711675c6e5e601a0bc7ba46",
+    "sha256_short": "69de2d45631d44d1",
+    "primary_name": "IN-QUANT-117_sumeetkbhardwaj__small-trading-indian-stock-market-survival-kit",
+    "included_repos": [
+      "IN-QUANT-117_sumeetkbhardwaj__small-trading-indian-stock-market-survival-kit"
+    ],
+    "file_count": 68,
+    "byte_size": 112119
+  },
+  {
+    "index": 160,
+    "filename": "QUANT_REPO_160_IN-QUANT-116_algobulls__pyalgotrading.txt",
+    "title": "QUANT_REPO_160 [0725aa71f066b08e]: IN-QUANT-116_algobulls__pyalgotrading (FULL END-TO-END CODE)",
+    "sha256": "0725aa71f066b08e245416dd494b22fd37dce5e12326a00beb819e18dfa01f78",
+    "sha256_short": "0725aa71f066b08e",
+    "primary_name": "IN-QUANT-116_algobulls__pyalgotrading",
+    "included_repos": [
+      "IN-QUANT-116_algobulls__pyalgotrading"
+    ],
+    "file_count": 33,
+    "byte_size": 175869
+  },
+  {
+    "index": 161,
+    "filename": "QUANT_REPO_161_IN-QUANT-115_Praxal__pycon2017_algo_trading.txt",
+    "title": "QUANT_REPO_161 [6167efc19162069a]: IN-QUANT-115_Praxal__pycon2017_algo_trading (FULL END-TO-END CODE)",
+    "sha256": "6167efc19162069a5c9df3538fe74058294440670db64e35d74c77132378efe3",
+    "sha256_short": "6167efc19162069a",
+    "primary_name": "IN-QUANT-115_Praxal__pycon2017_algo_trading",
+    "included_repos": [
+      "IN-QUANT-115_Praxal__pycon2017_algo_trading"
+    ],
+    "file_count": 2,
+    "byte_size": 11129
+  },
+  {
+    "index": 162,
+    "filename": "QUANT_REPO_162_IN-QUANT-112_stockviz__StockVizGit.txt",
+    "title": "QUANT_REPO_162 [03ddd445d86e6b8e]: IN-QUANT-112_stockviz__StockVizGit (FULL END-TO-END CODE)",
+    "sha256": "03ddd445d86e6b8e2656b36b6175c582213510eb645c550890b39558ad382883",
+    "sha256_short": "03ddd445d86e6b8e",
+    "primary_name": "IN-QUANT-112_stockviz__StockVizGit",
+    "included_repos": [
+      "IN-QUANT-112_stockviz__StockVizGit"
+    ],
+    "file_count": 1,
+    "byte_size": 1924
+  },
+  {
+    "index": 163,
+    "filename": "QUANT_REPO_163_IN-QUANT-111_ReaperOAK__survivorship-free-backtest.txt",
+    "title": "QUANT_REPO_163 [a11f4cb4f13edfe5]: IN-QUANT-111_ReaperOAK__survivorship-free-backtest (FULL END-TO-END CODE)",
+    "sha256": "a11f4cb4f13edfe572301f8a3f71847dda6638e49e82dca77fb23acda90370a9",
+    "sha256_short": "a11f4cb4f13edfe5",
+    "primary_name": "IN-QUANT-111_ReaperOAK__survivorship-free-backtester",
+    "included_repos": [
+      "IN-QUANT-111_ReaperOAK__survivorship-free-backtester"
+    ],
+    "file_count": 42,
+    "byte_size": 201169
+  },
+  {
+    "index": 164,
+    "filename": "QUANT_REPO_164_IN-QUANT-110_buzzsubash__algo_trading_strategies_i.txt",
+    "title": "QUANT_REPO_164 [51e8f42bfae22d72]: IN-QUANT-110_buzzsubash__algo_trading_strategies_i (FULL END-TO-END CODE)",
+    "sha256": "51e8f42bfae22d72dc8d800681dcab1aa30abcd46783b01fec994479ce3d7304",
+    "sha256_short": "51e8f42bfae22d72",
+    "primary_name": "IN-QUANT-110_buzzsubash__algo_trading_strategies_india",
+    "included_repos": [
+      "IN-QUANT-110_buzzsubash__algo_trading_strategies_india"
+    ],
+    "file_count": 41,
+    "byte_size": 698802
+  },
+  {
+    "index": 165,
+    "filename": "QUANT_REPO_165_IN-QUANT-109_alphabench__raptorbt.txt",
+    "title": "QUANT_REPO_165 [fc7f6a0dca73a473]: IN-QUANT-109_alphabench__raptorbt (FULL END-TO-END CODE)",
+    "sha256": "fc7f6a0dca73a4739a5b3ef91bb7b7af429fb8ec7ce087570815cf2223d6a8bd",
+    "sha256_short": "fc7f6a0dca73a473",
+    "primary_name": "IN-QUANT-109_alphabench__raptorbt",
+    "included_repos": [
+      "IN-QUANT-109_alphabench__raptorbt"
+    ],
+    "file_count": 104,
+    "byte_size": 2103514
+  },
+  {
+    "index": 166,
+    "filename": "QUANT_REPO_166_IN-QUANT-108_mhallsmoore__qstrader.txt",
+    "title": "QUANT_REPO_166 [c3fba9c3f94f2f8e]: IN-QUANT-108_mhallsmoore__qstrader (FULL END-TO-END CODE)",
+    "sha256": "c3fba9c3f94f2f8ea6c56bc544a6dfd82fe5a987ce21f46aac4ac388bd3d7606",
+    "sha256_short": "c3fba9c3f94f2f8e",
+    "primary_name": "IN-QUANT-108_mhallsmoore__qstrader",
+    "included_repos": [
+      "IN-QUANT-108_mhallsmoore__qstrader"
+    ],
+    "file_count": 97,
+    "byte_size": 348369
+  },
+  {
+    "index": 167,
+    "filename": "QUANT_REPO_167_IN-QUANT-107_pmorissette__ffn.txt",
+    "title": "QUANT_REPO_167 [aa9424d76967439e]: IN-QUANT-107_pmorissette__ffn (FULL END-TO-END CODE)",
+    "sha256": "aa9424d76967439ea8cd33d82d86d14cab80926cd747ac64de75a630d10a7df1",
+    "sha256_short": "aa9424d76967439e",
+    "primary_name": "IN-QUANT-107_pmorissette__ffn",
+    "included_repos": [
+      "IN-QUANT-107_pmorissette__ffn"
+    ],
+    "file_count": 21,
+    "byte_size": 260063
+  },
+  {
+    "index": 168,
+    "filename": "QUANT_REPO_168_IN-QUANT-106_quantopian__empyrical.txt",
+    "title": "QUANT_REPO_168 [cca3b601274763de]: IN-QUANT-106_quantopian__empyrical (FULL END-TO-END CODE)",
+    "sha256": "cca3b601274763dead393f55c7772ea858da79af93a356a22eecb8aab94f4145",
+    "sha256_short": "cca3b601274763de",
+    "primary_name": "IN-QUANT-106_quantopian__empyrical",
+    "included_repos": [
+      "IN-QUANT-106_quantopian__empyrical"
+    ],
+    "file_count": 15,
+    "byte_size": 264492
+  },
+  {
+    "index": 169,
+    "filename": "QUANT_REPO_169_IN-QUANT-105_pmorissette__bt.txt",
+    "title": "QUANT_REPO_169 [e5c9d900a5126d9d]: IN-QUANT-105_pmorissette__bt (FULL END-TO-END CODE)",
+    "sha256": "e5c9d900a5126d9db23fd7d72b64a1e3db44f16ea8683f20ed26d5b410eaf328",
+    "sha256_short": "e5c9d900a5126d9d",
+    "primary_name": "IN-QUANT-105_pmorissette__bt",
+    "included_repos": [
+      "IN-QUANT-105_pmorissette__bt"
+    ],
+    "file_count": 18,
+    "byte_size": 471321
+  },
+  {
+    "index": 170,
+    "filename": "QUANT_REPO_170_IN-QUANT-104_peerchemist__finta.txt",
+    "title": "QUANT_REPO_170 [02101d81f06eb914]: IN-QUANT-104_peerchemist__finta (FULL END-TO-END CODE)",
+    "sha256": "02101d81f06eb914542185bd30a3c06ad975d138106ddca5e6c3f2f4c41fc764",
+    "sha256_short": "02101d81f06eb914",
+    "primary_name": "IN-QUANT-104_peerchemist__finta",
+    "included_repos": [
+      "IN-QUANT-104_peerchemist__finta"
+    ],
+    "file_count": 13,
+    "byte_size": 558040
+  },
+  {
+    "index": 171,
+    "filename": "QUANT_REPO_171_IN-QUANT-102_gbeced__pyalgotrade.txt",
+    "title": "QUANT_REPO_171 [73605abf68230f88]: IN-QUANT-102_gbeced__pyalgotrade (FULL END-TO-END CODE)",
+    "sha256": "73605abf68230f880569fb3471800ad618cd6071a06be57825327fa111cc1757",
+    "sha256_short": "73605abf68230f88",
+    "primary_name": "IN-QUANT-102_gbeced__pyalgotrade",
+    "included_repos": [
+      "IN-QUANT-102_gbeced__pyalgotrade"
+    ],
+    "file_count": 193,
+    "byte_size": 1160972
+  },
+  {
+    "index": 172,
+    "filename": "QUANT_REPO_172_IN-QUANT-101_bukosabino__ta.txt",
+    "title": "QUANT_REPO_172 [0da4c4f0edbfa9fd]: IN-QUANT-101_bukosabino__ta (FULL END-TO-END CODE)",
+    "sha256": "0da4c4f0edbfa9fd8c35d2189e17de464be055989264135dac477cfc560e2cbf",
+    "sha256_short": "0da4c4f0edbfa9fd",
+    "primary_name": "IN-QUANT-101_bukosabino__ta",
+    "included_repos": [
+      "IN-QUANT-101_bukosabino__ta"
+    ],
+    "file_count": 25,
+    "byte_size": 282493
+  },
+  {
+    "index": 173,
+    "filename": "QUANT_REPO_173_IN-QUANT-100_ranaroussi__quantstats.txt",
+    "title": "QUANT_REPO_173 [5b4fc33b5aae1b06]: IN-QUANT-100_ranaroussi__quantstats (FULL END-TO-END CODE)",
+    "sha256": "5b4fc33b5aae1b0631b20b14d72590fdd377115ac1f240fd338db208fa255edc",
+    "sha256_short": "5b4fc33b5aae1b06",
+    "primary_name": "IN-QUANT-100_ranaroussi__quantstats",
+    "included_repos": [
+      "IN-QUANT-100_ranaroussi__quantstats"
+    ],
+    "file_count": 27,
+    "byte_size": 473146
+  },
+  {
+    "index": 174,
+    "filename": "QUANT_REPO_174_IN-QUANT-097_kernc__backtesting.py.txt",
+    "title": "QUANT_REPO_174 [371c5b57a791efec]: IN-QUANT-097_kernc__backtesting.py (FULL END-TO-END CODE)",
+    "sha256": "371c5b57a791efec1a8f936312bb45b9da97652ed868e3cc7abd3f9e29d9e8c3",
+    "sha256_short": "371c5b57a791efec",
+    "primary_name": "IN-QUANT-097_kernc__backtesting.py",
+    "included_repos": [
+      "IN-QUANT-097_kernc__backtesting.py"
+    ],
+    "file_count": 29,
+    "byte_size": 280365
+  },
+  {
+    "index": 175,
+    "filename": "QUANT_REPO_175_IN-QUANT-095_TA-Lib__ta-lib-python.txt",
+    "title": "QUANT_REPO_175 [1c4d59b8a1388f9d]: IN-QUANT-095_TA-Lib__ta-lib-python (FULL END-TO-END CODE)",
+    "sha256": "1c4d59b8a1388f9daac37dffdae75999caf7940bf3c42018b22cfa20474d15de",
+    "sha256_short": "1c4d59b8a1388f9d",
+    "primary_name": "IN-QUANT-095_TA-Lib__ta-lib-python",
+    "included_repos": [
+      "IN-QUANT-095_TA-Lib__ta-lib-python"
+    ],
+    "file_count": 8,
+    "byte_size": 6352704
+  },
+  {
+    "index": 176,
+    "filename": "QUANT_REPO_176_IN-QUANT-092_almaastaj__IndianStockMarket.txt",
+    "title": "QUANT_REPO_176 [889a0e79906f7ed4]: IN-QUANT-092_almaastaj__IndianStockMarket (FULL END-TO-END CODE)",
+    "sha256": "889a0e79906f7ed477de2769b9c1f213f0666a735501c1c389d2f7d043c3334a",
+    "sha256_short": "889a0e79906f7ed4",
+    "primary_name": "IN-QUANT-092_almaastaj__IndianStockMarket",
+    "included_repos": [
+      "IN-QUANT-092_almaastaj__IndianStockMarket"
+    ],
+    "file_count": 1,
+    "byte_size": 2010
+  },
+  {
+    "index": 177,
+    "filename": "QUANT_REPO_177_IN-QUANT-091_hhemanth__stock_data_analyzer.txt",
+    "title": "QUANT_REPO_177 [fe99f859a29ecb6a]: IN-QUANT-091_hhemanth__stock_data_analyzer (FULL END-TO-END CODE)",
+    "sha256": "fe99f859a29ecb6a330ede7e56fab4b352a92a7471c2f5477f60ea27458509e7",
+    "sha256_short": "fe99f859a29ecb6a",
+    "primary_name": "IN-QUANT-091_hhemanth__stock_data_analyzer",
+    "included_repos": [
+      "IN-QUANT-091_hhemanth__stock_data_analyzer"
+    ],
+    "file_count": 1,
+    "byte_size": 1319
+  },
+  {
+    "index": 178,
+    "filename": "QUANT_REPO_178_IN-QUANT-090_deepakdharrao__Indian-Stock-Market_BE.txt",
+    "title": "QUANT_REPO_178 [2e9733804aaa2ae1]: IN-QUANT-090_deepakdharrao__Indian-Stock-Market_BE (FULL END-TO-END CODE)",
+    "sha256": "2e9733804aaa2ae10a61e70a344757efdda54988a81e5d894fa4fee3efec8670",
+    "sha256_short": "2e9733804aaa2ae1",
+    "primary_name": "IN-QUANT-090_deepakdharrao__Indian-Stock-Market_BEL.NS-and-IITL.NS-Dataset-2014-2024",
+    "included_repos": [
+      "IN-QUANT-090_deepakdharrao__Indian-Stock-Market_BEL.NS-and-IITL.NS-Dataset-2014-2024"
+    ],
+    "file_count": 1,
+    "byte_size": 3820
+  },
+  {
+    "index": 179,
+    "filename": "QUANT_REPO_179_IN-QUANT-087_vijayshinva__Indian-Stock-Markets.txt",
+    "title": "QUANT_REPO_179 [b436b8e93f344c3b]: IN-QUANT-087_vijayshinva__Indian-Stock-Markets (FULL END-TO-END CODE)",
+    "sha256": "b436b8e93f344c3b64ffca206a720c20dfeb7707c70ba0325daafad3078d855a",
+    "sha256_short": "b436b8e93f344c3b",
+    "primary_name": "IN-QUANT-087_vijayshinva__Indian-Stock-Markets",
+    "included_repos": [
+      "IN-QUANT-087_vijayshinva__Indian-Stock-Markets"
+    ],
+    "file_count": 12,
+    "byte_size": 40649
+  },
+  {
+    "index": 180,
+    "filename": "QUANT_REPO_180_IN-QUANT-085_rajmaurya0904__bhav.txt",
+    "title": "QUANT_REPO_180 [ceaba81a7de9090e]: IN-QUANT-085_rajmaurya0904__bhav (FULL END-TO-END CODE)",
+    "sha256": "ceaba81a7de9090ef750a983439b09ab2dae0119528634a87ca1c12a9fd921b6",
+    "sha256_short": "ceaba81a7de9090e",
+    "primary_name": "IN-QUANT-085_rajmaurya0904__bhav",
+    "included_repos": [
+      "IN-QUANT-085_rajmaurya0904__bhav"
+    ],
+    "file_count": 57,
+    "byte_size": 280562
+  },
+  {
+    "index": 181,
+    "filename": "QUANT_REPO_181_IN-QUANT-082_BennyThadikaran__stock-news.txt",
+    "title": "QUANT_REPO_181 [d9285a3ffc745e8c]: IN-QUANT-082_BennyThadikaran__stock-news (FULL END-TO-END CODE)",
+    "sha256": "d9285a3ffc745e8c7153646b6b2aed4ca72282f2bc81ca7ca8738e989bc238d4",
+    "sha256_short": "d9285a3ffc745e8c",
+    "primary_name": "IN-QUANT-082_BennyThadikaran__stock-news",
+    "included_repos": [
+      "IN-QUANT-082_BennyThadikaran__stock-news"
+    ],
+    "file_count": 2,
+    "byte_size": 14649
+  },
+  {
+    "index": 182,
+    "filename": "QUANT_REPO_182_IN-QUANT-081_RaiAnk__bulk_dwd_yfinanance_indian_ma.txt",
+    "title": "QUANT_REPO_182 [528cff17617278f9]: IN-QUANT-081_RaiAnk__bulk_dwd_yfinanance_indian_ma (FULL END-TO-END CODE)",
+    "sha256": "528cff17617278f9527d577d20918a3ea4c08311beb766f41ff1adbf7b10eefd",
+    "sha256_short": "528cff17617278f9",
+    "primary_name": "IN-QUANT-081_RaiAnk__bulk_dwd_yfinanance_indian_market_data",
+    "included_repos": [
+      "IN-QUANT-081_RaiAnk__bulk_dwd_yfinanance_indian_market_data"
+    ],
+    "file_count": 2,
+    "byte_size": 20843
+  },
+  {
+    "index": 183,
+    "filename": "QUANT_REPO_183_IN-QUANT-080_sudama011__TradeBrain_api.txt",
+    "title": "QUANT_REPO_183 [107ce04bcfc21724]: IN-QUANT-080_sudama011__TradeBrain_api (FULL END-TO-END CODE)",
+    "sha256": "107ce04bcfc21724e93d3a80c4c697f060262f3bd9ef2243599e0304c1602997",
+    "sha256_short": "107ce04bcfc21724",
+    "primary_name": "IN-QUANT-080_sudama011__TradeBrain_api",
+    "included_repos": [
+      "IN-QUANT-080_sudama011__TradeBrain_api"
+    ],
+    "file_count": 59,
+    "byte_size": 160817
+  },
+  {
+    "index": 184,
+    "filename": "QUANT_REPO_184_IN-QUANT-078_emanivinay__IndianStockMarketData.txt",
+    "title": "QUANT_REPO_184 [a37fa03b0b386d44]: IN-QUANT-078_emanivinay__IndianStockMarketData (FULL END-TO-END CODE)",
+    "sha256": "a37fa03b0b386d44a18d764c03e11aaf1b0f5dbc2702e3c67e876d274888202c",
+    "sha256_short": "a37fa03b0b386d44",
+    "primary_name": "IN-QUANT-078_emanivinay__IndianStockMarketData",
+    "included_repos": [
+      "IN-QUANT-078_emanivinay__IndianStockMarketData"
+    ],
+    "file_count": 6,
+    "byte_size": 4621
+  },
+  {
+    "index": 185,
+    "filename": "QUANT_REPO_185_IN-QUANT-077_abuhurairalakdawala__indian-share-mar.txt",
+    "title": "QUANT_REPO_185 [fd13658cd1815fa6]: IN-QUANT-077_abuhurairalakdawala__indian-share-mar (FULL END-TO-END CODE)",
+    "sha256": "fd13658cd1815fa64728b15c09911d1a2af0d8132c187de22afa60ba0929bef4",
+    "sha256_short": "fd13658cd1815fa6",
+    "primary_name": "IN-QUANT-077_abuhurairalakdawala__indian-share-market",
+    "included_repos": [
+      "IN-QUANT-077_abuhurairalakdawala__indian-share-market"
+    ],
+    "file_count": 2,
+    "byte_size": 3109
+  },
+  {
+    "index": 186,
+    "filename": "QUANT_REPO_186_IN-QUANT-075_sahidul-shaikh__stock-market-analysis.txt",
+    "title": "QUANT_REPO_186 [82a3b01afa131e81]: IN-QUANT-075_sahidul-shaikh__stock-market-analysis (FULL END-TO-END CODE)",
+    "sha256": "82a3b01afa131e81173c25f0482571735773f3a79c0291541361ac05a43b3d7a",
+    "sha256_short": "82a3b01afa131e81",
+    "primary_name": "IN-QUANT-075_sahidul-shaikh__stock-market-analysis-with-sql",
+    "included_repos": [
+      "IN-QUANT-075_sahidul-shaikh__stock-market-analysis-with-sql"
+    ],
+    "file_count": 2,
+    "byte_size": 16443
+  },
+  {
+    "index": 187,
+    "filename": "QUANT_REPO_187_IN-QUANT-072_meticulousCraftman__Python-Stock-News.txt",
+    "title": "QUANT_REPO_187 [d5a7137cc7aa8128]: IN-QUANT-072_meticulousCraftman__Python-Stock-News (FULL END-TO-END CODE)",
+    "sha256": "d5a7137cc7aa8128a18a06f9dada9a8f5e38a8b5c779cce86a14236ca4656c51",
+    "sha256_short": "d5a7137cc7aa8128",
+    "primary_name": "IN-QUANT-072_meticulousCraftman__Python-Stock-News-Scraper",
+    "included_repos": [
+      "IN-QUANT-072_meticulousCraftman__Python-Stock-News-Scraper"
+    ],
+    "file_count": 3,
+    "byte_size": 21082
+  },
+  {
+    "index": 188,
+    "filename": "QUANT_REPO_188_IN-QUANT-071_ilangurudev__IndianStocksR.txt",
+    "title": "QUANT_REPO_188 [24a787f4369334dc]: IN-QUANT-071_ilangurudev__IndianStocksR (FULL END-TO-END CODE)",
+    "sha256": "24a787f4369334dc06290fe16309e7a84074bc1df85ba3d96d82fd4d66064eac",
+    "sha256_short": "24a787f4369334dc",
+    "primary_name": "IN-QUANT-071_ilangurudev__IndianStocksR",
+    "included_repos": [
+      "IN-QUANT-071_ilangurudev__IndianStocksR"
+    ],
+    "file_count": 2,
+    "byte_size": 37102
+  },
+  {
+    "index": 189,
+    "filename": "QUANT_REPO_189_IN-QUANT-066_Sampad-Hegde__Bharat-SM-Data.txt",
+    "title": "QUANT_REPO_189 [bcb0ece933e9a46d]: IN-QUANT-066_Sampad-Hegde__Bharat-SM-Data (FULL END-TO-END CODE)",
+    "sha256": "bcb0ece933e9a46df5a367a9c348eb627e032ef8d25d15ce1a475614038d4238",
+    "sha256_short": "bcb0ece933e9a46d",
+    "primary_name": "IN-QUANT-066_Sampad-Hegde__Bharat-SM-Data",
+    "included_repos": [
+      "IN-QUANT-066_Sampad-Hegde__Bharat-SM-Data"
+    ],
+    "file_count": 30,
+    "byte_size": 317925
+  },
+  {
+    "index": 190,
+    "filename": "QUANT_REPO_190_IN-QUANT-065_TechfaneTechnologies__XTS_MasterInstr.txt",
+    "title": "QUANT_REPO_190 [9328386f55d4b044]: IN-QUANT-065_TechfaneTechnologies__XTS_MasterInstr (FULL END-TO-END CODE)",
+    "sha256": "9328386f55d4b044d85ef584c3bfb77f280439489b49eebb4bd9c22ece54ba1e",
+    "sha256_short": "9328386f55d4b044",
+    "primary_name": "IN-QUANT-065_TechfaneTechnologies__XTS_MasterInstruments",
+    "included_repos": [
+      "IN-QUANT-065_TechfaneTechnologies__XTS_MasterInstruments"
+    ],
+    "file_count": 4,
+    "byte_size": 12644
+  },
+  {
+    "index": 191,
+    "filename": "QUANT_REPO_191_IN-QUANT-063_agrimgoyal__ipo-data-scraper-python.txt",
+    "title": "QUANT_REPO_191 [80d7dbc94a4ecf8e]: IN-QUANT-063_agrimgoyal__ipo-data-scraper-python (FULL END-TO-END CODE)",
+    "sha256": "80d7dbc94a4ecf8e68d340e6fcb92bcd2a13f436a6ba0f4d2761e50415c73b83",
+    "sha256_short": "80d7dbc94a4ecf8e",
+    "primary_name": "IN-QUANT-063_agrimgoyal__ipo-data-scraper-python",
+    "included_repos": [
+      "IN-QUANT-063_agrimgoyal__ipo-data-scraper-python"
+    ],
+    "file_count": 2,
+    "byte_size": 12826
+  },
+  {
+    "index": 192,
+    "filename": "QUANT_REPO_192_IN-QUANT-062_anubhavv15__MoneyControl-Stock-Data-N.txt",
+    "title": "QUANT_REPO_192 [e0e6ddbe33ca2f72]: IN-QUANT-062_anubhavv15__MoneyControl-Stock-Data-N (FULL END-TO-END CODE)",
+    "sha256": "e0e6ddbe33ca2f72f214954bbb22101b01bebf8787439b1be24ac1632971a07c",
+    "sha256_short": "e0e6ddbe33ca2f72",
+    "primary_name": "IN-QUANT-062_anubhavv15__MoneyControl-Stock-Data-News-Scraper",
+    "included_repos": [
+      "IN-QUANT-062_anubhavv15__MoneyControl-Stock-Data-News-Scraper"
+    ],
+    "file_count": 7,
+    "byte_size": 32691
+  },
+  {
+    "index": 193,
+    "filename": "QUANT_REPO_193_IN-QUANT-061_welomoneynews__market-holidays-india.txt",
+    "title": "QUANT_REPO_193 [4ec28e6f1533dbec]: IN-QUANT-061_welomoneynews__market-holidays-india (FULL END-TO-END CODE)",
+    "sha256": "4ec28e6f1533dbec397be196a34e33c7136275fcc67adae47538282d12774b70",
+    "sha256_short": "4ec28e6f1533dbec",
+    "primary_name": "IN-QUANT-061_welomoneynews__market-holidays-india",
+    "included_repos": [
+      "IN-QUANT-061_welomoneynews__market-holidays-india"
+    ],
+    "file_count": 1,
+    "byte_size": 4771
+  },
+  {
+    "index": 194,
+    "filename": "QUANT_REPO_194_IN-QUANT-060_Zero65Tech__indian-stock-market.txt",
+    "title": "QUANT_REPO_194 [2c0bcc4e2c1e4081]: IN-QUANT-060_Zero65Tech__indian-stock-market (FULL END-TO-END CODE)",
+    "sha256": "2c0bcc4e2c1e4081326cca4da0619b70ea8ee89175eb5c67cd26f204489d5fad",
+    "sha256_short": "2c0bcc4e2c1e4081",
+    "primary_name": "IN-QUANT-060_Zero65Tech__indian-stock-market",
+    "included_repos": [
+      "IN-QUANT-060_Zero65Tech__indian-stock-market"
+    ],
+    "file_count": 14,
+    "byte_size": 265506
+  },
+  {
+    "index": 195,
+    "filename": "QUANT_REPO_195_IN-QUANT-057_Apurv-Salunke__india-stocks-api.txt",
+    "title": "QUANT_REPO_195 [5bacb72edcfd4c22]: IN-QUANT-057_Apurv-Salunke__india-stocks-api (FULL END-TO-END CODE)",
+    "sha256": "5bacb72edcfd4c22b699c5f93e8dc790318c34b95a0cec530311531af4d76177",
+    "sha256_short": "5bacb72edcfd4c22",
+    "primary_name": "IN-QUANT-057_Apurv-Salunke__india-stocks-api",
+    "included_repos": [
+      "IN-QUANT-057_Apurv-Salunke__india-stocks-api"
+    ],
+    "file_count": 58,
+    "byte_size": 279751
+  },
+  {
+    "index": 196,
+    "filename": "QUANT_REPO_196_IN-QUANT-054_NikhilSuthar__indian-market-data.txt",
+    "title": "QUANT_REPO_196 [c451442fab439c8d]: IN-QUANT-054_NikhilSuthar__indian-market-data (FULL END-TO-END CODE)",
+    "sha256": "c451442fab439c8da75718f6a0d97cfdd4e0c66bb1f8d42575bd35ddc38ba554",
+    "sha256_short": "c451442fab439c8d",
+    "primary_name": "IN-QUANT-054_NikhilSuthar__indian-market-data",
+    "included_repos": [
+      "IN-QUANT-054_NikhilSuthar__indian-market-data"
+    ],
+    "file_count": 47,
+    "byte_size": 352716
+  },
+  {
+    "index": 197,
+    "filename": "QUANT_REPO_197_IN-QUANT-050_NayakwadiS__mftool.txt",
+    "title": "QUANT_REPO_197 [6315331565b9a9d5]: IN-QUANT-050_NayakwadiS__mftool (FULL END-TO-END CODE)",
+    "sha256": "6315331565b9a9d5a99e8396b549026eb66a969db08c23258454d76cd7d02e41",
+    "sha256_short": "6315331565b9a9d5",
+    "primary_name": "IN-QUANT-050_NayakwadiS__mftool",
+    "included_repos": [
+      "IN-QUANT-050_NayakwadiS__mftool"
+    ],
+    "file_count": 3,
+    "byte_size": 3906105
+  },
+  {
+    "index": 198,
+    "filename": "QUANT_REPO_198_IN-QUANT-045_maanavshah__stock-market-india.txt",
+    "title": "QUANT_REPO_198 [1179d851425199f4]: IN-QUANT-045_maanavshah__stock-market-india (FULL END-TO-END CODE)",
+    "sha256": "1179d851425199f4c3a8f180182e6281527f040f6cec942474f4ed0a3fe7c23c",
+    "sha256_short": "1179d851425199f4",
+    "primary_name": "IN-QUANT-045_maanavshah__stock-market-india",
+    "included_repos": [
+      "IN-QUANT-045_maanavshah__stock-market-india"
+    ],
+    "file_count": 19,
+    "byte_size": 214008
+  },
+  {
+    "index": 199,
+    "filename": "QUANT_REPO_199_IN-QUANT-044_dbt-labs__dbt-core.txt",
+    "title": "QUANT_REPO_199 [6662609ca67e8944]: IN-QUANT-044_dbt-labs__dbt-core (FULL END-TO-END CODE)",
+    "sha256": "6662609ca67e8944517d15f26b6eeb42426ee2142bf4aa7d974b74637b84506e",
+    "sha256_short": "6662609ca67e8944",
+    "primary_name": "IN-QUANT-044_dbt-labs__dbt-core",
+    "included_repos": [
+      "IN-QUANT-044_dbt-labs__dbt-core"
+    ],
+    "file_count": 174,
+    "byte_size": 2106443
+  },
+  {
+    "index": 200,
+    "filename": "QUANT_REPO_200_IN-QUANT-043_dask__dask.txt",
+    "title": "QUANT_REPO_200 [8bfc2edf0396b3cb]: IN-QUANT-043_dask__dask (FULL END-TO-END CODE)",
+    "sha256": "8bfc2edf0396b3cb60287df258daa137d6ae63da8e52013e0551a665e3a99672",
+    "sha256_short": "8bfc2edf0396b3cb",
+    "primary_name": "IN-QUANT-043_dask__dask",
+    "included_repos": [
+      "IN-QUANT-043_dask__dask"
+    ],
+    "file_count": 153,
+    "byte_size": 2095234
+  },
+  {
+    "index": 201,
+    "filename": "QUANT_REPO_201_IN-QUANT-042_apache__arrow.txt",
+    "title": "QUANT_REPO_201 [b8c0ba9afaf2e181]: IN-QUANT-042_apache__arrow (FULL END-TO-END CODE)",
+    "sha256": "b8c0ba9afaf2e181e61f165c335277885994ff7636805d7987a76ab053575af5",
+    "sha256_short": "b8c0ba9afaf2e181",
+    "primary_name": "IN-QUANT-042_apache__arrow",
+    "included_repos": [
+      "IN-QUANT-042_apache__arrow"
+    ],
+    "file_count": 96,
+    "byte_size": 2185015
+  },
+  {
+    "index": 202,
+    "filename": "QUANT_REPO_202_IN-QUANT-041_ranaroussi__yfinance.txt",
+    "title": "QUANT_REPO_202 [e93670e65b958c33]: IN-QUANT-041_ranaroussi__yfinance (FULL END-TO-END CODE)",
+    "sha256": "e93670e65b958c334b797d475ddf601777bea2df254040d5234251089b147c20",
+    "sha256_short": "e93670e65b958c33",
+    "primary_name": "IN-QUANT-041_ranaroussi__yfinance",
+    "included_repos": [
+      "IN-QUANT-041_ranaroussi__yfinance"
+    ],
+    "file_count": 83,
+    "byte_size": 799828
+  },
+  {
+    "index": 203,
+    "filename": "QUANT_REPO_203_IN-QUANT-040_PrefectHQ__prefect.txt",
+    "title": "QUANT_REPO_203 [9136982090b4c8d3]: IN-QUANT-040_PrefectHQ__prefect (FULL END-TO-END CODE)",
+    "sha256": "9136982090b4c8d329eb02145f3353d6c308e362f0e00a8565f6ea38d85cc064",
+    "sha256_short": "9136982090b4c8d3",
+    "primary_name": "IN-QUANT-040_PrefectHQ__prefect",
+    "included_repos": [
+      "IN-QUANT-040_PrefectHQ__prefect"
+    ],
+    "file_count": 97,
+    "byte_size": 2163790
+  },
+  {
+    "index": 204,
+    "filename": "QUANT_REPO_204_IN-QUANT-037_apache__airflow.txt",
+    "title": "QUANT_REPO_204 [ab8b8f4640ae52ba]: IN-QUANT-037_apache__airflow (FULL END-TO-END CODE)",
+    "sha256": "ab8b8f4640ae52ba4a85d5d3b69b87eb1c022ba0d4a464feb6c1aad2854f0076",
+    "sha256_short": "ab8b8f4640ae52ba",
+    "primary_name": "IN-QUANT-037_apache__airflow",
+    "included_repos": [
+      "IN-QUANT-037_apache__airflow"
+    ],
+    "file_count": 183,
+    "byte_size": 2149527
+  },
+  {
+    "index": 205,
+    "filename": "QUANT_REPO_205_IN-QUANT-036_pandas-dev__pandas.txt",
+    "title": "QUANT_REPO_205 [287ed5fc48fe6d7c]: IN-QUANT-036_pandas-dev__pandas (FULL END-TO-END CODE)",
+    "sha256": "287ed5fc48fe6d7c80cb9b5b7ecdcc808f8da448e13f3c27f5b42ba93f4d0681",
+    "sha256_short": "287ed5fc48fe6d7c",
+    "primary_name": "IN-QUANT-036_pandas-dev__pandas",
+    "included_repos": [
+      "IN-QUANT-036_pandas-dev__pandas"
+    ],
+    "file_count": 173,
+    "byte_size": 2116734
+  },
+  {
+    "index": 206,
+    "filename": "QUANT_REPO_206_IN-QUANT-035_Aniekanetim__openalgo-trading.txt",
+    "title": "QUANT_REPO_206 [8cc94bad3b5f0c76]: IN-QUANT-035_Aniekanetim__openalgo-trading (FULL END-TO-END CODE)",
+    "sha256": "8cc94bad3b5f0c76e67e372c1fa1bd0db927378520ac5a83f15d7683f488ea89",
+    "sha256_short": "8cc94bad3b5f0c76",
+    "primary_name": "IN-QUANT-035_Aniekanetim__openalgo-trading",
+    "included_repos": [
+      "IN-QUANT-035_Aniekanetim__openalgo-trading"
+    ],
+    "file_count": 130,
+    "byte_size": 2127109
+  },
+  {
+    "index": 207,
+    "filename": "QUANT_REPO_207_IN-QUANT-034_TheHardeep__fenix.txt",
+    "title": "QUANT_REPO_207 [b559e87904e85a0d]: IN-QUANT-034_TheHardeep__fenix (FULL END-TO-END CODE)",
+    "sha256": "b559e87904e85a0d9616223af0d8e12c53a3a531153f9f717d5e2f38f1683d5d",
+    "sha256_short": "b559e87904e85a0d",
+    "primary_name": "IN-QUANT-034_TheHardeep__fenix",
+    "included_repos": [
+      "IN-QUANT-034_TheHardeep__fenix"
+    ],
+    "file_count": 42,
+    "byte_size": 1241451
+  },
+  {
+    "index": 208,
+    "filename": "QUANT_REPO_208_IN-QUANT-033_indicoderlabs__Bridge.txt",
+    "title": "QUANT_REPO_208 [eb4c5a93b607f0a8]: IN-QUANT-033_indicoderlabs__Bridge (FULL END-TO-END CODE)",
+    "sha256": "eb4c5a93b607f0a8a0c140129053d9c638745b66663568b9f144ec1f275d48d2",
+    "sha256_short": "eb4c5a93b607f0a8",
+    "primary_name": "IN-QUANT-033_indicoderlabs__Bridge",
+    "included_repos": [
+      "IN-QUANT-033_indicoderlabs__Bridge"
+    ],
+    "file_count": 128,
+    "byte_size": 2128130
+  },
+  {
+    "index": 209,
+    "filename": "QUANT_REPO_209_IN-QUANT-032_DarkEnergyOverflow__tradesphere.txt",
+    "title": "QUANT_REPO_209 [c1145b9e21c8e934]: IN-QUANT-032_DarkEnergyOverflow__tradesphere (FULL END-TO-END CODE)",
+    "sha256": "c1145b9e21c8e934497499ece90c1dfcc11607c2df0fce0fcd66190bbf9561a5",
+    "sha256_short": "c1145b9e21c8e934",
+    "primary_name": "IN-QUANT-032_DarkEnergyOverflow__tradesphere",
+    "included_repos": [
+      "IN-QUANT-032_DarkEnergyOverflow__tradesphere"
+    ],
+    "file_count": 30,
+    "byte_size": 309914
+  },
+  {
+    "index": 210,
+    "filename": "QUANT_REPO_210_IN-QUANT-031_Quant-Decision-Research__labs-scripts.txt",
+    "title": "QUANT_REPO_210 [1e5aa0fad7eef00f]: IN-QUANT-031_Quant-Decision-Research__labs-scripts (FULL END-TO-END CODE)",
+    "sha256": "1e5aa0fad7eef00f112d790a0724766e2ed82567e55ed5faa506b2b08c5ff6df",
+    "sha256_short": "1e5aa0fad7eef00f",
+    "primary_name": "IN-QUANT-031_Quant-Decision-Research__labs-scripts-2525",
+    "included_repos": [
+      "IN-QUANT-031_Quant-Decision-Research__labs-scripts-2525"
+    ],
+    "file_count": 130,
+    "byte_size": 1121135
+  },
+  {
+    "index": 211,
+    "filename": "QUANT_REPO_211_IN-QUANT-030_devanshvpurohit__tradesphere.txt",
+    "title": "QUANT_REPO_211 [68c96ee65c4fe9a5]: IN-QUANT-030_devanshvpurohit__tradesphere (FULL END-TO-END CODE)",
+    "sha256": "68c96ee65c4fe9a51d93775562a689c0b03ec03e8d1207e0e5ba4432d15825f1",
+    "sha256_short": "68c96ee65c4fe9a5",
+    "primary_name": "IN-QUANT-030_devanshvpurohit__tradesphere",
+    "included_repos": [
+      "IN-QUANT-030_devanshvpurohit__tradesphere"
+    ],
+    "file_count": 30,
+    "byte_size": 310646
+  },
+  {
+    "index": 212,
+    "filename": "QUANT_REPO_212_IN-QUANT-028_shubhamindia743-creator__indian-stock.txt",
+    "title": "QUANT_REPO_212 [bdeb248965ed2023]: IN-QUANT-028_shubhamindia743-creator__indian-stock (FULL END-TO-END CODE)",
+    "sha256": "bdeb248965ed2023de7d7d2b8644cf8186d12667109e1fd52125281293219c12",
+    "sha256_short": "bdeb248965ed2023",
+    "primary_name": "IN-QUANT-028_shubhamindia743-creator__indian-stock-market-platform",
+    "included_repos": [
+      "IN-QUANT-028_shubhamindia743-creator__indian-stock-market-platform"
+    ],
+    "file_count": 1,
+    "byte_size": 1697
+  },
+  {
+    "index": 213,
+    "filename": "QUANT_REPO_213_IN-QUANT-026_Tanmay07__ai-trading-platform-v2.txt",
+    "title": "QUANT_REPO_213 [63922db647a8db08]: IN-QUANT-026_Tanmay07__ai-trading-platform-v2 (FULL END-TO-END CODE)",
+    "sha256": "63922db647a8db08408b761ac305ff3dabc3243c25635ccfe3f28949336173b0",
+    "sha256_short": "63922db647a8db08",
+    "primary_name": "IN-QUANT-026_Tanmay07__ai-trading-platform-v2",
+    "included_repos": [
+      "IN-QUANT-026_Tanmay07__ai-trading-platform-v2"
+    ],
+    "file_count": 610,
+    "byte_size": 2743756
+  },
+  {
+    "index": 214,
+    "filename": "QUANT_REPO_214_IN-QUANT-024_TanmayLodha__algotradersonline.txt",
+    "title": "QUANT_REPO_214 [c2956302996084cc]: IN-QUANT-024_TanmayLodha__algotradersonline (FULL END-TO-END CODE)",
+    "sha256": "c2956302996084cc93456df811bb801eee7eee149f0affccdcbff8984564e46a",
+    "sha256_short": "c2956302996084cc",
+    "primary_name": "IN-QUANT-024_TanmayLodha__algotradersonline",
+    "included_repos": [
+      "IN-QUANT-024_TanmayLodha__algotradersonline"
+    ],
+    "file_count": 75,
+    "byte_size": 1362797
+  },
+  {
+    "index": 215,
+    "filename": "QUANT_REPO_215_IN-QUANT-023_marketcalls__openalgo.txt",
+    "title": "QUANT_REPO_215 [ceab7cde91bee6de]: IN-QUANT-023_marketcalls__openalgo (FULL END-TO-END CODE)",
+    "sha256": "ceab7cde91bee6deffbaceb104f6dbd10fd5985881cfbdd044cd8854130d4c4c",
+    "sha256_short": "ceab7cde91bee6de",
+    "primary_name": "IN-QUANT-023_marketcalls__openalgo",
+    "included_repos": [
+      "IN-QUANT-023_marketcalls__openalgo"
+    ],
+    "file_count": 128,
+    "byte_size": 2129741
+  },
+  {
+    "index": 216,
+    "filename": "QUANT_REPO_216_IN-QUANT-022_StockSharp__StockSharp.txt",
+    "title": "QUANT_REPO_216 [340ee14313760322]: IN-QUANT-022_StockSharp__StockSharp (FULL END-TO-END CODE)",
+    "sha256": "340ee143137603221c5b24b776458cce1af7d1c9bd2e4a1e3540a41defbe1dfb",
+    "sha256_short": "340ee14313760322",
+    "primary_name": "IN-QUANT-022_StockSharp__StockSharp",
+    "included_repos": [
+      "IN-QUANT-022_StockSharp__StockSharp"
+    ],
+    "file_count": 14,
+    "byte_size": 2402105
+  },
+  {
+    "index": 217,
+    "filename": "QUANT_REPO_217_IN-QUANT-017_gufranhassan11-a11y__fyres-algo-tradi.txt",
+    "title": "QUANT_REPO_217 [176f8b31d444079d]: IN-QUANT-017_gufranhassan11-a11y__fyres-algo-tradi (FULL END-TO-END CODE)",
+    "sha256": "176f8b31d444079dceb2460309ca9fc368395651178f0fd37715344f7508d40a",
+    "sha256_short": "176f8b31d444079d",
+    "primary_name": "IN-QUANT-017_gufranhassan11-a11y__fyres-algo-trading",
+    "included_repos": [
+      "IN-QUANT-017_gufranhassan11-a11y__fyres-algo-trading"
+    ],
+    "file_count": 1,
+    "byte_size": 1534
+  },
+  {
+    "index": 218,
+    "filename": "QUANT_REPO_218_IN-QUANT-016_paytmmoney__pyPMClient.txt",
+    "title": "QUANT_REPO_218 [7ec44e74d3fb9f7a]: IN-QUANT-016_paytmmoney__pyPMClient (FULL END-TO-END CODE)",
+    "sha256": "7ec44e74d3fb9f7a7d82e0ab80b0a739d801d9376125a11c2f56b71f846080cb",
+    "sha256_short": "7ec44e74d3fb9f7a",
+    "primary_name": "IN-QUANT-016_paytmmoney__pyPMClient",
+    "included_repos": [
+      "IN-QUANT-016_paytmmoney__pyPMClient"
+    ],
+    "file_count": 17,
+    "byte_size": 115703
+  },
+  {
+    "index": 219,
+    "filename": "QUANT_REPO_219_IN-QUANT-015_11Lost__hdfcsec-strapi.txt",
+    "title": "QUANT_REPO_219 [f48b93907067a938]: IN-QUANT-015_11Lost__hdfcsec-strapi (FULL END-TO-END CODE)",
+    "sha256": "f48b93907067a9383e4bb80590fa0d2808a24b9a91dd8195b5154f5eeed93fbf",
+    "sha256_short": "f48b93907067a938",
+    "primary_name": "IN-QUANT-015_11Lost__hdfcsec-strapi",
+    "included_repos": [
+      "IN-QUANT-015_11Lost__hdfcsec-strapi"
+    ],
+    "file_count": 87,
+    "byte_size": 2461133
+  },
+  {
+    "index": 220,
+    "filename": "QUANT_REPO_220_IN-QUANT-014_flattrade__pythonAPI.txt",
+    "title": "QUANT_REPO_220 [e305a32e1767ef1e]: IN-QUANT-014_flattrade__pythonAPI (FULL END-TO-END CODE)",
+    "sha256": "e305a32e1767ef1ef34815b98e5aca7fa03c98f0bb37f83d095a969b8316e5a6",
+    "sha256_short": "e305a32e1767ef1e",
+    "primary_name": "IN-QUANT-014_flattrade__pythonAPI",
+    "included_repos": [
+      "IN-QUANT-014_flattrade__pythonAPI"
+    ],
+    "file_count": 13,
+    "byte_size": 93715
+  },
+  {
+    "index": 221,
+    "filename": "QUANT_REPO_221_IN-QUANT-010_OpenApi-5p__py5paisa.txt",
+    "title": "QUANT_REPO_221 [102b385cf2a397a9]: IN-QUANT-010_OpenApi-5p__py5paisa (FULL END-TO-END CODE)",
+    "sha256": "102b385cf2a397a9452675ece79c1b6c021b96400b6b121a2717b0751b7dc5a6",
+    "sha256_short": "102b385cf2a397a9",
+    "primary_name": "IN-QUANT-010_OpenApi-5p__py5paisa",
+    "included_repos": [
+      "IN-QUANT-010_OpenApi-5p__py5paisa"
+    ],
+    "file_count": 16,
+    "byte_size": 104874
+  },
+  {
+    "index": 222,
+    "filename": "QUANT_REPO_222_IN-QUANT-003_marketcalls__broker-api-docs.txt",
+    "title": "QUANT_REPO_222 [764bcbf59de62f58]: IN-QUANT-003_marketcalls__broker-api-docs (FULL END-TO-END CODE)",
+    "sha256": "764bcbf59de62f583a5e8eac7ea9fa90ff9d19fdd144a215b922f36f38760e69",
+    "sha256_short": "764bcbf59de62f58",
+    "primary_name": "IN-QUANT-003_marketcalls__broker-api-docs",
+    "included_repos": [
+      "IN-QUANT-003_marketcalls__broker-api-docs"
+    ],
+    "file_count": 3,
+    "byte_size": 56092
+  },
+  {
+    "index": 223,
+    "filename": "QUANT_REPO_223_Hands-On-Algorithmic-Trading-with-Python.txt",
+    "title": "QUANT_REPO_223 [9b4917b5360d4b0b]: Hands-On-Algorithmic-Trading-with-Python (FULL END-TO-END CODE)",
+    "sha256": "9b4917b5360d4b0bc89de98566258bda29e1fd6f1cc4dfa92e66f8bc7a9dec8a",
+    "sha256_short": "9b4917b5360d4b0b",
+    "primary_name": "Hands-On-Algorithmic-Trading-with-Python",
+    "included_repos": [
+      "Hands-On-Algorithmic-Trading-with-Python"
+    ],
+    "file_count": 1,
+    "byte_size": 1399
+  },
+  {
+    "index": 224,
+    "filename": "QUANT_REPO_224_gym-anytrading.txt",
+    "title": "QUANT_REPO_224 [30ffc57019fc4d38]: gym-anytrading (FULL END-TO-END CODE)",
+    "sha256": "30ffc57019fc4d38df57f69850f186e139fe48ade08b752901286ce9c8d71a2a",
+    "sha256_short": "30ffc57019fc4d38",
+    "primary_name": "gym-anytrading",
+    "included_repos": [
+      "gym-anytrading"
+    ],
+    "file_count": 9,
+    "byte_size": 31317
+  },
+  {
+    "index": 225,
+    "filename": "QUANT_REPO_225_first_python_algo.txt",
+    "title": "QUANT_REPO_225 [f68dd9639f53bccf]: first_python_algo (FULL END-TO-END CODE)",
+    "sha256": "f68dd9639f53bccf2fef19a1dd6fbf76714dcdaed54aa1175a43e373860689f3",
+    "sha256_short": "f68dd9639f53bccf",
+    "primary_name": "first_python_algo",
+    "included_repos": [
+      "first_python_algo"
+    ],
+    "file_count": 3,
+    "byte_size": 7076
+  },
+  {
+    "index": 226,
+    "filename": "QUANT_REPO_226_fastquant.txt",
+    "title": "QUANT_REPO_226 [65c27cf44d424b05]: fastquant (FULL END-TO-END CODE)",
+    "sha256": "65c27cf44d424b0586c1ab088d1285016e2e5e8f77001655f900b903561756fd",
+    "sha256_short": "65c27cf44d424b05",
+    "primary_name": "fastquant",
+    "included_repos": [
+      "fastquant"
+    ],
+    "file_count": 54,
+    "byte_size": 202111
+  },
+  {
+    "index": 227,
+    "filename": "QUANT_REPO_227_awesome-quant.txt",
+    "title": "QUANT_REPO_227 [ba7b460eb3823041]: awesome-quant (FULL END-TO-END CODE)",
+    "sha256": "ba7b460eb38230410b0eef6d36a0771bd7ca280f44b121ecf624a80147129ad8",
+    "sha256_short": "ba7b460eb3823041",
+    "primary_name": "awesome-quant",
+    "included_repos": [
+      "awesome-quant"
+    ],
+    "file_count": 30,
+    "byte_size": 396711
+  },
+  {
+    "index": 228,
+    "filename": "QUANT_REPO_228_awesome-algo-trading-india.txt",
+    "title": "QUANT_REPO_228 [0a703fa6ea117c74]: awesome-algo-trading-india (FULL END-TO-END CODE)",
+    "sha256": "0a703fa6ea117c740df08449c4b0d16fa16329858f45517b9806b1faa8bcadc2",
+    "sha256_short": "0a703fa6ea117c74",
+    "primary_name": "awesome-algo-trading-india",
+    "included_repos": [
+      "awesome-algo-trading-india"
+    ],
+    "file_count": 1,
+    "byte_size": 7509
+  },
+  {
+    "index": 229,
+    "filename": "QUANT_REPO_229_alphalens-reloaded.txt",
+    "title": "QUANT_REPO_229 [923c7d32f03099da]: alphalens-reloaded (FULL END-TO-END CODE)",
+    "sha256": "923c7d32f03099da822808f79f22e25f7af143e946da674f9e068de69b224132",
+    "sha256_short": "923c7d32f03099da",
+    "primary_name": "alphalens-reloaded",
+    "included_repos": [
+      "alphalens-reloaded"
+    ],
+    "file_count": 19,
+    "byte_size": 250428
+  },
+  {
+    "index": 230,
+    "filename": "QUANT_REPO_230_alpha_vantage.txt",
+    "title": "QUANT_REPO_230 [b70fd8774d9075aa]: alpha_vantage (FULL END-TO-END CODE)",
+    "sha256": "b70fd8774d9075aacf5ba1e7dde6d9b39295f89c8ceaf44f91558b2bd70ab505",
+    "sha256_short": "b70fd8774d9075aa",
+    "primary_name": "alpha_vantage",
+    "included_repos": [
+      "alpha_vantage"
+    ],
+    "file_count": 26,
+    "byte_size": 305929
+  },
+  {
+    "index": 231,
+    "filename": "QUANT_REPO_231_alpha-vantage-sdk.txt",
+    "title": "QUANT_REPO_231 [41f3c3e339259529]: alpha-vantage-sdk (FULL END-TO-END CODE)",
+    "sha256": "41f3c3e33925952922959a134830addbef29db6922f161e707b80fabe8a04e53",
+    "sha256_short": "41f3c3e339259529",
+    "primary_name": "alpha-vantage-sdk",
+    "included_repos": [
+      "alpha-vantage-sdk"
+    ],
+    "file_count": 26,
+    "byte_size": 305965
+  },
+  {
+    "index": 232,
+    "filename": "QUANT_REPO_232_AlgoTrading-India.txt",
+    "title": "QUANT_REPO_232 [f87cea0d2a489f93]: AlgoTrading-India (FULL END-TO-END CODE)",
+    "sha256": "f87cea0d2a489f9368d5c08ba642e090702c0ff2310ff4c15585aed688fda7ff",
+    "sha256_short": "f87cea0d2a489f93",
+    "primary_name": "AlgoTrading-India",
+    "included_repos": [
+      "AlgoTrading-India"
+    ],
+    "file_count": 23,
+    "byte_size": 305807
+  },
+  {
+    "index": 233,
+    "filename": "QUANT_REPO_233_Algorithmic_Trading_System.txt",
+    "title": "QUANT_REPO_233 [a9f4dac3be56086b]: Algorithmic_Trading_System (FULL END-TO-END CODE)",
+    "sha256": "a9f4dac3be56086bf6c463c9d469b3b304826a2ef16e4fb6521a8fcf9a827adc",
+    "sha256_short": "a9f4dac3be56086b",
+    "primary_name": "Algorithmic_Trading_System",
+    "included_repos": [
+      "Algorithmic_Trading_System"
+    ],
+    "file_count": 16,
+    "byte_size": 83394
+  },
+  {
+    "index": 234,
+    "filename": "QUANT_REPO_234_algorithmic-trading-system.txt",
+    "title": "QUANT_REPO_234 [212f1214d3276a75]: algorithmic-trading-system (FULL END-TO-END CODE)",
+    "sha256": "212f1214d3276a75ea04b7d3fcbe0f1d3496fd64d70357de08110ba9ec7c4829",
+    "sha256_short": "212f1214d3276a75",
+    "primary_name": "algorithmic-trading-system",
+    "included_repos": [
+      "algorithmic-trading-system"
+    ],
+    "file_count": 40,
+    "byte_size": 281222
+  },
+  {
+    "index": 235,
+    "filename": "QUANT_REPO_235_Algorithmic-Trading-Strategies-Python.txt",
+    "title": "QUANT_REPO_235 [6a339bc3ef00fad4]: Algorithmic-Trading-Strategies-Python (FULL END-TO-END CODE)",
+    "sha256": "6a339bc3ef00fad42dd4a4d5b6fb0756e1bea9d6cca3d74bd9ad2e4349356a27",
+    "sha256_short": "6a339bc3ef00fad4",
+    "primary_name": "Algorithmic-Trading-Strategies-Python",
+    "included_repos": [
+      "Algorithmic-Trading-Strategies-Python"
+    ],
+    "file_count": 3,
+    "byte_size": 9401
+  },
+  {
+    "index": 236,
+    "filename": "QUANT_REPO_236_algorithmic-trading-samples.txt",
+    "title": "QUANT_REPO_236 [f4066977a8fd2a83]: algorithmic-trading-samples (FULL END-TO-END CODE)",
+    "sha256": "f4066977a8fd2a83e18e962ad453d8bb1b98af006bc33386638899e87df07e7b",
+    "sha256_short": "f4066977a8fd2a83",
+    "primary_name": "algorithmic-trading-samples",
+    "included_repos": [
+      "algorithmic-trading-samples"
+    ],
+    "file_count": 4,
+    "byte_size": 24894
+  },
+  {
+    "index": 237,
+    "filename": "QUANT_REPO_237_Algorithmic-Trading.txt",
+    "title": "QUANT_REPO_237 [899a648ec80ab679]: Algorithmic-Trading (FULL END-TO-END CODE)",
+    "sha256": "899a648ec80ab679c37bd012a35b0de66d903180be1377f3604dfcff8c1fe901",
+    "sha256_short": "899a648ec80ab679",
+    "primary_name": "Algorithmic-Trading",
+    "included_repos": [
+      "Algorithmic-Trading"
+    ],
+    "file_count": 1,
+    "byte_size": 4778
+  },
+  {
+    "index": 238,
+    "filename": "QUANT_REPO_238_Algorithmic.txt",
+    "title": "QUANT_REPO_238 [039f98ab0e26a14d]: Algorithmic (FULL END-TO-END CODE)",
+    "sha256": "039f98ab0e26a14dae72cd3534aa1f774b6e96b18de2f789369f775f4fafd255",
+    "sha256_short": "039f98ab0e26a14d",
+    "primary_name": "Algorithmic",
+    "included_repos": [
+      "Algorithmic"
+    ],
+    "file_count": 41,
+    "byte_size": 772640
+  },
+  {
+    "index": 239,
+    "filename": "QUANT_REPO_239_algo_trading_strategies_india.txt",
+    "title": "QUANT_REPO_239 [08c503b3cbd7923e]: algo_trading_strategies_india (FULL END-TO-END CODE)",
+    "sha256": "08c503b3cbd7923ed7f003b30eebcc705479490f0036a6af5f2fd1540ca0755c",
+    "sha256_short": "08c503b3cbd7923e",
+    "primary_name": "algo_trading_strategies_india",
+    "included_repos": [
+      "algo_trading_strategies_india"
+    ],
+    "file_count": 41,
+    "byte_size": 698584
+  },
+  {
+    "index": 240,
+    "filename": "QUANT_REPO_240_algo_ai_skill.txt",
+    "title": "QUANT_REPO_240 [d1cbf086c5f04de6]: algo_ai_skill (FULL END-TO-END CODE)",
+    "sha256": "d1cbf086c5f04de6c09030ca645f81369026a96cb6fcf2de416625c13e49c1f3",
+    "sha256_short": "d1cbf086c5f04de6",
+    "primary_name": "algo_ai_skill",
+    "included_repos": [
+      "algo_ai_skill"
+    ],
+    "file_count": 17,
+    "byte_size": 153898
+  },
+  {
+    "index": 241,
+    "filename": "QUANT_REPO_241_Algo-Trading-with-python.txt",
+    "title": "QUANT_REPO_241 [091b0d83ceaa2211]: Algo-Trading-with-python (FULL END-TO-END CODE)",
+    "sha256": "091b0d83ceaa221102df8f9cfa98be81bad97c071d3cc5ddfd9db5f754b3cd5b",
+    "sha256_short": "091b0d83ceaa2211",
+    "primary_name": "Algo-Trading-with-python",
+    "included_repos": [
+      "Algo-Trading-with-python"
+    ],
+    "file_count": 2,
+    "byte_size": 5518
+  },
+  {
+    "index": 242,
+    "filename": "QUANT_REPO_242_algo-trading-in-india.txt",
+    "title": "QUANT_REPO_242 [1c6fd1adaa7f9469]: algo-trading-in-india (FULL END-TO-END CODE)",
+    "sha256": "1c6fd1adaa7f946983d9333efe065872a9502b5f78601d915034f6212b16bc94",
+    "sha256_short": "1c6fd1adaa7f9469",
+    "primary_name": "algo-trading-in-india",
+    "included_repos": [
+      "algo-trading-in-india"
+    ],
+    "file_count": 5,
+    "byte_size": 62432
+  },
+  {
+    "index": 243,
+    "filename": "QUANT_REPO_243_algo-fno-trading-bot.txt",
+    "title": "QUANT_REPO_243 [73a4819af8dc8772]: algo-fno-trading-bot (FULL END-TO-END CODE)",
+    "sha256": "73a4819af8dc87727ecf065a6fcaa4a9efc6bd801bfee205abcb177a417525cf",
+    "sha256_short": "73a4819af8dc8772",
+    "primary_name": "algo-fno-trading-bot",
+    "included_repos": [
+      "algo-fno-trading-bot"
+    ],
+    "file_count": 9,
+    "byte_size": 105856
+  },
+  {
+    "index": 244,
+    "filename": "QUANT_REPO_244_ai_trading_bot.txt",
+    "title": "QUANT_REPO_244 [dd95bbb8b1c452e2]: ai_trading_bot (FULL END-TO-END CODE)",
+    "sha256": "dd95bbb8b1c452e2d2b4962405230a48c8c5ef30b819d59eddf8fc054ac931b1",
+    "sha256_short": "dd95bbb8b1c452e2",
+    "primary_name": "ai_trading_bot",
+    "included_repos": [
+      "ai_trading_bot"
+    ],
+    "file_count": 20,
+    "byte_size": 30777
+  },
+  {
+    "index": 245,
+    "filename": "QUANT_REPO_245_ai-algorithmic-trading-bot.txt",
+    "title": "QUANT_REPO_245 [ca1abb6f0650d291]: ai-algorithmic-trading-bot (FULL END-TO-END CODE)",
+    "sha256": "ca1abb6f0650d2917aac147c024db72064a33860ff0f31d28f92a427138f87c9",
+    "sha256_short": "ca1abb6f0650d291",
+    "primary_name": "ai-algorithmic-trading-bot",
+    "included_repos": [
+      "ai-algorithmic-trading-bot"
+    ],
+    "file_count": 6,
+    "byte_size": 99129
+  },
+  {
+    "index": 246,
+    "filename": "QUANT_REPO_246_adheera-algo-trader.txt",
+    "title": "QUANT_REPO_246 [07554a173099ca39]: adheera-algo-trader (FULL END-TO-END CODE)",
+    "sha256": "07554a173099ca3917592aa6e34b8b22d741b214dc92a939875891711bc9ce2f",
+    "sha256_short": "07554a173099ca39",
+    "primary_name": "adheera-algo-trader",
+    "included_repos": [
+      "adheera-algo-trader"
+    ],
+    "file_count": 2,
+    "byte_size": 7680
+  },
+  {
+    "index": 247,
+    "filename": "QUANT_REPO_247_yfinance.txt",
+    "title": "QUANT_REPO_247 [31eda4dab7ae9853]: yfinance (FULL END-TO-END CODE)",
+    "sha256": "31eda4dab7ae9853de852df73bb62afd67f0fce5d1de05e79ee4dea8d15bcd86",
+    "sha256_short": "31eda4dab7ae9853",
+    "primary_name": "yfinance",
+    "included_repos": [
+      "yfinance"
+    ],
+    "file_count": 83,
+    "byte_size": 799606
+  },
+  {
+    "index": 248,
+    "filename": "QUANT_REPO_248_XAUUSD-GOLD-SCALPER-MT5-EA-FREE-SOURCE-CODE.txt",
+    "title": "QUANT_REPO_248 [24447c96da4176b8]: XAUUSD-GOLD-SCALPER-MT5-EA-FREE-SOURCE-CODE (FULL END-TO-END CODE)",
+    "sha256": "24447c96da4176b8e673919a5c85b81661ae21f093b16b2fd9647695f314d407",
+    "sha256_short": "24447c96da4176b8",
+    "primary_name": "XAUUSD-GOLD-SCALPER-MT5-EA-FREE-SOURCE-CODE",
+    "included_repos": [
+      "XAUUSD-GOLD-SCALPER-MT5-EA-FREE-SOURCE-CODE"
+    ],
+    "file_count": 1,
+    "byte_size": 33086
+  },
+  {
+    "index": 249,
+    "filename": "QUANT_REPO_249_wallstreet-core.txt",
+    "title": "QUANT_REPO_249 [0fc127553e3fd958]: wallstreet-core (FULL END-TO-END CODE)",
+    "sha256": "0fc127553e3fd9581d55697f652300114dc63ac468640c70126975a8c92b7be0",
+    "sha256_short": "0fc127553e3fd958",
+    "primary_name": "wallstreet-core",
+    "included_repos": [
+      "wallstreet-core"
+    ],
+    "file_count": 12,
+    "byte_size": 28273
+  },
+  {
+    "index": 250,
+    "filename": "QUANT_REPO_250_wallstreet.txt",
+    "title": "QUANT_REPO_250 [c70394cb41fec518]: wallstreet (FULL END-TO-END CODE)",
+    "sha256": "c70394cb41fec518579bab84d906d71f30456d312c864dd19c2e2b977b4e0960",
+    "sha256_short": "c70394cb41fec518",
+    "primary_name": "wallstreet",
+    "included_repos": [
+      "wallstreet"
+    ],
+    "file_count": 12,
+    "byte_size": 28228
+  },
+  {
+    "index": 251,
+    "filename": "QUANT_REPO_251_uv.txt",
+    "title": "QUANT_REPO_251 [a617dd89e64b970b]: uv (FULL END-TO-END CODE)",
+    "sha256": "a617dd89e64b970bbf533c86ae32f0f8a7aef23bb4ac89b6245d39030dfbb847",
+    "sha256_short": "a617dd89e64b970b",
+    "primary_name": "uv",
+    "included_repos": [
+      "uv"
+    ],
+    "file_count": 126,
+    "byte_size": 2120933
+  },
+  {
+    "index": 252,
+    "filename": "QUANT_REPO_252_usearch.txt",
+    "title": "QUANT_REPO_252 [718229e1624f97bb]: usearch (FULL END-TO-END CODE)",
+    "sha256": "718229e1624f97bb1b35e890cd04a5789b1e61e3c979263ca4c4b42ac559689c",
+    "sha256_short": "718229e1624f97bb",
+    "primary_name": "usearch",
+    "included_repos": [
+      "usearch"
+    ],
+    "file_count": 62,
+    "byte_size": 1388160
+  },
+  {
+    "index": 253,
+    "filename": "QUANT_REPO_253_turtlestack-lite.txt",
+    "title": "QUANT_REPO_253 [6a570193c1f10c42]: turtlestack-lite (FULL END-TO-END CODE)",
+    "sha256": "6a570193c1f10c424a5c24525e710adb1edbc0020b1aae9c30f831527a9dfb38",
+    "sha256_short": "6a570193c1f10c42",
+    "primary_name": "turtlestack-lite",
+    "included_repos": [
+      "turtlestack-lite"
+    ],
+    "file_count": 56,
+    "byte_size": 528924
+  },
+  {
+    "index": 254,
+    "filename": "QUANT_REPO_254_tulipindicators.txt",
+    "title": "QUANT_REPO_254 [d47b1cf55936ef80]: tulipindicators (FULL END-TO-END CODE)",
+    "sha256": "d47b1cf55936ef80c31f687d99b319069f70b7d8165daf26fa02f6f6ce974fe1",
+    "sha256_short": "d47b1cf55936ef80",
+    "primary_name": "tulipindicators",
+    "included_repos": [
+      "tulipindicators"
+    ],
+    "file_count": 154,
+    "byte_size": 799797
+  },
+  {
+    "index": 255,
+    "filename": "QUANT_REPO_255_tsfresh.txt",
+    "title": "QUANT_REPO_255 [7df7b40946e2cfe2]: tsfresh (FULL END-TO-END CODE)",
+    "sha256": "7df7b40946e2cfe2c2c21328348f74a008198f9a85864d52721cfc9435c347dd",
+    "sha256_short": "7df7b40946e2cfe2",
+    "primary_name": "tsfresh",
+    "included_repos": [
+      "tsfresh"
+    ],
+    "file_count": 71,
+    "byte_size": 646723
+  },
+  {
+    "index": 256,
+    "filename": "QUANT_REPO_256_tradeapp.txt",
+    "title": "QUANT_REPO_256 [05db9ac81c8e4da3]: tradeapp (FULL END-TO-END CODE)",
+    "sha256": "05db9ac81c8e4da396bec072dc23c3a1a9a1f71658ac175609732570989c2049",
+    "sha256_short": "05db9ac81c8e4da3",
+    "primary_name": "tradeapp",
+    "included_repos": [
+      "tradeapp"
+    ],
+    "file_count": 46,
+    "byte_size": 394798
+  },
+  {
+    "index": 257,
+    "filename": "QUANT_REPO_257_technical.txt",
+    "title": "QUANT_REPO_257 [89e31b9636f81538]: technical (FULL END-TO-END CODE)",
+    "sha256": "89e31b9636f8153837bca1899b2477f25be2e059598c10f922e744d872d2c170",
+    "sha256_short": "89e31b9636f81538",
+    "primary_name": "technical",
+    "included_repos": [
+      "technical"
+    ],
+    "file_count": 38,
+    "byte_size": 1199259
+  },
+  {
+    "index": 258,
+    "filename": "QUANT_REPO_258_tardis-python-private.txt",
+    "title": "QUANT_REPO_258 [02b3fb8fdd7d2057]: tardis-python-private (FULL END-TO-END CODE)",
+    "sha256": "02b3fb8fdd7d2057edefb5148f479d0e3c7c2c0c9e19343969af8ac8dc98695d",
+    "sha256_short": "02b3fb8fdd7d2057",
+    "primary_name": "tardis-python-private",
+    "included_repos": [
+      "tardis-python-private"
+    ],
+    "file_count": 15,
+    "byte_size": 107466
+  },
+  {
+    "index": 259,
+    "filename": "QUANT_REPO_259_ta-lib.txt",
+    "title": "QUANT_REPO_259 [cc69f01c8443f7c9]: ta-lib (FULL END-TO-END CODE)",
+    "sha256": "cc69f01c8443f7c9d465ec68c55a02b40de492fe0ca8313b4aad1400f11be332",
+    "sha256_short": "cc69f01c8443f7c9",
+    "primary_name": "ta-lib",
+    "included_repos": [
+      "ta-lib"
+    ],
+    "file_count": 8,
+    "byte_size": 5167611
+  },
+  {
+    "index": 260,
+    "filename": "QUANT_REPO_260_ta.txt",
+    "title": "QUANT_REPO_260 [9917a6787d21db42]: ta (FULL END-TO-END CODE)",
+    "sha256": "9917a6787d21db42c91e2d39d366b73b5ecb5c7703d920edaf3aa17e040559d0",
+    "sha256_short": "9917a6787d21db42",
+    "primary_name": "ta",
+    "included_repos": [
+      "ta"
+    ],
+    "file_count": 25,
+    "byte_size": 282271
+  },
+  {
+    "index": 261,
+    "filename": "QUANT_REPO_261_stocks-ai-trader.txt",
+    "title": "QUANT_REPO_261 [1fa91b6164064e08]: stocks-ai-trader (FULL END-TO-END CODE)",
+    "sha256": "1fa91b6164064e08e66d9f470abbddf61075ff54e9610ac1b9f9d74ab4d5c3a8",
+    "sha256_short": "1fa91b6164064e08",
+    "primary_name": "stocks-ai-trader",
+    "included_repos": [
+      "stocks-ai-trader"
+    ],
+    "file_count": 1,
+    "byte_size": 6378
+  },
+  {
+    "index": 262,
+    "filename": "QUANT_REPO_262_StockPredictionAI.txt",
+    "title": "QUANT_REPO_262 [f827742e9236e073]: StockPredictionAI (FULL END-TO-END CODE)",
+    "sha256": "f827742e9236e0734d0f304a14b2b12b9bf18f2961392856428716c8aae8eae1",
+    "sha256_short": "f827742e9236e073",
+    "primary_name": "StockPredictionAI",
+    "included_repos": [
+      "StockPredictionAI"
+    ],
+    "file_count": 12,
+    "byte_size": 98785
+  },
+  {
+    "index": 263,
+    "filename": "QUANT_REPO_263_stockbreakindia-test.txt",
+    "title": "QUANT_REPO_263 [63be63fca6dc2823]: stockbreakindia-test (FULL END-TO-END CODE)",
+    "sha256": "63be63fca6dc28236cc3e94f76570c970863297bae51eabc2e4fd12f06929cd8",
+    "sha256_short": "63be63fca6dc2823",
+    "primary_name": "stockbreakindia-test",
+    "included_repos": [
+      "stockbreakindia-test"
+    ],
+    "file_count": 28,
+    "byte_size": 52462
+  },
+  {
+    "index": 264,
+    "filename": "QUANT_REPO_264_Stock_Trade_CLI.txt",
+    "title": "QUANT_REPO_264 [08a7c4a93937ae71]: Stock_Trade_CLI (FULL END-TO-END CODE)",
+    "sha256": "08a7c4a93937ae71526c7d63c400b3f69ef7a3a9ae5bffac049c504540bf2e9f",
+    "sha256_short": "08a7c4a93937ae71",
+    "primary_name": "Stock_Trade_CLI",
+    "included_repos": [
+      "Stock_Trade_CLI"
+    ],
+    "file_count": 6,
+    "byte_size": 22125
+  },
+  {
+    "index": 265,
+    "filename": "QUANT_REPO_265_Stock-Prediction-Models.txt",
+    "title": "QUANT_REPO_265 [6299e0e9e7d79da4]: Stock-Prediction-Models (FULL END-TO-END CODE)",
+    "sha256": "6299e0e9e7d79da4be2d3e514dec8d4903fd2a1c721efde879b1381111baf256",
+    "sha256_short": "6299e0e9e7d79da4",
+    "primary_name": "Stock-Prediction-Models",
+    "included_repos": [
+      "Stock-Prediction-Models"
+    ],
+    "file_count": 6,
+    "byte_size": 3621045
+  },
+  {
+    "index": 266,
+    "filename": "QUANT_REPO_266_stock-market-india.txt",
+    "title": "QUANT_REPO_266 [e424df8119c6c609]: stock-market-india (FULL END-TO-END CODE)",
+    "sha256": "e424df8119c6c609a9ee3fc252748256c6ac9fb01bd326d86986243e79b650d4",
+    "sha256_short": "e424df8119c6c609",
+    "primary_name": "stock-market-india",
+    "included_repos": [
+      "stock-market-india"
+    ],
+    "file_count": 19,
+    "byte_size": 213786
+  },
+  {
+    "index": 267,
+    "filename": "QUANT_REPO_267_statsmodels.txt",
+    "title": "QUANT_REPO_267 [f29b076d6cea5215]: statsmodels (FULL END-TO-END CODE)",
+    "sha256": "f29b076d6cea5215a4a02e737637074858b5657fcf93371b58b64002efcdb6d3",
+    "sha256_short": "f29b076d6cea5215",
+    "primary_name": "statsmodels",
+    "included_repos": [
+      "statsmodels"
+    ],
+    "file_count": 359,
+    "byte_size": 2100830
+  },
+  {
+    "index": 268,
+    "filename": "QUANT_REPO_268_Sovereign-Wealth-US.txt",
+    "title": "QUANT_REPO_268 [be6b44318103f988]: Sovereign-Wealth-US (FULL END-TO-END CODE)",
+    "sha256": "be6b44318103f98876276e23c42b918c76a346d5f48f4b91fa1768fd66b55241",
+    "sha256_short": "be6b44318103f988",
+    "primary_name": "Sovereign-Wealth-US",
+    "included_repos": [
+      "Sovereign-Wealth-US"
+    ],
+    "file_count": 1,
+    "byte_size": 9235
+  },
+  {
+    "index": 269,
+    "filename": "QUANT_REPO_269_Skill_Seekers.txt",
+    "title": "QUANT_REPO_269 [58647a4b51846f29]: Skill_Seekers (FULL END-TO-END CODE)",
+    "sha256": "58647a4b51846f29ec194a73333962456e791095ad8ef20b7e6fceb983049221",
+    "sha256_short": "58647a4b51846f29",
+    "primary_name": "Skill_Seekers",
+    "included_repos": [
+      "Skill_Seekers"
+    ],
+    "file_count": 139,
+    "byte_size": 2105045
+  },
+  {
+    "index": 270,
+    "filename": "QUANT_REPO_270_simdjson.txt",
+    "title": "QUANT_REPO_270 [a4ca82b1b03fd7e0]: simdjson (FULL END-TO-END CODE)",
+    "sha256": "a4ca82b1b03fd7e0e8b2fdaf59b9ad32a653b54e29faa1c451fe9704f95ae9fc",
+    "sha256_short": "a4ca82b1b03fd7e0",
+    "primary_name": "simdjson",
+    "included_repos": [
+      "simdjson"
+    ],
+    "file_count": 342,
+    "byte_size": 2104039
+  },
+  {
+    "index": 271,
+    "filename": "QUANT_REPO_271_shark-bot.txt",
+    "title": "QUANT_REPO_271 [cd5b823f0433724c]: shark-bot (FULL END-TO-END CODE)",
+    "sha256": "cd5b823f0433724c38c8f81cc7f5727e628327d3db5a6e5714abf78a9814fc52",
+    "sha256_short": "cd5b823f0433724c",
+    "primary_name": "shark-bot",
+    "included_repos": [
+      "shark-bot"
+    ],
+    "file_count": 1,
+    "byte_size": 1504
+  },
+  {
+    "index": 272,
+    "filename": "QUANT_REPO_272_roq-api.txt",
+    "title": "QUANT_REPO_272 [aa28f11cf26e8aad]: roq-api (FULL END-TO-END CODE)",
+    "sha256": "aa28f11cf26e8aad2d197ba04a6566337028fce7372fa09d5fbac2b803c4328c",
+    "sha256_short": "aa28f11cf26e8aad",
+    "primary_name": "roq-api",
+    "included_repos": [
+      "roq-api"
+    ],
+    "file_count": 276,
+    "byte_size": 298173
+  },
+  {
+    "index": 273,
+    "filename": "QUANT_REPO_273_ripgrep.txt",
+    "title": "QUANT_REPO_273 [829c9d8ca54b3a0d]: ripgrep (FULL END-TO-END CODE)",
+    "sha256": "829c9d8ca54b3a0d4af601f2b8a38e4ba6c23e3fb8b8cf0a671169fed739e7f9",
+    "sha256_short": "829c9d8ca54b3a0d",
+    "primary_name": "ripgrep",
+    "included_repos": [
+      "ripgrep"
+    ],
+    "file_count": 132,
+    "byte_size": 1976161
+  },
+  {
+    "index": 274,
+    "filename": "QUANT_REPO_274_quickfix.txt",
+    "title": "QUANT_REPO_274 [7a6865b275080c51]: quickfix (FULL END-TO-END CODE)",
+    "sha256": "7a6865b275080c511be7fde9e100948ef9182a100b26f245433cdc42f128a0ca",
+    "sha256_short": "7a6865b275080c51",
+    "primary_name": "quickfix",
+    "included_repos": [
+      "quickfix"
+    ],
+    "file_count": 199,
+    "byte_size": 2261837
+  },
+  {
+    "index": 275,
+    "filename": "QUANT_REPO_275_QtsApp.txt",
+    "title": "QUANT_REPO_275 [9d8d56e8d76b7c4d]: QtsApp (FULL END-TO-END CODE)",
+    "sha256": "9d8d56e8d76b7c4d9bd8e226da44ff0c1e22c312432d74057d07fd6f40a77b3e",
+    "sha256_short": "9d8d56e8d76b7c4d",
+    "primary_name": "QtsApp",
+    "included_repos": [
+      "QtsApp"
+    ],
+    "file_count": 3,
+    "byte_size": 5764
+  },
+  {
+    "index": 276,
+    "filename": "QUANT_REPO_276_qstrader.txt",
+    "title": "QUANT_REPO_276 [cc6f6ed96dd6bb64]: qstrader (FULL END-TO-END CODE)",
+    "sha256": "cc6f6ed96dd6bb64b8c94aeb13f54f60e2baf1eef134091e5375b44d16f256b9",
+    "sha256_short": "cc6f6ed96dd6bb64",
+    "primary_name": "qstrader",
+    "included_repos": [
+      "qstrader"
+    ],
+    "file_count": 97,
+    "byte_size": 348138
+  },
+  {
+    "index": 277,
+    "filename": "QUANT_REPO_277_qlib.txt",
+    "title": "QUANT_REPO_277 [f62f03dda918a39c]: qlib (FULL END-TO-END CODE)",
+    "sha256": "f62f03dda918a39c6dd8d8d7e94c27a4005d59602f975f9904b0e993d82957b1",
+    "sha256_short": "f62f03dda918a39c",
+    "primary_name": "qlib",
+    "included_repos": [
+      "qlib"
+    ],
+    "file_count": 234,
+    "byte_size": 2092891
+  },
+  {
+    "index": 278,
+    "filename": "QUANT_REPO_278_pyts.txt",
+    "title": "QUANT_REPO_278 [544c74c4ae542ed7]: pyts (FULL END-TO-END CODE)",
+    "sha256": "544c74c4ae542ed7e7163525e8722c793b79b796cfe13b7490bda8aaa12d57e3",
+    "sha256_short": "544c74c4ae542ed7",
+    "primary_name": "pyts",
+    "included_repos": [
+      "pyts"
+    ],
+    "file_count": 146,
+    "byte_size": 802103
+  },
+  {
+    "index": 279,
+    "filename": "QUANT_REPO_279_Python-for-Indian-Traders.txt",
+    "title": "QUANT_REPO_279 [915bf730223cb5c8]: Python-for-Indian-Traders (FULL END-TO-END CODE)",
+    "sha256": "915bf730223cb5c87ca008b7ac3982e4ac8a324d2ff4661896b3c0b427bc36aa",
+    "sha256_short": "915bf730223cb5c8",
+    "primary_name": "Python-for-Indian-Traders",
+    "included_repos": [
+      "Python-for-Indian-Traders"
+    ],
+    "file_count": 78,
+    "byte_size": 120529
+  },
+  {
+    "index": 280,
+    "filename": "QUANT_REPO_280_PyPortfolioOpt.txt",
+    "title": "QUANT_REPO_280 [7eda65079512ee8a]: PyPortfolioOpt (FULL END-TO-END CODE)",
+    "sha256": "7eda65079512ee8a4e4b65b5b4736eba4d271b6288ee5fdbd007939e127f2b38",
+    "sha256_short": "7eda65079512ee8a",
+    "primary_name": "PyPortfolioOpt",
+    "included_repos": [
+      "PyPortfolioOpt"
+    ],
+    "file_count": 46,
+    "byte_size": 444547
+  },
+  {
+    "index": 281,
+    "filename": "QUANT_REPO_281_pyfolio-reloaded.txt",
+    "title": "QUANT_REPO_281 [7c63f7560f3871fc]: pyfolio-reloaded (FULL END-TO-END CODE)",
+    "sha256": "7c63f7560f3871fc040966e7f44fffef303ad2890af27afabb6376e906915b13",
+    "sha256_short": "7c63f7560f3871fc",
+    "primary_name": "pyfolio-reloaded",
+    "included_repos": [
+      "pyfolio-reloaded"
+    ],
+    "file_count": 33,
+    "byte_size": 312854
+  },
+  {
+    "index": 282,
+    "filename": "QUANT_REPO_282_pyfolio.txt",
+    "title": "QUANT_REPO_282 [3086bd8b59265733]: pyfolio (FULL END-TO-END CODE)",
+    "sha256": "3086bd8b5926573363a9ce2ccecb866424ad8bade6d6fc3180de53d9b8cc481e",
+    "sha256_short": "3086bd8b59265733",
+    "primary_name": "pyfolio",
+    "included_repos": [
+      "pyfolio"
+    ],
+    "file_count": 32,
+    "byte_size": 380900
+  },
+  {
+    "index": 283,
+    "filename": "QUANT_REPO_283_polars.txt",
+    "title": "QUANT_REPO_283 [ad38588dcbc9f9e5]: polars (FULL END-TO-END CODE)",
+    "sha256": "ad38588dcbc9f9e524e9ed3ee15b5028837803a2760244aa42e9267dc01c3c16",
+    "sha256_short": "ad38588dcbc9f9e5",
+    "primary_name": "polars",
+    "included_repos": [
+      "polars"
+    ],
+    "file_count": 227,
+    "byte_size": 2128644
+  },
+  {
+    "index": 284,
+    "filename": "QUANT_REPO_284_PineScript.txt",
+    "title": "QUANT_REPO_284 [0fb4cdbbde49aecd]: PineScript (FULL END-TO-END CODE)",
+    "sha256": "0fb4cdbbde49aecdb81dcbd51ab38912951b36d2169ffd070ecf0b8cdc22b4f8",
+    "sha256_short": "0fb4cdbbde49aecd",
+    "primary_name": "PineScript",
+    "included_repos": [
+      "PineScript"
+    ],
+    "file_count": 1,
+    "byte_size": 3444
+  },
+  {
+    "index": 285,
+    "filename": "QUANT_REPO_285_pandas-market-calendars.txt",
+    "title": "QUANT_REPO_285 [7dc8e16f68a71a2f]: pandas-market-calendars (FULL END-TO-END CODE)",
+    "sha256": "7dc8e16f68a71a2fcacb7094b512bfccef3292ac5c951d0a3a9435365495e0e0",
+    "sha256_short": "7dc8e16f68a71a2f",
+    "primary_name": "pandas-market-calendars",
+    "included_repos": [
+      "pandas-market-calendars"
+    ],
+    "file_count": 90,
+    "byte_size": 1002060
+  },
+  {
+    "index": 286,
+    "filename": "QUANT_REPO_286_orjson.txt",
+    "title": "QUANT_REPO_286 [09a662b67d83dfb7]: orjson (FULL END-TO-END CODE)",
+    "sha256": "09a662b67d83dfb7c3cc74a8cc3993583413453ebb6934b2b2d2ae6edb5199e6",
+    "sha256_short": "09a662b67d83dfb7",
+    "primary_name": "orjson",
+    "included_repos": [
+      "orjson"
+    ],
+    "file_count": 529,
+    "byte_size": 1411329
+  },
+  {
+    "index": 287,
+    "filename": "QUANT_REPO_287_orderbook-heatmap.txt",
+    "title": "QUANT_REPO_287 [cf93dd7e896452b0]: orderbook-heatmap (FULL END-TO-END CODE)",
+    "sha256": "cf93dd7e896452b0e25bb05122bc424b058dd5aee44d12c292c2a0eb1ef963c1",
+    "sha256_short": "cf93dd7e896452b0",
+    "primary_name": "orderbook-heatmap",
+    "included_repos": [
+      "orderbook-heatmap"
+    ],
+    "file_count": 2,
+    "byte_size": 20719
+  },
+  {
+    "index": 288,
+    "filename": "QUANT_REPO_288_Order_Flow_Imbalances-AAPL-.txt",
+    "title": "QUANT_REPO_288 [aa1ff1e075a04d3c]: Order_Flow_Imbalances-AAPL- (FULL END-TO-END CODE)",
+    "sha256": "aa1ff1e075a04d3cc915943350325a84f4f291261c900f608e5b035e12fd06f0",
+    "sha256_short": "aa1ff1e075a04d3c",
+    "primary_name": "Order_Flow_Imbalances-AAPL-",
+    "included_repos": [
+      "Order_Flow_Imbalances-AAPL-"
+    ],
+    "file_count": 1,
+    "byte_size": 3270
+  },
+  {
+    "index": 289,
+    "filename": "QUANT_REPO_289_ORDER_FLOW_IMBALANCE.txt",
+    "title": "QUANT_REPO_289 [4cef0ee30dbc81b8]: ORDER_FLOW_IMBALANCE (FULL END-TO-END CODE)",
+    "sha256": "4cef0ee30dbc81b8fc530323bcbc784caf8db27cf4725c9ba9dda31e7d71879e",
+    "sha256_short": "4cef0ee30dbc81b8",
+    "primary_name": "ORDER_FLOW_IMBALANCE",
+    "included_repos": [
+      "ORDER_FLOW_IMBALANCE"
+    ],
+    "file_count": 2,
+    "byte_size": 3221
+  },
+  {
+    "index": 290,
+    "filename": "QUANT_REPO_290_consolidated_quant_utilities_and_research.txt",
+    "title": "QUANT_REPO_290 [20698c78e025e736]: consolidated_quant_utilities_and_research (FULL END-TO-END CODE)",
+    "sha256": "20698c78e025e736e17830a0c6517853627bb2ced1cfb1d380f7ce1f63adb080",
+    "sha256_short": "20698c78e025e736",
+    "primary_name": "consolidated_quant_utilities_and_research",
+    "included_repos": [
+      "Order-Flow-Imbalances-OFI",
+      "Order-Flow-Imbalances",
+      "Order-Flow-Imbalance-OFI-features",
+      "Order-Flow-Imbalance-OFI-",
+      "Order-Flow-Imbalance-analysis",
+      "Order-Flow-Imbalance",
+      "optuna",
+      "openchart",
+      "ofi-cross-impact-analysis",
+      "ofi-cross-impact",
+      "OFI",
+      "numba",
+      "Multi-Level-Order-Flow-Imbalance-And-Market-Cross-Impact",
+      "marketwatch",
+      "Market-Impact-Model",
+      "Jiraiya",
+      "investpy",
+      "hyperfine",
+      "hummingbot",
+      "hikyuu",
+      "hawkes-ofi-market-microstructure",
+      "gluonts",
+      "genpark-order-flow-imbalance-ofi-skill",
+      "freqtrade",
+      "finta",
+      "finmarketpy",
+      "findatapy",
+      "financial-engineering-vault",
+      "ffn",
+      "fenix",
+      "fd",
+      "fastfetch",
+      "empyrical-reloaded",
+      "empyrical",
+      "edge",
+      "deep-reinforcement-learning-for-finance",
+      "cvxpy",
+      "crypto-lob-data-pipeline",
+      "CREDIT-CARD-FRAUD-DETECTION-1",
+      "cooc",
+      "Clairvoyant",
+      "ccxt",
+      "bulls-vs-bears",
+      "bat",
+      "backtesting.py",
+      "AutoHedge",
+      "arrow",
+      "arch",
+      "antigravity-stock-analysis-workflow",
+      "alpaca-trade-api-python",
+      "alpaca-py"
+    ],
+    "file_count": 299,
+    "byte_size": 2107728
+  }
+]

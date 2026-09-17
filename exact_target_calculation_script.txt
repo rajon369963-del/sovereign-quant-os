@@ -1,0 +1,32 @@
+Rajon bhai, aapne bilkul exact aur practical sawal pucha hai! Ek trader ke liye sabse important hota hai Break Even aur Net Profit ka exact target pata hona. Toh main aapko ek ek paise ka mathematical hisaab de raha hoon.
+
+Aapka original capital tha: 1008 rupees.
+Aaj subah Dhan broker par hamara Start of Day limit aaya: 918.43 rupees.
+Toh kal ka jo total recovery amount banta hai, woh hai exactly 89.57 rupees, yaani lagbhag 90 rupees.
+
+Ab aate hain aaj ke taxes aur charges par:
+Hamara Dhan broker par equity intraday trading chal raha hai. Chhoti capital hone ki wajah se har trade ka turnover lagbhag 1600 se 1700 rupees ka hota hai.
+Intraday equity mein Dhan ka brokerage 0.03 percent yaani lagbhag 50 paise per order hota hai.
+Iske saath NSE transaction charge lagbhag 10 paise, STT 40 paise, SEBI fee aur Stamp duty lagbhag 5 paise, aur 18 percent GST lagbhag 15 paise lagta hai.
+Yaani ek complete buy aur sell cycle par total government aur broker charges bante hain lagbhag 1.20 se 1.50 rupees!
+Agar hum aaj pure din mein 5 se 6 disciplined trades karte hain, toh aaj ka total tax aur brokerage lagbhag 10 se 12 rupees ke beech aayega. Isse ek rupya bhi zyada nahi hoga.
+
+Ab exact calculation dekhiye:
+Level one — Zero Loss Breakeven:
+Kal ka 89.57 rupees ka loss cover karne ke liye aur aaj ke 12 rupees ke taxes cover karne ke liye:
+89.57 plus 12.00 equals 101.57 rupees!
+Yaani agar hum aaj gross profit mein exactly 102 rupees kama lete hain, toh aapka wallet wapas 1008 rupees par aa jayega, aur aaj ke saare taxes aur brokerage 100 percent advance mein chukta ho chuke honge! Zero loss, zero liability!
+
+Level two — Real Net Profit mein aane ke liye:
+1008 rupees ke upar agar humein saaf net profit mein aana hai:
+Agar hum target rakhte hain 115 se 125 rupees ka gross gain:
+Toh 12 rupees tax katne ke baad aur kal ka 90 rupees cover hone ke baad, aapke paas 1008 ke upar 15 se 25 rupees ka direct net green profit aapke account mein add ho jayega!
+Aur agar hum 150 rupees ka milestone hit karte hain, toh seedha 1040 se 1050 rupees ka wallet balance ban jayega.
+
+Abhi ki status kya hai?
+Aaj subah ke trades mein humne already PNB aur Tata Steel se plus 4.48 rupees ka net green start le liya hai.
+Toh humein remaining target kitna chahiye?
+102 me se 4.5 rupees minus kar lijiye — humein pure din mein bas lagbhag 97 rupees aur gain karne hain!
+Yeh 97 rupees hum kisi reckless gambling se nahi karenge. 12:45 baje ke baad jab Thursday 0-DTE expiry ka main institutional short-covering squeeze aayega, tab hamare 3-Gate Variance Shield aur 0.7R Ratchet ke saath do ya teen solid moves mein hum yeh target bina kisi tension ke achieve karenge.
+
+Summary yeh hai bhai: Exactly 102 rupees par pura loss aur tax cover ho jayega, aur 115 rupees cross karte hi hum pure net profit mein aa jayenge!

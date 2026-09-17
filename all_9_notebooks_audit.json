@@ -1,0 +1,65 @@
+[
+  {
+    "id": "b1398c08-e8d3-48de-b645-7e0c821a576f",
+    "name": "01_VIVEK_BAJAJ_MACRO_BRAIN",
+    "sources": "300",
+    "title": "01_VIVEK_BAJAJ_MACRO_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "f67ae556-94ee-4c82-865a-c09c55a90c6d",
+    "name": "02_GHANSHYAM_TECH_PRICE_ACTION_BRAIN",
+    "sources": "300",
+    "title": "02_GHANSHYAM_TECH_PRICE_ACTION_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "b0e64cde-7112-432a-8329-5eddcd4252de",
+    "name": "03_SUBASISH_PANI_EXECUTION_BRAIN",
+    "sources": "300",
+    "title": "03_SUBASISH_PANI_EXECUTION_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "279ad740-9e0d-4e00-a713-a72cffb62a3f",
+    "name": "04_SAKETH_R_OPTIONS_GREEKS_BRAIN",
+    "sources": "300",
+    "title": "04_SAKETH_R_OPTIONS_GREEKS_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "e5d3eb8c-1492-4670-a4e3-08a5b2fb0f6d",
+    "name": "05_NITIN_MURARKA_ORDER_FLOW_BRAIN",
+    "sources": "282",
+    "title": "05_NITIN_MURARKA_ORDER_FLOW_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "0f2a60f3-294a-473b-a8a1-36a983e05d3c",
+    "name": "06_PR_SUNDAR_CAPITAL_PRESERVATION_BRAIN",
+    "sources": "300",
+    "title": "06_PR_SUNDAR_CAPITAL_PRESERVATION_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "a1903e26-f589-42ff-ac02-132bcd02115d",
+    "name": "07_DR_MUKUL_AGRAWAL_FORENSICS_BRAIN",
+    "sources": "300",
+    "title": "07_DR_MUKUL_AGRAWAL_FORENSICS_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "3884d9e5-c21c-4646-82c9-e4500427f102",
+    "name": "08_SIDDHARTH_BHANUSHALI_SWING_BRAIN",
+    "sources": "293",
+    "title": "08_SIDDHARTH_BHANUSHALI_SWING_BRAIN - Gemini Notebook",
+    "loaded": true
+  },
+  {
+    "id": "31fa34c1-8a6e-4ebc-b7ae-3d416e215594",
+    "name": "09_ABHISHEK_KAR_BEHAVIORAL_BRAIN",
+    "sources": "300",
+    "title": "09_ABHISHEK_KAR_BEHAVIORAL_BRAIN - Gemini Notebook",
+    "loaded": true
+  }
+]

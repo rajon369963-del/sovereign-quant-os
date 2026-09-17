@@ -364,27 +364,31 @@ class SovereignAdaptiveAlpha:
 
     def update_dynamic_strategy_matrix(self):
         """
-        Updates dynamic_strategy_matrix.json to calibrate for tomorrow's Wednesday Expiry:
-        - Sets all symbols to BIDIRECTIONAL to enable shorting when breakdown occurs.
-        - Tightens Chandelier trailing stop to 1.2x ATR.
+        Updates dynamic_strategy_matrix.json to calibrate for Thursday 0-DTE Expiry:
+        - Sets all symbols to BIDIRECTIONAL to enable long & short on ORB + VWAP.
+        - Tightens Chandelier trailing stop to 1.1x ATR.
+        - Sets 0.7R (+0.35%) Breakeven trigger with +0.10 net profit lock.
         """
         universe = ["TATASTEEL", "SAIL", "NATIONALUM", "ASHOKLEY", "PNB", "ZENSARTECH", "HCLTECH"]
         matrix = {}
         for sym in universe:
             matrix[sym] = {
                 "symbol": sym,
-                "sector_bias": "BIDIRECTIONAL",  # Fully dynamic: long or short depending on ORB & VWAP
+                "sector_bias": "BIDIRECTIONAL",  # Dynamic long/short based on ORB breakout
                 "atr_14": 0.35,
-                "chandelier_multiplier": 1.2,    # Tightened for expiry day fast exits
-                "breakeven_buffer": 0.20,
-                "take_profit_rr": 1.5,
-                "expiry_mode": "WEDNESDAY_0DTE_ACTIVE",
+                "chandelier_multiplier": 1.1,    # Tightened for Thursday 0-DTE gamma spike exits
+                "breakeven_trigger_pct": 0.0035, # +0.35% (0.7R) locks breakeven immediately
+                "breakeven_buffer": 0.10,        # +0.10 INR net profit locked
+                "take_profit_rr": 2.0,           # Asymmetric 1:2 R:R (1.0% target)
+                "hybrid_limit_buffer": 0.003,    # Limit-Market Hybrid slippage protection (+-0.3%)
+                "max_risk_pct": 0.025,           # 2.5% Half-Kelly
+                "expiry_mode": "THURSDAY_0DTE_MAX_PROFIT_ACTIVE",
                 "last_calibrated": datetime.now().strftime("%Y-%m-%d %H:%M:%S IST")
             }
             
         with open(MATRIX_FILE, "w", encoding="utf-8") as f:
             json.dump(matrix, f, indent=2)
-        print(f"✓ Calibrated dynamic strategy matrix for Wednesday Expiry: {MATRIX_FILE.name}")
+        print(f"✓ Calibrated dynamic strategy matrix for Thursday Expiry: {MATRIX_FILE.name}")
 
     def run_full_pipeline(self) -> dict[str, Any]:
         print("=" * 80)

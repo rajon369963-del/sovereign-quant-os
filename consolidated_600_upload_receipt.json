@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-17T09:10:29.716121",
+  "notebook_id": "d4091527-ae47-4c73-abf6-7c3a4ead8677",
+  "notebook_url": "https://notebook.google.com/notebook/d4091527-ae47-4c73-abf6-7c3a4ead8677",
+  "method": "HEADLESS_SCOTTY_STREAMING_SDK",
+  "concurrency": 4,
+  "total_bundles": 250,
+  "uploaded_this_run": 140,
+  "failed_this_run": 0,
+  "total_verified_in_notebooklm": 251,
+  "elapsed_seconds": 401.06,
+  "status": "COMPLETED"
+}

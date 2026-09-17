@@ -1,6 +1,6 @@
 {
   "phase": 2,
-  "timestamp": "2026-09-16T12:21:40Z",
+  "timestamp": "2026-09-16T14:42:36Z",
   "status": "ALL_TESTS_PASSED",
   "test_results": {
     "test_1_intent_sequencer": {
@@ -22,8 +22,8 @@
       "status": "PASSED",
       "total_orders": 500,
       "threads": 50,
-      "elapsed_ms": 43.3,
-      "throughput_ops": 11546.01
+      "elapsed_ms": 29.85,
+      "throughput_ops": 16748.34
     },
     "test_5_hash_chain_integrity": {
       "status": "PASSED",

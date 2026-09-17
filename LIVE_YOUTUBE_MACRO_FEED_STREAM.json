@@ -1,0 +1,466 @@
+{
+  "last_synced": "2026-09-17 11:42:39 IST",
+  "active_notebooks": [
+    {
+      "id": "ab982c1f-9b18-49fc-9fa6-5cf10a0defeb",
+      "name": "share market 17th sept_dui",
+      "source_count": 295,
+      "status": "INGESTED_AND_WIRED"
+    },
+    {
+      "id": "33bef7b5-0789-4021-a41b-f32d37c2d5b0",
+      "name": "share market 17th sept_ak",
+      "source_count": 212,
+      "status": "INGESTED_AND_WIRED"
+    },
+    {
+      "id": "96da7dbf-18e9-40a0-9e90-e363052a247f",
+      "name": "200+ QUANT & ALGO TRADING GITHUB REPOS - SOVEREIGN CODE BRAIN",
+      "source_count": "200+ Repos",
+      "status": "MATHEMATICAL_KERNEL_ACTIVE"
+    }
+  ],
+  "continuous_feed_queue": [
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "Hdspv8CaNwM",
+      "url": "https://www.youtube.com/watch?v=Hdspv8CaNwM",
+      "title": "Nifty Prediction & Bank Nifty Analysis for Thursday| 17th September 2026 | nifty Tomorrow",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:42:42 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "iPw9-Od_vS8",
+      "url": "https://www.youtube.com/watch?v=iPw9-Od_vS8",
+      "title": "\ud83d\udd34 Stock Market LIVE: Sensex, Nifty, Bank Nifty, Crude Oil & Latest Business News | 17th Sept 2026",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:42:42 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "eX1bZCQ6Dyc",
+      "url": "https://www.youtube.com/watch?v=eX1bZCQ6Dyc",
+      "title": "LIVE TRADING NIFTY50  SENSEX EXPIRY|| 17 SEPT || #trading #thetradingfemme  #livestream",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:42:42 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "95EB9QSmjyE",
+      "url": "https://www.youtube.com/watch?v=95EB9QSmjyE",
+      "title": "LIVE TRADING NIFTY & BANKNIFTY & SENSEX || 17 Sep || @tradersbootcampp #nifty50 #banknifty",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:42:42 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "MO7HXBRfUYw",
+      "url": "https://www.youtube.com/watch?v=MO7HXBRfUYw",
+      "title": "Expiry Hero Zero Trade Nifty SENSEX | Live Trading | Banknifty Analysis | 17-sept | #livetrading",
+      "sentiment": "BULLISH",
+      "timestamp": "2026-09-17 11:42:42 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Goodreturns",
+      "title": "150% Dividend: PSU Bank Rewards Investors With Bumper Payout, Stock Up 114% In 3 Yrs | How To Get Eligible? - Goodreturns",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNV3RxYkNobUxydEhJeDlNM1YyQ1VQVzBSV0hFVnhBUExTZXd0bDMxc0p0TlotVjk0NVE4UkRKaFdzNWlmcVBrVlJCMmFOOTJOel9XVU96Z3VsRV9WSXk2bGgyMXIwM2N1NWkxRXB3QlpXZjNsZGFSLW9rUHppclFOTFRMbHhTckh1Z2pxTkJTaEVRc0hCTTVGZnFsQ3RndEFoZFN2NVJRVWZnb0o2NWxEVDAwLXdWbXNrQU9fNnFINVRNa2VhM0ZSMmVQeDNiNDlJOVRjLUJR?oc=5",
+      "published": "Mon, 07 Sep 2026 14:49:54 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:42:05 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Goodreturns",
+      "title": "Stock Market Outlook Today, June 8: Sensex, Nifty Likely to Trade Range-Bound Amid RBI Pause and FII Outflows - Goodreturns",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNN2JzQUJabDhtVHRIaHQxMktTVVFtd0lWWmtTR1ZwLWN3dlVnS0tEQVZyVVhZWEtIWUNIZm9pQVdqbV9JNkR6RW9YLUNsWFVLMXJSMXlHdkxjTkdESk5YXzM1eDFHZ1BFc2psSHJjY0V3eGhfTEFrYVMxZU1HbG9PTjA0QUh1QUFDTmwtTjhfTGNMY1VVdzFzanNRU0RVUm9lTEphNVJKRlpZOHFfaTNIX09XVC1Fd2VHdWl1VzAxcVFKb0QwREgyRnNCQnZhQWhtRnVMaXlJWlBPeFVsUlE?oc=5",
+      "published": "Fri, 11 Sep 2026 07:00:00 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:42:05 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "groww.in",
+      "title": "September 2026 F&O Monthly Expiry - groww.in",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1MbDhrd01qWkVHejFJaHhvNHhRQ21SRVVxUnNPWlkxRXZzQnp6WTZSRnNSTHhTeEdYVUxmT2RJX2l4c1U3ZjVtcWtLNU1WUjZ2Y3V3TktiVQ?oc=5",
+      "published": "Thu, 03 Sep 2026 07:00:00 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:42:05 IST"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "rfZOUHxsfUE",
+      "url": "https://www.youtube.com/watch?v=rfZOUHxsfUE",
+      "title": "\ud83d\udd34NIFTY 50  LIVE & BANK NIFTY LIVE | Indian Stock Market | Nifty Today #live",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:42:07 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "TEyxnvea8RE",
+      "url": "https://www.youtube.com/watch?v=TEyxnvea8RE",
+      "title": "Live Trading Banknifty Nifty & Sensex Option 17 September \u2705#livetrading #nifty #bankniftylivetrading",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:42:07 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Livemint",
+      "title": "Sensex, Nifty soar despite Fed rate hike \u2014 Is it NSE IPO impact and 6 listings today? Experts decode stock market rise - Livemint",
+      "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNUTY3SVdiQ2JNRUtfLUlsbkh6dmNIS2lSeThBNkpfcGlTZWxGcTd6ZFUxcDV2Mm9xeEs2YWh0dEtuR1pQZ1NBYUxRTDFyQ1J3cDNGUjR0QS13ZWpZU2RvM3BCb2RiY3JvSXBQZFNIekwwUTVnaWd4VUdBWUp5V0FHeEdTWDVPMm1TeXZUQVEyZHFHTzU1TEc0Y3VDLXB0WkxVc2RLc2lLMGZTby1oSFRhdERaRFZrLWY2bmEwNURORFFESlpfXzFHaExSWUZUbUxuMTF0T0F2TlgwWHVjaVlMLWxWTHFTWWlHNjI0dXRwUGxlNENJaDZsdmVZTVhaUHdIYW9sSl9RZFhDNjdoQmozb21n0gGXAkFVX3lxTFA5dWdDUXppODFVRlZQd19RWnhnYVlWTk1rMEk5LW5BRGFFejVaMkpyX3FRVkZ4bVd3RVRtV2JXLWhrbXRfQWtMYWJrVC1kYXZ6dm9uOTVCMW5YaUhMbVR3V0M4SzNMWEVOMUdqSW41X29BMUlqeXgxVVFvSG5LOUtUUUFlOU0ySW5kdFJuTk9ZS2lKRmV3WXhHc0FveHRhaWRIMDZDZndOcV9Qano2RkJaZUhRZlZGRmN2NHJyNHk3N05tUXh3UC13TGxDNkdFRklXMlROZ18xTGVMeHB6NUFRaDNLTERrVlZFVURYV1JNT2dtRW9jOW9wQTVzVzd0Umg3T0FaY0RoWWthei10Ukc0WlAwQXdpaw?oc=5",
+      "published": "Thu, 17 Sep 2026 05:47:17 GMT",
+      "sentiment_score": 1,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:41:30 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Liquide Blog",
+      "title": "Share Market Today: Nifty 50, Bank Nifty | Sep 16, 2026 - Liquide Blog",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWGJKSzRGV1Q0SUh4UWxyTnJoNHkwbVc2QzhxQW8xbjk0U2dMTEdMbHYta3AtazExczhNWmpFckM1d1N2SGQ5ZGNxNHJwQkNTc00tVjdra1RDa05DcndOOXl0WFlIank2ZGdoUUFtRUROMWpXSHBBMS0tcWN2VGVGVHdSNlIzVExucVJCREdnRDlWUUt6el9DNnNWZmp0T2Y1c214YndXWENHQQ?oc=5",
+      "published": "Wed, 16 Sep 2026 11:57:25 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:41:30 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Livemint",
+      "title": "US Fed rate hike impact on Indian stock market - Sensex, Nifty, Bank Nifty, Nifty IT - Livemint",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNSDNZSldlWTJKSE5sTW95UzgzQTlnTU9iTFpKdkdsaWFmaG1uTDE2MDFFSS1qQUc5ODVqLVh1TXlFWld4ZHFUcjU0NmFKbUt5d0hZOEJQSzNubW52dlJ3S1VzQ2tpSFc0NHB2bjRsVVdSMy1OTlR0YkZoYmF6MkdGQ3kwX3NQLVU2YV9OTERyWXZhODByRHgyVEZFaS1XdVBlRWhQODB5TjhZbFVzZUx4cmRLVXFraENQS2Fhb2ZNZHVPdlg4S25CMjhudmJhblluQWo0SkczUjJMM1AyeXIwT2VRd9IB6AFBVV95cUxOMHI5aUpLdzZvejlnQlZHcmtCT3UyVDRxX2o5eXJpWG1EUVJWOG5yMjROTFZYZUtKNGpVMmtnSDJ1S0JPWEMxZzZ6WV91dGF3WV9tcGFSNmdDRk9zTU5JV0RlMS02RW5WYnJDc254RDYyLTBIUVdaSDA4c1FISjRHTzdOWk5POFVTZ0dsanRHalZQTXhsR2s0TkktRzVNckZ6U1diR3V0LXRIZjBBYVlSQUhSbTZ3ZXNORG5WVmRhc2c4OXZ3OW01WFp1Zzl4REZNTmxnTXBPTmNaMzhyd1laQzE2U3ZmeEdG?oc=5",
+      "published": "Wed, 16 Sep 2026 18:44:30 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:41:30 IST"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "hmS4fU_VNnQ",
+      "url": "https://www.youtube.com/watch?v=hmS4fU_VNnQ",
+      "title": "17 September | Nifty 50 Live: Ultimate Market Analysis for Today's Trading",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:40:59 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "JpIaTVFWKkU",
+      "url": "https://www.youtube.com/watch?v=JpIaTVFWKkU",
+      "title": "\ud83d\udd3417 SEP LIVE SENSEX EXPIRY,NIFTY,BANKNIFTY,GOLD ANALYSIS #sensexexpiry#niftylive TRADING WITH AAKASH",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:40:59 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "Moqk9vnhRz4",
+      "url": "https://www.youtube.com/watch?v=Moqk9vnhRz4",
+      "title": "NIFTY50, BANK NIFTY - TradCafe",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:40:59 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "9qtAEvaPHDs",
+      "url": "https://www.youtube.com/watch?v=9qtAEvaPHDs",
+      "title": "LIVE TRADING | NIFTY 50 & BANKNIFTY | 17 September | #livetrading #niftylivetrading #nse #bse",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:38:36 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "FBHYHYfIkow",
+      "url": "https://www.youtube.com/watch?v=FBHYHYfIkow",
+      "title": "\u2666\ufe0fNifty & Sensex Expiry Live Today 17th September 2026 | Intraday Market Outlook, Key Levels- Live-",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:38:36 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "YvmE6Esbr24",
+      "url": "https://www.youtube.com/watch?v=YvmE6Esbr24",
+      "title": "TRADING NIFTY 50 & BANKNIFTY Today, 17 September 2026 | Intraday Scalping | Sensex  Chart Analysis",
+      "sentiment": "BULLISH",
+      "timestamp": "2026-09-17 11:38:36 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "VEPTxO9AR2U",
+      "url": "https://www.youtube.com/watch?v=VEPTxO9AR2U",
+      "title": "Live Intraday Nifty 50  & Bank nifty  ,  Sensex  Expiry Analysis ||17September #livetrading",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:38:36 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "A1k3mvYJmmk",
+      "url": "https://www.youtube.com/watch?v=A1k3mvYJmmk",
+      "title": "17 Sep \ud83d\udd34LIVE NIFTY, BANK NIFTY & SENSEX Analysis\ud83d\udd25| Option Trading Stock Market | Intraday Scalping",
+      "sentiment": "BULLISH",
+      "timestamp": "2026-09-17 11:37:58 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "VCK1XiNKKdY",
+      "url": "https://www.youtube.com/watch?v=VCK1XiNKKdY",
+      "title": "Share Market LIVE Update | Business News | Latest Stock Market News| 17 September | ET Now Swadesh",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:37:23 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "ukpIKGX-_Z8",
+      "url": "https://www.youtube.com/watch?v=ukpIKGX-_Z8",
+      "title": "Nifty Prediction and Bank Nifty Analysis for Thursday | 17 September 26 | Bank NIFTY Tomorrow",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:37:23 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Univest",
+      "title": "RBL Bank Ltd. (RBLBANK): RBL Bank Share Price hits fresh 52-week high at Rs 411.5 - Univest",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcUpENXFKYWE3QXRVanFCbnhnRXVUT1JZcTdLMFVhQ1JmbWJORVZNRGZUY1JhMm1ISXJVbE04Znh0TkpwZ0xscG5GWlZnQ0FYYzU4UHlJUENsdGgtQ21Dc055c1J2MllOR29ENGJKQU5yb1hkUnUxYlFtZjdrRncySFVjTQ?oc=5",
+      "published": "Fri, 04 Sep 2026 07:00:00 GMT",
+      "sentiment_score": 1,
+      "matched_symbols": [
+        "RBLBANK"
+      ],
+      "timestamp": "2026-09-17 11:36:48 IST"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "gp4C8po-2pU",
+      "url": "https://www.youtube.com/watch?v=gp4C8po-2pU",
+      "title": "17 Sept | LIVE SENSEX WEEKLY EXPIRY, Nifty BankNifty Real-Time Orderflow & Market Profile Analysis",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:36:49 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "-9OH1WYI36c",
+      "url": "https://www.youtube.com/watch?v=-9OH1WYI36c",
+      "title": "\ud83d\udd34 NIFTY LIVE TRADING | BANK NIFTY \u2022 SENSEX \u2022 STOCK MARKET LIVE | 17 SEP #livetrading",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:36:49 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "R0S186VJ0UQ",
+      "url": "https://www.youtube.com/watch?v=R0S186VJ0UQ",
+      "title": "Stock Market LIVE | 17 September Share Market Live Today | Nifty Live | Sensex Live | Bank Nifty",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:36:49 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Moneycontrol.com",
+      "title": "RBL Bank shares rise 4% as lender mops up $3.4 bn from FCNR deposits, Citi says it 'reshapes earnings... - Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOenN5d0tHN1VXa0ZreWczWGRIZ3M5QWdiVDR6Z2dnSTYzbXFLQmNWZ2RHZThBU1MzbF9Ka0NVaGtwbE81VlFMNFhXME93NVBpWnNVZ0Fva2Uzek03QzJyQ2QzUzJuV0plTk9rc1pSbGdGWkVtTFlLcXNMcnJobVhwNlNEdjVNaFl4WF9fWWIzTUt6cGhFQVFMdDROTmdIcmZmbml6aERTSVdiTVZzMHFZQUpFWUU2a0JTaEdKZjE3TFRScGdNaGFtVG4wR2VOaEUxeUp0VnMxLTZUYWFRMzQ4R0xmZWN3eENZak4yQW80WkxCYXIzVGlqSDE5OTR5OVhtemfSAYcCQVVfeXFMUDYwX0pkd0poRld6RDd4cG5jZEhWZk03VV9OMUI0cjcwSDB1bXowbTZFVExpeGJCSkhlT3hzYnpVbTZPYWJOZGkwSXd0MUo1WUFwT29scXpIRUpob3J6WVJCSWpFS2dyWlhRbmx3U3M3OHozbUFjaHNlT1M4RFlINVFQUGlEd0dYeUwzdTBNMW4wT2gybTlRZ0s2UXRmOERlVFl1WlM3aWFzd25CdjJpcnIwVVJYbEtnbmp4LXNIVDVkMEVUYmw0bGtFUU9XYjRZWVI2V1dIZ29Ic2EzUWVOUWk0UnR5dmoySkltYjRZNHNYTVlRTkdvUjJNTzZQWHJMcDg1bTFmWms?oc=5",
+      "published": "Thu, 03 Sep 2026 07:00:00 GMT",
+      "sentiment_score": 1,
+      "matched_symbols": [
+        "RBLBANK"
+      ],
+      "timestamp": "2026-09-17 11:36:13 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Livemint",
+      "title": "RBL Bank: Is investor frenzy over FCNR (B) deposits justified? - Livemint",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNOURJaVRFeHpjNDRnSWJFdEpKWE1QLVNFRkFhUFNhY2Vtd1dCdXdjeHRiMHZINkNqbWpLaUNJRFh2dklySTV0WEI2eVIwOFBpOWhNRFU4N0lBTnpWMEJCUXJ4M0ZWd1o5MVhoTXAwOXRQZ21yS28xTGFRTUdJanpJR2MwblZNblEwS0pWNF9hUmc3TERVQ29iWWlJZUVSMnl4YXI1dmp30gGrAUFVX3lxTE1VN1ZSMm5kTXRLM3I1Ynp4Mkw0X3gtczhzZkthTnVVYnpMM0c1Rl92MV9XOUVmS1k1VmdnaFpRX0JOWWNuWlNVaTQ1NWllZ0hRYjFWbjRIMVJNazdVWVJWdFl0Zkp0XzFWV3l4VFF4bTVPNkE1N1JBbTFva2g4VU9sb2EyLXVpSmhmSFBQMEJUblB4RUYzMC01cDh0cUo1OWVtWTcxT2JVY0tuNA?oc=5",
+      "published": "Mon, 14 Sep 2026 00:27:22 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [
+        "RBLBANK"
+      ],
+      "timestamp": "2026-09-17 11:36:13 IST"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "PwOjMSeIFnU",
+      "url": "https://www.youtube.com/watch?v=PwOjMSeIFnU",
+      "title": "Sensex Expiry Special | Nifty Sensex Analysis for 17 Sept 2026 Thursday | Nifty Sensex Prediction",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:36:15 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Business Standard",
+      "title": "RBL Bank rallies 5%, hits 52-week high on huge volume; here's why - Business Standard",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNHYtNlpCS1pUN0RwODZkWkh2NEhSdEg2azA5X0tkYndQWm9NRkdpcWt2VEJDajkweDlSNzVmRUxLMlk4Z2tvZlE5b0NnWk5ad2gtZHNXbXlhamtmSDZTX3hpWnBUaFlTNzQ5b1dUakE0ZnFiMmxiYzJDdU0xdTE4RlgwcWlVSlh3YzNrbFJVWkhLUm53bGthZklDeU42RXhnd0IyNG1Od1JlLUxYVVZPTnlmZkV3aDRtcjN1T0l1RnNmRl92VEhQR9IBzgFBVV95cUxOajdlY1BkR05XREZPVldoMDVDbExVNGFmeEFKQzh5VmhjYW1tR0pwdnhvSEVzVlFUN3hSYlBiREpQWTA1M0VqdHpjb1ozR25JN3E3ZDczbUpJZndIWVc2NDdBVC1yQ2RnV1lDTFNKREotSXl6VmZNRXRtRTBpb3BZUkVvTnNjNGFRYlM1YW1EUnZUOGZtVVNZOXFpWF9tRFlnblpsdk85TDBSZEFxZEt3QkZ4dTRPWnBCLXBUQV9FU05Kb3hHOVh3N3lsa3ExZw?oc=5",
+      "published": "Thu, 03 Sep 2026 07:00:00 GMT",
+      "sentiment_score": 1,
+      "matched_symbols": [
+        "RBLBANK"
+      ],
+      "timestamp": "2026-09-17 11:35:36 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "NDTV Profit",
+      "title": "Stocks To Watch Today: Infosys, Mazagon Dock, Fortis Healthcare, Shriram Finance, RBL Bank, South Indian Bank & More - NDTV Profit",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQNzlMWUxMaGNYZ0pUbHU3eWhpekxHLUlMdFlHMDBUUW1RR2FXT3cwRHBmRTM0ZEZNT0tjSVFvZ3NGMG9uZkdpcWZEMnEzVENtV0VEdF9kSHVpXzFPUUk5SFN0aDB4aUR2OEtzVTI1WXlmU0N0ZDdUeVZKSGlzMDM4bDRCSUlWLVFUbnlZd0ZVTkpjYk42TTh0amZLYUdnMFVKMG9KZl9JS283SUZENlFTUmZpSzZUMnVLeHczRm8xby1xT2k3eUVPUDAwOEltQmtibEVReDdOcFNyVlZ6ZnRGWnJOODl3RGvSAe8BQVVfeXFMUFVHc3YtaEZ5djdYTlVzT2NBc3FsNVItcTBLdklnTXNQbE45aDdDdFY4SFdYUjlMZmRrQnJKOWRCdnlCUXJ4OFlRV2NUbVhuNjJNTzE2SkhoMURtN0FrM29YeEYzaW8wcGZmRzhOeWU3Y1FPRVRfb3JUaWsydXJtSExRcEpUT2Q5bUxodVlrd3F0RzI4OHZrVmphTExUbVBYS0tsOU05aFFTbkkwTTJOZXdOS1M2ek5lVG8xcE02bGdvN0RGeEZ1aVVfV2FDMWlRLW4xM2Zld2hSZFdQVE5LWEMwSjlCN0JKbFZlQkQxWEU?oc=5",
+      "published": "Thu, 17 Sep 2026 01:30:01 GMT",
+      "sentiment_score": 1,
+      "matched_symbols": [
+        "RBLBANK"
+      ],
+      "timestamp": "2026-09-17 11:35:36 IST"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "gFmetodwiY4",
+      "url": "https://www.youtube.com/watch?v=gFmetodwiY4",
+      "title": "First Trade 17th September 2026: Zee Business Live | Share Market Live Updates | Stock Market News",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:35:03 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "TQjvYjG-ULY",
+      "url": "https://www.youtube.com/watch?v=TQjvYjG-ULY",
+      "title": "Nifty Report For Tomorrow and Banknifty News For 17 September Thursday Market Analysis",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:35:02 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Business Today",
+      "title": "Tata Sons listing: Tata Steel, TMPV, Tata Chemicals among stocks that could benefit; here's why - Business Today",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMzJjTG91TW1welBEVE9SWHo3N19ob0JvY0tsamlaSFpTQXhpT1BSVmdzRlFDRnp1TzdPZzhsOVpSTnhwZUZES3BXT2E5T3ozOXhtWGZHZVFLcW9NaGQ1TzhGREVHQmJ3TFJCa01ZOU5Qc2pfUldVVVBsVnNlN1lkV2hZeXlQTG0ydE14bEZYRFJPNkxNTnFJek50UEZxbzNDdk5kWFVyMkdxUlFUd05ySXg4RnE1TlBCZGlta2gtY0dqZUsyUXd3U2xkX2ZoSXlFb1JUNEhnSldCUjMzM0V6OWo1aGPSAeoBQVVfeXFMT1c0NXl3OFlITG9oMUlSbjlWZ3hxbndPVm9CMGsyNHZDVkdxZXp0amZhYTJUTTVEbG9qNXVmYmFaREhSVVJ1empvc2VzOGNuTk9fT0JoYnZOVkVCZXBfY3FRdmdXYlEzNmV1MS1qUHVzSXJ1bklZTnlVa0s1cGdFWlhSNHFmMEl1eWJ6bGtZb0VOY1Ixd1hfemlsblhjX2t1a0NHeG5nOGpoUmxnNkdGcjVwSXBSamUxSWFQeWs1TlNXWFNibThMcFY3elEycGM3WUlITXlWZDVxWUM0dmNRTGRmSGc0VlhocTd3?oc=5",
+      "published": "Mon, 14 Sep 2026 05:25:46 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [
+        "TATASTEEL"
+      ],
+      "timestamp": "2026-09-17 11:34:21 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "Livemint",
+      "title": "Tata Steel share price falls 3%, among top Nifty 50 laggards; what experts say - Livemint",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPYmgzNlFyaTF0b0dOaFFMUnlEMnVEN0daRG1SOWEteWJHMUd5MFNva05EdlpHZ0RMZW1ERWtvNFJpYVVoM21rTFdnSG00SkREZkJSMHoyVU1FWUc0RFZCbHhQQjhGYll1eEx4UkJEMXE0aW1IVEl4MnpYSEtoWk5uV0V4OG9HQkpSRHZSY2lOcW1Da09UUGFOLVJXT0x4dGE4eXp2VmYxM19teGtsOEpXdWNWWllKeDFsN2gzcHQya1dPWXZPWTJHLTZ4X01WempGRHFIdUQwb0lsTHRTWmfSAeMBQVVfeXFMTmx5NGh1U1p1akw2V29oX01YTlExNGcwTWQzcjJrSEZGc18xNFA0aExQNVFXT0tXZGotU3M3OFNubkZNaTNtZm4wRm1UWUw0U3RTV1lFdTNyZGNVS0NpVFNDTE9WeEdLR09sZE5aMmRyOWd4bG5RUHh3RzFGdzJLeWNjN3h3OVh6a2Y5M3BQck11MTRFZE5YbWRmUzFjemVzYjc3X2paWE9mNmI0ZjJHNTlFWjI5c2dSaVRvZ1pKV2xnUDRzY0p4dzJpWEdrV1lqN0VqbzB2M3M1QTZibkJzTVpDZGM?oc=5",
+      "published": "Fri, 11 Sep 2026 10:15:47 GMT",
+      "sentiment_score": -1,
+      "matched_symbols": [
+        "TATASTEEL"
+      ],
+      "timestamp": "2026-09-17 11:34:21 IST"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "YBpgXf089tU",
+      "url": "https://www.youtube.com/watch?v=YBpgXf089tU",
+      "title": "Sensex Expiry | Bank Nifty & Nifty50 | Options Trading with Live Analysis | 17 Sep | #livetrading",
+      "sentiment": "NEUTRAL",
+      "timestamp": "2026-09-17 11:34:24 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "YOUTUBE_LIVE_STREAM",
+      "source": "YouTube Live Stream",
+      "video_id": "njvG_Pr9CpM",
+      "url": "https://www.youtube.com/watch?v=njvG_Pr9CpM",
+      "title": "LIVE TRADING Nifty BankNifty and SENSEX | Option Buying  | 17 Sept #livetrading",
+      "sentiment": "BULLISH",
+      "timestamp": "2026-09-17 11:34:24 IST",
+      "expiry_context": "0-DTE Thursday Expiry Dynamic Alpha"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "CNBC TV18",
+      "title": "Tata Chemicals shares jump 20% on Tata Sons listing developments; Here's how others are faring - CNBC TV18",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQVUtSdlR2dTZHNEE1RFFPNEZlcGhOYWJROXFjR3BoWG5rcGYtOGRwRktKd1VrbzBxUnVQRlB0RFlDT3NhSTZaRDJ3dS1iR0lRQVVVM2w4YklxUG5xRlBneXFRUUNDUWVWT3YxX2JFVHJNc2FZbHFiRzlKSTJXR2h1R1plNHIzazY2MHdpdVJDbjYwWU1SbTRvdFprdm9YcWJzX0hBVnBKSVN1emRSa3NKbUxQclFIQ25jal9oMzM2eURQZ1BTN090Q0R0cDBRUUlDdmN4Wm90R28wLUo0TFEtczllTmZtU09IOHpja0lxYjnSAfYBQVVfeXFMUEpaZlN4b1NQTkJNOWhYTUMzWXZSV2o2SDJ6WkVnQ05PczNGdmczRjVEbE92Rk1KWHM2dm1rejNZUW8ycmNRTUE1WnA1eGxZaGZmX2RPWDZDT0dwaVA4b2hjMUpDY2pBckJlX0FublJGaXdpbVRyd18xR3l6c0pGblFFVGk3T1g3ZUwzZERvb3RWUnlsTG53S0dQWWlraThtOGZZdFBmNThCcDZHRHIwZGY2UjdqbW00WGxHR01adm0tQ0ZhVmdmbTJENktOQTJ5QlVLdm1HREMxaVZlSUg2ZnFQQU85TU1hbTNJQjFicVp0aXFQMnJR?oc=5",
+      "published": "Tue, 15 Sep 2026 02:25:16 GMT",
+      "sentiment_score": 1,
+      "matched_symbols": [],
+      "timestamp": "2026-09-17 11:33:44 IST"
+    },
+    {
+      "type": "LIVE_NEWS",
+      "source": "scanx.trade",
+      "title": "Tata Steel fixes July 2 for 119th AGM, recommends \u20b94 dividend - scanx.trade",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMUs3a29HUWFaNGtXZlRXajV2d0dVYnpvWlV6d0tmX3JVcUd3QlEyMFhFOXhZUHQwM0VRZWRSSjg3bndCaXdiSGVnRzczel95N3JmU1NVTWRvNFJiQl9XVXczVDFRTVRIT1BmUEdaaUctaFA5dzNDT09qTW9nanhfdkN4eXhjTWIzbVFKM014ZTNyaG1oV2V6NUdFNUczd1VuUnFDbk5RS0NaTFAwN05teHl1bWRvLTg?oc=5",
+      "published": "Tue, 15 Sep 2026 16:08:49 GMT",
+      "sentiment_score": 0,
+      "matched_symbols": [
+        "TATASTEEL"
+      ],
+      "timestamp": "2026-09-17 11:33:44 IST"
+    }
+  ],
+  "live_signals": {
+    "nifty_range": "23,100 Support | 23,280 Breakout Zone | 23,600 Bullish Expansion",
+    "bank_nifty_range": "55,700 Swing Support | 57,000 Overhead Resistance",
+    "fii_dii_delta": "DII Net +\u20b92,686 Cr | FII Hedged Short-Covering",
+    "top_catalyst_stocks": [
+      "YESBANK",
+      "ITC",
+      "COLPAL",
+      "HDFCBANK",
+      "SBIN",
+      "RBLBANK",
+      "TATASTEEL",
+      "PNB",
+      "M&M",
+      "TVSMOTOR",
+      "TCS",
+      "TECHM"
+    ],
+    "market_sentiment_score": 0.59,
+    "macro_regime": "SHORT_COVERING_RALLY",
+    "active_youtube_streams_monitored": 13,
+    "active_news_sources_monitored": 20,
+    "nse_ipo_catalyst": "\u20b922,600 Cr Subscription Open - Strong Primary Market Inflow",
+    "drift_model": "Ornstein-Uhlenbeck Mean Reversion + Chandelier ATR Trailing (1.1x)"
+  }
+}

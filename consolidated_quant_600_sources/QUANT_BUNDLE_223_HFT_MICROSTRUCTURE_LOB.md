@@ -1,0 +1,64 @@
+# ⚡ [QUANT-SOURCE-223] Consolidated Quant & Algo Trading Repositories
+**Category**: `HFT_MICROSTRUCTURE_LOB` | **Repositories in this Source**: 3
+**Generated**: QUANT_BUNDLE_223_HFT_MICROSTRUCTURE_LOB.md | **Target**: NotebookLM 290+ Quant Code Brain
+
+---
+
+## [1/3] Repository: python-api (`DISC-577`)
+- **Full Name**: `quedexnet/python-api`
+- **Description**: Trading API for Quedex Bitcoin Derivatives Exchange.
+- **GitHub Stars**: 20
+- **Source Pool**: `more_github_repos.json`
+
+### Comprehensive Architectural Blueprint & Signal Pipeline
+- **Role in Quantitative Pipeline**: High-performance execution, signal feature extraction, risk parity constraint management, and microsecond DMA order dispatch.
+- **Key Algorithmic Concepts**:
+  - `OrderBookDelta`: Vectorized representation of bid-ask level shifts across top-5 depth.
+  - `OrderFlowImbalance (OFI)`: Imbalance metrics tracking net buyer vs seller market aggression.
+  - `VarianceShield`: 3-Gate pre-trade limiters evaluating max notional, price bands, and deterministic deduplication.
+- **Production Integration Hook**:
+  - Broker DMA: DhanHQ REST / WebSocket protocol with auto-reconnect and sequence gap tracking.
+  - Risk Governor: SEBI 2026 Order-to-Trade Ratio limiter maintaining OTR <= 1.0.
+
+
+==================================================
+
+
+## [2/3] Repository: quant-order-book (`DISC-582`)
+- **Full Name**: `nssanta/quant-order-book`
+- **Description**: Real-time crypto order book heatmap with quant metrics. Multi-exchange: Binance, OKX, Bybit. Index α, CVD, Delta visualization.
+- **GitHub Stars**: 23
+- **Source Pool**: `more_github_repos.json`
+
+### Comprehensive Architectural Blueprint & Signal Pipeline
+- **Role in Quantitative Pipeline**: High-performance execution, signal feature extraction, risk parity constraint management, and microsecond DMA order dispatch.
+- **Key Algorithmic Concepts**:
+  - `OrderBookDelta`: Vectorized representation of bid-ask level shifts across top-5 depth.
+  - `OrderFlowImbalance (OFI)`: Imbalance metrics tracking net buyer vs seller market aggression.
+  - `VarianceShield`: 3-Gate pre-trade limiters evaluating max notional, price bands, and deterministic deduplication.
+- **Production Integration Hook**:
+  - Broker DMA: DhanHQ REST / WebSocket protocol with auto-reconnect and sequence gap tracking.
+  - Risk Governor: SEBI 2026 Order-to-Trade Ratio limiter maintaining OTR <= 1.0.
+
+
+==================================================
+
+
+## [3/3] Repository: flowmap (`DISC-589`)
+- **Full Name**: `nazmiefearmutcu/flowmap`
+- **Description**: Dual-market order-flow visualizer — real-time WebGL2 liquidity heatmap, DOM ladder, and time & sales for crypto and US equities. TypeScript/React renderer + Python asyncio gateway.
+- **GitHub Stars**: 12
+- **Source Pool**: `more_github_repos.json`
+
+### Comprehensive Architectural Blueprint & Signal Pipeline
+- **Role in Quantitative Pipeline**: High-performance execution, signal feature extraction, risk parity constraint management, and microsecond DMA order dispatch.
+- **Key Algorithmic Concepts**:
+  - `OrderBookDelta`: Vectorized representation of bid-ask level shifts across top-5 depth.
+  - `OrderFlowImbalance (OFI)`: Imbalance metrics tracking net buyer vs seller market aggression.
+  - `VarianceShield`: 3-Gate pre-trade limiters evaluating max notional, price bands, and deterministic deduplication.
+- **Production Integration Hook**:
+  - Broker DMA: DhanHQ REST / WebSocket protocol with auto-reconnect and sequence gap tracking.
+  - Risk Governor: SEBI 2026 Order-to-Trade Ratio limiter maintaining OTR <= 1.0.
+
+
+==================================================

@@ -1,0 +1,208 @@
+Thoughts
+expand_more
+Building on our analysis of the September 15 market collapse (-279.50 points to 23,118.60)
+1
+2
+, the 9 Indian finance creators evaluated across 2,675 video transcripts utilize distinct methodologies ranging from macro fundamentals and order flow to 5-EMA momentum and volatility Greeks
+1
+2
+.
+Here is how each of the 9 YouTubers structures their core strategy for intraday shorting and BankNifty/Nifty expiry trading:
+1. Vivek Bajaj (StockEdge / Elearnmarkets) — Macro & Sector Filter (96% Accuracy)
+Core Strategy: Macro Regime Filtering & Sector Divergence
+2
+3
+.
+Key Mechanics: Tracks macro triggers—specifically Brent crude rising above $105–$108/bbl, US 10-Year Treasury yields climbing to 5.02%, and continuous FII capital dumping (-₹3,400 Cr to -₹4,800 Cr)
+2
+4
+. When these conditions are met, the probability of a sustained bullish move drops below 8%
+4
+.
+Expiry / Shorting Role: Filters out false long setups and identifies zero-beta sector pair trades—for example, going long on defensive IT (+0.8%) while aggressively shorting high-beta Metals (-4.2%) and Defense PSUs (-8.5%)
+2
+5
+.
+2. Ghanshyam Yadav (Ghanshyam Tech) — Price Action & Pivot Breakouts (95% Accuracy)
+Core Strategy: Institutional Support Breakdowns & "Trapdoor" Levels
+2
+6
+.
+Key Mechanics: Identifies critical price boundaries where institutional stop-losses cluster (such as the 23,280 trapdoor pivot)
+2
+6
+. He strictly enforces a 15-minute candle close rule below support accompanied by high volume (e.g., 2.4x the 20-period average) before confirming a short trade
+2
+6
+.
+Expiry / Shorting Role: Sets exact downside target projections (e.g., a breakdown under 23,280 opening a direct plunge to 23,120)
+2
+6
+. He quarantines the opening 15 minutes (09:15–09:30 AM) to avoid getting trapped by opening wicks
+7
+8
+.
+3. Subasish Pani (Power of Stocks) — Intraday Momentum & Execution (92% Accuracy)
+Core Strategy: 5-EMA Rejection, VWAP Breakdown & Opening Range Breakdown (ORB)
+2
+more_horiz
+.
+Key Mechanics:
+5-EMA Rejection: On 15-minute charts, if price rallies toward VWAP or resistance and prints a candle whose low does not touch the 5-EMA, a break below that candle's low triggers an immediate short entry
+2
+7
+.
+VWAP Breakdown: Identifies stocks failing at intraday VWAP (e.g., Tata Steel failing at 150.20 VWAP and breaking its 15-minute opening range low of 149.60 to plunge to 148.50)
+2
+6
+.
+Expiry / Shorting Role: Focuses on asymmetric 1:2 risk-reward short trades with a tight 25-point index stop loss and a strict 1% maximum capital risk limit
+3
+more_horiz
+.
+4. Saketh R (Optionables / Theta Box) — Options Volatility & Greeks (91% Accuracy)
+Core Strategy: India VIX Coiling, Gamma Risk & Call Selling
+2
+10
+.
+Key Mechanics: Analyzes India VIX coiling at low levels (e.g., 13.80) during macro stress
+2
+10
+. He warns that selling naked Out-of-the-Money (OTM) puts in high-volatility regimes is financial suicide due to extreme gamma explosions (such as the +320% jump on the 23,200 Put option)
+2
+10
+.
+Expiry / Shorting Role: Advocates defined-risk option strategies, such as credit call spreads or out-of-the-money Call Selling at major resistance walls (e.g., 23,200/23,250 CE), while avoiding naked put writing during volatility spikes
+8
+10
+.
+5. Nitin Murarka (SMC Global) — Order Flow & Depth (89% Accuracy)
+Core Strategy: Order Flow Imbalance (OFI) & Cumulative Delta
+2
+.
+Key Mechanics: Tracks micro-structural order flow, watching for Cumulative Delta to shift heavily negative alongside institutional limit ask absorption
+2
+.
+Expiry / Shorting Role: Validates whether an index breakdown at a technical level is backed by actual institutional selling pressure rather than low-volume retail churn
+2
+.
+6. PR Sundar (Mansun Consultancy) — Capital Preservation (88% Accuracy)
+Core Strategy: Non-Linear Theta Decay & Cash Allocation
+2
+.
+Key Mechanics: Focuses on managing option decay dynamics and avoiding over-leveraging during wild intraday swings
+2
+.
+Expiry / Shorting Role: Recommends holding heavy cash positions or scaling down lot sizes when option volatility produces erratic, non-linear pricing swings
+2
+.
+7. Dr. Mukul Agrawal — Fundamental Forensics (88% Accuracy)
+Core Strategy: Valuation Froth & Balance Sheet Strain
+2
+.
+Key Mechanics: Evaluates underlying corporate balance sheets to find structural vulnerabilities
+2
+.
+Expiry / Shorting Role: Identifies prime stock-specific candidates for intraday and swing shorts, specifically tagging acquisition-heavy companies and overextended Defense PSUs
+2
+.
+8. Siddharth Bhanushali — Trend Continuation (82% Accuracy)
+Core Strategy: 44-Moving Average (44-MA) Breakdown
+2
+.
+Key Mechanics: Monitors multi-day trend breaks on daily charts using the 44-MA
+2
+.
+Expiry / Shorting Role: Confirms broader index trend direction (e.g., Nifty Midcap breaking its daily 44-MA) to ensure short setups align with higher-timeframe momentum
+2
+.
+9. Abhishek Kar — Behavioral Traps (85% Accuracy)
+Core Strategy: Retail Liquidity Pools & Sentiment Traps
+2
+.
+Key Mechanics: Maps out retail "buy-the-dip" psychological levels
+2
+.
+Expiry / Shorting Role: Identifies where trapped retail long positions will be forced to panic-sell, providing institutional liquidity for downside expansion
+2
+.
+Summary Matrix of Key Technical Tools
+Technical Tool / Setup
+	
+Lead Creator
+	
+Execution Trigger
+	
+Expiry Purpose
+
+
+Macro Regime Filter
+	
+Vivek Bajaj
+	
+Crude > $105, Yields > 5%
+2
+4
+	
+Disables long equity setups
+3
+4
+
+
+"Trapdoor" Pivot
+	
+Ghanshyam Tech
+	
+15-min close below level (e.g., 23,280)
+2
+6
+	
+Triggers cascading short targets
+2
+6
+
+
+5-EMA Rejection
+	
+Subasish Pani
+	
+Candle low break near VWAP / 5-EMA
+2
+7
+	
+Captures high R:R intraday shorts
+2
+7
+
+
+VIX & Call Selling
+	
+Saketh R
+	
+VIX jump from 13.80; Call writing wall
+2
+more_horiz
+	
+Replaces naked put writing with Call spreads
+2
+10
+
+
+Cumulative Delta
+	
+Nitin Murarka
+	
+Heavy negative order flow delta
+2
+	
+Confirms institutional short building
+2
+📊 Would you like to map out the exact strike price selection and stop-loss trailing rules for tomorrow's Wednesday Expiry using this combined 9-analyst framework?
+keep_pin
+Save to note
+copy_all
+thumb_up
+thumb_down
+Map out strike price selection
+Explain trailing stop-loss rules
+Analyze the Tata Steel short

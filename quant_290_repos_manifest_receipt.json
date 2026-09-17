@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-09-16T14:00:33.920130",
+  "total_repos": 290,
+  "id_range": "QUANT_REPO_001 - QUANT_REPO_290",
+  "volumes": [
+    {
+      "volume_file": "01_HFT_SUB_MILLISECOND_EXECUTION.md",
+      "size_bytes": 85298,
+      "repos_count": 2
+    },
+    {
+      "volume_file": "02_OPTIONS_GREEKS_VOLATILITY.md",
+      "size_bytes": 306326,
+      "repos_count": 10
+    },
+    {
+      "volume_file": "03_INDIAN_DERIVATIVES_DHAN_FYERS.md",
+      "size_bytes": 1128079,
+      "repos_count": 47
+    },
+    {
+      "volume_file": "04_ORDER_FLOW_IMBALANCE_MICROSTRUCTURE.md",
+      "size_bytes": 402161,
+      "repos_count": 22
+    },
+    {
+      "volume_file": "05_STAT_ARB_FINANCIAL_ML.md",
+      "size_bytes": 290586,
+      "repos_count": 11
+    },
+    {
+      "volume_file": "06_VECTOR_EVENT_BACKTEST_ENGINES.md",
+      "size_bytes": 457863,
+      "repos_count": 12
+    },
+    {
+      "volume_file": "07_FINANCIAL_NLP_SENTIMENT_RAG.md",
+      "size_bytes": 417824,
+      "repos_count": 10
+    },
+    {
+      "volume_file": "08_MULTI_AGENT_QUANT_SWARMS.md",
+      "size_bytes": 138135,
+      "repos_count": 6
+    },
+    {
+      "volume_file": "09_HIGH_PERFORMANCE_SIMD_DATA_INFRA.md",
+      "size_bytes": 465691,
+      "repos_count": 13
+    },
+    {
+      "volume_file": "10_SOVEREIGN_QUANT_PRODUCTION_BOTS.md",
+      "size_bytes": 4891457,
+      "repos_count": 157
+    }
+  ],
+  "master_doc": "/Users/rajondas/teamwork_projects/sovereign-quant-os/290_QUANT_GITHUB_REPOS_NOTEBOOKLM_VAULT.md",
+  "sources_dir": "/Users/rajondas/teamwork_projects/sovereign-quant-os/notebooklm_290_quant_repos_sources",
+  "db_path": "/Users/rajondas/teamwork_projects/sovereign-quant-os/grand_10k_trading_hypergraph.sqlite"
+}

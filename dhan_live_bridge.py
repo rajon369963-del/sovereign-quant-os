@@ -243,7 +243,9 @@ class DhanLiveBridge:
                 dhan_side = self.dhan.BUY if side.upper() == "BUY" else self.dhan.SELL
                 dhan_order_type = self.dhan.LIMIT if order_type.upper() == "LIMIT" else self.dhan.MARKET
                 dhan_product = self.dhan.INTRA if product_type.upper() == "INTRADAY" else self.dhan.CNC
-                order_price = float(clamped_price) if dhan_order_type == self.dhan.LIMIT else 0.0
+                # NSE Invariant: Tick size must strictly be a multiple of 0.05
+                raw_price = float(clamped_price) if dhan_order_type == self.dhan.LIMIT else 0.0
+                order_price = round(round(raw_price / 0.05) * 0.05, 2) if raw_price > 0 else 0.0
 
                 resp = self.dhan.place_order(
                     security_id=str(security_id),
@@ -253,8 +255,7 @@ class DhanLiveBridge:
                     order_type=dhan_order_type,
                     product_type=dhan_product,
                     price=order_price,
-                    tag=tag[:10],
-                    correlation_id=tag
+                    tag=tag[:10]
                 )
                 logger.info(f"Live order response from Dhan: {resp}")
                 broker_order_id = None
