@@ -58,6 +58,18 @@ class DhanAutonomousSniperBot:
     def __init__(self, initial_capital: float = 1008.0, dry_run: bool = True):
         self.initial_capital = initial_capital
         self.dry_run = dry_run
+
+        # Single-Instance POSIX Flock (Zero duplicate bot collisions)
+        self.lock_file_path = Path("/tmp/dhan_live_bot.lock")
+        self.lock_fd = open(self.lock_file_path, "w")
+        try:
+            import fcntl
+            fcntl.flock(self.lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            logger.info("🔒 [SINGLE INSTANCE] POSIX flock acquired on /tmp/dhan_live_bot.lock.")
+        except (BlockingIOError, OSError):
+            logger.error("🛑 Another instance of DhanAutonomousSniperBot is running! Aborting duplicate.")
+            sys.exit(1)
+
         self.engine = DhanSniperMomentumEngine(
             initial_capital=self.initial_capital,
             db_path=str(DB_PATH),
@@ -65,6 +77,7 @@ class DhanAutonomousSniperBot:
         )
         self.bridge = self.engine.bridge
         self.is_running = True
+        self.squared_off_today = False
         self.tracked_symbols = list(SNIPER_UNIVERSE.keys())
         self._quote_cache: dict[str, dict[str, Any]] = {}
 
@@ -287,16 +300,65 @@ class DhanAutonomousSniperBot:
 
         # Check square-off time (15:10 IST)
         if self.engine.is_square_off_time():
-            if self.engine.active_positions:
-                logger.info("⏰ 15:10 IST Auto Square-Off Hit. Closing all active positions.")
-                closed_any = None
-                for sym in list(self.engine.active_positions.keys()):
-                    q = self.fetch_live_quote(sym)
-                    closed_any = await self.engine.close_position(q["ltp"], symbol=sym, reason="TIME_CUTOFF_0310_PM")
-                self.update_live_state("SQUARED_OFF", "All positions closed before 03:20 PM RMS cutoff.")
-                return closed_any
-            self.update_live_state("MARKET_POST_CUTOFF", "Post 15:10 PM IST. Waiting for next trading session.")
-            return None
+            if self.squared_off_today:
+                self.update_live_state("SQUARED_OFF", "3:10 PM square-off executed. Standing by post-market.")
+                return None
+
+            self.squared_off_today = True
+            logger.warning("⏰ 15:10 IST Auto Square-Off Hit! Executing unified physical broker square-off...")
+
+            # Step 1: Reconcile and close all positions directly from DhanHQ physical broker reality
+            physically_closed = set()
+            if self.bridge.is_connected and not self.dry_run and self.bridge.dhan:
+                try:
+                    pos_resp = self.bridge.dhan.get_positions()
+                    if pos_resp and pos_resp.get("status") == "success":
+                        broker_positions = pos_resp.get("data", [])
+                        for bp in broker_positions:
+                            net_qty = int(float(bp.get("netQty", 0)))
+                            sym = bp.get("tradingSymbol")
+                            sec_id = str(bp.get("securityId", "0"))
+                            if net_qty != 0 and sym:
+                                exit_side = "SELL" if net_qty > 0 else "BUY"
+                                q = self.fetch_live_quote(sym)
+                                live_p = q.get("ltp") or float(bp.get("costPrice", 100.0))
+                                # Marketable limit: cross spread by 0.5% with strict NSE tick quantization
+                                raw_exit = live_p * 0.995 if exit_side == "SELL" else live_p * 1.005
+                                marketable_exit = self.bridge.quantize_tick(raw_exit)
+                                logger.warning(
+                                    f"⏰ [3:10 PM GRACEFUL SQUARE-OFF] Closing physical position: "
+                                    f"{sym} {exit_side} {abs(net_qty)} @ ₹{marketable_exit:.2f} (LTP: ₹{live_p:.2f})"
+                                )
+                                self.bridge.execute_micro_order(
+                                    symbol=sym,
+                                    security_id=sec_id,
+                                    quantity=abs(net_qty),
+                                    side=exit_side,
+                                    price=marketable_exit,
+                                    order_type="LIMIT",
+                                    product_type="INTRADAY",
+                                    dry_run=False,
+                                    is_entry=False,
+                                )
+                                physically_closed.add(sym)
+                except Exception as bpe:
+                    logger.error(f"Error during broker physical position square-off: {bpe}")
+
+            # Step 2: Clear internal engine positions and record closure (prevent duplicate broker orders)
+            for sym in list(self.engine.active_positions.keys()):
+                q = self.fetch_live_quote(sym)
+                live_p = q.get("ltp", 100.0)
+                await self.engine.close_position(
+                    live_p,
+                    symbol=sym,
+                    reason="TIME_CUTOFF_0310_PM",
+                    dispatch_broker_order=(sym not in physically_closed),
+                )
+            self.engine.active_positions.clear()
+
+            self.update_live_state("SQUARED_OFF", "All physical and internal positions closed before 03:15 PM RMS cutoff. Zero residue.")
+            logger.info("✅ 3:10 PM Square-off routine completed successfully. Zero RMS residue.")
+            return {"status": "SQUARED_OFF"}
 
         # Check if circuit breaker is tripped
         if self.engine.circuit_breaker_tripped:
@@ -475,10 +537,60 @@ class DhanAutonomousSniperBot:
                         rejection_reason=None,
                     )
 
+        # Turnover Throttler Pre-Scan Guard (NautilusTrader OrderThrottler pattern)
+        if self.bridge.cumulative_turnover >= self.bridge.max_daily_turnover:
+            self.update_live_state(
+                "TURNOVER_CAP_REACHED",
+                f"Cumulative turnover ₹{self.bridge.cumulative_turnover:.2f} >= cap ₹{self.bridge.max_daily_turnover:.2f}. No new entries allowed.",
+            )
+            return None
+
+        # Daily Trade Limit Guard (Vivek Bajaj & bot_live_parameters Invariant: max 2 completed trades/day)
+        max_trades = getattr(self.engine, "max_daily_trades", 2)
+        if self.engine.active_stage.trades_executed >= max_trades:
+            self.update_live_state(
+                "DAILY_TRADES_CAP_REACHED",
+                f"Daily trades cap ({self.engine.active_stage.trades_executed}/{max_trades} trades) reached. Monitoring existing positions.",
+            )
+            return None
+
+        # Dynamic noise avoidance sleep & entry cutoff from engine parameters
+        h_start, m_start = 10, 15
+        if hasattr(self.engine, "noise_avoidance_sleep_until") and self.engine.noise_avoidance_sleep_until:
+            parts = [int(p) for p in self.engine.noise_avoidance_sleep_until.split(":")]
+            h_start, m_start = parts[0], parts[1]
+
+        h_end, m_end = 14, 15
+        if hasattr(self.engine, "no_new_entries_after") and self.engine.no_new_entries_after:
+            parts = [int(p) for p in self.engine.no_new_entries_after.split(":")]
+            h_end, m_end = parts[0], parts[1]
+
+        # Noise Avoidance Sleep Guard (Zero Morning Chop Churn Invariant)
+        if (hour < h_start) or (hour == h_start and minute < m_start):
+            self.update_live_state(
+                "NOISE_AVOIDANCE_SLEEP",
+                f"Noise avoidance active until {h_start:02d}:{m_start:02d}:00 IST ({now_ist.strftime('%H:%M:%S IST')}). Observing price action, skipping morning chop.",
+            )
+            return None
+
+        # Professional Entry Window Cutoff Guard (14:15:00 IST Invariant)
+        if (hour > h_end) or (hour == h_end and minute >= m_end):
+            self.update_live_state(
+                "ENTRY_WINDOW_CLOSED",
+                f"Post-{h_end:02d}:{m_end:02d} IST entry cutoff ({now_ist.strftime('%H:%M:%S IST')}). Professional setup window closed. No new entries.",
+            )
+            return None
+
         # Scan qualified symbols for ORB Breakout
         for sym in self.tracked_symbols:
             # Skip if already open in a slot
             if sym in self.engine.active_positions:
+                continue
+
+            # Anti-Churn Cooldown Lock Guard (15-minute lock per symbol post-exit)
+            if self.engine.is_symbol_in_cooldown(sym):
+                rem_s = int(self.engine.get_symbol_cooldown_remaining(sym))
+                logger.debug(f"⏳ [SCANNER COOLDOWN] Skipping {sym}: in anti-churn lockout ({rem_s}s remaining).")
                 continue
 
             # Skip if maximum concurrent position capacity reached

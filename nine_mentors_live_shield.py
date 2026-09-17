@@ -18,15 +18,14 @@ QUANT REPO UPGRADES (NautilusTrader / Riskfolio-Lib / statsmodels):
 - Automated 3:10 PM Square-Off: Passive limit orders to lock profit and eliminate RMS penalties.
 """
 
-import os
-import sys
-import json
-import time
-import fcntl
 import datetime
+import fcntl
+import json
 import logging
-from typing import Dict, Any, List, Optional
+import sys
+import time
 from pathlib import Path
+from typing import Any
 
 PROJECT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_DIR))
@@ -46,21 +45,41 @@ class NineMentorsLiveShield:
             # POSIX atomic non-blocking lock to guarantee single-instance execution
             fcntl.flock(self.lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
             logger.info("🔒 POSIX atomic lock acquired successfully. Single-instance guaranteed.")
-        except IOError:
+        except OSError:
             logger.error("🛑 Another instance of Dhan Bot is already running! Aborting duplicate execution.")
             sys.exit(1)
             
         self.bridge = DhanLiveBridge()
         self.dhan = self.bridge.dhan
         
-        # Risk & Friction Limits
-        self.max_daily_trades = 3
-        self.max_turnover_multiple = 5.0
-        self.max_allowed_turnover = initial_capital * self.max_turnover_multiple
+        # Risk & Friction Limits (Synced with config/bot_live_parameters.json)
+        self.max_daily_trades = 2
+        self.max_turnover_cap = 2500.0
+        self.max_allowed_turnover = 2500.0
         self.max_daily_loss_pct = 0.02
         self.max_daily_loss_inr = initial_capital * self.max_daily_loss_pct
+        self.noise_avoidance_sleep_until = "10:15:00"
+        self.cooldown_seconds = 900.0
+        self.tick_size_quantization = 0.05
+
+        config_path = PROJECT_DIR / "config" / "bot_live_parameters.json"
+        if config_path.exists():
+            try:
+                with open(config_path) as f:
+                    cfg = json.load(f)
+                    cap_law = cfg.get("CAPITAL_PRESERVATION_LAW", {})
+                    self.max_daily_trades = int(cap_law.get("MAX_DAILY_TRADES", 2))
+                    self.max_turnover_cap = float(cap_law.get("MAX_TURNOVER_CAP", 2500.0))
+                    self.max_allowed_turnover = self.max_turnover_cap
+                    timing = cfg.get("TIMING_DISCIPLINE", {})
+                    self.noise_avoidance_sleep_until = timing.get("NOISE_AVOIDANCE_SLEEP_UNTIL", "10:15:00")
+                    exec_rules = cfg.get("EXECUTION_RULES", {})
+                    self.cooldown_seconds = float(exec_rules.get("COOLDOWN_SECONDS_AFTER_EXIT", exec_rules.get("COOLDOWN_SECONDS", 900.0)))
+                    self.tick_size_quantization = float(exec_rules.get("TICK_SIZE_QUANTIZATION", exec_rules.get("TICK_SIZE", 0.05)))
+            except Exception as e:
+                logger.debug(f"Could not load bot parameters: {e}")
         
-    def audit_broker_reality(self) -> Dict[str, Any]:
+    def audit_broker_reality(self) -> dict[str, Any]:
         """Fetches live physical truth directly from DhanHQ v2 API."""
         try:
             positions_res = self.dhan.get_positions()
@@ -121,10 +140,13 @@ class NineMentorsLiveShield:
             "stage_label": "SUPERVISED_BY_9_MENTORS_SHIELD",
             "message": f"Active supervision: {len(reconciled)} broker positions locked in profit.",
             "initial_capital": reality.get("sod_limit", self.initial_capital),
-            "current_equity": round(reality.get("sod_limit", self.initial_capital) + reality.get("total_pnl", 0.0), 2),
-            "total_return_pct": reality.get("drawdown_pct", 0.0),
-            "daily_loss": max(0.0, -reality.get("total_pnl", 0.0)),
-            "circuit_breaker_active": reality.get("total_pnl", 0.0) <= -self.max_daily_loss_inr,
+            "current_equity": round(reality.get("available_cash", reality.get("sod_limit", self.initial_capital)), 2),
+            "gross_realized_pnl": reality.get("net_realized", 0.0),
+            "gross_unrealized_pnl": reality.get("net_unrealized", 0.0),
+            "net_equity_impact": round(reality.get("available_cash", self.initial_capital) - reality.get("sod_limit", self.initial_capital), 2),
+            "total_return_pct": round(((reality.get("available_cash", self.initial_capital) - reality.get("sod_limit", self.initial_capital)) / reality.get("sod_limit", self.initial_capital)) * 100, 2),
+            "daily_loss": max(0.0, reality.get("sod_limit", self.initial_capital) - reality.get("available_cash", self.initial_capital)),
+            "circuit_breaker_active": (reality.get("sod_limit", self.initial_capital) - reality.get("available_cash", self.initial_capital)) >= self.max_daily_loss_inr,
             "open_position_count": len(reconciled),
             "active_positions": reconciled
         }
@@ -133,13 +155,14 @@ class NineMentorsLiveShield:
             json.dump(new_state, f, indent=2)
         return True
 
-    def execute_310_pm_graceful_square_off(self) -> Dict[str, Any]:
+    def execute_310_pm_graceful_square_off(self, now_ist: datetime.datetime | None = None) -> dict[str, Any]:
         """Saketh Ramakrishna & DMA Invariant: Closes all open positions at 3:10 PM with passive limit orders."""
-        now = datetime.datetime.now()
-        t_val = now.hour * 60 + now.minute
+        if now_ist is None:
+            now_ist = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
+        t_val = now_ist.hour * 60 + now_ist.minute
         # 15:10 is 910 minutes
         if t_val < 910:
-            return {"status": "NOT_YET_310_PM", "current_time": now.strftime("%H:%M:%S")}
+            return {"status": "NOT_YET_310_PM", "current_time": now_ist.strftime("%H:%M:%S")}
             
         logger.warning("⏰ 3:10 PM IST REACHED! Triggering graceful square-off for all active broker positions...")
         reality = self.audit_broker_reality()
@@ -156,12 +179,29 @@ class NineMentorsLiveShield:
             exit_qty = abs(net_qty)
             sec_id = p.get('securityId', '0')
             
-            # Fetch current quote or estimate limit price
-            ref_price = p.get('costPrice', 100.0)
-            raw_limit = ref_price * 0.997 if exit_side == "SELL" else ref_price * 1.003
-            hybrid_limit = round(round(raw_limit / 0.05) * 0.05, 2)
+            # Fetch live market quote for marketable limit pricing (Zero RMS penalty invariant)
+            quote_resp = self.bridge.get_market_quote(security_id=sec_id)
+            live_price = 0.0
+            if quote_resp and quote_resp.get("status") == "SUCCESS":
+                q_data = quote_resp.get("data", {})
+                live_price = float(q_data.get("last_price") or q_data.get("ltp") or 0.0)
+            if live_price <= 0:
+                try:
+                    import yfinance as yf
+                    t = yf.Ticker(f"{sym}.NS")
+                    fi = getattr(t, "fast_info", None)
+                    if fi and hasattr(fi, "last_price") and fi.last_price:
+                        live_price = float(round(fi.last_price, 2))
+                except Exception:
+                    pass
+            if live_price <= 0:
+                live_price = float(p.get("costPrice", 100.0))
+
+            # Marketable limit pricing: cross spread by 0.5% with strict NSE tick quantization
+            raw_limit = live_price * 0.995 if exit_side == "SELL" else live_price * 1.005
+            hybrid_limit = round(round(float(raw_limit) * 20.0) / 20.0, 2)
             
-            logger.info(f"Dispatching clean square-off order: {sym} {exit_side} {exit_qty} @ ₹{hybrid_limit:.2f}")
+            logger.info(f"Dispatching clean 3:10 PM square-off: {sym} {exit_side} {exit_qty} @ ₹{hybrid_limit:.2f} (LTP: ₹{live_price:.2f})")
             res = self.bridge.execute_micro_order(
                 symbol=sym,
                 security_id=sec_id,
@@ -170,7 +210,8 @@ class NineMentorsLiveShield:
                 price=hybrid_limit,
                 order_type="LIMIT",
                 product_type="INTRADAY",
-                dry_run=False
+                dry_run=False,
+                is_entry=False,
             )
             results.append({sym: res})
             

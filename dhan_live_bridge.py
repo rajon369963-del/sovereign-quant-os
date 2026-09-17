@@ -76,6 +76,19 @@ class DhanLiveBridge:
         self.cortex.start()
         logger.info("✓ [PHASE 4 INTERCONNECTION²] SovereignInterconnectionSquaredCortex wired to DhanLiveBridge.")
 
+        # Turnover Hard-Cap & Throttling Limits (NautilusTrader OrderThrottler pattern)
+        self.max_daily_turnover = 2500.0
+        self.cumulative_turnover = 0.0
+        config_path = PROJECT_DIR / "config" / "bot_live_parameters.json"
+        if config_path.exists():
+            try:
+                import json
+                with open(config_path) as f:
+                    cfg = json.load(f)
+                    self.max_daily_turnover = float(cfg.get("CAPITAL_PRESERVATION_LAW", {}).get("MAX_TURNOVER_CAP", 2500.0))
+            except Exception as e:
+                logger.debug(f"Could not load bot parameters: {e}")
+
         if self.client_id and self.access_token and dhanhq:
             try:
                 from dhanhq import DhanContext
@@ -83,9 +96,51 @@ class DhanLiveBridge:
                 self.dhan = dhanhq(DhanContext(self.client_id, self.access_token))
                 self.is_connected = True
                 logger.info("Initialized DhanHQ instance for configured Client ID")
+                self.sync_daily_turnover()
             except Exception as e:
                 logger.error(f"Failed to initialize DhanHQ: {e}")
                 self.dhan = None
+
+    def sync_daily_turnover(self, target_date: str | None = None):
+        """Reconcile physical turnover executed today from Dhan broker (NautilusTrader Ledger Reconciliation)."""
+        if not self.is_connected or not self.dhan:
+            return
+        try:
+            today_str = target_date or datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d")
+            trades_resp = self.dhan.get_trade_book()
+            trades = []
+            if trades_resp and isinstance(trades_resp, dict) and trades_resp.get("status") == "success":
+                trades = trades_resp.get("data", [])
+            elif not trades:
+                orders_resp = self.dhan.get_order_list()
+                if orders_resp and isinstance(orders_resp, dict) and orders_resp.get("status") == "success":
+                    trades = orders_resp.get("data", [])
+
+            calc_turnover = 0.0
+            for t in trades:
+                status = str(t.get("orderStatus", "")).upper()
+                if "orderStatus" not in t or status in ("TRADED", "FILLED"):
+                    # Strict Date Invariant: Verify trade belongs to today's session to prevent yesterday's residue
+                    t_time = str(t.get("exchangeTime") or t.get("createTime") or "")
+                    if t_time and today_str not in t_time:
+                        continue
+                    qty = float(t.get("tradedQuantity") or t.get("filledQty") or t.get("quantity") or 0)
+                    px = float(t.get("tradedPrice") or t.get("price") or 0)
+                    calc_turnover += qty * px
+            self.cumulative_turnover = round(calc_turnover, 2)
+            logger.info(f"📊 [TURNOVER SYNC] Physical daily turnover synced for {today_str}: ₹{self.cumulative_turnover:.2f} / ₹{self.max_daily_turnover:.2f}")
+        except Exception as e:
+            logger.debug(f"Could not sync daily turnover from Dhan: {e}")
+
+    @staticmethod
+    def quantize_tick(price: float) -> float:
+        """
+        Enforces strict NSE 0.05 tick size quantization: round(price * 20) / 20.
+        Guarantees price is an exact multiple of 0.05 with zero Dhan Error 16283.
+        """
+        if price <= 0:
+            return 0.0
+        return round(round(float(price) * 20.0) / 20.0, 2)
 
     def update_tick(self, symbol: str, ltp: float, best_bid: float = 0.0, best_ask: float = 0.0, volume: int = 1000):
         """Streams live Level-2 tick updates into the cortex for variance shielding."""
@@ -182,32 +237,60 @@ class DhanLiveBridge:
         order_type: str = "LIMIT",
         product_type: str = "INTRADAY",
         dry_run: bool = False,
+        is_entry: bool = True,
     ) -> dict[str, Any]:
         """
         Execute order routed strictly through the UnifiedSovereignExecutionCortex.
         Enforces:
         - Single-Writer serialization
         - Deterministic SHA-256 Idempotency
+        - Turnover Hard-Cap Pre-Flight Gate (NautilusTrader OrderThrottler: <= ₹2,500 for entries)
+        - Strict Tick Size Quantization: round(price * 20) / 20 (Zero Error 16283)
         - 6-Gate Pre-Trade Variance Shield
         - APFS SQLite WAL Ledger recording
         """
         is_dry = dry_run or self.dry_run
 
+        # Step 0: Strict Tick Size Quantization (Zero Dhan Error 16283)
+        quantized_price = self.quantize_tick(price) if price > 0 else 0.0
+
+        # Step 0b: Turnover Hard-Cap Pre-Flight Gate (NautilusTrader OrderThrottler pattern)
+        # Only gate risk-increasing ENTRY orders. Risk-reducing EXIT orders MUST always be allowed!
+        order_turnover = float(quantity) * (quantized_price if quantized_price > 0 else 200.0)
+        if is_entry:
+            if self.cumulative_turnover + order_turnover > self.max_daily_turnover:
+                logger.warning(
+                    f"🛑 [TURNOVER THROTTLER REJECTED] {side} {quantity} {symbol} (₹{order_turnover:.2f}) rejected: "
+                    f"cumulative turnover ₹{self.cumulative_turnover:.2f} + ₹{order_turnover:.2f} "
+                    f"> hard cap ₹{self.max_daily_turnover:.2f} (NautilusTrader OrderThrottler)."
+                )
+                return {
+                    "status": "REJECTED",
+                    "result_class": "TURNOVER_CAP_EXCEEDED",
+                    "execution_mode": "THROTTLER_BLOCKED",
+                    "cl_ord_id": None,
+                    "rejection_reason": (
+                        f"Cumulative daily turnover ₹{self.cumulative_turnover + order_turnover:.2f} "
+                        f"exceeds hard cap ₹{self.max_daily_turnover:.2f}"
+                    ),
+                }
+
         # Ensure cortex has a live or calibrated tick for the symbol
         with self.cortex.tick_lock:
             has_tick = (symbol in getattr(self.cortex, "market_ticks_by_symbol", {})) or (symbol in getattr(self.cortex, "market_ticks", {}))
         if not has_tick:
-            ref_p = float(price) if price > 0 else 200.0
+            ref_p = quantized_price if quantized_price > 0 else 200.0
             self.update_tick(symbol=symbol, ltp=ref_p)
 
         # Step 1: Submit intent to Sovereign Interconnection² Cortex (Sub-microsecond validation)
+        strat_id = "SNIPER_TRIANGLE" if is_entry else f"SNIPER_EXIT_{int(time.time()*1000)}"
         intent = OrderIntent(
-            strategy_id="SNIPER_TRIANGLE",
+            strategy_id=strat_id,
             symbol=symbol,
             side=side.upper(),
             order_type=order_type.upper(),
             quantity=int(quantity),
-            price=float(price),
+            price=quantized_price,
             client_id=self.client_id or "LAKHI_DAS_DHAN"
         )
         receipt = self.cortex.submit_order(intent)
@@ -225,7 +308,7 @@ class DhanLiveBridge:
             }
 
         if receipt.status == OrderStatus.REJECTED:
-            logger.warning(f"⚠️ [VARIANCE SHIELD REJECTED] {side} {quantity} {symbol} @ {price} rejected: {receipt.rejection_reason}")
+            logger.warning(f"⚠️ [VARIANCE SHIELD REJECTED] {side} {quantity} {symbol} @ {quantized_price} rejected: {receipt.rejection_reason}")
             return {
                 "status": "REJECTED",
                 "result_class": "VARIANCE_SHIELD_REJECTED",
@@ -235,7 +318,7 @@ class DhanLiveBridge:
             }
 
         order_id = receipt.order_id
-        clamped_price = receipt.price
+        clamped_price = self.quantize_tick(receipt.price)
 
         # Step 3: Approved - Dispatch to DhanHQ API if Live
         if not is_dry and self.is_connected and self.dhan:
@@ -243,9 +326,9 @@ class DhanLiveBridge:
                 dhan_side = self.dhan.BUY if side.upper() == "BUY" else self.dhan.SELL
                 dhan_order_type = self.dhan.LIMIT if order_type.upper() == "LIMIT" else self.dhan.MARKET
                 dhan_product = self.dhan.INTRA if product_type.upper() == "INTRADAY" else self.dhan.CNC
-                # NSE Invariant: Tick size must strictly be a multiple of 0.05
+                # NSE Invariant: Tick size must strictly be a multiple of 0.05 via round(price * 20) / 20
                 raw_price = float(clamped_price) if dhan_order_type == self.dhan.LIMIT else 0.0
-                order_price = round(round(raw_price / 0.05) * 0.05, 2) if raw_price > 0 else 0.0
+                order_price = self.quantize_tick(raw_price) if raw_price > 0 else 0.0
 
                 resp = self.dhan.place_order(
                     security_id=str(security_id),
@@ -264,6 +347,13 @@ class DhanLiveBridge:
                     if not broker_order_id and "data" in resp and isinstance(resp["data"], dict):
                         broker_order_id = resp["data"].get("orderId") or resp["data"].get("order_id")
 
+                if broker_order_id:
+                    self.cumulative_turnover += order_turnover
+                    logger.info(
+                        f"📊 [TURNOVER RECORDED] Order filled/placed: {side} {quantity} {symbol} @ ₹{order_price:.2f} "
+                        f"(+₹{order_turnover:.2f}) | Cumulative Turnover: ₹{self.cumulative_turnover:.2f} / ₹{self.max_daily_turnover:.2f}"
+                    )
+
                 return {
                     "status": "ORDER_PLACED" if broker_order_id else "REJECTED",
                     "result_class": "LIVE_ORDER_SUBMISSION",
@@ -277,7 +367,11 @@ class DhanLiveBridge:
                 return {"status": "ERROR", "error": str(e), "cl_ord_id": tag}
 
         # Simulated / Dry Run Mode
-        logger.info(f"[CORTEX_APPROVED_DRY_RUN] Order: {side} {quantity} {symbol} @ ₹{clamped_price:.2f} ({order_type}, {product_type}) | Tag: {tag}")
+        self.cumulative_turnover += order_turnover
+        logger.info(
+            f"[CORTEX_APPROVED_DRY_RUN] Order: {side} {quantity} {symbol} @ ₹{clamped_price:.2f} "
+            f"({order_type}, {product_type}) | Tag: {tag} | Cumulative Turnover: ₹{self.cumulative_turnover:.2f} / ₹{self.max_daily_turnover:.2f}"
+        )
         return {
             "status": "ORDER_PLACED",
             "result_class": "SIMULATED_ORDER",

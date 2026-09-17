@@ -25,6 +25,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+PROJECT_DIR = Path(__file__).resolve().parent
+
 from data_engine import DataEngine
 from dhan_live_bridge import DhanLiveBridge
 from premarket_screener import CandidateStock, PremarketScreener
@@ -112,6 +114,36 @@ class DhanSniperMomentumEngine:
         # Phase 2 Pre-Market Screener & Gap-Leverage Engine
         self.screener = PremarketScreener(cash_equity=self.current_equity, base_leverage=5.0, max_trade_risk=trade_risk)
         self.premarket_candidates: dict[str, CandidateStock] = {}
+
+        # Anti-Churning Cooldown Lock (NautilusTrader & Qlib Invariant: 15-min lockout per symbol after exit)
+        self.symbol_cooldowns: dict[str, float] = {}
+        self.cooldown_seconds: float = 900.0
+
+        # Parameters synced with config/bot_live_parameters.json
+        self.max_daily_trades = 2
+        self.max_turnover_cap = 2500.0
+        self.noise_avoidance_sleep_until = "10:15:00"
+        self.no_new_entries_after = "14:15:00"
+        self.mandatory_graceful_square_off = "15:10:00"
+        self.tick_size_quantization = 0.05
+
+        config_path = PROJECT_DIR / "config" / "bot_live_parameters.json"
+        if config_path.exists():
+            try:
+                with open(config_path) as f:
+                    cfg = json.load(f)
+                    cap_law = cfg.get("CAPITAL_PRESERVATION_LAW", {})
+                    self.max_daily_trades = int(cap_law.get("MAX_DAILY_TRADES", 2))
+                    self.max_turnover_cap = float(cap_law.get("MAX_TURNOVER_CAP", 2500.0))
+                    timing = cfg.get("TIMING_DISCIPLINE", {})
+                    self.noise_avoidance_sleep_until = timing.get("NOISE_AVOIDANCE_SLEEP_UNTIL", "10:15:00")
+                    self.no_new_entries_after = timing.get("NO_NEW_ENTRIES_AFTER", "14:15:00")
+                    self.mandatory_graceful_square_off = timing.get("MANDATORY_GRACEFUL_SQUARE_OFF", "15:10:00")
+                    exec_rules = cfg.get("EXECUTION_RULES", {})
+                    self.cooldown_seconds = float(exec_rules.get("COOLDOWN_SECONDS_AFTER_EXIT", exec_rules.get("COOLDOWN_SECONDS", 900.0)))
+                    self.tick_size_quantization = float(exec_rules.get("TICK_SIZE_QUANTIZATION", exec_rules.get("TICK_SIZE", 0.05)))
+            except Exception as e:
+                logger.debug(f"Could not load bot parameters in engine: {e}")
 
         self._init_ledger_db()
 
@@ -216,20 +248,52 @@ class DhanSniperMomentumEngine:
             """)
             conn.commit()
 
-    def is_square_off_time(self) -> bool:
+    def is_square_off_time(self, now_ist: datetime.datetime | None = None) -> bool:
         """Enforce 03:10 PM IST hard square-off rule to bypass Dhan RMS penalty."""
-        now_ist = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
-        cutoff = now_ist.replace(hour=15, minute=10, second=0, microsecond=0)
+        if now_ist is None:
+            now_ist = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
+        h_sq, m_sq, s_sq = 15, 10, 0
+        if hasattr(self, "mandatory_graceful_square_off") and self.mandatory_graceful_square_off:
+            parts = [int(p) for p in self.mandatory_graceful_square_off.split(":")]
+            h_sq, m_sq = parts[0], parts[1]
+            s_sq = parts[2] if len(parts) > 2 else 0
+        cutoff = now_ist.replace(hour=h_sq, minute=m_sq, second=s_sq, microsecond=0)
         return now_ist >= cutoff
 
-    def is_market_open_for_entry(self) -> bool:
-        """Enforces opening buffer (09:16:05 IST) and square-off cutoff (15:10:00 IST)."""
-        now_ist = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
+    def is_market_open_for_entry(self, now_ist: datetime.datetime | None = None) -> bool:
+        """Enforces noise avoidance buffer (10:15:00 IST) and entry cutoff (14:15:00 IST) per bot_live_parameters.json."""
+        if now_ist is None:
+            now_ist = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
         if now_ist.weekday() >= 5:
             return False
-        entry_start = now_ist.replace(hour=9, minute=16, second=5, microsecond=0)
-        cutoff = now_ist.replace(hour=15, minute=10, second=0, microsecond=0)
+
+        # Parse noise avoidance sleep until (e.g. 10:15:00 IST)
+        h_start, m_start, s_start = 10, 15, 0
+        if hasattr(self, "noise_avoidance_sleep_until") and self.noise_avoidance_sleep_until:
+            parts = [int(p) for p in self.noise_avoidance_sleep_until.split(":")]
+            h_start, m_start = parts[0], parts[1]
+            s_start = parts[2] if len(parts) > 2 else 0
+
+        # Parse professional window cutoff (e.g. 14:15:00 IST)
+        h_end, m_end, s_end = 14, 15, 0
+        if hasattr(self, "no_new_entries_after") and self.no_new_entries_after:
+            parts = [int(p) for p in self.no_new_entries_after.split(":")]
+            h_end, m_end = parts[0], parts[1]
+            s_end = parts[2] if len(parts) > 2 else 0
+
+        entry_start = now_ist.replace(hour=h_start, minute=m_start, second=s_start, microsecond=0)
+        cutoff = now_ist.replace(hour=h_end, minute=m_end, second=s_end, microsecond=0)
         return entry_start <= now_ist < cutoff
+
+    def is_symbol_in_cooldown(self, symbol: str) -> bool:
+        """Returns True if the symbol is in post-exit cooldown."""
+        last_exit = self.symbol_cooldowns.get(symbol, 0.0)
+        return (time.time() - last_exit) < self.cooldown_seconds
+
+    def get_symbol_cooldown_remaining(self, symbol: str) -> float:
+        """Returns remaining seconds for symbol cooldown."""
+        last_exit = self.symbol_cooldowns.get(symbol, 0.0)
+        return max(0.0, self.cooldown_seconds - (time.time() - last_exit))
 
     async def evaluate_tick_stream(
         self,
@@ -263,7 +327,9 @@ class DhanSniperMomentumEngine:
             results = []
             for sym in list(self.active_positions.keys()):
                 logger.warning(f"⏰ 03:10 PM Cutoff Hit: Executing Auto-Square-Off for {sym} to protect capital.")
-                res = await self.close_position(price, symbol=sym, reason="TIME_CUTOFF_0310_PM")
+                pos_info = self.active_positions.get(sym, {})
+                pos_price = price if sym == symbol else pos_info.get("highest_price", pos_info.get("entry_price", price))
+                res = await self.close_position(pos_price, symbol=sym, reason="TIME_CUTOFF_0310_PM")
                 results.append(res)
             if results:
                 return {"status": "INACTIVE", "reason": "POST_MARKET_HOURS", "closed": results}
@@ -275,8 +341,15 @@ class DhanSniperMomentumEngine:
 
         # 4. New Entry Evaluation (Concurrent Multi-Slot Engine up to 3 slots)
         if len(self.active_positions) < self.max_concurrent_positions and not self.circuit_breaker_tripped:
+            # Anti-Churn Cooldown Check (NautilusTrader & Qlib Invariant: 15-min lockout per symbol after exit)
+            if self.is_symbol_in_cooldown(symbol):
+                remaining_sec = int(self.get_symbol_cooldown_remaining(symbol))
+                logger.debug(f"⏳ [COOLDOWN ACTIVE] {symbol} locked out for another {remaining_sec}s to eliminate churning.")
+                return {"status": "COOLDOWN_ACTIVE", "reason": f"{symbol} in anti-churn lockout ({remaining_sec}s remaining)"}
+
             if not self.is_market_open_for_entry():
-                return {"status": "WAITING_FOR_MARKET_OPEN", "reason": "Pre-market / Zero-order opening buffer active"}
+                return {"status": "WAITING_FOR_MARKET_OPEN", "reason": "Pre-market / Post-cutoff / Zero-order opening buffer active"}
+
             return await self._check_entry_opportunity(symbol, price, bid, ask, side=side)
 
         return None
@@ -385,13 +458,18 @@ class DhanSniperMomentumEngine:
             if quantity < 1:
                 return None
 
+        # Daily Trade Limit (Vivek Bajaj & bot_live_parameters Invariant: max completed trades/day)
+        if self.active_stage.trades_executed >= self.max_daily_trades:
+            logger.warning(f"🛑 [DAILY TRADES CAP] Daily trades limit reached ({self.active_stage.trades_executed} >= {self.max_daily_trades}). Skipping new entry.")
+            return None
+
         logger.info(f"🎯 SNIPER TRIGGER: {symbol} Passed 3 Gates! Stage: {self.active_stage.stage_id} | Side: {order_side} | Qty: {quantity} | Entry: ₹{price} | SL: ₹{stop_loss} | TP: ₹{take_profit} | Open Slots: {len(self.active_positions)+1}/{self.max_concurrent_positions}")
 
-        # Limit-Market Hybrid Order: Cap slippage to ±0.3% to avoid 0-DTE expiry spikes while guaranteeing execution (Strict NSE 0.05 Tick Size)
+        # Limit-Market Hybrid Order: Cap slippage to ±0.3% to avoid 0-DTE expiry spikes while guaranteeing execution (Strict NSE 0.05 Tick Size via round(price * 20) / 20)
         raw_limit = price * 1.003 if order_side == "BUY" else price * 0.997
-        hybrid_limit_price = round(round(raw_limit / 0.05) * 0.05, 2)
+        hybrid_limit_price = round(round(float(raw_limit) * 20.0) / 20.0, 2)
 
-        # Execute Order via Bridge
+        # Execute Order via Bridge with is_entry=True for turnover throttler
         sec_info = SNIPER_UNIVERSE.get(symbol, {"security_id": "0"})
         order_res = self.bridge.execute_micro_order(
             symbol=symbol,
@@ -402,6 +480,7 @@ class DhanSniperMomentumEngine:
             order_type="LIMIT",
             product_type="INTRADAY",
             dry_run=self.dry_run,
+            is_entry=True,
         )
 
         if order_res.get("status") in ("SUCCESS", "ORDER_PLACED"):
@@ -539,7 +618,13 @@ class DhanSniperMomentumEngine:
 
         return None
 
-    async def close_position(self, exit_price: float, symbol: str | None = None, reason: str = "MANUAL") -> dict[str, Any]:
+    async def close_position(
+        self,
+        exit_price: float,
+        symbol: str | None = None,
+        reason: str = "MANUAL",
+        dispatch_broker_order: bool = True,
+    ) -> dict[str, Any]:
         """Closes active position for given symbol, records PnL, syncs broker funds, and progresses stage."""
         if symbol:
             pos = self.active_positions.get(symbol)
@@ -556,16 +641,17 @@ class DhanSniperMomentumEngine:
         else:
             pnl = round((pos["entry_price"] - exit_price) * pos["quantity"], 2)
 
-        # Approximate statutory equity brokerage & STT
-        friction = 1.05  # sub-₹2 statutory fees
+        # Backtrader / Indian Charge Stack Accounting (STT, NSE transaction, GST, Stamp Duty)
+        turnover = (pos["entry_price"] + exit_price) * pos["quantity"]
+        friction = max(1.50, round(turnover * 0.0006 + 0.50, 2))
         net_pnl = round(pnl - friction, 2)
 
         # Dispatch offsetting exit order via Bridge (Live or Dry-Run)
-        if self.bridge:
+        if dispatch_broker_order and self.bridge:
             sec_info = SNIPER_UNIVERSE.get(target_sym, {"security_id": pos.get("security_id", "0")})
             exit_side = "SELL" if pos.get("side", "BUY") == "BUY" else "BUY"
             raw_exit_limit = exit_price * 0.997 if exit_side == "SELL" else exit_price * 1.003
-            exit_hybrid_limit = round(round(raw_exit_limit / 0.05) * 0.05, 2)
+            exit_hybrid_limit = round(round(float(raw_exit_limit) * 20.0) / 20.0, 2)
             exit_res = self.bridge.execute_micro_order(
                 symbol=target_sym,
                 security_id=sec_info["security_id"],
@@ -575,6 +661,7 @@ class DhanSniperMomentumEngine:
                 order_type="LIMIT",
                 product_type="INTRADAY",
                 dry_run=self.dry_run,
+                is_entry=False,
             )
             logger.info(f"Broker exit order dispatched for {target_sym}: {exit_res}")
 
@@ -600,7 +687,7 @@ class DhanSniperMomentumEngine:
                 """UPDATE sniper_trades 
                    SET exit_price = ?, realized_pnl = ?, status = ?
                    WHERE cl_ord_id = ?""",
-                (exit_price, net_pnl, f"CLOSED_{reason}", pos["cl_ord_id"])
+                (exit_price, net_pnl, f"CLOSED_{reason}", pos.get("cl_ord_id", f"ord_{target_sym}_{int(time.time()*1000)}"))
             )
             conn.commit()
 
@@ -628,9 +715,11 @@ class DhanSniperMomentumEngine:
             "current_stage": self.active_stage.stage_id,
         }
 
-        # Remove from active positions dictionary
+        # Remove from active positions dictionary and arm 15-minute anti-churn cooldown
         if target_sym in self.active_positions:
             del self.active_positions[target_sym]
+        self.symbol_cooldowns[target_sym] = time.time()
+        logger.info(f"⏳ [COOLDOWN ARMED] {target_sym} locked out from re-entry for {self.cooldown_seconds}s (Anti-Churn Invariant).")
 
         return {"status": "POSITION_CLOSED", "details": closed_pos_info}
 
