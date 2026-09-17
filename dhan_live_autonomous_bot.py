@@ -16,7 +16,11 @@ import asyncio
 import datetime
 import orjson
 import logging
+<<<<<<< HEAD
 import socket
+=======
+import math
+>>>>>>> origin/main
 import sys
 import time
 from pathlib import Path
@@ -54,6 +58,10 @@ STATE_FILE = PROJECT_DIR / "autonomous_bot_live_state.json"
 DB_PATH = PROJECT_DIR / "micro_canary_1k_ledger.sqlite"
 
 
+class QuoteAuthorityError(RuntimeError):
+    """Raised when LIVE execution has no fresh authoritative provider quote."""
+
+
 class DhanAutonomousSniperBot:
     def __init__(self, initial_capital: float = 1008.0, dry_run: bool = True):
         self.initial_capital = initial_capital
@@ -80,6 +88,7 @@ class DhanAutonomousSniperBot:
         self.squared_off_today = False
         self.tracked_symbols = list(SNIPER_UNIVERSE.keys())
         self._quote_cache: dict[str, dict[str, Any]] = {}
+        self._quote_authority: dict[str, dict[str, Any]] = {}
 
         # Phase 2 Interconnected Engines (Half-Kelly 2.5% Equity Risk Sizing)
         self.screener = PremarketScreener(
@@ -204,6 +213,7 @@ class DhanAutonomousSniperBot:
             "active_positions": summary["active_positions"],
             "tracked_symbols": self.tracked_symbols,
             "execution_mode": "DRY_RUN" if self.dry_run else "LIVE",
+            "quote_authority": self._quote_authority,
             "premarket_calibrated": self.premarket_calibrated_today,
             "qualified_targets": qualified_symbols,
             "macro_score": self.macro_report.macro_score if self.macro_report else None,
@@ -213,51 +223,122 @@ class DhanAutonomousSniperBot:
         with open(STATE_FILE, "w", encoding="utf-8") as f:
             f.write(orjson.dumps(state_payload, option=orjson.OPT_INDENT_2).decode("utf-8"))
 
+    def _record_quote_authority(self, symbol: str, quote: dict[str, Any]) -> None:
+        self._quote_authority[symbol] = {
+            "source": quote.get("source"),
+            "security_id": quote.get("security_id"),
+            "provider_timestamp": quote.get("provider_timestamp"),
+            "received_at_epoch": quote.get("received_at_epoch"),
+            "age_seconds": quote.get("age_seconds"),
+            "decision_eligible": bool(quote.get("decision_eligible")),
+        }
+        if quote.get("error"):
+            self._quote_authority[symbol]["error"] = quote["error"]
+
     def fetch_live_quote(self, symbol: str) -> dict[str, Any]:
-        """Fetches live market quote with caching, yfinance fast_info, and safe fallback."""
+        """Fetch market data with explicit source authority; LIVE mode fails closed."""
         sec_info = SNIPER_UNIVERSE.get(symbol, {"security_id": "3499", "ref_price": 150.0})
+        sec_id = str(sec_info["security_id"])
         now = time.time()
 
-        # Check cache if fresh (< 4 seconds)
-        if symbol in self._quote_cache and (now - self._quote_cache[symbol]["ts"]) < 4.0:
-            return self._quote_cache[symbol]["quote"]
+        cached = self._quote_cache.get(symbol)
+        if cached and (now - cached["ts"]) < 3.0:
+            quote = dict(cached["quote"])
+            quote["age_seconds"] = round(now - cached["ts"], 6)
+            if quote.get("source") == "LIVE_PROVIDER":
+                quote["source"] = "CACHE_LIVE_PROVIDER"
+            if not self.dry_run and quote.get("source") not in {"LIVE_PROVIDER", "CACHE_LIVE_PROVIDER"}:
+                quote["decision_eligible"] = False
+                quote["error"] = "non-authoritative cached quote rejected in LIVE mode"
+                self._record_quote_authority(symbol, quote)
+                raise QuoteAuthorityError(f"LIVE quote authority unavailable for {symbol}: cached source rejected")
+            self._record_quote_authority(symbol, quote)
+            return quote
 
-        # 1. Primary: Real-time live quote via yfinance fast_info
+        provider_error = "provider quote unavailable"
         try:
-            import yfinance as yf
-            ticker_sym = f"{symbol}.NS"
-            t = yf.Ticker(ticker_sym)
-            fi = getattr(t, "fast_info", None)
-            if fi and hasattr(fi, "last_price") and fi.last_price:
-                ltp = float(round(fi.last_price, 2))
-                if ltp > 0:
-                    quote = {"ltp": ltp, "bid": round(ltp - 0.05, 2), "ask": round(ltp + 0.05, 2), "bids": [], "asks": []}
-                    self._quote_cache[symbol] = {"quote": quote, "ts": now}
-                    return quote
-        except Exception as ex:
-            logger.debug(f"yfinance fast_info failed for {symbol}: {ex}")
+            raw = self.bridge.get_market_quote(sec_id, "NSE_EQ")
+            authoritative_envelope = (
+                isinstance(raw, dict)
+                and raw.get("status") == "SUCCESS"
+                and raw.get("result_class") == "LIVE_MARKET_QUOTE"
+                and raw.get("execution_mode") == "LIVE"
+                and raw.get("connection_authority") == "PRESENT"
+                and raw.get("is_simulated") is False
+                and isinstance(raw.get("data"), dict)
+            )
+            if authoritative_envelope:
+                qd = raw["data"]
+                ltp = float(qd["last_price"])
+                depth = qd.get("depth")
+                depth_buys = depth.get("buy", []) if isinstance(depth, dict) else []
+                depth_sells = depth.get("sell", []) if isinstance(depth, dict) else []
+                if not math.isfinite(ltp) or ltp <= 0 or not depth_buys or not depth_sells:
+                    raise ValueError("malformed live quote: finite LTP and two-sided depth required")
+                bid = float(depth_buys[0]["price"])
+                ask = float(depth_sells[0]["price"])
+                if not all(math.isfinite(v) and v > 0 for v in (bid, ask)) or bid > ask:
+                    raise ValueError("malformed live quote: invalid bid/ask")
+                quote = {
+                    "ltp": ltp,
+                    "bid": bid,
+                    "ask": ask,
+                    "bids": depth_buys,
+                    "asks": depth_sells,
+                    "symbol": symbol,
+                    "security_id": sec_id,
+                    "source": "LIVE_PROVIDER",
+                    "provider_timestamp": qd.get("timestamp") or qd.get("last_trade_time") or qd.get("lastTradeTime"),
+                    "received_at_epoch": now,
+                    "age_seconds": 0.0,
+                    "decision_eligible": True,
+                }
+                self._quote_cache[symbol] = {"quote": quote, "ts": now}
+                self._record_quote_authority(symbol, quote)
+                return quote
+            if isinstance(raw, dict):
+                provider_error = (
+                    f"non-authoritative envelope status={raw.get('status')} "
+                    f"class={raw.get('result_class')} mode={raw.get('execution_mode')} "
+                    f"authority={raw.get('connection_authority')} simulated={raw.get('is_simulated')}"
+                )
+        except Exception as e:
+            provider_error = f"provider quote error: {type(e).__name__}: {e}"
+            logger.debug(f"Live quote authority failure for {symbol}: {e}")
 
-        # 2. Secondary: If in cache (even if older than 4s), use last known genuine market price!
-        if symbol in self._quote_cache:
-            return self._quote_cache[symbol]["quote"]
+        if not self.dry_run:
+            hold = {
+                "symbol": symbol,
+                "security_id": sec_id,
+                "source": "UNAVAILABLE",
+                "provider_timestamp": None,
+                "received_at_epoch": now,
+                "age_seconds": None,
+                "decision_eligible": False,
+                "error": provider_error,
+            }
+            self._record_quote_authority(symbol, hold)
+            raise QuoteAuthorityError(f"LIVE quote authority unavailable for {symbol}: {provider_error}")
 
-        # 3. Tertiary: 1-minute historical bar close
-        try:
-            import yfinance as yf
-            df_m = yf.download(f"{symbol}.NS", period="1d", interval="1m", progress=False)
-            if not df_m.empty and "Close" in df_m:
-                ltp = float(round(df_m["Close"].iloc[-1].item(), 2))
-                if ltp > 0:
-                    quote = {"ltp": ltp, "bid": round(ltp - 0.05, 2), "ask": round(ltp + 0.05, 2), "bids": [], "asks": []}
-                    self._quote_cache[symbol] = {"quote": quote, "ts": now}
-                    return quote
-        except Exception:
-            pass
-
-        # Fallback calibrated reference ONLY if completely uninitialized
-        ref = sec_info.get("ref_price", 150.0)
-        quote = {"ltp": ref, "bid": round(ref - 0.02, 2), "ask": round(ref + 0.02, 2), "bids": [], "asks": [], "uncalibrated": True}
+        # Explicit DRY_RUN only: calibrated synthetic reference remains truth-labelled.
+        ref = float(sec_info.get("ref_price", 150.0))
+        quote = {
+            "ltp": ref,
+            "bid": round(ref - 0.02, 2),
+            "ask": round(ref + 0.02, 2),
+            "bids": [],
+            "asks": [],
+            "symbol": symbol,
+            "security_id": sec_id,
+            "source": "SYNTHETIC_FALLBACK",
+            "provider_timestamp": None,
+            "received_at_epoch": now,
+            "age_seconds": 0.0,
+            "decision_eligible": True,
+            "error": provider_error,
+        }
         self._quote_cache[symbol] = {"quote": quote, "ts": now}
+        self._record_quote_authority(symbol, quote)
         return quote
 
     async def run_single_iteration(self) -> dict[str, Any] | None:
@@ -691,6 +772,10 @@ class DhanAutonomousSniperBot:
             try:
                 await self.run_single_iteration()
                 await asyncio.sleep(2)
+            except QuoteAuthorityError as e:
+                logger.error(f"MARKET_DATA_HOLD: {e}")
+                self.update_live_state("MARKET_DATA_HOLD", str(e))
+                await asyncio.sleep(5)
             except Exception as e:
                 logger.error(f"Error in autonomous sniper loop: {e}", exc_info=True)
                 await asyncio.sleep(5)
